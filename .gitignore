@@ -1,0 +1,20 @@
+.DS_Store
+DerivedData/
+.build/
+*.xcuserstate
+xcuserdata/
+
+# Local-only research, temporary artifacts, and Xcode result bundles.
+# DailyArt material is reference-only and must never enter this public repository.
+DailyArt ios Jan 2025/
+.codex-tmp/
+*.xcresult
+
+# Signing material and future local configuration must remain outside source control.
+*.mobileprovision
+*.p12
+*.cer
+AuthKey_*.p8
+.env
+.env.*
+Config/Secrets.xcconfig

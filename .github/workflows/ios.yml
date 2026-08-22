@@ -1,0 +1,33 @@
+name: iOS CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  core-and-build:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
+      - name: Test WitnessCore
+        run: swift test --package-path Packages/WitnessCore
+
+      - name: Build unsigned iOS app
+        run: >-
+          xcodebuild
+          -project Witness.xcodeproj
+          -scheme Witness
+          -destination 'generic/platform=iOS'
+          -derivedDataPath "$RUNNER_TEMP/WitnessDerivedData"
+          CODE_SIGNING_ALLOWED=NO
+          build

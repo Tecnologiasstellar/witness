@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F4628BE5E221D55F0E26166 /* DailySpeciesSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BA20C213BA57E566E97630 /* DailySpeciesSelector.swift */; };
+		124B4DC8E0F947C48FF75286 /* WitnessSharePreviewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114A5EF6FC9CDFD60B4CF0C /* WitnessSharePreviewSheet.swift */; };
+		16AAFB87F230EB12C8D396A1 /* SpeciesRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C4A43A6AC261C6A25B5E1 /* SpeciesRecord.swift */; };
+		16D5DDC2C5DCF75498B2A44D /* WitnessShareCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8698B087FB05A16501745D67 /* WitnessShareCopy.swift */; };
+		224FC55D98C252D3C06B08BF /* BundledSpeciesCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9DEB3D56300C4B0646299 /* BundledSpeciesCatalog.swift */; };
+		2E8A595CF0062FAD3A5EA2BF /* WitnessedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B698C8B547BD096664B28580 /* WitnessedView.swift */; };
+		3AACD83387DDBED44260D080 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDFC8711953263B8B59139B /* AppModel.swift */; };
+		3BA9344E61CC8AC85419821F /* WitnessCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */; };
+		3F5054183FC3B7C5BE6C7A71 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D88878E41310626CED31D6 /* RootTabView.swift */; };
+		44218CBDF7A88A7A70C086CA /* AtlasIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABFC134010BFB1FF062CF1B /* AtlasIcons.swift */; };
+		4F2473A639039F8A3C80F092 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F6B1989A07CDD335DC75A /* ArchiveView.swift */; };
+		56085BAAD37054233313394D /* WitnessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */; };
+		64F12E527B41CD3BC05C6889 /* WitnessCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		66792FAAD28C4692A18458B0 /* VaquitaHeroArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */; };
+		6CB63D7D22BC7C5FF46E1BAC /* WitnessTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */; };
+		75D66B3F60EA7F6EBF43D997 /* species.json in Resources */ = {isa = PBXBuildFile; fileRef = 64E21B832DF552E7470A943D /* species.json */; };
+		84987ABAB9FFB62FE7E68E24 /* PlateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */; };
+		A16041A90DD5333A1728F811 /* WitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E8333AE9C0AD77C3567F /* WitnessApp.swift */; };
+		A536A1761E475036B749FBA4 /* FileWitnessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89A757DBBF5D9080AB542D /* FileWitnessRepository.swift */; };
+		B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */; };
+		B1B2F3500979E875B3E27F3E /* WitnessRitualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */; };
+		D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */; };
+		D9AF7CA236EE26B44E280DBB /* CatalogValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */; };
+		E388B5ED07FA84F3140DBC9C /* WitnessRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */; };
+		EAB93BBE70E97B6408C99333 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE485E4A09EEE93616F399 /* TodayView.swift */; };
+		FB5377B37A8766CB0AD36B7D /* WitnessStreakCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCEC8613720793B073A50E2 /* WitnessStreakCalculator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F5C145C70127080C44F409D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DE08BFC18210C8548FE82D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC8EC03181996C48ECAC787A;
+			remoteInfo = WitnessCore;
+		};
+		16BC569D6A99523572A281B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DE08BFC18210C8548FE82D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8926EE529F16A78EF6D2B226;
+			remoteInfo = Witness;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD17EA57A572EE29B5F16C12 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				64F12E527B41CD3BC05C6889 /* WitnessCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		003C9498EA506F48F2E4ECF9 /* Witness.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Witness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateFrame.swift; sourceTree = "<group>"; };
+		23B9DEB3D56300C4B0646299 /* BundledSpeciesCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundledSpeciesCatalog.swift; sourceTree = "<group>"; };
+		2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRecord.swift; sourceTree = "<group>"; };
+		25D88878E41310626CED31D6 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WitnessCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRitualUITests.swift; sourceTree = "<group>"; };
+		3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecimenDetailView.swift; sourceTree = "<group>"; };
+		53BA20C213BA57E566E97630 /* DailySpeciesSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySpeciesSelector.swift; sourceTree = "<group>"; };
+		64E21B832DF552E7470A943D /* species.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = species.json; sourceTree = "<group>"; };
+		65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaquitaHeroArtwork.swift; sourceTree = "<group>"; };
+		6BC9CF6489D7C89535986EFB /* WitnessUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		841F6B1989A07CDD335DC75A /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
+		8698B087FB05A16501745D67 /* WitnessShareCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessShareCopy.swift; sourceTree = "<group>"; };
+		8FDFC8711953263B8B59139B /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		900C4A43A6AC261C6A25B5E1 /* SpeciesRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesRecord.swift; sourceTree = "<group>"; };
+		98FE485E4A09EEE93616F399 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		9BCEC8613720793B073A50E2 /* WitnessStreakCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessStreakCalculator.swift; sourceTree = "<group>"; };
+		9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRepository.swift; sourceTree = "<group>"; };
+		9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessTheme.swift; sourceTree = "<group>"; };
+		B114A5EF6FC9CDFD60B4CF0C /* WitnessSharePreviewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessSharePreviewSheet.swift; sourceTree = "<group>"; };
+		B698C8B547BD096664B28580 /* WitnessedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessedView.swift; sourceTree = "<group>"; };
+		D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		EA89A757DBBF5D9080AB542D /* FileWitnessRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWitnessRepository.swift; sourceTree = "<group>"; };
+		EABFC134010BFB1FF062CF1B /* AtlasIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasIcons.swift; sourceTree = "<group>"; };
+		EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogValidator.swift; sourceTree = "<group>"; };
+		EF52E8333AE9C0AD77C3567F /* WitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		967EEEE48B237A347CCCED18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA9344E61CC8AC85419821F /* WitnessCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02BD853251A283A3E93F45C3 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				23B9DEB3D56300C4B0646299 /* BundledSpeciesCatalog.swift */,
+				EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		12B486ACD46568EC060F1D44 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64E21B832DF552E7470A943D /* species.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		33750A8FAB33B208A5B78B57 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				D6974A17384539DD9356312F /* WitnessCore */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		465D725BCE9CBC66B340F9DC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7067B7292843E3BD76C9C7E8 /* WitnessCore */ = {
+			isa = PBXGroup;
+			children = (
+				02BD853251A283A3E93F45C3 /* Catalog */,
+				AD2BA25F9C9786D30F21245C /* Daily */,
+				E6E1359F581B7D349C7B89E8 /* Models */,
+				BFBC3F175F7AEB4BBD5457E8 /* Persistence */,
+				12B486ACD46568EC060F1D44 /* Resources */,
+				C509F2685438FA7BA11333C0 /* Sharing */,
+				9C8935ED2FDA505A4FE6C561 /* Streak */,
+			);
+			path = WitnessCore;
+			sourceTree = "<group>";
+		};
+		788E48741B7D54D3BE923441 /* WitnessApp */ = {
+			isa = PBXGroup;
+			children = (
+				CFD8CBB54872203BC35154E5 /* App */,
+				BD6C382569C53F55C701C8C7 /* DesignSystem */,
+				DCECA011CFBDB4EB346BA564 /* Features */,
+			);
+			path = WitnessApp;
+			sourceTree = "<group>";
+		};
+		7A62B357E09E58139AB45C5A /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */,
+				98FE485E4A09EEE93616F399 /* TodayView.swift */,
+				65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		8355A98CE88B93018DD2A824 = {
+			isa = PBXGroup;
+			children = (
+				33750A8FAB33B208A5B78B57 /* Packages */,
+				788E48741B7D54D3BE923441 /* WitnessApp */,
+				C2AEE1459FF60E704A6B6F47 /* WitnessUITests */,
+				98639BA6528D395635163C41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9148D1229A34B27D791340C5 /* Witnessed */ = {
+			isa = PBXGroup;
+			children = (
+				B698C8B547BD096664B28580 /* WitnessedView.swift */,
+			);
+			path = Witnessed;
+			sourceTree = "<group>";
+		};
+		936ED6CCA2550FB358443818 /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				B114A5EF6FC9CDFD60B4CF0C /* WitnessSharePreviewSheet.swift */,
+			);
+			path = Sharing;
+			sourceTree = "<group>";
+		};
+		98639BA6528D395635163C41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				003C9498EA506F48F2E4ECF9 /* Witness.app */,
+				2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */,
+				6BC9CF6489D7C89535986EFB /* WitnessUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C8935ED2FDA505A4FE6C561 /* Streak */ = {
+			isa = PBXGroup;
+			children = (
+				9BCEC8613720793B073A50E2 /* WitnessStreakCalculator.swift */,
+			);
+			path = Streak;
+			sourceTree = "<group>";
+		};
+		AD2BA25F9C9786D30F21245C /* Daily */ = {
+			isa = PBXGroup;
+			children = (
+				53BA20C213BA57E566E97630 /* DailySpeciesSelector.swift */,
+			);
+			path = Daily;
+			sourceTree = "<group>";
+		};
+		BD6C382569C53F55C701C8C7 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				EABFC134010BFB1FF062CF1B /* AtlasIcons.swift */,
+				1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */,
+				9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		BFBC3F175F7AEB4BBD5457E8 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				EA89A757DBBF5D9080AB542D /* FileWitnessRepository.swift */,
+				9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		C2AEE1459FF60E704A6B6F47 /* WitnessUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */,
+			);
+			path = WitnessUITests;
+			sourceTree = "<group>";
+		};
+		C509F2685438FA7BA11333C0 /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				8698B087FB05A16501745D67 /* WitnessShareCopy.swift */,
+			);
+			path = Sharing;
+			sourceTree = "<group>";
+		};
+		C5BB3F65FAF2CFCAA051857E /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+				841F6B1989A07CDD335DC75A /* ArchiveView.swift */,
+			);
+			path = Archive;
+			sourceTree = "<group>";
+		};
+		CFD8CBB54872203BC35154E5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8FDFC8711953263B8B59139B /* AppModel.swift */,
+				25D88878E41310626CED31D6 /* RootTabView.swift */,
+				EF52E8333AE9C0AD77C3567F /* WitnessApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D6974A17384539DD9356312F /* WitnessCore */ = {
+			isa = PBXGroup;
+			children = (
+				FE4DB536C1B8A923D8666A0B /* Sources */,
+			);
+			path = WitnessCore;
+			sourceTree = "<group>";
+		};
+		DCECA011CFBDB4EB346BA564 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C5BB3F65FAF2CFCAA051857E /* Archive */,
+				465D725BCE9CBC66B340F9DC /* Settings */,
+				936ED6CCA2550FB358443818 /* Sharing */,
+				7A62B357E09E58139AB45C5A /* Today */,
+				9148D1229A34B27D791340C5 /* Witnessed */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E6E1359F581B7D349C7B89E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				900C4A43A6AC261C6A25B5E1 /* SpeciesRecord.swift */,
+				2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FE4DB536C1B8A923D8666A0B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7067B7292843E3BD76C9C7E8 /* WitnessCore */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8926EE529F16A78EF6D2B226 /* Witness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F2E6B6EA3D2685FCD451820 /* Build configuration list for PBXNativeTarget "Witness" */;
+			buildPhases = (
+				CF9EDFD30239A27D3D680A1A /* Sources */,
+				967EEEE48B237A347CCCED18 /* Frameworks */,
+				FD17EA57A572EE29B5F16C12 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8D4A6ADFB59F94B4ADED9B7 /* PBXTargetDependency */,
+			);
+			name = Witness;
+			packageProductDependencies = (
+			);
+			productName = Witness;
+			productReference = 003C9498EA506F48F2E4ECF9 /* Witness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC8EC03181996C48ECAC787A /* WitnessCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 412528A05C182D49D18E7145 /* Build configuration list for PBXNativeTarget "WitnessCore" */;
+			buildPhases = (
+				9E711F52304B77583C5562A1 /* Sources */,
+				0944590255435CAB6481191C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WitnessCore;
+			packageProductDependencies = (
+			);
+			productName = WitnessCore;
+			productReference = 2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DEDA12CCC6745CC224C3A2C6 /* WitnessUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E894A06232D52E6F6D3E3C6F /* Build configuration list for PBXNativeTarget "WitnessUITests" */;
+			buildPhases = (
+				1AFB7B4BCB42B5EC6B1B5C42 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FAB53766B4D07A1D1EB0822 /* PBXTargetDependency */,
+			);
+			name = WitnessUITests;
+			packageProductDependencies = (
+			);
+			productName = WitnessUITests;
+			productReference = 6BC9CF6489D7C89535986EFB /* WitnessUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DE08BFC18210C8548FE82D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					DEDA12CCC6745CC224C3A2C6 = {
+						TestTargetID = 8926EE529F16A78EF6D2B226;
+					};
+				};
+			};
+			buildConfigurationList = 7EF346C71AE527C30003F330 /* Build configuration list for PBXProject "Witness" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 8355A98CE88B93018DD2A824;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 98639BA6528D395635163C41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC8EC03181996C48ECAC787A /* WitnessCore */,
+				8926EE529F16A78EF6D2B226 /* Witness */,
+				DEDA12CCC6745CC224C3A2C6 /* WitnessUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0944590255435CAB6481191C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75D66B3F60EA7F6EBF43D997 /* species.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AFB7B4BCB42B5EC6B1B5C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B2F3500979E875B3E27F3E /* WitnessRitualUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E711F52304B77583C5562A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224FC55D98C252D3C06B08BF /* BundledSpeciesCatalog.swift in Sources */,
+				D9AF7CA236EE26B44E280DBB /* CatalogValidator.swift in Sources */,
+				0F4628BE5E221D55F0E26166 /* DailySpeciesSelector.swift in Sources */,
+				A536A1761E475036B749FBA4 /* FileWitnessRepository.swift in Sources */,
+				16AAFB87F230EB12C8D396A1 /* SpeciesRecord.swift in Sources */,
+				E388B5ED07FA84F3140DBC9C /* WitnessRecord.swift in Sources */,
+				56085BAAD37054233313394D /* WitnessRepository.swift in Sources */,
+				16D5DDC2C5DCF75498B2A44D /* WitnessShareCopy.swift in Sources */,
+				FB5377B37A8766CB0AD36B7D /* WitnessStreakCalculator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF9EDFD30239A27D3D680A1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AACD83387DDBED44260D080 /* AppModel.swift in Sources */,
+				4F2473A639039F8A3C80F092 /* ArchiveView.swift in Sources */,
+				44218CBDF7A88A7A70C086CA /* AtlasIcons.swift in Sources */,
+				84987ABAB9FFB62FE7E68E24 /* PlateFrame.swift in Sources */,
+				3F5054183FC3B7C5BE6C7A71 /* RootTabView.swift in Sources */,
+				B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */,
+				D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */,
+				EAB93BBE70E97B6408C99333 /* TodayView.swift in Sources */,
+				66792FAAD28C4692A18458B0 /* VaquitaHeroArtwork.swift in Sources */,
+				A16041A90DD5333A1728F811 /* WitnessApp.swift in Sources */,
+				124B4DC8E0F947C48FF75286 /* WitnessSharePreviewSheet.swift in Sources */,
+				6CB63D7D22BC7C5FF46E1BAC /* WitnessTheme.swift in Sources */,
+				2E8A595CF0062FAD3A5EA2BF /* WitnessedView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2FAB53766B4D07A1D1EB0822 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8926EE529F16A78EF6D2B226 /* Witness */;
+			targetProxy = 16BC569D6A99523572A281B6 /* PBXContainerItemProxy */;
+		};
+		C8D4A6ADFB59F94B4ADED9B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC8EC03181996C48ECAC787A /* WitnessCore */;
+			targetProxy = 0F5C145C70127080C44F409D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0215A4DEA81938E72A85AB13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.avp.witness.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Witness;
+			};
+			name = Debug;
+		};
+		079DEFD810EA130FD3E2FC6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Witness;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.avp.witness;
+				PRODUCT_NAME = Witness;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0F7DAA7A90488A7E8BB6D1CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.avp.witness.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Witness;
+			};
+			name = Release;
+		};
+		42E228111FCADAE792CCA7E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5C6CA223BE94AC9E94FB8A69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.avp.witness.core;
+				PRODUCT_NAME = WitnessCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		8F6132233F8BBEF8A4465153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.avp.witness.core;
+				PRODUCT_NAME = WitnessCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		A99EF3E3E26716F2AD788D18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D49A5F99B58D96D88A566395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Witness;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.avp.witness;
+				PRODUCT_NAME = Witness;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F2E6B6EA3D2685FCD451820 /* Build configuration list for PBXNativeTarget "Witness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49A5F99B58D96D88A566395 /* Debug */,
+				079DEFD810EA130FD3E2FC6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		412528A05C182D49D18E7145 /* Build configuration list for PBXNativeTarget "WitnessCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C6CA223BE94AC9E94FB8A69 /* Debug */,
+				8F6132233F8BBEF8A4465153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7EF346C71AE527C30003F330 /* Build configuration list for PBXProject "Witness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E228111FCADAE792CCA7E3 /* Debug */,
+				A99EF3E3E26716F2AD788D18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E894A06232D52E6F6D3E3C6F /* Build configuration list for PBXNativeTarget "WitnessUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0215A4DEA81938E72A85AB13 /* Debug */,
+				0F7DAA7A90488A7E8BB6D1CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DE08BFC18210C8548FE82D8 /* Project object */;
+}
