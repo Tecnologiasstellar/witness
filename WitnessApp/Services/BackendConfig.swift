@@ -7,10 +7,10 @@ import Foundation
 enum BackendConfig {
 #if DEBUG
     static let supabaseURL = URL(string: "https://apnwougtcnewgyvnphva.supabase.co")!
-    static let supabaseAnonKey = ""
+    static let supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwbndvdWd0Y25ld2d5dm5waHZhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc0MTMxNDEsImV4cCI6MjEwMjk4OTE0MX0.Xp2j4SrSEmiUkdyvqyFZb0J7PJKrENtELXKcqnHu3BE"
 #else
     static let supabaseURL = URL(string: "https://hozkcgfajvollyobitmz.supabase.co")!
-    static let supabaseAnonKey = ""
+    static let supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvemtjZ2ZhanZvbGx5b2JpdG16Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc0MTA4MjIsImV4cCI6MjEwMjk4NjgyMn0.znVHqtMHKVcEz4D3-hqHkxt6TV6wYc5hE9ebu7gXy-c"
 #endif
 
     /// Sync stays fully disabled until the anon key for this environment is
