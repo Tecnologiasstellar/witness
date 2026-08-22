@@ -5,6 +5,10 @@ struct WitnessApp: App {
     @StateObject private var model = AppModel()
     @Environment(\.scenePhase) private var scenePhase
 
+    init() {
+        PlusEntitlements.shared.configure()
+    }
+
     var body: some Scene {
         WindowGroup {
             RootTabView(model: model)

@@ -16,6 +16,9 @@ enum BackendConfig {
     /// Sync stays fully disabled until the anon key for this environment is
     /// filled in — the local ritual never depends on it.
     static var isConfigured: Bool { !supabaseAnonKey.isEmpty }
+
+    /// RevenueCat public Apple SDK key (publishable by design).
+    static let revenueCatAPIKey = "appl_pjYQNNEyIbRmyicMlyeWnIyaroK"
 }
 
 enum InstallIdentity {
