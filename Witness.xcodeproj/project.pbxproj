@@ -19,6 +19,7 @@
 		44218CBDF7A88A7A70C086CA /* AtlasIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABFC134010BFB1FF062CF1B /* AtlasIcons.swift */; };
 		4F2473A639039F8A3C80F092 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F6B1989A07CDD335DC75A /* ArchiveView.swift */; };
 		56085BAAD37054233313394D /* WitnessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */; };
+		5B6471AA2629DE1F67F5C7B5 /* WitnessSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */; };
 		64F12E527B41CD3BC05C6889 /* WitnessCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66792FAAD28C4692A18458B0 /* VaquitaHeroArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */; };
 		6CB63D7D22BC7C5FF46E1BAC /* WitnessTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */; };
@@ -26,12 +27,16 @@
 		84987ABAB9FFB62FE7E68E24 /* PlateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */; };
 		A16041A90DD5333A1728F811 /* WitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E8333AE9C0AD77C3567F /* WitnessApp.swift */; };
 		A536A1761E475036B749FBA4 /* FileWitnessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89A757DBBF5D9080AB542D /* FileWitnessRepository.swift */; };
+		AC9C55BD3124DCD919946D44 /* FileSyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAEC2E8EF7B8E47676E1F3 /* FileSyncQueue.swift */; };
+		AEE9CFCC7ED6423851B4C1AA /* SupabaseTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BBBFD25BDE3FD1CA7575E8 /* SupabaseTransport.swift */; };
 		B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */; };
 		B1B2F3500979E875B3E27F3E /* WitnessRitualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */; };
 		D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */; };
 		D9AF7CA236EE26B44E280DBB /* CatalogValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */; };
 		E388B5ED07FA84F3140DBC9C /* WitnessRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */; };
 		EAB93BBE70E97B6408C99333 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE485E4A09EEE93616F399 /* TodayView.swift */; };
+		EC70675220171430DB535941 /* BackendConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70D6CD14579FD2FAEF6AA1 /* BackendConfig.swift */; };
+		F96E75192A68CC59699B07EC /* SyncItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA7821F324FC300D07869FA /* SyncItem.swift */; };
 		FB5377B37A8766CB0AD36B7D /* WitnessStreakCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCEC8613720793B073A50E2 /* WitnessStreakCalculator.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +81,7 @@
 		3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRitualUITests.swift; sourceTree = "<group>"; };
 		3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecimenDetailView.swift; sourceTree = "<group>"; };
 		53BA20C213BA57E566E97630 /* DailySpeciesSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySpeciesSelector.swift; sourceTree = "<group>"; };
+		5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessSync.swift; sourceTree = "<group>"; };
 		64E21B832DF552E7470A943D /* species.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = species.json; sourceTree = "<group>"; };
 		65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaquitaHeroArtwork.swift; sourceTree = "<group>"; };
 		6BC9CF6489D7C89535986EFB /* WitnessUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,11 +95,15 @@
 		9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessTheme.swift; sourceTree = "<group>"; };
 		B114A5EF6FC9CDFD60B4CF0C /* WitnessSharePreviewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessSharePreviewSheet.swift; sourceTree = "<group>"; };
 		B698C8B547BD096664B28580 /* WitnessedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessedView.swift; sourceTree = "<group>"; };
+		BBA7821F324FC300D07869FA /* SyncItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncItem.swift; sourceTree = "<group>"; };
 		D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D5BBBFD25BDE3FD1CA7575E8 /* SupabaseTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseTransport.swift; sourceTree = "<group>"; };
 		EA89A757DBBF5D9080AB542D /* FileWitnessRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWitnessRepository.swift; sourceTree = "<group>"; };
 		EABFC134010BFB1FF062CF1B /* AtlasIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasIcons.swift; sourceTree = "<group>"; };
+		EBDAEC2E8EF7B8E47676E1F3 /* FileSyncQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSyncQueue.swift; sourceTree = "<group>"; };
 		EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogValidator.swift; sourceTree = "<group>"; };
 		EF52E8333AE9C0AD77C3567F /* WitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessApp.swift; sourceTree = "<group>"; };
+		FE70D6CD14579FD2FAEF6AA1 /* BackendConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		19B371C8DA3CBBC8CC0E2C1E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FE70D6CD14579FD2FAEF6AA1 /* BackendConfig.swift */,
+				D5BBBFD25BDE3FD1CA7575E8 /* SupabaseTransport.swift */,
+				5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		33750A8FAB33B208A5B78B57 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +161,15 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		5AD71A3A00D4FAC03B641799 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				EBDAEC2E8EF7B8E47676E1F3 /* FileSyncQueue.swift */,
+				BBA7821F324FC300D07869FA /* SyncItem.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
 		7067B7292843E3BD76C9C7E8 /* WitnessCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +180,7 @@
 				12B486ACD46568EC060F1D44 /* Resources */,
 				C509F2685438FA7BA11333C0 /* Sharing */,
 				9C8935ED2FDA505A4FE6C561 /* Streak */,
+				5AD71A3A00D4FAC03B641799 /* Sync */,
 			);
 			path = WitnessCore;
 			sourceTree = "<group>";
@@ -161,6 +191,7 @@
 				CFD8CBB54872203BC35154E5 /* App */,
 				BD6C382569C53F55C701C8C7 /* DesignSystem */,
 				DCECA011CFBDB4EB346BA564 /* Features */,
+				19B371C8DA3CBBC8CC0E2C1E /* Services */,
 			);
 			path = WitnessApp;
 			sourceTree = "<group>";
@@ -438,8 +469,10 @@
 				224FC55D98C252D3C06B08BF /* BundledSpeciesCatalog.swift in Sources */,
 				D9AF7CA236EE26B44E280DBB /* CatalogValidator.swift in Sources */,
 				0F4628BE5E221D55F0E26166 /* DailySpeciesSelector.swift in Sources */,
+				AC9C55BD3124DCD919946D44 /* FileSyncQueue.swift in Sources */,
 				A536A1761E475036B749FBA4 /* FileWitnessRepository.swift in Sources */,
 				16AAFB87F230EB12C8D396A1 /* SpeciesRecord.swift in Sources */,
+				F96E75192A68CC59699B07EC /* SyncItem.swift in Sources */,
 				E388B5ED07FA84F3140DBC9C /* WitnessRecord.swift in Sources */,
 				56085BAAD37054233313394D /* WitnessRepository.swift in Sources */,
 				16D5DDC2C5DCF75498B2A44D /* WitnessShareCopy.swift in Sources */,
@@ -454,14 +487,17 @@
 				3AACD83387DDBED44260D080 /* AppModel.swift in Sources */,
 				4F2473A639039F8A3C80F092 /* ArchiveView.swift in Sources */,
 				44218CBDF7A88A7A70C086CA /* AtlasIcons.swift in Sources */,
+				EC70675220171430DB535941 /* BackendConfig.swift in Sources */,
 				84987ABAB9FFB62FE7E68E24 /* PlateFrame.swift in Sources */,
 				3F5054183FC3B7C5BE6C7A71 /* RootTabView.swift in Sources */,
 				B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */,
 				D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */,
+				AEE9CFCC7ED6423851B4C1AA /* SupabaseTransport.swift in Sources */,
 				EAB93BBE70E97B6408C99333 /* TodayView.swift in Sources */,
 				66792FAAD28C4692A18458B0 /* VaquitaHeroArtwork.swift in Sources */,
 				A16041A90DD5333A1728F811 /* WitnessApp.swift in Sources */,
 				124B4DC8E0F947C48FF75286 /* WitnessSharePreviewSheet.swift in Sources */,
+				5B6471AA2629DE1F67F5C7B5 /* WitnessSync.swift in Sources */,
 				6CB63D7D22BC7C5FF46E1BAC /* WitnessTheme.swift in Sources */,
 				2E8A595CF0062FAD3A5EA2BF /* WitnessedView.swift in Sources */,
 			);

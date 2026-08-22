@@ -68,6 +68,9 @@ final class AppModel: ObservableObject {
             )
             persistenceError = nil
             await restoreWitnesses()
+            Task.detached {
+                await WitnessSync.shared.witnessRecorded(speciesID: species.id, localDay: localDay)
+            }
         } catch {
             persistenceError = "Your Witness could not be saved yet. Nothing was sent or counted. \(error.localizedDescription)"
         }
@@ -85,6 +88,10 @@ final class AppModel: ObservableObject {
             )
             persistenceError = nil
             await restoreWitnesses()
+            Task.detached {
+                // Name only; reflection content never leaves the device.
+                await WitnessSync.shared.logEvent("reflection_saved")
+            }
         } catch {
             persistenceError = "Your private reflection could not be saved. \(error.localizedDescription)"
         }
