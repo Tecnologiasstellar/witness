@@ -14,52 +14,74 @@
       {
         "id": "vaquita-surfacing",
         "text": "A vaquita surfaces without spectacle: a small grey back, a dark ring around each eye, then water again.",
-        "sourceIDs": ["noaa-vaquita-recovery-2022"]
+        "sourceIDs": [
+          "noaa-vaquita-recovery-2022"
+        ]
       },
       {
         "id": "vaquita-range",
         "text": "This porpoise lives only in the northern Gulf of California.",
-        "sourceIDs": ["noaa-vaquita-recovery-2022"]
+        "sourceIDs": [
+          "noaa-vaquita-recovery-2022"
+        ]
       },
       {
         "id": "vaquita-world",
         "text": "Its entire known world is a narrow reach of sea between desert coasts, where sound and touch matter more than sight.",
-        "sourceIDs": ["noaa-vaquita-recovery-2022"]
+        "sourceIDs": [
+          "noaa-vaquita-recovery-2022"
+        ]
       },
       {
         "id": "vaquita-senses",
         "text": "Vaquitas navigate and find food by echolocation, sharing the water with fishing communities whose lives are also bound to the gulf.",
-        "sourceIDs": ["noaa-vaquita-recovery-2022"]
+        "sourceIDs": [
+          "noaa-vaquita-recovery-2022"
+        ]
       },
       {
         "id": "vaquita-entanglement",
         "text": "The danger is not that vaquitas are hunted.",
-        "sourceIDs": ["noaa-vaquita-recovery-2022"]
+        "sourceIDs": [
+          "noaa-vaquita-recovery-2022"
+        ]
       },
       {
         "id": "vaquita-gillnets",
         "text": "They become entangled in gillnets, including illegal nets set for totoaba, and cannot return to the surface to breathe.",
-        "sourceIDs": ["noaa-vaquita-recovery-2022", "cites-totoaba"]
+        "sourceIDs": [
+          "noaa-vaquita-recovery-2022",
+          "cites-totoaba"
+        ]
       },
       {
         "id": "vaquita-recovery",
         "text": "Research reported by NOAA found no evidence that inbreeding alone makes recovery impossible.",
-        "sourceIDs": ["noaa-vaquita-recovery-2022"]
+        "sourceIDs": [
+          "noaa-vaquita-recovery-2022"
+        ]
       },
       {
         "id": "vaquita-condition",
         "text": "The hopeful condition is also the difficult one: deaths in gillnets must stop.",
-        "sourceIDs": ["noaa-vaquita-recovery-2022"]
+        "sourceIDs": [
+          "noaa-vaquita-recovery-2022"
+        ]
       },
       {
         "id": "vaquita-witness",
         "text": "To witness the vaquita is to remember that disappearance is not abstract.",
-        "sourceIDs": ["noaa-vaquita-recovery-2022"]
+        "sourceIDs": [
+          "noaa-vaquita-recovery-2022"
+        ]
       },
       {
         "id": "vaquita-choices",
         "text": "It is shaped by choices—how fishing is supported, how illegal wildlife trade is confronted, and whether protection in one small sea is made real.",
-        "sourceIDs": ["noaa-vaquita-recovery-2022", "cites-totoaba"]
+        "sourceIDs": [
+          "noaa-vaquita-recovery-2022",
+          "cites-totoaba"
+        ]
       }
     ],
     "action": {
@@ -70,7 +92,9 @@
       "destinationURL": "https://www.fisheries.noaa.gov/feature-story/endangered-vaquita-porpoise-not-doomed-extinction-inbreeding-depression",
       "destinationOrganization": "NOAA Fisheries",
       "geographicApplicability": "Worldwide",
-      "sourceIDs": ["noaa-vaquita-recovery-2022"],
+      "sourceIDs": [
+        "noaa-vaquita-recovery-2022"
+      ],
       "lastVerified": "2026-08-21",
       "measurementType": "opened"
     },
@@ -107,6 +131,461 @@
       "lastFactChecked": "2026-08-21",
       "sensitiveLocationReview": "generalized",
       "notes": "Prototype copy derived from declared public sources. Population estimates are intentionally omitted because they are volatile. Requires conservation-partner review before release."
+    }
+  },
+  {
+    "id": "amur-leopard",
+    "schemaVersion": 1,
+    "commonName": "Amur Leopard",
+    "scientificName": "Panthera pardus orientalis",
+    "conservationStatus": {
+      "displayName": "Critically Endangered",
+      "normalizedValue": "critically_endangered"
+    },
+    "generalizedRange": "Temperate forests of the Russian Far East and northeast China",
+    "hook": "The world’s rarest big cat wears a winter coat.",
+    "story": [
+      {
+        "id": "amur-unseen",
+        "text": "Not many people ever see an Amur leopard. It is a cat of deep forest and far distances, awake mostly at night.",
+        "sourceIDs": [
+          "wwf-uk-amur"
+        ]
+      },
+      {
+        "id": "amur-alone",
+        "text": "It lives and hunts alone in the vast temperate forests of the Russian Far East and northeast China.",
+        "sourceIDs": [
+          "wwf-uk-amur"
+        ]
+      },
+      {
+        "id": "amur-winter",
+        "text": "Winter is written into its body. In the coldest months, the hairs of its black-ringed coat grow up to seven centimetres long, and its long furred tail wraps around it for warmth.",
+        "sourceIDs": [
+          "wwf-uk-amur"
+        ]
+      },
+      {
+        "id": "amur-losses",
+        "text": "For decades it was hunted mercilessly, while logging, forest fires, road building and farming broke its homeland into fragments.",
+        "sourceIDs": [
+          "wwf-uk-amur"
+        ]
+      },
+      {
+        "id": "amur-rarity",
+        "text": "It remains one of the rarest and most endangered leopard subspecies in the world.",
+        "sourceIDs": [
+          "wwf-uk-amur"
+        ]
+      },
+      {
+        "id": "amur-hope",
+        "text": "And yet the recent story bends toward hope: research shows conservation work is having an effect, and wild numbers are believed to be rising in Russia and China.",
+        "sourceIDs": [
+          "wwf-uk-amur"
+        ]
+      },
+      {
+        "id": "amur-witness",
+        "text": "To witness the Amur leopard is to hold both truths at once—how close the edge came, and how much a protected forest can still return.",
+        "sourceIDs": [
+          "wwf-uk-amur"
+        ]
+      }
+    ],
+    "action": {
+      "id": "meet-amur-forest",
+      "title": "Meet the leopard’s forest",
+      "summary": "Read WWF’s profile of the Amur leopard—the winter coat, the fragmented forest, and why its numbers are believed to be rising.",
+      "effort": "3 minutes",
+      "destinationURL": "https://www.wwf.org.uk/learn/wildlife/amur-leopards",
+      "destinationOrganization": "WWF-UK",
+      "geographicApplicability": "Worldwide",
+      "sourceIDs": [
+        "wwf-uk-amur"
+      ],
+      "lastVerified": "2026-08-22",
+      "measurementType": "opened"
+    },
+    "media": {
+      "assetID": "amur-leopard-plate-01",
+      "depictionType": "AI-assisted stylized illustration",
+      "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+      "source": "Rights record docs/media/amur-leopard-plate-01-rights.md",
+      "license": "ai_generated_owned",
+      "requiredAttribution": "None",
+      "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+      "verificationStatus": "pending"
+    },
+    "publishDate": "2026-08-22",
+    "sources": [
+      {
+        "id": "wwf-uk-amur",
+        "title": "Amur leopard",
+        "organization": "WWF-UK",
+        "url": "https://www.wwf.org.uk/learn/wildlife/amur-leopards",
+        "lastAccessed": "2026-08-22"
+      }
+    ],
+    "editorial": {
+      "state": "prototype",
+      "reviewer": "PENDING",
+      "lastFactChecked": "2026-08-22",
+      "sensitiveLocationReview": "generalized",
+      "notes": "Prototype copy derived from the declared WWF-UK profile. Population figures are intentionally omitted because they are volatile. Requires conservation-partner review before release."
+    }
+  },
+  {
+    "id": "kakapo",
+    "schemaVersion": 1,
+    "commonName": "Kākāpō",
+    "scientificName": "Strigops habroptilus",
+    "conservationStatus": {
+      "displayName": "Nationally Critical",
+      "normalizedValue": "critically_endangered"
+    },
+    "generalizedRange": "Predator-free island and fenced sanctuaries, New Zealand",
+    "hook": "The world’s heaviest parrot cannot fly—and booms in the dark.",
+    "story": [
+      {
+        "id": "kakapo-exception",
+        "text": "The kākāpō answers almost every expectation of a parrot with an exception. It cannot fly. It walks the night with an owl-like face and a waddling gait.",
+        "sourceIDs": [
+          "doc-kakapo"
+        ]
+      },
+      {
+        "id": "kakapo-heaviest",
+        "text": "It is the heaviest parrot in the world, and possibly the longest-lived bird, with lives measured in many decades.",
+        "sourceIDs": [
+          "doc-kakapo"
+        ]
+      },
+      {
+        "id": "kakapo-lek",
+        "text": "It is also the world’s only lek-breeding parrot: in breeding years, males boom across the hills for nights on end.",
+        "sourceIDs": [
+          "doc-kakapo"
+        ]
+      },
+      {
+        "id": "kakapo-taonga",
+        "text": "Kākāpō are taonga—a treasured species—to Ngāi Tahu, the principal Māori iwi of southern New Zealand.",
+        "sourceIDs": [
+          "doc-kakapo"
+        ]
+      },
+      {
+        "id": "kakapo-collapse",
+        "text": "Once found across New Zealand, kākāpō nearly vanished after human arrival brought hunting, habitat loss, and predators their ground-nesting lives could not survive.",
+        "sourceIDs": [
+          "doc-kakapo"
+        ]
+      },
+      {
+        "id": "kakapo-islands",
+        "text": "Every kākāpō alive today lives wild on predator-free islands or in fenced sanctuaries, watched over by the Kākāpō Recovery programme.",
+        "sourceIDs": [
+          "doc-kakapo",
+          "doc-kakapo-recovery"
+        ]
+      },
+      {
+        "id": "kakapo-work",
+        "text": "Its keepers contend with low hatching success and the constant need for more predator-free habitat—and still the population has grown.",
+        "sourceIDs": [
+          "doc-kakapo",
+          "doc-kakapo-recovery"
+        ]
+      },
+      {
+        "id": "kakapo-witness",
+        "text": "To witness the kākāpō is to learn how much care a species can require, and receive.",
+        "sourceIDs": [
+          "doc-kakapo"
+        ]
+      }
+    ],
+    "action": {
+      "id": "meet-kakapo-recovery",
+      "title": "Meet Kākāpō Recovery",
+      "summary": "See how New Zealand’s Department of Conservation and Ngāi Tahu run the programme that watches over every living kākāpō.",
+      "effort": "5 minutes",
+      "destinationURL": "https://www.doc.govt.nz/our-work/kakapo-recovery/what-we-do/",
+      "destinationOrganization": "NZ Department of Conservation",
+      "geographicApplicability": "Worldwide",
+      "sourceIDs": [
+        "doc-kakapo-recovery"
+      ],
+      "lastVerified": "2026-08-22",
+      "measurementType": "opened"
+    },
+    "media": {
+      "assetID": "kakapo-plate-01",
+      "depictionType": "AI-assisted stylized illustration",
+      "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+      "source": "Rights record docs/media/kakapo-plate-01-rights.md",
+      "license": "ai_generated_owned",
+      "requiredAttribution": "None",
+      "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+      "verificationStatus": "pending"
+    },
+    "publishDate": "2026-08-23",
+    "sources": [
+      {
+        "id": "doc-kakapo",
+        "title": "Kākāpō",
+        "organization": "NZ Department of Conservation",
+        "url": "https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kakapo/",
+        "lastAccessed": "2026-08-22"
+      },
+      {
+        "id": "doc-kakapo-recovery",
+        "title": "Kākāpō Recovery — what we do",
+        "organization": "NZ Department of Conservation",
+        "url": "https://www.doc.govt.nz/our-work/kakapo-recovery/what-we-do/",
+        "lastAccessed": "2026-08-22"
+      }
+    ],
+    "editorial": {
+      "state": "prototype",
+      "reviewer": "PENDING",
+      "lastFactChecked": "2026-08-22",
+      "sensitiveLocationReview": "generalized",
+      "notes": "Prototype copy derived from the declared Department of Conservation pages. The living-population figure is intentionally omitted because it changes. Requires conservation-partner review before release."
+    }
+  },
+  {
+    "id": "axolotl",
+    "schemaVersion": 1,
+    "commonName": "Axolotl",
+    "scientificName": "Ambystoma mexicanum",
+    "conservationStatus": {
+      "displayName": "Endangered",
+      "normalizedValue": "endangered"
+    },
+    "generalizedRange": "Canals of Xochimilco, southern Mexico City, Mexico",
+    "hook": "The salamander that never grows up lives in one city’s canals.",
+    "story": [
+      {
+        "id": "axolotl-refusal",
+        "text": "The axolotl is a salamander that refused to grow up, and made a life of it.",
+        "sourceIDs": [
+          "sdzwa-axolotl"
+        ]
+      },
+      {
+        "id": "axolotl-neoteny",
+        "text": "Unlike other salamanders, it is neotenic: it keeps its larval body—feathery external gills, a swimming tail, a fin along the body—for its entire life, and never leaves the water.",
+        "sourceIDs": [
+          "sdzwa-axolotl"
+        ]
+      },
+      {
+        "id": "axolotl-lineage",
+        "text": "It descends from tiger salamanders and has lived in central Mexico for perhaps ten thousand years.",
+        "sourceIDs": [
+          "sdzwa-axolotl"
+        ]
+      },
+      {
+        "id": "axolotl-basin",
+        "text": "Its world was once a great basin of lakes and wetlands—Xochimilco and Chalco—along the southern edge of the Valley of Mexico.",
+        "sourceIDs": [
+          "sdzwa-axolotl"
+        ]
+      },
+      {
+        "id": "axolotl-drained",
+        "text": "Most of that water was drained as Mexico City grew, and wild axolotls now survive in a few isolated sites in the city’s south.",
+        "sourceIDs": [
+          "sdzwa-axolotl"
+        ]
+      },
+      {
+        "id": "axolotl-culture",
+        "text": "The axolotl is woven deep into Mexican history, culture, and identity, and it is famous in science for regrowing what it loses.",
+        "sourceIDs": [
+          "sdzwa-axolotl"
+        ]
+      },
+      {
+        "id": "axolotl-squeeze",
+        "text": "Yet fame has not protected the water it needs. Its remaining habitat is small, isolated, and hemmed in by one of the world’s largest cities.",
+        "sourceIDs": [
+          "sdzwa-axolotl"
+        ]
+      },
+      {
+        "id": "axolotl-witness",
+        "text": "To witness the axolotl is to see that a species can be everywhere in culture and almost nowhere in the wild.",
+        "sourceIDs": [
+          "sdzwa-axolotl"
+        ]
+      }
+    ],
+    "action": {
+      "id": "learn-axolotl-water",
+      "title": "Understand the water it needs",
+      "summary": "Read San Diego Zoo Wildlife Alliance’s axolotl profile—neoteny, the drained lakes, and the canals where the wild ones remain.",
+      "effort": "4 minutes",
+      "destinationURL": "https://animals.sandiegozoo.org/animals/axolotl",
+      "destinationOrganization": "San Diego Zoo Wildlife Alliance",
+      "geographicApplicability": "Worldwide",
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ],
+      "lastVerified": "2026-08-22",
+      "measurementType": "opened"
+    },
+    "media": {
+      "assetID": "axolotl-plate-01",
+      "depictionType": "AI-assisted stylized illustration",
+      "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+      "source": "Rights record docs/media/axolotl-plate-01-rights.md",
+      "license": "ai_generated_owned",
+      "requiredAttribution": "None",
+      "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+      "verificationStatus": "pending"
+    },
+    "publishDate": "2026-08-24",
+    "sources": [
+      {
+        "id": "sdzwa-axolotl",
+        "title": "Axolotl",
+        "organization": "San Diego Zoo Wildlife Alliance",
+        "url": "https://animals.sandiegozoo.org/animals/axolotl",
+        "lastAccessed": "2026-08-22"
+      }
+    ],
+    "editorial": {
+      "state": "prototype",
+      "reviewer": "PENDING",
+      "lastFactChecked": "2026-08-22",
+      "sensitiveLocationReview": "generalized",
+      "notes": "Prototype copy derived from the declared San Diego Zoo Wildlife Alliance profile. Requires conservation-partner review before release."
+    }
+  },
+  {
+    "id": "monarch-butterfly",
+    "schemaVersion": 1,
+    "commonName": "Monarch Butterfly",
+    "scientificName": "Danaus plexippus",
+    "conservationStatus": {
+      "displayName": "In Decline",
+      "normalizedValue": "declining"
+    },
+    "generalizedRange": "North America, overwintering in central Mexico and coastal California",
+    "hook": "A migration measured in generations is growing thin.",
+    "story": [
+      {
+        "id": "monarch-familiar",
+        "text": "The monarch is the rare wild animal almost everyone has met: an orange-and-black butterfly drifting through a summer garden.",
+        "sourceIDs": [
+          "nps-monarch"
+        ]
+      },
+      {
+        "id": "monarch-pollinator",
+        "text": "More than beautiful, monarchs are pollinators—while feeding on nectar they pollinate many kinds of wildflowers.",
+        "sourceIDs": [
+          "nps-monarch"
+        ]
+      },
+      {
+        "id": "monarch-milkweed",
+        "text": "Their caterpillars, though, eat one thing. Monarchs must lay their eggs on milkweed.",
+        "sourceIDs": [
+          "nps-monarch",
+          "xerces-monarchs"
+        ]
+      },
+      {
+        "id": "monarch-migration",
+        "text": "Each autumn, monarchs east of the Rockies fly to overwinter in the mountains of central Mexico, while western monarchs gather at sites on the California coast.",
+        "sourceIDs": [
+          "nps-monarch",
+          "xerces-monarchs"
+        ]
+      },
+      {
+        "id": "monarch-generations",
+        "text": "No single butterfly makes the whole journey. The migration is completed across generations.",
+        "sourceIDs": [
+          "nps-monarch"
+        ]
+      },
+      {
+        "id": "monarch-decline",
+        "text": "Once abundant across North America, monarchs are now in decline, pressed by habitat loss, pesticides, and a changing climate.",
+        "sourceIDs": [
+          "xerces-monarchs"
+        ]
+      },
+      {
+        "id": "monarch-backyard",
+        "text": "Their recovery is unusually close to home: milkweed native to your region, nectar flowers from spring through fall, and gardens managed without pesticides.",
+        "sourceIDs": [
+          "xerces-monarchs"
+        ]
+      },
+      {
+        "id": "monarch-witness",
+        "text": "To witness the monarch is to notice that even a common wonder can thin—and that a backyard can be part of the answer.",
+        "sourceIDs": [
+          "xerces-monarchs"
+        ]
+      }
+    ],
+    "action": {
+      "id": "plant-native-milkweed",
+      "title": "Plant native milkweed",
+      "summary": "Use the Xerces Society’s regional guides to plant milkweed native to your area and nectar flowers that bloom spring through fall—and skip the pesticides.",
+      "effort": "One garden season",
+      "destinationURL": "https://xerces.org/monarchs",
+      "destinationOrganization": "Xerces Society",
+      "geographicApplicability": "North America",
+      "sourceIDs": [
+        "xerces-monarchs"
+      ],
+      "lastVerified": "2026-08-22",
+      "measurementType": "opened"
+    },
+    "media": {
+      "assetID": "monarch-plate-01",
+      "depictionType": "AI-assisted stylized illustration",
+      "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+      "source": "Rights record docs/media/monarch-plate-01-rights.md",
+      "license": "ai_generated_owned",
+      "requiredAttribution": "None",
+      "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+      "verificationStatus": "pending"
+    },
+    "publishDate": "2026-08-25",
+    "sources": [
+      {
+        "id": "nps-monarch",
+        "title": "Pollinators — Monarch butterfly",
+        "organization": "U.S. National Park Service",
+        "url": "https://www.nps.gov/articles/monarch-butterfly.htm",
+        "lastAccessed": "2026-08-22"
+      },
+      {
+        "id": "xerces-monarchs",
+        "title": "Monarch Conservation",
+        "organization": "Xerces Society",
+        "url": "https://xerces.org/monarchs",
+        "lastAccessed": "2026-08-22"
+      }
+    ],
+    "editorial": {
+      "state": "prototype",
+      "reviewer": "PENDING",
+      "lastFactChecked": "2026-08-22",
+      "sensitiveLocationReview": "generalized",
+      "notes": "Prototype copy derived from the declared NPS and Xerces pages. Formal listing status is intentionally described only as decline because regulatory status is in motion. Requires conservation-partner review before release."
     }
   }
 ]
