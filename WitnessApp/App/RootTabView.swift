@@ -33,7 +33,7 @@ struct RootTabView: View {
                 switch selection {
                 case .today:
                     NavigationStack {
-                        TodayView(model: model, onOpenIndex: { isIndexPresented = true }, onOpenReflection: { isReflectionPresented = true }, onWitnessed: { selection = .notes })
+                        TodayView(model: model, onOpenIndex: { isIndexPresented = true }, onOpenReflection: { isReflectionPresented = true })
                     }
                 case .cabinet:
                     NavigationStack { ArchiveView(model: model) }
@@ -63,6 +63,10 @@ private struct AtlasTabBar: View {
                             .font(AtlasType.technical(9, weight: .semibold))
                             .tracking(1.15)
                     }
+                    // Fixed-size labels like the system tab bar: the row is one
+                    // accessibility element and large-type users get the
+                    // long-press Large Content Viewer instead of scaled text.
+                    .accessibilityElement(children: .ignore)
                     .foregroundStyle(selection == tab ? AtlasTheme.ink : AtlasTheme.inkMuted)
                     .frame(maxWidth: .infinity, minHeight: 62)
                     .contentShape(Rectangle())
@@ -71,6 +75,9 @@ private struct AtlasTabBar: View {
                 .accessibilityIdentifier("atlas.tab.\(tab.rawValue)")
                 .accessibilityLabel(tab.title.capitalized)
                 .accessibilityAddTraits(selection == tab ? .isSelected : [])
+                .accessibilityShowsLargeContentViewer {
+                    Text(tab.title.capitalized)
+                }
             }
         }
         .background(AtlasTheme.paper)

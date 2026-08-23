@@ -32,13 +32,16 @@ enum AtlasTheme {
 /// system-serif fallback avoids shipping a font without a recorded license decision.
 enum AtlasType {
     static func display(_ size: CGFloat, weight: Font.Weight = .medium, italic: Bool = false) -> Font {
-        if let font = UIFont(name: italic ? "EBGaramond-Italic" : "EBGaramond-Regular", size: size) {
-            return Font(font).weight(weight)
+        let name = italic ? "EBGaramond-Italic" : "EBGaramond-Regular"
+        if UIFont(name: name, size: size) != nil {
+            return Font.custom(name, size: size, relativeTo: .body).weight(weight)
         }
         let fallback = Font.system(size: size, weight: weight, design: .serif)
         return italic ? fallback.italic() : fallback
     }
 
+    // Callers rendering bare text (not merged into a larger accessibility
+    // element) should pass an @ScaledMetric size so the text follows Dynamic Type.
     static func technical(_ size: CGFloat, weight: Font.Weight = .regular) -> Font {
         .system(size: size, weight: weight, design: .default)
     }

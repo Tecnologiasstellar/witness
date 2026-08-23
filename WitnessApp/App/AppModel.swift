@@ -5,6 +5,7 @@ import WitnessCore
 @MainActor
 final class AppModel: ObservableObject {
     @Published private(set) var species: SpeciesRecord?
+    @Published private(set) var catalog: [SpeciesRecord] = []
     @Published private(set) var loadError: String?
     @Published private(set) var witnessRecords: [WitnessRecord] = []
     @Published private(set) var persistenceError: String?
@@ -23,6 +24,24 @@ final class AppModel: ObservableObject {
     }
 
     var latestWitnessRecord: WitnessRecord? { witnessRecords.first }
+
+    var featuredPlates: [FeaturedPlate] {
+        DailySpeciesSelector().featuredHistory(asOf: dateProvider.now(), from: catalog, calendar: calendar)
+    }
+
+    func isPlateUnlocked(_ plate: FeaturedPlate, hasPlus: Bool) -> Bool {
+        ArchiveAccessPolicy.isUnlocked(
+            localDay: plate.localDay,
+            asOf: dateProvider.now(),
+            calendar: calendar,
+            hasPlus: hasPlus
+        )
+    }
+
+    func isPlateWitnessed(_ plate: FeaturedPlate) -> Bool {
+        let eventID = WitnessDayKey.eventID(speciesID: plate.species.id, localDay: plate.localDay)
+        return witnessRecords.contains { $0.id == eventID }
+    }
     var isWitnessed: Bool { todayWitnessRecord != nil }
     var currentStreak: Int {
         WitnessStreakCalculator.currentStreak(
@@ -42,7 +61,7 @@ final class AppModel: ObservableObject {
         self.calendar = calendar
 
         do {
-            let catalog = try BundledSpeciesCatalog.load()
+            catalog = try BundledSpeciesCatalog.load()
             species = DailySpeciesSelector().species(for: dateProvider.now(), from: catalog, calendar: calendar)
         } catch {
             loadError = String(describing: error)

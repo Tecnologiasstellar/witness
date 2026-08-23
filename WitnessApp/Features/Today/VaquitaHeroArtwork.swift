@@ -62,6 +62,7 @@ struct AtlasScaleRule: View {
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Scale unavailable for this abstract prototype depiction")
+        .accessibilityAddTraits(.isStaticText)
     }
 }
 
@@ -84,6 +85,7 @@ struct AtlasTally: View {
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Count unavailable")
         .accessibilityValue("Last verified \(lastVerified)")
+        .accessibilityAddTraits(.isStaticText)
     }
 }
 

@@ -5,7 +5,6 @@ struct TodayView: View {
     @ObservedObject var model: AppModel
     let onOpenIndex: () -> Void
     let onOpenReflection: () -> Void
-    let onWitnessed: () -> Void
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
@@ -69,7 +68,12 @@ struct TodayView: View {
     private var header: some View {
         HStack {
             Button(action: onOpenIndex) {
-                AtlasIconView(icon: .contents, size: 18).frame(width: 44, height: 44)
+                // accessibilityHidden keeps the canvas's stroke-sized node from
+                // shrinking the button's audit hit area below the 44pt frame.
+                AtlasIconView(icon: .contents, size: 18)
+                    .accessibilityHidden(true)
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Contents index")
@@ -81,7 +85,10 @@ struct TodayView: View {
                 .foregroundStyle(AtlasTheme.sepia)
             Spacer()
             Button(action: onOpenReflection) {
-                AtlasIconView(icon: .nib, size: 18).frame(width: 44, height: 44)
+                AtlasIconView(icon: .nib, size: 18)
+                    .accessibilityHidden(true)
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Add a private note")
@@ -117,10 +124,7 @@ struct TodayView: View {
     private var witnessControl: some View {
         VStack(spacing: 7) {
             Button {
-                Task {
-                    await model.witness()
-                    if model.isWitnessed { onWitnessed() }
-                }
+                Task { await model.witness() }
             } label: {
                 HStack(spacing: 10) {
                     AtlasIconView(icon: .fieldMark, size: 17)

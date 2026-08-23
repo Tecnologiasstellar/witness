@@ -3,8 +3,10 @@ import WitnessCore
 
 struct ArchiveView: View {
     @ObservedObject var model: AppModel
+    @ObservedObject private var entitlements = PlusEntitlements.shared
     @State private var filter = "ALL"
-    private let filters = ["ALL", "WITNESSED", "MARINE"]
+    @State private var isPaywallPresented = false
+    private let filters = ["ALL", "WITNESSED"]
 
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
@@ -12,12 +14,12 @@ struct ArchiveView: View {
                 Text("CABINET")
                     .font(AtlasType.display(32, weight: .semibold))
                 Spacer()
-                Text("\(visibleSpecies.count) PLATE\(visibleSpecies.count == 1 ? "" : "S")")
+                Text("\(visiblePlates.count) PLATE\(visiblePlates.count == 1 ? "" : "S")")
                     .font(AtlasType.technical(10, weight: .bold)).tracking(1.1)
                     .foregroundStyle(AtlasTheme.sepia)
             }
             filterRow
-            if visibleSpecies.isEmpty {
+            if visiblePlates.isEmpty {
                 Spacer()
                 Text("NO PLATES MATCH THIS VIEW")
                     .font(AtlasType.technical(11, weight: .bold)).tracking(1.1)
@@ -25,34 +27,53 @@ struct ArchiveView: View {
                     .frame(maxWidth: .infinity)
                 Spacer()
             } else {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
-                    ForEach(visibleSpecies) { species in
-                        NavigationLink { SpecimenDetailView(species: species) } label: { CabinetCard(species: species, isToday: species.id == model.species?.id) }
-                            .buttonStyle(.plain)
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                        ForEach(visiblePlates) { plate in
+                            if model.isPlateUnlocked(plate, hasPlus: entitlements.hasPlus) {
+                                NavigationLink { SpecimenDetailView(species: plate.species) } label: {
+                                    CabinetCard(
+                                        plate: plate,
+                                        isToday: plate.localDay == todayDay,
+                                        isLocked: false
+                                    )
+                                }
+                                .buttonStyle(.plain)
+                            } else {
+                                Button { isPaywallPresented = true } label: {
+                                    CabinetCard(plate: plate, isToday: false, isLocked: true)
+                                }
+                                .buttonStyle(.plain)
+                            }
+                        }
                     }
                 }
-                Spacer()
+                .scrollIndicators(.hidden)
             }
         }
         .padding(22)
         .foregroundStyle(AtlasTheme.ink)
         .background(AtlasPaper().ignoresSafeArea())
         .toolbar(.hidden, for: .navigationBar)
+        .sheet(isPresented: $isPaywallPresented) { WitnessPlusPaywall() }
     }
 
-    private var visibleSpecies: [SpeciesRecord] {
-        guard let species = model.species else { return [] }
+    private var todayDay: String? {
+        model.featuredPlates.first?.localDay
+    }
+
+    private var visiblePlates: [FeaturedPlate] {
+        let plates = model.featuredPlates
         switch filter {
-        case "WITNESSED": return model.isWitnessed ? [species] : []
-        case "MARINE": return [species]
-        default: return [species]
+        case "WITNESSED": return plates.filter { model.isPlateWitnessed($0) }
+        default: return plates
         }
     }
 
     private var filterRow: some View {
         HStack(spacing: 8) {
             ForEach(filters, id: \.self) { item in
-                Button(item) { filter = item } 
+                Button(item) { filter = item }
                     .font(AtlasType.technical(9, weight: .bold)).tracking(1)
                     .foregroundStyle(filter == item ? AtlasTheme.paper : AtlasTheme.sepia)
                     .padding(.horizontal, 11).frame(minHeight: 34)
@@ -66,27 +87,43 @@ struct ArchiveView: View {
 }
 
 private struct CabinetCard: View {
-    let species: SpeciesRecord
+    let plate: FeaturedPlate
     let isToday: Bool
+    let isLocked: Bool
 
     var body: some View {
         VStack(alignment: .leading, spacing: 7) {
             ZStack(alignment: .topTrailing) {
-                SpecimenPlate(species: species, showsLeaderLabels: false).frame(height: 88)
+                SpecimenPlate(species: plate.species, showsLeaderLabels: false)
+                    .frame(height: 88)
+                    .opacity(isLocked ? 0.35 : 1)
                 if isToday {
                     Text("TODAY")
                         .font(AtlasType.technical(8, weight: .bold)).tracking(1)
                         .foregroundStyle(AtlasTheme.sepia).padding(7)
                 }
+                if isLocked {
+                    Text("WITNESS+")
+                        .font(AtlasType.technical(8, weight: .bold)).tracking(1)
+                        .foregroundStyle(AtlasTheme.sepia).padding(7)
+                }
             }
-            Text(species.commonName.uppercased())
+            Text(plate.species.commonName.uppercased())
                 .font(AtlasType.technical(10, weight: .bold)).tracking(0.9)
                 .lineLimit(1)
-            Text(species.scientificName)
+                .opacity(isLocked ? 0.6 : 1)
+            Text(plate.localDay)
                 .font(AtlasType.display(12, italic: true)).foregroundStyle(AtlasTheme.inkMuted)
         }
         .padding(11)
         .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
-        .accessibilityLabel("\(species.commonName), \(species.scientificName)\(isToday ? ", today’s plate" : "")")
+        .accessibilityLabel(accessibilityText)
+    }
+
+    private var accessibilityText: String {
+        var label = "\(plate.species.commonName), featured \(plate.localDay)"
+        if isToday { label += ", today’s plate" }
+        if isLocked { label += ", requires Witness Plus" }
+        return label
     }
 }

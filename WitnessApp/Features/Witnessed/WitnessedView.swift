@@ -23,7 +23,7 @@ struct WitnessedView: View {
     }
 
     private func witnessedPlate(species: SpeciesRecord, date: Date) -> some View {
-        GeometryReader { _ in
+        ScrollView {
             ZStack {
                 PlateFrame()
                 VStack(spacing: 12) {
@@ -40,18 +40,22 @@ struct WitnessedView: View {
                         .font(AtlasType.technical(9, weight: .bold)).tracking(1.1)
                         .foregroundStyle(AtlasTheme.inkMuted)
                     Spacer(minLength: 4)
-                    Button("LEAVE A NOTE") { showsReflection = true }
-                        .font(AtlasType.technical(11, weight: .bold)).tracking(1.15)
-                        .foregroundStyle(AtlasTheme.sepia).frame(minHeight: 44)
-                    Button("SHARE PLATE") { showsSharePreview = true }
-                        .font(AtlasType.technical(10, weight: .bold)).tracking(1.15)
-                        .foregroundStyle(AtlasTheme.inkMuted).frame(minHeight: 44)
-                        .accessibilityIdentifier("witnessed.sharePreviewButton")
+                    HStack(spacing: 26) {
+                        Button("LEAVE A NOTE") { showsReflection = true }
+                            .font(AtlasType.technical(11, weight: .bold)).tracking(1.15)
+                            .foregroundStyle(AtlasTheme.sepia).frame(minHeight: 44)
+                        Button("SHARE PLATE") { showsSharePreview = true }
+                            .font(AtlasType.technical(11, weight: .bold)).tracking(1.15)
+                            .foregroundStyle(AtlasTheme.sepia).frame(minHeight: 44)
+                            .accessibilityIdentifier("witnessed.sharePreviewButton")
+                    }
                 }
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 28).padding(.vertical, 18)
             }
+            .frame(maxWidth: .infinity, minHeight: 620)
         }
+        .scrollIndicators(.hidden)
         .foregroundStyle(AtlasTheme.ink)
     }
 
