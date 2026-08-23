@@ -89,7 +89,9 @@ private struct WitnessShareCard: View {
                     .font(AtlasType.display(30, weight: .semibold)).multilineTextAlignment(.center)
                 Text(species.scientificName)
                     .font(AtlasType.display(14, italic: true)).foregroundStyle(AtlasTheme.inkMuted)
-                AtlasTally(lastVerified: species.editorial.lastFactChecked)
+                // Share cards never carry a count claim: an exported image
+                // goes stale the moment it leaves the device.
+                AtlasTally(count: nil, lastVerified: species.editorial.lastFactChecked)
                 Spacer(minLength: 0)
                 HStack {
                     AtlasIconView(icon: .fieldMark, size: 14)

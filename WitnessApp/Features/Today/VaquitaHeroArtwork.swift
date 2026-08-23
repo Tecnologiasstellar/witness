@@ -81,24 +81,35 @@ struct AtlasScaleRule: View {
 }
 
 struct AtlasTally: View {
+    let count: Int?
     let lastVerified: String
+
+    private var countLine: String {
+        guard let count else {
+            return "COUNT UNAVAILABLE · LAST VERIFIED \(lastVerified)"
+        }
+        let formatted = count.formatted(.number.grouping(.automatic))
+        return "\(formatted) WITNESS\(count == 1 ? "" : "ES") · UPDATED TODAY"
+    }
 
     var body: some View {
         VStack(spacing: 7) {
             HStack(spacing: 7) {
-                ForEach(0..<8, id: \.self) { _ in
-                    Circle().stroke(AtlasTheme.hairline, lineWidth: 1).frame(width: 7, height: 7)
+                ForEach(0..<8, id: \.self) { index in
+                    Circle()
+                        .stroke(AtlasTheme.hairline, lineWidth: 1)
+                        .fill(index < min(count ?? 0, 8) ? AtlasTheme.sepia.opacity(0.55) : .clear)
+                        .frame(width: 7, height: 7)
                 }
             }
-            Text("COUNT UNAVAILABLE · LAST VERIFIED \(lastVerified)")
-                .font(AtlasType.technical(9))
+            Text(countLine)
+                .font(AtlasType.technical(9, weight: .medium))
                 .tracking(1.44)
-                .foregroundStyle(AtlasTheme.inkMuted)
+                .foregroundStyle(AtlasTheme.ink)
                 .multilineTextAlignment(.center)
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Count unavailable")
-        .accessibilityValue("Last verified \(lastVerified)")
+        .accessibilityLabel(count.map { "\($0) witnesses, updated today" } ?? "Count unavailable")
         .accessibilityAddTraits(.isStaticText)
     }
 }

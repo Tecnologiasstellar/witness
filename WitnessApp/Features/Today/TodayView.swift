@@ -18,10 +18,21 @@ struct TodayView: View {
                     ScrollView {
                         plate(for: species).frame(minHeight: 720)
                         witnessControl.padding(.horizontal, 22).padding(.bottom, 14)
+                        StorySheet(species: species, onOpenFigures: { showsSpecimen = true })
                     }
                     .scrollIndicators(.hidden)
                 } else {
-                    plate(for: species)
+                    ScrollView {
+                        VStack(spacing: 0) {
+                            // The hero plate fills the viewport, leaving the
+                            // sheet's top edge peeking as the scroll affordance.
+                            plate(for: species)
+                                .containerRelativeFrame(.vertical) { length, _ in max(430, length - 60) }
+                            StorySheet(species: species, onOpenFigures: { showsSpecimen = true })
+                                .padding(.top, -10)
+                        }
+                    }
+                    .scrollIndicators(.hidden)
                 }
             } else {
                 loadFailure
@@ -66,7 +77,7 @@ struct TodayView: View {
 
                 AtlasScaleRule().padding(.horizontal, 28).padding(.top, 10)
                 specimenName(species)
-                AtlasTally(lastVerified: species.editorial.lastFactChecked).padding(.top, 10)
+                AtlasTally(count: model.witnessCount, lastVerified: species.editorial.lastFactChecked).padding(.top, 10)
             }
             .padding(.horizontal, 26)
             .padding(.top, 8)

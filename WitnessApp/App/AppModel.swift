@@ -10,6 +10,7 @@ final class AppModel: ObservableObject {
     @Published private(set) var witnessRecords: [WitnessRecord] = []
     @Published private(set) var persistenceError: String?
     @Published private(set) var isSaving = false
+    @Published private(set) var witnessCount: Int?
     @Published var reflectionDraft = ""
 
     private let witnessRepository: any WitnessRepository
@@ -69,6 +70,14 @@ final class AppModel: ObservableObject {
 
         Task { [weak self] in
             await self?.restoreWitnesses()
+            await self?.refreshWitnessCount()
+        }
+    }
+
+    func refreshWitnessCount() async {
+        guard let species else { return }
+        if let count = await WitnessCounts.fetch(speciesID: species.id) {
+            witnessCount = count
         }
     }
 
@@ -87,8 +96,9 @@ final class AppModel: ObservableObject {
             )
             persistenceError = nil
             await restoreWitnesses()
-            Task.detached {
+            Task { [weak self] in
                 await WitnessSync.shared.witnessRecorded(speciesID: species.id, localDay: localDay)
+                await self?.refreshWitnessCount()
             }
         } catch {
             persistenceError = "Your Witness could not be saved yet. Nothing was sent or counted. \(error.localizedDescription)"
