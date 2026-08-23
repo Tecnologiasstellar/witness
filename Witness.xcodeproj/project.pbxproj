@@ -38,6 +38,7 @@
 		D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */; };
 		D9AF7CA236EE26B44E280DBB /* CatalogValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */; };
 		E388B5ED07FA84F3140DBC9C /* WitnessRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */; };
+		E548CB4F18E023489E9A2D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5912AC6B4687E04E2D975DE /* Assets.xcassets */; };
 		EAB93BBE70E97B6408C99333 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE485E4A09EEE93616F399 /* TodayView.swift */; };
 		EC70675220171430DB535941 /* BackendConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70D6CD14579FD2FAEF6AA1 /* BackendConfig.swift */; };
 		F96E75192A68CC59699B07EC /* SyncItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA7821F324FC300D07869FA /* SyncItem.swift */; };
@@ -105,6 +106,7 @@
 		D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D5BBBFD25BDE3FD1CA7575E8 /* SupabaseTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseTransport.swift; sourceTree = "<group>"; };
 		E21448505ADEB8E59D0B8246 /* PlusEntitlements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusEntitlements.swift; sourceTree = "<group>"; };
+		E5912AC6B4687E04E2D975DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA89A757DBBF5D9080AB542D /* FileWitnessRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWitnessRepository.swift; sourceTree = "<group>"; };
 		EABFC134010BFB1FF062CF1B /* AtlasIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasIcons.swift; sourceTree = "<group>"; };
 		EBDAEC2E8EF7B8E47676E1F3 /* FileSyncQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSyncQueue.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		788E48741B7D54D3BE923441 /* WitnessApp */ = {
 			isa = PBXGroup;
 			children = (
+				E5912AC6B4687E04E2D975DE /* Assets.xcassets */,
 				CFD8CBB54872203BC35154E5 /* App */,
 				BD6C382569C53F55C701C8C7 /* DesignSystem */,
 				DCECA011CFBDB4EB346BA564 /* Features */,
@@ -383,6 +386,7 @@
 			buildConfigurationList = 2F2E6B6EA3D2685FCD451820 /* Build configuration list for PBXNativeTarget "Witness" */;
 			buildPhases = (
 				CF9EDFD30239A27D3D680A1A /* Sources */,
+				4BFC7077308875F132A3952F /* Resources */,
 				967EEEE48B237A347CCCED18 /* Frameworks */,
 				FD17EA57A572EE29B5F16C12 /* Embed Frameworks */,
 			);
@@ -479,6 +483,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				75D66B3F60EA7F6EBF43D997 /* species.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BFC7077308875F132A3952F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E548CB4F18E023489E9A2D98 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

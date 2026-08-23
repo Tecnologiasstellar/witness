@@ -3,10 +3,12 @@ import SwiftUI
 struct PlateFrame: View {
     var showsSecondRule = true
     var showsCornerTicks = true
+    var topMargin: CGFloat = 44
+    var bottomMargin: CGFloat = 104
 
     var body: some View {
         GeometryReader { geo in
-            let outer = CGRect(x: 14, y: 44, width: max(0, geo.size.width - 28), height: max(0, geo.size.height - 148))
+            let outer = CGRect(x: 14, y: topMargin, width: max(0, geo.size.width - 28), height: max(0, geo.size.height - topMargin - bottomMargin))
             let inner = outer.insetBy(dx: 5, dy: 5)
             ZStack {
                 Path { $0.addRect(outer) }.stroke(AtlasTheme.sepia, lineWidth: 1)

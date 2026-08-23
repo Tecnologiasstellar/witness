@@ -75,14 +75,14 @@
       "measurementType": "opened"
     },
     "media": {
-      "assetID": "prototype-vaquita-geometry-v1",
-      "depictionType": "Abstract prototype illustration",
-      "creator": "Witness prototype",
-      "source": "Local SwiftUI geometry",
-      "license": "Owned prototype asset",
+      "assetID": "vaquita-plate-01",
+      "depictionType": "AI-assisted stylized illustration",
+      "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+      "source": "Higgsfield job e07a5206-45fe-41e9-9983-f409efa9bce1, 2026-08-22; rights record docs/media/vaquita-plate-01-rights.md",
+      "license": "ai_generated_owned",
       "requiredAttribution": "None",
-      "commercialUseStatus": "prototype-owned",
-      "verificationStatus": "prototype"
+      "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+      "verificationStatus": "pending"
     },
     "publishDate": "2026-08-21",
     "sources": [

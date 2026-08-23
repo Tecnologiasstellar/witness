@@ -11,7 +11,9 @@ struct CatalogValidatorTests {
         #expect(records.count == 1)
         #expect(records.first?.id == "vaquita")
         #expect(records.first?.story.allSatisfy { !$0.sourceIDs.isEmpty } == true)
-        #expect(records.first?.media.verificationStatus == .prototype)
+        // Approved Higgsfield artwork is in place; media rights stay pending
+        // until the plan's commercial terms are verified (D-013).
+        #expect(records.first?.media.verificationStatus == .pending)
     }
 
     @Test("Prototype evidence cannot pass the production gate")

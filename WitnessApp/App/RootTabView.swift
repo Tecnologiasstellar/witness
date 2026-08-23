@@ -27,24 +27,28 @@ struct RootTabView: View {
     @State private var isReflectionPresented = false
 
     var body: some View {
-        ZStack {
-            AtlasPaper()
-            Group {
-                switch selection {
-                case .today:
-                    NavigationStack {
-                        TodayView(model: model, onOpenIndex: { isIndexPresented = true }, onOpenReflection: { isReflectionPresented = true })
+        // A plain VStack, not a safeAreaInset: insets applied outside a
+        // NavigationStack do not reliably propagate into its content, which
+        // let screens lay out underneath the tab bar.
+        VStack(spacing: 0) {
+            ZStack {
+                AtlasPaper()
+                Group {
+                    switch selection {
+                    case .today:
+                        NavigationStack {
+                            TodayView(model: model, onOpenIndex: { isIndexPresented = true }, onOpenReflection: { isReflectionPresented = true })
+                        }
+                    case .cabinet:
+                        NavigationStack { ArchiveView(model: model) }
+                    case .notes:
+                        NavigationStack { WitnessedView(model: model) }
                     }
-                case .cabinet:
-                    NavigationStack { ArchiveView(model: model) }
-                case .notes:
-                    NavigationStack { WitnessedView(model: model) }
                 }
             }
-        }
-        .safeAreaInset(edge: .bottom, spacing: 0) {
             AtlasTabBar(selection: $selection)
         }
+        .background(AtlasTheme.paper.ignoresSafeArea())
         .sheet(isPresented: $isIndexPresented) { SettingsView() }
         .sheet(isPresented: $isReflectionPresented) { PrivateReflectionSheet(model: model) }
     }

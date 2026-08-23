@@ -15,13 +15,25 @@ struct TodayView: View {
         Group {
             if let species = model.species {
                 if dynamicTypeSize.isAccessibilitySize {
-                    ScrollView { plate(for: species).frame(minHeight: 720) }
-                        .scrollIndicators(.hidden)
+                    ScrollView {
+                        plate(for: species).frame(minHeight: 720)
+                        witnessControl.padding(.horizontal, 22).padding(.bottom, 14)
+                    }
+                    .scrollIndicators(.hidden)
                 } else {
                     plate(for: species)
                 }
             } else {
                 loadFailure
+            }
+        }
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            if model.species != nil, !dynamicTypeSize.isAccessibilitySize {
+                witnessControl
+                    .padding(.horizontal, 22)
+                    .padding(.top, 6)
+                    .padding(.bottom, 10)
+                    .background(AtlasTheme.paper)
             }
         }
         .background(AtlasTheme.paper.ignoresSafeArea())
@@ -35,32 +47,30 @@ struct TodayView: View {
     }
 
     private func plate(for species: SpeciesRecord) -> some View {
-        GeometryReader { proxy in
-            ZStack {
-                PlateFrame()
-                VStack(spacing: 0) {
-                    header
-                    statusLine(species).padding(.top, 10)
-                    Button { showsSpecimen = true } label: {
-                        SpecimenPlate(species: species, showsLeaderLabels: true)
-                            .frame(height: min(202, max(156, proxy.size.height * 0.275)))
-                            .contentShape(Rectangle())
-                    }
-                    .buttonStyle(.plain)
-                    .accessibilityIdentifier("today.specimenButton")
-                    .accessibilityHint("Opens the specimen figures for range, prey and cause")
-                    .contextMenu { Button("Preview share plate") { showsSharePreview = true } }
-
-                    AtlasScaleRule().padding(.horizontal, 28)
-                    specimenName(species)
-                    AtlasTally(lastVerified: species.editorial.lastFactChecked).padding(.top, 10)
-                    Spacer(minLength: 8)
-                    witnessControl
+        ZStack {
+            PlateFrame(bottomMargin: 24)
+            VStack(spacing: 0) {
+                header
+                statusLine(species).padding(.top, 10)
+                Button { showsSpecimen = true } label: {
+                    SpecimenPlate(species: species, showsLeaderLabels: true)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
+                        .contentShape(Rectangle())
                 }
-                .padding(.horizontal, 22)
-                .padding(.top, 8)
-                .padding(.bottom, 14)
+                .buttonStyle(.plain)
+                .padding(.top, 12)
+                .accessibilityIdentifier("today.specimenButton")
+                .accessibilityHint("Opens the specimen figures for range, prey and cause")
+                .contextMenu { Button("Preview share plate") { showsSharePreview = true } }
+
+                AtlasScaleRule().padding(.horizontal, 28).padding(.top, 10)
+                specimenName(species)
+                AtlasTally(lastVerified: species.editorial.lastFactChecked).padding(.top, 10)
             }
+            .padding(.horizontal, 26)
+            .padding(.top, 8)
+            .padding(.bottom, 34)
         }
         .accessibilityElement(children: .contain)
     }

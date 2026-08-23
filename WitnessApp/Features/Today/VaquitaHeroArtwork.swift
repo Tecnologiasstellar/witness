@@ -1,8 +1,9 @@
 import SwiftUI
 import WitnessCore
 
-/// Rights-safe, code-drawn fallback. It intentionally replaces the handoff's
-/// placeholder PNGs until a per-file production rights record is approved.
+/// Renders the species' approved bundled artwork when its media record maps
+/// to an asset in the catalog; otherwise falls back to the rights-safe,
+/// code-drawn geometry (D-013).
 struct SpecimenPlate: View {
     let species: SpeciesRecord
     var showsLeaderLabels = true
@@ -10,6 +11,19 @@ struct SpecimenPlate: View {
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
+        if let artwork = UIImage(named: species.media.assetID) {
+            Image(uiImage: artwork)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .opacity(opacity)
+                .accessibilityLabel("\(species.media.depictionType) of \(species.commonName)")
+                .accessibilityAddTraits(.isImage)
+        } else {
+            fallbackGeometry
+        }
+    }
+
+    private var fallbackGeometry: some View {
         GeometryReader { proxy in
             let bodyWidth = min(proxy.size.width * 0.82, 318)
             ZStack {
