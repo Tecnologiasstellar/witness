@@ -20,6 +20,7 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
     public let insight: StorySection?
     public let habitatRegions: [RangeRegion]?
     public let gallery: [String]?
+    public let programs: [ConservationProgram]?
 
     public init(
         id: String,
@@ -39,7 +40,8 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
         reproduction: StorySection? = nil,
         insight: StorySection? = nil,
         habitatRegions: [RangeRegion]? = nil,
-        gallery: [String]? = nil
+        gallery: [String]? = nil,
+        programs: [ConservationProgram]? = nil
     ) {
         self.id = id
         self.schemaVersion = schemaVersion
@@ -59,6 +61,47 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
         self.insight = insight
         self.habitatRegions = habitatRegions
         self.gallery = gallery
+        self.programs = programs
+    }
+}
+
+/// A protection effort shown in the Cabinet's HELP & PROTECTION section.
+/// `program` entries are editorially selected real initiatives (unpaid);
+/// `sponsor` marks a disclosed commercial partner and must be labeled as such
+/// in the UI — the kinds are never mixed silently (trust policy).
+public struct ConservationProgram: Codable, Equatable, Identifiable, Sendable {
+    public enum Kind: String, Codable, Sendable {
+        case program
+        case sponsor
+    }
+
+    public let id: String
+    public let organization: String
+    public let title: String
+    public let summary: String
+    public let url: String
+    public let kind: Kind
+    public let sourceIDs: [String]
+    public let lastVerified: String
+
+    public init(
+        id: String,
+        organization: String,
+        title: String,
+        summary: String,
+        url: String,
+        kind: Kind,
+        sourceIDs: [String],
+        lastVerified: String
+    ) {
+        self.id = id
+        self.organization = organization
+        self.title = title
+        self.summary = summary
+        self.url = url
+        self.kind = kind
+        self.sourceIDs = sourceIDs
+        self.lastVerified = lastVerified
     }
 }
 

@@ -130,6 +130,20 @@
         "organization": "NOAA Fisheries",
         "url": "https://www.fisheries.noaa.gov/species/vaquita",
         "lastAccessed": "2026-08-24"
+      },
+      {
+        "id": "seashepherd-vaquita",
+        "title": "Vaquita: On the Brink of Extinction",
+        "organization": "Sea Shepherd Conservation Society",
+        "url": "https://seashepherd.org/campaigns/vaquita/",
+        "lastAccessed": "2026-08-24"
+      },
+      {
+        "id": "vaquitacpr",
+        "title": "VaquitaCPR",
+        "organization": "VaquitaCPR consortium",
+        "url": "https://www.vaquitacpr.org",
+        "lastAccessed": "2026-08-24"
       }
     ],
     "editorial": {
@@ -185,6 +199,32 @@
       "vaquita-detail-01",
       "vaquita-behavior-01",
       "vaquita-scale-01"
+    ],
+    "programs": [
+      {
+        "id": "seashepherd-vaquita-campaign",
+        "organization": "Sea Shepherd Conservation Society",
+        "title": "Vaquita campaign",
+        "summary": "Ship-based patrols in the vaquita's refuge, working alongside Mexican authorities to find and remove illegal gillnets.",
+        "url": "https://seashepherd.org/campaigns/vaquita/",
+        "kind": "program",
+        "sourceIDs": [
+          "seashepherd-vaquita"
+        ],
+        "lastVerified": "2026-08-24"
+      },
+      {
+        "id": "vaquitacpr-consortium",
+        "organization": "VaquitaCPR",
+        "title": "International recovery consortium",
+        "summary": "A consortium of scientists and conservation organizations coordinating research and recovery work for the vaquita.",
+        "url": "https://www.vaquitacpr.org",
+        "kind": "program",
+        "sourceIDs": [
+          "vaquitacpr"
+        ],
+        "lastVerified": "2026-08-24"
+      }
     ]
   },
   {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		039DD09DE0BA0852B7173E02 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 354B4FA9912938B2089D120C /* RevenueCat */; };
+		09C0E9F2401FF72DB6D73683 /* FileHelpingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728216AE022B82B5021127E5 /* FileHelpingStore.swift */; };
 		0F4628BE5E221D55F0E26166 /* DailySpeciesSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BA20C213BA57E566E97630 /* DailySpeciesSelector.swift */; };
 		124B4DC8E0F947C48FF75286 /* WitnessSharePreviewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114A5EF6FC9CDFD60B4CF0C /* WitnessSharePreviewSheet.swift */; };
 		16AAFB87F230EB12C8D396A1 /* SpeciesRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C4A43A6AC261C6A25B5E1 /* SpeciesRecord.swift */; };
@@ -18,6 +19,7 @@
 		3BA9344E61CC8AC85419821F /* WitnessCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */; };
 		3F28124AD3D02EF0C4472C35 /* ArchiveAccessPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18BCA0F9F6BB74564A6C8A2 /* ArchiveAccessPolicy.swift */; };
 		3F5054183FC3B7C5BE6C7A71 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D88878E41310626CED31D6 /* RootTabView.swift */; };
+		43971BEA1623685AFFA856C4 /* CollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F51A47DA17207B45AE09C8E /* CollectionDetailView.swift */; };
 		44218CBDF7A88A7A70C086CA /* AtlasIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABFC134010BFB1FF062CF1B /* AtlasIcons.swift */; };
 		4F2473A639039F8A3C80F092 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F6B1989A07CDD335DC75A /* ArchiveView.swift */; };
 		56085BAAD37054233313394D /* WitnessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */; };
@@ -90,11 +92,13 @@
 		2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WitnessCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRitualUITests.swift; sourceTree = "<group>"; };
 		3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecimenDetailView.swift; sourceTree = "<group>"; };
+		3F51A47DA17207B45AE09C8E /* CollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailView.swift; sourceTree = "<group>"; };
 		53BA20C213BA57E566E97630 /* DailySpeciesSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySpeciesSelector.swift; sourceTree = "<group>"; };
 		5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessSync.swift; sourceTree = "<group>"; };
 		64E21B832DF552E7470A943D /* species.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = species.json; sourceTree = "<group>"; };
 		65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaquitaHeroArtwork.swift; sourceTree = "<group>"; };
 		6BC9CF6489D7C89535986EFB /* WitnessUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		728216AE022B82B5021127E5 /* FileHelpingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelpingStore.swift; sourceTree = "<group>"; };
 		7D1967F70178EF22D72429A3 /* WitnessCounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessCounts.swift; sourceTree = "<group>"; };
 		841F6B1989A07CDD335DC75A /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
 		8698B087FB05A16501745D67 /* WitnessShareCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessShareCopy.swift; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 		BFBC3F175F7AEB4BBD5457E8 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				728216AE022B82B5021127E5 /* FileHelpingStore.swift */,
 				EA89A757DBBF5D9080AB542D /* FileWitnessRepository.swift */,
 				9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */,
 			);
@@ -335,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				841F6B1989A07CDD335DC75A /* ArchiveView.swift */,
+				3F51A47DA17207B45AE09C8E /* CollectionDetailView.swift */,
 			);
 			path = Archive;
 			sourceTree = "<group>";
@@ -522,6 +528,7 @@
 				224FC55D98C252D3C06B08BF /* BundledSpeciesCatalog.swift in Sources */,
 				D9AF7CA236EE26B44E280DBB /* CatalogValidator.swift in Sources */,
 				0F4628BE5E221D55F0E26166 /* DailySpeciesSelector.swift in Sources */,
+				09C0E9F2401FF72DB6D73683 /* FileHelpingStore.swift in Sources */,
 				AC9C55BD3124DCD919946D44 /* FileSyncQueue.swift in Sources */,
 				A536A1761E475036B749FBA4 /* FileWitnessRepository.swift in Sources */,
 				16AAFB87F230EB12C8D396A1 /* SpeciesRecord.swift in Sources */,
@@ -541,6 +548,7 @@
 				4F2473A639039F8A3C80F092 /* ArchiveView.swift in Sources */,
 				44218CBDF7A88A7A70C086CA /* AtlasIcons.swift in Sources */,
 				EC70675220171430DB535941 /* BackendConfig.swift in Sources */,
+				43971BEA1623685AFFA856C4 /* CollectionDetailView.swift in Sources */,
 				84987ABAB9FFB62FE7E68E24 /* PlateFrame.swift in Sources */,
 				8C73A1DC6CA9779FC7CD1541 /* PlusEntitlements.swift in Sources */,
 				3F5054183FC3B7C5BE6C7A71 /* RootTabView.swift in Sources */,

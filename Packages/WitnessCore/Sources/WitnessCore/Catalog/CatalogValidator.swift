@@ -97,6 +97,13 @@ public enum CatalogValidator {
             if let gallery = record.gallery, gallery.isEmpty || gallery.contains(where: \.isEmpty) {
                 issues.append("\(prefix) gallery must list non-empty asset IDs when present.")
             }
+            for program in record.programs ?? [] {
+                if !isHTTPSURL(program.url) { issues.append("\(prefix) program \(program.id) must use HTTPS.") }
+                if !isISODate(program.lastVerified) { issues.append("\(prefix) program \(program.id) lastVerified must use YYYY-MM-DD.") }
+                if program.sourceIDs.isEmpty || !Set(program.sourceIDs).isSubset(of: sourceIDs) {
+                    issues.append("\(prefix) program \(program.id) must map only to declared sources.")
+                }
+            }
             for region in record.habitatRegions ?? [] {
                 if region.radiusKm < RangeRegion.minimumRadiusKm {
                     issues.append("\(prefix) range region \(region.name) must be generalized to at least \(Int(RangeRegion.minimumRadiusKm)) km.")

@@ -135,7 +135,7 @@ struct HeroControls: View {
     }
 }
 
-private struct StatusChip: View {
+struct StatusChip: View {
     let status: ConservationStatus
 
     var body: some View {

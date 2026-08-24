@@ -11,9 +11,11 @@ final class AppModel: ObservableObject {
     @Published private(set) var persistenceError: String?
     @Published private(set) var isSaving = false
     @Published private(set) var witnessCount: Int?
+    @Published private(set) var helpingRecords: [HelpingRecord] = []
     @Published var reflectionDraft = ""
 
     private let witnessRepository: any WitnessRepository
+    private let helpingStore: FileHelpingStore
     private let dateProvider: any DateProviding
     private var calendar: Calendar
 
@@ -58,6 +60,9 @@ final class AppModel: ObservableObject {
         calendar: Calendar = .current
     ) {
         self.witnessRepository = witnessRepository ?? FileWitnessRepository(fileURL: Self.defaultArchiveURL)
+        self.helpingStore = FileHelpingStore(fileURL: Self.defaultArchiveURL
+            .deletingLastPathComponent()
+            .appendingPathComponent("helping.json"))
         self.dateProvider = dateProvider
         self.calendar = calendar
 
@@ -76,7 +81,36 @@ final class AppModel: ObservableObject {
 
         Task { [weak self] in
             await self?.restoreWitnesses()
+            await self?.restoreHelping()
             await self?.refreshWitnessCount()
+        }
+    }
+
+    func restoreHelping() async {
+        helpingRecords = (try? await helpingStore.allRecords()) ?? []
+    }
+
+    func helpingRecord(for speciesID: String) -> HelpingRecord? {
+        helpingRecords.first { $0.speciesID == speciesID }
+    }
+
+    func startHelping(speciesID: String) async {
+        guard helpingRecord(for: speciesID) == nil else { return }
+        _ = try? await helpingStore.startHelping(speciesID: speciesID, at: dateProvider.now())
+        await restoreHelping()
+        Task.detached {
+            await WitnessSync.shared.logEvent("helping_started", metadata: ["species": speciesID])
+        }
+    }
+
+    /// Every species the user has witnessed, newest first, with dates.
+    var witnessedCollection: [(species: SpeciesRecord, witnessedAt: Date, helping: HelpingRecord?)] {
+        var seen = Set<String>()
+        return witnessRecords.compactMap { record in
+            guard !seen.contains(record.speciesID),
+                  let species = catalog.first(where: { $0.id == record.speciesID }) else { return nil }
+            seen.insert(record.speciesID)
+            return (species, record.witnessedAt, helpingRecord(for: record.speciesID))
         }
     }
 
