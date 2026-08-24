@@ -40,6 +40,7 @@
 		B1B2F3500979E875B3E27F3E /* WitnessRitualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */; };
 		C2187594DDD99E4D49BE4ED2 /* StorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F03B2889D871D9EFAF85F /* StorySheet.swift */; };
 		D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */; };
+		D76814029898F318CCF0563B /* SharePlateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2C63F351BC9C606D1E9AD /* SharePlateCard.swift */; };
 		D9AF7CA236EE26B44E280DBB /* CatalogValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */; };
 		E388B5ED07FA84F3140DBC9C /* WitnessRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */; };
 		E548CB4F18E023489E9A2D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5912AC6B4687E04E2D975DE /* Assets.xcassets */; };
@@ -122,6 +123,7 @@
 		EBDAEC2E8EF7B8E47676E1F3 /* FileSyncQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSyncQueue.swift; sourceTree = "<group>"; };
 		EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogValidator.swift; sourceTree = "<group>"; };
 		EF52E8333AE9C0AD77C3567F /* WitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessApp.swift; sourceTree = "<group>"; };
+		FBE2C63F351BC9C606D1E9AD /* SharePlateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePlateCard.swift; sourceTree = "<group>"; };
 		FE70D6CD14579FD2FAEF6AA1 /* BackendConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -269,6 +271,7 @@
 		936ED6CCA2550FB358443818 /* Sharing */ = {
 			isa = PBXGroup;
 			children = (
+				FBE2C63F351BC9C606D1E9AD /* SharePlateCard.swift */,
 				B114A5EF6FC9CDFD60B4CF0C /* WitnessSharePreviewSheet.swift */,
 			);
 			path = Sharing;
@@ -553,6 +556,7 @@
 				8C73A1DC6CA9779FC7CD1541 /* PlusEntitlements.swift in Sources */,
 				3F5054183FC3B7C5BE6C7A71 /* RootTabView.swift in Sources */,
 				B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */,
+				D76814029898F318CCF0563B /* SharePlateCard.swift in Sources */,
 				68D6C9D187410805167434BB /* SpeciesCardV2.swift in Sources */,
 				D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */,
 				C2187594DDD99E4D49BE4ED2 /* StorySheet.swift in Sources */,

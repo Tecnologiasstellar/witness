@@ -164,6 +164,8 @@ struct CollectionDetailView: View {
 
             Text("Helping means you follow this species and engage with its protection efforts. Witness records your commitment; it does not verify outcomes.")
                 .font(.caption).foregroundStyle(AtlasTheme.inkMuted).lineSpacing(3)
+
+            SharePlateButton(species: species)
         }
     }
 
