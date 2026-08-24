@@ -97,6 +97,14 @@ public enum CatalogValidator {
             if let gallery = record.gallery, gallery.isEmpty || gallery.contains(where: \.isEmpty) {
                 issues.append("\(prefix) gallery must list non-empty asset IDs when present.")
             }
+            for region in record.habitatRegions ?? [] {
+                if region.radiusKm < RangeRegion.minimumRadiusKm {
+                    issues.append("\(prefix) range region \(region.name) must be generalized to at least \(Int(RangeRegion.minimumRadiusKm)) km.")
+                }
+                if !(-90...90).contains(region.latitude) || !(-180...180).contains(region.longitude) {
+                    issues.append("\(prefix) range region \(region.name) has invalid coordinates.")
+                }
+            }
 
             switch mode {
             case .prototype:

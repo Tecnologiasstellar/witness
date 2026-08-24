@@ -148,7 +148,9 @@
       "trend": "decreasing",
       "threats": [
         "Gillnet entanglement",
-        "Illegal totoaba trade"
+        "Illegal totoaba nets",
+        "Illegal fishing pressure",
+        "Tiny remaining population"
       ],
       "sourceIDs": [
         "noaa-vaquita-species",
@@ -170,12 +172,19 @@
       ]
     },
     "habitatRegions": [
-      "Northern Gulf of California"
+      {
+        "name": "Northern Gulf of California",
+        "latitude": 31.0,
+        "longitude": -114.6,
+        "radiusKm": 90
+      }
     ],
     "gallery": [
       "vaquita-plate-01",
       "vaquita-context-01",
-      "vaquita-detail-01"
+      "vaquita-detail-01",
+      "vaquita-behavior-01",
+      "vaquita-scale-01"
     ]
   },
   {

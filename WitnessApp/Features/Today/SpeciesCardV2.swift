@@ -1,3 +1,4 @@
+import MapKit
 import SwiftUI
 import UIKit
 import WitnessCore
@@ -8,12 +9,13 @@ import WitnessCore
 struct SpeciesCardV2: View {
     let species: SpeciesRecord
     @ObservedObject var model: AppModel
+    var topInset: CGFloat = 0
     let onOpenIndex: () -> Void
     let onOpenReflection: () -> Void
 
     var body: some View {
         VStack(spacing: 0) {
-            HeroHeader(species: species, onOpenIndex: onOpenIndex, onOpenReflection: onOpenReflection)
+            HeroHeader(species: species, topInset: topInset, onOpenIndex: onOpenIndex, onOpenReflection: onOpenReflection)
             VStack(alignment: .leading, spacing: 34) {
                 HookBlock(hook: species.hook)
                 if let stats = species.stats {
@@ -22,12 +24,20 @@ struct SpeciesCardV2: View {
                 if let context = species.gallery?.dropFirst().first, UIImage(named: context) != nil {
                     ContextImage(assetName: context, caption: species.generalizedRange)
                 }
-                GeneralizedRangeMap(regions: species.habitatRegions ?? [species.generalizedRange])
+                if let regions = species.habitatRegions, !regions.isEmpty {
+                    GeneralizedRangeMap(regions: regions)
+                }
                 DeepDive(species: species)
                 if let detail = species.gallery?.dropFirst(2).first, UIImage(named: detail) != nil {
-                    DetailImage(assetName: detail, species: species)
+                    DetailImage(assetName: detail, caption: "FIELD STUDY · \(species.commonName.uppercased())")
+                }
+                if let behavior = species.gallery?.dropFirst(3).first, UIImage(named: behavior) != nil {
+                    ContextImage(assetName: behavior, caption: "Field observation")
                 }
                 FieldNotes(species: species)
+                if let scale = species.gallery?.dropFirst(4).first, UIImage(named: scale) != nil {
+                    DetailImage(assetName: scale, caption: "SCALE STUDY · BESIDE A HUMAN FIGURE")
+                }
             }
             .padding(.horizontal, 24)
             .padding(.top, 30)
@@ -49,6 +59,7 @@ struct SpeciesCardV2: View {
 
 private struct HeroHeader: View {
     let species: SpeciesRecord
+    let topInset: CGFloat
     let onOpenIndex: () -> Void
     let onOpenReflection: () -> Void
 
@@ -86,12 +97,16 @@ private struct HeroHeader: View {
             .padding(.horizontal, 24)
             .padding(.bottom, 22)
         }
+        .overlay(alignment: .top) {
+            HeroControls(onOpenIndex: onOpenIndex, onOpenReflection: onOpenReflection)
+                .padding(.top, topInset)
+        }
         .accessibilityElement(children: .contain)
     }
 }
 
-/// Floating hero controls, overlaid by TodayView inside the safe area so they
-/// never collide with the status bar.
+/// Hero controls anchored to the hero image (they scroll away with it),
+/// pushed below the status bar by the passed safe-area inset.
 struct HeroControls: View {
     let onOpenIndex: () -> Void
     let onOpenReflection: () -> Void
@@ -213,7 +228,7 @@ private struct StatTile: View {
                     .lineLimit(1).minimumScaleFactor(0.8)
             }
             Text(value)
-                .font(AtlasType.display(16, weight: .semibold))
+                .font(AtlasType.display(17, weight: .semibold))
                 .lineSpacing(3)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -253,7 +268,7 @@ private struct ContextImage: View {
 
 private struct DetailImage: View {
     let assetName: String
-    let species: SpeciesRecord
+    let caption: String
 
     var body: some View {
         HStack {
@@ -262,87 +277,72 @@ private struct DetailImage: View {
                 Image(assetName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: 250)
+                    .frame(maxWidth: 260)
                     .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
-                Text("FIELD STUDY · \(species.commonName.uppercased())")
+                Text(caption)
                     .font(AtlasType.technical(9, weight: .bold)).tracking(1.2)
                     .foregroundStyle(AtlasTheme.inkMuted)
             }
             Spacer(minLength: 0)
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Detail study of \(species.commonName)")
+        .accessibilityLabel(caption.capitalized)
     }
 }
 
 // MARK: - Range map
 
-/// Reusable, deliberately generalized range figure: a soft hatched region on a
-/// survey grid — evocative of place, useless for locating animals.
+/// Reusable, deliberately generalized range map: native MapKit (no external
+/// service), non-interactive, showing a broad dashed circle — evocative of
+/// place, useless for locating animals. The validator enforces the minimum
+/// generalization radius.
 struct GeneralizedRangeMap: View {
-    let regions: [String]
+    let regions: [RangeRegion]
+
+    private var cameraPosition: MapCameraPosition {
+        guard let first = regions.first else { return .automatic }
+        let viewport = max(first.radiusKm, 60) * 4_200
+        return .region(MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: first.latitude, longitude: first.longitude),
+            latitudinalMeters: viewport,
+            longitudinalMeters: viewport
+        ))
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("WHERE IT LIVES")
                 .font(AtlasType.technical(10, weight: .bold)).tracking(1.25)
                 .foregroundStyle(AtlasTheme.sepia)
-            Canvas { context, size in
-                let inset = CGRect(origin: .zero, size: size).insetBy(dx: 10, dy: 10)
-                var grid = Path()
-                for x in stride(from: inset.minX, through: inset.maxX, by: 30) {
-                    grid.move(to: .init(x: x, y: inset.minY)); grid.addLine(to: .init(x: x, y: inset.maxY))
-                }
-                for y in stride(from: inset.minY, through: inset.maxY, by: 24) {
-                    grid.move(to: .init(x: inset.minX, y: y)); grid.addLine(to: .init(x: inset.maxX, y: y))
-                }
-                context.stroke(grid, with: .color(AtlasTheme.ruleSoft), lineWidth: 0.6)
-
-                let region = Path { p in
-                    p.move(to: .init(x: inset.midX - inset.width * 0.22, y: inset.midY - inset.height * 0.18))
-                    p.addCurve(
-                        to: .init(x: inset.midX + inset.width * 0.24, y: inset.midY - inset.height * 0.04),
-                        control1: .init(x: inset.midX - inset.width * 0.02, y: inset.midY - inset.height * 0.36),
-                        control2: .init(x: inset.midX + inset.width * 0.18, y: inset.midY - inset.height * 0.22)
+            Map(position: .constant(cameraPosition), interactionModes: []) {
+                ForEach(regions, id: \.name) { region in
+                    MapCircle(
+                        center: CLLocationCoordinate2D(latitude: region.latitude, longitude: region.longitude),
+                        radius: region.radiusKm * 1_000
                     )
-                    p.addCurve(
-                        to: .init(x: inset.midX + inset.width * 0.05, y: inset.midY + inset.height * 0.26),
-                        control1: .init(x: inset.midX + inset.width * 0.30, y: inset.midY + inset.height * 0.12),
-                        control2: .init(x: inset.midX + inset.width * 0.18, y: inset.midY + inset.height * 0.26)
-                    )
-                    p.addCurve(
-                        to: .init(x: inset.midX - inset.width * 0.22, y: inset.midY - inset.height * 0.18),
-                        control1: .init(x: inset.midX - inset.width * 0.14, y: inset.midY + inset.height * 0.24),
-                        control2: .init(x: inset.midX - inset.width * 0.30, y: inset.midY + inset.height * 0.02)
-                    )
+                    .foregroundStyle(AtlasTheme.accentSage.opacity(0.28))
+                    .stroke(AtlasTheme.accentSage, style: StrokeStyle(lineWidth: 1.6, dash: [7, 5]))
                 }
-                context.fill(region, with: .color(AtlasTheme.accentSage.opacity(0.22)))
-                context.stroke(region, with: .color(AtlasTheme.accentSage), style: StrokeStyle(lineWidth: 1.3, dash: [5, 4]))
-
-                var hatch = Path()
-                for offset in stride(from: -size.height, through: size.width, by: 9) {
-                    hatch.move(to: .init(x: offset, y: inset.maxY))
-                    hatch.addLine(to: .init(x: offset + size.height, y: inset.minY))
-                }
-                context.clip(to: region)
-                context.stroke(hatch, with: .color(AtlasTheme.accentSage.opacity(0.35)), lineWidth: 0.6)
             }
-            .frame(height: 170)
-            .background(AtlasTheme.paperFresh)
-            .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
+            .mapStyle(.standard(elevation: .flat, pointsOfInterest: .excludingAll, showsTraffic: false))
+            .frame(height: 220)
+            .saturation(0.35)
+            .allowsHitTesting(false)
+            .clipShape(RoundedRectangle(cornerRadius: 22))
+            .overlay(RoundedRectangle(cornerRadius: 22).stroke(AtlasTheme.ruleSoft, lineWidth: 1))
 
-            ForEach(regions, id: \.self) { region in
+            ForEach(regions, id: \.name) { region in
                 HStack(spacing: 8) {
                     Circle().fill(AtlasTheme.accentSage).frame(width: 6, height: 6)
-                    Text(region.uppercased())
-                        .font(AtlasType.technical(10, weight: .semibold)).tracking(0.9)
+                    Text(region.name.uppercased())
+                        .font(AtlasType.technical(11, weight: .semibold)).tracking(0.9)
                 }
             }
             Text("Generalized region · exact locations are never shown")
-                .font(.caption2).foregroundStyle(AtlasTheme.inkMuted)
+                .font(.caption).foregroundStyle(AtlasTheme.inkMuted)
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Generalized range: \(regions.joined(separator: ", ")). Exact locations are never shown.")
+        .accessibilityLabel("Generalized range: \(regions.map(\.name).joined(separator: ", ")). Exact locations are never shown.")
     }
 }
 
@@ -367,8 +367,8 @@ private struct DeepDive: View {
                         .font(AtlasType.technical(10, weight: .bold)).tracking(1.25)
                         .foregroundStyle(AtlasTheme.sepia)
                     Text(reproduction.text)
-                        .font(AtlasType.display(17))
-                        .lineSpacing(6)
+                        .font(AtlasType.display(19))
+                        .lineSpacing(7)
                 }
             }
         }
@@ -379,14 +379,16 @@ private struct FlowChips: View {
     let items: [String]
 
     var body: some View {
-        HStack(spacing: 8) {
+        LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)], spacing: 10) {
             ForEach(items, id: \.self) { item in
                 Text(item.uppercased())
-                    .font(AtlasType.technical(9, weight: .bold)).tracking(0.9)
-                    .lineLimit(1).minimumScaleFactor(0.75)
-                    .padding(.horizontal, 11).padding(.vertical, 8)
-                    .background(Capsule().fill(AtlasTheme.earth.opacity(0.12)))
-                    .overlay(Capsule().stroke(AtlasTheme.earth.opacity(0.45), lineWidth: 1))
+                    .font(AtlasType.technical(11, weight: .bold)).tracking(0.8)
+                    .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.8)
+                    .padding(.horizontal, 10).padding(.vertical, 12)
+                    .frame(maxWidth: .infinity, minHeight: 52)
+                    .background(RoundedRectangle(cornerRadius: 14).fill(AtlasTheme.earth.opacity(0.12)))
+                    .overlay(RoundedRectangle(cornerRadius: 14).stroke(AtlasTheme.earth.opacity(0.45), lineWidth: 1))
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -405,8 +407,8 @@ private struct FieldNotes: View {
                 .foregroundStyle(AtlasTheme.sepia)
             ForEach(species.story) { section in
                 Text(section.text)
-                    .font(AtlasType.display(18))
-                    .lineSpacing(7)
+                    .font(AtlasType.display(20))
+                    .lineSpacing(8)
                     .accessibilityIdentifier("today.story.\(section.id)")
             }
         }
@@ -428,15 +430,15 @@ struct WitnessActionView: View {
                 Task { await model.witness() }
             } label: {
                 HStack(spacing: 12) {
-                    AtlasIconView(icon: .fieldMark, size: 18, color: model.isWitnessed ? AtlasTheme.accentSage : AtlasTheme.paper)
+                    AtlasIconView(icon: .fieldMark, size: 18, color: AtlasTheme.paper)
                     Text(model.isSaving ? "RECORDING" : (model.isWitnessed ? "WITNESSED" : "I BEAR WITNESS"))
                         .font(AtlasType.technical(13, weight: .bold)).tracking(1.6)
                 }
-                .foregroundStyle(model.isWitnessed ? AtlasTheme.accentSage : AtlasTheme.paper)
+                .foregroundStyle(AtlasTheme.paper)
                 .frame(maxWidth: .infinity, minHeight: 58)
-                .background(model.isWitnessed ? AtlasTheme.accentSage.opacity(0.13) : AtlasTheme.ink)
-                .overlay(Rectangle().stroke(model.isWitnessed ? AtlasTheme.accentSage.opacity(0.5) : AtlasTheme.ink, lineWidth: 1))
-                .shadow(color: model.isWitnessed ? AtlasTheme.accentSage.opacity(0.35) : .clear, radius: 14)
+                .background(model.isWitnessed ? AtlasTheme.accentSage : AtlasTheme.ink)
+                .overlay(Rectangle().stroke(model.isWitnessed ? AtlasTheme.accentSage : AtlasTheme.ink, lineWidth: 1))
+                .shadow(color: model.isWitnessed ? AtlasTheme.accentSage.opacity(0.45) : .clear, radius: 14)
             }
             .buttonStyle(.plain)
             .disabled(model.isWitnessed || model.isSaving)
@@ -460,10 +462,22 @@ struct WitnessActionView: View {
         VStack(alignment: .leading, spacing: 18) {
             if let count = model.witnessCount, count > 0 {
                 Text("You are one of \(count.formatted(.number.grouping(.automatic))) people who have witnessed the \(species.commonName).")
-                    .font(AtlasType.display(17, weight: .semibold))
+                    .font(AtlasType.display(19, weight: .semibold))
                     .lineSpacing(5)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
+            VStack(alignment: .leading, spacing: 7) {
+                Text("WHY THIS MATTERS")
+                    .font(AtlasType.technical(9, weight: .bold)).tracking(1.2)
+                    .foregroundStyle(AtlasTheme.sepia)
+                Text("Attention is the first act of protection. Every witness joins a public count that shows the world someone is paying attention to this species. Learning its story is the first step—clearer, more specific ways to help will arrive here as Witness grows.")
+                    .font(AtlasType.display(16))
+                    .lineSpacing(6)
+            }
+            .padding(14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(AtlasTheme.accentSage.opacity(0.10))
+            .overlay(Rectangle().stroke(AtlasTheme.accentSage.opacity(0.4), lineWidth: 1))
             if let insight = species.insight {
                 VStack(alignment: .leading, spacing: 7) {
                     Text("DID YOU KNOW")

@@ -15,18 +15,18 @@ struct TodayView: View {
         Group {
             if let species = model.species {
                 if species.stats != nil {
-                    ScrollView {
-                        SpeciesCardV2(
-                            species: species,
-                            model: model,
-                            onOpenIndex: onOpenIndex,
-                            onOpenReflection: onOpenReflection
-                        )
-                    }
-                    .scrollIndicators(.hidden)
-                    .ignoresSafeArea(edges: .top)
-                    .overlay(alignment: .top) {
-                        HeroControls(onOpenIndex: onOpenIndex, onOpenReflection: onOpenReflection)
+                    GeometryReader { geo in
+                        ScrollView {
+                            SpeciesCardV2(
+                                species: species,
+                                model: model,
+                                topInset: geo.safeAreaInsets.top,
+                                onOpenIndex: onOpenIndex,
+                                onOpenReflection: onOpenReflection
+                            )
+                        }
+                        .scrollIndicators(.hidden)
+                        .ignoresSafeArea(edges: .top)
                     }
                 } else if dynamicTypeSize.isAccessibilitySize {
                     ScrollView {

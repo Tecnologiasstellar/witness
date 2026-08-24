@@ -18,7 +18,7 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
     public let stats: SpeciesStats?
     public let reproduction: StorySection?
     public let insight: StorySection?
-    public let habitatRegions: [String]?
+    public let habitatRegions: [RangeRegion]?
     public let gallery: [String]?
 
     public init(
@@ -38,7 +38,7 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
         stats: SpeciesStats? = nil,
         reproduction: StorySection? = nil,
         insight: StorySection? = nil,
-        habitatRegions: [String]? = nil,
+        habitatRegions: [RangeRegion]? = nil,
         gallery: [String]? = nil
     ) {
         self.id = id
@@ -59,6 +59,26 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
         self.insight = insight
         self.habitatRegions = habitatRegions
         self.gallery = gallery
+    }
+}
+
+/// A deliberately generalized habitat region: a broad named circle, never a
+/// precise occurrence point (sensitive-location policy).
+public struct RangeRegion: Codable, Equatable, Sendable {
+    /// The smallest radius the catalog accepts; anything tighter could
+    /// localize animals.
+    public static let minimumRadiusKm: Double = 25
+
+    public let name: String
+    public let latitude: Double
+    public let longitude: Double
+    public let radiusKm: Double
+
+    public init(name: String, latitude: Double, longitude: Double, radiusKm: Double) {
+        self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
+        self.radiusKm = radiusKm
     }
 }
 

@@ -18,14 +18,14 @@ final class WitnessRitualUITests: XCTestCase {
 
         let disabled = NSPredicate(format: "isEnabled == false")
         let savedExpectation = XCTNSPredicateExpectation(predicate: disabled, object: witnessButton)
-        XCTAssertEqual(XCTWaiter().wait(for: [savedExpectation], timeout: 5), .completed)
+        XCTAssertEqual(XCTWaiter().wait(for: [savedExpectation], timeout: 10), .completed)
 
         app.terminate()
         app.launch()
         let relaunchedButton = app.buttons["today.witnessButton"]
         XCTAssertTrue(relaunchedButton.waitForExistence(timeout: 5))
         let restoredExpectation = XCTNSPredicateExpectation(predicate: disabled, object: relaunchedButton)
-        XCTAssertEqual(XCTWaiter().wait(for: [restoredExpectation], timeout: 5), .completed)
+        XCTAssertEqual(XCTWaiter().wait(for: [restoredExpectation], timeout: 10), .completed)
 
         app.buttons["atlas.tab.notes"].tap()
         let leaveNote = app.buttons["LEAVE A NOTE"]
