@@ -64,6 +64,12 @@ final class AppModel: ObservableObject {
         do {
             catalog = try BundledSpeciesCatalog.load()
             species = DailySpeciesSelector().species(for: dateProvider.now(), from: catalog, calendar: calendar)
+#if DEBUG
+            if let forced = ProcessInfo.processInfo.environment["WITNESS_FORCE_SPECIES"],
+               let match = catalog.first(where: { $0.id == forced }) {
+                species = match
+            }
+#endif
         } catch {
             loadError = String(describing: error)
         }

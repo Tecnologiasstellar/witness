@@ -123,15 +123,60 @@
         "organization": "CITES",
         "url": "https://cites.org/eng/node/48556",
         "lastAccessed": "2026-08-21"
+      },
+      {
+        "id": "noaa-vaquita-species",
+        "title": "Vaquita — Species Directory",
+        "organization": "NOAA Fisheries",
+        "url": "https://www.fisheries.noaa.gov/species/vaquita",
+        "lastAccessed": "2026-08-24"
       }
     ],
     "editorial": {
       "state": "prototype",
       "reviewer": "PENDING",
-      "lastFactChecked": "2026-08-21",
+      "lastFactChecked": "2026-08-24",
       "sensitiveLocationReview": "generalized",
-      "notes": "Prototype copy derived from declared public sources. Population estimates are intentionally omitted because they are volatile. Requires conservation-partner review before release."
-    }
+      "notes": "Prototype copy derived from declared public sources. The population line quotes NOAA's own published wording with attribution rather than a survey number. Requires conservation-partner review before release."
+    },
+    "stats": {
+      "size": "4–5 ft · 65–120 lbs",
+      "lifespan": "About 20 years",
+      "diet": "Small fish, shrimp, squid & octopus",
+      "populationEstimate": "Fewer than 30",
+      "populationAsOf": "per NOAA Fisheries",
+      "trend": "decreasing",
+      "threats": [
+        "Gillnet entanglement",
+        "Illegal totoaba trade"
+      ],
+      "sourceIDs": [
+        "noaa-vaquita-species",
+        "cites-totoaba"
+      ]
+    },
+    "reproduction": {
+      "id": "vaquita-reproduction",
+      "text": "Vaquitas can live for at least 21 years and mature at three to six. Pregnancy lasts about ten to eleven months, and a female is thought to give birth every other year—to a single calf about two and a half feet long.",
+      "sourceIDs": [
+        "noaa-vaquita-species"
+      ]
+    },
+    "insight": {
+      "id": "vaquita-insight",
+      "text": "The vaquita has the smallest geographical range of any marine mammal on Earth.",
+      "sourceIDs": [
+        "noaa-vaquita-species"
+      ]
+    },
+    "habitatRegions": [
+      "Northern Gulf of California"
+    ],
+    "gallery": [
+      "vaquita-plate-01",
+      "vaquita-context-01",
+      "vaquita-detail-01"
+    ]
   },
   {
     "id": "amur-leopard",

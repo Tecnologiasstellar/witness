@@ -14,6 +14,12 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
     public let publishDate: String
     public let sources: [SourceReference]
     public let editorial: EditorialReview
+    // Card v2 content (docs/CARD_V2_BRIEF.md); optional so v1 records stay valid.
+    public let stats: SpeciesStats?
+    public let reproduction: StorySection?
+    public let insight: StorySection?
+    public let habitatRegions: [String]?
+    public let gallery: [String]?
 
     public init(
         id: String,
@@ -28,7 +34,12 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
         media: MediaRecord,
         publishDate: String,
         sources: [SourceReference],
-        editorial: EditorialReview
+        editorial: EditorialReview,
+        stats: SpeciesStats? = nil,
+        reproduction: StorySection? = nil,
+        insight: StorySection? = nil,
+        habitatRegions: [String]? = nil,
+        gallery: [String]? = nil
     ) {
         self.id = id
         self.schemaVersion = schemaVersion
@@ -43,6 +54,50 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
         self.publishDate = publishDate
         self.sources = sources
         self.editorial = editorial
+        self.stats = stats
+        self.reproduction = reproduction
+        self.insight = insight
+        self.habitatRegions = habitatRegions
+        self.gallery = gallery
+    }
+}
+
+public struct SpeciesStats: Codable, Equatable, Sendable {
+    public enum PopulationTrend: String, Codable, Sendable {
+        case decreasing
+        case stable
+        case increasing
+        case unknown
+    }
+
+    public let size: String
+    public let lifespan: String
+    public let diet: String
+    /// Shown only alongside `populationAsOf`; volatile figures may be nil.
+    public let populationEstimate: String?
+    public let populationAsOf: String?
+    public let trend: PopulationTrend
+    public let threats: [String]
+    public let sourceIDs: [String]
+
+    public init(
+        size: String,
+        lifespan: String,
+        diet: String,
+        populationEstimate: String? = nil,
+        populationAsOf: String? = nil,
+        trend: PopulationTrend,
+        threats: [String],
+        sourceIDs: [String]
+    ) {
+        self.size = size
+        self.lifespan = lifespan
+        self.diet = diet
+        self.populationEstimate = populationEstimate
+        self.populationAsOf = populationAsOf
+        self.trend = trend
+        self.threats = threats
+        self.sourceIDs = sourceIDs
     }
 }
 

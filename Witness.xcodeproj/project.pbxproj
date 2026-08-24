@@ -24,6 +24,7 @@
 		5B6471AA2629DE1F67F5C7B5 /* WitnessSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */; };
 		64F12E527B41CD3BC05C6889 /* WitnessCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66792FAAD28C4692A18458B0 /* VaquitaHeroArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */; };
+		68D6C9D187410805167434BB /* SpeciesCardV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6741E8E552598D4CEB9F6 /* SpeciesCardV2.swift */; };
 		6CB63D7D22BC7C5FF46E1BAC /* WitnessTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */; };
 		75D66B3F60EA7F6EBF43D997 /* species.json in Resources */ = {isa = PBXBuildFile; fileRef = 64E21B832DF552E7470A943D /* species.json */; };
 		84987ABAB9FFB62FE7E68E24 /* PlateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */; };
@@ -103,6 +104,7 @@
 		9BCEC8613720793B073A50E2 /* WitnessStreakCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessStreakCalculator.swift; sourceTree = "<group>"; };
 		9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRepository.swift; sourceTree = "<group>"; };
 		9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessTheme.swift; sourceTree = "<group>"; };
+		A1E6741E8E552598D4CEB9F6 /* SpeciesCardV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesCardV2.swift; sourceTree = "<group>"; };
 		B114A5EF6FC9CDFD60B4CF0C /* WitnessSharePreviewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessSharePreviewSheet.swift; sourceTree = "<group>"; };
 		B698C8B547BD096664B28580 /* WitnessedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessedView.swift; sourceTree = "<group>"; };
 		BBA7821F324FC300D07869FA /* SyncItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncItem.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		7A62B357E09E58139AB45C5A /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				A1E6741E8E552598D4CEB9F6 /* SpeciesCardV2.swift */,
 				3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */,
 				0E6F03B2889D871D9EFAF85F /* StorySheet.swift */,
 				98FE485E4A09EEE93616F399 /* TodayView.swift */,
@@ -542,6 +545,7 @@
 				8C73A1DC6CA9779FC7CD1541 /* PlusEntitlements.swift in Sources */,
 				3F5054183FC3B7C5BE6C7A71 /* RootTabView.swift in Sources */,
 				B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */,
+				68D6C9D187410805167434BB /* SpeciesCardV2.swift in Sources */,
 				D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */,
 				C2187594DDD99E4D49BE4ED2 /* StorySheet.swift in Sources */,
 				AEE9CFCC7ED6423851B4C1AA /* SupabaseTransport.swift in Sources */,

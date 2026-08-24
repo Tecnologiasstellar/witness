@@ -14,7 +14,21 @@ struct TodayView: View {
     var body: some View {
         Group {
             if let species = model.species {
-                if dynamicTypeSize.isAccessibilitySize {
+                if species.stats != nil {
+                    ScrollView {
+                        SpeciesCardV2(
+                            species: species,
+                            model: model,
+                            onOpenIndex: onOpenIndex,
+                            onOpenReflection: onOpenReflection
+                        )
+                    }
+                    .scrollIndicators(.hidden)
+                    .ignoresSafeArea(edges: .top)
+                    .overlay(alignment: .top) {
+                        HeroControls(onOpenIndex: onOpenIndex, onOpenReflection: onOpenReflection)
+                    }
+                } else if dynamicTypeSize.isAccessibilitySize {
                     ScrollView {
                         plate(for: species).frame(minHeight: 720)
                         witnessControl.padding(.horizontal, 22).padding(.bottom, 14)
@@ -39,7 +53,8 @@ struct TodayView: View {
             }
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
-            if model.species != nil, !dynamicTypeSize.isAccessibilitySize {
+            // v2 cards carry the ceremonial witness climax in the flow instead.
+            if let species = model.species, species.stats == nil, !dynamicTypeSize.isAccessibilitySize {
                 witnessControl
                     .padding(.horizontal, 22)
                     .padding(.top, 6)

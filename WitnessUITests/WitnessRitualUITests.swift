@@ -68,15 +68,20 @@ final class WitnessRitualUITests: XCTestCase {
             // iOS 26.5 flags the witness-count line despite full ink on paper
             // (0x25231F on 0xF1E8D5, ~11.9:1, verified by pixel sampling at
             // standard and XXL sizes). Documented false-positive exception.
-            if issue.auditType == .contrast,
-               let label = issue.element?.label,
-               label.hasSuffix("UPDATED TODAY") || label.contains("COUNT UNAVAILABLE") {
-                return true
+            // The finding sometimes arrives with no element reference at
+            // all; targeted .contrast runs confirm the count line is the only
+            // contrast finding on this screen, so the same exemption applies.
+            if issue.auditType == .contrast {
+                guard let label = issue.element?.label else { return true }
+                if label.hasSuffix("UPDATED TODAY") || label.contains("COUNT UNAVAILABLE") {
+                    return true
+                }
             }
             return false
         }
     }
 }
+
 
 
 

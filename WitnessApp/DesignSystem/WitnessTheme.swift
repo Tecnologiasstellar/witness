@@ -17,6 +17,11 @@ enum AtlasTheme {
     static let earth = adaptive(light: 0x8A684A, dark: 0xB08C68)
     static let accentSage = adaptive(light: 0x65745A, dark: 0x93A886)
 
+    /// Fixed (non-adaptive) pair for text sitting on hero imagery: the scrim is
+    /// always deep ink and the type on it always warm paper, in both modes.
+    static let heroScrim = Color(uiColor: UIColor(hex: 0x15130F))
+    static let heroInk = Color(uiColor: UIColor(hex: 0xF1E8D5))
+
     static var ruleSoft: Color { sepia.opacity(0.22) }
     static var ruleEdge: Color { sepia.opacity(0.55) }
     static var ruleTab: Color { sepia.opacity(0.30) }

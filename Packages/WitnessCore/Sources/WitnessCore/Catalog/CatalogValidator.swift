@@ -79,6 +79,24 @@ public enum CatalogValidator {
             if record.editorial.sensitiveLocationReview != "generalized" {
                 issues.append("\(prefix) sensitive location review must be generalized.")
             }
+            if let stats = record.stats {
+                if stats.sourceIDs.isEmpty || !Set(stats.sourceIDs).isSubset(of: sourceIDs) {
+                    issues.append("\(prefix) stats must map only to declared sources.")
+                }
+                if stats.populationEstimate != nil && stats.populationAsOf == nil {
+                    issues.append("\(prefix) a population estimate requires a dated qualifier.")
+                }
+                if stats.threats.contains(where: { $0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }) {
+                    issues.append("\(prefix) threats must not be empty strings.")
+                }
+            }
+            for section in [record.reproduction, record.insight].compactMap({ $0 })
+            where section.sourceIDs.isEmpty || !Set(section.sourceIDs).isSubset(of: sourceIDs) {
+                issues.append("\(prefix) section \(section.id) must map only to declared sources.")
+            }
+            if let gallery = record.gallery, gallery.isEmpty || gallery.contains(where: \.isEmpty) {
+                issues.append("\(prefix) gallery must list non-empty asset IDs when present.")
+            }
 
             switch mode {
             case .prototype:
