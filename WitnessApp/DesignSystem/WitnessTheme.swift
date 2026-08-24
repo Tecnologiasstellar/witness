@@ -41,14 +41,25 @@ enum AtlasType {
         if UIFont(name: name, size: size) != nil {
             return Font.custom(name, size: size, relativeTo: .body).weight(weight)
         }
-        let fallback = Font.system(size: size, weight: weight, design: .serif)
-        return italic ? fallback.italic() : fallback
+        var descriptor = UIFont.systemFont(ofSize: size, weight: uiWeight(weight)).fontDescriptor
+        if let serif = descriptor.withDesign(.serif) { descriptor = serif }
+        if italic, let italicized = descriptor.withSymbolicTraits(.traitItalic) { descriptor = italicized }
+        return Font(UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont(descriptor: descriptor, size: size)))
     }
 
-    // Callers rendering bare text (not merged into a larger accessibility
-    // element) should pass an @ScaledMetric size so the text follows Dynamic Type.
+    // Fixed point sizes wrapped through UIFontMetrics so every label follows
+    // the user's Dynamic Type setting.
     static func technical(_ size: CGFloat, weight: Font.Weight = .regular) -> Font {
-        .system(size: size, weight: weight, design: .default)
+        Font(UIFontMetrics(forTextStyle: .caption1).scaledFont(for: .systemFont(ofSize: size, weight: uiWeight(weight))))
+    }
+
+    private static func uiWeight(_ weight: Font.Weight) -> UIFont.Weight {
+        switch weight {
+        case .medium: .medium
+        case .semibold: .semibold
+        case .bold: .bold
+        default: .regular
+        }
     }
 
     static func tracking(_ em: CGFloat, at size: CGFloat, dynamicTypeSize: DynamicTypeSize) -> CGFloat {

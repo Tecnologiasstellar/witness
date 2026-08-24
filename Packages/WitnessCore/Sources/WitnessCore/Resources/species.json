@@ -321,15 +321,75 @@
         "organization": "WWF-UK",
         "url": "https://www.wwf.org.uk/learn/wildlife/amur-leopards",
         "lastAccessed": "2026-08-22"
+      },
+      {
+        "id": "wwf-uk-adopt",
+        "title": "Adopt an animal",
+        "organization": "WWF-UK",
+        "url": "https://support.wwf.org.uk/adopt-an-animal",
+        "lastAccessed": "2026-08-24"
       }
     ],
     "editorial": {
       "state": "prototype",
       "reviewer": "PENDING",
-      "lastFactChecked": "2026-08-22",
+      "lastFactChecked": "2026-08-24",
       "sensitiveLocationReview": "generalized",
       "notes": "Prototype copy derived from the declared WWF-UK profile. Population figures are intentionally omitted because they are volatile. Requires conservation-partner review before release."
-    }
+    },
+    "stats": {
+      "size": "Males 32–48 kg · up to 75 kg",
+      "lifespan": "Not yet verified",
+      "diet": "Roe deer, sika deer & wild boar",
+      "populationEstimate": "Around 130 adults",
+      "populationAsOf": "2023, per WWF-UK",
+      "trend": "increasing",
+      "threats": [
+        "Poaching & fur trade",
+        "Unsustainable logging",
+        "Forest fires",
+        "Roads & development"
+      ],
+      "sourceIDs": [
+        "wwf-uk-amur"
+      ]
+    },
+    "insight": {
+      "id": "amur-insight",
+      "text": "In the harshest winters, the hairs of the Amur leopard’s coat grow up to seven centimetres long.",
+      "sourceIDs": [
+        "wwf-uk-amur"
+      ]
+    },
+    "habitatRegions": [
+      {
+        "name": "Russian Far East borderlands",
+        "latitude": 43.2,
+        "longitude": 131.2,
+        "radiusKm": 130
+      }
+    ],
+    "gallery": [
+      "amur-leopard-plate-01",
+      "amur-leopard-context-01",
+      "amur-leopard-detail-01",
+      "amur-leopard-behavior-01",
+      "amur-leopard-scale-01"
+    ],
+    "programs": [
+      {
+        "id": "wwf-uk-adopt-amur",
+        "organization": "WWF-UK",
+        "title": "Adopt an Amur leopard",
+        "summary": "WWF’s species adoption programme, which funds its conservation work in the Amur leopard’s landscape.",
+        "url": "https://support.wwf.org.uk/adopt-an-animal",
+        "kind": "program",
+        "sourceIDs": [
+          "wwf-uk-adopt"
+        ],
+        "lastVerified": "2026-08-24"
+      }
+    ]
   },
   {
     "id": "kakapo",
@@ -441,15 +501,83 @@
         "organization": "NZ Department of Conservation",
         "url": "https://www.doc.govt.nz/our-work/kakapo-recovery/what-we-do/",
         "lastAccessed": "2026-08-22"
+      },
+      {
+        "id": "nzbo-kakapo",
+        "title": "Kākāpō",
+        "organization": "New Zealand Birds Online",
+        "url": "https://www.nzbirdsonline.org.nz/species/kakapo",
+        "lastAccessed": "2026-08-24"
       }
     ],
     "editorial": {
       "state": "prototype",
       "reviewer": "PENDING",
-      "lastFactChecked": "2026-08-22",
+      "lastFactChecked": "2026-08-24",
       "sensitiveLocationReview": "generalized",
       "notes": "Prototype copy derived from the declared Department of Conservation pages. The living-population figure is intentionally omitted because it changes. Requires conservation-partner review before release."
-    }
+    },
+    "stats": {
+      "size": "Males up to 4 kg",
+      "lifespan": "60–90 years",
+      "diet": "Entirely vegetarian — leaves, buds, fruit & seeds",
+      "populationEstimate": "235 birds",
+      "populationAsOf": "per NZ DOC",
+      "trend": "increasing",
+      "threats": [
+        "Introduced predators",
+        "Disease",
+        "Low hatching success",
+        "Historic habitat loss"
+      ],
+      "sourceIDs": [
+        "doc-kakapo",
+        "nzbo-kakapo"
+      ]
+    },
+    "reproduction": {
+      "id": "kakapo-reproduction",
+      "text": "Kākāpō breed in summer and autumn, but only in years when native trees fruit heavily. On the southern islands that means the rimu: they breed when it fruits, roughly once every two to four years.",
+      "sourceIDs": [
+        "nzbo-kakapo"
+      ]
+    },
+    "insight": {
+      "id": "kakapo-insight",
+      "text": "A kākāpō cannot fly, but it climbs high into trees — and comes down in what one account calls a controlled plummet.",
+      "sourceIDs": [
+        "nzbo-kakapo"
+      ]
+    },
+    "habitatRegions": [
+      {
+        "name": "Southern predator-free islands",
+        "latitude": -46.77,
+        "longitude": 167.64,
+        "radiusKm": 80
+      }
+    ],
+    "gallery": [
+      "kakapo-plate-01",
+      "kakapo-context-01",
+      "kakapo-detail-01",
+      "kakapo-behavior-01",
+      "kakapo-scale-01"
+    ],
+    "programs": [
+      {
+        "id": "doc-kakapo-recovery-programme",
+        "organization": "NZ Department of Conservation",
+        "title": "Kākāpō Recovery",
+        "summary": "The national programme, run with Ngāi Tahu, that monitors and manages every living kākāpō on predator-free sanctuaries.",
+        "url": "https://www.doc.govt.nz/our-work/kakapo-recovery/what-we-do/",
+        "kind": "program",
+        "sourceIDs": [
+          "doc-kakapo-recovery"
+        ],
+        "lastVerified": "2026-08-24"
+      }
+    ]
   },
   {
     "id": "axolotl",
@@ -457,8 +585,8 @@
     "commonName": "Axolotl",
     "scientificName": "Ambystoma mexicanum",
     "conservationStatus": {
-      "displayName": "Endangered",
-      "normalizedValue": "endangered"
+      "displayName": "Critically Endangered",
+      "normalizedValue": "critically_endangered"
     },
     "generalizedRange": "Canals of Xochimilco, southern Mexico City, Mexico",
     "hook": "The salamander that never grows up lives in one city’s canals.",
@@ -557,10 +685,55 @@
     "editorial": {
       "state": "prototype",
       "reviewer": "PENDING",
-      "lastFactChecked": "2026-08-22",
+      "lastFactChecked": "2026-08-24",
       "sensitiveLocationReview": "generalized",
       "notes": "Prototype copy derived from the declared San Diego Zoo Wildlife Alliance profile. Requires conservation-partner review before release."
-    }
+    },
+    "stats": {
+      "size": "8–12 in · 56–226 g",
+      "lifespan": "10–15 years",
+      "diet": "Worms, mollusks, crustaceans, insect larvae & small fish",
+      "trend": "decreasing",
+      "threats": [
+        "Habitat drained & degraded",
+        "Water pollution",
+        "Invasive species",
+        "Urban growth"
+      ],
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ]
+    },
+    "reproduction": {
+      "id": "axolotl-reproduction",
+      "text": "A female lays 300 to 1,000 eggs, placed one by one on plants and rocks to keep them from predators. The eggs hatch about two weeks later, and the young mature at six to eight months.",
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ]
+    },
+    "insight": {
+      "id": "axolotl-insight",
+      "text": "Axolotls are over a thousand times more resistant to cancer than mammals — one more reason science watches them closely.",
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ]
+    },
+    "habitatRegions": [
+      {
+        "name": "Xochimilco canals, southern Mexico City",
+        "latitude": 19.27,
+        "longitude": -99.1,
+        "radiusKm": 25
+      }
+    ],
+    "gallery": [
+      "axolotl-plate-01",
+      "axolotl-context-01",
+      "axolotl-detail-01",
+      "axolotl-behavior-01",
+      "axolotl-scale-01"
+    ],
+    "programs": []
   },
   {
     "id": "monarch-butterfly",
@@ -672,14 +845,98 @@
         "organization": "Xerces Society",
         "url": "https://xerces.org/monarchs",
         "lastAccessed": "2026-08-22"
+      },
+      {
+        "id": "monarchwatch",
+        "title": "Monarch Watch",
+        "organization": "Monarch Watch (University of Kansas)",
+        "url": "https://monarchwatch.org",
+        "lastAccessed": "2026-08-24"
       }
     ],
     "editorial": {
       "state": "prototype",
       "reviewer": "PENDING",
-      "lastFactChecked": "2026-08-22",
+      "lastFactChecked": "2026-08-24",
       "sensitiveLocationReview": "generalized",
       "notes": "Prototype copy derived from the declared NPS and Xerces pages. Formal listing status is intentionally described only as decline because regulatory status is in motion. Requires conservation-partner review before release."
-    }
+    },
+    "stats": {
+      "size": "Not yet verified",
+      "lifespan": "A few weeks — 8–9 months for the migratory generation",
+      "diet": "Caterpillars: milkweed only · adults: nectar",
+      "trend": "decreasing",
+      "threats": [
+        "Milkweed & habitat loss",
+        "Pesticides",
+        "Climate change",
+        "Shrinking winter forests"
+      ],
+      "sourceIDs": [
+        "nps-monarch",
+        "xerces-monarchs"
+      ]
+    },
+    "reproduction": {
+      "id": "monarch-reproduction",
+      "text": "Monarchs lay their eggs only on milkweed, the caterpillars’ sole food. Most adults live a few weeks — but the generation that emerges in late summer is born to travel, living eight or nine months to complete the migration.",
+      "sourceIDs": [
+        "nps-monarch"
+      ]
+    },
+    "insight": {
+      "id": "monarch-insight",
+      "text": "Scientists think migrating monarchs navigate by the position of the sun — on a route they have never flown before.",
+      "sourceIDs": [
+        "nps-monarch"
+      ]
+    },
+    "habitatRegions": [
+      {
+        "name": "Overwintering forests, central Mexico",
+        "latitude": 19.6,
+        "longitude": -100.3,
+        "radiusKm": 60
+      },
+      {
+        "name": "Western overwintering coast, California",
+        "latitude": 36.4,
+        "longitude": -121.9,
+        "radiusKm": 150
+      }
+    ],
+    "gallery": [
+      "monarch-plate-01",
+      "monarch-context-01",
+      "monarch-detail-01",
+      "monarch-behavior-01",
+      "monarch-scale-01"
+    ],
+    "programs": [
+      {
+        "id": "xerces-monarch-program",
+        "organization": "Xerces Society",
+        "title": "Monarch conservation",
+        "summary": "Regional milkweed and nectar-plant guides, overwintering-site protection, and community science for monarch recovery.",
+        "url": "https://xerces.org/monarchs",
+        "kind": "program",
+        "sourceIDs": [
+          "xerces-monarchs"
+        ],
+        "lastVerified": "2026-08-24"
+      },
+      {
+        "id": "monarch-watch-program",
+        "organization": "Monarch Watch",
+        "title": "Tagging & waystations",
+        "summary": "University of Kansas programme for monarch tagging, research, and registering pollinator waystation habitat.",
+        "url": "https://monarchwatch.org",
+        "kind": "program",
+        "sourceIDs": [
+          "monarchwatch"
+        ],
+        "lastVerified": "2026-08-24"
+      }
+    ]
   }
 ]

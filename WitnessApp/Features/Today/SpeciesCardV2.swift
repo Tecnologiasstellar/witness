@@ -72,13 +72,14 @@ private struct HeroHeader: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 470)
                     .clipped()
+                    .accessibilityLabel("\(species.media.depictionType) of \(species.commonName)")
             } else {
                 SpecimenPlate(species: species, showsLeaderLabels: false)
                     .frame(height: 470)
             }
 
             LinearGradient(
-                colors: [AtlasTheme.heroScrim.opacity(0.88), AtlasTheme.heroScrim.opacity(0.35), .clear],
+                colors: [AtlasTheme.heroScrim.opacity(0.95), AtlasTheme.heroScrim.opacity(0.55), .clear],
                 startPoint: .bottom, endPoint: .top
             )
             .frame(height: 240)
@@ -91,7 +92,6 @@ private struct HeroHeader: View {
                     .accessibilityAddTraits(.isHeader)
                 Text(species.scientificName)
                     .font(AtlasType.display(16, italic: true))
-                    .opacity(0.85)
             }
             .foregroundStyle(AtlasTheme.heroInk)
             .padding(.horizontal, 24)

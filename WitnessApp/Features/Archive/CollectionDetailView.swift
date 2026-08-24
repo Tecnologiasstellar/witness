@@ -58,12 +58,13 @@ struct CollectionDetailView: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 330)
                     .clipped()
+                    .accessibilityLabel("\(species.media.depictionType) of \(species.commonName)")
             } else {
                 SpecimenPlate(species: species, showsLeaderLabels: false)
                     .frame(height: 330)
             }
             LinearGradient(
-                colors: [AtlasTheme.heroScrim.opacity(0.85), .clear],
+                colors: [AtlasTheme.heroScrim.opacity(0.95), AtlasTheme.heroScrim.opacity(0.55), .clear],
                 startPoint: .bottom, endPoint: .top
             )
             .frame(height: 170)
@@ -74,7 +75,7 @@ struct CollectionDetailView: View {
                 Text(species.commonName.uppercased())
                     .font(AtlasType.display(32, weight: .semibold))
                 Text(species.scientificName)
-                    .font(AtlasType.display(15, italic: true)).opacity(0.85)
+                    .font(AtlasType.display(15, italic: true))
             }
             .foregroundStyle(AtlasTheme.heroInk)
             .padding(.horizontal, 24).padding(.bottom, 18)
