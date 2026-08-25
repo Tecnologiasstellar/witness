@@ -13,52 +13,74 @@
     {
       "id": "hawksbill-beak",
       "text": "The hawksbill is named for its face: a narrow head ending in a beak like a raptor's, built to reach into reef crevices.",
-      "sourceIDs": ["noaa-hawksbill-overview"]
+      "sourceIDs": [
+        "noaa-hawksbill-overview"
+      ]
     },
     {
       "id": "hawksbill-shell",
       "text": "Its shell is the beautiful part — overlapping plates in amber, orange, red, and black, edges serrated like a saw.",
-      "sourceIDs": ["noaa-hawksbill-overview"]
+      "sourceIDs": [
+        "noaa-hawksbill-overview"
+      ]
     },
     {
       "id": "hawksbill-trade",
       "text": "That beauty nearly killed it. For centuries, the world's tortoiseshell combs, spectacles, and jewelry came chiefly from this one species.",
-      "sourceIDs": ["noaa-hawksbill-overview"]
+      "sourceIDs": [
+        "noaa-hawksbill-overview"
+      ]
     },
     {
       "id": "hawksbill-ban",
       "text": "International trade has been banned for decades, yet the shell still surfaces as hair ornaments and trinkets in some markets.",
-      "sourceIDs": ["stc-hawksbill-species", "noaa-hawksbill-conservation"]
+      "sourceIDs": [
+        "stc-hawksbill-species",
+        "noaa-hawksbill-conservation"
+      ]
     },
     {
       "id": "hawksbill-sponges",
       "text": "On the reef it does singular work: it is the only sea turtle that can live mainly on sponges, keeping space open for corals and fish.",
-      "sourceIDs": ["noaa-hawksbill-overview"]
+      "sourceIDs": [
+        "noaa-hawksbill-overview"
+      ]
     },
     {
       "id": "hawksbill-nesting",
       "text": "Females cross oceans to nest at night on small hidden beaches, burying around 160 eggs high under the vegetation.",
-      "sourceIDs": ["noaa-hawksbill-overview", "stc-hawksbill-species"]
+      "sourceIDs": [
+        "noaa-hawksbill-overview",
+        "stc-hawksbill-species"
+      ]
     },
     {
       "id": "hawksbill-sand",
       "text": "The warmth of the sand decides each hatchling's sex — and hotter beaches are skewing the balance.",
-      "sourceIDs": ["noaa-hawksbill-overview"]
+      "sourceIDs": [
+        "noaa-hawksbill-overview"
+      ]
     },
     {
       "id": "hawksbill-maturity",
       "text": "A hatchling that survives will not breed until it is twenty to thirty-five years old.",
-      "sourceIDs": ["noaa-hawksbill-overview"]
+      "sourceIDs": [
+        "noaa-hawksbill-overview"
+      ]
     },
     {
       "id": "hawksbill-hope",
       "text": "Where protection is real, it works: in the Solomon Islands, two decades of monitoring show encouraging signs of recovery.",
-      "sourceIDs": ["noaa-hawksbill-overview"]
+      "sourceIDs": [
+        "noaa-hawksbill-overview"
+      ]
     },
     {
       "id": "hawksbill-witness",
       "text": "To witness the hawksbill is to want the reef whole — turtle, sponge, and coral together.",
-      "sourceIDs": ["noaa-hawksbill-overview"]
+      "sourceIDs": [
+        "noaa-hawksbill-overview"
+      ]
     }
   ],
   "action": {
@@ -69,7 +91,9 @@
     "destinationURL": "https://www.fisheries.noaa.gov/species/hawksbill-turtle",
     "destinationOrganization": "NOAA Fisheries",
     "geographicApplicability": "Worldwide",
-    "sourceIDs": ["noaa-hawksbill-overview"],
+    "sourceIDs": [
+      "noaa-hawksbill-overview"
+    ],
     "lastVerified": "2026-08-24",
     "measurementType": "opened"
   },
@@ -80,8 +104,8 @@
     "source": "Higgsfield job 4ec8b583-9f26-4f1c-b730-f8b64993781d, 2026-08-24; rights record docs/media/hawksbill-turtle-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-09-02",
   "sources": [
@@ -122,11 +146,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
-    "lastFactChecked": "2026-08-24",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
+    "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from verified NOAA, Sea Turtle Conservancy, and WWF-UK pages. Population uses STC's 20,000-23,000 nesting-females estimate; decline figures vary by source (STC 90%/century, WWF-UK 80%/3 generations) — story avoids printing either as a single fact. Ocean region circles are broad basins, not nesting beaches."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "2.5–3 ft shell · 100–150 lbs",
@@ -141,17 +165,26 @@
       "Fishing bycatch",
       "Reef loss & warming"
     ],
-    "sourceIDs": ["noaa-hawksbill-overview", "stc-hawksbill-species", "wwf-uk-marine-turtles"]
+    "sourceIDs": [
+      "noaa-hawksbill-overview",
+      "stc-hawksbill-species",
+      "wwf-uk-marine-turtles"
+    ]
   },
   "reproduction": {
     "id": "hawksbill-reproduction",
     "text": "Every one to five years a female returns to nest, laying three to five clutches of 130 to 160 eggs each. They incubate for about two months in sand whose temperature decides the hatchlings' sex.",
-    "sourceIDs": ["noaa-hawksbill-overview", "stc-hawksbill-species"]
+    "sourceIDs": [
+      "noaa-hawksbill-overview",
+      "stc-hawksbill-species"
+    ]
   },
   "insight": {
     "id": "hawksbill-insight",
     "text": "The hawksbill is the only sea turtle that can survive mainly on sea sponges — its appetite keeps reef space open for corals and fish.",
-    "sourceIDs": ["noaa-hawksbill-overview"]
+    "sourceIDs": [
+      "noaa-hawksbill-overview"
+    ]
   },
   "habitatRegions": [
     {
@@ -182,7 +215,9 @@
       "summary": "Tags hawksbills and other sea turtles across the Caribbean and beyond, publishing live migration maps anyone can follow.",
       "url": "https://conserveturtles.org/sea-turtle-tracking/",
       "kind": "program",
-      "sourceIDs": ["stc-tracking"],
+      "sourceIDs": [
+        "stc-tracking"
+      ],
       "lastVerified": "2026-08-24"
     },
     {
@@ -192,7 +227,9 @@
       "summary": "Runs the US recovery plans, requires turtle excluder devices in trawls, and enforces the international trade ban on tortoiseshell.",
       "url": "https://www.fisheries.noaa.gov/species/hawksbill-turtle/conservation-management",
       "kind": "program",
-      "sourceIDs": ["noaa-hawksbill-conservation"],
+      "sourceIDs": [
+        "noaa-hawksbill-conservation"
+      ],
       "lastVerified": "2026-08-24"
     }
   ]

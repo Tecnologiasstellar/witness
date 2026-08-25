@@ -104,7 +104,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 - Date: 2026-08-22
 - Decision: All species artwork and animal cards are generated with the owner's Higgsfield.ai account under one locked style-prompt template. Each asset gets a rights record with state `ai_generated_owned` including the generation prompt, model, date, and account. The app discloses artwork as original illustration; it is never presented as documentary photography. Every asset must pass a basic species-accuracy review before production use.
 - Reason: One controlled generation source gives consistent visual identity, unlimited coverage of species with no usable photography, and a clean commercial-rights story without per-file Commons license archaeology.
-- Tradeoff: Depends on the accuracy review to prevent plausible-but-wrong depictions. Open verification item: confirm the active Higgsfield plan grants commercial usage rights for generated output before App Store submission.
+- Tradeoff: Depends on the accuracy review to prevent plausible-but-wrong depictions. Verification item closed 2026-08-25: Alberto Villalpando confirmed the active Higgsfield paid plan grants commercial usage rights for generated output; all 30 cards' `media.verificationStatus` set to `approved`.
 
 ## D-014 — 100-species backlog, 30 launch-ready cards
 

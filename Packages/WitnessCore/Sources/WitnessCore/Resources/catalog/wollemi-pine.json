@@ -109,8 +109,8 @@
     "source": "Higgsfield job 96f244b9-8176-4882-981c-75c324c0961c, 2026-08-25; rights record docs/media/wollemi-pine-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-09-19",
   "sources": [
@@ -172,11 +172,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
     "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from verified NSW Government and Botanic Gardens of Sydney pages — the catalog's first plant. Schema adapted honestly: 'diet' describes how a conifer feeds; the wild site is secret, so the region circle deliberately covers the whole national park. 'Coco Pops' bark folklore replaced by the sourced 'bubbling chocolate' wording; the fire is named only as the 2019-20 Black Summer per sources. The NSW-environment news page cited in research 404s to direct fetch, so it and its '835 saplings' figure were dropped; translocation is cited to NPWS instead."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "Up to 43 m — a forest giant",

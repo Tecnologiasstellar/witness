@@ -13,52 +13,76 @@
     {
       "id": "condor-crossing",
       "text": "A condor crosses the canyon without a single wingbeat: nine and a half feet of black wing, white triangles beneath, a bare head the color of sunrise.",
-      "sourceIDs": ["nps-grca-condors", "sdzwa-california-condor"]
+      "sourceIDs": [
+        "nps-grca-condors",
+        "sdzwa-california-condor"
+      ]
     },
     {
       "id": "condor-soaring",
       "text": "It rides thermals to fifteen thousand feet and covers a hundred miles or more in a day, searching for the dead.",
-      "sourceIDs": ["sdzwa-california-condor", "nps-grca-condors"]
+      "sourceIDs": [
+        "sdzwa-california-condor",
+        "nps-grca-condors"
+      ]
     },
     {
       "id": "condor-carrion",
       "text": "Carrion is its entire livelihood — anything already dead, from mice to beached whales.",
-      "sourceIDs": ["sdzwa-california-condor", "nps-grca-condors"]
+      "sourceIDs": [
+        "sdzwa-california-condor",
+        "nps-grca-condors"
+      ]
     },
     {
       "id": "condor-crash",
       "text": "By 1982, twenty-two California condors existed on Earth.",
-      "sourceIDs": ["nps-condor-recovery"]
+      "sourceIDs": [
+        "nps-condor-recovery"
+      ]
     },
     {
       "id": "condor-gamble",
       "text": "So biologists made a desperate gamble: on April 19, 1987, the last wild bird was caught, and the entire species went into captive breeding.",
-      "sourceIDs": ["nps-condor-recovery"]
+      "sourceIDs": [
+        "nps-condor-recovery"
+      ]
     },
     {
       "id": "condor-return",
       "text": "Five years later, condors returned to the California sky; Arizona followed in 1996.",
-      "sourceIDs": ["nps-condor-recovery"]
+      "sourceIDs": [
+        "nps-condor-recovery"
+      ]
     },
     {
       "id": "condor-lead",
       "text": "The threat that remains is invisible: a lead bullet shatters into fragments inside a carcass, and the scavenger swallows the poison with the meal.",
-      "sourceIDs": ["nps-condor-threats"]
+      "sourceIDs": [
+        "nps-condor-threats"
+      ]
     },
     {
       "id": "condor-monitoring",
       "text": "Every wild condor wears a numbered tag, and biologists trap each one yearly to test its blood for lead.",
-      "sourceIDs": ["nps-understanding-condors"]
+      "sourceIDs": [
+        "nps-understanding-condors"
+      ]
     },
     {
       "id": "condor-witness",
       "text": "To witness the condor is to see extinction refused: 596 birds now, more than half of them flying free.",
-      "sourceIDs": ["ventana-condor-overview"]
+      "sourceIDs": [
+        "ventana-condor-overview"
+      ]
     },
     {
       "id": "condor-choices",
       "text": "The recovery holds through choices — copper bullets instead of lead, trash packed out of condor country, and cliffs kept wild.",
-      "sourceIDs": ["ventana-free-ammo", "nps-condor-threats"]
+      "sourceIDs": [
+        "ventana-free-ammo",
+        "nps-condor-threats"
+      ]
     }
   ],
   "action": {
@@ -69,7 +93,9 @@
     "destinationURL": "https://www.nps.gov/articles/california-condor-recovery.htm",
     "destinationOrganization": "National Park Service",
     "geographicApplicability": "Worldwide",
-    "sourceIDs": ["nps-condor-recovery"],
+    "sourceIDs": [
+      "nps-condor-recovery"
+    ],
     "lastVerified": "2026-08-24",
     "measurementType": "opened"
   },
@@ -80,8 +106,8 @@
     "source": "Higgsfield job 82155bfd-8e82-4b92-a540-e3e3676a1056, 2026-08-24; rights record docs/media/california-condor-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-08-30",
   "sources": [
@@ -150,11 +176,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
-    "lastFactChecked": "2026-08-24",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
+    "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from verified NPS, SDZWA, Ventana, and Peregrine Fund pages. Population 596 (381 wild + 215 captive) is Ventana's Dec 31, 2025 count. Status uses the federal ESA listing wording (fws.gov blocks automated verification; NPS states the 1967 listing). Region circles cover release-flock ranges, not nest sites."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "9½-ft wingspan · up to 23 lbs",
@@ -169,17 +195,28 @@
       "Power-line collisions",
       "Avian influenza"
     ],
-    "sourceIDs": ["nps-condor-threats", "ventana-condor-threats", "ventana-condor-overview", "nps-grca-condors", "sdzwa-california-condor"]
+    "sourceIDs": [
+      "nps-condor-threats",
+      "ventana-condor-threats",
+      "ventana-condor-overview",
+      "nps-grca-condors",
+      "sdzwa-california-condor"
+    ]
   },
   "reproduction": {
     "id": "condor-reproduction",
     "text": "A single egg every other year, incubated by both parents for eight weeks. The chick fledges at five to six months, matures around six years, and most condors mate for life — one of the slowest rhythms of any bird.",
-    "sourceIDs": ["nps-grca-condors", "sdzwa-california-condor"]
+    "sourceIDs": [
+      "nps-grca-condors",
+      "sdzwa-california-condor"
+    ]
   },
   "insight": {
     "id": "condor-insight",
     "text": "A condor can climb to fifteen thousand feet almost without flapping, riding columns of sun-warmed air at up to 55 miles per hour.",
-    "sourceIDs": ["sdzwa-california-condor"]
+    "sourceIDs": [
+      "sdzwa-california-condor"
+    ]
   },
   "habitatRegions": [
     {
@@ -210,7 +247,9 @@
       "summary": "Has given central-California hunters and ranchers over 19,000 free boxes of non-lead ammunition since 2012, removing lead from the condor's food supply at its source.",
       "url": "https://www.ventanaws.org/ammunition.html",
       "kind": "program",
-      "sourceIDs": ["ventana-free-ammo"],
+      "sourceIDs": [
+        "ventana-free-ammo"
+      ],
       "lastVerified": "2026-08-24"
     },
     {
@@ -220,7 +259,9 @@
       "summary": "Breeds condors and has released them at Vermilion Cliffs since 1996 — more than a hundred now fly free over the Grand Canyon region.",
       "url": "https://peregrinefund.org/projects/california-condor",
       "kind": "program",
-      "sourceIDs": ["peregrine-california-condor"],
+      "sourceIDs": [
+        "peregrine-california-condor"
+      ],
       "lastVerified": "2026-08-24"
     }
   ]

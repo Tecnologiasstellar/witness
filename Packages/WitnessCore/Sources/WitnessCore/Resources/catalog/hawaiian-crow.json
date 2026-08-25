@@ -13,52 +13,77 @@
     {
       "id": "alala-bird",
       "text": "The ʻalalā is Hawaiʻi's largest surviving forest bird: a soft-black crow with brownish wings and stiff throat feathers it raises in display.",
-      "sourceIDs": ["abc-alala-profile"]
+      "sourceIDs": [
+        "abc-alala-profile"
+      ]
     },
     {
       "id": "alala-voice",
       "text": "It speaks in at least 34 distinct calls — shrieks, howls, whoops, and cries that sound almost human.",
-      "sourceIDs": ["abc-alala-profile", "sdzwa-animals-alala"]
+      "sourceIDs": [
+        "abc-alala-profile",
+        "sdzwa-animals-alala"
+      ]
     },
     {
       "id": "alala-gardener",
       "text": "It was the forest's gardener, carrying and planting the seeds of native trees.",
-      "sourceIDs": ["alala-project-home", "abc-alala-profile"]
+      "sourceIDs": [
+        "alala-project-home",
+        "abc-alala-profile"
+      ]
     },
     {
       "id": "alala-extinct",
       "text": "In 2002 the last wild birds were gone, and the species was declared extinct in the wild.",
-      "sourceIDs": ["abc-alala-profile", "sdzwa-science-alala"]
+      "sourceIDs": [
+        "abc-alala-profile",
+        "sdzwa-science-alala"
+      ]
     },
     {
       "id": "alala-survived",
       "text": "It survived indoors: from fewer than twenty birds in the late 1990s, conservation breeding has grown the flock past one hundred and ten.",
-      "sourceIDs": ["sdzwa-science-alala"]
+      "sourceIDs": [
+        "sdzwa-science-alala"
+      ]
     },
     {
       "id": "alala-hawk",
       "text": "Wildness is harder to restore than numbers. Releases on Hawaiʻi Island struggled, in part because the ʻio — the Hawaiian hawk — was waiting.",
-      "sourceIDs": ["abc-alala-profile", "dlnr-maui-release-2024"]
+      "sourceIDs": [
+        "abc-alala-profile",
+        "dlnr-maui-release-2024"
+      ]
     },
     {
       "id": "alala-maui",
       "text": "So in late 2024 the project tried a new island: five juveniles flew free in East Maui, where no ʻio live.",
-      "sourceIDs": ["dlnr-maui-release-2024"]
+      "sourceIDs": [
+        "dlnr-maui-release-2024"
+      ]
     },
     {
       "id": "alala-backpacks",
       "text": "They wear GPS backpacks and visit feeder boxes while they learn to be wild.",
-      "sourceIDs": ["dlnr-maui-release-2024"]
+      "sourceIDs": [
+        "dlnr-maui-release-2024"
+      ]
     },
     {
       "id": "alala-aumakua",
       "text": "In Hawaiian culture the ʻalalā are ʻaumākua — spirit guardians. Like our ancestors, a recovery specialist says: the forest wouldn't be there without these birds.",
-      "sourceIDs": ["dlnr-maui-release-2024", "sdzwa-maui-release-pr"]
+      "sourceIDs": [
+        "dlnr-maui-release-2024",
+        "sdzwa-maui-release-pr"
+      ]
     },
     {
       "id": "alala-witness",
       "text": "To witness the ʻalalā is to hold a door open — e hoʻolāʻau hou ka ʻalalā: may it thrive in its forest once again.",
-      "sourceIDs": ["alala-project-home"]
+      "sourceIDs": [
+        "alala-project-home"
+      ]
     }
   ],
   "action": {
@@ -69,7 +94,9 @@
     "destinationURL": "https://abcbirds.org/birds/alala-hawaiian-crow/",
     "destinationOrganization": "American Bird Conservancy",
     "geographicApplicability": "Worldwide",
-    "sourceIDs": ["abc-alala-profile"],
+    "sourceIDs": [
+      "abc-alala-profile"
+    ],
     "lastVerified": "2026-08-25",
     "measurementType": "opened"
   },
@@ -80,8 +107,8 @@
     "source": "Higgsfield job 5f61084a-4f57-453a-a6a8-78a076ced3db, 2026-08-25; rights record docs/media/hawaiian-crow-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-09-18",
   "sources": [
@@ -129,11 +156,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
     "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from verified SDZWA, ABC, and Hawaiʻi DLNR pages. First extinct-in-the-wild card; a new normalizedValue 'extinct_in_the_wild' is introduced. Population: SDZWA's precise 114 used (DLNR 'over 110', ABC '120+'). The Maui release site (Kīpahulu Forest Reserve) is public in DLNR's own announcement. DLNR pages block automated fetchers (403 warn-pass in CI) but were read live."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "20 in · about 1 lb",
@@ -148,17 +175,29 @@
       "Cats, rats & mongoose",
       "Toxoplasmosis"
     ],
-    "sourceIDs": ["abc-alala-profile", "sdzwa-science-alala", "dlnr-maui-release-2024", "sdzwa-animals-alala"]
+    "sourceIDs": [
+      "abc-alala-profile",
+      "sdzwa-science-alala",
+      "dlnr-maui-release-2024",
+      "sdzwa-animals-alala"
+    ]
   },
   "reproduction": {
     "id": "alala-reproduction",
     "text": "Pairs mate for life. One to five greenish-blue eggs come between March and July, incubated by the female for three weeks; usually two chicks survive. Since 1996, breeding centers on two islands have carried the species.",
-    "sourceIDs": ["sdzwa-animals-alala", "abc-alala-profile", "sdzwa-science-alala"]
+    "sourceIDs": [
+      "sdzwa-animals-alala",
+      "abc-alala-profile",
+      "sdzwa-science-alala"
+    ]
   },
   "insight": {
     "id": "alala-insight",
     "text": "A 2016 study showed the ʻalalā naturally makes and uses stick tools — among crows, a talent shared only with the New Caledonian crow.",
-    "sourceIDs": ["abc-alala-profile", "sdzwa-animals-alala"]
+    "sourceIDs": [
+      "abc-alala-profile",
+      "sdzwa-animals-alala"
+    ]
   },
   "habitatRegions": [
     {
@@ -189,7 +228,10 @@
       "summary": "The state-led partnership returning the ʻalalā to the wild — the 2024 Maui release is its newest chapter.",
       "url": "https://dlnr.hawaii.gov/alalaproject/",
       "kind": "program",
-      "sourceIDs": ["alala-project-home", "dlnr-maui-release-2024"],
+      "sourceIDs": [
+        "alala-project-home",
+        "dlnr-maui-release-2024"
+      ],
       "lastVerified": "2026-08-25"
     },
     {
@@ -199,7 +241,9 @@
       "summary": "Runs the Keauhou and Maui Bird Conservation Centers, where genetics-guided breeding grew the species from under twenty birds.",
       "url": "https://science.sandiegozoo.org/species/alala",
       "kind": "program",
-      "sourceIDs": ["sdzwa-science-alala"],
+      "sourceIDs": [
+        "sdzwa-science-alala"
+      ],
       "lastVerified": "2026-08-25"
     }
   ]

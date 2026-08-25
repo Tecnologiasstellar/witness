@@ -13,52 +13,79 @@
     {
       "id": "salamander-size",
       "text": "The Chinese giant salamander is the largest amphibian on Earth — as long as a grown man is tall, hidden under boulders in cold mountain rivers.",
-      "sourceIDs": ["zsl-cgs-conservation", "london-zoo-cgs", "sdz-cgs"]
+      "sourceIDs": [
+        "zsl-cgs-conservation",
+        "london-zoo-cgs",
+        "sdz-cgs"
+      ]
     },
     {
       "id": "salamander-lineage",
       "text": "Its lineage split from all other amphibians more than 170 million years ago, in the Jurassic.",
-      "sourceIDs": ["zsl-worlds-largest-amphibian"]
+      "sourceIDs": [
+        "zsl-worlds-largest-amphibian"
+      ]
     },
     {
       "id": "salamander-skin",
       "text": "The adult has no gills. It breathes through its skin, and its wrinkled, baggy folds exist to add oxygen-catching surface.",
-      "sourceIDs": ["sdz-cgs", "london-zoo-cgs"]
+      "sourceIDs": [
+        "sdz-cgs",
+        "london-zoo-cgs"
+      ]
     },
     {
       "id": "salamander-senses",
       "text": "Nearly blind, it reads the water's vibrations through sensory nodes along its body, then takes prey in one gape-and-suck strike.",
-      "sourceIDs": ["sdz-cgs", "london-zoo-cgs"]
+      "sourceIDs": [
+        "sdz-cgs",
+        "london-zoo-cgs"
+      ]
     },
     {
       "id": "salamander-babyfish",
       "text": "Locals call it the baby fish, for the crying sound it is said to make.",
-      "sourceIDs": ["sdz-cgs", "edge-hunting-baby-fish"]
+      "sourceIDs": [
+        "sdz-cgs",
+        "edge-hunting-baby-fish"
+      ]
     },
     {
       "id": "salamander-survey",
       "text": "The largest wildlife survey in Chinese conservation history — 97 sites, sixteen provinces, four years — found just 24, many or all likely farm escapes.",
-      "sourceIDs": ["zsl-cgs-conservation"]
+      "sourceIDs": [
+        "zsl-cgs-conservation"
+      ]
     },
     {
       "id": "salamander-paradox",
       "text": "That is the paradox: farms held some two hundred thousand salamanders for the luxury food market while the rivers emptied — many stocked with illegally wild-caught animals.",
-      "sourceIDs": ["zsl-dying-for-a-delicacy", "zsl-worlds-largest-amphibian"]
+      "sourceIDs": [
+        "zsl-dying-for-a-delicacy",
+        "zsl-worlds-largest-amphibian"
+      ]
     },
     {
       "id": "salamander-releases",
       "text": "Well-meant releases of farmed animals carry their own dangers, spreading farm disease and blurring what genetics revealed to be seven or more distinct species.",
-      "sourceIDs": ["zsl-cgs-conservation", "zsl-worlds-largest-amphibian"]
+      "sourceIDs": [
+        "zsl-cgs-conservation",
+        "zsl-worlds-largest-amphibian"
+      ]
     },
     {
       "id": "salamander-plan",
       "text": "A 2024 action plan, built with Chinese partners, now maps the route back.",
-      "sourceIDs": ["zsl-cgs-conservation"]
+      "sourceIDs": [
+        "zsl-cgs-conservation"
+      ]
     },
     {
       "id": "salamander-witness",
       "text": "To witness the giant salamander is to stand by the oldest amphibian lineage on Earth while it can still be found.",
-      "sourceIDs": ["zsl-worlds-largest-amphibian"]
+      "sourceIDs": [
+        "zsl-worlds-largest-amphibian"
+      ]
     }
   ],
   "action": {
@@ -69,7 +96,9 @@
     "destinationURL": "https://www.zsl.org/news-and-events/news/decline-in-giant-salamander",
     "destinationOrganization": "ZSL",
     "geographicApplicability": "Worldwide",
-    "sourceIDs": ["zsl-dying-for-a-delicacy"],
+    "sourceIDs": [
+      "zsl-dying-for-a-delicacy"
+    ],
     "lastVerified": "2026-08-25",
     "measurementType": "opened"
   },
@@ -80,8 +109,8 @@
     "source": "Higgsfield job a664c6d4-3758-4174-81d2-d7c5b82649dc, 2026-08-25; rights record docs/media/chinese-giant-salamander-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-09-13",
   "sources": [
@@ -136,11 +165,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
     "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from verified ZSL, EDGE, SDZWA, and London Zoo pages. No wild population number exists — the honest figure is the survey result (24 found, likely farm escapes); the widely repeated 'millions on farms' was unverifiable, so the sourced 42,000 adults + 164,000 subadults (~200,000) is used. 'Wawayu' spelling unverified — 'baby fish' used. Region circles are broad mountain belts."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "Up to 6 ft — the largest amphibian",
@@ -155,17 +184,29 @@
       "Farm disease spillover",
       "Habitat loss & pollution"
     ],
-    "sourceIDs": ["zsl-cgs-conservation", "zsl-worlds-largest-amphibian", "zsl-dying-for-a-delicacy", "edge-cgs-species", "sdz-cgs"]
+    "sourceIDs": [
+      "zsl-cgs-conservation",
+      "zsl-worlds-largest-amphibian",
+      "zsl-dying-for-a-delicacy",
+      "edge-cgs-species",
+      "sdz-cgs"
+    ]
   },
   "reproduction": {
     "id": "salamander-reproduction",
     "text": "In summer a female lays 400 to 500 eggs in a string inside an underwater den. A male den master fertilizes and guards them for one to two months, and maturity takes five or six years.",
-    "sourceIDs": ["sdz-cgs", "edge-cgs-species"]
+    "sourceIDs": [
+      "sdz-cgs",
+      "edge-cgs-species"
+    ]
   },
   "insight": {
     "id": "salamander-insight",
     "text": "Legend holds that the yin-yang symbol was inspired by two giant salamanders intertwined.",
-    "sourceIDs": ["zsl-worlds-largest-amphibian", "london-zoo-cgs"]
+    "sourceIDs": [
+      "zsl-worlds-largest-amphibian",
+      "london-zoo-cgs"
+    ]
   },
   "habitatRegions": [
     {
@@ -196,7 +237,9 @@
       "summary": "Since 2010: the landmark range-wide surveys, farm and disease assessment, Chinese EDGE fellows, and the 2024 action plan.",
       "url": "https://www.zsl.org/what-we-do/projects/chinese-giant-salamander-conservation",
       "kind": "program",
-      "sourceIDs": ["zsl-cgs-conservation"],
+      "sourceIDs": [
+        "zsl-cgs-conservation"
+      ],
       "lastVerified": "2026-08-25"
     },
     {
@@ -206,7 +249,9 @@
       "summary": "A giant salamander rescued from the illegal wildlife trade by UK Border Force now speaks for his species at London Zoo.",
       "url": "https://www.londonzoo.org/whats-here/animals/chinese-giant-salamander",
       "kind": "program",
-      "sourceIDs": ["london-zoo-cgs"],
+      "sourceIDs": [
+        "london-zoo-cgs"
+      ],
       "lastVerified": "2026-08-25"
     }
   ]

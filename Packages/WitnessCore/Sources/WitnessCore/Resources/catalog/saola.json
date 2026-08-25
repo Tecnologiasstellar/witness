@@ -13,52 +13,76 @@
     {
       "id": "saola-discovery",
       "text": "In 1992, researchers in a remote Vietnamese village found a skull with two long, parallel horns — a large mammal completely new to science.",
-      "sourceIDs": ["rewild-saola-profile"]
+      "sourceIDs": [
+        "rewild-saola-profile"
+      ]
     },
     {
       "id": "saola-look",
       "text": "The saola wears a rich brown coat with white markings across its face, and both sexes carry horns up to twenty inches long.",
-      "sourceIDs": ["saola-foundation-asian-unicorn", "rewild-10-things-saola"]
+      "sourceIDs": [
+        "saola-foundation-asian-unicorn",
+        "rewild-10-things-saola"
+      ]
     },
     {
       "id": "saola-unicorn",
       "text": "They call it the Asian unicorn — not because it has one horn, but because almost no one has ever seen it.",
-      "sourceIDs": ["saola-foundation-the-saola"]
+      "sourceIDs": [
+        "saola-foundation-the-saola"
+      ]
     },
     {
       "id": "saola-unseen",
       "text": "No biologist has ever confirmed seeing one alive in the wild, and there is not a single saola in any zoo on Earth.",
-      "sourceIDs": ["saola-foundation-asian-unicorn"]
+      "sourceIDs": [
+        "saola-foundation-asian-unicorn"
+      ]
     },
     {
       "id": "saola-last-photo",
       "text": "The most recent photograph of a wild saola was taken by an automatic camera in 2013, standing in a forest creek.",
-      "sourceIDs": ["saola-foundation-asian-unicorn", "rewild-10-things-saola"]
+      "sourceIDs": [
+        "saola-foundation-asian-unicorn",
+        "rewild-10-things-saola"
+      ]
     },
     {
       "id": "saola-snares",
       "text": "The threat is not even aimed at it: wire snares made from bicycle brake cable, laid by the hundreds for other animals, empty the forest of everything that walks.",
-      "sourceIDs": ["saola-foundation-snare-crisis", "rewild-saola-profile"]
+      "sourceIDs": [
+        "saola-foundation-snare-crisis",
+        "rewild-saola-profile"
+      ]
     },
     {
       "id": "saola-search",
       "text": "The search continues with camera traps, environmental DNA — even the blood meals of forest leeches.",
-      "sourceIDs": ["rewild-saola-emergency-response"]
+      "sourceIDs": [
+        "rewild-saola-emergency-response"
+      ]
     },
     {
       "id": "saola-unsurveyed",
       "text": "There is room for hope: as little as two percent of its possible range has ever been properly searched.",
-      "sourceIDs": ["saola-foundation-save-saola"]
+      "sourceIDs": [
+        "saola-foundation-save-saola"
+      ]
     },
     {
       "id": "saola-breeding-center",
       "text": "Vietnam and Laos are building the first conservation breeding center for Annamite wildlife, with the saola as its flagship.",
-      "sourceIDs": ["rewild-saola-profile", "rewild-saola-emergency-response"]
+      "sourceIDs": [
+        "rewild-saola-profile",
+        "rewild-saola-emergency-response"
+      ]
     },
     {
       "id": "saola-witness",
       "text": "To witness the saola is to keep a place in the world for an animal that may yet walk out of the forest.",
-      "sourceIDs": ["saola-foundation-save-saola"]
+      "sourceIDs": [
+        "saola-foundation-save-saola"
+      ]
     }
   ],
   "action": {
@@ -69,7 +93,9 @@
     "destinationURL": "https://www.rewild.org/blog/10-things-you-probably-didnt-know-about-saola-the-asian-unicorn",
     "destinationOrganization": "Re:wild",
     "geographicApplicability": "Worldwide",
-    "sourceIDs": ["rewild-10-things-saola"],
+    "sourceIDs": [
+      "rewild-10-things-saola"
+    ],
     "lastVerified": "2026-08-24",
     "measurementType": "opened"
   },
@@ -80,8 +106,8 @@
     "source": "Higgsfield job ecc6419a-a2ea-4214-ba19-cd007aa891fc, 2026-08-24; rights record docs/media/saola-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-08-31",
   "sources": [
@@ -136,11 +162,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
-    "lastFactChecked": "2026-08-24",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
+    "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from verified Saola Foundation and Re:wild pages. Population honestly uncertain: no confirmed detection since 2013; live sources range from a few individuals to fewer than 50 — card uses the Saola Foundation's phrasing. Lifespan unknown (no saola has ever been kept in captivity). Region circles are broad Annamite generalizations; no locality data exists or is published."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "31–39 in at shoulder · 154–220 lbs",
@@ -155,17 +181,25 @@
       "Emptied forests",
       "Isolated survivors"
     ],
-    "sourceIDs": ["saola-foundation-asian-unicorn", "saola-foundation-snare-crisis", "rewild-saola-profile"]
+    "sourceIDs": [
+      "saola-foundation-asian-unicorn",
+      "saola-foundation-snare-crisis",
+      "rewild-saola-profile"
+    ]
   },
   "reproduction": {
     "id": "saola-reproduction",
     "text": "Almost nothing is known. Single calves are the norm, and saola live alone except for mothers with young — nearly every other fact about how the species breeds is still waiting to be learned.",
-    "sourceIDs": ["saola-foundation-asian-unicorn"]
+    "sourceIDs": [
+      "saola-foundation-asian-unicorn"
+    ]
   },
   "insight": {
     "id": "saola-insight",
     "text": "Since its discovery in 1992, the saola has been photographed in the wild only five times.",
-    "sourceIDs": ["rewild-saola-emergency-response"]
+    "sourceIDs": [
+      "rewild-saola-emergency-response"
+    ]
   },
   "habitatRegions": [
     {
@@ -196,7 +230,9 @@
       "summary": "Searches for surviving saola in Laos and works toward a conservation breeding program for eventual return to the wild.",
       "url": "https://www.saolafoundation.org/save-saola",
       "kind": "program",
-      "sourceIDs": ["saola-foundation-save-saola"],
+      "sourceIDs": [
+        "saola-foundation-save-saola"
+      ],
       "lastVerified": "2026-08-24"
     },
     {
@@ -206,7 +242,10 @@
       "summary": "With the EU and WWF-Viet Nam: eDNA and camera-trap searches, snare-free safe havens, and the first Annamites breeding center at Bach Ma National Park.",
       "url": "https://www.rewild.org/wild-about/saola",
       "kind": "program",
-      "sourceIDs": ["rewild-saola-profile", "rewild-saola-emergency-response"],
+      "sourceIDs": [
+        "rewild-saola-profile",
+        "rewild-saola-emergency-response"
+      ],
       "lastVerified": "2026-08-24"
     }
   ]

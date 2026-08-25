@@ -30,8 +30,8 @@ Each gate needs dated evidence. `PASS` means the production candidate was tested
 | Apple Developer/App Store Connect | PENDING | Active membership, agreements, tax, banking, app record |
 | Original public release date | PENDING | App Store version publicly released within window |
 | Core ritual | PENDING | Physical-device recording of full production flow |
-| Catalog integrity | PENDING | Validator passes every published species/action/source/media record |
-| Media and data rights | PENDING | Per-file rights ledger and no incompatible data source |
+| Catalog integrity | PASS (2026-08-25) | All 30 cards editorially reviewed and cleared by Alberto Villalpando; `CatalogValidator.validate(mode: .production)` passes (see `CatalogValidatorTests.productionAcceptsApprovedCatalog`) |
+| Media and data rights | PASS (2026-08-25) | Higgsfield paid-plan commercial-use terms confirmed by Alberto Villalpando for all 30 assets; `media.verificationStatus` set to `approved` catalog-wide (D-013 closed) |
 | Sensitive species safety | PENDING | Location/generalization review |
 | Backend count integrity | PENDING | Idempotency, RLS/authorization, aggregate-only exposure, offline retry tests |
 | RevenueCat Test Store | PENDING | Controlled success/fail/cancel/restore/expiry tests |

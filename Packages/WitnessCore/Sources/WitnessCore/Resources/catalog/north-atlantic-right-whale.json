@@ -13,52 +13,77 @@
     {
       "id": "right-whale-surfacing",
       "text": "A right whale surfaces with a V-shaped double blow: a stocky black body, no dorsal fin, white roughened patches on its head.",
-      "sourceIDs": ["noaa-right-whale-species"]
+      "sourceIDs": [
+        "noaa-right-whale-species"
+      ]
     },
     {
       "id": "right-whale-callosities",
       "text": "Those patches — callosities — form a pattern unique to each whale, and scientists have used them to identify every individual since 1980.",
-      "sourceIDs": ["noaa-right-whale-species", "neaq-research-programs"]
+      "sourceIDs": [
+        "noaa-right-whale-species",
+        "neaq-research-programs"
+      ]
     },
     {
       "id": "right-whale-feeding",
       "text": "It feeds by skimming through dense clouds of copepods the size of rice grains, one to two tons of them a day.",
-      "sourceIDs": ["noaa-right-whale-species", "neaq-right-whales"]
+      "sourceIDs": [
+        "noaa-right-whale-species",
+        "neaq-right-whales"
+      ]
     },
     {
       "id": "right-whale-name",
       "text": "Whalers named it the right whale to hunt because it swam slowly and floated when killed. By the 1890s it was nearly gone.",
-      "sourceIDs": ["noaa-right-whale-species"]
+      "sourceIDs": [
+        "noaa-right-whale-species"
+      ]
     },
     {
       "id": "right-whale-today",
       "text": "It never recovered. The old threat has simply changed shape: today the danger is rope and hulls, not harpoons.",
-      "sourceIDs": ["noaa-right-whale-species"]
+      "sourceIDs": [
+        "noaa-right-whale-species"
+      ]
     },
     {
       "id": "right-whale-entanglement",
       "text": "More than 85 percent of right whales have been entangled in fishing gear at least once; some have survived it nine times.",
-      "sourceIDs": ["noaa-right-whale-species", "neaq-right-whales"]
+      "sourceIDs": [
+        "noaa-right-whale-species",
+        "neaq-right-whales"
+      ]
     },
     {
       "id": "right-whale-slowzones",
       "text": "Protection is specific: large vessels must slow to ten knots in seasonal zones, and fresh sightings trigger new voluntary slow zones.",
-      "sourceIDs": ["noaa-vessel-strikes"]
+      "sourceIDs": [
+        "noaa-vessel-strikes"
+      ]
     },
     {
       "id": "right-whale-calving",
       "text": "Each December, pregnant females travel south to calve off Georgia and Florida — and the population has grown by about twenty whales since 2020.",
-      "sourceIDs": ["neaq-right-whales", "noaa-right-whale-species"]
+      "sourceIDs": [
+        "neaq-right-whales",
+        "noaa-right-whale-species"
+      ]
     },
     {
       "id": "right-whale-witness",
       "text": "To witness the right whale is to watch a species hold on within sight of one of the busiest coastlines on Earth.",
-      "sourceIDs": ["noaa-right-whale-species"]
+      "sourceIDs": [
+        "noaa-right-whale-species"
+      ]
     },
     {
       "id": "right-whale-choices",
       "text": "Whether it keeps growing is decided by choices — ship speeds, rope-free fishing gear, and how carefully we share the water.",
-      "sourceIDs": ["noaa-vessel-strikes", "noaa-right-whale-species"]
+      "sourceIDs": [
+        "noaa-vessel-strikes",
+        "noaa-right-whale-species"
+      ]
     }
   ],
   "action": {
@@ -69,7 +94,9 @@
     "destinationURL": "https://www.fisheries.noaa.gov/species/north-atlantic-right-whale",
     "destinationOrganization": "NOAA Fisheries",
     "geographicApplicability": "Worldwide",
-    "sourceIDs": ["noaa-right-whale-species"],
+    "sourceIDs": [
+      "noaa-right-whale-species"
+    ],
     "lastVerified": "2026-08-24",
     "measurementType": "opened"
   },
@@ -80,8 +107,8 @@
     "source": "Higgsfield job 92736bc9-9c81-43cb-af87-7a0f951618e8, 2026-08-24; rights record docs/media/north-atlantic-right-whale-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-08-28",
   "sources": [
@@ -115,11 +142,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
-    "lastFactChecked": "2026-08-24",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
+    "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from verified NOAA Fisheries and New England Aquarium pages. Population ~380 is NOAA's current phrasing (corroborated by NEAq's ~384). Status uses NOAA's ESA wording. Ocean regions are broad feeding/calving areas, not whale locations."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "45–52 ft · up to 140,000 lbs",
@@ -134,17 +161,26 @@
       "Climate change",
       "Ongoing mortality event"
     ],
-    "sourceIDs": ["noaa-right-whale-species", "neaq-right-whales"]
+    "sourceIDs": [
+      "noaa-right-whale-species",
+      "neaq-right-whales"
+    ]
   },
   "reproduction": {
     "id": "right-whale-reproduction",
     "text": "A single calf is born after more than a year of gestation, in warm water off the southeastern United States between December and March. Females once calved every three years; under today's stresses the interval has stretched to seven or even ten.",
-    "sourceIDs": ["noaa-right-whale-species", "neaq-right-whales"]
+    "sourceIDs": [
+      "noaa-right-whale-species",
+      "neaq-right-whales"
+    ]
   },
   "insight": {
     "id": "right-whale-insight",
     "text": "Every living North Atlantic right whale is individually known — a catalog of over a million photographs tracks each one by the pattern on its head.",
-    "sourceIDs": ["neaq-right-whales", "noaa-right-whale-species"]
+    "sourceIDs": [
+      "neaq-right-whales",
+      "noaa-right-whale-species"
+    ]
   },
   "habitatRegions": [
     {
@@ -175,7 +211,9 @@
       "summary": "Anderson Cabot Center scientists have photo-identified every known right whale since 1980, tracking each one's births, injuries, and health.",
       "url": "https://www.neaq.org/conservation-and-research/anderson-cabot-center-for-ocean-life/research-programs/",
       "kind": "program",
-      "sourceIDs": ["neaq-research-programs"],
+      "sourceIDs": [
+        "neaq-research-programs"
+      ],
       "lastVerified": "2026-08-24"
     },
     {
@@ -185,7 +223,9 @@
       "summary": "Requires large vessels to slow to ten knots in seasonal management areas and declares voluntary slow zones wherever right whales are detected.",
       "url": "https://www.fisheries.noaa.gov/national/endangered-species-conservation/reducing-vessel-strikes-north-atlantic-right-whales",
       "kind": "program",
-      "sourceIDs": ["noaa-vessel-strikes"],
+      "sourceIDs": [
+        "noaa-vessel-strikes"
+      ],
       "lastVerified": "2026-08-24"
     }
   ]

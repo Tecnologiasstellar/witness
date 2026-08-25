@@ -104,8 +104,8 @@
     "source": "Higgsfield job e07a5206-45fe-41e9-9983-f409efa9bce1, 2026-08-22; rights record docs/media/vaquita-plate-01-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-08-21",
   "sources": [
@@ -146,11 +146,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
-    "lastFactChecked": "2026-08-24",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
+    "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Prototype copy derived from declared public sources. The population line quotes NOAA's own published wording with attribution rather than a survey number. Requires conservation-partner review before release."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "4–5 ft · 65–120 lbs",

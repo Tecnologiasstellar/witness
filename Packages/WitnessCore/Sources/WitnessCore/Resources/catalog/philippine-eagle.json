@@ -13,52 +13,76 @@
     {
       "id": "eagle-face",
       "text": "The Philippine eagle wears a crest of long feathers that flares into a shaggy mane around pale grey-blue eyes — a face unlike any other eagle's.",
-      "sourceIDs": ["peregrine-philippine-eagle"]
+      "sourceIDs": [
+        "peregrine-philippine-eagle"
+      ]
     },
     {
       "id": "eagle-power",
       "text": "It is one of the largest and most powerful forest raptors: a metre of bird with a six-and-a-half-foot wingspan, flying fast through dense trees.",
-      "sourceIDs": ["pef-philippine-eagle", "peregrine-philippine-eagle"]
+      "sourceIDs": [
+        "pef-philippine-eagle",
+        "peregrine-philippine-eagle"
+      ]
     },
     {
       "id": "eagle-hunting",
       "text": "It hunts the canopy — civets, flying squirrels, snakes, even other raptors — sometimes in pairs, one bird distracting while the other strikes.",
-      "sourceIDs": ["peregrine-philippine-eagle"]
+      "sourceIDs": [
+        "peregrine-philippine-eagle"
+      ]
     },
     {
       "id": "eagle-slow",
       "text": "Everything about it is slow: a single egg every two years, and a chick that stays with its parents for nearly two more.",
-      "sourceIDs": ["pef-philippine-eagle", "peregrine-philippine-eagle"]
+      "sourceIDs": [
+        "pef-philippine-eagle",
+        "peregrine-philippine-eagle"
+      ]
     },
     {
       "id": "eagle-territory",
       "text": "One pair needs four to eleven thousand hectares of forest — so every eagle lost usually means a forest lost first.",
-      "sourceIDs": ["pef-philippine-eagle"]
+      "sourceIDs": [
+        "pef-philippine-eagle"
+      ]
     },
     {
       "id": "eagle-islands",
       "text": "It survives on four islands and nowhere else on Earth, and it is the national bird of the Philippines.",
-      "sourceIDs": ["pef-philippine-eagle", "peregrine-philippine-eagle"]
+      "sourceIDs": [
+        "pef-philippine-eagle",
+        "peregrine-philippine-eagle"
+      ]
     },
     {
       "id": "eagle-threats",
       "text": "The threats are the chainsaw and the gun: deforestation, and at least one eagle shot every year despite protection.",
-      "sourceIDs": ["pef-philippine-eagle"]
+      "sourceIDs": [
+        "pef-philippine-eagle"
+      ]
     },
     {
       "id": "eagle-guardians",
       "text": "The answer is patient and local: the Philippine Eagle Center breeds and rehabilitates eagles in Davao, and Indigenous forest guards patrol the nesting forests.",
-      "sourceIDs": ["pef-eagle-center", "pef-forest-guard-program"]
+      "sourceIDs": [
+        "pef-eagle-center",
+        "pef-forest-guard-program"
+      ]
     },
     {
       "id": "eagle-releases",
       "text": "Released eagles now fly with GPS trackers — trained first to avoid the power poles that could kill them.",
-      "sourceIDs": ["pef-carlito-uswag-release"]
+      "sourceIDs": [
+        "pef-carlito-uswag-release"
+      ]
     },
     {
       "id": "eagle-witness",
       "text": "To witness the Philippine eagle is to hold four islands' forests in one gaze.",
-      "sourceIDs": ["pef-philippine-eagle"]
+      "sourceIDs": [
+        "pef-philippine-eagle"
+      ]
     }
   ],
   "action": {
@@ -69,7 +93,9 @@
     "destinationURL": "https://www.philippineeaglefoundation.org/philippine-eagle",
     "destinationOrganization": "Philippine Eagle Foundation",
     "geographicApplicability": "Worldwide",
-    "sourceIDs": ["pef-philippine-eagle"],
+    "sourceIDs": [
+      "pef-philippine-eagle"
+    ],
     "lastVerified": "2026-08-24",
     "measurementType": "opened"
   },
@@ -80,8 +106,8 @@
     "source": "Higgsfield job 7d88bfdb-03a5-4f15-a1ab-3be4d7e94b14, 2026-08-24; rights record docs/media/philippine-eagle-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-09-10",
   "sources": [
@@ -129,11 +155,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
-    "lastFactChecked": "2026-08-24",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
+    "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from verified Philippine Eagle Foundation and Peregrine Fund pages. Population uses PEF's ~400 pairs (Peregrine: fewer than 500 individuals). The popular '12 years in prison' and 'renamed by presidential decree' facts could not be verified on approved sources and are excluded. Region circles cover island mountain ranges, not nest sites."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "Up to 3.3 ft tall · 6.5-ft wingspan",
@@ -148,17 +174,27 @@
       "Trapping",
       "Power-line electrocution"
     ],
-    "sourceIDs": ["pef-philippine-eagle", "peregrine-philippine-eagle", "pef-carlito-uswag-release", "pef-forest-guard-program"]
+    "sourceIDs": [
+      "pef-philippine-eagle",
+      "peregrine-philippine-eagle",
+      "pef-carlito-uswag-release",
+      "pef-forest-guard-program"
+    ]
   },
   "reproduction": {
     "id": "eagle-reproduction",
     "text": "A single egg every two years, incubated about sixty days. The chick fledges at four to five months but depends on its parents for up to seventeen more — and will not breed until it is five to seven years old.",
-    "sourceIDs": ["pef-philippine-eagle", "peregrine-philippine-eagle"]
+    "sourceIDs": [
+      "pef-philippine-eagle",
+      "peregrine-philippine-eagle"
+    ]
   },
   "insight": {
     "id": "eagle-insight",
     "text": "A single Philippine eagle needs at least 7,000 hectares of forest to thrive — more land than Manhattan, for one bird.",
-    "sourceIDs": ["pef-forest-guard-program"]
+    "sourceIDs": [
+      "pef-forest-guard-program"
+    ]
   },
   "habitatRegions": [
     {
@@ -189,7 +225,9 @@
       "summary": "Forest guards from local and Indigenous communities patrol nesting forests — over 200 traps removed and 11,000 native trees planted.",
       "url": "https://www.philippineeaglefoundation.org/forest-guard-program",
       "kind": "program",
-      "sourceIDs": ["pef-forest-guard-program"],
+      "sourceIDs": [
+        "pef-forest-guard-program"
+      ],
       "lastVerified": "2026-08-24"
     },
     {
@@ -199,7 +237,9 @@
       "summary": "Funds food, veterinary care, and safe spaces for rescued and breeding eagles at the Philippine Eagle Center.",
       "url": "https://www.philippineeaglefoundation.org/adoption-page",
       "kind": "program",
-      "sourceIDs": ["pef-adoption-page"],
+      "sourceIDs": [
+        "pef-adoption-page"
+      ],
       "lastVerified": "2026-08-24"
     }
   ]
