@@ -1,0 +1,213 @@
+{
+  "id": "iberian-lynx",
+  "schemaVersion": 1,
+  "commonName": "Iberian Lynx",
+  "scientificName": "Lynx pardinus",
+  "conservationStatus": {
+    "displayName": "Vulnerable",
+    "normalizedValue": "vulnerable"
+  },
+  "generalizedRange": "Southern Spain and Portugal",
+  "hook": "In 2002: 94 left. Today: more than 2,000.",
+  "story": [
+    {
+      "id": "lynx-look",
+      "text": "The Iberian lynx wears its identity plainly: a spotted tawny coat, black brushes on the ear tips, a bearded ruff, and a short tail with a black tassel.",
+      "sourceIDs": ["lynxconnect-ecology"]
+    },
+    {
+      "id": "lynx-specialist",
+      "text": "It is a specialist to the point of dependence: rabbits are about ninety percent of everything it eats.",
+      "sourceIDs": ["lynxconnect-ecology"]
+    },
+    {
+      "id": "lynx-crash",
+      "text": "When disease crashed the rabbit populations, the lynx crashed with them. By 2002, ninety-four individuals were left.",
+      "sourceIDs": ["cinea-comeback-cat", "iucn-downlisting-2024"]
+    },
+    {
+      "id": "lynx-lowest",
+      "text": "It was, in those years, the most endangered cat on Earth.",
+      "sourceIDs": ["fernandez-2002-dens"]
+    },
+    {
+      "id": "lynx-rescue",
+      "text": "The rescue was unglamorous and total: rabbits restored, private estates enrolled, breeding centers built, road underpasses dug and fenced.",
+      "sourceIDs": ["cinea-comeback-cat", "cbd-habitat-lynx", "iucn-downlisting-2024"]
+    },
+    {
+      "id": "lynx-releases",
+      "text": "More than four hundred captive-bred lynx have been released into Spain and Portugal since 2010.",
+      "sourceIDs": ["iucn-downlisting-2024"]
+    },
+    {
+      "id": "lynx-dens",
+      "text": "Mothers den in hollow cork-oak trunks, shuttling their kittens between hidden bush dens until they emerge at two months.",
+      "sourceIDs": ["fernandez-2002-dens"]
+    },
+    {
+      "id": "lynx-census",
+      "text": "The 2023 census counted 2,021 lynx — 722 of them cubs.",
+      "sourceIDs": ["miteco-census-2023"]
+    },
+    {
+      "id": "lynx-downlisting",
+      "text": "In June 2024 the IUCN moved it from Endangered to Vulnerable: the greatest recovery of a cat species conservation has ever achieved.",
+      "sourceIDs": ["iucn-downlisting-2024"]
+    },
+    {
+      "id": "lynx-witness",
+      "text": "It is not finished — full recovery needs 750 breeding females and the count stands at 406 — but to witness the Iberian lynx is to watch a comeback still gaining ground.",
+      "sourceIDs": ["miteco-census-2023"]
+    }
+  ],
+  "action": {
+    "id": "learn-iberian-lynx",
+    "title": "Read the comeback announcement",
+    "summary": "Read the IUCN's 2024 announcement of the downlisting: how a species at 62 mature animals became conservation's greatest cat recovery.",
+    "effort": "3 minutes",
+    "destinationURL": "https://iucn.org/press-release/202406/iberian-lynx-rebounding-thanks-conservation-action-iucn-red-list",
+    "destinationOrganization": "IUCN",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["iucn-downlisting-2024"],
+    "lastVerified": "2026-08-24",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "iberian-lynx-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 7fbca949-93fe-48b1-8293-835fe2edd354, 2026-08-24; rights record docs/media/iberian-lynx-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-05",
+  "sources": [
+    {
+      "id": "iucn-downlisting-2024",
+      "title": "Iberian lynx rebounding thanks to conservation action",
+      "organization": "IUCN",
+      "url": "https://iucn.org/press-release/202406/iberian-lynx-rebounding-thanks-conservation-action-iucn-red-list",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "lynxconnect-ecology",
+      "title": "Ecology — LIFE LynxConnect",
+      "organization": "LIFE LynxConnect",
+      "url": "https://lifelynxconnect.eu/en/ecology/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "lynxconnect-project",
+      "title": "Project — LIFE LynxConnect",
+      "organization": "LIFE LynxConnect",
+      "url": "https://lifelynxconnect.eu/en/project/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "miteco-census-2023",
+      "title": "The Iberian lynx population surpassed 2,000 in 2023",
+      "organization": "Fundación Biodiversidad / MITECO",
+      "url": "https://fundacion-biodiversidad.es/en/notas_de_prensa_mite/the-iberian-lynx-population-surpassed-2000-in-2023-and-is-progressively-moving-away-from-the-risk-of-extinction/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "cinea-comeback-cat",
+      "title": "The comeback cat: Iberian lynx numbers up tenfold in 20 years",
+      "organization": "European Commission (CINEA)",
+      "url": "https://cinea.ec.europa.eu/news-events/news/comeback-cat-iberian-lynx-numbers-tenfold-20-years-2021-07-20_en",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "cbd-habitat-lynx",
+      "title": "Iberian lynx conservation program",
+      "organization": "Fundación CBD-Habitat",
+      "url": "https://www.cbd-habitat.com/en/conservation-programs/iberian-lynx/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "fernandez-2002-dens",
+      "title": "Breeding dens and kitten development in the Iberian lynx (Journal of Zoology)",
+      "organization": "LIFE LynxConnect (hosted)",
+      "url": "https://lifelynxconnect.eu/wp-content/uploads/2022/02/2002_Desarrollo_cachorros_Fernandez.pdf",
+      "lastAccessed": "2026-08-24"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified IUCN, LIFE LynxConnect, MITECO/Fundación Biodiversidad, CINEA, and CBD-Habitat pages. Bottleneck figures kept separate by counting method: 94 total (2002, CINEA) vs 62 mature (2001, IUCN). Lifespan omitted — no verified source. Status is IUCN Vulnerable since June 2024."
+  },
+  "stats": {
+    "size": "About 28 lbs · knee-high at the shoulder",
+    "lifespan": "Not reliably documented",
+    "diet": "European rabbits — about 90% of its diet",
+    "populationEstimate": "2,021",
+    "populationAsOf": "2023 census · per MITECO",
+    "trend": "increasing",
+    "threats": [
+      "Rabbit disease crashes",
+      "Road deaths",
+      "Habitat fragmentation",
+      "Domestic-cat disease"
+    ],
+    "sourceIDs": ["lynxconnect-ecology", "iucn-downlisting-2024", "miteco-census-2023"]
+  },
+  "reproduction": {
+    "id": "lynx-reproduction",
+    "text": "One litter a year, usually around three kittens, born in early spring inside a hollow cork-oak trunk. The mother moves them between hidden bush dens until, at two months, they begin to follow her.",
+    "sourceIDs": ["fernandez-2002-dens", "lynxconnect-ecology"]
+  },
+  "insight": {
+    "id": "lynx-insight",
+    "text": "The IUCN calls this the greatest recovery of a cat species ever achieved through conservation.",
+    "sourceIDs": ["iucn-downlisting-2024"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Sierra Morena highlands",
+      "latitude": 38.2,
+      "longitude": -4.05,
+      "radiusKm": 45
+    },
+    {
+      "name": "Doñana",
+      "latitude": 37.05,
+      "longitude": -6.4,
+      "radiusKm": 30
+    }
+  ],
+  "gallery": [
+    "iberian-lynx-plate-01",
+    "iberian-lynx-context-01",
+    "iberian-lynx-detail-01",
+    "iberian-lynx-behavior-01",
+    "iberian-lynx-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "life-lynxconnect",
+      "organization": "LIFE LynxConnect",
+      "title": "One connected population",
+      "summary": "The EU project stitching six separate lynx nuclei into a single genetically connected metapopulation across Spain and Portugal.",
+      "url": "https://lifelynxconnect.eu/en/project/",
+      "kind": "program",
+      "sourceIDs": ["lynxconnect-project"],
+      "lastVerified": "2026-08-24"
+    },
+    {
+      "id": "cbd-habitat-lynx-program",
+      "organization": "Fundación CBD-Habitat",
+      "title": "Lynx land stewardship",
+      "summary": "Works with private estates on rabbit recovery, habitat management, and hazard mitigation in lynx country.",
+      "url": "https://www.cbd-habitat.com/en/conservation-programs/iberian-lynx/",
+      "kind": "program",
+      "sourceIDs": ["cbd-habitat-lynx"],
+      "lastVerified": "2026-08-24"
+    }
+  ]
+}
