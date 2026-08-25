@@ -1,0 +1,213 @@
+{
+  "id": "yangtze-finless-porpoise",
+  "schemaVersion": 1,
+  "commonName": "Yangtze Finless Porpoise",
+  "scientificName": "Neophocaena asiaeorientalis asiaeorientalis",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Middle and lower Yangtze River, China",
+  "hook": "The Yangtze already lost its dolphin. Its porpoise is smiling back.",
+  "story": [
+    {
+      "id": "porpoise-smile",
+      "text": "The Yangtze finless porpoise has no fin on its back and no beak on its face — just a rounded grey head and a mouth that curves up into a permanent smile.",
+      "sourceIDs": ["wdc-species-guide", "riverdolphins-species-page"]
+    },
+    {
+      "id": "porpoise-name",
+      "text": "Locals call it the smiling river dolphin.",
+      "sourceIDs": ["riverdolphins-species-page"]
+    },
+    {
+      "id": "porpoise-freshwater",
+      "text": "It is the world's only freshwater porpoise, navigating the murk of the Yangtze by ultrasonic pulses.",
+      "sourceIDs": ["riverdolphins-species-page"]
+    },
+    {
+      "id": "porpoise-baiji",
+      "text": "It once shared the river with the baiji dolphin. The baiji was last seen in 2002, and declared functionally extinct within the decade.",
+      "sourceIDs": ["riverdolphins-atrisk-pdf"]
+    },
+    {
+      "id": "porpoise-decline",
+      "text": "The porpoise nearly followed: from about 2,700 in the early 1990s to barely a thousand.",
+      "sourceIDs": ["cas-porpoise-brink"]
+    },
+    {
+      "id": "porpoise-pressures",
+      "text": "The river itself was the problem — gillnets, ship noise drowning its sonar, sand mining, dams cutting the lakes away.",
+      "sourceIDs": ["wwf-2022-census-news", "cas-porpoise-brink"]
+    },
+    {
+      "id": "porpoise-ban",
+      "text": "Then China acted at river scale: a ten-year ban on all fishing across the Yangtze system, begun in 2021.",
+      "sourceIDs": ["riverdolphins-atrisk-pdf"]
+    },
+    {
+      "id": "porpoise-rebound",
+      "text": "The 2022 census found 1,249 — the first increase since records began.",
+      "sourceIDs": ["wwf-2022-census-news"]
+    },
+    {
+      "id": "porpoise-reserves",
+      "text": "In quiet oxbow reserves like Tian'ezhou, more than 150 porpoises now live and breed — roughly ten calves a year.",
+      "sourceIDs": ["cas-porpoise-brink"]
+    },
+    {
+      "id": "porpoise-witness",
+      "text": "To witness the smiling porpoise is to ask that a river 400 million people depend on stay alive enough for it.",
+      "sourceIDs": ["wwf-2022-census-news"]
+    }
+  ],
+  "action": {
+    "id": "learn-yangtze-porpoise",
+    "title": "Read the first good census",
+    "summary": "Read WWF's account of the 2022 survey: the first population increase since records began, and what the fishing ban changed.",
+    "effort": "4 minutes",
+    "destinationURL": "https://wwf.panda.org/wwf_news/?7885466/Hope-for-critically-endangered-Yangtze-finless-porpoise-as-population-increases-for-first-time",
+    "destinationOrganization": "WWF International",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["wwf-2022-census-news"],
+    "lastVerified": "2026-08-24",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "yangtze-finless-porpoise-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 6994532a-0a1a-4fde-85f3-9a16f0f3ed53, 2026-08-24; rights record docs/media/yangtze-finless-porpoise-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-09",
+  "sources": [
+    {
+      "id": "wwf-uk-porpoise",
+      "title": "Yangtze finless porpoise",
+      "organization": "WWF-UK",
+      "url": "https://www.wwf.org.uk/learn/wildlife/yangtze-finless-porpoise",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wwf-2022-census-news",
+      "title": "Hope for critically endangered Yangtze finless porpoise as population increases for first time",
+      "organization": "WWF International",
+      "url": "https://wwf.panda.org/wwf_news/?7885466/Hope-for-critically-endangered-Yangtze-finless-porpoise-as-population-increases-for-first-time",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wdc-species-guide",
+      "title": "Narrow-ridged finless porpoise",
+      "organization": "Whale and Dolphin Conservation",
+      "url": "https://uk.whales.org/whales-dolphins/species-guide/narrow-ridged-finless-porpoise/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "cas-porpoise-brink",
+      "title": "Yangtze Porpoise Swims Back from the Brink",
+      "organization": "Chinese Academy of Sciences",
+      "url": "https://english.cas.cn/newsroom/cas_media/202510/t20251028_1094917.shtml",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "riverdolphins-species-page",
+      "title": "Yangtze finless porpoise",
+      "organization": "WWF River Dolphin Rivers Initiative",
+      "url": "https://www.riverdolphins.org/river-dolphins-worldwide/yangtze-finless-porpoise/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "riverdolphins-atrisk-pdf",
+      "title": "Yangtze Finless Porpoise — River Dolphins at Risk",
+      "organization": "WWF",
+      "url": "https://www.riverdolphins.org/wp-content/uploads/2021/07/Yangtze_FinlessPorpoise_2021.pdf",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wwf-uk-factsheet-pdf",
+      "title": "Yangtze Finless Porpoise factsheet",
+      "organization": "WWF-UK",
+      "url": "https://www.wwf.org.uk/sites/default/files/2018-01/WWF_WiW_2017_Factsheet_Yangtze%20Finless%20Porpoise%20FINAL.pdf",
+      "lastAccessed": "2026-08-24"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified WWF, WDC, and Chinese Academy of Sciences pages. Population 1,249 is the 2022 census (a Jan 2026 state-media report of 1,426 exists but Xinhua is off the approved source list — AV's call whether to adopt it). Lifespan unsourced on approved sites — omitted. 'Smiling river dolphin' is the verified nickname; 'smiling angel' was not fetch-verifiable."
+  },
+  "stats": {
+    "size": "Up to 6.5 ft — human-sized",
+    "lifespan": "Not reliably documented",
+    "diet": "Small fish, shrimp & molluscs",
+    "populationEstimate": "1,249",
+    "populationAsOf": "2022 census · per WWF",
+    "trend": "increasing",
+    "threats": [
+      "Gillnet entanglement",
+      "Vessel noise & strikes",
+      "Sand mining",
+      "Dams & fragmentation"
+    ],
+    "sourceIDs": ["wwf-2022-census-news", "cas-porpoise-brink", "riverdolphins-atrisk-pdf", "wdc-species-guide", "riverdolphins-species-page"]
+  },
+  "reproduction": {
+    "id": "porpoise-reproduction",
+    "text": "A single calf up to 79 centimeters long, born in spring or summer after ten to eleven months. It nurses for around five months and matures at four to six years.",
+    "sourceIDs": ["wwf-uk-factsheet-pdf", "riverdolphins-species-page"]
+  },
+  "insight": {
+    "id": "porpoise-insight",
+    "text": "It doesn't leap like a dolphin — it spy-hops, standing upright in the water and spinning to look around.",
+    "sourceIDs": ["wwf-uk-factsheet-pdf"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Middle Yangtze mainstem",
+      "latitude": 30.35,
+      "longitude": 113.6,
+      "radiusKm": 80
+    },
+    {
+      "name": "Poyang Lake",
+      "latitude": 29.1,
+      "longitude": 116.3,
+      "radiusKm": 50
+    }
+  ],
+  "gallery": [
+    "yangtze-finless-porpoise-plate-01",
+    "yangtze-finless-porpoise-context-01",
+    "yangtze-finless-porpoise-detail-01",
+    "yangtze-finless-porpoise-behavior-01",
+    "yangtze-finless-porpoise-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "wwf-river-dolphins-initiative",
+      "organization": "WWF River Dolphin Rivers Initiative",
+      "title": "Yangtze porpoise protection",
+      "summary": "Monitors the population, supports relocations to safe waters, and works with former fishers along the river.",
+      "url": "https://www.riverdolphins.org/river-dolphins-worldwide/yangtze-finless-porpoise/",
+      "kind": "program",
+      "sourceIDs": ["riverdolphins-species-page"],
+      "lastVerified": "2026-08-24"
+    },
+    {
+      "id": "cas-tianezhou-exsitu",
+      "organization": "Chinese Academy of Sciences",
+      "title": "Tian'ezhou oxbow reserves",
+      "summary": "Ex-situ reserves in quiet oxbow lakes now hold more than 150 porpoises, with roughly ten calves born each year.",
+      "url": "https://english.cas.cn/newsroom/cas_media/202510/t20251028_1094917.shtml",
+      "kind": "program",
+      "sourceIDs": ["cas-porpoise-brink"],
+      "lastVerified": "2026-08-24"
+    }
+  ]
+}

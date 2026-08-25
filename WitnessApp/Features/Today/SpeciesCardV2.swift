@@ -90,6 +90,7 @@ private struct HeroHeader: View {
                 Text(species.commonName.uppercased())
                     .font(AtlasType.display(40, weight: .semibold))
                     .accessibilityAddTraits(.isHeader)
+                    .accessibilityIdentifier("today.speciesName")
                 Text(species.scientificName)
                     .font(AtlasType.display(16, italic: true))
             }
