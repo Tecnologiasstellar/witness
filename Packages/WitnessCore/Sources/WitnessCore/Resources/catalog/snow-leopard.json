@@ -1,0 +1,213 @@
+{
+  "id": "snow-leopard",
+  "schemaVersion": 1,
+  "commonName": "Snow Leopard",
+  "scientificName": "Panthera uncia",
+  "conservationStatus": {
+    "displayName": "Vulnerable",
+    "normalizedValue": "vulnerable"
+  },
+  "generalizedRange": "High mountains of Central and South Asia",
+  "hook": "The ghost of the mountains is real — and almost never seen.",
+  "story": [
+    {
+      "id": "snow-leopard-ghost",
+      "text": "Herders call it the ghost of the mountains. Against grey rock, its smoky, rosetted coat makes it all but invisible even to a trained observer.",
+      "sourceIDs": ["slt-masters-of-disguise"]
+    },
+    {
+      "id": "snow-leopard-build",
+      "text": "Everything about it is built for cold stone: the densest fur of any big cat, wide fur-lined paws, and a tail nearly as long as its body, wrapped on for warmth in sleep.",
+      "sourceIDs": ["panthera-snow-leopard", "sdzwa-snow-leopard"]
+    },
+    {
+      "id": "snow-leopard-world",
+      "text": "Its world is broken terrain — cliffs, outcrops, ravines — across twelve countries, at altitudes where summers reach eighteen thousand feet.",
+      "sourceIDs": ["slt-habitat", "sdzwa-snow-leopard"]
+    },
+    {
+      "id": "snow-leopard-range",
+      "text": "A single cat may need up to a thousand square kilometers of this emptiness to live.",
+      "sourceIDs": ["slt-snow-leopard-facts"]
+    },
+    {
+      "id": "snow-leopard-threat",
+      "text": "Most snow leopards killed by people die in retaliation for attacks on livestock, or to prevent them.",
+      "sourceIDs": ["panthera-snow-leopard"]
+    },
+    {
+      "id": "snow-leopard-pressures",
+      "text": "Poaching and declining wild prey press from one side; a warming climate presses from the other, reaching these mountains at twice the hemisphere's average rate.",
+      "sourceIDs": ["panthera-snow-leopard", "slt-climate-change"]
+    },
+    {
+      "id": "snow-leopard-coexistence",
+      "text": "The hopeful work is coexistence: predator-proof corrals that keep herds safe at night, and herder cooperatives whose wool income rises when the cats stay alive.",
+      "sourceIDs": ["panthera-snow-leopard", "slt-snow-leopard-enterprises"]
+    },
+    {
+      "id": "snow-leopard-gentle",
+      "text": "For all its power, the cat is not known to be aggressive toward humans.",
+      "sourceIDs": ["slt-snow-leopard-facts"]
+    },
+    {
+      "id": "snow-leopard-witness",
+      "text": "To witness the snow leopard is to keep attention on an animal built to escape it.",
+      "sourceIDs": ["slt-masters-of-disguise"]
+    },
+    {
+      "id": "snow-leopard-choices",
+      "text": "Its future rests on choices made far below the snowline — how herds are guarded, how wool is sold, how warming is slowed.",
+      "sourceIDs": ["slt-snow-leopard-enterprises", "slt-climate-change"]
+    }
+  ],
+  "action": {
+    "id": "learn-snow-leopard",
+    "title": "Learn the cat's real numbers",
+    "summary": "Read the Snow Leopard Trust's fact page: range, prey, and why the population is so hard to count.",
+    "effort": "5 minutes",
+    "destinationURL": "https://snowleopard.org/snow-leopard-facts/",
+    "destinationOrganization": "Snow Leopard Trust",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["slt-snow-leopard-facts"],
+    "lastVerified": "2026-08-24",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "snow-leopard-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 9eb5cd43-00ff-44b7-8490-50c1c35be181, 2026-08-24; rights record docs/media/snow-leopard-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-08-29",
+  "sources": [
+    {
+      "id": "slt-snow-leopard-facts",
+      "title": "Snow Leopard Facts",
+      "organization": "Snow Leopard Trust",
+      "url": "https://snowleopard.org/snow-leopard-facts/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "slt-habitat",
+      "title": "Habitat",
+      "organization": "Snow Leopard Trust",
+      "url": "https://snowleopard.org/snow-leopard-facts/habitat/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "slt-climate-change",
+      "title": "What Will Climate Change Mean for Snow Leopards?",
+      "organization": "Snow Leopard Trust",
+      "url": "https://snowleopard.org/what-will-climate-change-mean-for-snow-leopards/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "slt-masters-of-disguise",
+      "title": "Snow Leopards: Masters of Disguise",
+      "organization": "Snow Leopard Trust",
+      "url": "https://snowleopard.org/snow-leopards-masters-of-disguise/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "slt-snow-leopard-enterprises",
+      "title": "Snow Leopard Enterprises",
+      "organization": "Snow Leopard Trust",
+      "url": "https://snowleopard.org/our-work/conservation-programs/snow-leopard-enterprises/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "sdzwa-snow-leopard",
+      "title": "Snow Leopard",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/snow-leopard",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "panthera-snow-leopard",
+      "title": "Snow Leopard",
+      "organization": "Panthera",
+      "url": "https://panthera.org/cat/snow-leopard",
+      "lastAccessed": "2026-08-24"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified Snow Leopard Trust, SDZWA, and Panthera pages. Status uses Panthera's IUCN wording (Vulnerable); SLT's own pages say endangered. Population range is SLT's 3,920-6,390. Trend deliberately unknown — no source states a numeric trend. Region circles are continental-scale generalizations."
+  },
+  "stats": {
+    "size": "3–4 ft body + a tail nearly as long",
+    "lifespan": "10–13 years in the wild",
+    "diet": "Blue sheep, ibex & marmots",
+    "populationEstimate": "3,920–6,390",
+    "populationAsOf": "per Snow Leopard Trust",
+    "trend": "unknown",
+    "threats": [
+      "Retaliatory killing",
+      "Poaching & trade",
+      "Wild prey decline",
+      "Warming mountains"
+    ],
+    "sourceIDs": ["slt-snow-leopard-facts", "panthera-snow-leopard", "slt-climate-change", "sdzwa-snow-leopard"]
+  },
+  "reproduction": {
+    "id": "snow-leopard-reproduction",
+    "text": "Mating runs from January into late March; two cubs is the usual litter, born after a gestation of around a hundred days. The mother raises them entirely alone, and they stay with her for up to twenty-two months learning the mountains.",
+    "sourceIDs": ["sdzwa-snow-leopard", "slt-snow-leopard-facts"]
+  },
+  "insight": {
+    "id": "snow-leopard-insight",
+    "text": "A snow leopard cannot roar. It chuffs and purrs — and can pounce as far as six times its own body length.",
+    "sourceIDs": ["sdzwa-snow-leopard"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Himalaya & Tibetan Plateau",
+      "latitude": 31.5,
+      "longitude": 84.0,
+      "radiusKm": 750
+    },
+    {
+      "name": "Altai & Tien Shan ranges",
+      "latitude": 45.0,
+      "longitude": 85.0,
+      "radiusKm": 800
+    }
+  ],
+  "gallery": [
+    "snow-leopard-plate-01",
+    "snow-leopard-context-01",
+    "snow-leopard-detail-01",
+    "snow-leopard-behavior-01",
+    "snow-leopard-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "slt-snow-leopard-enterprises-program",
+      "organization": "Snow Leopard Trust",
+      "title": "Snow Leopard Enterprises",
+      "summary": "Over 400 herder women in 40 communities sell handmade wool goods, raising income up to 40% while their communities pledge to protect the cats.",
+      "url": "https://snowleopard.org/our-work/conservation-programs/snow-leopard-enterprises/",
+      "kind": "program",
+      "sourceIDs": ["slt-snow-leopard-enterprises"],
+      "lastVerified": "2026-08-24"
+    },
+    {
+      "id": "panthera-snow-leopard-program",
+      "organization": "Panthera",
+      "title": "Snow Leopard Program",
+      "summary": "Surveys populations, trains national biologists, and builds predator-proof corrals that protect about 25 snow leopards a year in Ladakh.",
+      "url": "https://panthera.org/cat/snow-leopard",
+      "kind": "program",
+      "sourceIDs": ["panthera-snow-leopard"],
+      "lastVerified": "2026-08-24"
+    }
+  ]
+}

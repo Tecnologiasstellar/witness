@@ -1,0 +1,213 @@
+{
+  "id": "mountain-gorilla",
+  "schemaVersion": 1,
+  "commonName": "Mountain Gorilla",
+  "scientificName": "Gorilla beringei beringei",
+  "conservationStatus": {
+    "displayName": "Endangered",
+    "normalizedValue": "endangered"
+  },
+  "generalizedRange": "Virunga Massif and Bwindi, East-Central Africa",
+  "hook": "The only great ape whose numbers are rising.",
+  "story": [
+    {
+      "id": "mountain-gorilla-family",
+      "text": "A mountain gorilla family moves through the cold high forest together: infants riding on backs, a silverback leading from the center.",
+      "sourceIDs": ["awf-mountain-gorilla", "fossey-5tf-mountain-gorillas"]
+    },
+    {
+      "id": "mountain-gorilla-fur",
+      "text": "Their hair is longer and thicker than any other gorilla's, grown for volcano slopes where nights can drop below freezing.",
+      "sourceIDs": ["fossey-5tf-mountain-gorillas"]
+    },
+    {
+      "id": "mountain-gorilla-nose",
+      "text": "Each one can be told apart by its nose print, unique as a human fingerprint.",
+      "sourceIDs": ["wwfuk-mountain-gorillas"]
+    },
+    {
+      "id": "mountain-gorilla-world",
+      "text": "Their entire world is less than three hundred square miles, split between the Virunga volcanoes and the Bwindi forest.",
+      "sourceIDs": ["fossey-5tf-mountain-gorillas"]
+    },
+    {
+      "id": "mountain-gorilla-threats",
+      "text": "The dangers are human-sized: snares set for other animals, and our illnesses — sharing most of our DNA, gorillas can catch flu, pneumonia, even Ebola.",
+      "sourceIDs": ["fossey-daily-protection", "wwfuk-mountain-gorillas", "awf-mountain-gorilla"]
+    },
+    {
+      "id": "mountain-gorilla-crash",
+      "text": "In 1981, the Virunga population had crashed to 242, and extinction by the year 2000 was a serious prediction.",
+      "sourceIDs": ["fossey-census-2018"]
+    },
+    {
+      "id": "mountain-gorilla-recovery",
+      "text": "Then came four decades of daily protection: trackers walking to the gorillas every single morning, veterinarians treating snared animals where they lie.",
+      "sourceIDs": ["fossey-daily-protection", "gorilla-doctors-home"]
+    },
+    {
+      "id": "mountain-gorilla-rising",
+      "text": "The count now stands above one thousand and keeps rising — the only great ape population on Earth that is growing.",
+      "sourceIDs": ["wwfuk-mountain-gorillas", "fossey-census-2018"]
+    },
+    {
+      "id": "mountain-gorilla-witness",
+      "text": "To witness the mountain gorilla is to see what protection, held steadily for a generation, can actually do.",
+      "sourceIDs": ["fossey-daily-protection"]
+    },
+    {
+      "id": "mountain-gorilla-choices",
+      "text": "The recovery holds only as long as the choices behind it — funded rangers, careful tourism, forests left standing.",
+      "sourceIDs": ["wwfuk-mountain-gorillas", "fossey-daily-protection"]
+    }
+  ],
+  "action": {
+    "id": "learn-mountain-gorilla",
+    "title": "Read the recovery story",
+    "summary": "Read WWF-UK's mountain gorilla profile: the census numbers, the threats, and how tourism and daily protection reversed the decline.",
+    "effort": "5 minutes",
+    "destinationURL": "https://www.wwf.org.uk/learn/wildlife/mountain-gorillas",
+    "destinationOrganization": "WWF-UK",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["wwfuk-mountain-gorillas"],
+    "lastVerified": "2026-08-24",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "mountain-gorilla-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job dd3a179d-0256-4b50-b818-eccdbd6d77ce, 2026-08-24; rights record docs/media/mountain-gorilla-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-08-27",
+  "sources": [
+    {
+      "id": "wwfuk-mountain-gorillas",
+      "title": "Mountain gorillas",
+      "organization": "WWF-UK",
+      "url": "https://www.wwf.org.uk/learn/wildlife/mountain-gorillas",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "awf-mountain-gorilla",
+      "title": "Mountain Gorilla",
+      "organization": "African Wildlife Foundation",
+      "url": "https://www.awf.org/wildlife-conservation/mountain-gorilla",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "fossey-5tf-mountain-gorillas",
+      "title": "5 Things You Didn't Know About Mountain Gorillas",
+      "organization": "Dian Fossey Gorilla Fund",
+      "url": "https://gorillafund.org/congo/5tf-mountain-gorillas/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "fossey-census-2018",
+      "title": "Mountain gorilla population still increasing: census results",
+      "organization": "Dian Fossey Gorilla Fund",
+      "url": "https://gorillafund.org/dian-fossey/mountain-gorilla-population-still-increasing-census-results-released/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "fossey-daily-protection",
+      "title": "Protecting Gorillas",
+      "organization": "Dian Fossey Gorilla Fund",
+      "url": "https://gorillafund.org/what-we-do/daily-protection/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "gorilla-doctors-home",
+      "title": "Keeping Eastern Gorillas Healthy",
+      "organization": "Gorilla Doctors",
+      "url": "https://gorilladoctors.org/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "fossey-gorilla-infancy",
+      "title": "5TF: Gorilla Infancy",
+      "organization": "Dian Fossey Gorilla Fund",
+      "url": "https://gorillafund.org/uncategorized/infant-gorillas/",
+      "lastAccessed": "2026-08-24"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified WWF-UK, AWF, Fossey Fund, and Gorilla Doctors pages. Population 1,063 is the WWF-UK phrasing of the 2016/2018 census (604 Virunga + 459 Bwindi-Sarambwe). Region circles are cartographic generalizations of whole national parks."
+  },
+  "stats": {
+    "size": "4–6 ft tall · males over 400 lbs",
+    "lifespan": "More than 40 years",
+    "diet": "Leaves, shoots & stems — up to 40 lbs a day",
+    "populationEstimate": "About 1,063",
+    "populationAsOf": "2018 census · per WWF-UK",
+    "trend": "increasing",
+    "threats": [
+      "Poachers' snares",
+      "Human disease spillover",
+      "Habitat loss",
+      "Political instability"
+    ],
+    "sourceIDs": ["wwfuk-mountain-gorillas", "awf-mountain-gorilla", "fossey-daily-protection"]
+  },
+  "reproduction": {
+    "id": "mountain-gorilla-reproduction",
+    "text": "After a gestation of about eight and a half months, a newborn weighs under four pounds — half the weight of a human baby. Mothers have their first infant between ten and twelve, and nurse each one for over three years.",
+    "sourceIDs": ["fossey-gorilla-infancy", "wwfuk-mountain-gorillas", "awf-mountain-gorilla"]
+  },
+  "insight": {
+    "id": "mountain-gorilla-insight",
+    "text": "A mountain gorilla's high-tannin diet stains its teeth almost black — the same compounds that darken tea and coffee.",
+    "sourceIDs": ["fossey-5tf-mountain-gorillas"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Virunga Massif",
+      "latitude": -1.45,
+      "longitude": 29.53,
+      "radiusKm": 30
+    },
+    {
+      "name": "Bwindi Impenetrable National Park",
+      "latitude": -1.05,
+      "longitude": 29.66,
+      "radiusKm": 25
+    }
+  ],
+  "gallery": [
+    "mountain-gorilla-plate-01",
+    "mountain-gorilla-context-01",
+    "mountain-gorilla-detail-01",
+    "mountain-gorilla-behavior-01",
+    "mountain-gorilla-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "fossey-daily-protection-program",
+      "organization": "Dian Fossey Gorilla Fund",
+      "title": "Daily protection",
+      "summary": "Teams of more than a hundred expert trackers walk to the gorillas every day, directly protecting about half of Rwanda's mountain gorillas.",
+      "url": "https://gorillafund.org/what-we-do/daily-protection/",
+      "kind": "program",
+      "sourceIDs": ["fossey-daily-protection"],
+      "lastVerified": "2026-08-24"
+    },
+    {
+      "id": "gorilla-doctors-veterinary",
+      "organization": "Gorilla Doctors",
+      "title": "Wild veterinary care",
+      "summary": "The only veterinary team treating wild eastern gorillas, monitoring nearly 800 habituated gorillas and freeing snared animals with a 98% survival rate.",
+      "url": "https://gorilladoctors.org/",
+      "kind": "program",
+      "sourceIDs": ["gorilla-doctors-home"],
+      "lastVerified": "2026-08-24"
+    }
+  ]
+}
