@@ -11,16 +11,17 @@ struct CatalogValidatorTests {
         #expect(records.count == 30)
         #expect(records.first?.id == "vaquita")
         #expect(records.allSatisfy { record in record.story.allSatisfy { !$0.sourceIDs.isEmpty } })
-        // Approved Higgsfield artwork is in place; media rights stay pending
-        // until the plan's commercial terms are verified (D-013).
-        #expect(records.allSatisfy { $0.media.verificationStatus == .pending })
+        // Higgsfield's paid-plan commercial terms were confirmed by AV on 2026-08-25 (D-013),
+        // and the full 30-card editorial pass cleared the same day.
+        #expect(records.allSatisfy { $0.media.verificationStatus == .approved })
+        #expect(records.allSatisfy { $0.editorial.state == .approved })
     }
 
-    @Test("Prototype evidence cannot pass the production gate")
-    func productionRejectsPrototype() throws {
+    @Test("Reviewed catalog passes the production gate")
+    func productionAcceptsApprovedCatalog() throws {
         let records = try BundledSpeciesCatalog.load()
 
-        #expect(throws: CatalogValidationError.self) {
+        #expect(throws: Never.self) {
             try CatalogValidator.validate(records, mode: .production)
         }
     }

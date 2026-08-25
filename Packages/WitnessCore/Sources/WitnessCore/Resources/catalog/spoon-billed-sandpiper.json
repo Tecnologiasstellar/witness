@@ -13,52 +13,76 @@
     {
       "id": "spoonie-unique",
       "text": "No shorebird on Earth looks like it: a bird the size of a sparrow with a black spoon at the end of its face.",
-      "sourceIDs": ["birdlife-saving-spoonie-2022", "eaafp-sbs-species-profile"]
+      "sourceIDs": [
+        "birdlife-saving-spoonie-2022",
+        "eaafp-sbs-species-profile"
+      ]
     },
     {
       "id": "spoonie-shovel",
       "text": "It uses the spoon as a shovel, lifting wet sand and mud in search of invertebrates.",
-      "sourceIDs": ["birdlife-saving-spoonie-2022"]
+      "sourceIDs": [
+        "birdlife-saving-spoonie-2022"
+      ]
     },
     {
       "id": "spoonie-plumage",
       "text": "In breeding plumage its head and breast flame reddish-brown above a white, black-spotted belly.",
-      "sourceIDs": ["eaafp-sbs-species-profile", "birdlife-saving-spoonie-2022"]
+      "sourceIDs": [
+        "eaafp-sbs-species-profile",
+        "birdlife-saving-spoonie-2022"
+      ]
     },
     {
       "id": "spoonie-flyway",
       "text": "Twice a year it flies 8,000 kilometers along the East Asian–Australasian Flyway, a superhighway shared with fifty million waterbirds.",
-      "sourceIDs": ["birdlife-saving-spoonie-2022"]
+      "sourceIDs": [
+        "birdlife-saving-spoonie-2022"
+      ]
     },
     {
       "id": "spoonie-reclamation",
       "text": "The flyway is losing its rest stops: when four hundred square kilometers of mudflat at Saemangeum were walled off, the hundreds of spoonies that stopped there fell to one.",
-      "sourceIDs": ["birdlife-saving-spoonie-2022"]
+      "sourceIDs": [
+        "birdlife-saving-spoonie-2022"
+      ]
     },
     {
       "id": "spoonie-nets",
       "text": "On the wintering grounds, young birds are caught in mist nets set for larger waders.",
-      "sourceIDs": ["birdlife-datazone-sbs-factsheet"]
+      "sourceIDs": [
+        "birdlife-datazone-sbs-factsheet"
+      ]
     },
     {
       "id": "spoonie-headstarting",
       "text": "So conservation follows the whole route. In Chukotka, eggs go into incubators and chicks into aviaries — headstarting that lifts their survival five-fold.",
-      "sourceIDs": ["birdlife-saving-spoonie-2022", "eaafp-sbs-task-force"]
+      "sourceIDs": [
+        "birdlife-saving-spoonie-2022",
+        "eaafp-sbs-task-force"
+      ]
     },
     {
       "id": "spoonie-hunters",
       "text": "In Myanmar's Gulf of Mottama, more than 80 percent of hunters have agreed to stop, and report better livelihoods.",
-      "sourceIDs": ["birdlife-saving-spoonie-2022"]
+      "sourceIDs": [
+        "birdlife-saving-spoonie-2022"
+      ]
     },
     {
       "id": "spoonie-slowing",
       "text": "The decline has slowed from 26 percent a year to under ten — not saved, but no longer in freefall.",
-      "sourceIDs": ["birdlife-saving-spoonie-2022"]
+      "sourceIDs": [
+        "birdlife-saving-spoonie-2022"
+      ]
     },
     {
       "id": "spoonie-witness",
       "text": "To witness the spoon-billed sandpiper is to hold the whole flyway in mind — every mudflat a link in an 8,000-kilometer chain.",
-      "sourceIDs": ["birdlife-saving-spoonie-2022", "eaafp-sbs-task-force"]
+      "sourceIDs": [
+        "birdlife-saving-spoonie-2022",
+        "eaafp-sbs-task-force"
+      ]
     }
   ],
   "action": {
@@ -69,7 +93,9 @@
     "destinationURL": "https://www.wwt.org.uk/our-work/projects/spoon-billed-sandpipers",
     "destinationOrganization": "WWT",
     "geographicApplicability": "Worldwide",
-    "sourceIDs": ["wwt-sbs-project"],
+    "sourceIDs": [
+      "wwt-sbs-project"
+    ],
     "lastVerified": "2026-08-25",
     "measurementType": "opened"
   },
@@ -80,8 +106,8 @@
     "source": "Higgsfield job 86b559fc-1eac-4667-9ba1-ae67cee368b6, 2026-08-25; rights record docs/media/spoon-billed-sandpiper-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-09-12",
   "sources": [
@@ -136,11 +162,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
     "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from verified BirdLife, WWT, and EAAFP pages. Population uses BirdLife's 2021 range (240-620 mature; recent winter counts ~330-340). The folkloric 'hatches with the spoon already on its bill' was unverifiable on approved sources and excluded. Region circles are broad coastal reaches; the Meinypil'gyno site is a published, well-known program location."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "5½–6 in — fits in a palm",
@@ -155,17 +181,27 @@
       "Warming tundra",
       "Invasive cordgrass"
     ],
-    "sourceIDs": ["birdlife-datazone-sbs-factsheet", "eaafp-sbs-species-profile"]
+    "sourceIDs": [
+      "birdlife-datazone-sbs-factsheet",
+      "eaafp-sbs-species-profile"
+    ]
   },
   "reproduction": {
     "id": "spoonie-reproduction",
     "text": "Four eggs in a ground nest among crowberry and lichen, never far from the sea. Chicks hatch the size of bumblebees and feed themselves within a day, guarded by their father while the mother starts south.",
-    "sourceIDs": ["wwt-spoonie-update-autumn-2024", "wwt-sbs-project", "wwt-headstarted-chicks-hatch", "birdlife-datazone-sbs-factsheet"]
+    "sourceIDs": [
+      "wwt-spoonie-update-autumn-2024",
+      "wwt-sbs-project",
+      "wwt-headstarted-chicks-hatch",
+      "birdlife-datazone-sbs-factsheet"
+    ]
   },
   "insight": {
     "id": "spoonie-insight",
     "text": "An ark flock of spoon-billed sandpipers lives at Slimbridge in England — a final defence against total extinction.",
-    "sourceIDs": ["wwt-sbs-project"]
+    "sourceIDs": [
+      "wwt-sbs-project"
+    ]
   },
   "habitatRegions": [
     {
@@ -196,7 +232,9 @@
       "summary": "Headstarting on the Chukotka tundra with Birds Russia, and the Slimbridge conservation-breeding ark.",
       "url": "https://www.wwt.org.uk/our-work/projects/spoon-billed-sandpipers",
       "kind": "program",
-      "sourceIDs": ["wwt-sbs-project"],
+      "sourceIDs": [
+        "wwt-sbs-project"
+      ],
       "lastVerified": "2026-08-25"
     },
     {
@@ -206,7 +244,9 @@
       "summary": "Coordinates the species action plan along the whole flyway, from Russian breeding grounds to Southeast Asian mudflats.",
       "url": "https://eaaflyway.org/spoon-billed-sandpiper-task-force/",
       "kind": "program",
-      "sourceIDs": ["eaafp-sbs-task-force"],
+      "sourceIDs": [
+        "eaafp-sbs-task-force"
+      ],
       "lastVerified": "2026-08-25"
     }
   ]

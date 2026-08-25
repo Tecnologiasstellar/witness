@@ -13,52 +13,77 @@
     {
       "id": "javan-rhino-armor",
       "text": "The Javan rhino wears its skin like armor: deep folds across neck and shoulder, grey turning almost black in the rain.",
-      "sourceIDs": ["irf-javan-rhino", "str-javan-rhino"]
+      "sourceIDs": [
+        "irf-javan-rhino",
+        "str-javan-rhino"
+      ]
     },
     {
       "id": "javan-rhino-lip",
       "text": "It browses with a long, pointed upper lip that grasps like a finger, pulling down leaves, young shoots, and twigs.",
-      "sourceIDs": ["str-javan-rhino"]
+      "sourceIDs": [
+        "str-javan-rhino"
+      ]
     },
     {
       "id": "javan-rhino-range",
       "text": "The species once ranged from India across Southeast Asia. Today it survives nowhere but Ujung Kulon, a forest peninsula on the western tip of Java.",
-      "sourceIDs": ["str-javan-rhino", "irf-javan-rhino"]
+      "sourceIDs": [
+        "str-javan-rhino",
+        "irf-javan-rhino"
+      ]
     },
     {
       "id": "javan-rhino-hidden",
       "text": "Javan rhinos are solitary and so rarely seen that even the rangers who guard them know them mostly through camera traps.",
-      "sourceIDs": ["irf-javan-rhino", "str-ujung-kulon-programme"]
+      "sourceIDs": [
+        "irf-javan-rhino",
+        "str-ujung-kulon-programme"
+      ]
     },
     {
       "id": "javan-rhino-poaching",
       "text": "The danger returned brutally: between 2019 and 2023, poaching syndicates killed twenty-six rhinos — roughly a quarter of the species.",
-      "sourceIDs": ["irf-javan-rhino"]
+      "sourceIDs": [
+        "irf-javan-rhino"
+      ]
     },
     {
       "id": "javan-rhino-palm",
       "text": "Inside the park, an invasive palm shades out the plants the rhinos prefer to eat, quietly shrinking their world further.",
-      "sourceIDs": ["str-ujung-kulon-programme"]
+      "sourceIDs": [
+        "str-ujung-kulon-programme"
+      ]
     },
     {
       "id": "javan-rhino-hope",
       "text": "And yet they keep breeding. At least one new calf has been recorded every year since 2012.",
-      "sourceIDs": ["str-ujung-kulon-programme"]
+      "sourceIDs": [
+        "str-ujung-kulon-programme"
+      ]
     },
     {
       "id": "javan-rhino-protection",
       "text": "Protection is real and human-shaped: trained Rhino Protection Units patrol the forest, and researchers are studying a possible second home for the species.",
-      "sourceIDs": ["irf-javan-rhino", "str-ujung-kulon-programme"]
+      "sourceIDs": [
+        "irf-javan-rhino",
+        "str-ujung-kulon-programme"
+      ]
     },
     {
       "id": "javan-rhino-witness",
       "text": "To witness the Javan rhino is to hold attention on an animal almost no one alive will ever see.",
-      "sourceIDs": ["irf-javan-rhino"]
+      "sourceIDs": [
+        "irf-javan-rhino"
+      ]
     },
     {
       "id": "javan-rhino-choices",
       "text": "Its future is shaped by choices — whether patrols stay funded, whether horn keeps a market, and whether one park can be enough.",
-      "sourceIDs": ["irf-javan-rhino", "str-ujung-kulon-programme"]
+      "sourceIDs": [
+        "irf-javan-rhino",
+        "str-ujung-kulon-programme"
+      ]
     }
   ],
   "action": {
@@ -69,7 +94,9 @@
     "destinationURL": "https://rhinos.org/about-rhinos/rhino-species/javan-rhino/",
     "destinationOrganization": "International Rhino Foundation",
     "geographicApplicability": "Worldwide",
-    "sourceIDs": ["irf-javan-rhino"],
+    "sourceIDs": [
+      "irf-javan-rhino"
+    ],
     "lastVerified": "2026-08-24",
     "measurementType": "opened"
   },
@@ -80,8 +107,8 @@
     "source": "Higgsfield job a3e87c02-d1dd-46e5-b6da-9463919827de, 2026-08-24; rights record docs/media/javan-rhino-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-08-26",
   "sources": [
@@ -108,11 +135,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
-    "lastFactChecked": "2026-08-24",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
+    "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from curl-verified IRF and Save the Rhino pages. Population ~50 per IRF (the older ~76 figure is outdated after 2019-2023 poaching losses). Habitat circle is a cartographic generalization of the park, not a rhino locality."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "5–5.5 ft tall · 2,000–5,060 lbs",
@@ -127,17 +154,26 @@
       "Invasive palm spread",
       "Natural disaster risk"
     ],
-    "sourceIDs": ["irf-javan-rhino", "str-javan-rhino", "str-ujung-kulon-programme"]
+    "sourceIDs": [
+      "irf-javan-rhino",
+      "str-javan-rhino",
+      "str-ujung-kulon-programme"
+    ]
   },
   "reproduction": {
     "id": "javan-rhino-reproduction",
     "text": "A single calf is born after a gestation of about sixteen months, and a female calves only every two to three years. Javan rhinos live alone; a mother with her small calf is the only lasting company the species keeps.",
-    "sourceIDs": ["irf-javan-rhino", "str-javan-rhino"]
+    "sourceIDs": [
+      "irf-javan-rhino",
+      "str-javan-rhino"
+    ]
   },
   "insight": {
     "id": "javan-rhino-insight",
     "text": "The last Javan rhino held in any zoo died in 1907. Every Javan rhino alive today is wild.",
-    "sourceIDs": ["str-javan-rhino"]
+    "sourceIDs": [
+      "str-javan-rhino"
+    ]
   },
   "habitatRegions": [
     {
@@ -162,7 +198,9 @@
       "summary": "Funds trained anti-poaching units that intensively patrol Ujung Kulon National Park, the only place on Earth Javan rhinos survive.",
       "url": "https://rhinos.org/about-rhinos/rhino-species/javan-rhino/",
       "kind": "program",
-      "sourceIDs": ["irf-javan-rhino"],
+      "sourceIDs": [
+        "irf-javan-rhino"
+      ],
       "lastVerified": "2026-08-24"
     },
     {
@@ -172,7 +210,9 @@
       "summary": "Supports anti-poaching patrols, camera-trap monitoring of the whole population, and research toward a possible second site for the species.",
       "url": "https://www.savetherhino.org/programmes/ujung-kulon-national-park/",
       "kind": "program",
-      "sourceIDs": ["str-ujung-kulon-programme"],
+      "sourceIDs": [
+        "str-ujung-kulon-programme"
+      ],
       "lastVerified": "2026-08-24"
     }
   ]

@@ -13,52 +13,79 @@
     {
       "id": "crane-stature",
       "text": "The whooping crane stands five feet tall — the tallest bird in North America — white as paper, with a red crown and black wingtips that show only in flight.",
-      "sourceIDs": ["smithsonian-nationalzoo-whooping-crane", "tpwd-whooper-watch-identify"]
+      "sourceIDs": [
+        "smithsonian-nationalzoo-whooping-crane",
+        "tpwd-whooper-watch-identify"
+      ]
     },
     {
       "id": "crane-dance",
       "text": "Courting pairs dance: leaping again and again, wings flapping, bills pointed at the sky, bugling.",
-      "sourceIDs": ["audubon-whooping-crane"]
+      "sourceIDs": [
+        "audubon-whooping-crane"
+      ]
     },
     {
       "id": "crane-unison",
       "text": "Pairs mate for life and sing a unison call together, holding their bond and their territory in one voice.",
-      "sourceIDs": ["icf-whooping-crane-species", "tpwd-whooping-crane"]
+      "sourceIDs": [
+        "icf-whooping-crane-species",
+        "tpwd-whooping-crane"
+      ]
     },
     {
       "id": "crane-crash",
       "text": "In the mid-1800s perhaps 1,500 lived in North America. By 1941, fifteen wintered in Texas.",
-      "sourceIDs": ["icf-whooping-crane-species", "audubon-whooping-crane"]
+      "sourceIDs": [
+        "icf-whooping-crane-species",
+        "audubon-whooping-crane"
+      ]
     },
     {
       "id": "crane-thread",
       "text": "The species survived on one long thread: a 2,500-mile migration between wetlands in northern Canada and the Texas coast.",
-      "sourceIDs": ["icf-texas-program", "parks-canada-wood-buffalo-cranes"]
+      "sourceIDs": [
+        "icf-texas-program",
+        "parks-canada-wood-buffalo-cranes"
+      ]
     },
     {
       "id": "crane-hidden",
       "text": "Its nesting grounds were so remote they were not even discovered until 1954.",
-      "sourceIDs": ["parks-canada-wood-buffalo-cranes", "audubon-whooping-crane"]
+      "sourceIDs": [
+        "parks-canada-wood-buffalo-cranes",
+        "audubon-whooping-crane"
+      ]
     },
     {
       "id": "crane-ultralight",
       "text": "Recovery was slow, strange, and human: captive breeding, and a Wisconsin flock that learned to migrate by following an ultralight aircraft.",
-      "sourceIDs": ["icf-wisconsin-reintroduction"]
+      "sourceIDs": [
+        "icf-wisconsin-reintroduction"
+      ]
     },
     {
       "id": "crane-climb",
       "text": "The wild flock has climbed past five hundred, its highest count since near-extinction.",
-      "sourceIDs": ["parks-canada-wood-buffalo-cranes"]
+      "sourceIDs": [
+        "parks-canada-wood-buffalo-cranes"
+      ]
     },
     {
       "id": "crane-threats",
       "text": "The dangers now are power lines, illegal shooting, and upstream water use that starves the coast of the blue crabs the cranes winter on.",
-      "sourceIDs": ["icf-north-america-program", "icf-texas-program"]
+      "sourceIDs": [
+        "icf-north-america-program",
+        "icf-texas-program"
+      ]
     },
     {
       "id": "crane-witness",
       "text": "To witness the whooping crane is to hear a bugle that nearly went silent — and keeps getting louder.",
-      "sourceIDs": ["tpwd-whooper-watch-identify", "parks-canada-wood-buffalo-cranes"]
+      "sourceIDs": [
+        "tpwd-whooper-watch-identify",
+        "parks-canada-wood-buffalo-cranes"
+      ]
     }
   ],
   "action": {
@@ -69,7 +96,9 @@
     "destinationURL": "https://savingcranes.org/species/whooping-crane/",
     "destinationOrganization": "International Crane Foundation",
     "geographicApplicability": "Worldwide",
-    "sourceIDs": ["icf-whooping-crane-species"],
+    "sourceIDs": [
+      "icf-whooping-crane-species"
+    ],
     "lastVerified": "2026-08-24",
     "measurementType": "opened"
   },
@@ -80,8 +109,8 @@
     "source": "Higgsfield job fc8e47a2-0b58-4cac-9805-6630a6a45be2, 2026-08-24; rights record docs/media/whooping-crane-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-09-03",
   "sources": [
@@ -157,11 +186,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
-    "lastFactChecked": "2026-08-24",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
+    "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from verified ICF, TPWD, Parks Canada, Audubon, and Smithsonian pages. Total ~834 is ICF's captive+wild figure; the wild Aransas-Wood Buffalo flock's 505 is Parks Canada's 2018 count. The 'call carries two miles' folklore was unverifiable and excluded. Regions are whole refuge/park areas."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "5 ft tall · 7½-ft wingspan",
@@ -176,17 +205,27 @@
       "Wetland loss",
       "Coastal water diversion"
     ],
-    "sourceIDs": ["icf-whooping-crane-species", "icf-north-america-program", "icf-texas-program", "tpwd-whooping-crane"]
+    "sourceIDs": [
+      "icf-whooping-crane-species",
+      "icf-north-america-program",
+      "icf-texas-program",
+      "tpwd-whooping-crane"
+    ]
   },
   "reproduction": {
     "id": "crane-reproduction",
     "text": "The female lays two eggs, but usually one chick survives, fed by both parents and flying at three months. Pairs form at two or three, first nest around four, and stay together for life.",
-    "sourceIDs": ["smithsonian-nationalzoo-whooping-crane", "audubon-whooping-crane"]
+    "sourceIDs": [
+      "smithsonian-nationalzoo-whooping-crane",
+      "audubon-whooping-crane"
+    ]
   },
   "insight": {
     "id": "crane-insight",
     "text": "A reintroduced Wisconsin flock learned its migration by following an ultralight aircraft south — today's chicks learn the route from older cranes.",
-    "sourceIDs": ["icf-wisconsin-reintroduction"]
+    "sourceIDs": [
+      "icf-wisconsin-reintroduction"
+    ]
   },
   "habitatRegions": [
     {
@@ -217,7 +256,9 @@
       "summary": "Protects the wintering grounds of the last natural flock, including the river flows that keep Aransas rich in blue crabs.",
       "url": "https://savingcranes.org/texas-program/",
       "kind": "program",
-      "sourceIDs": ["icf-texas-program"],
+      "sourceIDs": [
+        "icf-texas-program"
+      ],
       "lastVerified": "2026-08-24"
     },
     {
@@ -227,7 +268,9 @@
       "summary": "Community scientists log crane sightings to map stopover sites and hazards along the migration.",
       "url": "https://tpwd.texas.gov/huntwild/wild/wildlife_diversity/texas_nature_trackers/whooper-watch/",
       "kind": "program",
-      "sourceIDs": ["tpwd-whooper-watch"],
+      "sourceIDs": [
+        "tpwd-whooper-watch"
+      ],
       "lastVerified": "2026-08-24"
     }
   ]

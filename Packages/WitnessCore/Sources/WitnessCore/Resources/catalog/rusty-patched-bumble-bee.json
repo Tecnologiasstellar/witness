@@ -13,52 +13,75 @@
     {
       "id": "bee-look",
       "text": "The rusty patched bumble bee is a half-inch of fur and work: black head, yellow thorax, and on workers and males, a small rust-colored patch.",
-      "sourceIDs": ["xerces-pocket-guide", "wi-dnr-nest-story"]
+      "sourceIDs": [
+        "xerces-pocket-guide",
+        "wi-dnr-nest-story"
+      ]
     },
     {
       "id": "bee-nest",
       "text": "The whole colony lives underground, usually in an abandoned rodent burrow.",
-      "sourceIDs": ["xerces-nesting-overwintering"]
+      "sourceIDs": [
+        "xerces-nesting-overwintering"
+      ]
     },
     {
       "id": "bee-buzz",
       "text": "It works flowers the hard way: gripping a bloom in its jaws and vibrating its flight muscles until pollen shakes loose — the buzz that tomatoes and cranberries depend on.",
-      "sourceIDs": ["xerces-bumble-bees"]
+      "sourceIDs": [
+        "xerces-bumble-bees"
+      ]
     },
     {
       "id": "bee-year",
       "text": "Each colony lives one year. Every spring, a single overwintered queen rebuilds the whole society from scratch.",
-      "sourceIDs": ["mn-dnr-state-symbols"]
+      "sourceIDs": [
+        "mn-dnr-state-symbols"
+      ]
     },
     {
       "id": "bee-collapse",
       "text": "Once common across twenty-eight states, it has vanished from an estimated 87 percent of its range.",
-      "sourceIDs": ["xerces-species-profile"]
+      "sourceIDs": [
+        "xerces-species-profile"
+      ]
     },
     {
       "id": "bee-listing",
       "text": "In January 2017 it became the first bee in the continental United States protected under the Endangered Species Act.",
-      "sourceIDs": ["xerces-first-bee-blog"]
+      "sourceIDs": [
+        "xerces-first-bee-blog"
+      ]
     },
     {
       "id": "bee-causes",
       "text": "The suspects are quiet ones: disease spilling over from commercially raised bees, and neonicotinoid insecticides on the landscapes that remain.",
-      "sourceIDs": ["xerces-first-bee-blog", "xerces-species-profile"]
+      "sourceIDs": [
+        "xerces-first-bee-blog",
+        "xerces-species-profile"
+      ]
     },
     {
       "id": "bee-garden",
       "text": "This is a species you can help at home: native flowers blooming spring through fall, no pesticides, and leaves left lying in autumn — they are housing, not trash.",
-      "sourceIDs": ["mn-dnr-pollinators", "xerces-leave-the-leaves"]
+      "sourceIDs": [
+        "mn-dnr-pollinators",
+        "xerces-leave-the-leaves"
+      ]
     },
     {
       "id": "bee-watch",
       "text": "Anyone with a camera can help too: photograph a bumble bee, and an expert will verify it on Bumble Bee Watch.",
-      "sourceIDs": ["bumble-bee-watch"]
+      "sourceIDs": [
+        "bumble-bee-watch"
+      ]
     },
     {
       "id": "bee-witness",
       "text": "To witness the rusty patched bumble bee is to notice the half-inch workers holding whole meadows together.",
-      "sourceIDs": ["xerces-bumble-bees"]
+      "sourceIDs": [
+        "xerces-bumble-bees"
+      ]
     }
   ],
   "action": {
@@ -69,7 +92,9 @@
     "destinationURL": "https://xerces.org/pollinator-conservation/pollinator-friendly-plant-lists",
     "destinationOrganization": "Xerces Society",
     "geographicApplicability": "North America; principles apply anywhere",
-    "sourceIDs": ["xerces-plant-lists"],
+    "sourceIDs": [
+      "xerces-plant-lists"
+    ],
     "lastVerified": "2026-08-24",
     "measurementType": "opened"
   },
@@ -80,8 +105,8 @@
     "source": "Higgsfield job c1bdcf5b-e045-4371-9956-ad022783bab6, 2026-08-24; rights record docs/media/rusty-patched-bumble-bee-plates-rights.md",
     "license": "ai_generated_owned",
     "requiredAttribution": "None",
-    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
-    "verificationStatus": "pending"
+    "commercialUseStatus": "Owner-asserted; Higgsfield paid-plan commercial terms confirmed by Alberto Villalpando on 2026-08-25.",
+    "verificationStatus": "approved"
   },
   "publishDate": "2026-09-06",
   "sources": [
@@ -171,11 +196,11 @@
     }
   ],
   "editorial": {
-    "state": "prototype",
-    "reviewer": "PENDING",
-    "lastFactChecked": "2026-08-24",
+    "state": "approved",
+    "reviewer": "Alberto Villalpando",
+    "lastFactChecked": "2026-08-25",
     "sensitiveLocationReview": "generalized",
-    "notes": "Card v2 drafted from verified Xerces, Minnesota DNR, and Wisconsin DNR pages. No individual population count exists for this species — the honest figure is range loss (87%, Xerces). Sourced wording is 'first bee in the continental U.S.' under the ESA, not 'first bumble bee'. The action is a true at-home act (regional native plant lists)."
+    "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
     "size": "Workers ⅜–⅝ in — thumbnail-sized",
@@ -190,17 +215,26 @@
       "Habitat loss",
       "Climate change"
     ],
-    "sourceIDs": ["xerces-species-profile", "xerces-first-bee-blog", "xerces-pocket-guide"]
+    "sourceIDs": [
+      "xerces-species-profile",
+      "xerces-first-bee-blog",
+      "xerces-pocket-guide"
+    ]
   },
   "reproduction": {
     "id": "bee-reproduction",
     "text": "A queen wakes from hibernation alone in spring, founds a nest in an old rodent burrow, and raises workers all summer. In late summer new queens mate, then burrow into the soil for winter — each one carrying next year's colony.",
-    "sourceIDs": ["mn-dnr-state-symbols", "xerces-nesting-overwintering"]
+    "sourceIDs": [
+      "mn-dnr-state-symbols",
+      "xerces-nesting-overwintering"
+    ]
   },
   "insight": {
     "id": "bee-insight",
     "text": "Queens never wear the rusty patch that names the species — only workers and males carry it.",
-    "sourceIDs": ["xerces-pocket-guide"]
+    "sourceIDs": [
+      "xerces-pocket-guide"
+    ]
   },
   "habitatRegions": [
     {
@@ -231,7 +265,9 @@
       "summary": "Community science: photograph any bumble bee, upload it, and experts verify the sighting to map what survives where.",
       "url": "https://www.bumblebeewatch.org/",
       "kind": "program",
-      "sourceIDs": ["bumble-bee-watch"],
+      "sourceIDs": [
+        "bumble-bee-watch"
+      ],
       "lastVerified": "2026-08-24"
     },
     {
@@ -241,7 +277,9 @@
       "summary": "Four commitments anyone can sign: grow pollinator-friendly flowers, provide nest sites, avoid pesticides, spread the word.",
       "url": "https://xerces.org/bringbackthepollinators",
       "kind": "program",
-      "sourceIDs": ["xerces-bring-back-pollinators"],
+      "sourceIDs": [
+        "xerces-bring-back-pollinators"
+      ],
       "lastVerified": "2026-08-24"
     }
   ]

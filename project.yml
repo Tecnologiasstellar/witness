@@ -27,6 +27,8 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.avp.witness.core
         PRODUCT_NAME: WitnessCore
+        MARKETING_VERSION: 0.1.0
+        CURRENT_PROJECT_VERSION: 2
         SWIFT_VERSION: 6.0
         GENERATE_INFOPLIST_FILE: YES
         SKIP_INSTALL: YES
@@ -45,7 +47,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.avp.witness
         PRODUCT_NAME: Witness
         MARKETING_VERSION: 0.1.0
-        CURRENT_PROJECT_VERSION: 1
+        CURRENT_PROJECT_VERSION: 2
         SWIFT_VERSION: 6.0
         TARGETED_DEVICE_FAMILY: 1
         GENERATE_INFOPLIST_FILE: YES
