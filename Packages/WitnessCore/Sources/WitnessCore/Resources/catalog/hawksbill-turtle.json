@@ -1,0 +1,199 @@
+{
+  "id": "hawksbill-turtle",
+  "schemaVersion": 1,
+  "commonName": "Hawksbill Turtle",
+  "scientificName": "Eretmochelys imbricata",
+  "conservationStatus": {
+    "displayName": "Endangered",
+    "normalizedValue": "endangered"
+  },
+  "generalizedRange": "Tropical reefs of the Atlantic, Pacific & Indian Oceans",
+  "hook": "The world's tortoiseshell came from this one turtle.",
+  "story": [
+    {
+      "id": "hawksbill-beak",
+      "text": "The hawksbill is named for its face: a narrow head ending in a beak like a raptor's, built to reach into reef crevices.",
+      "sourceIDs": ["noaa-hawksbill-overview"]
+    },
+    {
+      "id": "hawksbill-shell",
+      "text": "Its shell is the beautiful part — overlapping plates in amber, orange, red, and black, edges serrated like a saw.",
+      "sourceIDs": ["noaa-hawksbill-overview"]
+    },
+    {
+      "id": "hawksbill-trade",
+      "text": "That beauty nearly killed it. For centuries, the world's tortoiseshell combs, spectacles, and jewelry came chiefly from this one species.",
+      "sourceIDs": ["noaa-hawksbill-overview"]
+    },
+    {
+      "id": "hawksbill-ban",
+      "text": "International trade has been banned for decades, yet the shell still surfaces as hair ornaments and trinkets in some markets.",
+      "sourceIDs": ["stc-hawksbill-species", "noaa-hawksbill-conservation"]
+    },
+    {
+      "id": "hawksbill-sponges",
+      "text": "On the reef it does singular work: it is the only sea turtle that can live mainly on sponges, keeping space open for corals and fish.",
+      "sourceIDs": ["noaa-hawksbill-overview"]
+    },
+    {
+      "id": "hawksbill-nesting",
+      "text": "Females cross oceans to nest at night on small hidden beaches, burying around 160 eggs high under the vegetation.",
+      "sourceIDs": ["noaa-hawksbill-overview", "stc-hawksbill-species"]
+    },
+    {
+      "id": "hawksbill-sand",
+      "text": "The warmth of the sand decides each hatchling's sex — and hotter beaches are skewing the balance.",
+      "sourceIDs": ["noaa-hawksbill-overview"]
+    },
+    {
+      "id": "hawksbill-maturity",
+      "text": "A hatchling that survives will not breed until it is twenty to thirty-five years old.",
+      "sourceIDs": ["noaa-hawksbill-overview"]
+    },
+    {
+      "id": "hawksbill-hope",
+      "text": "Where protection is real, it works: in the Solomon Islands, two decades of monitoring show encouraging signs of recovery.",
+      "sourceIDs": ["noaa-hawksbill-overview"]
+    },
+    {
+      "id": "hawksbill-witness",
+      "text": "To witness the hawksbill is to want the reef whole — turtle, sponge, and coral together.",
+      "sourceIDs": ["noaa-hawksbill-overview"]
+    }
+  ],
+  "action": {
+    "id": "learn-hawksbill",
+    "title": "Meet the hawksbill",
+    "summary": "Read NOAA Fisheries' species profile: the tortoiseshell history, the sponge diet, and the protections in force today.",
+    "effort": "6 minutes",
+    "destinationURL": "https://www.fisheries.noaa.gov/species/hawksbill-turtle",
+    "destinationOrganization": "NOAA Fisheries",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["noaa-hawksbill-overview"],
+    "lastVerified": "2026-08-24",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "hawksbill-turtle-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 4ec8b583-9f26-4f1c-b730-f8b64993781d, 2026-08-24; rights record docs/media/hawksbill-turtle-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-02",
+  "sources": [
+    {
+      "id": "noaa-hawksbill-overview",
+      "title": "Hawksbill Turtle",
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/hawksbill-turtle",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "noaa-hawksbill-conservation",
+      "title": "Hawksbill Turtle: Conservation & Management",
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/hawksbill-turtle/conservation-management",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "stc-hawksbill-species",
+      "title": "Hawksbill",
+      "organization": "Sea Turtle Conservancy",
+      "url": "https://conserveturtles.org/species/hawksbill/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "stc-tracking",
+      "title": "Sea Turtle Tracking",
+      "organization": "Sea Turtle Conservancy",
+      "url": "https://conserveturtles.org/sea-turtle-tracking/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wwf-uk-marine-turtles",
+      "title": "Marine Turtles",
+      "organization": "WWF-UK",
+      "url": "https://www.wwf.org.uk/learn/wildlife/marine-turtles",
+      "lastAccessed": "2026-08-24"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified NOAA, Sea Turtle Conservancy, and WWF-UK pages. Population uses STC's 20,000-23,000 nesting-females estimate; decline figures vary by source (STC 90%/century, WWF-UK 80%/3 generations) — story avoids printing either as a single fact. Ocean region circles are broad basins, not nesting beaches."
+  },
+  "stats": {
+    "size": "2.5–3 ft shell · 100–150 lbs",
+    "lifespan": "50 years or more (estimated)",
+    "diet": "Mainly sea sponges — a reef specialist",
+    "populationEstimate": "20,000–23,000 nesting females",
+    "populationAsOf": "per Sea Turtle Conservancy",
+    "trend": "decreasing",
+    "threats": [
+      "Tortoiseshell trade",
+      "Egg collection",
+      "Fishing bycatch",
+      "Reef loss & warming"
+    ],
+    "sourceIDs": ["noaa-hawksbill-overview", "stc-hawksbill-species", "wwf-uk-marine-turtles"]
+  },
+  "reproduction": {
+    "id": "hawksbill-reproduction",
+    "text": "Every one to five years a female returns to nest, laying three to five clutches of 130 to 160 eggs each. They incubate for about two months in sand whose temperature decides the hatchlings' sex.",
+    "sourceIDs": ["noaa-hawksbill-overview", "stc-hawksbill-species"]
+  },
+  "insight": {
+    "id": "hawksbill-insight",
+    "text": "The hawksbill is the only sea turtle that can survive mainly on sea sponges — its appetite keeps reef space open for corals and fish.",
+    "sourceIDs": ["noaa-hawksbill-overview"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Caribbean reefs",
+      "latitude": 17.5,
+      "longitude": -76.0,
+      "radiusKm": 900
+    },
+    {
+      "name": "Coral Triangle & northern Australia",
+      "latitude": -8.0,
+      "longitude": 150.0,
+      "radiusKm": 1000
+    }
+  ],
+  "gallery": [
+    "hawksbill-turtle-plate-01",
+    "hawksbill-turtle-context-01",
+    "hawksbill-turtle-detail-01",
+    "hawksbill-turtle-behavior-01",
+    "hawksbill-turtle-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "stc-satellite-tracking",
+      "organization": "Sea Turtle Conservancy",
+      "title": "Satellite tracking",
+      "summary": "Tags hawksbills and other sea turtles across the Caribbean and beyond, publishing live migration maps anyone can follow.",
+      "url": "https://conserveturtles.org/sea-turtle-tracking/",
+      "kind": "program",
+      "sourceIDs": ["stc-tracking"],
+      "lastVerified": "2026-08-24"
+    },
+    {
+      "id": "noaa-hawksbill-management",
+      "organization": "NOAA Fisheries",
+      "title": "Recovery & bycatch reduction",
+      "summary": "Runs the US recovery plans, requires turtle excluder devices in trawls, and enforces the international trade ban on tortoiseshell.",
+      "url": "https://www.fisheries.noaa.gov/species/hawksbill-turtle/conservation-management",
+      "kind": "program",
+      "sourceIDs": ["noaa-hawksbill-conservation"],
+      "lastVerified": "2026-08-24"
+    }
+  ]
+}

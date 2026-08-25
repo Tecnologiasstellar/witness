@@ -7,9 +7,10 @@ By default only records with editorial.state == "approved" fail the build
     python3 tools/check_links.py --all            # every record
     python3 tools/check_links.py --all --only vaquita
 
-Pass: HTTP < 400. Warn-pass: 401/403/405/429 (bot gates on conservation
-sites; the link exists). Fail: 404/410, 5xx, or connection errors after
-2 attempts. Exit code 1 on any failure.
+Pass: HTTP < 400. Warn-pass: 401/403/405/429, and 307/308 that urllib could
+not follow (a followable redirect never surfaces as an error, so these are
+JS bot gates on conservation sites; the link exists). Fail: 404/410, 5xx,
+or connection errors after 2 attempts. Exit code 1 on any failure.
 """
 
 import json
@@ -19,7 +20,7 @@ import urllib.request
 from pathlib import Path
 
 CATALOG = Path(__file__).resolve().parent.parent / "Packages/WitnessCore/Sources/WitnessCore/Resources/catalog"
-WARN_STATUSES = {401, 403, 405, 429}
+WARN_STATUSES = {307, 308, 401, 403, 405, 429}
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh) WitnessLinkCheck/1.0",
     "Accept": "text/html,application/xhtml+xml,*/*;q=0.8",
