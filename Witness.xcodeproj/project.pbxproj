@@ -472,6 +472,10 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					8926EE529F16A78EF6D2B226 = {
+						DevelopmentTeam = L5R9XW45B6;
+						ProvisioningStyle = Automatic;
+					};
 					DEDA12CCC6745CC224C3A2C6 = {
 						TestTargetID = 8926EE529F16A78EF6D2B226;
 					};
@@ -621,7 +625,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L5R9XW45B6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Witness;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -834,7 +840,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L5R9XW45B6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Witness;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
