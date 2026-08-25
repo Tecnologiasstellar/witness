@@ -1,0 +1,227 @@
+{
+  "id": "ethiopian-wolf",
+  "schemaVersion": 1,
+  "commonName": "Ethiopian Wolf",
+  "scientificName": "Canis simensis",
+  "conservationStatus": {
+    "displayName": "Endangered",
+    "normalizedValue": "endangered"
+  },
+  "generalizedRange": "Afroalpine highlands of Ethiopia",
+  "hook": "Africa's rarest carnivore lives on islands in the sky.",
+  "story": [
+    {
+      "id": "wolf-clothing",
+      "text": "The Ethiopian wolf is a wolf in fox's clothing: bright tawny-rufous with white markings, long slender legs, a fine narrow muzzle.",
+      "sourceIDs": ["ewcp-about-wolves", "ewcp-ecology-behaviour"]
+    },
+    {
+      "id": "wolf-roof",
+      "text": "It lives only on the roof of Africa — mountain meadows between 3,000 and 4,500 meters, on islands of sky too far apart to cross.",
+      "sourceIDs": ["ewcp-taxonomy-distribution", "ewcp-about-wolves"]
+    },
+    {
+      "id": "wolf-rarest",
+      "text": "It is Africa's rarest carnivore: fewer than five hundred adults, in six separated populations.",
+      "sourceIDs": ["ewcp-taxonomy-distribution", "ewcp-fact-file"]
+    },
+    {
+      "id": "wolf-social",
+      "text": "Its habits are split in two: packs greet and patrol together at dawn and dusk, but every wolf hunts alone.",
+      "sourceIDs": ["ewcp-ecology-behaviour", "ewcp-about-wolves"]
+    },
+    {
+      "id": "wolf-molerat",
+      "text": "The prey is rodents — above all the giant molerat, an Afroalpine animal found nowhere else.",
+      "sourceIDs": ["ewcp-ecology-behaviour"]
+    },
+    {
+      "id": "wolf-disease",
+      "text": "The killer arrives on four familiar feet: rabies and distemper spill over from village dogs, crashing whole populations in weeks.",
+      "sourceIDs": ["ewcp-threats", "ewcp-taxonomy-distribution"]
+    },
+    {
+      "id": "wolf-vaccine",
+      "text": "The response is a vaccine hidden inside a piece of meat, left in the field where a wolf will find it.",
+      "sourceIDs": ["ewcp-one-health"]
+    },
+    {
+      "id": "wolf-dogs",
+      "text": "The program vaccinates the dogs too — more than three thousand a year around wolf country.",
+      "sourceIDs": ["ewcp-one-health"]
+    },
+    {
+      "id": "wolf-farms",
+      "text": "Meanwhile the mountains themselves shrink: sixty percent of wolf range has already gone under barley and potatoes.",
+      "sourceIDs": ["ewcp-threats"]
+    },
+    {
+      "id": "wolf-witness",
+      "text": "To witness the Ethiopian wolf is to stand with the monitors who log thousands of sightings a year, holding a species steady one pack at a time.",
+      "sourceIDs": ["ewcp-monitoring"]
+    }
+  ],
+  "action": {
+    "id": "learn-ethiopian-wolf",
+    "title": "Meet the mountain wolf",
+    "summary": "Read the Ethiopian Wolf Conservation Programme's introduction: the sky-island range, the rodent hunts, and the vaccination race against rabies.",
+    "effort": "4 minutes",
+    "destinationURL": "https://www.ethiopianwolf.org/the-wolves/about-ethiopian-wolves",
+    "destinationOrganization": "Ethiopian Wolf Conservation Programme",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["ewcp-about-wolves"],
+    "lastVerified": "2026-08-25",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "ethiopian-wolf-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 49ffd8cd-406b-4d00-aea3-19fe88664f4c, 2026-08-25; rights record docs/media/ethiopian-wolf-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-11",
+  "sources": [
+    {
+      "id": "ewcp-fact-file",
+      "title": "Fact file",
+      "organization": "Ethiopian Wolf Conservation Programme",
+      "url": "https://www.ethiopianwolf.org/the-wolves/fact-file",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "ewcp-about-wolves",
+      "title": "About Ethiopian wolves",
+      "organization": "Ethiopian Wolf Conservation Programme",
+      "url": "https://www.ethiopianwolf.org/the-wolves/about-ethiopian-wolves",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "ewcp-ecology-behaviour",
+      "title": "Ecology & behaviour",
+      "organization": "Ethiopian Wolf Conservation Programme",
+      "url": "https://www.ethiopianwolf.org/the-wolves/ecology-behaviour",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "ewcp-taxonomy-distribution",
+      "title": "Taxonomy, distribution & status",
+      "organization": "Ethiopian Wolf Conservation Programme",
+      "url": "https://www.ethiopianwolf.org/the-wolves/taxonomy-distribution-status",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "ewcp-threats",
+      "title": "Threats",
+      "organization": "Ethiopian Wolf Conservation Programme",
+      "url": "https://www.ethiopianwolf.org/the-wolves/threats",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "ewcp-one-health",
+      "title": "One Health",
+      "organization": "Ethiopian Wolf Conservation Programme",
+      "url": "https://www.ethiopianwolf.org/projects/one-health",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "ewcp-monitoring",
+      "title": "Monitoring and research",
+      "organization": "Ethiopian Wolf Conservation Programme",
+      "url": "https://www.ethiopianwolf.org/projects/monitoring-and-research",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "wildcru-ewcp-programme",
+      "title": "Ethiopian Wolf Conservation Programme",
+      "organization": "WildCRU, University of Oxford",
+      "url": "https://www.wildcru.org/programmes/ethiopian-wolf-conservation-programme/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "wildcru-ethiopian-wolves",
+      "title": "Ethiopian wolves",
+      "organization": "WildCRU, University of Oxford",
+      "url": "https://www.wildcru.org/species/ethiopian-wolves/",
+      "lastAccessed": "2026-08-25"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-25",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified EWCP and WildCRU pages. Population wording 'fewer than 500 adults' (EWCP; WildCRU's 2024 estimate ~450 in 99 packs). Lifespan, shoulder height, the 'pounce' technique, and climate-as-threat were unverifiable on approved sources and excluded. Region circles cover whole national-park massifs."
+  },
+  "stats": {
+    "size": "About 35 lbs — slim and long-legged",
+    "lifespan": "Not reliably documented",
+    "diet": "Rodents — chiefly giant molerats",
+    "populationEstimate": "Fewer than 500 adults",
+    "populationAsOf": "per the Ethiopian Wolf Conservation Programme",
+    "trend": "decreasing",
+    "threats": [
+      "Rabies from dogs",
+      "Canine distemper",
+      "Farms to 4,000 m",
+      "Dog hybridization"
+    ],
+    "sourceIDs": ["ewcp-threats", "ewcp-taxonomy-distribution", "ewcp-fact-file", "ewcp-ecology-behaviour"]
+  },
+  "reproduction": {
+    "id": "wolf-reproduction",
+    "text": "Only the pack's alpha female breeds. Up to seven pups emerge from the den at three weeks, born between October and December, and the whole pack rears them — delivering prey and regurgitating meals.",
+    "sourceIDs": ["ewcp-ecology-behaviour", "wildcru-ethiopian-wolves"]
+  },
+  "insight": {
+    "id": "wolf-insight",
+    "text": "Ethiopian wolves are solitary hunters but social sleepers — the pack patrols its borders together at dawn and rests together at night, yet every hunt is made alone.",
+    "sourceIDs": ["ewcp-ecology-behaviour"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Bale Mountains",
+      "latitude": 6.85,
+      "longitude": 39.83,
+      "radiusKm": 45
+    },
+    {
+      "name": "Simien Mountains",
+      "latitude": 13.23,
+      "longitude": 38.25,
+      "radiusKm": 30
+    }
+  ],
+  "gallery": [
+    "ethiopian-wolf-plate-01",
+    "ethiopian-wolf-context-01",
+    "ethiopian-wolf-detail-01",
+    "ethiopian-wolf-behavior-01",
+    "ethiopian-wolf-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "ewcp-one-health-program",
+      "organization": "Ethiopian Wolf Conservation Programme",
+      "title": "One Health vaccination",
+      "summary": "Oral rabies vaccines hidden in meat for wolves, and over 3,000 village dogs vaccinated each year to stop spillover at its source.",
+      "url": "https://www.ethiopianwolf.org/projects/one-health",
+      "kind": "program",
+      "sourceIDs": ["ewcp-one-health"],
+      "lastVerified": "2026-08-25"
+    },
+    {
+      "id": "wildcru-ewcp",
+      "organization": "WildCRU, University of Oxford",
+      "title": "Ethiopian Wolf Conservation Programme",
+      "summary": "Founded in 1995: intensive monitoring, vaccination campaigns, community capacity building, and conservation translocations.",
+      "url": "https://www.wildcru.org/programmes/ethiopian-wolf-conservation-programme/",
+      "kind": "program",
+      "sourceIDs": ["wildcru-ewcp-programme"],
+      "lastVerified": "2026-08-25"
+    }
+  ]
+}

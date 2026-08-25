@@ -8,7 +8,7 @@ struct CatalogValidatorTests {
     func bundledCatalogIsValid() throws {
         let records = try BundledSpeciesCatalog.load()
 
-        #expect(records.count == 21)
+        #expect(records.count == 25)
         #expect(records.first?.id == "vaquita")
         #expect(records.allSatisfy { record in record.story.allSatisfy { !$0.sourceIDs.isEmpty } })
         // Approved Higgsfield artwork is in place; media rights stay pending
