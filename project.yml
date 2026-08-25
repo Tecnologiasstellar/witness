@@ -55,6 +55,8 @@ targets:
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
         ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: L5R9XW45B6
 
   WitnessUITests:
     type: bundle.ui-testing
