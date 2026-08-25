@@ -493,6 +493,7 @@ struct WitnessActionView: View {
                 .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
             }
             SharePlateButton(species: species, prominent: true)
+            ReminderPrimer()
             Button(action: onOpenReflection) {
                 HStack {
                     AtlasIconView(icon: .nib, size: 15, color: AtlasTheme.sepia)

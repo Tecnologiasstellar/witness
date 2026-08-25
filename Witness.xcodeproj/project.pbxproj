@@ -14,6 +14,7 @@
 		16AAFB87F230EB12C8D396A1 /* SpeciesRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C4A43A6AC261C6A25B5E1 /* SpeciesRecord.swift */; };
 		16D5DDC2C5DCF75498B2A44D /* WitnessShareCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8698B087FB05A16501745D67 /* WitnessShareCopy.swift */; };
 		224FC55D98C252D3C06B08BF /* BundledSpeciesCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9DEB3D56300C4B0646299 /* BundledSpeciesCatalog.swift */; };
+		2DB8EC5552B2AA6AE65EB074 /* ReminderPrimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61B5DD130AF6E13995DBB95 /* ReminderPrimer.swift */; };
 		2E8A595CF0062FAD3A5EA2BF /* WitnessedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B698C8B547BD096664B28580 /* WitnessedView.swift */; };
 		3AACD83387DDBED44260D080 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDFC8711953263B8B59139B /* AppModel.swift */; };
 		3BA9344E61CC8AC85419821F /* WitnessCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */; };
@@ -28,6 +29,7 @@
 		66792FAAD28C4692A18458B0 /* VaquitaHeroArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */; };
 		68D6C9D187410805167434BB /* SpeciesCardV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6741E8E552598D4CEB9F6 /* SpeciesCardV2.swift */; };
 		6CB63D7D22BC7C5FF46E1BAC /* WitnessTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */; };
+		7436B0FED665FD5428FFD5D6 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F19751D24B01B066DD7EB /* ReminderService.swift */; };
 		84987ABAB9FFB62FE7E68E24 /* PlateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */; };
 		8C73A1DC6CA9779FC7CD1541 /* PlusEntitlements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21448505ADEB8E59D0B8246 /* PlusEntitlements.swift */; };
 		99A3848B26CB000E2269AE90 /* WitnessPlusPaywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D576C862815233CC57EF4FC /* WitnessPlusPaywall.swift */; };
@@ -123,6 +125,8 @@
 		EBDAEC2E8EF7B8E47676E1F3 /* FileSyncQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSyncQueue.swift; sourceTree = "<group>"; };
 		EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogValidator.swift; sourceTree = "<group>"; };
 		EF52E8333AE9C0AD77C3567F /* WitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessApp.swift; sourceTree = "<group>"; };
+		F61B5DD130AF6E13995DBB95 /* ReminderPrimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderPrimer.swift; sourceTree = "<group>"; };
+		FB1F19751D24B01B066DD7EB /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
 		FBE2C63F351BC9C606D1E9AD /* SharePlateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePlateCard.swift; sourceTree = "<group>"; };
 		FE70D6CD14579FD2FAEF6AA1 /* BackendConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +166,7 @@
 			children = (
 				FE70D6CD14579FD2FAEF6AA1 /* BackendConfig.swift */,
 				E21448505ADEB8E59D0B8246 /* PlusEntitlements.swift */,
+				FB1F19751D24B01B066DD7EB /* ReminderService.swift */,
 				D5BBBFD25BDE3FD1CA7575E8 /* SupabaseTransport.swift */,
 				7D1967F70178EF22D72429A3 /* WitnessCounts.swift */,
 				5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */,
@@ -233,6 +238,7 @@
 		7A62B357E09E58139AB45C5A /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				F61B5DD130AF6E13995DBB95 /* ReminderPrimer.swift */,
 				A1E6741E8E552598D4CEB9F6 /* SpeciesCardV2.swift */,
 				3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */,
 				0E6F03B2889D871D9EFAF85F /* StorySheet.swift */,
@@ -554,6 +560,8 @@
 				43971BEA1623685AFFA856C4 /* CollectionDetailView.swift in Sources */,
 				84987ABAB9FFB62FE7E68E24 /* PlateFrame.swift in Sources */,
 				8C73A1DC6CA9779FC7CD1541 /* PlusEntitlements.swift in Sources */,
+				2DB8EC5552B2AA6AE65EB074 /* ReminderPrimer.swift in Sources */,
+				7436B0FED665FD5428FFD5D6 /* ReminderService.swift in Sources */,
 				3F5054183FC3B7C5BE6C7A71 /* RootTabView.swift in Sources */,
 				B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */,
 				D76814029898F318CCF0563B /* SharePlateCard.swift in Sources */,
