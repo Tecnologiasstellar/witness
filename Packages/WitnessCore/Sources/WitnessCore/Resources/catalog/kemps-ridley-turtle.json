@@ -1,0 +1,213 @@
+{
+  "id": "kemps-ridley-turtle",
+  "schemaVersion": 1,
+  "commonName": "Kemp's Ridley Turtle",
+  "scientificName": "Lepidochelys kempii",
+  "conservationStatus": {
+    "displayName": "Endangered",
+    "normalizedValue": "endangered"
+  },
+  "generalizedRange": "Gulf of Mexico and the US Atlantic coast",
+  "hook": "Once, 40,000 nested in a day. By 1985: 702 nests all year.",
+  "story": [
+    {
+      "id": "ridley-smallest",
+      "text": "The Kemp's ridley is the smallest sea turtle — a two-foot, nearly circular shell of grey-green — and the most endangered.",
+      "sourceIDs": ["stc-sea-turtle-info", "nps-kridley-facts", "noaa-kemps-ridley-species"]
+    },
+    {
+      "id": "ridley-rules",
+      "text": "It breaks the family rules twice: it is the only sea turtle that routinely nests in daylight, and the only one that nests in crowds — the arribada.",
+      "sourceIDs": ["noaa-kemps-ridley-species", "nps-kridley-facts"]
+    },
+    {
+      "id": "ridley-film",
+      "text": "In 1947 a home movie caught the spectacle: an estimated forty thousand females on one Mexican beach in a single day.",
+      "sourceIDs": ["nps-kemps-ridley-story"]
+    },
+    {
+      "id": "ridley-crash",
+      "text": "By 1985 there were 702 nests in the entire world — fewer than 250 nesting females.",
+      "sourceIDs": ["nps-kemps-ridley-story", "noaa-kemps-ridley-species"]
+    },
+    {
+      "id": "ridley-binational",
+      "text": "The rescue was bi-national: Mexico and the United States began guarding Rancho Nuevo and, in 1978, building a second colony from scratch.",
+      "sourceIDs": ["nps-kemps-ridley-story"]
+    },
+    {
+      "id": "ridley-imprinting",
+      "text": "For a decade, 22,507 eggs were carried to Texas so hatchlings would imprint on Padre Island sand — and come back to it.",
+      "sourceIDs": ["nps-kemps-ridley-recovery"]
+    },
+    {
+      "id": "ridley-return",
+      "text": "They came back. Padre Island now records about half of all US Kemp's ridley nests.",
+      "sourceIDs": ["nps-kemps-ridley-recovery"]
+    },
+    {
+      "id": "ridley-teds",
+      "text": "At sea, the biggest threat is fishing bycatch — which is why shrimp trawls in the Gulf must carry turtle excluder devices.",
+      "sourceIDs": ["noaa-kemps-ridley-species", "noaa-turtle-excluder-devices"]
+    },
+    {
+      "id": "ridley-fragile",
+      "text": "Nests climbed to nearly twenty thousand by 2009, then dipped unexpectedly. The recovery is real, and fragile.",
+      "sourceIDs": ["nps-kemps-ridley-story"]
+    },
+    {
+      "id": "ridley-witness",
+      "text": "To witness the Kemp's ridley is to hope for crowded beaches again — at noon, in the open, unafraid.",
+      "sourceIDs": ["nps-kridley-facts"]
+    }
+  ],
+  "action": {
+    "id": "learn-kemps-ridley",
+    "title": "Read the arribada story",
+    "summary": "Read the National Park Service's account: the 1947 film, the crash, and the egg-by-egg building of a second nesting colony.",
+    "effort": "6 minutes",
+    "destinationURL": "https://www.nps.gov/pais/learn/nature/kempsridleystory.htm",
+    "destinationOrganization": "National Park Service",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["nps-kemps-ridley-story"],
+    "lastVerified": "2026-08-25",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "kemps-ridley-turtle-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job adf64edf-0684-44df-bd31-240319a0173c, 2026-08-25; rights record docs/media/kemps-ridley-turtle-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-16",
+  "sources": [
+    {
+      "id": "noaa-kemps-ridley-species",
+      "title": "Kemp's Ridley Turtle",
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/kemps-ridley-turtle",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "nps-kridley-facts",
+      "title": "Kemp's Ridley Sea Turtles",
+      "organization": "National Park Service, Padre Island",
+      "url": "https://www.nps.gov/pais/learn/nature/kridley.htm",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "nps-kemps-ridley-story",
+      "title": "The Story of the Kemp's Ridley",
+      "organization": "National Park Service, Padre Island",
+      "url": "https://www.nps.gov/pais/learn/nature/kempsridleystory.htm",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "nps-kemps-ridley-recovery",
+      "title": "Kemp's Ridley Sea Turtle Recovery",
+      "organization": "National Park Service, Padre Island",
+      "url": "https://www.nps.gov/pais/learn/nature/kemp-s-ridley-sea-turtle-recovery.htm",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "noaa-turtle-excluder-devices",
+      "title": "Turtle Excluder Devices",
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/southeast/bycatch/turtle-excluder-devices",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "noaa-cold-stunned-massachusetts",
+      "title": "Massachusetts Cold-stunned Sea Turtles",
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/feature-story/massachusetts-cold-stunned-sea-turtles-sign-climate-change",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "stc-sea-turtle-info",
+      "title": "Information About Sea Turtles: Kemp's Ridley",
+      "organization": "Sea Turtle Conservancy",
+      "url": "https://conserveturtles.org/information-about-sea-turtles-kemps-ridley-sea-turtle/",
+      "lastAccessed": "2026-08-25"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-25",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified NOAA, NPS Padre Island, and Sea Turtle Conservancy pages. Trend left unknown: recovered far above the 1985 floor, but NPS notes an unexpected post-2009 decline. Unverifiable folklore ('blue crabs especially', 'TEDs invented for this species', wind-blown nesting) excluded. Card uses 'Gulf of Mexico' as the internationally standard name for the basin NOAA's page currently labels 'Gulf of America'."
+  },
+  "stats": {
+    "size": "About 2 ft · 70–100 lbs — the smallest",
+    "lifespan": "30 years or more (estimated)",
+    "diet": "Crabs above all",
+    "populationEstimate": "About 2,500 nesting females",
+    "populationAsOf": "per Sea Turtle Conservancy",
+    "trend": "unknown",
+    "threats": [
+      "Fishing-gear bycatch",
+      "Cold-stunning events",
+      "Oil spills",
+      "Historic egg harvest"
+    ],
+    "sourceIDs": ["noaa-kemps-ridley-species", "nps-kemps-ridley-story", "noaa-cold-stunned-massachusetts", "stc-sea-turtle-info"]
+  },
+  "reproduction": {
+    "id": "ridley-reproduction",
+    "text": "Females come ashore in daylight arribadas every one to three years, laying about a hundred eggs per nest and up to four nests a season. The eggs incubate seven to eight weeks in warm sand.",
+    "sourceIDs": ["noaa-kemps-ridley-species", "nps-kridley-facts"]
+  },
+  "insight": {
+    "id": "ridley-insight",
+    "text": "Cape Cod now rescues hundreds of cold-stunned Kemp's ridleys each fall — an average of 739 a year, five times more than twenty years ago.",
+    "sourceIDs": ["noaa-cold-stunned-massachusetts"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Rancho Nuevo nesting beach",
+      "latitude": 23.2,
+      "longitude": -97.76,
+      "radiusKm": 50
+    },
+    {
+      "name": "Gulf of Mexico foraging waters",
+      "latitude": 26.5,
+      "longitude": -93.5,
+      "radiusKm": 600
+    }
+  ],
+  "gallery": [
+    "kemps-ridley-turtle-plate-01",
+    "kemps-ridley-turtle-context-01",
+    "kemps-ridley-turtle-detail-01",
+    "kemps-ridley-turtle-behavior-01",
+    "kemps-ridley-turtle-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "nps-padre-island-recovery",
+      "organization": "National Park Service",
+      "title": "Padre Island turtle recovery",
+      "summary": "The Division of Sea Turtle Science and Recovery guards the second nesting colony that the bi-national program built egg by egg.",
+      "url": "https://www.nps.gov/pais/learn/nature/kemp-s-ridley-sea-turtle-recovery.htm",
+      "kind": "program",
+      "sourceIDs": ["nps-kemps-ridley-recovery"],
+      "lastVerified": "2026-08-25"
+    },
+    {
+      "id": "noaa-binational-recovery",
+      "organization": "NOAA Fisheries",
+      "title": "Bi-national recovery plan",
+      "summary": "The US-Mexico recovery plan protects Rancho Nuevo, requires turtle excluder devices, and coordinates the species' management.",
+      "url": "https://www.fisheries.noaa.gov/species/kemps-ridley-turtle",
+      "kind": "program",
+      "sourceIDs": ["noaa-kemps-ridley-species", "noaa-turtle-excluder-devices"],
+      "lastVerified": "2026-08-25"
+    }
+  ]
+}

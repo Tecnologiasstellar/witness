@@ -1,0 +1,214 @@
+{
+  "id": "red-wolf",
+  "schemaVersion": 1,
+  "commonName": "Red Wolf",
+  "scientificName": "Canis rufus",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Albemarle Peninsula, eastern North Carolina",
+  "hook": "Every red wolf on Earth descends from fourteen animals.",
+  "story": [
+    {
+      "id": "red-wolf-build",
+      "text": "The red wolf is built between its cousins: bigger than a coyote, leaner than a gray wolf, with a reddish tinge behind the ears and down the legs.",
+      "sourceIDs": ["wcc-red-wolf-profile"]
+    },
+    {
+      "id": "red-wolf-southeast",
+      "text": "It was once the top predator of the American Southeast, from the Gulf Coast to the Ohio Valley.",
+      "sourceIDs": ["rwc-facts-stats"]
+    },
+    {
+      "id": "red-wolf-roundup",
+      "text": "By the 1970s it was nearly gone, and biologists made the hardest call: catch every last one.",
+      "sourceIDs": ["rwc-facts-stats"]
+    },
+    {
+      "id": "red-wolf-founders",
+      "text": "Fourteen of the seventeen captured wolves became founders. Every red wolf alive descends from them.",
+      "sourceIDs": ["wcc-red-wolf-profile"]
+    },
+    {
+      "id": "red-wolf-return",
+      "text": "In 1987, wolves returned to Alligator River, North Carolina — among the first times an extinct-in-the-wild species was rebuilt from captivity.",
+      "sourceIDs": ["wcc-33-years-wild"]
+    },
+    {
+      "id": "red-wolf-collapse",
+      "text": "The population climbed past 130, then collapsed to eight by 2021 — gunshots, vehicles, and coyote hybridization taking wolves faster than they were born.",
+      "sourceIDs": ["wcc-red-wolf-profile", "rwc-facts-stats"]
+    },
+    {
+      "id": "red-wolf-fostering",
+      "text": "The rebuilding is intimate: biologists slip captive-born pups, days old, into wild dens, and wild mothers raise them as their own.",
+      "sourceIDs": ["wcc-2023-wild-pups", "nczoo-red-wolf-safe"]
+    },
+    {
+      "id": "red-wolf-collars",
+      "text": "As of January 2025, seventeen wild red wolves are known — each wearing an orange collar so drivers and hunters know them.",
+      "sourceIDs": ["fws-enc-population-update-jan-2025"]
+    },
+    {
+      "id": "red-wolf-captive",
+      "text": "Behind them stands a captive population of about 250, breeding in zoos across the country.",
+      "sourceIDs": ["wcc-red-wolf-profile"]
+    },
+    {
+      "id": "red-wolf-witness",
+      "text": "To witness the red wolf is to keep faith with one of the world's most endangered wild canids, one den at a time.",
+      "sourceIDs": ["wcc-red-wolf-profile"]
+    }
+  ],
+  "action": {
+    "id": "learn-red-wolf",
+    "title": "Meet the red wolf",
+    "summary": "Read the Wolf Conservation Center's profile: the fourteen founders, the 1987 return, and the fostering that keeps the wild population alive.",
+    "effort": "6 minutes",
+    "destinationURL": "https://nywolf.org/learn/red-wolf/",
+    "destinationOrganization": "Wolf Conservation Center",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["wcc-red-wolf-profile"],
+    "lastVerified": "2026-08-25",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "red-wolf-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job ff50c0a2-a439-4589-8b66-a6606706ab0b, 2026-08-25; rights record docs/media/red-wolf-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-17",
+  "sources": [
+    {
+      "id": "wcc-red-wolf-profile",
+      "title": "Red Wolf",
+      "organization": "Wolf Conservation Center",
+      "url": "https://nywolf.org/learn/red-wolf/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "rwc-facts-stats",
+      "title": "Facts & Stats",
+      "organization": "Red Wolf Coalition",
+      "url": "https://redwolves.com/newsite/learn-about-red-wolves/facts-stats/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "rwc-home",
+      "title": "Red Wolf Coalition",
+      "organization": "Red Wolf Coalition",
+      "url": "https://redwolves.com/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "fws-enc-population-update-jan-2025",
+      "title": "Update on the Eastern North Carolina Red Wolf Population, January 2025",
+      "organization": "US Fish & Wildlife Service",
+      "url": "https://redwolves.com/newsite/wp-content/uploads/2025/02/enc_rwp_summary_jan_2025.pdf",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "ncwildlife-red-wolf",
+      "title": "Red Wolf",
+      "organization": "NC Wildlife Resources Commission",
+      "url": "https://www.ncwildlife.gov/species/red-wolf",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "nczoo-red-wolf-safe",
+      "title": "Conserving North Carolina's Red Wolves",
+      "organization": "North Carolina Zoo",
+      "url": "https://www.nczoo.org/saving-wildlife/conservation/regional/expanding-red-wolf-pack",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "wcc-33-years-wild",
+      "title": "Red Wolf Recovery Milestone — 33 Years Wild",
+      "organization": "Wolf Conservation Center",
+      "url": "https://nywolf.org/2020/09/red-wolf-recovery-milestone-33-years-wild/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "wcc-2023-wild-pups",
+      "title": "A New Ray of Hope: Red Wolf Pups in the Wild",
+      "organization": "Wolf Conservation Center",
+      "url": "https://nywolf.org/2023/05/a-new-ray-of-hope-second-consecutive-birth-of-red-wolf-pups-in-the-wild/",
+      "lastAccessed": "2026-08-25"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-25",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified Wolf Conservation Center, Red Wolf Coalition, NC Wildlife, NC Zoo pages and the USFWS Jan 2025 population PDF (fws.gov blocks fetchers; the official PDF is mirrored by Red Wolf Coalition). The 'first species ever reintroduced after extinction in the wild' superlative is softened to WCC's verified 'among the first'. Trend increasing reflects 8 (2021) to 17-20 (2025)."
+  },
+  "stats": {
+    "size": "45–80 lbs · 26 in at the shoulder",
+    "lifespan": "6–7 years wild · up to 15 in care",
+    "diet": "Deer, raccoons, rabbits & rodents",
+    "populationEstimate": "17 known wild · about 250 in care",
+    "populationAsOf": "Jan 2025 · per USFWS",
+    "trend": "increasing",
+    "threats": [
+      "Gunshot mortality",
+      "Vehicle strikes",
+      "Coyote hybridization",
+      "Sea-level rise"
+    ],
+    "sourceIDs": ["rwc-facts-stats", "wcc-red-wolf-profile", "fws-enc-population-update-jan-2025"]
+  },
+  "reproduction": {
+    "id": "red-wolf-reproduction",
+    "text": "Packs are families: a breeding pair and their offspring, five to eight animals. One litter of three to five pups arrives each spring — sometimes with a zoo-born foster slipped in among them.",
+    "sourceIDs": ["wcc-red-wolf-profile", "rwc-facts-stats", "wcc-2023-wild-pups"]
+  },
+  "insight": {
+    "id": "red-wolf-insight",
+    "text": "The red wolf reintroduction became the model — the pilot that paved the way for returning Mexican gray wolves and the wolves of Yellowstone.",
+    "sourceIDs": ["wcc-33-years-wild"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Albemarle Peninsula",
+      "latitude": 35.85,
+      "longitude": -76.2,
+      "radiusKm": 60
+    }
+  ],
+  "gallery": [
+    "red-wolf-plate-01",
+    "red-wolf-context-01",
+    "red-wolf-detail-01",
+    "red-wolf-behavior-01",
+    "red-wolf-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "nczoo-red-wolf-breeding",
+      "organization": "North Carolina Zoo",
+      "title": "Red Wolf SAFE breeding",
+      "summary": "Houses one of the world's largest breeding packs — 42 pups since 2016 — and fosters zoo-born pups into wild dens.",
+      "url": "https://www.nczoo.org/saving-wildlife/conservation/regional/expanding-red-wolf-pack",
+      "kind": "program",
+      "sourceIDs": ["nczoo-red-wolf-safe"],
+      "lastVerified": "2026-08-25"
+    },
+    {
+      "id": "red-wolf-coalition",
+      "organization": "Red Wolf Coalition",
+      "title": "Coexistence & education",
+      "summary": "Works from Columbia, North Carolina on education, advocacy, and compensation that helps landowners live alongside the wolves.",
+      "url": "https://redwolves.com/",
+      "kind": "program",
+      "sourceIDs": ["rwc-home"],
+      "lastVerified": "2026-08-25"
+    }
+  ]
+}

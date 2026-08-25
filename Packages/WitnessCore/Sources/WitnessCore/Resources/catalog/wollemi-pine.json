@@ -1,0 +1,258 @@
+{
+  "id": "wollemi-pine",
+  "schemaVersion": 1,
+  "commonName": "Wollemi Pine",
+  "scientificName": "Wollemia nobilis",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "A secret canyon in Wollemi National Park, Australia",
+  "hook": "Known only from fossils — until a ranger walked into its canyon.",
+  "story": [
+    {
+      "id": "wollemi-discovery",
+      "text": "In 1994, an off-duty parks ranger dropped into a remote canyon northwest of Sydney and stood among trees no living botanist had ever seen.",
+      "sourceIDs": [
+        "bgs-global-endeavour"
+      ]
+    },
+    {
+      "id": "wollemi-fossil",
+      "text": "They were Wollemi pines — a conifer known only from fossils, its last trace about two million years old, its family a companion of the dinosaurs.",
+      "sourceIDs": [
+        "bgs-wollemi-research"
+      ]
+    },
+    {
+      "id": "wollemi-dinosaur",
+      "text": "Botanists called the discovery the equivalent of finding a small dinosaur alive.",
+      "sourceIDs": [
+        "bgs-30-years-dinosaur-trees"
+      ]
+    },
+    {
+      "id": "wollemi-strange",
+      "text": "The tree is strange in person: dark bark that bubbles like chocolate, fern-like sprays of leaves, and trunks that multiply — some trees carry more than twenty.",
+      "sourceIDs": [
+        "bgs-wollemi-research",
+        "nsw-bionet-wollemi-profile",
+        "bgs-i-spy-wollemi"
+      ]
+    },
+    {
+      "id": "wollemi-coppicing",
+      "text": "Self-coppicing lets a single tree persist for centuries, trunk after trunk.",
+      "sourceIDs": [
+        "nsw-bionet-wollemi-profile",
+        "bgs-i-spy-wollemi"
+      ]
+    },
+    {
+      "id": "wollemi-secret",
+      "text": "Only 46 adult trees and 43 juveniles remain in the wild, and their canyon is a state secret.",
+      "sourceIDs": [
+        "npws-wollemi-conservation-project",
+        "bgs-30-years-dinosaur-trees"
+      ]
+    },
+    {
+      "id": "wollemi-pathogen",
+      "text": "The secrecy is protection: one visitor's boots could carry in the root-rot pathogen that kills them.",
+      "sourceIDs": [
+        "npws-wollemi-conservation-project",
+        "bgs-wonders-conservation"
+      ]
+    },
+    {
+      "id": "wollemi-fire",
+      "text": "In the Black Summer of 2019–20, firefighters and air tankers saved the only known grove as fire closed around it.",
+      "sourceIDs": [
+        "npws-fire-recovery-2020",
+        "bgs-global-endeavour"
+      ]
+    },
+    {
+      "id": "wollemi-insurance",
+      "text": "The insurance policy is planetary: cultivated Wollemi pines now grow in gardens across the world, and new translocated groves are taking root at secret sites inside the park.",
+      "sourceIDs": [
+        "bgs-global-endeavour",
+        "npws-wollemi-conservation-project"
+      ]
+    },
+    {
+      "id": "wollemi-witness",
+      "text": "To witness the Wollemi pine is to look after deep time itself — a living fossil that survived everything except, perhaps, us.",
+      "sourceIDs": [
+        "bgs-30-years-dinosaur-trees"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-wollemi-pine",
+    "title": "Read the dinosaur tree's story",
+    "summary": "Read the NSW National Parks conservation project page: the secret site, the pathogen protocols, and the new translocated groves.",
+    "effort": "4 minutes",
+    "destinationURL": "https://www.nationalparks.nsw.gov.au/conservation-programs/wollemi-pine-conservation-project",
+    "destinationOrganization": "NSW National Parks",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "npws-wollemi-conservation-project"
+    ],
+    "lastVerified": "2026-08-25",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "wollemi-pine-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 96f244b9-8176-4882-981c-75c324c0961c, 2026-08-25; rights record docs/media/wollemi-pine-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-19",
+  "sources": [
+    {
+      "id": "nsw-bionet-wollemi-profile",
+      "title": "Wollemi Pine — profile",
+      "organization": "NSW Environment and Heritage",
+      "url": "https://threatenedspecies.bionet.nsw.gov.au/profile?id=10840",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "npws-wollemi-conservation-project",
+      "title": "Wollemi pine conservation project",
+      "organization": "NSW National Parks and Wildlife Service",
+      "url": "https://www.nationalparks.nsw.gov.au/conservation-programs/wollemi-pine-conservation-project",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "npws-fire-recovery-2020",
+      "title": "Recovery from the 2019-20 fires",
+      "organization": "NSW National Parks and Wildlife Service",
+      "url": "https://www.nationalparks.nsw.gov.au/about-npws/fire-recovery-2020",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "bgs-wollemi-research",
+      "title": "Wollemi Pine research projects",
+      "organization": "Botanic Gardens of Sydney",
+      "url": "https://www.botanicgardens.org.au/wollemi-pine-research-projects",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "bgs-30-years-dinosaur-trees",
+      "title": "30 years since the historic discovery of ancient dinosaur trees",
+      "organization": "Botanic Gardens of Sydney",
+      "url": "https://www.botanicgardens.org.au/discover-and-learn/watch-listen-read/30-years-historic-discovery-ancient-dinosaur-trees",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "bgs-global-endeavour",
+      "title": "The global endeavour to save Australia's iconic dinosaur tree",
+      "organization": "Botanic Gardens of Sydney",
+      "url": "https://www.botanicgardens.org.au/discover-and-learn/watch-listen-read/global-endeavour-save-australias-iconic-dinosaur-tree",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "bgs-i-spy-wollemi",
+      "title": "I Spy A Wollemi Pine",
+      "organization": "Botanic Gardens of Sydney",
+      "url": "https://www.botanicgardens.org.au/discover-and-learn/plant-conservation-and-discoveries/i-spy-wollemi-pine",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "bgs-wonders-conservation",
+      "title": "Conservation of the Wollemi Pine",
+      "organization": "Botanic Gardens of Sydney",
+      "url": "https://www.botanicgardens.org.au/teachers-and-schools/teacher-resources/primary-learning-resources/wonders-wollemi/conservation",
+      "lastAccessed": "2026-08-25"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-25",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified NSW Government and Botanic Gardens of Sydney pages — the catalog's first plant. Schema adapted honestly: 'diet' describes how a conifer feeds; the wild site is secret, so the region circle deliberately covers the whole national park. 'Coco Pops' bark folklore replaced by the sourced 'bubbling chocolate' wording; the fire is named only as the 2019-20 Black Summer per sources. The NSW-environment news page cited in research 404s to direct fetch, so it and its '835 saplings' figure were dropped; translocation is cited to NPWS instead."
+  },
+  "stats": {
+    "size": "Up to 43 m — a forest giant",
+    "lifespan": "Trunks live 500+ years, self-renewing",
+    "diet": "Sunlight — a rainforest conifer",
+    "populationEstimate": "46 adults + 43 juveniles wild",
+    "populationAsOf": "per NSW National Parks",
+    "trend": "stable",
+    "threats": [
+      "Wildfire",
+      "Root-rot pathogen",
+      "Human disturbance",
+      "Tiny lone population"
+    ],
+    "sourceIDs": [
+      "npws-wollemi-conservation-project",
+      "nsw-bionet-wollemi-profile",
+      "bgs-global-endeavour"
+    ]
+  },
+  "reproduction": {
+    "id": "wollemi-reproduction",
+    "text": "Each tree carries both cone sexes — elongated pollen cones and spherical seed cones that ripen over eighteen months. And when seed fails, the tree endures anyway, sprouting new trunks from its own base.",
+    "sourceIDs": [
+      "bgs-wollemi-research",
+      "nsw-bionet-wollemi-profile",
+      "bgs-i-spy-wollemi"
+    ]
+  },
+  "insight": {
+    "id": "wollemi-insight",
+    "text": "In 2021 the grove became New South Wales's first 'Asset of Intergenerational Significance' — the strongest legal protection the state can give.",
+    "sourceIDs": [
+      "npws-wollemi-conservation-project"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Wollemi National Park",
+      "latitude": -33.0,
+      "longitude": 150.35,
+      "radiusKm": 60
+    }
+  ],
+  "gallery": [
+    "wollemi-pine-plate-01",
+    "wollemi-pine-context-01",
+    "wollemi-pine-detail-01",
+    "wollemi-pine-behavior-01",
+    "wollemi-pine-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "npws-wollemi-project",
+      "organization": "NSW National Parks and Wildlife Service",
+      "title": "Wollemi pine conservation project",
+      "summary": "Restricted access, translocated backup groves, a seed bank, and the living collection at Mount Annan.",
+      "url": "https://www.nationalparks.nsw.gov.au/conservation-programs/wollemi-pine-conservation-project",
+      "kind": "program",
+      "sourceIDs": [
+        "npws-wollemi-conservation-project"
+      ],
+      "lastVerified": "2026-08-25"
+    },
+    {
+      "id": "bgs-wollemi-program",
+      "organization": "Botanic Gardens of Sydney",
+      "title": "Research & global meta-collection",
+      "summary": "Propagation science, the I Spy citizen survey of cultivated trees, and a genetically diverse collection shared with gardens worldwide.",
+      "url": "https://www.botanicgardens.org.au/wollemi-pine-research-projects",
+      "kind": "program",
+      "sourceIDs": [
+        "bgs-wollemi-research",
+        "bgs-i-spy-wollemi"
+      ],
+      "lastVerified": "2026-08-25"
+    }
+  ]
+}
