@@ -14,7 +14,7 @@ let package = Package(
     targets: [
         .target(
             name: "WitnessCore",
-            resources: [.process("Resources")]
+            resources: [.copy("Resources/catalog")]
         ),
         .testTarget(
             name: "WitnessCoreTests",

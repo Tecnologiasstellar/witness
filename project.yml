@@ -17,6 +17,12 @@ targets:
     platform: iOS
     sources:
       - path: Packages/WitnessCore/Sources/WitnessCore
+        excludes:
+          - "Resources/**"
+      # Folder reference so the framework bundle keeps the catalog/ subdirectory,
+      # matching SPM's .copy("Resources/catalog") layout.
+      - path: Packages/WitnessCore/Sources/WitnessCore/Resources/catalog
+        type: folder
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.avp.witness.core

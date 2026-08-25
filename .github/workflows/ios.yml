@@ -10,6 +10,16 @@ permissions:
   contents: read
 
 jobs:
+  content-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      # An approved card with a dead URL fails the build (trust policy).
+      - name: Check catalog links
+        run: python3 tools/check_links.py
+
   core-and-build:
     runs-on: macos-15
     timeout-minutes: 20

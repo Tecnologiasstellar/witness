@@ -1,0 +1,156 @@
+{
+  "id": "axolotl",
+  "schemaVersion": 1,
+  "commonName": "Axolotl",
+  "scientificName": "Ambystoma mexicanum",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Canals of Xochimilco, southern Mexico City, Mexico",
+  "hook": "The salamander that never grows up lives in one city’s canals.",
+  "story": [
+    {
+      "id": "axolotl-refusal",
+      "text": "The axolotl is a salamander that refused to grow up, and made a life of it.",
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ]
+    },
+    {
+      "id": "axolotl-neoteny",
+      "text": "Unlike other salamanders, it is neotenic: it keeps its larval body—feathery external gills, a swimming tail, a fin along the body—for its entire life, and never leaves the water.",
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ]
+    },
+    {
+      "id": "axolotl-lineage",
+      "text": "It descends from tiger salamanders and has lived in central Mexico for perhaps ten thousand years.",
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ]
+    },
+    {
+      "id": "axolotl-basin",
+      "text": "Its world was once a great basin of lakes and wetlands—Xochimilco and Chalco—along the southern edge of the Valley of Mexico.",
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ]
+    },
+    {
+      "id": "axolotl-drained",
+      "text": "Most of that water was drained as Mexico City grew, and wild axolotls now survive in a few isolated sites in the city’s south.",
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ]
+    },
+    {
+      "id": "axolotl-culture",
+      "text": "The axolotl is woven deep into Mexican history, culture, and identity, and it is famous in science for regrowing what it loses.",
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ]
+    },
+    {
+      "id": "axolotl-squeeze",
+      "text": "Yet fame has not protected the water it needs. Its remaining habitat is small, isolated, and hemmed in by one of the world’s largest cities.",
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ]
+    },
+    {
+      "id": "axolotl-witness",
+      "text": "To witness the axolotl is to see that a species can be everywhere in culture and almost nowhere in the wild.",
+      "sourceIDs": [
+        "sdzwa-axolotl"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-axolotl-water",
+    "title": "Understand the water it needs",
+    "summary": "Read San Diego Zoo Wildlife Alliance’s axolotl profile—neoteny, the drained lakes, and the canals where the wild ones remain.",
+    "effort": "4 minutes",
+    "destinationURL": "https://animals.sandiegozoo.org/animals/axolotl",
+    "destinationOrganization": "San Diego Zoo Wildlife Alliance",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "sdzwa-axolotl"
+    ],
+    "lastVerified": "2026-08-22",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "axolotl-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Rights record docs/media/axolotl-plate-01-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-08-24",
+  "sources": [
+    {
+      "id": "sdzwa-axolotl",
+      "title": "Axolotl",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/axolotl",
+      "lastAccessed": "2026-08-22"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Prototype copy derived from the declared San Diego Zoo Wildlife Alliance profile. Requires conservation-partner review before release."
+  },
+  "stats": {
+    "size": "8–12 in · 56–226 g",
+    "lifespan": "10–15 years",
+    "diet": "Worms, mollusks, crustaceans, insect larvae & small fish",
+    "trend": "decreasing",
+    "threats": [
+      "Habitat drained & degraded",
+      "Water pollution",
+      "Invasive species",
+      "Urban growth"
+    ],
+    "sourceIDs": [
+      "sdzwa-axolotl"
+    ]
+  },
+  "reproduction": {
+    "id": "axolotl-reproduction",
+    "text": "A female lays 300 to 1,000 eggs, placed one by one on plants and rocks to keep them from predators. The eggs hatch about two weeks later, and the young mature at six to eight months.",
+    "sourceIDs": [
+      "sdzwa-axolotl"
+    ]
+  },
+  "insight": {
+    "id": "axolotl-insight",
+    "text": "Axolotls are over a thousand times more resistant to cancer than mammals — one more reason science watches them closely.",
+    "sourceIDs": [
+      "sdzwa-axolotl"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Xochimilco canals, southern Mexico City",
+      "latitude": 19.27,
+      "longitude": -99.1,
+      "radiusKm": 25
+    }
+  ],
+  "gallery": [
+    "axolotl-plate-01",
+    "axolotl-context-01",
+    "axolotl-detail-01",
+    "axolotl-behavior-01",
+    "axolotl-scale-01"
+  ],
+  "programs": []
+}
