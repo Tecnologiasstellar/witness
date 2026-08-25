@@ -1,0 +1,248 @@
+{
+  "id": "amur-tiger",
+  "schemaVersion": 1,
+  "commonName": "Amur Tiger",
+  "scientificName": "Panthera tigris altaica",
+  "conservationStatus": {
+    "displayName": "Endangered",
+    "normalizedValue": "endangered"
+  },
+  "generalizedRange": "Russian Far East and northeast China",
+  "hook": "By the 1940s, twenty or thirty remained. The largest cat came back.",
+  "story": [
+    {
+      "id": "amur-tiger-size",
+      "text": "The Amur tiger is the largest cat alive: up to ten feet nose to tail, six hundred and sixty pounds, moving soundlessly on fur-lined paws.",
+      "sourceIDs": ["si-national-zoo-tiger", "si-national-zoo-vostok"]
+    },
+    {
+      "id": "amur-tiger-winter",
+      "text": "It is the only tiger built for deep winter — the thickest coat of any tiger, a short ruff, snow-pale orange with sparse stripes.",
+      "sourceIDs": ["sdzwa-tiger", "si-national-zoo-vostok"]
+    },
+    {
+      "id": "amur-tiger-pine",
+      "text": "Its forest runs on one tree: Korean pine, whose nuts feed the boar and deer that feed the tiger.",
+      "sourceIDs": ["wwf-uk-restoring-amur-heilong", "wwf-uk-amur-heilong"]
+    },
+    {
+      "id": "amur-tiger-range",
+      "text": "A single tiger may range over ten thousand square kilometers.",
+      "sourceIDs": ["sdzwa-tiger"]
+    },
+    {
+      "id": "amur-tiger-hunting",
+      "text": "In the early 1900s hunters took fifty or sixty tigers a year, until by the 1940s only twenty or thirty were thought to remain.",
+      "sourceIDs": ["wcs-tiger-hunters"]
+    },
+    {
+      "id": "amur-tiger-moratorium",
+      "text": "Russia's 1948 hunting ban — the first tiger protection of its kind — likely saved the subspecies.",
+      "sourceIDs": ["wcs-tiger-hunters"]
+    },
+    {
+      "id": "amur-tiger-guarded",
+      "text": "Recovery has been slow and guarded: rangers backed with intelligence support, and camera traps watching the same valleys since 1992.",
+      "sourceIDs": ["wcs-tigers-program", "wcs-return-to-bounty"]
+    },
+    {
+      "id": "amur-tiger-orphans",
+      "text": "Even orphans count: six rescued cubs released in the Pri-Amur have produced at least twelve wild cubs where tigers were absent for fifty years.",
+      "sourceIDs": ["wcs-priamur-restoration"]
+    },
+    {
+      "id": "amur-tiger-census",
+      "text": "Russia's 2022 census counted more than 750, and across the Chinese border sightings keep increasing.",
+      "sourceIDs": ["amur-tiger-center", "wwf-uk-restoring-amur-heilong"]
+    },
+    {
+      "id": "amur-tiger-witness",
+      "text": "To witness the Amur tiger is to stand with the deep snow forests — and against everything the poachers' market still wants from them.",
+      "sourceIDs": ["wwf-uk-amur-heilong", "si-national-zoo-tiger"]
+    }
+  ],
+  "action": {
+    "id": "learn-amur-tiger",
+    "title": "Meet the largest cat",
+    "summary": "Read the Smithsonian National Zoo's tiger profile: the subspecies, the threats, and the slow Amur recovery.",
+    "effort": "6 minutes",
+    "destinationURL": "https://nationalzoo.si.edu/animals/tiger",
+    "destinationOrganization": "Smithsonian's National Zoo",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["si-national-zoo-tiger"],
+    "lastVerified": "2026-08-24",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "amur-tiger-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 62bf19b1-32eb-4aff-a572-0c4042c56d32, 2026-08-24; rights record docs/media/amur-tiger-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-07",
+  "sources": [
+    {
+      "id": "si-national-zoo-tiger",
+      "title": "Tiger",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/animals/tiger",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "si-national-zoo-vostok",
+      "title": "Meet Vostok, the Zoo's New Amur Tiger",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/animals/news/meet-vostok-zoos-new-amur-tiger",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "sdzwa-tiger",
+      "title": "Tiger",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/tiger",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wcs-tigers-program",
+      "title": "Tigers",
+      "organization": "Wildlife Conservation Society",
+      "url": "https://www.wcs.org/our-work/species/tigers",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wcs-tiger-hunters",
+      "title": "The Tiger Hunters",
+      "organization": "Wildlife Conservation Society",
+      "url": "https://blog.wcs.org/photo/2016/12/05/the-tiger-hunters-russia-arsenyev-ussuri-kray/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wcs-return-to-bounty",
+      "title": "A Return to Bounty",
+      "organization": "Wildlife Conservation Society",
+      "url": "https://blog.wcs.org/photo/2023/01/13/a-return-to-bounty-tiger-big-cat-camera-trap-russia/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wcs-priamur-restoration",
+      "title": "Tiger Population Restored in Russia Where Absent for 50 Years",
+      "organization": "Wildlife Conservation Society",
+      "url": "https://newsroom.wcs.org/News-Releases/articleType/ArticleView/articleId/24030/Conservationists-Have-Successfully-Restored-Tiger-Population-in-Russia-Where-Absent-for-50-years.aspx",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wwf-uk-amur-heilong",
+      "title": "Amur (Heilong) River Basin",
+      "organization": "WWF-UK",
+      "url": "https://www.wwf.org.uk/where-we-work/amur-heilong",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wwf-uk-restoring-amur-heilong",
+      "title": "Restoring the Tiger's Amur Heilong Home",
+      "organization": "WWF-UK",
+      "url": "https://www.wwf.org.uk/success-stories/restoring-amur-heilong",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "amur-tiger-center",
+      "title": "Amur Tiger Center",
+      "organization": "Russian Geographical Society",
+      "url": "https://amur-tiger.ru/en/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "si-national-zoo-tiger-size",
+      "title": "Just How Big Are Tigers? And More Tiger Facts",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/animals/news/just-how-big-are-tigers-what-does-tiger-poop-look-and-more-tiger-facts",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wcs-unfriendly-neighbors",
+      "title": "Unfriendly Neighbors",
+      "organization": "Wildlife Conservation Society",
+      "url": "https://blog.wcs.org/photo/2015/11/04/unfriendly-neighbors-amur-tigers-wolves-russia/",
+      "lastAccessed": "2026-08-24"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified Smithsonian, SDZWA, WCS, WWF-UK, and Amur Tiger Center pages. Population presented as a range: WCS/Smithsonian ~500 vs Russia's 2022 census 750+ (methods differ). Male weight uses the standard 660 lb, not SDZ's 933 lb outlier record. Region circles cover whole mountain ranges."
+  },
+  "stats": {
+    "size": "Up to 10 ft · 660 lbs — the largest cat",
+    "lifespan": "10–15 years in the wild",
+    "diet": "Wild boar & deer — 75 lbs in a night",
+    "populationEstimate": "500–750",
+    "populationAsOf": "2022 Russian census · per Amur Tiger Center",
+    "trend": "increasing",
+    "threats": [
+      "Poaching for medicine",
+      "Prey depletion",
+      "Korean-pine logging",
+      "Canine distemper"
+    ],
+    "sourceIDs": ["si-national-zoo-tiger", "wcs-tigers-program", "wwf-uk-amur-heilong", "amur-tiger-center", "wcs-unfriendly-neighbors"]
+  },
+  "reproduction": {
+    "id": "amur-tiger-reproduction",
+    "text": "Two to four cubs are typical, born after about a hundred days and staying with their mother up to two years. Usually only two survive — and each will one day need an enormous territory of its own.",
+    "sourceIDs": ["si-national-zoo-tiger", "sdzwa-tiger"]
+  },
+  "insight": {
+    "id": "amur-tiger-insight",
+    "text": "A single Amur tiger's range can exceed 10,000 square kilometers — and for all that size, it can clear roughly eighteen feet in one jump.",
+    "sourceIDs": ["sdzwa-tiger", "si-national-zoo-tiger-size"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Sikhote-Alin mountains",
+      "latitude": 45.5,
+      "longitude": 136.0,
+      "radiusKm": 175
+    },
+    {
+      "name": "Southwest Primorye border forests",
+      "latitude": 43.2,
+      "longitude": 131.2,
+      "radiusKm": 60
+    }
+  ],
+  "gallery": [
+    "amur-tiger-plate-01",
+    "amur-tiger-context-01",
+    "amur-tiger-detail-01",
+    "amur-tiger-behavior-01",
+    "amur-tiger-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "wcs-tiger-program",
+      "organization": "Wildlife Conservation Society",
+      "title": "Tiger program",
+      "summary": "Monitors Sikhote-Alin tigers with camera traps running since 1992 and backs rangers with the intelligence that catches poachers and traffickers.",
+      "url": "https://www.wcs.org/our-work/species/tigers",
+      "kind": "program",
+      "sourceIDs": ["wcs-tigers-program", "wcs-return-to-bounty"],
+      "lastVerified": "2026-08-24"
+    },
+    {
+      "id": "amur-tiger-center-program",
+      "organization": "Amur Tiger Center",
+      "title": "Russian tiger census & recovery",
+      "summary": "Runs Russia's tiger census, helps communities live alongside tigers, and coordinates the national recovery program.",
+      "url": "https://amur-tiger.ru/en/",
+      "kind": "program",
+      "sourceIDs": ["amur-tiger-center"],
+      "lastVerified": "2026-08-24"
+    }
+  ]
+}

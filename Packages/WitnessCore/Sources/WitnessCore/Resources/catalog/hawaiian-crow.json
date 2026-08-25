@@ -1,0 +1,206 @@
+{
+  "id": "hawaiian-crow",
+  "schemaVersion": 1,
+  "commonName": "Hawaiian Crow",
+  "scientificName": "Corvus hawaiiensis",
+  "conservationStatus": {
+    "displayName": "Extinct in the Wild",
+    "normalizedValue": "extinct_in_the_wild"
+  },
+  "generalizedRange": "Hawaiʻi — bred in care, returning to Maui's forests",
+  "hook": "Extinct in the wild since 2002. Five now fly over Maui.",
+  "story": [
+    {
+      "id": "alala-bird",
+      "text": "The ʻalalā is Hawaiʻi's largest surviving forest bird: a soft-black crow with brownish wings and stiff throat feathers it raises in display.",
+      "sourceIDs": ["abc-alala-profile"]
+    },
+    {
+      "id": "alala-voice",
+      "text": "It speaks in at least 34 distinct calls — shrieks, howls, whoops, and cries that sound almost human.",
+      "sourceIDs": ["abc-alala-profile", "sdzwa-animals-alala"]
+    },
+    {
+      "id": "alala-gardener",
+      "text": "It was the forest's gardener, carrying and planting the seeds of native trees.",
+      "sourceIDs": ["alala-project-home", "abc-alala-profile"]
+    },
+    {
+      "id": "alala-extinct",
+      "text": "In 2002 the last wild birds were gone, and the species was declared extinct in the wild.",
+      "sourceIDs": ["abc-alala-profile", "sdzwa-science-alala"]
+    },
+    {
+      "id": "alala-survived",
+      "text": "It survived indoors: from fewer than twenty birds in the late 1990s, conservation breeding has grown the flock past one hundred and ten.",
+      "sourceIDs": ["sdzwa-science-alala"]
+    },
+    {
+      "id": "alala-hawk",
+      "text": "Wildness is harder to restore than numbers. Releases on Hawaiʻi Island struggled, in part because the ʻio — the Hawaiian hawk — was waiting.",
+      "sourceIDs": ["abc-alala-profile", "dlnr-maui-release-2024"]
+    },
+    {
+      "id": "alala-maui",
+      "text": "So in late 2024 the project tried a new island: five juveniles flew free in East Maui, where no ʻio live.",
+      "sourceIDs": ["dlnr-maui-release-2024"]
+    },
+    {
+      "id": "alala-backpacks",
+      "text": "They wear GPS backpacks and visit feeder boxes while they learn to be wild.",
+      "sourceIDs": ["dlnr-maui-release-2024"]
+    },
+    {
+      "id": "alala-aumakua",
+      "text": "In Hawaiian culture the ʻalalā are ʻaumākua — spirit guardians. Like our ancestors, a recovery specialist says: the forest wouldn't be there without these birds.",
+      "sourceIDs": ["dlnr-maui-release-2024", "sdzwa-maui-release-pr"]
+    },
+    {
+      "id": "alala-witness",
+      "text": "To witness the ʻalalā is to hold a door open — e hoʻolāʻau hou ka ʻalalā: may it thrive in its forest once again.",
+      "sourceIDs": ["alala-project-home"]
+    }
+  ],
+  "action": {
+    "id": "learn-alala",
+    "title": "Meet the ʻalalā",
+    "summary": "Read the American Bird Conservancy's profile: the 34 calls, the extinction, and the long road back through two bird conservation centers.",
+    "effort": "6 minutes",
+    "destinationURL": "https://abcbirds.org/birds/alala-hawaiian-crow/",
+    "destinationOrganization": "American Bird Conservancy",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["abc-alala-profile"],
+    "lastVerified": "2026-08-25",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "hawaiian-crow-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 5f61084a-4f57-453a-a6a8-78a076ced3db, 2026-08-25; rights record docs/media/hawaiian-crow-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-18",
+  "sources": [
+    {
+      "id": "sdzwa-animals-alala",
+      "title": "ʻAlalā (Hawaiian Crow)",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/alala-hawaiian-crow",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "abc-alala-profile",
+      "title": "ʻAlalā (Hawaiian Crow)",
+      "organization": "American Bird Conservancy",
+      "url": "https://abcbirds.org/birds/alala-hawaiian-crow/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "sdzwa-science-alala",
+      "title": "ʻAlalā Recovery Program",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://science.sandiegozoo.org/species/alala",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "sdzwa-maui-release-pr",
+      "title": "Five ʻAlalā Released on Maui for the First Time Ever",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://sandiegozoowildlifealliance.org/PR/alala-release",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "dlnr-maui-release-2024",
+      "title": "Historic First Release of ʻAlalā in East Maui",
+      "organization": "Hawaiʻi DLNR",
+      "url": "https://dlnr.hawaii.gov/blog/2024/12/04/nr24-162/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "alala-project-home",
+      "title": "The ʻAlalā Project",
+      "organization": "Hawaiʻi DLNR",
+      "url": "https://dlnr.hawaii.gov/alalaproject/",
+      "lastAccessed": "2026-08-25"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-25",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified SDZWA, ABC, and Hawaiʻi DLNR pages. First extinct-in-the-wild card; a new normalizedValue 'extinct_in_the_wild' is introduced. Population: SDZWA's precise 114 used (DLNR 'over 110', ABC '120+'). The Maui release site (Kīpahulu Forest Reserve) is public in DLNR's own announcement. DLNR pages block automated fetchers (403 warn-pass in CI) but were read live."
+  },
+  "stats": {
+    "size": "20 in · about 1 lb",
+    "lifespan": "About 20 years",
+    "diet": "Native fruits & insects — a seed carrier",
+    "populationEstimate": "About 114 — all but five in care",
+    "populationAsOf": "per San Diego Zoo Wildlife Alliance",
+    "trend": "increasing",
+    "threats": [
+      "Mosquito-borne malaria",
+      "ʻIo predation on releases",
+      "Cats, rats & mongoose",
+      "Toxoplasmosis"
+    ],
+    "sourceIDs": ["abc-alala-profile", "sdzwa-science-alala", "dlnr-maui-release-2024", "sdzwa-animals-alala"]
+  },
+  "reproduction": {
+    "id": "alala-reproduction",
+    "text": "Pairs mate for life. One to five greenish-blue eggs come between March and July, incubated by the female for three weeks; usually two chicks survive. Since 1996, breeding centers on two islands have carried the species.",
+    "sourceIDs": ["sdzwa-animals-alala", "abc-alala-profile", "sdzwa-science-alala"]
+  },
+  "insight": {
+    "id": "alala-insight",
+    "text": "A 2016 study showed the ʻalalā naturally makes and uses stick tools — among crows, a talent shared only with the New Caledonian crow.",
+    "sourceIDs": ["abc-alala-profile", "sdzwa-animals-alala"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Kaʻū & Kona forests, Hawaiʻi Island",
+      "latitude": 19.45,
+      "longitude": -155.75,
+      "radiusKm": 60
+    },
+    {
+      "name": "East Maui release forests",
+      "latitude": 20.68,
+      "longitude": -156.1,
+      "radiusKm": 25
+    }
+  ],
+  "gallery": [
+    "hawaiian-crow-plate-01",
+    "hawaiian-crow-context-01",
+    "hawaiian-crow-detail-01",
+    "hawaiian-crow-behavior-01",
+    "hawaiian-crow-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "alala-project",
+      "organization": "Hawaiʻi DLNR",
+      "title": "The ʻAlalā Project",
+      "summary": "The state-led partnership returning the ʻalalā to the wild — the 2024 Maui release is its newest chapter.",
+      "url": "https://dlnr.hawaii.gov/alalaproject/",
+      "kind": "program",
+      "sourceIDs": ["alala-project-home", "dlnr-maui-release-2024"],
+      "lastVerified": "2026-08-25"
+    },
+    {
+      "id": "sdzwa-alala-recovery",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "title": "ʻAlalā Recovery Program",
+      "summary": "Runs the Keauhou and Maui Bird Conservation Centers, where genetics-guided breeding grew the species from under twenty birds.",
+      "url": "https://science.sandiegozoo.org/species/alala",
+      "kind": "program",
+      "sourceIDs": ["sdzwa-science-alala"],
+      "lastVerified": "2026-08-25"
+    }
+  ]
+}

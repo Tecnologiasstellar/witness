@@ -1,0 +1,213 @@
+{
+  "id": "staghorn-coral",
+  "schemaVersion": 1,
+  "commonName": "Staghorn Coral",
+  "scientificName": "Acropora cervicornis",
+  "conservationStatus": {
+    "displayName": "Threatened",
+    "normalizedValue": "threatened"
+  },
+  "generalizedRange": "Florida, the Bahamas, and the Caribbean",
+  "hook": "The reef is an animal. And it can be replanted.",
+  "story": [
+    {
+      "id": "coral-animal",
+      "text": "Staghorn coral is an animal — one animal made of thousands: identical polyps growing together into antlered branches.",
+      "sourceIDs": ["noaa-staghorn-species"]
+    },
+    {
+      "id": "coral-partnership",
+      "text": "It runs on a partnership: photosynthetic algae live inside its cells and feed it by day, while tentacled polyps snatch plankton.",
+      "sourceIDs": ["noaa-staghorn-species"]
+    },
+    {
+      "id": "coral-growth",
+      "text": "Healthy, it grows up to eight inches of new branch a year, and its thickets are habitat for reef fish.",
+      "sourceIDs": ["noaa-staghorn-species"]
+    },
+    {
+      "id": "coral-builder",
+      "text": "These corals built the Caribbean's reefs over the past five thousand years, and their thickets blunt storm waves before shorelines.",
+      "sourceIDs": ["noaa-staghorn-species"]
+    },
+    {
+      "id": "coral-collapse",
+      "text": "Then, beginning in the 1980s, white band disease erased 97 percent of it.",
+      "sourceIDs": ["noaa-staghorn-species"]
+    },
+    {
+      "id": "coral-bleaching",
+      "text": "The remaining danger is heat: too-warm water makes coral expel its algae, bleaching white and starving.",
+      "sourceIDs": ["noaa-crcp-bleaching-diagram"]
+    },
+    {
+      "id": "coral-fragments",
+      "text": "But a broken branch is not an ending — fragments that reattach grow into whole new colonies.",
+      "sourceIDs": ["noaa-staghorn-species"]
+    },
+    {
+      "id": "coral-nurseries",
+      "text": "Restoration runs on that fact: divers hang finger-sized fragments from underwater coral trees, and in six to nine months each is reef-ready.",
+      "sourceIDs": ["crf-coral-tree-nurseries"]
+    },
+    {
+      "id": "coral-spawning",
+      "text": "Once a year, after the late-summer full moon, whole reefs spawn in synchrony — and outplanted staghorn at Molasses Reef became the first restored corals documented joining in.",
+      "sourceIDs": ["noaa-staghorn-species", "crf-coral-spawning"]
+    },
+    {
+      "id": "coral-witness",
+      "text": "To witness the staghorn is to count the reef itself as a creature that can be replanted.",
+      "sourceIDs": ["crf-restoration"]
+    }
+  ],
+  "action": {
+    "id": "learn-staghorn-coral",
+    "title": "Meet the reef-builder",
+    "summary": "Read NOAA Fisheries' staghorn profile: the polyp-and-algae partnership, the white band collapse, and how fragmentation makes restoration possible.",
+    "effort": "6 minutes",
+    "destinationURL": "https://www.fisheries.noaa.gov/species/staghorn-coral",
+    "destinationOrganization": "NOAA Fisheries",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["noaa-staghorn-species"],
+    "lastVerified": "2026-08-25",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "staghorn-coral-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 4a2443a2-045a-46b2-badd-20e8cb197fb3, 2026-08-25; rights record docs/media/staghorn-coral-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-14",
+  "sources": [
+    {
+      "id": "noaa-staghorn-species",
+      "title": "Staghorn Coral",
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/staghorn-coral",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "noaa-crcp-bleaching-diagram",
+      "title": "Water Temperature, Zooxanthellae and Coral Bleaching",
+      "organization": "NOAA Coral Reef Conservation Program",
+      "url": "https://coralreef.noaa.gov/digital-corals/visual-media/infographics/water-temp-coral-bleaching-diagram",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "crf-coral-tree-nurseries",
+      "title": "CRF Coral Tree Nurseries",
+      "organization": "Coral Restoration Foundation",
+      "url": "https://coralrestoration.org/restoration/crf-coral-tree-nurseries/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "crf-restoration",
+      "title": "Restoration",
+      "organization": "Coral Restoration Foundation",
+      "url": "https://coralrestoration.org/restoration/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "crf-coral-spawning",
+      "title": "Coral Spawning",
+      "organization": "Coral Restoration Foundation",
+      "url": "https://coralrestoration.org/coral-spawning/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "crf-florida",
+      "title": "CRF Florida",
+      "organization": "Coral Restoration Foundation",
+      "url": "https://coralrestoration.org/where-we-work/crf-florida/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "noaa-mission-iconic-reefs",
+      "title": "Restoring Seven Iconic Reefs",
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/southeast/habitat-conservation/restoring-seven-iconic-reefs-mission-recover-coral-reefs-florida-keys",
+      "lastAccessed": "2026-08-25"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-25",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified NOAA Fisheries, NOAA CRCP, and Coral Restoration Foundation pages. First non-vertebrate reef-builder card; the copy makes explicit it is an animal. Growth stated as the sourced 8 in/yr figure, not the 'fastest-growing' superlative. 2023 heatwave study was not fetch-verified and is excluded. Ocean regions are broad basins."
+  },
+  "stats": {
+    "size": "Colonies to 4 ft tall · 6 ft wide",
+    "lifespan": "Indefinite — colonies regrow from fragments",
+    "diet": "Algae partners by day, plankton by night",
+    "populationEstimate": "Down 97% since the 1980s",
+    "populationAsOf": "per NOAA Fisheries",
+    "trend": "decreasing",
+    "threats": [
+      "Warming & bleaching",
+      "White band disease",
+      "Ocean acidification",
+      "Land-based pollution"
+    ],
+    "sourceIDs": ["noaa-staghorn-species", "noaa-crcp-bleaching-diagram"]
+  },
+  "reproduction": {
+    "id": "coral-reproduction",
+    "text": "Once a year, after the late-summer full moon, colonies broadcast eggs and sperm into the water in synchrony. The rest of the year, reproduction is a matter of breakage — fragments that land well become new colonies.",
+    "sourceIDs": ["noaa-staghorn-species", "crf-coral-spawning"]
+  },
+  "insight": {
+    "id": "coral-insight",
+    "text": "The world's largest in-ocean coral nursery — 1.5 acres off Tavernier, Florida — can grow more than 50,000 reef-ready corals a year on underwater trees.",
+    "sourceIDs": ["crf-coral-tree-nurseries", "crf-florida"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Florida Keys reef tract",
+      "latitude": 24.7,
+      "longitude": -81.3,
+      "radiusKm": 140
+    },
+    {
+      "name": "Caribbean & Bahamas",
+      "latitude": 18.0,
+      "longitude": -73.0,
+      "radiusKm": 1000
+    }
+  ],
+  "gallery": [
+    "staghorn-coral-plate-01",
+    "staghorn-coral-context-01",
+    "staghorn-coral-detail-01",
+    "staghorn-coral-behavior-01",
+    "staghorn-coral-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "crf-nurseries-program",
+      "organization": "Coral Restoration Foundation",
+      "title": "Coral Tree nurseries",
+      "summary": "Grows staghorn fragments on underwater trees and outplants them to the reef in same-genotype cohorts that fuse into thickets.",
+      "url": "https://coralrestoration.org/restoration/crf-coral-tree-nurseries/",
+      "kind": "program",
+      "sourceIDs": ["crf-coral-tree-nurseries", "crf-restoration"],
+      "lastVerified": "2026-08-25"
+    },
+    {
+      "id": "noaa-iconic-reefs",
+      "organization": "NOAA Fisheries",
+      "title": "Mission: Iconic Reefs",
+      "summary": "Restoring seven Florida Keys reef sites toward 25% coral cover, with staghorn planted across the mission's phases.",
+      "url": "https://www.fisheries.noaa.gov/southeast/habitat-conservation/restoring-seven-iconic-reefs-mission-recover-coral-reefs-florida-keys",
+      "kind": "program",
+      "sourceIDs": ["noaa-mission-iconic-reefs"],
+      "lastVerified": "2026-08-25"
+    }
+  ]
+}

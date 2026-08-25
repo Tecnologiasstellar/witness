@@ -27,24 +27,28 @@ struct RootTabView: View {
     @State private var isReflectionPresented = false
 
     var body: some View {
-        ZStack {
-            AtlasPaper()
-            Group {
-                switch selection {
-                case .today:
-                    NavigationStack {
-                        TodayView(model: model, onOpenIndex: { isIndexPresented = true }, onOpenReflection: { isReflectionPresented = true }, onWitnessed: { selection = .notes })
+        // A plain VStack, not a safeAreaInset: insets applied outside a
+        // NavigationStack do not reliably propagate into its content, which
+        // let screens lay out underneath the tab bar.
+        VStack(spacing: 0) {
+            ZStack {
+                AtlasPaper()
+                Group {
+                    switch selection {
+                    case .today:
+                        NavigationStack {
+                            TodayView(model: model, onOpenIndex: { isIndexPresented = true }, onOpenReflection: { isReflectionPresented = true })
+                        }
+                    case .cabinet:
+                        NavigationStack { ArchiveView(model: model) }
+                    case .notes:
+                        NavigationStack { WitnessedView(model: model) }
                     }
-                case .cabinet:
-                    NavigationStack { ArchiveView(model: model) }
-                case .notes:
-                    NavigationStack { WitnessedView(model: model) }
                 }
             }
-        }
-        .safeAreaInset(edge: .bottom, spacing: 0) {
             AtlasTabBar(selection: $selection)
         }
+        .background(AtlasTheme.paper.ignoresSafeArea())
         .sheet(isPresented: $isIndexPresented) { SettingsView() }
         .sheet(isPresented: $isReflectionPresented) { PrivateReflectionSheet(model: model) }
     }
@@ -63,6 +67,10 @@ private struct AtlasTabBar: View {
                             .font(AtlasType.technical(9, weight: .semibold))
                             .tracking(1.15)
                     }
+                    // Fixed-size labels like the system tab bar: the row is one
+                    // accessibility element and large-type users get the
+                    // long-press Large Content Viewer instead of scaled text.
+                    .accessibilityElement(children: .ignore)
                     .foregroundStyle(selection == tab ? AtlasTheme.ink : AtlasTheme.inkMuted)
                     .frame(maxWidth: .infinity, minHeight: 62)
                     .contentShape(Rectangle())
@@ -71,6 +79,9 @@ private struct AtlasTabBar: View {
                 .accessibilityIdentifier("atlas.tab.\(tab.rawValue)")
                 .accessibilityLabel(tab.title.capitalized)
                 .accessibilityAddTraits(selection == tab ? .isSelected : [])
+                .accessibilityShowsLargeContentViewer {
+                    Text(tab.title.capitalized)
+                }
             }
         }
         .background(AtlasTheme.paper)

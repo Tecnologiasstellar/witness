@@ -1,8 +1,9 @@
 import SwiftUI
 import WitnessCore
 
-/// Rights-safe, code-drawn fallback. It intentionally replaces the handoff's
-/// placeholder PNGs until a per-file production rights record is approved.
+/// Renders the species' approved bundled artwork when its media record maps
+/// to an asset in the catalog; otherwise falls back to the rights-safe,
+/// code-drawn geometry (D-013).
 struct SpecimenPlate: View {
     let species: SpeciesRecord
     var showsLeaderLabels = true
@@ -10,6 +11,19 @@ struct SpecimenPlate: View {
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
+        if let artwork = UIImage(named: species.media.assetID) {
+            Image(uiImage: artwork)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .opacity(opacity)
+                .accessibilityLabel("\(species.media.depictionType) of \(species.commonName)")
+                .accessibilityAddTraits(.isImage)
+        } else {
+            fallbackGeometry
+        }
+    }
+
+    private var fallbackGeometry: some View {
         GeometryReader { proxy in
             let bodyWidth = min(proxy.size.width * 0.82, 318)
             ZStack {
@@ -62,28 +76,41 @@ struct AtlasScaleRule: View {
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Scale unavailable for this abstract prototype depiction")
+        .accessibilityAddTraits(.isStaticText)
     }
 }
 
 struct AtlasTally: View {
+    let count: Int?
     let lastVerified: String
+
+    private var countLine: String {
+        guard let count else {
+            return "COUNT UNAVAILABLE · LAST VERIFIED \(lastVerified)"
+        }
+        let formatted = count.formatted(.number.grouping(.automatic))
+        return "\(formatted) WITNESS\(count == 1 ? "" : "ES") · UPDATED TODAY"
+    }
 
     var body: some View {
         VStack(spacing: 7) {
             HStack(spacing: 7) {
-                ForEach(0..<8, id: \.self) { _ in
-                    Circle().stroke(AtlasTheme.hairline, lineWidth: 1).frame(width: 7, height: 7)
+                ForEach(0..<8, id: \.self) { index in
+                    Circle()
+                        .stroke(AtlasTheme.hairline, lineWidth: 1)
+                        .fill(index < min(count ?? 0, 8) ? AtlasTheme.sepia.opacity(0.55) : .clear)
+                        .frame(width: 7, height: 7)
                 }
             }
-            Text("COUNT UNAVAILABLE · LAST VERIFIED \(lastVerified)")
-                .font(AtlasType.technical(9))
+            Text(countLine)
+                .font(AtlasType.technical(9, weight: .medium))
                 .tracking(1.44)
-                .foregroundStyle(AtlasTheme.inkMuted)
+                .foregroundStyle(AtlasTheme.ink)
                 .multilineTextAlignment(.center)
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Count unavailable")
-        .accessibilityValue("Last verified \(lastVerified)")
+        .accessibilityLabel(count.map { "\($0) witnesses, updated today" } ?? "Count unavailable")
+        .accessibilityAddTraits(.isStaticText)
     }
 }
 

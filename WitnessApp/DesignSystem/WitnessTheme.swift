@@ -17,6 +17,11 @@ enum AtlasTheme {
     static let earth = adaptive(light: 0x8A684A, dark: 0xB08C68)
     static let accentSage = adaptive(light: 0x65745A, dark: 0x93A886)
 
+    /// Fixed (non-adaptive) pair for text sitting on hero imagery: the scrim is
+    /// always deep ink and the type on it always warm paper, in both modes.
+    static let heroScrim = Color(uiColor: UIColor(hex: 0x15130F))
+    static let heroInk = Color(uiColor: UIColor(hex: 0xF1E8D5))
+
     static var ruleSoft: Color { sepia.opacity(0.22) }
     static var ruleEdge: Color { sepia.opacity(0.55) }
     static var ruleTab: Color { sepia.opacity(0.30) }
@@ -32,15 +37,29 @@ enum AtlasTheme {
 /// system-serif fallback avoids shipping a font without a recorded license decision.
 enum AtlasType {
     static func display(_ size: CGFloat, weight: Font.Weight = .medium, italic: Bool = false) -> Font {
-        if let font = UIFont(name: italic ? "EBGaramond-Italic" : "EBGaramond-Regular", size: size) {
-            return Font(font).weight(weight)
+        let name = italic ? "EBGaramond-Italic" : "EBGaramond-Regular"
+        if UIFont(name: name, size: size) != nil {
+            return Font.custom(name, size: size, relativeTo: .body).weight(weight)
         }
-        let fallback = Font.system(size: size, weight: weight, design: .serif)
-        return italic ? fallback.italic() : fallback
+        var descriptor = UIFont.systemFont(ofSize: size, weight: uiWeight(weight)).fontDescriptor
+        if let serif = descriptor.withDesign(.serif) { descriptor = serif }
+        if italic, let italicized = descriptor.withSymbolicTraits(.traitItalic) { descriptor = italicized }
+        return Font(UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont(descriptor: descriptor, size: size)))
     }
 
+    // Fixed point sizes wrapped through UIFontMetrics so every label follows
+    // the user's Dynamic Type setting.
     static func technical(_ size: CGFloat, weight: Font.Weight = .regular) -> Font {
-        .system(size: size, weight: weight, design: .default)
+        Font(UIFontMetrics(forTextStyle: .caption1).scaledFont(for: .systemFont(ofSize: size, weight: uiWeight(weight))))
+    }
+
+    private static func uiWeight(_ weight: Font.Weight) -> UIFont.Weight {
+        switch weight {
+        case .medium: .medium
+        case .semibold: .semibold
+        case .bold: .bold
+        default: .regular
+        }
     }
 
     static func tracking(_ em: CGFloat, at size: CGFloat, dynamicTypeSize: DynamicTypeSize) -> CGFloat {

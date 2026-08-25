@@ -1,0 +1,228 @@
+{
+  "id": "vaquita",
+  "schemaVersion": 1,
+  "commonName": "Vaquita",
+  "scientificName": "Phocoena sinus",
+  "conservationStatus": {
+    "displayName": "Endangered",
+    "normalizedValue": "endangered"
+  },
+  "generalizedRange": "Northern Gulf of California, Mexico",
+  "hook": "The world’s smallest porpoise lives nowhere else.",
+  "story": [
+    {
+      "id": "vaquita-surfacing",
+      "text": "A vaquita surfaces without spectacle: a small grey back, a dark ring around each eye, then water again.",
+      "sourceIDs": [
+        "noaa-vaquita-recovery-2022"
+      ]
+    },
+    {
+      "id": "vaquita-range",
+      "text": "This porpoise lives only in the northern Gulf of California.",
+      "sourceIDs": [
+        "noaa-vaquita-recovery-2022"
+      ]
+    },
+    {
+      "id": "vaquita-world",
+      "text": "Its entire known world is a narrow reach of sea between desert coasts, where sound and touch matter more than sight.",
+      "sourceIDs": [
+        "noaa-vaquita-recovery-2022"
+      ]
+    },
+    {
+      "id": "vaquita-senses",
+      "text": "Vaquitas navigate and find food by echolocation, sharing the water with fishing communities whose lives are also bound to the gulf.",
+      "sourceIDs": [
+        "noaa-vaquita-recovery-2022"
+      ]
+    },
+    {
+      "id": "vaquita-entanglement",
+      "text": "The danger is not that vaquitas are hunted.",
+      "sourceIDs": [
+        "noaa-vaquita-recovery-2022"
+      ]
+    },
+    {
+      "id": "vaquita-gillnets",
+      "text": "They become entangled in gillnets, including illegal nets set for totoaba, and cannot return to the surface to breathe.",
+      "sourceIDs": [
+        "noaa-vaquita-recovery-2022",
+        "cites-totoaba"
+      ]
+    },
+    {
+      "id": "vaquita-recovery",
+      "text": "Research reported by NOAA found no evidence that inbreeding alone makes recovery impossible.",
+      "sourceIDs": [
+        "noaa-vaquita-recovery-2022"
+      ]
+    },
+    {
+      "id": "vaquita-condition",
+      "text": "The hopeful condition is also the difficult one: deaths in gillnets must stop.",
+      "sourceIDs": [
+        "noaa-vaquita-recovery-2022"
+      ]
+    },
+    {
+      "id": "vaquita-witness",
+      "text": "To witness the vaquita is to remember that disappearance is not abstract.",
+      "sourceIDs": [
+        "noaa-vaquita-recovery-2022"
+      ]
+    },
+    {
+      "id": "vaquita-choices",
+      "text": "It is shaped by choices—how fishing is supported, how illegal wildlife trade is confronted, and whether protection in one small sea is made real.",
+      "sourceIDs": [
+        "noaa-vaquita-recovery-2022",
+        "cites-totoaba"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-vaquita-threat",
+    "title": "Understand the threat",
+    "summary": "Read NOAA’s explanation of why gillnets endanger vaquitas and why recovery is still biologically possible.",
+    "effort": "3 minutes",
+    "destinationURL": "https://www.fisheries.noaa.gov/feature-story/endangered-vaquita-porpoise-not-doomed-extinction-inbreeding-depression",
+    "destinationOrganization": "NOAA Fisheries",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "noaa-vaquita-recovery-2022"
+    ],
+    "lastVerified": "2026-08-21",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "vaquita-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job e07a5206-45fe-41e9-9983-f409efa9bce1, 2026-08-22; rights record docs/media/vaquita-plate-01-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-08-21",
+  "sources": [
+    {
+      "id": "noaa-vaquita-recovery-2022",
+      "title": "Endangered Vaquita Porpoise Not Doomed to Extinction by Inbreeding Depression",
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/feature-story/endangered-vaquita-porpoise-not-doomed-extinction-inbreeding-depression",
+      "lastAccessed": "2026-08-21"
+    },
+    {
+      "id": "cites-totoaba",
+      "title": "Totoaba (Totoaba macdonaldi)",
+      "organization": "CITES",
+      "url": "https://cites.org/eng/node/48556",
+      "lastAccessed": "2026-08-21"
+    },
+    {
+      "id": "noaa-vaquita-species",
+      "title": "Vaquita — Species Directory",
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/vaquita",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "seashepherd-vaquita",
+      "title": "Vaquita: On the Brink of Extinction",
+      "organization": "Sea Shepherd Conservation Society",
+      "url": "https://seashepherd.org/campaigns/vaquita/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "vaquitacpr",
+      "title": "VaquitaCPR",
+      "organization": "VaquitaCPR consortium",
+      "url": "https://www.vaquitacpr.org",
+      "lastAccessed": "2026-08-24"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Prototype copy derived from declared public sources. The population line quotes NOAA's own published wording with attribution rather than a survey number. Requires conservation-partner review before release."
+  },
+  "stats": {
+    "size": "4–5 ft · 65–120 lbs",
+    "lifespan": "About 20 years",
+    "diet": "Small fish, shrimp, squid & octopus",
+    "populationEstimate": "Fewer than 30",
+    "populationAsOf": "per NOAA Fisheries",
+    "trend": "decreasing",
+    "threats": [
+      "Gillnet entanglement",
+      "Illegal totoaba nets",
+      "Illegal fishing pressure",
+      "Tiny remaining population"
+    ],
+    "sourceIDs": [
+      "noaa-vaquita-species",
+      "cites-totoaba"
+    ]
+  },
+  "reproduction": {
+    "id": "vaquita-reproduction",
+    "text": "Vaquitas can live for at least 21 years and mature at three to six. Pregnancy lasts about ten to eleven months, and a female is thought to give birth every other year—to a single calf about two and a half feet long.",
+    "sourceIDs": [
+      "noaa-vaquita-species"
+    ]
+  },
+  "insight": {
+    "id": "vaquita-insight",
+    "text": "The vaquita has the smallest geographical range of any marine mammal on Earth.",
+    "sourceIDs": [
+      "noaa-vaquita-species"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Northern Gulf of California",
+      "latitude": 31.0,
+      "longitude": -114.6,
+      "radiusKm": 90
+    }
+  ],
+  "gallery": [
+    "vaquita-plate-01",
+    "vaquita-context-01",
+    "vaquita-detail-01",
+    "vaquita-behavior-01",
+    "vaquita-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "seashepherd-vaquita-campaign",
+      "organization": "Sea Shepherd Conservation Society",
+      "title": "Vaquita campaign",
+      "summary": "Ship-based patrols in the vaquita's refuge, working alongside Mexican authorities to find and remove illegal gillnets.",
+      "url": "https://seashepherd.org/campaigns/vaquita/",
+      "kind": "program",
+      "sourceIDs": [
+        "seashepherd-vaquita"
+      ],
+      "lastVerified": "2026-08-24"
+    },
+    {
+      "id": "vaquitacpr-consortium",
+      "organization": "VaquitaCPR",
+      "title": "International recovery consortium",
+      "summary": "A consortium of scientists and conservation organizations coordinating research and recovery work for the vaquita.",
+      "url": "https://www.vaquitacpr.org",
+      "kind": "program",
+      "sourceIDs": [
+        "vaquitacpr"
+      ],
+      "lastVerified": "2026-08-24"
+    }
+  ]
+}

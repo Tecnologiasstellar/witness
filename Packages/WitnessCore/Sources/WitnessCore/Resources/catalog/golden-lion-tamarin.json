@@ -1,0 +1,207 @@
+{
+  "id": "golden-lion-tamarin",
+  "schemaVersion": 1,
+  "commonName": "Golden Lion Tamarin",
+  "scientificName": "Leontopithecus rosalia",
+  "conservationStatus": {
+    "displayName": "Endangered",
+    "normalizedValue": "endangered"
+  },
+  "generalizedRange": "Atlantic Forest of Rio de Janeiro state, Brazil",
+  "hook": "A third of the wild ones descend from zoo-born monkeys. It worked.",
+  "story": [
+    {
+      "id": "tamarin-mane",
+      "text": "The golden lion tamarin is a monkey small enough to hold, crowned with a backswept golden mane like a miniature lion's.",
+      "sourceIDs": ["si-nzoo-glt"]
+    },
+    {
+      "id": "tamarin-families",
+      "text": "Families of two to eight sleep from dusk to sunrise in tree holes, tucked together for warmth.",
+      "sourceIDs": ["si-nzoo-glt"]
+    },
+    {
+      "id": "tamarin-twins",
+      "text": "Mothers usually bear twins — rare among primates — and the adult male does the largest share of the carrying.",
+      "sourceIDs": ["si-nzoo-glt"]
+    },
+    {
+      "id": "tamarin-forest",
+      "text": "Its Atlantic Forest home has been cut to two percent of its original area, scattered into islands of green.",
+      "sourceIDs": ["sglt-about-glts"]
+    },
+    {
+      "id": "tamarin-bottleneck",
+      "text": "By the 1960s, fewer than two hundred remained.",
+      "sourceIDs": ["sglt-about-glts"]
+    },
+    {
+      "id": "tamarin-reintroduction",
+      "text": "So zoos rebuilt the species: between 1984 and 2001, 146 tamarins born in 43 institutions on three continents went home to Brazil.",
+      "sourceIDs": ["sglt-reintroduction"]
+    },
+    {
+      "id": "tamarin-worked",
+      "text": "It worked. About a third of wild golden lion tamarins today descend from animals raised in human care.",
+      "sourceIDs": ["si-nzoo-glt"]
+    },
+    {
+      "id": "tamarin-corridors",
+      "text": "The forest is being resewn too: restored pastures, corridor plantings, and a forested overpass that carries tamarins across a highway.",
+      "sourceIDs": ["sglt-home", "sglt-corridor-overpass"]
+    },
+    {
+      "id": "tamarin-yellow-fever",
+      "text": "When yellow fever killed a third of the species, conservationists answered by vaccinating wild monkeys — over five hundred so far.",
+      "sourceIDs": ["sglt-yellow-fever-vaccination", "sglt-home"]
+    },
+    {
+      "id": "tamarin-witness",
+      "text": "To witness the golden lion tamarin is to see what patience across generations can rebuild: roughly 4,800 now leap through the canopy.",
+      "sourceIDs": ["sglt-home"]
+    }
+  ],
+  "action": {
+    "id": "learn-golden-lion-tamarin",
+    "title": "Read the rebuilding story",
+    "summary": "Read the Smithsonian's golden lion tamarin profile: the 1970s rescue plan, the reintroductions, and the forest being stitched back together.",
+    "effort": "6 minutes",
+    "destinationURL": "https://nationalzoo.si.edu/animals/golden-lion-tamarin",
+    "destinationOrganization": "Smithsonian's National Zoo",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["si-nzoo-glt"],
+    "lastVerified": "2026-08-24",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "golden-lion-tamarin-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 7c36e683-68e3-47ae-9595-312d5aa2cac7, 2026-08-24; rights record docs/media/golden-lion-tamarin-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-08",
+  "sources": [
+    {
+      "id": "si-nzoo-glt",
+      "title": "Golden lion tamarin",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/animals/golden-lion-tamarin",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "sglt-home",
+      "title": "Save the Golden Lion Tamarin",
+      "organization": "Save the Golden Lion Tamarin",
+      "url": "https://savetheliontamarin.org/",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "sglt-about-glts",
+      "title": "About GLTs",
+      "organization": "Save the Golden Lion Tamarin",
+      "url": "https://www.savetheliontamarin.org/about-glts",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "sglt-reintroduction",
+      "title": "Reintroduction",
+      "organization": "Save the Golden Lion Tamarin",
+      "url": "https://www.savetheliontamarin.org/reintroduction",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "sglt-corridor-overpass",
+      "title": "GLT Corridor Connection",
+      "organization": "Save the Golden Lion Tamarin",
+      "url": "https://www.savetheliontamarin.org/activity-glt-corridor-connection",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "sglt-grow-trees",
+      "title": "Grow Trees for GLTs",
+      "organization": "Save the Golden Lion Tamarin",
+      "url": "https://www.savetheliontamarin.org/replant-glt-habitat",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "sglt-yellow-fever-vaccination",
+      "title": "Yellow fever vaccination of wild golden lion tamarins",
+      "organization": "Save the Golden Lion Tamarin",
+      "url": "https://www.savetheliontamarin.org/yellow-fever-vaccination-of-wild-golden-lion-tamarins-aims",
+      "lastAccessed": "2026-08-24"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified Smithsonian and Save the Golden Lion Tamarin/AMLD pages. Population ~4,800 is SGLT's 2023 figure (Smithsonian's page still shows the older ~2,500). Region circle generalizes the São João watershed. The '800,000 seedlings' figure was search-only, not fetch-verified — the story uses restored-pasture/corridor phrasing instead."
+  },
+  "stats": {
+    "size": "6–10 in + a longer tail · about 1.5 lbs",
+    "lifespan": "About 8 years in the wild",
+    "diet": "Fruit, insects & small prey",
+    "populationEstimate": "About 4,800",
+    "populationAsOf": "2023 · per Save the Golden Lion Tamarin",
+    "trend": "increasing",
+    "threats": [
+      "Forest cut to 2%",
+      "Fragmented islands",
+      "Yellow fever",
+      "Pet-trade history"
+    ],
+    "sourceIDs": ["sglt-about-glts", "sglt-home", "si-nzoo-glt", "sglt-yellow-fever-vaccination"]
+  },
+  "reproduction": {
+    "id": "tamarin-reproduction",
+    "text": "Twins are the rule, born fully furred with eyes open. The whole family raises them, the adult male carrying most of all. Females mature at eighteen months, males at two years.",
+    "sourceIDs": ["si-nzoo-glt"]
+  },
+  "insight": {
+    "id": "tamarin-insight",
+    "text": "The 146-tamarin reintroduction, drawing on 43 institutions in eight countries, has been called perhaps the most collaborative conservation effort in history.",
+    "sourceIDs": ["sglt-reintroduction"]
+  },
+  "habitatRegions": [
+    {
+      "name": "São João River basin",
+      "latitude": -22.55,
+      "longitude": -42.3,
+      "radiusKm": 40
+    }
+  ],
+  "gallery": [
+    "golden-lion-tamarin-plate-01",
+    "golden-lion-tamarin-context-01",
+    "golden-lion-tamarin-detail-01",
+    "golden-lion-tamarin-behavior-01",
+    "golden-lion-tamarin-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "sglt-grow-trees-program",
+      "organization": "Save the Golden Lion Tamarin",
+      "title": "Grow Trees for GLTs",
+      "summary": "Local farmers grow native seedlings that are planted as forest corridors reconnecting the fragments tamarins live in.",
+      "url": "https://www.savetheliontamarin.org/replant-glt-habitat",
+      "kind": "program",
+      "sourceIDs": ["sglt-grow-trees"],
+      "lastVerified": "2026-08-24"
+    },
+    {
+      "id": "si-glt-conservation",
+      "organization": "Smithsonian's National Zoo",
+      "title": "GLT Conservation Program",
+      "summary": "The Smithsonian-founded program behind the captive breeding and reintroduction, still active in research, education, and habitat restoration.",
+      "url": "https://nationalzoo.si.edu/animals/golden-lion-tamarin",
+      "kind": "program",
+      "sourceIDs": ["si-nzoo-glt"],
+      "lastVerified": "2026-08-24"
+    }
+  ]
+}

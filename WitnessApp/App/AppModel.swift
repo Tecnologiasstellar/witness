@@ -5,13 +5,17 @@ import WitnessCore
 @MainActor
 final class AppModel: ObservableObject {
     @Published private(set) var species: SpeciesRecord?
+    @Published private(set) var catalog: [SpeciesRecord] = []
     @Published private(set) var loadError: String?
     @Published private(set) var witnessRecords: [WitnessRecord] = []
     @Published private(set) var persistenceError: String?
     @Published private(set) var isSaving = false
+    @Published private(set) var witnessCount: Int?
+    @Published private(set) var helpingRecords: [HelpingRecord] = []
     @Published var reflectionDraft = ""
 
     private let witnessRepository: any WitnessRepository
+    private let helpingStore: FileHelpingStore
     private let dateProvider: any DateProviding
     private var calendar: Calendar
 
@@ -23,6 +27,24 @@ final class AppModel: ObservableObject {
     }
 
     var latestWitnessRecord: WitnessRecord? { witnessRecords.first }
+
+    var featuredPlates: [FeaturedPlate] {
+        DailySpeciesSelector().featuredHistory(asOf: dateProvider.now(), from: catalog, calendar: calendar)
+    }
+
+    func isPlateUnlocked(_ plate: FeaturedPlate, hasPlus: Bool) -> Bool {
+        ArchiveAccessPolicy.isUnlocked(
+            localDay: plate.localDay,
+            asOf: dateProvider.now(),
+            calendar: calendar,
+            hasPlus: hasPlus
+        )
+    }
+
+    func isPlateWitnessed(_ plate: FeaturedPlate) -> Bool {
+        let eventID = WitnessDayKey.eventID(speciesID: plate.species.id, localDay: plate.localDay)
+        return witnessRecords.contains { $0.id == eventID }
+    }
     var isWitnessed: Bool { todayWitnessRecord != nil }
     var currentStreak: Int {
         WitnessStreakCalculator.currentStreak(
@@ -38,18 +60,64 @@ final class AppModel: ObservableObject {
         calendar: Calendar = .current
     ) {
         self.witnessRepository = witnessRepository ?? FileWitnessRepository(fileURL: Self.defaultArchiveURL)
+        self.helpingStore = FileHelpingStore(fileURL: Self.defaultArchiveURL
+            .deletingLastPathComponent()
+            .appendingPathComponent("helping.json"))
         self.dateProvider = dateProvider
         self.calendar = calendar
 
         do {
-            let catalog = try BundledSpeciesCatalog.load()
+            catalog = try BundledSpeciesCatalog.load()
             species = DailySpeciesSelector().species(for: dateProvider.now(), from: catalog, calendar: calendar)
+#if DEBUG
+            if let forced = ProcessInfo.processInfo.environment["WITNESS_FORCE_SPECIES"],
+               let match = catalog.first(where: { $0.id == forced }) {
+                species = match
+            }
+#endif
         } catch {
             loadError = String(describing: error)
         }
 
         Task { [weak self] in
             await self?.restoreWitnesses()
+            await self?.restoreHelping()
+            await self?.refreshWitnessCount()
+        }
+    }
+
+    func restoreHelping() async {
+        helpingRecords = (try? await helpingStore.allRecords()) ?? []
+    }
+
+    func helpingRecord(for speciesID: String) -> HelpingRecord? {
+        helpingRecords.first { $0.speciesID == speciesID }
+    }
+
+    func startHelping(speciesID: String) async {
+        guard helpingRecord(for: speciesID) == nil else { return }
+        _ = try? await helpingStore.startHelping(speciesID: speciesID, at: dateProvider.now())
+        await restoreHelping()
+        Task.detached {
+            await WitnessSync.shared.logEvent("helping_started", metadata: ["species": speciesID])
+        }
+    }
+
+    /// Every species the user has witnessed, newest first, with dates.
+    var witnessedCollection: [(species: SpeciesRecord, witnessedAt: Date, helping: HelpingRecord?)] {
+        var seen = Set<String>()
+        return witnessRecords.compactMap { record in
+            guard !seen.contains(record.speciesID),
+                  let species = catalog.first(where: { $0.id == record.speciesID }) else { return nil }
+            seen.insert(record.speciesID)
+            return (species, record.witnessedAt, helpingRecord(for: record.speciesID))
+        }
+    }
+
+    func refreshWitnessCount() async {
+        guard let species else { return }
+        if let count = await WitnessCounts.fetch(speciesID: species.id) {
+            witnessCount = count
         }
     }
 
@@ -68,6 +136,10 @@ final class AppModel: ObservableObject {
             )
             persistenceError = nil
             await restoreWitnesses()
+            Task { [weak self] in
+                await WitnessSync.shared.witnessRecorded(speciesID: species.id, localDay: localDay)
+                await self?.refreshWitnessCount()
+            }
         } catch {
             persistenceError = "Your Witness could not be saved yet. Nothing was sent or counted. \(error.localizedDescription)"
         }
@@ -85,6 +157,10 @@ final class AppModel: ObservableObject {
             )
             persistenceError = nil
             await restoreWitnesses()
+            Task.detached {
+                // Name only; reflection content never leaves the device.
+                await WitnessSync.shared.logEvent("reflection_saved")
+            }
         } catch {
             persistenceError = "Your private reflection could not be saved. \(error.localizedDescription)"
         }

@@ -1,0 +1,213 @@
+{
+  "id": "gharial",
+  "schemaVersion": 1,
+  "commonName": "Gharial",
+  "scientificName": "Gavialis gangeticus",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Rivers of northern India and Nepal",
+  "hook": "A crocodile with a hundred teeth — and no taste for anything but fish.",
+  "story": [
+    {
+      "id": "gharial-snout",
+      "text": "The gharial's snout seems impossible: a yard of slender jaw set with about a hundred needle teeth, too thin to threaten anything but fish.",
+      "sourceIDs": ["sdz-crocodilian", "si-gharial"]
+    },
+    {
+      "id": "gharial-hunting",
+      "text": "It hunts near the river bottom with swift sideways snaps, and on land it can only slide on its belly between water and warm sand.",
+      "sourceIDs": ["sdz-crocodilian", "sdzwa-gharial-summary"]
+    },
+    {
+      "id": "gharial-ghara",
+      "text": "Mature males grow a hollow knob at the snout's tip — the ghara, named for an Indian clay pot — that turns their calls into buzzing whistles.",
+      "sourceIDs": ["zsl-crocodilians-nepal", "si-gharial"]
+    },
+    {
+      "id": "gharial-crash",
+      "text": "Since the 1940s the species declined by about 98 percent; by the mid-1970s, fifty or sixty survived in India.",
+      "sourceIDs": ["zsl-crocodilians-nepal", "sdzwa-gharial-population"]
+    },
+    {
+      "id": "gharial-rivers",
+      "text": "The rivers themselves are being unmade: sand mining strips the nesting banks, dams starve the deep pools, and fishing nets drown the long-jawed swimmers.",
+      "sourceIDs": ["wwf-india-gharial-return", "zsl-crocodilians-nepal"]
+    },
+    {
+      "id": "gharial-nesting",
+      "text": "A female lays about forty eggs in a sandbank and guards the nest alone.",
+      "sourceIDs": ["si-gharial"]
+    },
+    {
+      "id": "gharial-releases",
+      "text": "Recovery is under way one release at a time: nearly a thousand captive-reared young gharials have entered the Ganga's rivers since 2009.",
+      "sourceIDs": ["wwf-india-gharial-return"]
+    },
+    {
+      "id": "gharial-climb",
+      "text": "Wild adults have climbed from about two hundred to about six hundred and fifty in little more than a decade.",
+      "sourceIDs": ["wwf-india-gharial-return"]
+    },
+    {
+      "id": "gharial-guards",
+      "text": "In Nepal, community Gharial Guard Groups patrol the rivers of Chitwan, keeping watch over the nests.",
+      "sourceIDs": ["zsl-crocodilians-nepal"]
+    },
+    {
+      "id": "gharial-witness",
+      "text": "To witness the gharial is to take the side of wild rivers — deep pools, clean sandbanks, room to bask.",
+      "sourceIDs": ["wwf-india-gharial-return"]
+    }
+  ],
+  "action": {
+    "id": "learn-gharial",
+    "title": "Meet the gharial",
+    "summary": "Read the Smithsonian National Zoo's gharial profile: the snout, the ghara, and the rivers it needs.",
+    "effort": "5 minutes",
+    "destinationURL": "https://nationalzoo.si.edu/animals/gharial",
+    "destinationOrganization": "Smithsonian's National Zoo",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["si-gharial"],
+    "lastVerified": "2026-08-24",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "gharial-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 6c6977d7-c5aa-4ecd-9fbe-0a4d890e0d9e, 2026-08-24; rights record docs/media/gharial-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-04",
+  "sources": [
+    {
+      "id": "si-gharial",
+      "title": "Gharial",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/animals/gharial",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "sdz-crocodilian",
+      "title": "Crocodilian",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/crocodilian",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "sdzwa-gharial-summary",
+      "title": "Gharial Fact Sheet: Summary",
+      "organization": "San Diego Zoo Wildlife Alliance Library",
+      "url": "https://ielc.libguides.com/sdzg/factsheets/gharial/summary",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "sdzwa-gharial-population",
+      "title": "Gharial Fact Sheet: Population & Conservation Status",
+      "organization": "San Diego Zoo Wildlife Alliance Library",
+      "url": "https://ielc.libguides.com/sdzg/factsheets/gharial/population",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wwf-india-gharial-return",
+      "title": "Return of the gharial to India's rivers",
+      "organization": "WWF India",
+      "url": "https://www.wwfindia.org/resources/explore/featured_stories/?28382/Return-of-the-gharial-to-Indias-rivers",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "zsl-crocodilians-nepal",
+      "title": "Endangered crocodilians and wetlands in Nepal",
+      "organization": "ZSL",
+      "url": "https://www.zsl.org/what-we-do/projects/endangered-crocodilians-and-wetlands-nepal",
+      "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "mcbt-conservation-research",
+      "title": "Conservation & Research",
+      "organization": "Madras Crocodile Bank Trust",
+      "url": "https://madrascrocodilebank.org/conservation_research",
+      "lastAccessed": "2026-08-24"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified Smithsonian, SDZWA, WWF-India, ZSL, and Madras Crocodile Bank pages. Lifespan omitted — no authoritative figure exists (SDZWA: 'not reported'). The popular 'males guard creches of hundreds of hatchlings' claim was unverifiable and contradicts Smithsonian's sole-female-care statement — excluded. Population ~650 wild adults is WWF-India's 2019 figure."
+  },
+  "stats": {
+    "size": "Males 16–20 ft · up to 1,500 lbs",
+    "lifespan": "Not reliably known",
+    "diet": "Fish, almost exclusively",
+    "populationEstimate": "About 650 wild adults",
+    "populationAsOf": "2019 · per WWF-India",
+    "trend": "increasing",
+    "threats": [
+      "River sand mining",
+      "Dams & diversion",
+      "Fishing-net drowning",
+      "Fragmented rivers"
+    ],
+    "sourceIDs": ["si-gharial", "wwf-india-gharial-return", "zsl-crocodilians-nepal", "sdzwa-gharial-summary"]
+  },
+  "reproduction": {
+    "id": "gharial-reproduction",
+    "text": "About forty eggs in a sandbank nest, hatching after roughly seventy days. The mother guards nest and hatchlings alone — her jaws, unlike other crocodilians', are too narrow to carry her young.",
+    "sourceIDs": ["si-gharial", "sdzwa-gharial-summary", "sdz-crocodilian"]
+  },
+  "insight": {
+    "id": "gharial-insight",
+    "text": "The male's ghara covers his nostrils and works as a resonator: gharials buzz and whistle where other crocodiles hiss.",
+    "sourceIDs": ["si-gharial", "sdzwa-gharial-summary"]
+  },
+  "habitatRegions": [
+    {
+      "name": "National Chambal Sanctuary",
+      "latitude": 26.7,
+      "longitude": 78.6,
+      "radiusKm": 120
+    },
+    {
+      "name": "Chitwan rivers, Nepal",
+      "latitude": 27.55,
+      "longitude": 84.35,
+      "radiusKm": 60
+    }
+  ],
+  "gallery": [
+    "gharial-plate-01",
+    "gharial-context-01",
+    "gharial-detail-01",
+    "gharial-behavior-01",
+    "gharial-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "wwf-india-gharial-reintroduction",
+      "organization": "WWF India",
+      "title": "Gharial reintroduction",
+      "summary": "With Uttar Pradesh's forest department, has released 973 captive-reared gharials into the Ganga's rivers since 2009.",
+      "url": "https://www.wwfindia.org/resources/explore/featured_stories/?28382/Return-of-the-gharial-to-Indias-rivers",
+      "kind": "program",
+      "sourceIDs": ["wwf-india-gharial-return"],
+      "lastVerified": "2026-08-24"
+    },
+    {
+      "id": "mcbt-gharial-ecology",
+      "organization": "Madras Crocodile Bank Trust",
+      "title": "Gharial Ecology Project",
+      "summary": "Runs the long-term research station on the Chambal River, home to about three-quarters of the world's adult gharials.",
+      "url": "https://madrascrocodilebank.org/conservation_research",
+      "kind": "program",
+      "sourceIDs": ["mcbt-conservation-research", "wwf-india-gharial-return"],
+      "lastVerified": "2026-08-24"
+    }
+  ]
+}

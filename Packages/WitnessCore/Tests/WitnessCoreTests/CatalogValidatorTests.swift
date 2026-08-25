@@ -8,10 +8,12 @@ struct CatalogValidatorTests {
     func bundledCatalogIsValid() throws {
         let records = try BundledSpeciesCatalog.load()
 
-        #expect(records.count == 1)
+        #expect(records.count == 30)
         #expect(records.first?.id == "vaquita")
-        #expect(records.first?.story.allSatisfy { !$0.sourceIDs.isEmpty } == true)
-        #expect(records.first?.media.verificationStatus == .prototype)
+        #expect(records.allSatisfy { record in record.story.allSatisfy { !$0.sourceIDs.isEmpty } })
+        // Approved Higgsfield artwork is in place; media rights stay pending
+        // until the plan's commercial terms are verified (D-013).
+        #expect(records.allSatisfy { $0.media.verificationStatus == .pending })
     }
 
     @Test("Prototype evidence cannot pass the production gate")

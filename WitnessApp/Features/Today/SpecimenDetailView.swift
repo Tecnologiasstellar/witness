@@ -106,7 +106,7 @@ struct SpecimenDetailView: View {
                     }
                 }
             }
-            Text("Record last fact-checked \(species.editorial.lastFactChecked). Media remains a rights-pending abstract prototype.")
+            Text("Record last fact-checked \(species.editorial.lastFactChecked). Artwork: \(species.media.depictionType.lowercased()).")
                 .font(.caption).foregroundStyle(AtlasTheme.inkMuted)
         }
     }

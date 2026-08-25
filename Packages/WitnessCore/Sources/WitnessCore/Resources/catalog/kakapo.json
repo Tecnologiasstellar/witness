@@ -1,0 +1,188 @@
+{
+  "id": "kakapo",
+  "schemaVersion": 1,
+  "commonName": "Kākāpō",
+  "scientificName": "Strigops habroptilus",
+  "conservationStatus": {
+    "displayName": "Nationally Critical",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Predator-free island and fenced sanctuaries, New Zealand",
+  "hook": "The world’s heaviest parrot cannot fly—and booms in the dark.",
+  "story": [
+    {
+      "id": "kakapo-exception",
+      "text": "The kākāpō answers almost every expectation of a parrot with an exception. It cannot fly. It walks the night with an owl-like face and a waddling gait.",
+      "sourceIDs": [
+        "doc-kakapo"
+      ]
+    },
+    {
+      "id": "kakapo-heaviest",
+      "text": "It is the heaviest parrot in the world, and possibly the longest-lived bird, with lives measured in many decades.",
+      "sourceIDs": [
+        "doc-kakapo"
+      ]
+    },
+    {
+      "id": "kakapo-lek",
+      "text": "It is also the world’s only lek-breeding parrot: in breeding years, males boom across the hills for nights on end.",
+      "sourceIDs": [
+        "doc-kakapo"
+      ]
+    },
+    {
+      "id": "kakapo-taonga",
+      "text": "Kākāpō are taonga—a treasured species—to Ngāi Tahu, the principal Māori iwi of southern New Zealand.",
+      "sourceIDs": [
+        "doc-kakapo"
+      ]
+    },
+    {
+      "id": "kakapo-collapse",
+      "text": "Once found across New Zealand, kākāpō nearly vanished after human arrival brought hunting, habitat loss, and predators their ground-nesting lives could not survive.",
+      "sourceIDs": [
+        "doc-kakapo"
+      ]
+    },
+    {
+      "id": "kakapo-islands",
+      "text": "Every kākāpō alive today lives wild on predator-free islands or in fenced sanctuaries, watched over by the Kākāpō Recovery programme.",
+      "sourceIDs": [
+        "doc-kakapo",
+        "doc-kakapo-recovery"
+      ]
+    },
+    {
+      "id": "kakapo-work",
+      "text": "Its keepers contend with low hatching success and the constant need for more predator-free habitat—and still the population has grown.",
+      "sourceIDs": [
+        "doc-kakapo",
+        "doc-kakapo-recovery"
+      ]
+    },
+    {
+      "id": "kakapo-witness",
+      "text": "To witness the kākāpō is to learn how much care a species can require, and receive.",
+      "sourceIDs": [
+        "doc-kakapo"
+      ]
+    }
+  ],
+  "action": {
+    "id": "meet-kakapo-recovery",
+    "title": "Meet Kākāpō Recovery",
+    "summary": "See how New Zealand’s Department of Conservation and Ngāi Tahu run the programme that watches over every living kākāpō.",
+    "effort": "5 minutes",
+    "destinationURL": "https://www.doc.govt.nz/our-work/kakapo-recovery/what-we-do/",
+    "destinationOrganization": "NZ Department of Conservation",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "doc-kakapo-recovery"
+    ],
+    "lastVerified": "2026-08-22",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "kakapo-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Rights record docs/media/kakapo-plate-01-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-08-23",
+  "sources": [
+    {
+      "id": "doc-kakapo",
+      "title": "Kākāpō",
+      "organization": "NZ Department of Conservation",
+      "url": "https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kakapo/",
+      "lastAccessed": "2026-08-22"
+    },
+    {
+      "id": "doc-kakapo-recovery",
+      "title": "Kākāpō Recovery — what we do",
+      "organization": "NZ Department of Conservation",
+      "url": "https://www.doc.govt.nz/our-work/kakapo-recovery/what-we-do/",
+      "lastAccessed": "2026-08-22"
+    },
+    {
+      "id": "nzbo-kakapo",
+      "title": "Kākāpō",
+      "organization": "New Zealand Birds Online",
+      "url": "https://www.nzbirdsonline.org.nz/species/kakapo",
+      "lastAccessed": "2026-08-24"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Prototype copy derived from the declared Department of Conservation pages. The living-population figure is intentionally omitted because it changes. Requires conservation-partner review before release."
+  },
+  "stats": {
+    "size": "Males up to 4 kg",
+    "lifespan": "60–90 years",
+    "diet": "Entirely vegetarian — leaves, buds, fruit & seeds",
+    "populationEstimate": "235 birds",
+    "populationAsOf": "per NZ DOC",
+    "trend": "increasing",
+    "threats": [
+      "Introduced predators",
+      "Disease",
+      "Low hatching success",
+      "Historic habitat loss"
+    ],
+    "sourceIDs": [
+      "doc-kakapo",
+      "nzbo-kakapo"
+    ]
+  },
+  "reproduction": {
+    "id": "kakapo-reproduction",
+    "text": "Kākāpō breed in summer and autumn, but only in years when native trees fruit heavily. On the southern islands that means the rimu: they breed when it fruits, roughly once every two to four years.",
+    "sourceIDs": [
+      "nzbo-kakapo"
+    ]
+  },
+  "insight": {
+    "id": "kakapo-insight",
+    "text": "A kākāpō cannot fly, but it climbs high into trees — and comes down in what one account calls a controlled plummet.",
+    "sourceIDs": [
+      "nzbo-kakapo"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Southern predator-free islands",
+      "latitude": -46.77,
+      "longitude": 167.64,
+      "radiusKm": 80
+    }
+  ],
+  "gallery": [
+    "kakapo-plate-01",
+    "kakapo-context-01",
+    "kakapo-detail-01",
+    "kakapo-behavior-01",
+    "kakapo-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "doc-kakapo-recovery-programme",
+      "organization": "NZ Department of Conservation",
+      "title": "Kākāpō Recovery",
+      "summary": "The national programme, run with Ngāi Tahu, that monitors and manages every living kākāpō on predator-free sanctuaries.",
+      "url": "https://www.doc.govt.nz/our-work/kakapo-recovery/what-we-do/",
+      "kind": "program",
+      "sourceIDs": [
+        "doc-kakapo-recovery"
+      ],
+      "lastVerified": "2026-08-24"
+    }
+  ]
+}

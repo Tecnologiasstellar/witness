@@ -97,3 +97,59 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 - Decision: The public repository excludes DailyArt research assets, local temporary artifacts, signing material, secrets, device archives, and unverified production media. Dated product evidence and rights records may be tracked when they are safe to publish.
 - Reason: Public version control must improve collaboration without redistributing reference assets, exposing credentials, or implying unverified content readiness.
 - Tradeoff: A contributor needs local access to excluded research and signing material; those files are never restored from Git.
+
+## D-013 — Higgsfield-generated original artwork is the sole visual source
+
+- Status: accepted (owner direction, 2026-08-22)
+- Date: 2026-08-22
+- Decision: All species artwork and animal cards are generated with the owner's Higgsfield.ai account under one locked style-prompt template. Each asset gets a rights record with state `ai_generated_owned` including the generation prompt, model, date, and account. The app discloses artwork as original illustration; it is never presented as documentary photography. Every asset must pass a basic species-accuracy review before production use.
+- Reason: One controlled generation source gives consistent visual identity, unlimited coverage of species with no usable photography, and a clean commercial-rights story without per-file Commons license archaeology.
+- Tradeoff: Depends on the accuracy review to prevent plausible-but-wrong depictions. Open verification item: confirm the active Higgsfield plan grants commercial usage rights for generated output before App Store submission.
+
+## D-014 — 100-species backlog, 30 launch-ready cards
+
+- Status: accepted
+- Date: 2026-08-22
+- Decision: The editorial backlog defines at least 100 endangered or extinct species (`docs/SPECIES_BACKLOG.md`, all facts marked unverified until carded). The v1 App Store build ships with 30 fully reviewed production cards — a month of daily ritual. Remaining species are produced post-launch through the card pipeline (D-019).
+- Reason: 100 reviewed cards before September 15 is not achievable by one person at the required trust bar; 30 covers the launch window with margin, and the backlog removes selection work from the production loop.
+- Tradeoff: Early adopters exhaust novel content after ~30 days if post-launch production stalls.
+
+## D-015 — Supabase is the only backend; catalog stays bundled in v1
+
+- Status: accepted
+- Date: 2026-08-22
+- Decision: Supabase (free tier) provides the entire backend: an idempotent `witness_events` table keyed by `(install_id, species_id, day)`, an aggregate per-species count view exposed read-only, and a plain `events` analytics table. No user accounts in v1 — an anonymous install UUID generated on first launch identifies a device. The species catalog remains bundled in the app binary and ships via app updates; remote catalog delivery is deferred until post-launch publishing cadence demands it.
+- Reason: Smallest system that yields honest global witness counts and measurable behavior. Accounts add auth, deletion, and support obligations with no v1 payoff; the App Store already delivers content updates.
+- Tradeoff: New cards require an app release in v1. Count sync needs an offline queue with honest "count unavailable" states. Cost: $0/mo at launch scale; failure mode is stale or unavailable counts, never a blocked ritual.
+
+## D-016 — Witness+ paywall logic
+
+- Status: accepted
+- Date: 2026-08-22
+- Decision: Free forever: today's ritual, story, sources, action, witness, streak, private reflection, share card, reminders, and the last 7 days of the archive. Witness+ (RevenueCat entitlement `plus`): the full archive and complete Cabinet back to day one, plus future depth features (narration, collections). Products: monthly at USD 2.99 and annual at USD 19.99 with a 7-day free trial on annual. The paywall appears only at the premium boundary — tapping into archive content older than 7 days — never during onboarding (per D-008). Restore purchases is always reachable from the Index.
+- Reason: Depth-and-continuity is the honest thing to sell; the social-good core stays free per D-004. Annual-with-trial is the primary offer because a daily ritual's value compounds.
+- Tradeoff: Revenue depends on archive value, so archive presentation quality is monetization work. Prices adjust later in App Store Connect without code changes.
+
+## D-017 — Analytics is a plain events table
+
+- Status: accepted
+- Date: 2026-08-22
+- Decision: Product analytics is the Supabase `events` table (`name`, `install_id`, `metadata`, `timestamp`) written from a small client queue, plus RevenueCat's built-in purchase metrics. No third-party analytics SDK. Launch event vocabulary: `ritual_completed`, `witness_recorded`, `action_opened`, `reflection_saved`, `share_created`, `paywall_shown`, `trial_started`, `archive_opened`.
+- Reason: One table answers the launch questions (return rate, ritual completion, action opens, conversion) at $0 with a truthful privacy label.
+- Tradeoff: Charts are SQL, not dashboards. Event writes must never block or degrade the offline ritual.
+
+## D-018 — Staging and production environments
+
+- Status: accepted
+- Date: 2026-08-22
+- Decision: Two Supabase projects, `witness-staging` and `witness-prod`. Debug and simulator builds target staging; TestFlight and App Store builds target production. The Supabase URL and anon key are injected per build configuration via xcconfig (anon keys are publishable; the service-role key never leaves the Supabase dashboard and never enters the repo or app). Schema migrations live as ordered SQL files in `backend/migrations/`, are applied to staging first, verified, then applied to production; destructive migrations record their rollback command.
+- Reason: Real purchase and sync testing must not pollute production counts, and prod schema changes need a rehearsal target. Two free-tier projects cost $0.
+- Tradeoff: Two dashboards to manage and a small config seam in the app.
+
+## D-019 — Card production pipeline
+
+- Status: accepted
+- Date: 2026-08-22
+- Decision: Every animal card is produced through the fixed pipeline in `docs/CARD_PRODUCTION_PIPELINE.md`: backlog selection → sourced research → schema-valid JSON record → Higgsfield artwork with rights record → species-accuracy review → editorial review → `CatalogValidator` in CI → merge → ship in the next release. A card that fails any stage stays in `prototype`/`draft` state and is rejected by production validation.
+- Reason: Content is product infrastructure (per the trust policy); a fixed pipeline makes 100+ cards producible by one person at a constant quality bar.
+- Tradeoff: Throughput is bounded by review honesty — roughly 3–5 cards per focused day, which the 30-card launch scope respects.

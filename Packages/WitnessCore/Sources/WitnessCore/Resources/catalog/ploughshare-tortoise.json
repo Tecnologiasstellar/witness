@@ -1,0 +1,214 @@
+{
+  "id": "ploughshare-tortoise",
+  "schemaVersion": 1,
+  "commonName": "Ploughshare Tortoise",
+  "scientificName": "Astrochelys yniphora",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Baly Bay, northwestern Madagascar",
+  "hook": "So poached, conservationists engrave the shells.",
+  "story": [
+    {
+      "id": "ploughshare-shell",
+      "text": "The ploughshare tortoise carries a high golden dome of a shell, named for the plough-shaped horn that juts forward beneath its chin.",
+      "sourceIDs": ["durrell-ploughshare-species", "tsa-turtle-of-the-week"]
+    },
+    {
+      "id": "ploughshare-range",
+      "text": "It survives nowhere but the dry bamboo-scrub of Baly Bay, northwestern Madagascar — a wild range of perhaps sixty square kilometers.",
+      "sourceIDs": ["durrell-ploughshare-species", "crf-redlist-assessment"]
+    },
+    {
+      "id": "ploughshare-target",
+      "text": "The shell that makes it beautiful made it a target: prized on the black market, owned as a status symbol.",
+      "sourceIDs": ["tc-ploughshare-program", "tsa-turtle-of-the-week"]
+    },
+    {
+      "id": "ploughshare-seizures",
+      "text": "Between 2002 and 2016, 334 ploughshare tortoises were seized from traffickers.",
+      "sourceIDs": ["durrell-pet-trade-extinction"]
+    },
+    {
+      "id": "ploughshare-decline",
+      "text": "The wild population fell to a few hundred, then fewer; the Turtle Survival Alliance now presumes the species functionally extinct in the wild.",
+      "sourceIDs": ["durrell-pet-trade-extinction", "tsa-ploughshare-species"]
+    },
+    {
+      "id": "ploughshare-defenses",
+      "text": "The defenses are extraordinary: conservationists engrave identification numbers into the shells to discourage poachers, and the breeding center works under armed guard.",
+      "sourceIDs": ["tc-ploughshare-program", "durrell-ploughshare-species"]
+    },
+    {
+      "id": "ploughshare-angonoka",
+      "text": "That breeding center matters because Durrell cracked the code: the first captive breeding of the species, begun as Project Angonoka in 1986.",
+      "sourceIDs": ["durrell-ploughshare-species"]
+    },
+    {
+      "id": "ploughshare-releases",
+      "text": "Over 800 captive-bred tortoises now live at Ampijoroa, and 105 have gone back to the wild.",
+      "sourceIDs": ["durrell-jersey-zoo-ploughshare"]
+    },
+    {
+      "id": "ploughshare-slow",
+      "text": "Everything about the species is slow — maturity at fifteen years, three eggs to a clutch — so every tortoise counts.",
+      "sourceIDs": ["crf-redlist-assessment"]
+    },
+    {
+      "id": "ploughshare-witness",
+      "text": "To witness the ploughshare is to insist that a shell's beauty belong to the animal wearing it.",
+      "sourceIDs": ["tc-ploughshare-program"]
+    }
+  ],
+  "action": {
+    "id": "learn-ploughshare",
+    "title": "Meet the golden tortoise",
+    "summary": "Read the Turtle Conservancy's program page: the black-market pressure, the engraved shells, and the assurance colonies.",
+    "effort": "4 minutes",
+    "destinationURL": "https://www.turtleconservancy.org/programs/ploughshare-tortoise",
+    "destinationOrganization": "Turtle Conservancy",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": ["tc-ploughshare-program"],
+    "lastVerified": "2026-08-25",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "ploughshare-tortoise-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job 94082d5b-aba7-4e1c-b13a-b41873d9283b, 2026-08-25; rights record docs/media/ploughshare-tortoise-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-15",
+  "sources": [
+    {
+      "id": "durrell-ploughshare-species",
+      "title": "Ploughshare tortoise",
+      "organization": "Durrell Wildlife Conservation Trust",
+      "url": "https://www.durrell.org/conservation/species/reptiles/ploughshare-tortoise/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "durrell-jersey-zoo-ploughshare",
+      "title": "Ploughshare tortoises at Jersey Zoo",
+      "organization": "Durrell Wildlife Conservation Trust",
+      "url": "https://www.durrell.org/visit-jersey-zoo/meet-our-animals/reptiles/ploughshare-tortoise/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "durrell-pet-trade-extinction",
+      "title": "Illegal pet trade driving the ploughshare tortoise to extinction",
+      "organization": "Durrell Wildlife Conservation Trust",
+      "url": "https://www.durrell.org/news/illegal-pet-trade-driving-the-ploughshare-tortoise-to-extinction/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "tc-ploughshare-program",
+      "title": "Ploughshare Tortoise",
+      "organization": "Turtle Conservancy",
+      "url": "https://www.turtleconservancy.org/programs/ploughshare-tortoise",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "tsa-ploughshare-species",
+      "title": "Ploughshare Tortoise",
+      "organization": "Turtle Survival Alliance",
+      "url": "https://turtlesurvival.org/species/ploughshare-tortoise/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "tsa-turtle-of-the-week",
+      "title": "Turtle of the Week: Ploughshare Tortoise",
+      "organization": "Turtle Survival Alliance",
+      "url": "https://turtlesurvival.org/turtleoftheweek-ploughshare-tortoise/",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "crf-redlist-assessment",
+      "title": "Astrochelys yniphora assessment (Chelonian Research Monographs 6)",
+      "organization": "Chelonian Research Foundation",
+      "url": "https://chelonian.org/wp-content/uploads/file/CRM%206/08-RLA-Astrochelys_yniphora.pdf",
+      "lastAccessed": "2026-08-25"
+    },
+    {
+      "id": "tc-saving-madagascars-ploughshare",
+      "title": "Saving Madagascar's Ploughshare Tortoise",
+      "organization": "Turtle Conservancy",
+      "url": "https://www.turtleconservancy.org/outreach/saving-madagascar%E2%80%99s-ploughshare-tortoise",
+      "lastAccessed": "2026-08-25"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-25",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Card v2 drafted from verified Durrell, Turtle Conservancy, TSA, and Chelonian Research Foundation pages. The CRF PDF is a 2008 assessment reprint hosted by CRF (not the IUCN API; the only rigorous source for size/clutch figures — flaggable under D-005 if AV wants it swapped). Engraving phrased as 'to discourage poachers' (the verified wording). Male gular jousting was unverifiable and excluded. Baly Bay is the published park; no precise localities are given."
+  },
+  "stats": {
+    "size": "15–19 in shell · about 20 lbs",
+    "lifespan": "Matures at 15+ · generation ~42 years",
+    "diet": "Grasses, herbs & shrubs",
+    "populationEstimate": "Fewer than 1,500 worldwide",
+    "populationAsOf": "per Turtle Conservancy",
+    "trend": "decreasing",
+    "threats": [
+      "Pet-trade poaching",
+      "Status-symbol demand",
+      "Habitat burning",
+      "Trafficking routes"
+    ],
+    "sourceIDs": ["tc-ploughshare-program", "tsa-ploughshare-species", "durrell-ploughshare-species", "crf-redlist-assessment", "tc-saving-madagascars-ploughshare"]
+  },
+  "reproduction": {
+    "id": "ploughshare-reproduction",
+    "text": "One to six eggs per clutch — three on average — in up to four clutches between January and May. About half hatch, and a hatchling will not breed for at least fifteen years.",
+    "sourceIDs": ["crf-redlist-assessment"]
+  },
+  "insight": {
+    "id": "ploughshare-insight",
+    "text": "In 2025, tortoises rescued from smugglers back in 2010 produced 25 hatchlings in California — the first breeding success outside Madagascar.",
+    "sourceIDs": ["tc-ploughshare-program"]
+  },
+  "habitatRegions": [
+    {
+      "name": "Baly Bay National Park",
+      "latitude": -16.05,
+      "longitude": 45.3,
+      "radiusKm": 30
+    }
+  ],
+  "gallery": [
+    "ploughshare-tortoise-plate-01",
+    "ploughshare-tortoise-context-01",
+    "ploughshare-tortoise-detail-01",
+    "ploughshare-tortoise-behavior-01",
+    "ploughshare-tortoise-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "durrell-project-angonoka",
+      "organization": "Durrell Wildlife Conservation Trust",
+      "title": "Project Angonoka",
+      "summary": "The program that first bred the species, running the guarded Ampijoroa center — over 800 tortoises bred and 105 released.",
+      "url": "https://www.durrell.org/conservation/species/reptiles/ploughshare-tortoise/",
+      "kind": "program",
+      "sourceIDs": ["durrell-ploughshare-species", "durrell-jersey-zoo-ploughshare"],
+      "lastVerified": "2026-08-25"
+    },
+    {
+      "id": "tc-ploughshare",
+      "organization": "Turtle Conservancy",
+      "title": "Ploughshare program",
+      "summary": "Runs an assurance colony in California, fights trafficking, and partners with Durrell in Madagascar.",
+      "url": "https://www.turtleconservancy.org/programs/ploughshare-tortoise",
+      "kind": "program",
+      "sourceIDs": ["tc-ploughshare-program"],
+      "lastVerified": "2026-08-25"
+    }
+  ]
+}

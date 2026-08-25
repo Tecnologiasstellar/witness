@@ -27,6 +27,22 @@ struct FileWitnessRepositoryTests {
         #expect(try await repository.allRecords().count == 1)
     }
 
+    @Test("Saving an empty reflection deletes the stored note")
+    func emptyReflectionDeletes() async throws {
+        let fileURL = temporaryStoreURL()
+        let repository = FileWitnessRepository(fileURL: fileURL)
+        let result = try await repository.recordWitness(
+            speciesID: "vaquita",
+            localDay: "2026-08-21",
+            witnessedAt: Date(timeIntervalSince1970: 1_787_310_000)
+        )
+
+        _ = try await repository.updateReflection(eventID: result.record.id, reflection: "A quiet note.")
+        let cleared = try await repository.updateReflection(eventID: result.record.id, reflection: "   ")
+        #expect(cleared.reflection == nil)
+        #expect(try await repository.allRecords().first?.reflection == nil)
+    }
+
     @Test("A new repository instance restores the record and reflection")
     func restorationAndReflectionRoundTrip() async throws {
         let fileURL = temporaryStoreURL()

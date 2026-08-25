@@ -5,7 +5,6 @@ struct TodayView: View {
     @ObservedObject var model: AppModel
     let onOpenIndex: () -> Void
     let onOpenReflection: () -> Void
-    let onWitnessed: () -> Void
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
@@ -15,14 +14,52 @@ struct TodayView: View {
     var body: some View {
         Group {
             if let species = model.species {
-                if dynamicTypeSize.isAccessibilitySize {
-                    ScrollView { plate(for: species).frame(minHeight: 720) }
+                if species.stats != nil {
+                    GeometryReader { geo in
+                        ScrollView {
+                            SpeciesCardV2(
+                                species: species,
+                                model: model,
+                                topInset: geo.safeAreaInsets.top,
+                                onOpenIndex: onOpenIndex,
+                                onOpenReflection: onOpenReflection
+                            )
+                        }
                         .scrollIndicators(.hidden)
+                        .ignoresSafeArea(edges: .top)
+                    }
+                } else if dynamicTypeSize.isAccessibilitySize {
+                    ScrollView {
+                        plate(for: species).frame(minHeight: 720)
+                        witnessControl.padding(.horizontal, 22).padding(.bottom, 14)
+                        StorySheet(species: species, onOpenFigures: { showsSpecimen = true })
+                    }
+                    .scrollIndicators(.hidden)
                 } else {
-                    plate(for: species)
+                    ScrollView {
+                        VStack(spacing: 0) {
+                            // The hero plate fills the viewport, leaving the
+                            // sheet's top edge peeking as the scroll affordance.
+                            plate(for: species)
+                                .containerRelativeFrame(.vertical) { length, _ in max(430, length - 60) }
+                            StorySheet(species: species, onOpenFigures: { showsSpecimen = true })
+                                .padding(.top, -10)
+                        }
+                    }
+                    .scrollIndicators(.hidden)
                 }
             } else {
                 loadFailure
+            }
+        }
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            // v2 cards carry the ceremonial witness climax in the flow instead.
+            if let species = model.species, species.stats == nil, !dynamicTypeSize.isAccessibilitySize {
+                witnessControl
+                    .padding(.horizontal, 22)
+                    .padding(.top, 6)
+                    .padding(.bottom, 10)
+                    .background(AtlasTheme.paper)
             }
         }
         .background(AtlasTheme.paper.ignoresSafeArea())
@@ -36,32 +73,30 @@ struct TodayView: View {
     }
 
     private func plate(for species: SpeciesRecord) -> some View {
-        GeometryReader { proxy in
-            ZStack {
-                PlateFrame()
-                VStack(spacing: 0) {
-                    header
-                    statusLine(species).padding(.top, 10)
-                    Button { showsSpecimen = true } label: {
-                        SpecimenPlate(species: species, showsLeaderLabels: true)
-                            .frame(height: min(202, max(156, proxy.size.height * 0.275)))
-                            .contentShape(Rectangle())
-                    }
-                    .buttonStyle(.plain)
-                    .accessibilityIdentifier("today.specimenButton")
-                    .accessibilityHint("Opens the specimen figures for range, prey and cause")
-                    .contextMenu { Button("Preview share plate") { showsSharePreview = true } }
-
-                    AtlasScaleRule().padding(.horizontal, 28)
-                    specimenName(species)
-                    AtlasTally(lastVerified: species.editorial.lastFactChecked).padding(.top, 10)
-                    Spacer(minLength: 8)
-                    witnessControl
+        ZStack {
+            PlateFrame(bottomMargin: 24)
+            VStack(spacing: 0) {
+                header
+                statusLine(species).padding(.top, 10)
+                Button { showsSpecimen = true } label: {
+                    SpecimenPlate(species: species, showsLeaderLabels: true)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
+                        .contentShape(Rectangle())
                 }
-                .padding(.horizontal, 22)
-                .padding(.top, 8)
-                .padding(.bottom, 14)
+                .buttonStyle(.plain)
+                .padding(.top, 12)
+                .accessibilityIdentifier("today.specimenButton")
+                .accessibilityHint("Opens the specimen figures for range, prey and cause")
+                .contextMenu { Button("Preview share plate") { showsSharePreview = true } }
+
+                AtlasScaleRule().padding(.horizontal, 28).padding(.top, 10)
+                specimenName(species)
+                AtlasTally(count: model.witnessCount, lastVerified: species.editorial.lastFactChecked).padding(.top, 10)
             }
+            .padding(.horizontal, 26)
+            .padding(.top, 8)
+            .padding(.bottom, 34)
         }
         .accessibilityElement(children: .contain)
     }
@@ -69,7 +104,12 @@ struct TodayView: View {
     private var header: some View {
         HStack {
             Button(action: onOpenIndex) {
-                AtlasIconView(icon: .contents, size: 18).frame(width: 44, height: 44)
+                // accessibilityHidden keeps the canvas's stroke-sized node from
+                // shrinking the button's audit hit area below the 44pt frame.
+                AtlasIconView(icon: .contents, size: 18)
+                    .accessibilityHidden(true)
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Contents index")
@@ -81,7 +121,10 @@ struct TodayView: View {
                 .foregroundStyle(AtlasTheme.sepia)
             Spacer()
             Button(action: onOpenReflection) {
-                AtlasIconView(icon: .nib, size: 18).frame(width: 44, height: 44)
+                AtlasIconView(icon: .nib, size: 18)
+                    .accessibilityHidden(true)
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Add a private note")
@@ -117,10 +160,7 @@ struct TodayView: View {
     private var witnessControl: some View {
         VStack(spacing: 7) {
             Button {
-                Task {
-                    await model.witness()
-                    if model.isWitnessed { onWitnessed() }
-                }
+                Task { await model.witness() }
             } label: {
                 HStack(spacing: 10) {
                     AtlasIconView(icon: .fieldMark, size: 17)

@@ -7,31 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		039DD09DE0BA0852B7173E02 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 354B4FA9912938B2089D120C /* RevenueCat */; };
+		09C0E9F2401FF72DB6D73683 /* FileHelpingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728216AE022B82B5021127E5 /* FileHelpingStore.swift */; };
 		0F4628BE5E221D55F0E26166 /* DailySpeciesSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BA20C213BA57E566E97630 /* DailySpeciesSelector.swift */; };
 		124B4DC8E0F947C48FF75286 /* WitnessSharePreviewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114A5EF6FC9CDFD60B4CF0C /* WitnessSharePreviewSheet.swift */; };
 		16AAFB87F230EB12C8D396A1 /* SpeciesRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C4A43A6AC261C6A25B5E1 /* SpeciesRecord.swift */; };
 		16D5DDC2C5DCF75498B2A44D /* WitnessShareCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8698B087FB05A16501745D67 /* WitnessShareCopy.swift */; };
 		224FC55D98C252D3C06B08BF /* BundledSpeciesCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9DEB3D56300C4B0646299 /* BundledSpeciesCatalog.swift */; };
+		2DB8EC5552B2AA6AE65EB074 /* ReminderPrimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61B5DD130AF6E13995DBB95 /* ReminderPrimer.swift */; };
 		2E8A595CF0062FAD3A5EA2BF /* WitnessedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B698C8B547BD096664B28580 /* WitnessedView.swift */; };
 		3AACD83387DDBED44260D080 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDFC8711953263B8B59139B /* AppModel.swift */; };
 		3BA9344E61CC8AC85419821F /* WitnessCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */; };
+		3F28124AD3D02EF0C4472C35 /* ArchiveAccessPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18BCA0F9F6BB74564A6C8A2 /* ArchiveAccessPolicy.swift */; };
 		3F5054183FC3B7C5BE6C7A71 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D88878E41310626CED31D6 /* RootTabView.swift */; };
+		43971BEA1623685AFFA856C4 /* CollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F51A47DA17207B45AE09C8E /* CollectionDetailView.swift */; };
 		44218CBDF7A88A7A70C086CA /* AtlasIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABFC134010BFB1FF062CF1B /* AtlasIcons.swift */; };
 		4F2473A639039F8A3C80F092 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F6B1989A07CDD335DC75A /* ArchiveView.swift */; };
 		56085BAAD37054233313394D /* WitnessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */; };
+		5B6471AA2629DE1F67F5C7B5 /* WitnessSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */; };
 		64F12E527B41CD3BC05C6889 /* WitnessCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66792FAAD28C4692A18458B0 /* VaquitaHeroArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */; };
+		68D6C9D187410805167434BB /* SpeciesCardV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6741E8E552598D4CEB9F6 /* SpeciesCardV2.swift */; };
 		6CB63D7D22BC7C5FF46E1BAC /* WitnessTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */; };
-		75D66B3F60EA7F6EBF43D997 /* species.json in Resources */ = {isa = PBXBuildFile; fileRef = 64E21B832DF552E7470A943D /* species.json */; };
+		7436B0FED665FD5428FFD5D6 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F19751D24B01B066DD7EB /* ReminderService.swift */; };
 		84987ABAB9FFB62FE7E68E24 /* PlateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */; };
+		8C73A1DC6CA9779FC7CD1541 /* PlusEntitlements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21448505ADEB8E59D0B8246 /* PlusEntitlements.swift */; };
+		99A3848B26CB000E2269AE90 /* WitnessPlusPaywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D576C862815233CC57EF4FC /* WitnessPlusPaywall.swift */; };
 		A16041A90DD5333A1728F811 /* WitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E8333AE9C0AD77C3567F /* WitnessApp.swift */; };
 		A536A1761E475036B749FBA4 /* FileWitnessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89A757DBBF5D9080AB542D /* FileWitnessRepository.swift */; };
+		AC9C55BD3124DCD919946D44 /* FileSyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAEC2E8EF7B8E47676E1F3 /* FileSyncQueue.swift */; };
+		AEE9CFCC7ED6423851B4C1AA /* SupabaseTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BBBFD25BDE3FD1CA7575E8 /* SupabaseTransport.swift */; };
 		B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */; };
 		B1B2F3500979E875B3E27F3E /* WitnessRitualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */; };
+		C2187594DDD99E4D49BE4ED2 /* StorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F03B2889D871D9EFAF85F /* StorySheet.swift */; };
 		D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */; };
+		D76814029898F318CCF0563B /* SharePlateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2C63F351BC9C606D1E9AD /* SharePlateCard.swift */; };
 		D9AF7CA236EE26B44E280DBB /* CatalogValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */; };
 		E388B5ED07FA84F3140DBC9C /* WitnessRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */; };
+		E548CB4F18E023489E9A2D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5912AC6B4687E04E2D975DE /* Assets.xcassets */; };
+		E995E7B6466D825AB81A803A /* catalog in Resources */ = {isa = PBXBuildFile; fileRef = 44CD33A3724FC2B62AFE1818 /* catalog */; };
 		EAB93BBE70E97B6408C99333 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE485E4A09EEE93616F399 /* TodayView.swift */; };
+		EC70675220171430DB535941 /* BackendConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70D6CD14579FD2FAEF6AA1 /* BackendConfig.swift */; };
+		F45A26001676B46AC57DC30E /* WitnessCounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1967F70178EF22D72429A3 /* WitnessCounts.swift */; };
+		F96E75192A68CC59699B07EC /* SyncItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA7821F324FC300D07869FA /* SyncItem.swift */; };
 		FB5377B37A8766CB0AD36B7D /* WitnessStreakCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCEC8613720793B073A50E2 /* WitnessStreakCalculator.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +86,8 @@
 
 /* Begin PBXFileReference section */
 		003C9498EA506F48F2E4ECF9 /* Witness.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Witness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6F03B2889D871D9EFAF85F /* StorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySheet.swift; sourceTree = "<group>"; };
+		1D576C862815233CC57EF4FC /* WitnessPlusPaywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessPlusPaywall.swift; sourceTree = "<group>"; };
 		1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateFrame.swift; sourceTree = "<group>"; };
 		23B9DEB3D56300C4B0646299 /* BundledSpeciesCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundledSpeciesCatalog.swift; sourceTree = "<group>"; };
 		2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRecord.swift; sourceTree = "<group>"; };
@@ -75,10 +95,14 @@
 		2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WitnessCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRitualUITests.swift; sourceTree = "<group>"; };
 		3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecimenDetailView.swift; sourceTree = "<group>"; };
+		3F51A47DA17207B45AE09C8E /* CollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailView.swift; sourceTree = "<group>"; };
+		44CD33A3724FC2B62AFE1818 /* catalog */ = {isa = PBXFileReference; lastKnownFileType = folder; name = catalog; path = Packages/WitnessCore/Sources/WitnessCore/Resources/catalog; sourceTree = SOURCE_ROOT; };
 		53BA20C213BA57E566E97630 /* DailySpeciesSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySpeciesSelector.swift; sourceTree = "<group>"; };
-		64E21B832DF552E7470A943D /* species.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = species.json; sourceTree = "<group>"; };
+		5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessSync.swift; sourceTree = "<group>"; };
 		65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaquitaHeroArtwork.swift; sourceTree = "<group>"; };
 		6BC9CF6489D7C89535986EFB /* WitnessUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		728216AE022B82B5021127E5 /* FileHelpingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelpingStore.swift; sourceTree = "<group>"; };
+		7D1967F70178EF22D72429A3 /* WitnessCounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessCounts.swift; sourceTree = "<group>"; };
 		841F6B1989A07CDD335DC75A /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
 		8698B087FB05A16501745D67 /* WitnessShareCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessShareCopy.swift; sourceTree = "<group>"; };
 		8FDFC8711953263B8B59139B /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
@@ -87,13 +111,24 @@
 		9BCEC8613720793B073A50E2 /* WitnessStreakCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessStreakCalculator.swift; sourceTree = "<group>"; };
 		9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRepository.swift; sourceTree = "<group>"; };
 		9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessTheme.swift; sourceTree = "<group>"; };
+		A1E6741E8E552598D4CEB9F6 /* SpeciesCardV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesCardV2.swift; sourceTree = "<group>"; };
 		B114A5EF6FC9CDFD60B4CF0C /* WitnessSharePreviewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessSharePreviewSheet.swift; sourceTree = "<group>"; };
 		B698C8B547BD096664B28580 /* WitnessedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessedView.swift; sourceTree = "<group>"; };
+		BBA7821F324FC300D07869FA /* SyncItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncItem.swift; sourceTree = "<group>"; };
+		C18BCA0F9F6BB74564A6C8A2 /* ArchiveAccessPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveAccessPolicy.swift; sourceTree = "<group>"; };
 		D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D5BBBFD25BDE3FD1CA7575E8 /* SupabaseTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseTransport.swift; sourceTree = "<group>"; };
+		E21448505ADEB8E59D0B8246 /* PlusEntitlements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusEntitlements.swift; sourceTree = "<group>"; };
+		E5912AC6B4687E04E2D975DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA89A757DBBF5D9080AB542D /* FileWitnessRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWitnessRepository.swift; sourceTree = "<group>"; };
 		EABFC134010BFB1FF062CF1B /* AtlasIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasIcons.swift; sourceTree = "<group>"; };
+		EBDAEC2E8EF7B8E47676E1F3 /* FileSyncQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSyncQueue.swift; sourceTree = "<group>"; };
 		EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogValidator.swift; sourceTree = "<group>"; };
 		EF52E8333AE9C0AD77C3567F /* WitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessApp.swift; sourceTree = "<group>"; };
+		F61B5DD130AF6E13995DBB95 /* ReminderPrimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderPrimer.swift; sourceTree = "<group>"; };
+		FB1F19751D24B01B066DD7EB /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
+		FBE2C63F351BC9C606D1E9AD /* SharePlateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePlateCard.swift; sourceTree = "<group>"; };
+		FE70D6CD14579FD2FAEF6AA1 /* BackendConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BA9344E61CC8AC85419821F /* WitnessCore.framework in Frameworks */,
+				039DD09DE0BA0852B7173E02 /* RevenueCat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,9 +156,22 @@
 		12B486ACD46568EC060F1D44 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				64E21B832DF552E7470A943D /* species.json */,
+				44CD33A3724FC2B62AFE1818 /* catalog */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		19B371C8DA3CBBC8CC0E2C1E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FE70D6CD14579FD2FAEF6AA1 /* BackendConfig.swift */,
+				E21448505ADEB8E59D0B8246 /* PlusEntitlements.swift */,
+				FB1F19751D24B01B066DD7EB /* ReminderService.swift */,
+				D5BBBFD25BDE3FD1CA7575E8 /* SupabaseTransport.swift */,
+				7D1967F70178EF22D72429A3 /* WitnessCounts.swift */,
+				5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		33750A8FAB33B208A5B78B57 /* Packages */ = {
@@ -141,16 +190,35 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		5066DCC536A5F3A048503AEA /* Entitlements */ = {
+			isa = PBXGroup;
+			children = (
+				C18BCA0F9F6BB74564A6C8A2 /* ArchiveAccessPolicy.swift */,
+			);
+			path = Entitlements;
+			sourceTree = "<group>";
+		};
+		5AD71A3A00D4FAC03B641799 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				EBDAEC2E8EF7B8E47676E1F3 /* FileSyncQueue.swift */,
+				BBA7821F324FC300D07869FA /* SyncItem.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
 		7067B7292843E3BD76C9C7E8 /* WitnessCore */ = {
 			isa = PBXGroup;
 			children = (
 				02BD853251A283A3E93F45C3 /* Catalog */,
 				AD2BA25F9C9786D30F21245C /* Daily */,
+				5066DCC536A5F3A048503AEA /* Entitlements */,
 				E6E1359F581B7D349C7B89E8 /* Models */,
 				BFBC3F175F7AEB4BBD5457E8 /* Persistence */,
 				12B486ACD46568EC060F1D44 /* Resources */,
 				C509F2685438FA7BA11333C0 /* Sharing */,
 				9C8935ED2FDA505A4FE6C561 /* Streak */,
+				5AD71A3A00D4FAC03B641799 /* Sync */,
 			);
 			path = WitnessCore;
 			sourceTree = "<group>";
@@ -158,9 +226,11 @@
 		788E48741B7D54D3BE923441 /* WitnessApp */ = {
 			isa = PBXGroup;
 			children = (
+				E5912AC6B4687E04E2D975DE /* Assets.xcassets */,
 				CFD8CBB54872203BC35154E5 /* App */,
 				BD6C382569C53F55C701C8C7 /* DesignSystem */,
 				DCECA011CFBDB4EB346BA564 /* Features */,
+				19B371C8DA3CBBC8CC0E2C1E /* Services */,
 			);
 			path = WitnessApp;
 			sourceTree = "<group>";
@@ -168,7 +238,10 @@
 		7A62B357E09E58139AB45C5A /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				F61B5DD130AF6E13995DBB95 /* ReminderPrimer.swift */,
+				A1E6741E8E552598D4CEB9F6 /* SpeciesCardV2.swift */,
 				3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */,
+				0E6F03B2889D871D9EFAF85F /* StorySheet.swift */,
 				98FE485E4A09EEE93616F399 /* TodayView.swift */,
 				65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */,
 			);
@@ -185,6 +258,14 @@
 			);
 			sourceTree = "<group>";
 		};
+		8EF9582F58A2E03A2F8B5D72 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				1D576C862815233CC57EF4FC /* WitnessPlusPaywall.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
 		9148D1229A34B27D791340C5 /* Witnessed */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +277,7 @@
 		936ED6CCA2550FB358443818 /* Sharing */ = {
 			isa = PBXGroup;
 			children = (
+				FBE2C63F351BC9C606D1E9AD /* SharePlateCard.swift */,
 				B114A5EF6FC9CDFD60B4CF0C /* WitnessSharePreviewSheet.swift */,
 			);
 			path = Sharing;
@@ -240,6 +322,7 @@
 		BFBC3F175F7AEB4BBD5457E8 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				728216AE022B82B5021127E5 /* FileHelpingStore.swift */,
 				EA89A757DBBF5D9080AB542D /* FileWitnessRepository.swift */,
 				9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */,
 			);
@@ -266,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				841F6B1989A07CDD335DC75A /* ArchiveView.swift */,
+				3F51A47DA17207B45AE09C8E /* CollectionDetailView.swift */,
 			);
 			path = Archive;
 			sourceTree = "<group>";
@@ -292,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				C5BB3F65FAF2CFCAA051857E /* Archive */,
+				8EF9582F58A2E03A2F8B5D72 /* Paywall */,
 				465D725BCE9CBC66B340F9DC /* Settings */,
 				936ED6CCA2550FB358443818 /* Sharing */,
 				7A62B357E09E58139AB45C5A /* Today */,
@@ -325,6 +410,7 @@
 			buildConfigurationList = 2F2E6B6EA3D2685FCD451820 /* Build configuration list for PBXNativeTarget "Witness" */;
 			buildPhases = (
 				CF9EDFD30239A27D3D680A1A /* Sources */,
+				4BFC7077308875F132A3952F /* Resources */,
 				967EEEE48B237A347CCCED18 /* Frameworks */,
 				FD17EA57A572EE29B5F16C12 /* Embed Frameworks */,
 			);
@@ -335,6 +421,7 @@
 			);
 			name = Witness;
 			packageProductDependencies = (
+				354B4FA9912938B2089D120C /* RevenueCat */,
 			);
 			productName = Witness;
 			productReference = 003C9498EA506F48F2E4ECF9 /* Witness.app */;
@@ -385,6 +472,10 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					8926EE529F16A78EF6D2B226 = {
+						DevelopmentTeam = L5R9XW45B6;
+						ProvisioningStyle = Automatic;
+					};
 					DEDA12CCC6745CC224C3A2C6 = {
 						TestTargetID = 8926EE529F16A78EF6D2B226;
 					};
@@ -399,6 +490,9 @@
 			);
 			mainGroup = 8355A98CE88B93018DD2A824;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EC08A5DB155FB543BA0F19E8 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 98639BA6528D395635163C41 /* Products */;
 			projectDirPath = "";
@@ -416,7 +510,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75D66B3F60EA7F6EBF43D997 /* species.json in Resources */,
+				E995E7B6466D825AB81A803A /* catalog in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BFC7077308875F132A3952F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E548CB4F18E023489E9A2D98 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,11 +537,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F28124AD3D02EF0C4472C35 /* ArchiveAccessPolicy.swift in Sources */,
 				224FC55D98C252D3C06B08BF /* BundledSpeciesCatalog.swift in Sources */,
 				D9AF7CA236EE26B44E280DBB /* CatalogValidator.swift in Sources */,
 				0F4628BE5E221D55F0E26166 /* DailySpeciesSelector.swift in Sources */,
+				09C0E9F2401FF72DB6D73683 /* FileHelpingStore.swift in Sources */,
+				AC9C55BD3124DCD919946D44 /* FileSyncQueue.swift in Sources */,
 				A536A1761E475036B749FBA4 /* FileWitnessRepository.swift in Sources */,
 				16AAFB87F230EB12C8D396A1 /* SpeciesRecord.swift in Sources */,
+				F96E75192A68CC59699B07EC /* SyncItem.swift in Sources */,
 				E388B5ED07FA84F3140DBC9C /* WitnessRecord.swift in Sources */,
 				56085BAAD37054233313394D /* WitnessRepository.swift in Sources */,
 				16D5DDC2C5DCF75498B2A44D /* WitnessShareCopy.swift in Sources */,
@@ -454,14 +560,26 @@
 				3AACD83387DDBED44260D080 /* AppModel.swift in Sources */,
 				4F2473A639039F8A3C80F092 /* ArchiveView.swift in Sources */,
 				44218CBDF7A88A7A70C086CA /* AtlasIcons.swift in Sources */,
+				EC70675220171430DB535941 /* BackendConfig.swift in Sources */,
+				43971BEA1623685AFFA856C4 /* CollectionDetailView.swift in Sources */,
 				84987ABAB9FFB62FE7E68E24 /* PlateFrame.swift in Sources */,
+				8C73A1DC6CA9779FC7CD1541 /* PlusEntitlements.swift in Sources */,
+				2DB8EC5552B2AA6AE65EB074 /* ReminderPrimer.swift in Sources */,
+				7436B0FED665FD5428FFD5D6 /* ReminderService.swift in Sources */,
 				3F5054183FC3B7C5BE6C7A71 /* RootTabView.swift in Sources */,
 				B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */,
+				D76814029898F318CCF0563B /* SharePlateCard.swift in Sources */,
+				68D6C9D187410805167434BB /* SpeciesCardV2.swift in Sources */,
 				D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */,
+				C2187594DDD99E4D49BE4ED2 /* StorySheet.swift in Sources */,
+				AEE9CFCC7ED6423851B4C1AA /* SupabaseTransport.swift in Sources */,
 				EAB93BBE70E97B6408C99333 /* TodayView.swift in Sources */,
 				66792FAAD28C4692A18458B0 /* VaquitaHeroArtwork.swift in Sources */,
 				A16041A90DD5333A1728F811 /* WitnessApp.swift in Sources */,
+				F45A26001676B46AC57DC30E /* WitnessCounts.swift in Sources */,
+				99A3848B26CB000E2269AE90 /* WitnessPlusPaywall.swift in Sources */,
 				124B4DC8E0F947C48FF75286 /* WitnessSharePreviewSheet.swift in Sources */,
+				5B6471AA2629DE1F67F5C7B5 /* WitnessSync.swift in Sources */,
 				6CB63D7D22BC7C5FF46E1BAC /* WitnessTheme.swift in Sources */,
 				2E8A595CF0062FAD3A5EA2BF /* WitnessedView.swift in Sources */,
 			);
@@ -507,7 +625,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L5R9XW45B6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Witness;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -720,7 +840,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L5R9XW45B6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Witness;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -780,6 +902,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC08A5DB155FB543BA0F19E8 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		354B4FA9912938B2089D120C /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC08A5DB155FB543BA0F19E8 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5DE08BFC18210C8548FE82D8 /* Project object */;
 }

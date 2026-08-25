@@ -14,6 +14,13 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
     public let publishDate: String
     public let sources: [SourceReference]
     public let editorial: EditorialReview
+    // Card v2 content (docs/CARD_V2_BRIEF.md); optional so v1 records stay valid.
+    public let stats: SpeciesStats?
+    public let reproduction: StorySection?
+    public let insight: StorySection?
+    public let habitatRegions: [RangeRegion]?
+    public let gallery: [String]?
+    public let programs: [ConservationProgram]?
 
     public init(
         id: String,
@@ -28,7 +35,13 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
         media: MediaRecord,
         publishDate: String,
         sources: [SourceReference],
-        editorial: EditorialReview
+        editorial: EditorialReview,
+        stats: SpeciesStats? = nil,
+        reproduction: StorySection? = nil,
+        insight: StorySection? = nil,
+        habitatRegions: [RangeRegion]? = nil,
+        gallery: [String]? = nil,
+        programs: [ConservationProgram]? = nil
     ) {
         self.id = id
         self.schemaVersion = schemaVersion
@@ -43,6 +56,111 @@ public struct SpeciesRecord: Codable, Equatable, Identifiable, Sendable {
         self.publishDate = publishDate
         self.sources = sources
         self.editorial = editorial
+        self.stats = stats
+        self.reproduction = reproduction
+        self.insight = insight
+        self.habitatRegions = habitatRegions
+        self.gallery = gallery
+        self.programs = programs
+    }
+}
+
+/// A protection effort shown in the Cabinet's HELP & PROTECTION section.
+/// `program` entries are editorially selected real initiatives (unpaid);
+/// `sponsor` marks a disclosed commercial partner and must be labeled as such
+/// in the UI — the kinds are never mixed silently (trust policy).
+public struct ConservationProgram: Codable, Equatable, Identifiable, Sendable {
+    public enum Kind: String, Codable, Sendable {
+        case program
+        case sponsor
+    }
+
+    public let id: String
+    public let organization: String
+    public let title: String
+    public let summary: String
+    public let url: String
+    public let kind: Kind
+    public let sourceIDs: [String]
+    public let lastVerified: String
+
+    public init(
+        id: String,
+        organization: String,
+        title: String,
+        summary: String,
+        url: String,
+        kind: Kind,
+        sourceIDs: [String],
+        lastVerified: String
+    ) {
+        self.id = id
+        self.organization = organization
+        self.title = title
+        self.summary = summary
+        self.url = url
+        self.kind = kind
+        self.sourceIDs = sourceIDs
+        self.lastVerified = lastVerified
+    }
+}
+
+/// A deliberately generalized habitat region: a broad named circle, never a
+/// precise occurrence point (sensitive-location policy).
+public struct RangeRegion: Codable, Equatable, Sendable {
+    /// The smallest radius the catalog accepts; anything tighter could
+    /// localize animals.
+    public static let minimumRadiusKm: Double = 25
+
+    public let name: String
+    public let latitude: Double
+    public let longitude: Double
+    public let radiusKm: Double
+
+    public init(name: String, latitude: Double, longitude: Double, radiusKm: Double) {
+        self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
+        self.radiusKm = radiusKm
+    }
+}
+
+public struct SpeciesStats: Codable, Equatable, Sendable {
+    public enum PopulationTrend: String, Codable, Sendable {
+        case decreasing
+        case stable
+        case increasing
+        case unknown
+    }
+
+    public let size: String
+    public let lifespan: String
+    public let diet: String
+    /// Shown only alongside `populationAsOf`; volatile figures may be nil.
+    public let populationEstimate: String?
+    public let populationAsOf: String?
+    public let trend: PopulationTrend
+    public let threats: [String]
+    public let sourceIDs: [String]
+
+    public init(
+        size: String,
+        lifespan: String,
+        diet: String,
+        populationEstimate: String? = nil,
+        populationAsOf: String? = nil,
+        trend: PopulationTrend,
+        threats: [String],
+        sourceIDs: [String]
+    ) {
+        self.size = size
+        self.lifespan = lifespan
+        self.diet = diet
+        self.populationEstimate = populationEstimate
+        self.populationAsOf = populationAsOf
+        self.trend = trend
+        self.threats = threats
+        self.sourceIDs = sourceIDs
     }
 }
 

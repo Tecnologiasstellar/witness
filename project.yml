@@ -6,12 +6,23 @@ options:
     iOS: "17.0"
   createIntermediateGroups: true
 
+packages:
+  RevenueCat:
+    url: https://github.com/RevenueCat/purchases-ios-spm.git
+    from: "5.0.0"
+
 targets:
   WitnessCore:
     type: framework
     platform: iOS
     sources:
       - path: Packages/WitnessCore/Sources/WitnessCore
+        excludes:
+          - "Resources/**"
+      # Folder reference so the framework bundle keeps the catalog/ subdirectory,
+      # matching SPM's .copy("Resources/catalog") layout.
+      - path: Packages/WitnessCore/Sources/WitnessCore/Resources/catalog
+        type: folder
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.avp.witness.core
@@ -27,6 +38,8 @@ targets:
       - path: WitnessApp
     dependencies:
       - target: WitnessCore
+      - package: RevenueCat
+        product: RevenueCat
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.avp.witness
@@ -42,6 +55,8 @@ targets:
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
         ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: L5R9XW45B6
 
   WitnessUITests:
     type: bundle.ui-testing

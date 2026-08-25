@@ -88,6 +88,12 @@ public actor FileWitnessRepository: WitnessRepository {
         let directory = fileURL.deletingLastPathComponent()
         try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
         let data = try encoder.encode(store)
+        // completeFileProtection is the iOS privacy guarantee; on macOS (test
+        // host only) it is volume-dependent and can fail with EPERM.
+#if os(iOS)
         try data.write(to: fileURL, options: [.atomic, .completeFileProtection])
+#else
+        try data.write(to: fileURL, options: [.atomic])
+#endif
     }
 }

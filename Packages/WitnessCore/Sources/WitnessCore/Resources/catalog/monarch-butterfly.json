@@ -1,0 +1,204 @@
+{
+  "id": "monarch-butterfly",
+  "schemaVersion": 1,
+  "commonName": "Monarch Butterfly",
+  "scientificName": "Danaus plexippus",
+  "conservationStatus": {
+    "displayName": "In Decline",
+    "normalizedValue": "declining"
+  },
+  "generalizedRange": "North America, overwintering in central Mexico and coastal California",
+  "hook": "A migration measured in generations is growing thin.",
+  "story": [
+    {
+      "id": "monarch-familiar",
+      "text": "The monarch is the rare wild animal almost everyone has met: an orange-and-black butterfly drifting through a summer garden.",
+      "sourceIDs": [
+        "nps-monarch"
+      ]
+    },
+    {
+      "id": "monarch-pollinator",
+      "text": "More than beautiful, monarchs are pollinators—while feeding on nectar they pollinate many kinds of wildflowers.",
+      "sourceIDs": [
+        "nps-monarch"
+      ]
+    },
+    {
+      "id": "monarch-milkweed",
+      "text": "Their caterpillars, though, eat one thing. Monarchs must lay their eggs on milkweed.",
+      "sourceIDs": [
+        "nps-monarch",
+        "xerces-monarchs"
+      ]
+    },
+    {
+      "id": "monarch-migration",
+      "text": "Each autumn, monarchs east of the Rockies fly to overwinter in the mountains of central Mexico, while western monarchs gather at sites on the California coast.",
+      "sourceIDs": [
+        "nps-monarch",
+        "xerces-monarchs"
+      ]
+    },
+    {
+      "id": "monarch-generations",
+      "text": "No single butterfly makes the whole journey. The migration is completed across generations.",
+      "sourceIDs": [
+        "nps-monarch"
+      ]
+    },
+    {
+      "id": "monarch-decline",
+      "text": "Once abundant across North America, monarchs are now in decline, pressed by habitat loss, pesticides, and a changing climate.",
+      "sourceIDs": [
+        "xerces-monarchs"
+      ]
+    },
+    {
+      "id": "monarch-backyard",
+      "text": "Their recovery is unusually close to home: milkweed native to your region, nectar flowers from spring through fall, and gardens managed without pesticides.",
+      "sourceIDs": [
+        "xerces-monarchs"
+      ]
+    },
+    {
+      "id": "monarch-witness",
+      "text": "To witness the monarch is to notice that even a common wonder can thin—and that a backyard can be part of the answer.",
+      "sourceIDs": [
+        "xerces-monarchs"
+      ]
+    }
+  ],
+  "action": {
+    "id": "plant-native-milkweed",
+    "title": "Plant native milkweed",
+    "summary": "Use the Xerces Society’s regional guides to plant milkweed native to your area and nectar flowers that bloom spring through fall—and skip the pesticides.",
+    "effort": "One garden season",
+    "destinationURL": "https://xerces.org/monarchs",
+    "destinationOrganization": "Xerces Society",
+    "geographicApplicability": "North America",
+    "sourceIDs": [
+      "xerces-monarchs"
+    ],
+    "lastVerified": "2026-08-22",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "monarch-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Rights record docs/media/monarch-plate-01-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-08-25",
+  "sources": [
+    {
+      "id": "nps-monarch",
+      "title": "Pollinators — Monarch butterfly",
+      "organization": "U.S. National Park Service",
+      "url": "https://www.nps.gov/articles/monarch-butterfly.htm",
+      "lastAccessed": "2026-08-22"
+    },
+    {
+      "id": "xerces-monarchs",
+      "title": "Monarch Conservation",
+      "organization": "Xerces Society",
+      "url": "https://xerces.org/monarchs",
+      "lastAccessed": "2026-08-22"
+    },
+    {
+      "id": "monarchwatch",
+      "title": "Monarch Watch",
+      "organization": "Monarch Watch (University of Kansas)",
+      "url": "https://monarchwatch.org",
+      "lastAccessed": "2026-08-24"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "PENDING",
+    "lastFactChecked": "2026-08-24",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Prototype copy derived from the declared NPS and Xerces pages. Formal listing status is intentionally described only as decline because regulatory status is in motion. Requires conservation-partner review before release."
+  },
+  "stats": {
+    "size": "Not yet verified",
+    "lifespan": "A few weeks — 8–9 months for the migratory generation",
+    "diet": "Caterpillars: milkweed only · adults: nectar",
+    "trend": "decreasing",
+    "threats": [
+      "Milkweed & habitat loss",
+      "Pesticides",
+      "Climate change",
+      "Shrinking winter forests"
+    ],
+    "sourceIDs": [
+      "nps-monarch",
+      "xerces-monarchs"
+    ]
+  },
+  "reproduction": {
+    "id": "monarch-reproduction",
+    "text": "Monarchs lay their eggs only on milkweed, the caterpillars’ sole food. Most adults live a few weeks — but the generation that emerges in late summer is born to travel, living eight or nine months to complete the migration.",
+    "sourceIDs": [
+      "nps-monarch"
+    ]
+  },
+  "insight": {
+    "id": "monarch-insight",
+    "text": "Scientists think migrating monarchs navigate by the position of the sun — on a route they have never flown before.",
+    "sourceIDs": [
+      "nps-monarch"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Overwintering forests, central Mexico",
+      "latitude": 19.6,
+      "longitude": -100.3,
+      "radiusKm": 60
+    },
+    {
+      "name": "Western overwintering coast, California",
+      "latitude": 36.4,
+      "longitude": -121.9,
+      "radiusKm": 150
+    }
+  ],
+  "gallery": [
+    "monarch-plate-01",
+    "monarch-context-01",
+    "monarch-detail-01",
+    "monarch-behavior-01",
+    "monarch-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "xerces-monarch-program",
+      "organization": "Xerces Society",
+      "title": "Monarch conservation",
+      "summary": "Regional milkweed and nectar-plant guides, overwintering-site protection, and community science for monarch recovery.",
+      "url": "https://xerces.org/monarchs",
+      "kind": "program",
+      "sourceIDs": [
+        "xerces-monarchs"
+      ],
+      "lastVerified": "2026-08-24"
+    },
+    {
+      "id": "monarch-watch-program",
+      "organization": "Monarch Watch",
+      "title": "Tagging & waystations",
+      "summary": "University of Kansas programme for monarch tagging, research, and registering pollinator waystation habitat.",
+      "url": "https://monarchwatch.org",
+      "kind": "program",
+      "sourceIDs": [
+        "monarchwatch"
+      ],
+      "lastVerified": "2026-08-24"
+    }
+  ]
+}
