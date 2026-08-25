@@ -1,5 +1,5 @@
 import SwiftUI
-import UserNotifications
+@preconcurrency import UserNotifications
 import WitnessCore
 
 /// Daily local-notification reminder (D-008: primed only after the first
