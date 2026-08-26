@@ -30,6 +30,6 @@ public enum WitnessPersistenceError: Error, Equatable, LocalizedError, Sendable 
 
 public protocol WitnessRepository: Sendable {
     func allRecords() async throws -> [WitnessRecord]
-    func recordWitness(speciesID: String, localDay: String, witnessedAt: Date) async throws -> WitnessSaveResult
+    func recordWitness(speciesID: String, assignedPeriod: String, witnessedAt: Date) async throws -> WitnessSaveResult
     func updateReflection(eventID: String, reflection: String?) async throws -> WitnessRecord
 }

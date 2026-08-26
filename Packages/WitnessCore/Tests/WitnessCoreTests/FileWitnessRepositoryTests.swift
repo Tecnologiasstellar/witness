@@ -4,7 +4,7 @@ import Testing
 
 @Suite("Durable local Witness repository")
 struct FileWitnessRepositoryTests {
-    @Test("A species can be witnessed only once per local day")
+    @Test("A species can be witnessed only once per ritual period")
     func idempotentWitness() async throws {
         let fileURL = temporaryStoreURL()
         let repository = FileWitnessRepository(fileURL: fileURL)
@@ -12,12 +12,12 @@ struct FileWitnessRepositoryTests {
 
         let first = try await repository.recordWitness(
             speciesID: "vaquita",
-            localDay: "2026-08-21",
+            assignedPeriod: "2026-W34",
             witnessedAt: date
         )
         let duplicate = try await repository.recordWitness(
             speciesID: "vaquita",
-            localDay: "2026-08-21",
+            assignedPeriod: "2026-W34",
             witnessedAt: date.addingTimeInterval(90)
         )
 
@@ -33,7 +33,7 @@ struct FileWitnessRepositoryTests {
         let repository = FileWitnessRepository(fileURL: fileURL)
         let result = try await repository.recordWitness(
             speciesID: "vaquita",
-            localDay: "2026-08-21",
+            assignedPeriod: "2026-W34",
             witnessedAt: Date(timeIntervalSince1970: 1_787_310_000)
         )
 
@@ -49,7 +49,7 @@ struct FileWitnessRepositoryTests {
         let firstRepository = FileWitnessRepository(fileURL: fileURL)
         let result = try await firstRepository.recordWitness(
             speciesID: "vaquita",
-            localDay: "2026-08-21",
+            assignedPeriod: "2026-W34",
             witnessedAt: Date(timeIntervalSince1970: 1_787_310_000)
         )
         _ = try await firstRepository.updateReflection(
@@ -60,8 +60,46 @@ struct FileWitnessRepositoryTests {
         let restoredRepository = FileWitnessRepository(fileURL: fileURL)
         let restored = try #require(try await restoredRepository.allRecords().first)
 
-        #expect(restored.id == "2026-08-21|vaquita")
+        #expect(restored.id == "2026-W34|vaquita")
         #expect(restored.reflection == "I want to remember the silence between breaths.")
+    }
+
+    @Test("A pre-weekly archive with day-keyed records loads unchanged")
+    func legacyDailyArchiveStillLoads() async throws {
+        let fileURL = temporaryStoreURL()
+        try FileManager.default.createDirectory(
+            at: fileURL.deletingLastPathComponent(),
+            withIntermediateDirectories: true
+        )
+        // Exactly the on-disk shape written before D-016 (weekly cadence).
+        let legacyJSON = """
+        {
+          "schemaVersion": 1,
+          "records": [
+            {
+              "id": "2026-08-21|vaquita",
+              "speciesID": "vaquita",
+              "localDay": "2026-08-21",
+              "witnessedAt": "2026-08-21T15:00:00Z",
+              "reflection": "Kept."
+            }
+          ]
+        }
+        """
+        try Data(legacyJSON.utf8).write(to: fileURL)
+
+        let repository = FileWitnessRepository(fileURL: fileURL)
+        let restored = try #require(try await repository.allRecords().first)
+        #expect(restored.assignedPeriod == "2026-08-21")
+        #expect(restored.reflection == "Kept.")
+
+        // New weekly records coexist with legacy day-keyed history.
+        _ = try await repository.recordWitness(
+            speciesID: "vaquita",
+            assignedPeriod: "2026-W35",
+            witnessedAt: Date(timeIntervalSince1970: 1_787_915_000)
+        )
+        #expect(try await repository.allRecords().count == 2)
     }
 
     private func temporaryStoreURL() -> URL {

@@ -1,8 +1,59 @@
 # Implementation Status
 
-Last updated: August 21, 2026
+Last updated: August 26, 2026
 
 This file records implementation evidence. It does not replace the release gates in `COMPETITION_AND_RELEASE_GATES.md`.
+
+## Commerce Phase 2 — local commerce vertical slice
+
+### Outcome (2026-08-26)
+
+The commerce surfaces exist end to end against local/test infrastructure: an Access section in the Index (free promise, Field Season, Atlas status, Restore, Manage Subscription, Support), a Field Season preview with permanence language and an explicit not-yet-on-sale notice, a single calm Atlas sheet with two equal-access durations and a decimal-price-calculated `Best value` badge, and a quiet Support tip screen. A Debug-only StoreKit 2 adapter (`Witness.storekit`, four products, one subscription group) executes purchases behind `PurchaseService`; Release builds compile `UnavailablePurchaseService` and contain no test store path. Verified snapshots cache to `FileAccessRepository` for offline continuity. No commerce appears before the first Witness; nothing is purchasable in production.
+
+### Acceptance evidence (2026-08-26)
+
+| Gate | Evidence | Result |
+|---|---|---|
+| Core tests | `swift test` in `Packages/WitnessCore` | 36 tests, 9 suites, 0 failures |
+| Project generation | `xcodegen generate` (adds `WitnessAppTests`, test plan, run-action StoreKit config) | Generated; diff inspected |
+| Debug build | unsigned iOS Simulator build | BUILD SUCCEEDED |
+| Release build | unsigned generic iOS Release build | BUILD SUCCEEDED (no StoreKit test path compiled) |
+| Access UI tests | `AccessSurfacesUITests` with fake service, iPhone 17 Pro sim | 3/3 passed |
+| StoreKitTest suite | `StoreKitPurchaseAdapterTests` | BLOCKED: iOS 26.5 runtime defect — CLI `xcodebuild test` does not sync `.storekit` to `storekitd` (`SKInternalErrorDomain Code=3`); 3 non-mutating cases pass. See `PAID_ELEMENTS_EXECUTION_STATUS.md` for unblock options |
+| Ritual regression | `WitnessRitualUITests` | 2 failures reproduced identically on clean HEAD worktree — pre-existing host/runtime defect, not a commerce regression; follow-up task opened |
+
+### Rollback
+
+Delete `WitnessApp/Commerce/`, `WitnessApp/Features/Access/`, `WitnessAppTests/`, `Witness.storekit`, `Witness.xctestplan`, restore `SettingsView`/`RootTabView`/`WitnessApp` from HEAD, revert `project.yml`, rerun `xcodegen generate`. No user-authored data is touched.
+
+## Commerce Phase 1 — provider-neutral access domain
+
+### Outcome
+
+`WitnessCore` now contains the complete provider-neutral commerce domain from `ACCESS_AND_COMMERCE_SOURCE_OF_RECORD.md`: `ContentAccessRequirement` (`free`, `field_season_1`, `atlas`), `AccessSnapshot` with `AtlasAccessState`, `StandardContentAccessPolicy`, the `PurchaseService`/`AccessRepository` protocols, the typed four-product allow-list (`WitnessProductCatalog`), and a deterministic `FakePurchaseService` for previews and tests. No store SDK, network, or UI is involved; nothing purchasable exists yet.
+
+Access rules proven by tests: free is always authorized; Field Season requires permanent ownership or granting Atlas state; Atlas content requires active or grace-period Atlas; billing retry, expiry, revocation, and unknown fail closed for paid content while free access and separately owned Field Season persist; the Support tip is repeatable and never changes access.
+
+Naming note: the source of record's sample code names one case `oceanEdgeSeasonOne`; the implementation uses `fieldSeasonOne` with raw value `field_season_1` to match the document's product, entitlement, and database naming.
+
+### Acceptance evidence (2026-08-26)
+
+| Gate | Evidence | Result |
+|---|---|---|
+| Domain tests | `swift test` in `Packages/WitnessCore` | Passed; 31 tests in 8 suites, 0 failures (includes all pre-existing ritual tests) |
+| Dependency rule | grep for `SwiftUI`/`StoreKit`/`RevenueCat`/`Supabase` imports in `Packages/WitnessCore/Sources` | None found |
+| Project generation | `xcodegen generate` | Passed; `Witness.xcodeproj` regenerated with commerce sources |
+| iOS compile | `xcodebuild -project Witness.xcodeproj -scheme Witness -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build` | `BUILD SUCCEEDED` |
+
+### Remaining unverified gates for commerce
+
+- No StoreKit configuration, purchase UI, RevenueCat adapter, App Store Connect product, Supabase table, or webhook exists yet (Phases 2–9).
+- Product IDs in `WitnessProductCatalog` are candidates pending founder approval (D-013); they are immutable once created in App Store Connect.
+- Decision D-013 remains `proposed for approval`, and the content cadence decision remains open.
+
+### Rollback
+
+Delete `Packages/WitnessCore/Sources/WitnessCore/Commerce/` and the two commerce test files, then rerun `xcodegen generate`. No user data, remote state, or existing ritual behavior is touched.
 
 ## Weekend Zero — durable local ritual
 

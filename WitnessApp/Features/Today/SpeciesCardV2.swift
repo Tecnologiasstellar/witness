@@ -451,7 +451,7 @@ struct WitnessActionView: View {
                 witnessedReveal
                     .transition(reduceMotion ? .opacity : .opacity.combined(with: .move(edge: .bottom)))
             } else {
-                Text("ONE WITNESS PER DAY · TAKES A MOMENT")
+                Text("ONE WITNESS PER WEEK · TAKES A MOMENT")
                     .font(AtlasType.technical(8.5, weight: .medium)).tracking(1.0)
                     .foregroundStyle(AtlasTheme.inkMuted)
             }

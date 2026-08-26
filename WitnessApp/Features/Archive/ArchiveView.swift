@@ -3,12 +3,13 @@ import WitnessCore
 
 /// Cabinet v2 (docs/CABINET_V2_BRIEF.md): WITNESSED and HELPING are the
 /// personal collection — large image-led rows with name and dates. ARCHIVE
-/// keeps every featured day and remains the Witness+ surface (D-016).
+/// keeps every featured week; beyond the free window it is the Atlas
+/// surface (D-020/D-023).
 struct ArchiveView: View {
     @ObservedObject var model: AppModel
-    @ObservedObject private var entitlements = PlusEntitlements.shared
+    @ObservedObject var commerce: CommerceModel
     @State private var segment = "WITNESSED"
-    @State private var isPaywallPresented = false
+    @State private var isAtlasSheetPresented = false
     private let segments = ["WITNESSED", "HELPING", "ARCHIVE"]
 
     var body: some View {
@@ -28,7 +29,9 @@ struct ArchiveView: View {
         .foregroundStyle(AtlasTheme.ink)
         .background(AtlasPaper().ignoresSafeArea())
         .toolbar(.hidden, for: .navigationBar)
-        .sheet(isPresented: $isPaywallPresented) { WitnessPlusPaywall() }
+        .sheet(isPresented: $isAtlasSheetPresented) {
+            NavigationStack { AtlasAccessSheet(commerce: commerce) }
+        }
     }
 
     private var witnessedRows: [(species: SpeciesRecord, witnessedAt: Date, helping: HelpingRecord?)] {
@@ -62,7 +65,7 @@ struct ArchiveView: View {
             collectionList(
                 rows: witnessedRows,
                 emptyTitle: "NO WITNESSES YET",
-                emptyBody: "Witness today’s species and it will take its place in your cabinet."
+                emptyBody: "Witness this week’s species and it will take its place in your cabinet."
             )
         }
     }
@@ -109,14 +112,14 @@ struct ArchiveView: View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                 ForEach(model.featuredPlates) { plate in
-                    if model.isPlateUnlocked(plate, hasPlus: entitlements.hasPlus) {
+                    if model.isPlateUnlocked(plate, atlasActive: commerce.atlasIsActive) {
                         NavigationLink { SpecimenDetailView(species: plate.species) } label: {
-                            ArchiveCard(plate: plate, isToday: plate.localDay == model.featuredPlates.first?.localDay, isLocked: false)
+                            ArchiveCard(plate: plate, isCurrentWeek: plate.period == model.featuredPlates.first?.period, isLocked: false)
                         }
                         .buttonStyle(.plain)
                     } else {
-                        Button { isPaywallPresented = true } label: {
-                            ArchiveCard(plate: plate, isToday: false, isLocked: true)
+                        Button { isAtlasSheetPresented = true } label: {
+                            ArchiveCard(plate: plate, isCurrentWeek: false, isLocked: true)
                         }
                         .buttonStyle(.plain)
                     }
@@ -203,7 +206,7 @@ private struct CollectionRow: View {
 
 private struct ArchiveCard: View {
     let plate: FeaturedPlate
-    let isToday: Bool
+    let isCurrentWeek: Bool
     let isLocked: Bool
 
     var body: some View {
@@ -221,13 +224,13 @@ private struct ArchiveCard: View {
                     }
                 }
                 .opacity(isLocked ? 0.35 : 1)
-                if isToday {
-                    Text("TODAY")
+                if isCurrentWeek {
+                    Text("THIS WEEK")
                         .font(AtlasType.technical(8, weight: .bold)).tracking(1)
                         .foregroundStyle(AtlasTheme.sepia).padding(7)
                 }
                 if isLocked {
-                    Text("WITNESS+")
+                    Text("ATLAS")
                         .font(AtlasType.technical(8, weight: .bold)).tracking(1)
                         .foregroundStyle(AtlasTheme.sepia).padding(7)
                 }
@@ -237,11 +240,11 @@ private struct ArchiveCard: View {
                 .font(AtlasType.technical(10, weight: .bold)).tracking(0.9)
                 .lineLimit(1)
                 .opacity(isLocked ? 0.6 : 1)
-            Text(plate.localDay)
+            Text(plate.period)
                 .font(AtlasType.display(12, italic: true)).foregroundStyle(AtlasTheme.inkMuted)
         }
         .padding(11)
         .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
-        .accessibilityLabel("\(plate.species.commonName), featured \(plate.localDay)\(isLocked ? ", requires Witness Plus" : "")")
+        .accessibilityLabel("\(plate.species.commonName), featured week \(plate.period)\(isLocked ? ", requires Atlas membership" : "")")
     }
 }

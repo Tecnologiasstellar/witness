@@ -1,8 +1,8 @@
 # Witness
 
-> Every day, witness one species on the edge of disappearance—and join a global archive of memory and action.
+> Each week, witness one species on the edge of disappearance—and join a global archive of memory and action.
 
-Witness is a native iOS daily ritual about threatened and extinct species. In one or two minutes, a person meets one species, reads a short sourced story, records an act of witness, and is offered one credible action.
+Witness is a native iOS weekly ritual about threatened and extinct species. In one or two minutes, a person meets the week’s species, reads a short sourced story, records an act of witness, and is offered one credible action.
 
 The immediate goal is to publish a working App Store MVP and compete for first place in the RevenueCat Shipathon 2026 Peace Prize.
 
@@ -13,7 +13,7 @@ The immediate goal is to publish a working App Store MVP and compete for first p
 - Every factual claim and visual has traceable provenance.
 - A witness count measures attention, not conservation impact.
 - A concrete action closes the loop without guilt or false promises.
-- The daily experience remains free. Paid features support depth and continuity.
+- The weekly experience remains free. Paid features support depth and continuity.
 
 ## Current status
 
@@ -36,6 +36,8 @@ swift test
 
 ## Canonical documents
 
+- [Access and commerce source of record](docs/ACCESS_AND_COMMERCE_SOURCE_OF_RECORD.md)
+- [Long-haul paid-elements execution prompt](docs/LONG_HAUL_PAID_ELEMENTS_EXECUTION_PROMPT.md)
 - [Product strategy](docs/PRODUCT_STRATEGY.md)
 - [MVP specification](docs/MVP_SPEC.md)
 - [Four-week execution plan](docs/FOUR_WEEK_EXECUTION_PLAN.md)

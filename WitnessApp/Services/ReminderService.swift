@@ -67,11 +67,14 @@ final class ReminderService: ObservableObject {
         defaults.set(minute, forKey: "reminder.minute")
 
         let content = UNMutableNotificationContent()
-        content.title = "Today's species is waiting"
+        content.title = "This week's species is waiting"
         content.body = "A new plate is on the table. Take one quiet minute to bear witness."
         content.sound = .default
 
+        // Weekly cadence (D-023): one reminder per ritual week, on Monday,
+        // when the new plate arrives.
         var trigger = DateComponents()
+        trigger.weekday = 2
         trigger.hour = hour
         trigger.minute = minute
         let request = UNNotificationRequest(

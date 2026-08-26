@@ -37,9 +37,12 @@ final class WitnessSync: Sendable {
         self.encoder = JSONEncoder()
     }
 
-    func witnessRecorded(speciesID: String, localDay: String) async {
+    /// The wire field stays `day` (live backend schema); its value is the
+    /// ritual period key — an ISO week key since D-023 — so server-side
+    /// idempotency is per install, species, and week.
+    func witnessRecorded(speciesID: String, assignedPeriod: String) async {
         guard transport != nil else { return }
-        let payload = WitnessPayload(install_id: installID, species_id: speciesID, day: localDay)
+        let payload = WitnessPayload(install_id: installID, species_id: speciesID, day: assignedPeriod)
         await enqueue(kind: .witness, payload: payload)
         await drain()
     }

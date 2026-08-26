@@ -179,7 +179,7 @@ struct TodayView: View {
             .accessibilityIdentifier("today.witnessButton")
             .accessibilityHint(model.isWitnessed ? "Already recorded privately on this device" : "Records one private Witness on this device")
 
-            Text(model.isWitnessed ? "PRIVATE RECORD RESTORED" : "ONE PRIVATE WITNESS · NO PUBLIC COUNT")
+            Text(model.isWitnessed ? "PRIVATE RECORD RESTORED" : "ONE WITNESS · COUNTED ANONYMOUSLY, NEVER PROFILED")
                 .font(AtlasType.technical(8.5, weight: .medium))
                 .tracking(1.0)
                 .foregroundStyle(AtlasTheme.inkMuted)
