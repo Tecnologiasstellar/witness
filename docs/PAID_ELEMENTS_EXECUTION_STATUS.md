@@ -167,6 +167,13 @@ Discovered local `main` was stale at 363ad14 while `origin/main` (f81b011) carri
 - Phase 1: delete `Packages/WitnessCore/Sources/WitnessCore/Commerce/` + the two test files, rerun `xcodegen generate`.
 - Phase 2 (when landed): delete `WitnessApp/Commerce/`, `WitnessApp/Features/Access/`, `Witness.storekit`, revert `project.yml` scheme/test-target changes, regenerate. User-authored data untouched in both.
 
+## Port completion evidence (2026-08-26 evening)
+
+- Merged suite on the launch app: 60 core tests / 14 suites, 12 RevenueCat mapping tests, 3 access UI tests, ritual durability test (passes in isolation; first-tap flake under suite load remains tracked), and the full accessibility audit — all green on iPhone 17 Pro simulator. Debug and device builds SUCCEEDED.
+- Committed: `commerce-weekly-stale-base` (6261742, safety snapshot), `commerce-port` (7303b8f), merged to local `main` (148637d). **Push to origin was blocked by session permissions** — founder runs `git push origin main` or grants the permission.
+- Installed and launched on the founder's iPhone 12 via devicectl (2026-08-26 ~16:58).
+- Environment note: iCloud Documents sync repeatedly creates "name 2" conflict copies inside the repo (cleaned twice); recommend moving the repo out of iCloud-synced Documents or excluding it.
+
 ## Next highest-leverage action
 
-Phase 5 safe local portion: the RevenueCat webhook Edge Function (deno) with HMAC-over-raw-bytes verification, timestamp tolerance, event-ID idempotency, product allow-list, sandbox/production separation, and entitlement-snapshot projection — testable against the local stack with `supabase functions serve` and forged/replayed requests. Then the premium signed-URL authorization path. In parallel, founder decisions in the Blockers section unblock RevenueCat Test Store evidence and hosted Supabase.
+With the founder, retire the old Witness+ products and create the approved four products + entitlements + `witness_access_v1` offering in App Store Connect and RevenueCat, then drop a production `RevenueCatConfig.plist` into the app for the first Test Store/Sandbox purchase. In parallel, Phase 5 safe local portion: the RevenueCat webhook Edge Function (deno) with HMAC-over-raw-bytes verification, timestamp tolerance, event-ID idempotency, product allow-list, sandbox/production separation, and entitlement-snapshot projection — testable against the local stack with `supabase functions serve` and forged/replayed requests. Then the premium signed-URL authorization path. In parallel, founder decisions in the Blockers section unblock RevenueCat Test Store evidence and hosted Supabase.
