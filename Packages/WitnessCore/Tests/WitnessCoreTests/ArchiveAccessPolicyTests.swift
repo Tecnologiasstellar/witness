@@ -2,7 +2,7 @@ import Foundation
 import Testing
 @testable import WitnessCore
 
-@Suite("Witness+ archive gate")
+@Suite("Atlas archive gate")
 struct ArchiveAccessPolicyTests {
     private let calendar: Calendar = {
         var calendar = Calendar(identifier: .gregorian)
@@ -10,24 +10,26 @@ struct ArchiveAccessPolicyTests {
         return calendar
     }()
 
-    // 2026-08-22 12:00 UTC
-    private let now = Date(timeIntervalSince1970: 1_787_400_000)
+    // 2026-08-26 12:00 UTC — ISO week 2026-W35.
+    private let now = Date(timeIntervalSince1970: 1_787_745_600)
 
-    @Test("Today and the previous six days stay free")
+    @Test("The current and previous ritual weeks stay free")
     func freeWindow() {
-        #expect(ArchiveAccessPolicy.isUnlocked(localDay: "2026-08-22", asOf: now, calendar: calendar, hasPlus: false))
-        #expect(ArchiveAccessPolicy.isUnlocked(localDay: "2026-08-16", asOf: now, calendar: calendar, hasPlus: false))
+        #expect(ArchiveAccessPolicy.isUnlocked(period: "2026-W35", asOf: now, calendar: calendar, atlasActive: false))
+        #expect(ArchiveAccessPolicy.isUnlocked(period: "2026-W34", asOf: now, calendar: calendar, atlasActive: false))
     }
 
-    @Test("The eighth day back is locked without Witness+")
+    @Test("Weeks beyond the free window are locked without Atlas")
     func lockedBeyondWindow() {
-        #expect(!ArchiveAccessPolicy.isUnlocked(localDay: "2026-08-15", asOf: now, calendar: calendar, hasPlus: false))
-        #expect(!ArchiveAccessPolicy.isUnlocked(localDay: "2025-01-01", asOf: now, calendar: calendar, hasPlus: false))
+        #expect(!ArchiveAccessPolicy.isUnlocked(period: "2026-W33", asOf: now, calendar: calendar, atlasActive: false))
+        #expect(!ArchiveAccessPolicy.isUnlocked(period: "2025-W01", asOf: now, calendar: calendar, atlasActive: false))
+        // Legacy day keys never match a week window and stay Atlas-gated.
+        #expect(!ArchiveAccessPolicy.isUnlocked(period: "2026-08-15", asOf: now, calendar: calendar, atlasActive: false))
     }
 
-    @Test("Witness+ unlocks the entire archive")
-    func plusUnlocksEverything() {
-        #expect(ArchiveAccessPolicy.isUnlocked(localDay: "2025-01-01", asOf: now, calendar: calendar, hasPlus: true))
-        #expect(ArchiveAccessPolicy.isUnlocked(localDay: "2026-08-15", asOf: now, calendar: calendar, hasPlus: true))
+    @Test("Active Atlas unlocks the entire archive")
+    func atlasUnlocksEverything() {
+        #expect(ArchiveAccessPolicy.isUnlocked(period: "2025-W01", asOf: now, calendar: calendar, atlasActive: true))
+        #expect(ArchiveAccessPolicy.isUnlocked(period: "2026-W33", asOf: now, calendar: calendar, atlasActive: true))
     }
 }

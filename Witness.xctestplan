@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "F3A1C0DE-3001-4A11-9E60-000000003001",
+      "name" : "Default",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "storeKitConfiguration" : {
+      "identifier" : "Witness.storekit"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Witness.xcodeproj",
+        "identifier" : "D388F5E4802482A3DB1DB6F3",
+        "name" : "WitnessAppTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Witness.xcodeproj",
+        "identifier" : "DEDA12CCC6745CC224C3A2C6",
+        "name" : "WitnessUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

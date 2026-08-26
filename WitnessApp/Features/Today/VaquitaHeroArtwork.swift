@@ -89,7 +89,7 @@ struct AtlasTally: View {
             return "COUNT UNAVAILABLE · LAST VERIFIED \(lastVerified)"
         }
         let formatted = count.formatted(.number.grouping(.automatic))
-        return "\(formatted) WITNESS\(count == 1 ? "" : "ES") · UPDATED TODAY"
+        return "\(formatted) WITNESS\(count == 1 ? "" : "ES") · COLLECTIVE COUNT"
     }
 
     var body: some View {

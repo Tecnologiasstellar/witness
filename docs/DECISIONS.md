@@ -124,7 +124,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 
 ## D-016 — Witness+ paywall logic
 
-- Status: accepted
+- Status: superseded by D-020 (2026-08-26); the existing witness_plus products and trial are to be retired in App Store Connect and RevenueCat once the five-choice model ships
 - Date: 2026-08-22
 - Decision: Free forever: today's ritual, story, sources, action, witness, streak, private reflection, share card, reminders, and the last 7 days of the archive. Witness+ (RevenueCat entitlement `plus`): the full archive and complete Cabinet back to day one, plus future depth features (narration, collections). Products: monthly at USD 2.99 and annual at USD 19.99 with a 7-day free trial on annual. The paywall appears only at the premium boundary — tapping into archive content older than 7 days — never during onboarding (per D-008). Restore purchases is always reachable from the Index.
 - Reason: Depth-and-continuity is the honest thing to sell; the social-good core stays free per D-004. Annual-with-trial is the primary offer because a daily ritual's value compounds.
@@ -153,3 +153,36 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 - Decision: Every animal card is produced through the fixed pipeline in `docs/CARD_PRODUCTION_PIPELINE.md`: backlog selection → sourced research → schema-valid JSON record → Higgsfield artwork with rights record → species-accuracy review → editorial review → `CatalogValidator` in CI → merge → ship in the next release. A card that fails any stage stays in `prototype`/`draft` state and is rejected by production validation.
 - Reason: Content is product infrastructure (per the trust policy); a fixed pipeline makes 100+ cards producible by one person at a constant quality bar.
 - Tradeoff: Throughput is bounded by review honesty — roughly 3–5 cards per focused day, which the 30-card launch scope respects.
+## D-020 — Five engagement choices, three authorization facts
+
+- Status: proposed for approval
+- Date: 2026-08-26
+- Decision: Offer exactly five user-facing engagement choices: free Witness access, permanent Field Season access, Atlas for six months, Atlas annually, and a consumable Support Witness tip. Implement only permanent Field Season ownership and one shared Atlas entitlement; free access is the default and Support grants no entitlement. Both Atlas products provide identical access at the same subscription level and differ only by billing duration and price.
+- Reason: This preserves the complete ethical free ritual, gives users a non-subscription purchase and a continuing membership, and prevents five commercial choices from becoming five confusing user ranks or a generic tier engine.
+- Tradeoff: Field Season and Atlas require especially clear permanent-versus-active access copy, while the Support program cannot use access, badges, or status as a conversion incentive.
+- Source of record: `docs/ACCESS_AND_COMMERCE_SOURCE_OF_RECORD.md` supersedes older `Witness+`, monthly-subscription, trial, and premium-packaging language wherever it conflicts. The content release cadence remains a separate unresolved decision and must not be changed implicitly during commerce work.
+
+## D-021 — Debug-only local StoreKit harness behind PurchaseService
+
+- Status: accepted for the commerce build phase
+- Date: 2026-08-26
+- Decision: The local `Witness.storekit` configuration and a `#if DEBUG` StoreKit 2 adapter (`StoreKitPurchaseAdapter`) provide deterministic purchase execution for development, StoreKitTest automation, and UI states. Release builds compile `UnavailablePurchaseService`, which purchases nothing and invents no price, until the RevenueCat production adapter lands. Verified access snapshots are cached locally by `FileAccessRepository` so entitled content works offline; the cache is presentation input, never authorization proof, and unknown or corrupt state degrades to the default free snapshot.
+- Reason: Every purchase state can be exercised and regression-tested locally before any external account exists, while structurally guaranteeing that no test store path can ship in Release.
+- Tradeoff: Two purchase-execution paths exist during the build phase; the Debug harness must remain behaviorally honest (no optimistic unlock) so it does not mask production-adapter defects.
+
+## D-022 — Grace period grants Atlas access; billing retry does not
+
+- Status: proposed for approval
+- Date: 2026-08-26
+- Decision: `StandardContentAccessPolicy` treats an Atlas subscription in Apple's grace period as access-granting and a billing-retry period after grace as access-denying. Expired, revoked, inactive, and unknown states deny paid access. Free content is always authorized regardless of provider state.
+- Reason: Grace period is Apple's mechanism for continuing service while payment recovers; denying during it punishes a paying member for a card hiccup. Billing retry after grace means the paid period genuinely lapsed.
+- Tradeoff: A founder preference for more or less leniency in billing retry requires changing one policy case and its tests.
+## D-023 — Weekly ritual cadence
+
+- Status: accepted by founder
+- Date: 2026-08-26
+- Decision: The ritual is weekly, not daily. One species card is featured per ISO 8601 week (Monday start, evaluated in the user's local time zone). A person can Witness each featured species once per week; the collective aggregate, streak, and reminder logic count weeks. The assigned period key format is `YYYY-Www` (for example `2026-W35`).
+- Reason: Founder decision 2026-08-26. A weekly rhythm matches a sustainable solo editorial cadence — one deeply produced species per week beats seven thin ones — and gives every species a full week of collective attention.
+- Tradeoff: Fewer ritual touchpoints per user per month; streaks accrue slowly (a 4-streak means a month of attention). Existing day-keyed local records remain valid history; weekly streaks are derived from record timestamps so no migration or data loss occurs.
+- Supersedes: daily-cadence language in D-014/D-016 phrasing, `PRODUCT_STRATEGY.md`, `MVP_SPEC.md`, `AGENTS.md`, `README.md`, and earlier scheduling code (`DailySpeciesSelector`) wherever they conflict. The backend schema already uses a generic `assigned_period` key and needs no migration.
+

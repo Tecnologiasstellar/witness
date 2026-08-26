@@ -5,7 +5,7 @@ enum AtlasTab: String, CaseIterable, Hashable {
 
     var title: String {
         switch self {
-        case .today: "TODAY"
+        case .today: "THIS WEEK"
         case .cabinet: "CABINET"
         case .notes: "NOTES"
         }
@@ -22,6 +22,7 @@ enum AtlasTab: String, CaseIterable, Hashable {
 
 struct RootTabView: View {
     @ObservedObject var model: AppModel
+    @ObservedObject var commerce: CommerceModel
     @State private var selection: AtlasTab = .today
     @State private var isIndexPresented = false
     @State private var isReflectionPresented = false
@@ -40,7 +41,7 @@ struct RootTabView: View {
                             TodayView(model: model, onOpenIndex: { isIndexPresented = true }, onOpenReflection: { isReflectionPresented = true })
                         }
                     case .cabinet:
-                        NavigationStack { ArchiveView(model: model) }
+                        NavigationStack { ArchiveView(model: model, commerce: commerce) }
                     case .notes:
                         NavigationStack { WitnessedView(model: model) }
                     }
@@ -49,7 +50,7 @@ struct RootTabView: View {
             AtlasTabBar(selection: $selection)
         }
         .background(AtlasTheme.paper.ignoresSafeArea())
-        .sheet(isPresented: $isIndexPresented) { SettingsView() }
+        .sheet(isPresented: $isIndexPresented) { SettingsView(commerce: commerce) }
         .sheet(isPresented: $isReflectionPresented) { PrivateReflectionSheet(model: model) }
     }
 }

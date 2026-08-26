@@ -64,7 +64,7 @@ struct WitnessedView: View {
             AtlasIconView(icon: .fieldMark, size: 28)
             Text("NO PRIVATE PLATE YET")
                 .font(AtlasType.technical(12, weight: .bold)).tracking(1.2)
-            Text("Witness today’s species and its card will remain on this device.")
+            Text("Witness this week’s species and its card will remain on this device.")
                 .font(.body).multilineTextAlignment(.center).foregroundStyle(AtlasTheme.inkMuted)
         }
         .padding(28).foregroundStyle(AtlasTheme.ink)
@@ -84,7 +84,7 @@ struct PrivateReflectionSheet: View {
                 Text("This reflection remains on this device. It is never published by Witness.")
                     .font(.footnote).foregroundStyle(AtlasTheme.inkMuted)
                 if model.latestWitnessRecord == nil {
-                    Text("Witness today’s plate before leaving a note.")
+                    Text("Witness this week’s plate before leaving a note.")
                         .font(.body).foregroundStyle(AtlasTheme.inkMuted)
                     Spacer()
                 } else {

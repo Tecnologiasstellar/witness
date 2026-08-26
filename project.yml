@@ -7,9 +7,10 @@ options:
   createIntermediateGroups: true
 
 packages:
+  # Pinned exactly; upgrades are a reviewed decision, never implicit.
   RevenueCat:
     url: https://github.com/RevenueCat/purchases-ios-spm.git
-    from: "5.0.0"
+    exactVersion: 5.87.0
 
 targets:
   WitnessCore:
@@ -74,16 +75,39 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         TEST_TARGET_NAME: Witness
 
+  WitnessAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: WitnessAppTests
+      - path: Witness.storekit
+        buildPhase: resources
+    dependencies:
+      - target: Witness
+      - sdk: StoreKitTest.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.avp.witness.apptests
+        SWIFT_VERSION: 6.0
+        GENERATE_INFOPLIST_FILE: YES
+
 schemes:
   Witness:
     build:
       targets:
         Witness: all
         WitnessUITests: [test]
+        WitnessAppTests: [test]
     test:
-      targets:
-        - WitnessUITests
+      # The test plan attaches the local StoreKit configuration to the test
+      # action so SKTestSession can drive the store during automated tests.
+      testPlans:
+        - path: Witness.xctestplan
+          defaultPlan: true
     run:
       config: Debug
+      # Local StoreKit products for development only. Archives and Release
+      # distribution never carry a StoreKit configuration.
+      storeKitConfiguration: Witness.storekit
     archive:
       config: Release

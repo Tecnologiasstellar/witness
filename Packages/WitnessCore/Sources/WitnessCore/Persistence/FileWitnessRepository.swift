@@ -32,11 +32,11 @@ public actor FileWitnessRepository: WitnessRepository {
 
     public func recordWitness(
         speciesID: String,
-        localDay: String,
+        assignedPeriod: String,
         witnessedAt: Date
     ) throws -> WitnessSaveResult {
         var store = try load()
-        let eventID = WitnessDayKey.eventID(speciesID: speciesID, localDay: localDay)
+        let eventID = WitnessPeriodKey.eventID(speciesID: speciesID, period: assignedPeriod)
 
         if let existing = store.records.first(where: { $0.id == eventID }) {
             return .existing(existing)
@@ -45,7 +45,7 @@ public actor FileWitnessRepository: WitnessRepository {
         let record = WitnessRecord(
             id: eventID,
             speciesID: speciesID,
-            localDay: localDay,
+            assignedPeriod: assignedPeriod,
             witnessedAt: witnessedAt
         )
         store.records.append(record)

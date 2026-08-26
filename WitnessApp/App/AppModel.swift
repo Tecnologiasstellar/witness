@@ -19,33 +19,34 @@ final class AppModel: ObservableObject {
     private let dateProvider: any DateProviding
     private var calendar: Calendar
 
-    var todayWitnessRecord: WitnessRecord? {
+    var currentWeekWitnessRecord: WitnessRecord? {
         guard let species else { return nil }
-        let day = WitnessDayKey.make(for: dateProvider.now(), calendar: calendar)
-        let eventID = WitnessDayKey.eventID(speciesID: species.id, localDay: day)
+        let period = WitnessPeriodKey.make(for: dateProvider.now(), calendar: calendar)
+        let eventID = WitnessPeriodKey.eventID(speciesID: species.id, period: period)
         return witnessRecords.first(where: { $0.id == eventID })
     }
 
     var latestWitnessRecord: WitnessRecord? { witnessRecords.first }
 
     var featuredPlates: [FeaturedPlate] {
-        DailySpeciesSelector().featuredHistory(asOf: dateProvider.now(), from: catalog, calendar: calendar)
+        WeeklySpeciesSelector().featuredHistory(asOf: dateProvider.now(), from: catalog, calendar: calendar)
     }
 
-    func isPlateUnlocked(_ plate: FeaturedPlate, hasPlus: Bool) -> Bool {
+    func isPlateUnlocked(_ plate: FeaturedPlate, atlasActive: Bool) -> Bool {
         ArchiveAccessPolicy.isUnlocked(
-            localDay: plate.localDay,
+            period: plate.period,
             asOf: dateProvider.now(),
             calendar: calendar,
-            hasPlus: hasPlus
+            atlasActive: atlasActive
         )
     }
 
     func isPlateWitnessed(_ plate: FeaturedPlate) -> Bool {
-        let eventID = WitnessDayKey.eventID(speciesID: plate.species.id, localDay: plate.localDay)
+        let eventID = WitnessPeriodKey.eventID(speciesID: plate.species.id, period: plate.period)
         return witnessRecords.contains { $0.id == eventID }
     }
-    var isWitnessed: Bool { todayWitnessRecord != nil }
+
+    var isWitnessed: Bool { currentWeekWitnessRecord != nil }
     var currentStreak: Int {
         WitnessStreakCalculator.currentStreak(
             records: witnessRecords,
@@ -68,7 +69,7 @@ final class AppModel: ObservableObject {
 
         do {
             catalog = try BundledSpeciesCatalog.load()
-            species = DailySpeciesSelector().species(for: dateProvider.now(), from: catalog, calendar: calendar)
+            species = WeeklySpeciesSelector().species(for: dateProvider.now(), from: catalog, calendar: calendar)
 #if DEBUG
             if let forced = ProcessInfo.processInfo.environment["WITNESS_FORCE_SPECIES"],
                let match = catalog.first(where: { $0.id == forced }) {
@@ -127,17 +128,17 @@ final class AppModel: ObservableObject {
         defer { isSaving = false }
 
         let now = dateProvider.now()
-        let localDay = WitnessDayKey.make(for: now, calendar: calendar)
+        let assignedPeriod = WitnessPeriodKey.make(for: now, calendar: calendar)
         do {
             _ = try await witnessRepository.recordWitness(
                 speciesID: species.id,
-                localDay: localDay,
+                assignedPeriod: assignedPeriod,
                 witnessedAt: now
             )
             persistenceError = nil
             await restoreWitnesses()
             Task { [weak self] in
-                await WitnessSync.shared.witnessRecorded(speciesID: species.id, localDay: localDay)
+                await WitnessSync.shared.witnessRecorded(speciesID: species.id, assignedPeriod: assignedPeriod)
                 await self?.refreshWitnessCount()
             }
         } catch {

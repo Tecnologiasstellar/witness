@@ -1,28 +1,25 @@
 import Foundation
 
-/// The single Witness+ entitlement (D-016). A concrete RevenueCat adapter
-/// lives in the app target; core logic only ever sees this protocol.
-public protocol EntitlementProviding: Sendable {
-    /// Whether the Witness+ ("plus") entitlement is currently active.
-    func hasPlus() async -> Bool
-}
-
-/// D-016: the daily ritual and the last seven local days of the archive stay
-/// free; older archive content requires Witness+.
+/// D-020/D-023: the weekly ritual and a two-week free archive window stay
+/// free; older archive content requires active Atlas access. The window is
+/// the current and immediately previous ISO week, preserving the spirit of
+/// the earlier seven-day rule at the weekly cadence.
 public enum ArchiveAccessPolicy {
-    public static let freeWindowDays = 7
+    public static let freeWindowWeeks = 2
 
     public static func isUnlocked(
-        localDay: String,
+        period: String,
         asOf now: Date,
         calendar: Calendar,
-        hasPlus: Bool
+        atlasActive: Bool
     ) -> Bool {
-        if hasPlus { return true }
-        guard let cutoffDate = calendar.date(byAdding: .day, value: -(freeWindowDays - 1), to: now) else {
-            return false
+        if atlasActive { return true }
+        var iso = Calendar(identifier: .iso8601)
+        iso.timeZone = calendar.timeZone
+        for offset in 0..<freeWindowWeeks {
+            guard let date = iso.date(byAdding: .weekOfYear, value: -offset, to: now) else { continue }
+            if WitnessPeriodKey.make(for: date, calendar: iso) == period { return true }
         }
-        let cutoffDay = WitnessDayKey.make(for: cutoffDate, calendar: calendar)
-        return localDay >= cutoffDay
+        return false
     }
 }

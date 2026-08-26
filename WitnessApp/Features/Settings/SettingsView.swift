@@ -1,10 +1,9 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @ObservedObject var commerce: CommerceModel
     @Environment(\.dismiss) private var dismiss
-    @ObservedObject private var entitlements = PlusEntitlements.shared
     @ObservedObject private var reminders = ReminderService.shared
-    @State private var isPaywallPresented = false
     @State private var reminderTime = Calendar.current.date(from: DateComponents(hour: 8)) ?? .now
 
     private static let privacyURL = URL(string: "https://witness-rho.vercel.app/privacy")!
@@ -18,7 +17,7 @@ struct SettingsView: View {
                 VStack(alignment: .leading, spacing: 22) {
                     Text("INDEX")
                         .font(AtlasType.display(34, weight: .semibold))
-                    witnessPlusSection
+                    accessSection
                     remindersSection
                     privacySection
                     contentSection
@@ -30,30 +29,98 @@ struct SettingsView: View {
             }
             .background(AtlasPaper().ignoresSafeArea())
             .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("CLOSE") { dismiss() }.font(AtlasType.technical(10, weight: .bold)) } }
-            .sheet(isPresented: $isPaywallPresented) { WitnessPlusPaywall() }
             .onAppear {
                 reminderTime = Calendar.current.date(
                     from: DateComponents(hour: reminders.hour, minute: reminders.minute)
                 ) ?? .now
             }
             .task { await reminders.refreshAuthorization() }
+            .task { await commerce.startIfNeeded() }
         }
     }
 
-    private var witnessPlusSection: some View {
-        section("WITNESS+") {
-            actionRow(entitlements.hasPlus ? "WITNESS+ · ACTIVE" : "THE COMPLETE CABINET") { isPaywallPresented = true }
-            actionRow("RESTORE PURCHASES") { Task { await entitlements.restore() } }
+    /// The Access overview (D-020): current standing, the two deeper works,
+    /// restore, manage, and the quiet Support row. Facts only — never a tier
+    /// grid, provider terminology, or raw entitlement identifiers.
+    private var accessSection: some View {
+        section("ACCESS") {
+            staticRow("WITNESS · FREE")
+                .accessibilityIdentifier("access.overview.free")
+
+            NavigationLink {
+                FieldSeasonPreviewView(commerce: commerce)
+            } label: {
+                navigationRowLabel(
+                    title: "FIELD SEASON",
+                    detail: commerce.ownsFieldSeason ? "Owned" : "View"
+                )
+            }
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("access.overview.fieldseason")
+
+            NavigationLink {
+                AtlasAccessSheet(commerce: commerce)
+            } label: {
+                navigationRowLabel(title: "ATLAS", detail: commerce.atlasStatusLine)
+            }
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("access.overview.atlas")
+
+            AccessQuietRow(
+                title: "RESTORE PURCHASES",
+                detail: commerce.restorePhase == .restoring ? "…" : nil,
+                identifier: "access.overview.restore"
+            ) {
+                Task { await commerce.restore() }
+            }
+
+            if commerce.atlasIsActive {
+                ManageSubscriptionRow(identifier: "access.overview.manage")
+            }
+
+            NavigationLink {
+                SupportWitnessView(commerce: commerce)
+            } label: {
+                navigationRowLabel(title: "SUPPORT WITNESS", detail: nil)
+            }
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("access.overview.support")
+
+            PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
+                .padding(.top, 12)
+
+            if let verifiedLine = commerce.accessVerifiedLine {
+                Text(verifiedLine)
+                    .font(AtlasType.technical(9, weight: .medium))
+                    .foregroundStyle(AtlasTheme.inkMuted)
+                    .padding(.top, 8)
+                    .accessibilityIdentifier("access.overview.verified")
+            }
         }
+    }
+
+    private func navigationRowLabel(title: String, detail: String?) -> some View {
+        HStack {
+            Text(title).font(AtlasType.technical(11, weight: .medium)).tracking(0.7)
+            Spacer()
+            if let detail {
+                Text(detail).font(AtlasType.technical(11, weight: .medium)).foregroundStyle(AtlasTheme.sepia)
+            }
+            Text("›").foregroundStyle(AtlasTheme.sepia)
+        }
+        .foregroundStyle(AtlasTheme.ink)
+        .frame(minHeight: 44)
+        .contentShape(Rectangle())
+        .overlay(alignment: .bottom) { Rectangle().fill(AtlasTheme.ruleSoft).frame(height: 1) }
     }
 
     private var remindersSection: some View {
         section("REMINDERS") {
             HStack {
-                Text("DAILY REMINDER")
+                Text("WEEKLY REMINDER")
                     .font(AtlasType.technical(11, weight: .medium)).tracking(0.7)
                 Spacer()
-                Toggle("Daily reminder", isOn: Binding(
+                Toggle("Weekly reminder", isOn: Binding(
                     get: { reminders.isEnabled },
                     set: { on in
                         if on {

@@ -12,7 +12,7 @@ Product: “Every day, witness one species on the edge of disappearance—and jo
 
 Before acting:
 
-1. Read `AGENTS.md`, `README.md`, `docs/PRODUCT_STRATEGY.md`, `docs/MVP_SPEC.md`, `docs/FOUR_WEEK_EXECUTION_PLAN.md`, `docs/COMPETITION_AND_RELEASE_GATES.md`, `docs/CONTENT_TRUST_AND_RIGHTS.md`, `docs/VISUAL_REFERENCE_AUDIT.md`, and `docs/DECISIONS.md`.
+1. Read `AGENTS.md`, `README.md`, `docs/ACCESS_AND_COMMERCE_SOURCE_OF_RECORD.md`, `docs/PRODUCT_STRATEGY.md`, `docs/MVP_SPEC.md`, `docs/FOUR_WEEK_EXECUTION_PLAN.md`, `docs/COMPETITION_AND_RELEASE_GATES.md`, `docs/CONTENT_TRUST_AND_RIGHTS.md`, `docs/VISUAL_REFERENCE_AUDIT.md`, and `docs/DECISIONS.md`.
 2. Inspect the live repository and current git status. Preserve user changes and confirmed decisions.
 3. State the exact vertical outcome, assumptions, files likely affected, acceptance evidence, principal risk, and rollback before a meaningful implementation.
 4. Ask only when a missing decision would materially change scope or cause an external, destructive, paid, public, or irreversible action. Otherwise make the narrowest reasonable assumption and proceed.
