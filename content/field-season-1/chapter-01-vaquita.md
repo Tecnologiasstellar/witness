@@ -4,7 +4,7 @@ edition: field-season-1
 speciesID: vaquita
 title: "Little Cow of the Upper Gulf"
 chapterNumber: 1
-status: draft-for-founder-review  # revision 2 per founder notes 2026-08-26: warmer tone, Past/Present/Future structure
+status: approved  # founder (Alberto Villalpando) approved revision 2 on 2026-08-26; structure is the template for chapters 2-8
 author: Witness editorial (drafted with Claude, fact-checked against cited sources)
 lastFactChecked: 2026-08-26
 sensitiveLocationReview: generalized  # region named; no coordinates beyond the app's existing generalized range
@@ -176,6 +176,5 @@ And where might it make care possible?
 - Narration: synthetic voice via AWS Polly planned (founder decision
   2026-08-26); the app must disclose the voice is synthetic, and an audio
   rights record is required before the audio ships.
-- Review: **pending founder editorial approval** — this chapter must not
-  ship or be sold until `status` above reads `approved` with reviewer and
-  date, per the content contract.
+- Review: **approved** by Alberto Villalpando, 2026-08-26 (revision 2).
+  Audio remains gated on its own rights record before shipping.
