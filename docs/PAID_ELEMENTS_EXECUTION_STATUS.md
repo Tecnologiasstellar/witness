@@ -183,6 +183,13 @@ Discovered local `main` was stale at 363ad14 while `origin/main` (f81b011) carri
 - Secret hygiene: `supabase/functions/.env` gitignored and confirmed ignored; production secret goes in `supabase secrets set RC_WEBHOOK_AUTH=...` and the same value in the RevenueCat dashboard webhook Authorization field. Never in the repo, the app, or chat.
 - Not yet claimed: no hosted deployment, no real RevenueCat-delivered event processed (needs the dashboard reconciliation + hosted Supabase, both founder-gated).
 
+## Field Season content evidence (2026-08-26, Phase 6 begun)
+
+- Chapter 1 of 8 drafted: `content/field-season-1/chapter-01-vaquita.md` ("Little Cow of the Upper Gulf") — the standard-setting sample. Free record ships unchanged from the approved `vaquita.json`; the premium dossier adds 930 words (spec: 600–1,200) across field note, five-link threat chain, nine-entry evidence-backed timeline, known/unknown, one reflective prompt, nine sources, credits.
+- Fact-checked 2026-08-26 against NOAA, CITES, Marine Mammal Commission, IUCN-CSG, the September 2025 survey report (7–10 individuals, 1–2 calves, three consecutive years without substantial decline), and Robinson et al. 2022 (*Science*). Every claim carries a source ID; timeline carries a last-verified date; sensitive locations stay generalized.
+- Status: `draft-for-founder-review` — the frontmatter forbids shipping/selling until the founder flips it to approved. Reading edition published for review at https://claude.ai/code/artifact/247f98a6-9044-40d9-88af-265eb1370f1a (embeds the approved vaquita plate, downscaled).
+- Narration path (human vs licensed) remains an open founder decision; per spec, no "complete narrated edition" promise until every chapter has audio.
+
 ## Next highest-leverage action
 
 With the founder, retire the old Witness+ products and create the approved four products + entitlements + `witness_access_v1` offering in App Store Connect and RevenueCat, then drop a production `RevenueCatConfig.plist` into the app for the first Test Store/Sandbox purchase. Remaining Phase 5 safe local portion: the premium signed-URL authorization path. In parallel, founder decisions in the Blockers section unblock RevenueCat Test Store evidence and hosted Supabase.
