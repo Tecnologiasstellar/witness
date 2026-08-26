@@ -45,6 +45,7 @@ webhook secrets live exclusively in server secret stores.
 | `20260826120000_content_catalog.sql` | `catalog_releases`, `content_items`, `content_collections`, `content_collection_items`, `media_assets`; fail-closed release gate (`content_item_is_released`); public read = released + free + approved only |
 | `20260826121000_witness_events.sql` | `witness_events`, `witness_aggregates`, idempotent rate-limited `submit_witness` RPC (authenticated only); aggregates are the only public community data |
 | `20260826122000_purchase_mirror.sql` | `purchase_events`, `entitlement_snapshots`, `support_events`; `has_current_entitlement`; entitled premium read policies; sandbox/production separation |
+| `20260826140000_revenuecat_ingest.sql` | `ingest_revenuecat_event`: atomic, idempotent (event-ID PK), monotonic entitlement projection; service_role-only execute |
 
 Rules:
 
@@ -62,10 +63,26 @@ Rules:
   events remain as anonymous aggregate history and are not linked to the new
   install.
 
+## RevenueCat webhook (D-024)
+
+`supabase/functions/revenuecat-webhook` is the only writer of the purchase
+mirror. RevenueCat authenticates webhooks with a shared-secret
+`Authorization` header (it does not HMAC-sign payloads); the function
+verifies it in constant time, rejects future-dated events, allow-lists the
+four D-020 product IDs, and writes atomically/idempotently through
+`ingest_revenuecat_event`. The secret lives in `supabase/functions/.env`
+locally (gitignored; created by the test script) and in
+`supabase secrets set RC_WEBHOOK_AUTH=...` in production — the same value
+goes in the RevenueCat dashboard webhook Authorization field.
+
+```sh
+supabase/tests/webhook-test.sh   # adversarial suite; serves the function and attacks it
+```
+
+Must print `ALL WEBHOOK TESTS PASSED`.
+
 ## Not yet implemented
 
-- RevenueCat webhook Edge Function (Phase 5): HMAC verification over raw
-  bytes, timestamp tolerance, event-ID idempotency, entitlement projection.
 - Premium media signed-URL authorization path (Phase 5).
 - Catalog release manifest endpoint and last-known-good client fallback
   (client fallback logic exists for the bundled catalog).

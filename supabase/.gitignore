@@ -2,6 +2,9 @@
 .branches
 .temp
 
+# Edge Function secrets (RC_WEBHOOK_AUTH etc.) — never committed
+functions/.env
+
 # dotenvx
 .env.keys
 .env.local
