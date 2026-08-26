@@ -15,15 +15,15 @@ final class AppModel: ObservableObject {
     private let dateProvider: any DateProviding
     private var calendar: Calendar
 
-    var todayWitnessRecord: WitnessRecord? {
+    var currentWeekWitnessRecord: WitnessRecord? {
         guard let species else { return nil }
-        let day = WitnessDayKey.make(for: dateProvider.now(), calendar: calendar)
-        let eventID = WitnessDayKey.eventID(speciesID: species.id, localDay: day)
+        let period = WitnessPeriodKey.make(for: dateProvider.now(), calendar: calendar)
+        let eventID = WitnessPeriodKey.eventID(speciesID: species.id, period: period)
         return witnessRecords.first(where: { $0.id == eventID })
     }
 
     var latestWitnessRecord: WitnessRecord? { witnessRecords.first }
-    var isWitnessed: Bool { todayWitnessRecord != nil }
+    var isWitnessed: Bool { currentWeekWitnessRecord != nil }
     var currentStreak: Int {
         WitnessStreakCalculator.currentStreak(
             records: witnessRecords,
@@ -43,7 +43,7 @@ final class AppModel: ObservableObject {
 
         do {
             let catalog = try BundledSpeciesCatalog.load()
-            species = DailySpeciesSelector().species(for: dateProvider.now(), from: catalog, calendar: calendar)
+            species = WeeklySpeciesSelector().species(for: dateProvider.now(), from: catalog, calendar: calendar)
         } catch {
             loadError = String(describing: error)
         }
@@ -59,11 +59,11 @@ final class AppModel: ObservableObject {
         defer { isSaving = false }
 
         let now = dateProvider.now()
-        let localDay = WitnessDayKey.make(for: now, calendar: calendar)
+        let assignedPeriod = WitnessPeriodKey.make(for: now, calendar: calendar)
         do {
             _ = try await witnessRepository.recordWitness(
                 speciesID: species.id,
-                localDay: localDay,
+                assignedPeriod: assignedPeriod,
                 witnessedAt: now
             )
             persistenceError = nil

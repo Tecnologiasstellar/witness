@@ -3,6 +3,7 @@ import WitnessCore
 
 struct WitnessedView: View {
     @ObservedObject var model: AppModel
+    @ObservedObject var community: CommunityModel
     @State private var showsSharePreview = false
     @State private var showsReflection = false
 
@@ -20,6 +21,11 @@ struct WitnessedView: View {
             if let species = model.species { WitnessSharePreviewSheet(species: species) }
         }
         .sheet(isPresented: $showsReflection) { PrivateReflectionSheet(model: model) }
+        .task {
+            if let record = model.latestWitnessRecord {
+                await community.refresh(speciesID: record.speciesID, assignedPeriod: record.assignedPeriod)
+            }
+        }
     }
 
     private func witnessedPlate(species: SpeciesRecord, date: Date) -> some View {
@@ -39,6 +45,12 @@ struct WitnessedView: View {
                     Text("PRIVATE ON-DEVICE RECORD")
                         .font(AtlasType.technical(9, weight: .bold)).tracking(1.1)
                         .foregroundStyle(AtlasTheme.inkMuted)
+                    if let countLine = community.witnessedCountLine {
+                        Text(countLine)
+                            .font(AtlasType.technical(9, weight: .medium)).tracking(1.0)
+                            .foregroundStyle(AtlasTheme.sepia)
+                            .accessibilityIdentifier("witnessed.communityCount")
+                    }
                     Spacer(minLength: 4)
                     Button("LEAVE A NOTE") { showsReflection = true }
                         .font(AtlasType.technical(11, weight: .bold)).tracking(1.15)
@@ -60,7 +72,7 @@ struct WitnessedView: View {
             AtlasIconView(icon: .fieldMark, size: 28)
             Text("NO PRIVATE PLATE YET")
                 .font(AtlasType.technical(12, weight: .bold)).tracking(1.2)
-            Text("Witness today’s species and its card will remain on this device.")
+            Text("Witness this week’s species and its card will remain on this device.")
                 .font(.body).multilineTextAlignment(.center).foregroundStyle(AtlasTheme.inkMuted)
         }
         .padding(28).foregroundStyle(AtlasTheme.ink)
@@ -80,7 +92,7 @@ struct PrivateReflectionSheet: View {
                 Text("This reflection remains on this device. It is never published by Witness.")
                     .font(.footnote).foregroundStyle(AtlasTheme.inkMuted)
                 if model.latestWitnessRecord == nil {
-                    Text("Witness today’s plate before leaving a note.")
+                    Text("Witness this week’s plate before leaving a note.")
                         .font(.body).foregroundStyle(AtlasTheme.inkMuted)
                     Spacer()
                 } else {

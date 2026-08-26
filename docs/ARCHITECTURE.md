@@ -4,7 +4,7 @@ Last updated: 2026-08-22
 
 ## Intent
 
-Witness is an offline-first native iOS application. The repository is deliberately structured so that the daily ritual works from a reviewed bundled catalog, while future hosted counts, purchases, reminders, and analytics can be introduced behind explicit interfaces without destabilizing the core experience.
+Witness is an offline-first native iOS application. The repository is deliberately structured so that the weekly ritual works from a reviewed bundled catalog, while future hosted counts, purchases, reminders, and analytics can be introduced behind explicit interfaces without destabilizing the core experience.
 
 ## Dependency rule
 
@@ -29,7 +29,7 @@ No hosted service is part of the current runtime. A remote failure must never ma
 | `WitnessApp/Features` | Feature views and presentation-only mappings | `WitnessCore`, design system, SwiftUI |
 | `Packages/WitnessCore/Models` | Stable species, action, source, media, and Witness-event value types | Foundation |
 | `Packages/WitnessCore/Catalog` | Bundled catalog loading and fail-closed validation | Models, Foundation |
-| `Packages/WitnessCore/Daily` | Deterministic daily assignment policy | Models, Foundation |
+| `Packages/WitnessCore/Scheduling` | Deterministic weekly assignment policy (D-016) | Models, Foundation |
 | `Packages/WitnessCore/Persistence` | Local records, reflection limits, idempotency, and repository protocol | Models, Foundation |
 | `Packages/WitnessCore/Streak` | Pure streak calculation | Models, Foundation |
 | `Packages/WitnessCore/Sharing` | Truthful, provider-neutral share copy | Models, Foundation |

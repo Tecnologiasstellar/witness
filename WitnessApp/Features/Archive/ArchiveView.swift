@@ -74,7 +74,7 @@ private struct CabinetCard: View {
             ZStack(alignment: .topTrailing) {
                 SpecimenPlate(species: species, showsLeaderLabels: false).frame(height: 88)
                 if isToday {
-                    Text("TODAY")
+                    Text("THIS WEEK")
                         .font(AtlasType.technical(8, weight: .bold)).tracking(1)
                         .foregroundStyle(AtlasTheme.sepia).padding(7)
                 }
@@ -87,6 +87,6 @@ private struct CabinetCard: View {
         }
         .padding(11)
         .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
-        .accessibilityLabel("\(species.commonName), \(species.scientificName)\(isToday ? ", today’s plate" : "")")
+        .accessibilityLabel("\(species.commonName), \(species.scientificName)\(isToday ? ", this week’s plate" : "")")
     }
 }

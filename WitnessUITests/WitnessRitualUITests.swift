@@ -14,12 +14,28 @@ final class WitnessRitualUITests: XCTestCase {
     func testDurableLocalRitualAndSharePreview() throws {
         let witnessButton = app.buttons["today.witnessButton"]
         XCTAssertTrue(witnessButton.waitForExistence(timeout: 3))
+        // The plate animates in after launch; tapping against a stale frame
+        // can land on the specimen area instead of the Witness button. Wait
+        // for hittability plus a short settle before the first tap.
+        _ = witnessButton.isHittable
+        Thread.sleep(forTimeInterval: 1.0)
         witnessButton.tap()
-        XCTAssertTrue(app.buttons["today.witnessButton"].waitForExistence(timeout: 3))
+        // A completed Witness transitions to the private Notes plate.
+        if !app.staticTexts["PRIVATE ON-DEVICE RECORD"].waitForExistence(timeout: 4),
+           witnessButton.exists, witnessButton.isEnabled {
+            witnessButton.tap()
+        }
+        XCTAssertTrue(app.staticTexts["PRIVATE ON-DEVICE RECORD"].waitForExistence(timeout: 5))
 
         app.terminate()
         app.launch()
-        XCTAssertFalse(app.buttons["today.witnessButton"].isEnabled)
+        // The archive restores asynchronously after launch; wait for the
+        // witnessed (disabled) state instead of sampling immediately.
+        let restored = XCTNSPredicateExpectation(
+            predicate: NSPredicate(format: "isEnabled == false"),
+            object: app.buttons["today.witnessButton"]
+        )
+        XCTAssertEqual(XCTWaiter().wait(for: [restored], timeout: 10), .completed)
 
         app.buttons["atlas.tab.notes"].tap()
         let leaveNote = app.buttons["LEAVE A NOTE"]

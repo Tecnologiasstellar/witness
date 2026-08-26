@@ -18,3 +18,7 @@ AuthKey_*.p8
 .env
 .env.*
 Config/Secrets.xcconfig
+# Local RevenueCat public SDK key (never a secret key); see CommerceConfiguration.swift.
+RevenueCatConfig.plist
+# Local Supabase URL and anon (publishable) key; see SupabaseCommunityService.swift.
+SupabaseConfig.plist

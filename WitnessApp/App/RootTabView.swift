@@ -5,7 +5,7 @@ enum AtlasTab: String, CaseIterable, Hashable {
 
     var title: String {
         switch self {
-        case .today: "TODAY"
+        case .today: "THIS WEEK"
         case .cabinet: "CABINET"
         case .notes: "NOTES"
         }
@@ -22,6 +22,9 @@ enum AtlasTab: String, CaseIterable, Hashable {
 
 struct RootTabView: View {
     @ObservedObject var model: AppModel
+    @ObservedObject var commerce: CommerceModel
+    @ObservedObject var community: CommunityModel
+    @Environment(\.scenePhase) private var scenePhase
     @State private var selection: AtlasTab = .today
     @State private var isIndexPresented = false
     @State private var isReflectionPresented = false
@@ -33,20 +36,49 @@ struct RootTabView: View {
                 switch selection {
                 case .today:
                     NavigationStack {
-                        TodayView(model: model, onOpenIndex: { isIndexPresented = true }, onOpenReflection: { isReflectionPresented = true }, onWitnessed: { selection = .notes })
+                        TodayView(
+                            model: model,
+                            community: community,
+                            onOpenIndex: { isIndexPresented = true },
+                            onOpenReflection: { isReflectionPresented = true },
+                            onWitnessed: {
+                                if let record = model.currentWeekWitnessRecord {
+                                    Task {
+                                        await community.witnessRecorded(
+                                            speciesID: record.speciesID,
+                                            assignedPeriod: record.assignedPeriod,
+                                            witnessedAt: record.witnessedAt
+                                        )
+                                    }
+                                }
+                                selection = .notes
+                            }
+                        )
                     }
                 case .cabinet:
                     NavigationStack { ArchiveView(model: model) }
                 case .notes:
-                    NavigationStack { WitnessedView(model: model) }
+                    NavigationStack { WitnessedView(model: model, community: community) }
                 }
             }
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
             AtlasTabBar(selection: $selection)
         }
-        .sheet(isPresented: $isIndexPresented) { SettingsView() }
+        .sheet(isPresented: $isIndexPresented) { SettingsView(commerce: commerce) }
         .sheet(isPresented: $isReflectionPresented) { PrivateReflectionSheet(model: model) }
+        .onChange(of: scenePhase) { _, phase in
+            // Re-verify access when returning to the foreground so renewals,
+            // refunds, and lapses surface without a manual refresh, and give
+            // the outbox a retry opportunity.
+            guard phase == .active else { return }
+            Task { await commerce.refreshAccess() }
+            if let record = model.currentWeekWitnessRecord {
+                Task {
+                    await community.refresh(speciesID: record.speciesID, assignedPeriod: record.assignedPeriod)
+                }
+            }
+        }
     }
 }
 

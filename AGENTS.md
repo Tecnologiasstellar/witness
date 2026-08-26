@@ -13,7 +13,7 @@ The core loop is: meet one species -> read a short sourced story -> tap Witness 
 - Lead with a working vertical slice and evidence, not a broad unfinished feature set.
 - Use native SwiftUI unless a recorded decision changes the stack.
 - Preserve a quiet, memorial, editorial tone. Do not use fear, guilt, tragedy porn, manipulative urgency, competitive leaderboards, or fabricated scarcity.
-- The daily species, sourced story, Witness action, and conservation action remain free.
+- The weekly featured species, sourced story, Witness action, and conservation action remain free (weekly cadence per D-016).
 - Never describe witness counts, shares, streaks, link opens, or self-reported actions as conservation outcomes.
 - Every species fact, status, story claim, action link, and media asset must have provenance, review status, and a last-verified date.
 - Never copy IUCN Red List API data into a commercial app without an appropriate license or written permission. A citation is not a license.
@@ -30,7 +30,7 @@ The core loop is: meet one species -> read a short sourced story -> tap Witness 
 - Minimum target: iOS 17; primary target: iPhone.
 - Separate stable domain models and repositories from SwiftUI presentation.
 - Use dependency-injected protocols for clock/date, catalog, witness events, notification scheduling, purchases, and analytics.
-- Bundle a reviewed launch catalog so the daily ritual works offline. Remote services enhance counts and content but must not blank the core experience.
+- Bundle a reviewed launch catalog so the weekly ritual works offline. Remote services enhance counts and content but must not blank the core experience.
 - Model witness submission as an idempotent event. The client must not increment counters optimistically without reconciling the server response.
 - Keep RevenueCat entitlement logic behind a purchase service. Treat UI state as presentation, not authorization.
 - Accessibility, reduced motion, Dynamic Type, VoiceOver labels, contrast, and graceful offline states are release requirements.

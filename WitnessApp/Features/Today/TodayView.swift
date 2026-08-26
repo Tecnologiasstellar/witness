@@ -3,6 +3,7 @@ import WitnessCore
 
 struct TodayView: View {
     @ObservedObject var model: AppModel
+    @ObservedObject var community: CommunityModel
     let onOpenIndex: () -> Void
     let onOpenReflection: () -> Void
     let onWitnessed: () -> Void
@@ -69,9 +70,13 @@ struct TodayView: View {
     private var header: some View {
         HStack {
             Button(action: onOpenIndex) {
-                AtlasIconView(icon: .contents, size: 18).frame(width: 44, height: 44)
+                AtlasIconView(icon: .contents, size: 18)
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .accessibilityElement()
+            .accessibilityAddTraits(.isButton)
             .accessibilityLabel("Contents index")
             .accessibilityIdentifier("today.contents")
             Spacer()
@@ -81,9 +86,13 @@ struct TodayView: View {
                 .foregroundStyle(AtlasTheme.sepia)
             Spacer()
             Button(action: onOpenReflection) {
-                AtlasIconView(icon: .nib, size: 18).frame(width: 44, height: 44)
+                AtlasIconView(icon: .nib, size: 18)
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .accessibilityElement()
+            .accessibilityAddTraits(.isButton)
             .accessibilityLabel("Add a private note")
             .accessibilityIdentifier("today.privateNote")
         }
@@ -114,6 +123,18 @@ struct TodayView: View {
         .accessibilityLabel("\(species.commonName), \(species.scientificName)")
     }
 
+    /// Honest one-line description of what a Witness does. Local-only builds
+    /// keep the no-public-count promise; a configured backend states the
+    /// anonymous counting truthfully.
+    private var witnessCaption: String {
+        if model.isWitnessed {
+            return "PRIVATE RECORD RESTORED"
+        }
+        return community.isEnabled
+            ? "ONE WITNESS · COUNTED ANONYMOUSLY, NEVER PROFILED"
+            : "ONE PRIVATE WITNESS · NO PUBLIC COUNT"
+    }
+
     private var witnessControl: some View {
         VStack(spacing: 7) {
             Button {
@@ -139,7 +160,7 @@ struct TodayView: View {
             .accessibilityIdentifier("today.witnessButton")
             .accessibilityHint(model.isWitnessed ? "Already recorded privately on this device" : "Records one private Witness on this device")
 
-            Text(model.isWitnessed ? "PRIVATE RECORD RESTORED" : "ONE PRIVATE WITNESS · NO PUBLIC COUNT")
+            Text(witnessCaption)
                 .font(AtlasType.technical(8.5, weight: .medium))
                 .tracking(1.0)
                 .foregroundStyle(AtlasTheme.inkMuted)

@@ -2,44 +2,68 @@ import Foundation
 import Testing
 @testable import WitnessCore
 
-@Suite("Witness streak calculation")
+@Suite("Weekly witness streak calculation")
 struct WitnessStreakCalculatorTests {
-    @Test("Consecutive local days form a streak")
-    func consecutiveDays() throws {
+    private var calendar: Calendar {
         var calendar = Calendar(identifier: .gregorian)
-        calendar.timeZone = try #require(TimeZone(identifier: "America/Mexico_City"))
-        let today = try #require(calendar.date(from: DateComponents(year: 2026, month: 8, day: 21, hour: 12)))
-        let records = [19, 20, 21].map { day in
-            WitnessRecord(
-                id: "2026-08-\(day)|species-\(day)",
-                speciesID: "species-\(day)",
-                localDay: "2026-08-\(day)",
-                witnessedAt: today
-            )
-        }
-
-        #expect(WitnessStreakCalculator.currentStreak(records: records, asOf: today, calendar: calendar) == 3)
+        calendar.timeZone = TimeZone(identifier: "America/Mexico_City")!
+        return calendar
     }
 
-    @Test("Yesterday preserves a streak but a larger gap resets it")
-    func graceAndGap() throws {
-        var calendar = Calendar(identifier: .gregorian)
-        calendar.timeZone = try #require(TimeZone(identifier: "America/Mexico_City"))
-        let today = try #require(calendar.date(from: DateComponents(year: 2026, month: 8, day: 21, hour: 12)))
-        let yesterday = WitnessRecord(
-            id: "2026-08-20|vaquita",
-            speciesID: "vaquita",
-            localDay: "2026-08-20",
-            witnessedAt: today
+    private func record(year: Int, month: Int, day: Int, species: String) -> WitnessRecord {
+        let date = calendar.date(from: DateComponents(year: year, month: month, day: day, hour: 12))!
+        return WitnessRecord(
+            id: "\(WitnessPeriodKey.make(for: date, calendar: calendar))|\(species)",
+            speciesID: species,
+            assignedPeriod: WitnessPeriodKey.make(for: date, calendar: calendar),
+            witnessedAt: date
         )
-        let old = WitnessRecord(
-            id: "2026-08-18|other",
-            speciesID: "other",
-            localDay: "2026-08-18",
-            witnessedAt: today
-        )
+    }
 
-        #expect(WitnessStreakCalculator.currentStreak(records: [yesterday], asOf: today, calendar: calendar) == 1)
-        #expect(WitnessStreakCalculator.currentStreak(records: [old], asOf: today, calendar: calendar) == 0)
+    @Test("Consecutive weeks form a streak")
+    func consecutiveWeeks() throws {
+        let asOf = try #require(calendar.date(from: DateComponents(year: 2026, month: 8, day: 26, hour: 12)))
+        let records = [
+            record(year: 2026, month: 8, day: 12, species: "a"),  // W33
+            record(year: 2026, month: 8, day: 19, species: "b"),  // W34
+            record(year: 2026, month: 8, day: 25, species: "c")   // W35
+        ]
+        #expect(WitnessStreakCalculator.currentStreak(records: records, asOf: asOf, calendar: calendar) == 3)
+    }
+
+    @Test("Last week preserves a streak but a larger gap resets it")
+    func graceAndGap() throws {
+        let asOf = try #require(calendar.date(from: DateComponents(year: 2026, month: 8, day: 26, hour: 12)))
+        let lastWeek = record(year: 2026, month: 8, day: 19, species: "vaquita")
+        let twoWeeksAgo = record(year: 2026, month: 8, day: 12, species: "other")
+
+        #expect(WitnessStreakCalculator.currentStreak(records: [lastWeek], asOf: asOf, calendar: calendar) == 1)
+        #expect(WitnessStreakCalculator.currentStreak(records: [twoWeeksAgo], asOf: asOf, calendar: calendar) == 0)
+    }
+
+    @Test("Multiple witnesses inside one week count as one streak week")
+    func oneWeekManyRecords() throws {
+        let asOf = try #require(calendar.date(from: DateComponents(year: 2026, month: 8, day: 26, hour: 12)))
+        let records = [
+            record(year: 2026, month: 8, day: 24, species: "a"),
+            record(year: 2026, month: 8, day: 25, species: "b"),
+            record(year: 2026, month: 8, day: 26, species: "c")
+        ]
+        #expect(WitnessStreakCalculator.currentStreak(records: records, asOf: asOf, calendar: calendar) == 1)
+    }
+
+    @Test("Old day-keyed records still count toward weekly streaks")
+    func legacyDayKeyedRecords() throws {
+        // A record persisted before D-016 carries a day key; the streak uses
+        // its timestamp, so no migration is needed.
+        let asOf = try #require(calendar.date(from: DateComponents(year: 2026, month: 8, day: 26, hour: 12)))
+        let legacyDate = try #require(calendar.date(from: DateComponents(year: 2026, month: 8, day: 21, hour: 9)))
+        let legacy = WitnessRecord(
+            id: "2026-08-21|vaquita",
+            speciesID: "vaquita",
+            assignedPeriod: "2026-08-21",
+            witnessedAt: legacyDate
+        )
+        #expect(WitnessStreakCalculator.currentStreak(records: [legacy], asOf: asOf, calendar: calendar) == 1)
     }
 }
