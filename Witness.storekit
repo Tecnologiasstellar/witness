@@ -1,117 +1,105 @@
 {
-  "identifier" : "F3A1C0DE-0001-4A11-9E60-000000000001",
-  "nonRenewingSubscriptions" : [
-
-  ],
-  "products" : [
+  "identifier": "F3A1C0DE-0001-4A11-9E60-000000000001",
+  "nonRenewingSubscriptions": [],
+  "products": [
     {
-      "displayPrice" : "4.99",
-      "familyShareable" : false,
-      "internalID" : "F3A1C0DE-1001-4A11-9E60-000000001001",
-      "localizations" : [
+      "displayPrice": "19.99",
+      "familyShareable": false,
+      "internalID": "F3A1C0DE-1001-4A11-9E60-000000001001",
+      "localizations": [
         {
-          "description" : "Permanent access to Field Season.",
-          "displayName" : "Field Season",
-          "locale" : "en_US"
+          "description": "Permanent access to Field Season.",
+          "displayName": "Field Season",
+          "locale": "en_US"
         }
       ],
-      "productID" : "com.avp.witness.fieldseason1",
-      "referenceName" : "Witness Field Season 1 v1",
-      "type" : "NonConsumable"
+      "productID": "com.avp.witness.fieldseason1",
+      "referenceName": "Witness Field Season 1 v1",
+      "type": "NonConsumable"
     },
     {
-      "displayPrice" : "9.99",
-      "familyShareable" : false,
-      "internalID" : "F3A1C0DE-1004-4A11-9E60-000000001004",
-      "localizations" : [
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "F3A1C0DE-1004-4A11-9E60-000000001004",
+      "localizations": [
         {
-          "description" : "A one-time tip supporting Witness.",
-          "displayName" : "Support Witness",
-          "locale" : "en_US"
+          "description": "A one-time tip supporting Witness.",
+          "displayName": "Support Witness",
+          "locale": "en_US"
         }
       ],
-      "productID" : "com.avp.witness.support.once",
-      "referenceName" : "Support Witness One-Time Tip v1",
-      "type" : "Consumable"
+      "productID": "com.avp.witness.support.once",
+      "referenceName": "Support Witness One-Time Tip v1",
+      "type": "Consumable"
     }
   ],
-  "settings" : {
-    "_askToBuyEnabled" : false,
-    "_billingIssuesEnabled" : false,
-    "_failTransactionsEnabled" : false,
-    "_locale" : "en_US",
-    "_storefront" : "USA",
-    "_storeKitErrors" : [
-
-    ]
+  "settings": {
+    "_askToBuyEnabled": false,
+    "_billingIssuesEnabled": false,
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
   },
-  "subscriptionGroups" : [
+  "subscriptionGroups": [
     {
-      "id" : "F3A1C0DE-2001-4A11-9E60-000000002001",
-      "localizations" : [
+      "id": "F3A1C0DE-2001-4A11-9E60-000000002001",
+      "localizations": [
         {
-          "description" : "Full Atlas access.",
-          "displayName" : "Witness Atlas",
-          "locale" : "en_US"
+          "description": "Full Atlas access.",
+          "displayName": "Witness Atlas",
+          "locale": "en_US"
         }
       ],
-      "name" : "Witness Atlas Access",
-      "subscriptions" : [
+      "name": "Witness Atlas Access",
+      "subscriptions": [
         {
-          "adHocOffers" : [
-
-          ],
-          "codeOffers" : [
-
-          ],
-          "displayPrice" : "14.99",
-          "familyShareable" : false,
-          "groupNumber" : 1,
-          "internalID" : "F3A1C0DE-1002-4A11-9E60-000000001002",
-          "introductoryOffer" : null,
-          "localizations" : [
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "14.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "F3A1C0DE-1002-4A11-9E60-000000001002",
+          "introductoryOffer": null,
+          "localizations": [
             {
-              "description" : "Full Atlas access, renewed every 6 months.",
-              "displayName" : "Atlas - 6 Months",
-              "locale" : "en_US"
+              "description": "Full Atlas access, renewed every 6 months.",
+              "displayName": "Atlas - 6 Months",
+              "locale": "en_US"
             }
           ],
-          "productID" : "com.avp.witness.atlas.sixmonth",
-          "recurringSubscriptionPeriod" : "P6M",
-          "referenceName" : "Witness Atlas 6 Months v1",
-          "subscriptionGroupID" : "F3A1C0DE-2001-4A11-9E60-000000002001",
-          "type" : "RecurringSubscription"
+          "productID": "com.avp.witness.atlas.sixmonth",
+          "recurringSubscriptionPeriod": "P6M",
+          "referenceName": "Witness Atlas 6 Months v1",
+          "subscriptionGroupID": "F3A1C0DE-2001-4A11-9E60-000000002001",
+          "type": "RecurringSubscription"
         },
         {
-          "adHocOffers" : [
-
-          ],
-          "codeOffers" : [
-
-          ],
-          "displayPrice" : "19.99",
-          "familyShareable" : false,
-          "groupNumber" : 1,
-          "internalID" : "F3A1C0DE-1003-4A11-9E60-000000001003",
-          "introductoryOffer" : null,
-          "localizations" : [
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "24.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "F3A1C0DE-1003-4A11-9E60-000000001003",
+          "introductoryOffer": null,
+          "localizations": [
             {
-              "description" : "Full Atlas access, renewed annually.",
-              "displayName" : "Atlas - Annual",
-              "locale" : "en_US"
+              "description": "Full Atlas access, renewed annually.",
+              "displayName": "Atlas - Annual",
+              "locale": "en_US"
             }
           ],
-          "productID" : "com.avp.witness.atlas.annual",
-          "recurringSubscriptionPeriod" : "P1Y",
-          "referenceName" : "Witness Atlas Annual v1",
-          "subscriptionGroupID" : "F3A1C0DE-2001-4A11-9E60-000000002001",
-          "type" : "RecurringSubscription"
+          "productID": "com.avp.witness.atlas.annual",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "Witness Atlas Annual v1",
+          "subscriptionGroupID": "F3A1C0DE-2001-4A11-9E60-000000002001",
+          "type": "RecurringSubscription"
         }
       ]
     }
   ],
-  "version" : {
-    "major" : 3,
-    "minor" : 0
+  "version": {
+    "major": 3,
+    "minor": 0
   }
 }
