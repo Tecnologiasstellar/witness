@@ -197,6 +197,13 @@ Discovered local `main` was stale at 363ad14 while `origin/main` (f81b011) carri
 - **Chapter 2 drafted** (kākāpō, "Every Kākāpō Has a Name", 1,169 words, status draft-for-founder-review) from a web-verified fact pack; review artifact https://claude.ai/code/artifact/6974eeb1-5c35-494e-936e-0539ab3da660. Star fact: 2026 is the biggest kākāpō breeding season on record (95+ chicks by April, DOC/Mongabay).
 - **Fact packs banked** for chapters 3 (Javan rhino) and 4 (red wolf) in `content/field-season-1/research/` — dramatic, verified, with count-conflict cautions.
 
+## Chapter production complete-in-draft (2026-08-27)
+
+- **All eight chapters now exist.** Approved + narrated: ch.1 vaquita (6:45), ch.2 kākāpō (7:15, audio rendered, rights filed, bundled in-app, added to edition JSON). Drafted awaiting founder review: ch.3 Javan rhino, ch.4 red wolf, ch.5 ʻalalā, ch.6 Wollemi pine, ch.7 Amur leopard, ch.8 axolotl — all to the approved Past/Present/Future template, every claim sourced from web-verified fact packs (banked in `content/field-season-1/research/`), dossiers 1,007–1,169 words (spec 600–1,200). Review binder artifact: https://claude.ai/code/artifact/cf4922d7-49ed-48f4-8af3-8fb033a3cbd9
+- Core suite 63/63 green after moving the SPM scratch path outside the repo (`--scratch-path /private/tmp/witness-spm-scratch`).
+- **iCloud sync is now actively corrupting builds** ("input file was modified during the build" on source and object files, three separate occurrences 2026-08-26/27; a zombie xcodebuild held the package lock for hours). Workaround in place for SPM; xcodebuild still builds from the synced tree. Escalated recommendation: move the repo out of iCloud-synced Documents, or `brctl exclude` it.
+- Remaining FS1 deliverables beyond chapters: opening field letter, two system interludes, ecosystem plate, closing synthesis, field album/PDF export, return note; narration for ch.3–8 after founder approval.
+
 ## Next highest-leverage action
 
 With the founder, retire the old Witness+ products and create the approved four products + entitlements + `witness_access_v1` offering in App Store Connect and RevenueCat, then drop a production `RevenueCatConfig.plist` into the app for the first Test Store/Sandbox purchase. Remaining Phase 5 safe local portion: the premium signed-URL authorization path. In parallel, founder decisions in the Blockers section unblock RevenueCat Test Store evidence and hosted Supabase.
