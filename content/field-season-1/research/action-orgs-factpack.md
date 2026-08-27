@@ -1,0 +1,21 @@
+# Fact pack — Take-action organizations (all pieces)
+
+Verified 2026-08-27 by live fetch or current search snippet. Re-verify
+before each release build, alongside chapter facts. Every door shipped
+in the edition must appear here with a verification date.
+
+## Season-wide (letter / synthesis)
+
+- **Re:wild** — https://www.rewild.org/ — fetched-adjacent (donate page search-verified). 100% of donations to partners; donors cover operating costs separately. Also the official US tax-deductible route for Kākāpō Recovery.
+- **IUCN** — https://iucn.org/donate — search-verified (iucnredlist.org donate page 403s to bots; link iucn.org/donate). Funds Red List assessments and the Species Survival Commission network. Institutional, not field work — framed as the "how we know" anchor.
+
+## Per species
+
+- **Vaquita** — Sea Shepherd Operation Milagro https://seashepherd.org/vaquita/ (fetched; active June 2026 frontlines update; 1,200+ nets removed since 2015). NMMF Operation Esperanza https://nmmf.org/marine-mammals/vaquita-porpoise/ (fetched; page says funding was cut and the plan awaits reactivation — copy says "helps restart and extend", never "funds ongoing"). EXCLUDED: VaquitaCPR (ended 2017), Museo de la Ballena (unverified).
+- **Kākāpō** — DOC Kākāpō Recovery https://www.doc.govt.nz/our-work/kakapo-recovery/get-involved/ (fetched; donations go to the registered Mauri Ora Kākāpō Trust; adoption program on same page). Re:wild kākāpō channel https://www.rewild.org/wild-about/kakapo (search-verified; US tax-deductible route).
+- **Javan rhino** — International Rhino Foundation https://rhinos.org/our-work/where-we-work/java/ (fetched; patrol units + JRSCA habitat; 150+ local employees; IRF itself acknowledges the undetected-rhinos concern). Save the Rhino International https://www.savetherhino.org/ (search-verified; 2026 grant $70,600 for an Ujung Kulon park resilience plan; general donations not Javan-earmarked). EXCLUDED: WWF Indonesia (donation flow is Indonesia-only).
+- **Red wolf** — Red Wolf Coalition https://redwolves.com/newsite/make-a-donation/ (fetched; small org — honest sentence is "keeps a full-time voice in the recovery area"). Wolf Conservation Center https://nywolf.org/ (fetched; red wolf pup born onsite April 2026; CLOSED to visitors until 2027 — never pitch "visit").
+- **ʻAlalā** — San Diego Zoo Wildlife Alliance https://sandiegozoowildlifealliance.org/species/alala (fetched; runs Keauhou + Maui bird centers; donations org-wide, not earmarked). American Bird Conservancy https://abcbirds.org/birds/alala-hawaiian-crow/ (search-verified; Hawaiʻi-wide program, not ʻalalā-specific).
+- **Wollemi pine** — Foundation & Friends of the Botanic Gardens https://www.botanicgardens.org.au/get-involved/foundation-friends-botanic-gardens/about-foundation-friends (fetched; funds the Gardens broadly). Growing guide https://www.botanicgardens.org.au/discover-and-learn/gardening-home/growing-native-gardens-and-bush-foods/growing-wollemi-pines (fetched; home cultivation endorsed by the institution — Offord et al. 2024, Plants People Planet; no single global "buy" URL exists, so copy says "sold through botanic-garden shops and licensed nurseries").
+- **Amur leopard** — WildCats Conservation Alliance https://conservewildcats.org/get-involved/ (fetched; 100% of donations to vetted projects, partners cover overheads; ANNOUNCED June 2026: from 2027 support refocuses to Northeast China — copy must not promise "protects leopards in Russia"). ZSL https://www.zsl.org/what-we-do/projects/wildcats-conservation-alliance (search-verified; co-founder). EXCLUDED: direct Phoenix Fund donations (payment restrictions; route via WildCats), Land of the Leopard direct support (no Western channel).
+- **Axolotl** — Adoptaxolotl, UNAM Instituto de Biología https://www.ib.unam.mx/ib/adopta-axolotl/ (fetched; 4th edition 2025–2026 launched Dec 2025; symbolic adoptions from ~$10 USD fund Dr. Zambrano's chinampa refuges; NOTE: adoptaxolotl.org does NOT resolve — always link the ib.unam.mx page; campaign is edition-based/annual, re-verify). Umbral Axochiatl https://axochiatl3.wixsite.com/umbral-axochiatl (search-verified; community station since 1995; weak Wix link — framed as "visit if in Mexico City").
