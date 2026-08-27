@@ -14,7 +14,10 @@ let package = Package(
     targets: [
         .target(
             name: "WitnessCore",
-            resources: [.copy("Resources/catalog")]
+            resources: [
+                .copy("Resources/catalog"),
+                .copy("Resources/fieldseason")
+            ]
         ),
         .testTarget(
             name: "WitnessCoreTests",

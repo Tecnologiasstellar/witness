@@ -24,6 +24,8 @@ targets:
       # matching SPM's .copy("Resources/catalog") layout.
       - path: Packages/WitnessCore/Sources/WitnessCore/Resources/catalog
         type: folder
+      - path: Packages/WitnessCore/Sources/WitnessCore/Resources/fieldseason
+        type: folder
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.avp.witness.core

@@ -67,11 +67,13 @@ struct FieldSeasonPreviewView: View {
                 text: "Field Season is yours permanently.",
                 identifier: "access.fieldseason.owned"
             )
+            openEditionLink
         } else if commerce.atlasIsActive {
             AccessStateNotice(
                 text: "Included with your active Atlas membership. If Atlas ever lapses, the season remains readable only with a separate permanent purchase.",
                 identifier: "access.fieldseason.included"
             )
+            openEditionLink
         } else {
             switch commerce.productsState {
             case .loading:
@@ -107,6 +109,24 @@ struct FieldSeasonPreviewView: View {
                 }
             }
         }
+    }
+
+    private var openEditionLink: some View {
+        NavigationLink {
+            FieldSeasonView(commerce: commerce)
+        } label: {
+            HStack {
+                Text("OPEN THE EDITION")
+                    .font(AtlasType.technical(12, weight: .semibold))
+                Spacer()
+                Image(systemName: "chevron.right").font(.caption)
+            }
+            .foregroundStyle(AtlasTheme.sepia)
+            .padding(.vertical, 14)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityIdentifier("access.fieldseason.open")
     }
 
     private func deliverable(_ text: String) -> some View {

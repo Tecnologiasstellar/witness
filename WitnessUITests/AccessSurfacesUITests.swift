@@ -69,6 +69,32 @@ final class AccessSurfacesUITests: XCTestCase {
         XCTAssertFalse(notice.label.lowercased().contains("unlock"))
     }
 
+    func testOwnedFieldSeasonOpensReaderWithNarrationDisclosure() throws {
+        openIndex()
+
+        // Purchase Field Season through the fake service, then open the edition.
+        app.buttons["access.overview.fieldseason"].tap()
+        let purchase = app.buttons["access.fieldseason.purchase"]
+        XCTAssertTrue(purchase.waitForExistence(timeout: 5))
+        purchase.tap()
+
+        let open = app.buttons["access.fieldseason.open"]
+        XCTAssertTrue(open.waitForExistence(timeout: 5))
+        open.tap()
+
+        // Edition list shows chapter one and the honest in-production rows.
+        let chapterOne = app.buttons["fieldseason.chapter.1"]
+        XCTAssertTrue(chapterOne.waitForExistence(timeout: 5))
+        chapterOne.tap()
+
+        // Reader: title, and the synthetic-voice disclosure beside the audio.
+        XCTAssertTrue(app.staticTexts["fieldseason.reader.title"].waitForExistence(timeout: 5))
+        let disclosure = app.staticTexts["fieldseason.audio.disclosure"]
+        XCTAssertTrue(disclosure.waitForExistence(timeout: 5))
+        XCTAssertTrue(disclosure.label.lowercased().contains("synthetic"))
+        XCTAssertTrue(app.buttons["fieldseason.audio.toggle"].exists)
+    }
+
     func testAtlasSheetOffersTwoEqualDurations() throws {
         openIndex()
         XCTAssertTrue(app.buttons["access.overview.atlas"].waitForExistence(timeout: 3))

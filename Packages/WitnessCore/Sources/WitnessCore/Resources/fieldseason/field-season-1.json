@@ -1,0 +1,110 @@
+{
+  "id": "field-season-1",
+  "title": "Field Season One",
+  "plannedChapterCount": 8,
+  "chapters": [
+    {
+      "id": "fs1-ch01-vaquita",
+      "number": 1,
+      "title": "Little Cow of the Upper Gulf",
+      "speciesID": "vaquita",
+      "heroAssetID": "vaquita-plate-01",
+      "audio": {
+        "fileName": "chapter-01-vaquita-ruth",
+        "fileExtension": "mp3",
+        "durationSeconds": 405,
+        "voiceDisclosure": "Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file."
+      },
+      "sections": [
+        {
+          "heading": "FIELD NOTE",
+          "style": "prose",
+          "entries": [
+            { "text": "Vaquita means \"little cow\" in Spanish — an affectionate name for an animal that has never asked for attention. If you stood on the shore of the Upper Gulf of California at dawn, where the desert runs straight into a warm green sea, you would probably miss it: a small grey back, a ring-eyed face, one soft breath, gone. The smallest porpoise on Earth is also the shyest, and its entire world is that one corner of sea — the smallest range of any marine mammal. Most people who have fished those waters all their lives have never seen one." },
+            { "text": "This is the story of how a gentle animal nobody hunts became the rarest marine mammal alive — and why the people who know it best have not given up on it. By the end, you may not want to either." }
+          ]
+        },
+        {
+          "heading": "THE PAST — HOW THE LITTLE COW GOT HERE",
+          "style": "prose",
+          "entries": [
+            { "text": "The vaquita's trouble began far from its sea, with a different animal entirely. The totoaba is a big silver fish that shares the same water, and its swim bladder — the balloon-like organ that keeps a fish afloat — is treasured in parts of Chinese tradition as a delicacy and a status gift. Dried, one bladder can fetch thousands of dollars; smugglers call it \"aquatic cocaine.\"" },
+            { "text": "Mexico banned totoaba fishing back in 1975, and world trade was outlawed in 1977. But the price survived the ban, so the fishery simply went underground, run more and more by trafficking networks. Poachers catch totoaba with gillnets: walls of mesh hanging invisible in the water, sized to wedge a large body and hold it. And a gillnet cannot tell one animal from another. A vaquita that swims into one — set for totoaba, or for shrimp — cannot back out, and cannot rise to breathe." },
+            { "text": "So the count fell: from about 567 animals in the first full survey of 1997, downward decade after decade — not because anyone wanted vaquitas gone, but because every link of the chain held: a belief, a price, a net, one small sea. The chain has a human hinge, too. The fishing families of San Felipe and El Golfo de Santa Clara built their lives on the same nets, and a ban without real alternatives pushes honest fishers toward the illegal economy it was meant to stop." },
+            { "text": "A chain like that can sound unbreakable. It is not. Every link in it is a human choice — and choices can be unmade." }
+          ]
+        },
+        {
+          "heading": "THE PRESENT — WHERE THE VAQUITA STANDS",
+          "style": "prose",
+          "entries": [
+            { "text": "Here is the sentence scientists waited years to write: the little cow is holding on. Three annual surveys in a row have found no substantial further decline — 8–12 individuals seen in 2023, 6–8 in 2024, and 7–10 in 2025, with one or two newborn calves. One mother, recognizable by her bent dorsal fin and named Frida after the painter, has now been seen with calves in three separate years. In the Zero Tolerance Area — the small guarded polygon where the last vaquitas gather — illegal netting has fallen sharply since the Navy sank hooked concrete blocks there to snag nets." },
+            { "text": "And in 2022, geneticists delivered the decade's best news. Reading the full genomes of twenty vaquitas, they found that the species' long history of natural rarity left it carrying unusually little harmful variation — meaning it is not doomed by inbreeding. In their simulations, if deaths in gillnets stop, the vaquita most likely recovers." }
+          ]
+        },
+        {
+          "heading": "KNOWN / UNKNOWN",
+          "style": "knownUnknown",
+          "entries": [
+            { "lead": "Known", "text": "The vaquita still exists, still calves, and is genetically capable of coming back; gillnets are the only major threat. Where enforcement is real, illegal netting falls." },
+            { "lead": "Unknown", "text": "The true number — 7–10 is an observation in a murky sea, not a census. Whether the calves reach adulthood. Whether protection holds through political change and totoaba prices. Whether any vaquitas swim undetected outside the monitored area. Honesty requires saying it plainly: this story can still end either way." }
+          ]
+        },
+        {
+          "heading": "THE FUTURE — WHAT WOULD IMPROVE ITS ODDS",
+          "style": "numbered",
+          "entries": [
+            { "lead": "Keep the Zero Tolerance Area truly zero.", "text": "Patrols, net removal, and the hooked blocks work where they are maintained; where enforcement is real, netting falls." },
+            { "lead": "Pay fishers fairly to change.", "text": "Vaquita-safe gear exists; it becomes real when it earns a living wage, so buyouts, gear programs, and markets for legally caught seafood matter as much as patrol boats." },
+            { "lead": "Shrink the price.", "text": "Demand reduction in consumer countries and customs enforcement along the trafficking route attack the chain at its first link." },
+            { "lead": "Keep counting.", "text": "The acoustic monitors and annual surveys are the species' heartbeat monitor; recovery cannot be managed blind." }
+          ]
+        },
+        {
+          "heading": "TIMELINE OF EVIDENCE",
+          "style": "timeline",
+          "entries": [
+            { "lead": "1958", "text": "The species is described by scientists Kenneth Norris and William McFarland, from skulls found on a beach. It enters science already rare." },
+            { "lead": "1975–77", "text": "Mexico bans totoaba fishing; CITES bans international totoaba trade." },
+            { "lead": "1997", "text": "First full survey: about 567 vaquitas. The international recovery committee CIRVA has just been convened." },
+            { "lead": "2005", "text": "Mexico declares a Vaquita Refuge; gillnetting is prohibited there on paper, but enforcement is thin." },
+            { "lead": "2015", "text": "With roughly 60 animals left, Mexico announces a two-year emergency gillnet ban across the vaquita's habitat, with compensation for fishers." },
+            { "lead": "2017", "text": "The ban becomes permanent (two fisheries excepted). That autumn, the sea-pen rescue plan VaquitaCPR is halted when a captured female dies of stress: the species cannot be saved in captivity. The only path left is the sea itself." },
+            { "lead": "2020", "text": "Mexico establishes the Zero Tolerance Area." },
+            { "lead": "2022", "text": "The Navy sinks 193 hooked concrete blocks; net-setting drops sharply. Science publishes the genome study: recovery is possible if gillnet deaths stop." },
+            { "lead": "2023–25", "text": "Three consecutive surveys, no substantial decline; 2025 finds 7–10 vaquitas and one or two calves. Timeline last verified 2026-08-26; a full statistical abundance estimate from the 2025 effort is expected during 2026." }
+          ]
+        },
+        {
+          "heading": "A REFLECTIVE PROMPT",
+          "style": "prompt",
+          "entries": [
+            { "text": "The vaquita's fate is decided by people it will never see, in places it will never swim — a banquet table, a customs desk, a fishing cooperative, a phone screen like this one. Where else does distance make harm easy? And where might it make care possible?" }
+          ]
+        },
+        {
+          "heading": "SOURCES",
+          "style": "sources",
+          "entries": [
+            { "lead": "S1", "text": "NOAA Fisheries — Vaquita species directory. fisheries.noaa.gov/species/vaquita (accessed 2026-08-26)" },
+            { "lead": "S2", "text": "CITES — Totoaba (Totoaba macdonaldi). cites.org/eng/node/48556 (accessed 2026-08-26)" },
+            { "lead": "S3", "text": "Marine Mammal Commission — Vaquita. mmc.gov/priority-topics/species-of-concern/vaquita (accessed 2026-08-26)" },
+            { "lead": "S4", "text": "IUCN SSC Cetacean Specialist Group — Vaquita. iucn-csg.org/vaquita (accessed 2026-08-26)" },
+            { "lead": "S5", "text": "IUCN-CSG / SEMARNAT / Sea Shepherd — Report of the September 2025 vaquita survey (accessed 2026-08-26)" },
+            { "lead": "S6", "text": "NOAA Fisheries — Vaquita conservation and management. fisheries.noaa.gov/species/vaquita/conservation-management (accessed 2026-08-26)" },
+            { "lead": "S7", "text": "VaquitaCPR consortium. vaquitacpr.org (accessed 2026-08-26)" },
+            { "lead": "S8", "text": "Robinson, J.A. et al. (2022). \"The critically endangered vaquita is not doomed to extinction by inbreeding depression.\" Science 376(6593). (accessed 2026-08-26)" },
+            { "lead": "S9", "text": "Sea Shepherd Conservation Society — Results of the 2025 vaquita monitoring effort, 2025-10-28. (accessed 2026-08-26)" }
+          ]
+        },
+        {
+          "heading": "CREDITS",
+          "style": "sources",
+          "entries": [
+            { "text": "Text: original, Witness editorial, 2026-08-26. Reviewed and approved by Alberto Villalpando. Artwork: Witness original plates, rights on file. Narration: synthetic voice (Amazon Polly, Ruth), rights record on file." }
+          ]
+        }
+      ]
+    }
+  ]
+}
