@@ -138,7 +138,7 @@ def convert_section(heading, content):
             else:
                 entries.append({"text": clean(item)})
         return [{"heading": heading.upper(), "style": "sources", "entries": entries}]
-    if h.startswith("the future"):
+    if h.startswith("the future") or h.startswith("what works"):
         pre, *rest = re.split(r"(?:\A|\n)1\. ", content, maxsplit=1)
         entries, post = [], []
         for p in pre.strip().split("\n\n"):
