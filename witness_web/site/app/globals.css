@@ -313,7 +313,7 @@
 .archive-band-grid { display: grid; grid-template-columns: 1.2fr .8fr; align-items: end; gap: 5rem; }
 .archive-band h2 { max-width: 13ch; margin-top: 1.4rem; }
 .archive-band-grid > div:last-child p { max-width: 46ch; margin-bottom: 1.8rem; line-height: 1.7; color: var(--dusk-muted); }
-.species-marquee { display: flex; width: max-content; gap: 2.5rem; margin-top: 6rem; font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 6rem); font-style: italic; white-space: nowrap; color: color-mix(in srgb, var(--paper) 44%, var(--ink)); animation: species-drift 36s linear infinite; }
+.species-marquee { display: flex; width: max-content; gap: 2.5rem; margin-top: 6rem; font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 6rem); font-style: italic; white-space: nowrap; color: color-mix(in srgb, var(--paper) 52%, var(--ink)); animation: species-drift 36s linear infinite; }
 .species-marquee span::after { content: "·"; margin-left: 2.5rem; }
 @keyframes species-drift { to { transform: translateX(-34%); } }
 
