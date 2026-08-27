@@ -35,4 +35,4 @@ npx tsc --noEmit
 npm run build -- --webpack
 ```
 
-Vercel has not been changed by this stabilization pass.
+Production is deployed at `https://witness-rho.vercel.app/`. See `DEPLOYMENT_PAYLOAD_FOR_APPROVAL.md` and `QA_REPORT_2026-08-27.md` for the immutable deployment IDs, validation evidence, and rollback target.

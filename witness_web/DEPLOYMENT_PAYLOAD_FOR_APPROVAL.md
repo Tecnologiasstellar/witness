@@ -1,8 +1,20 @@
-# Proposed Vercel deployment payload
+# Vercel deployment record
 
-Status: preview deployment approved and executed; production promotion not approved  
+Status: production promotion approved, executed, and verified  
 Prepared: 2026-08-27  
 Preview deployed: 2026-08-27
+
+## Production result
+
+- Production deployment: `dpl_2oy1gncewf1C2Adihdq2VAP5kuPU`
+- Production URL: `https://witness-rho.vercel.app/`
+- Immutable source preview: `dpl_6r2sc7t33BA364mk5ySHc7oHWG8W`
+- Source commits: `528df0e` and `a5d4b0c` on top of website commit `b2eaf2b`
+- Status: `Ready`
+- Public crawl: PASS; 39/39 routes returned HTTP 200
+- Production Lighthouse: Performance 95, Accessibility 100, Best Practices 100, SEO 100
+- Project settings, domains, and environment variables changed: no
+- Previous rollback deployment: `dpl_5wrYmeupoDBZavQ4MJDczCcoCJT5`
 
 ## Preview result
 
@@ -10,7 +22,7 @@ Preview deployed: 2026-08-27
 - Preview URL: `https://witness-4nvnhbw96-tecnologiasstellars-projects.vercel.app`
 - Inspector: `https://vercel.com/tecnologiasstellars-projects/witness/Ayhs6hCU8toWkboddv3qdBdK6Saa`
 - Status: `Ready`
-- Production alias changed: no
+- Production alias changed at the founder-approved promotion step
 - Project settings, domains, and environment variables changed: no
 
 ## Exact target
@@ -56,7 +68,7 @@ The local `.env.local` contains only a Vercel CLI OIDC token and is ignored. It 
 - All files outside `witness_web/**`, including the unrelated modified Xcode project
 - Source PNGs in the user's Downloads folder
 
-## Execution sequence after approval
+## Executed sequence
 
 1. Deploy this exact committed site to a Vercel preview, without changing domains, environment variables, project settings, or the production alias.
 2. Verify every generated route, mobile and desktop layout, keyboard behavior, metadata, external links, and Lighthouse on that preview.
@@ -65,7 +77,7 @@ The local `.env.local` contains only a Vercel CLI OIDC token and is ignored. It 
 
 ## Expected result
 
-- 40 generated static pages.
+- 41 generated static pages, including the favicon route.
 - No database, API route, analytics, cookies, account, email capture, payment, or production collective count.
 - Replacement of the current public presentation only after the separate production approval.
 
@@ -73,6 +85,6 @@ The local `.env.local` contains only a Vercel CLI OIDC token and is ignored. It 
 
 If the approved production promotion regresses, immediately reassign the production alias to the prior known-good Vercel deployment. No data migration or environment rollback is required because this payload introduces no persisted data or environment changes.
 
-## Approval language
+## Approval record
 
-Approval of this document authorizes only step 1: a preview deployment of the committed payload to the linked `witness` Vercel project. It does not authorize production promotion, alias changes, domain changes, environment-variable changes, purchases, or any other external mutation.
+Preview approval was received first. Production promotion was separately and explicitly approved afterward. No other external mutation was authorized or performed.
