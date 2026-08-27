@@ -204,6 +204,13 @@ Discovered local `main` was stale at 363ad14 while `origin/main` (f81b011) carri
 - **iCloud sync is now actively corrupting builds** ("input file was modified during the build" on source and object files, three separate occurrences 2026-08-26/27; a zombie xcodebuild held the package lock for hours). Workaround in place for SPM; xcodebuild still builds from the synced tree. Escalated recommendation: move the repo out of iCloud-synced Documents, or `brctl exclude` it.
 - Remaining FS1 deliverables beyond chapters: opening field letter, two system interludes, ecosystem plate, closing synthesis, field album/PDF export, return note; narration for ch.3–8 after founder approval.
 
+## FIRST SANDBOX PURCHASE — VERIFIED (2026-08-27, with founder live)
+
+- Dashboard reconciliation COMPLETE: ASC carries exactly the four approved products (old witness_plus monthly/annual DELETED from the reused group, renamed "Witness Atlas", both subs same level); localizations + founder-approved prices set (Field Season $19.99, Atlas 6-mo $14.99, Atlas annual $24.99, tip $9.99). RevenueCat: 4 products imported, entitlements field_season_1_access + atlas_access attached, old `plus` detached, offering `witness_access_v1` with four packages marked CURRENT.
+- `RevenueCatConfig.plist` (appl_ public SDK key) created untracked/gitignored, verified present in the signed device bundle; device build SUCCEEDED; installed + launched on the founder's iPhone 12.
+- **Founder-executed sandbox test PASSED**: live price "$19.99" rendered from the store; purchase completed with sandbox tester (albertovillalpando+lullable2@gmail.com); owned state appeared; OPEN THE EDITION showed 2 of 8 chapters; narration audio played. Founder quote: "It works... it worked perfectly."
+- Gates advanced: RevenueCat production adapter now evidenced on device with a real StoreKit sandbox transaction. REMAINING in the purchase matrix: Support tip, Atlas six-month + annual (incl. accelerated sandbox renewal/expiry), restore-purchases, Atlas-active "included" state on the Field Season page, Ask-to-Buy pending, and RevenueCat dashboard event evidence.
+
 ## Next highest-leverage action
 
 With the founder, retire the old Witness+ products and create the approved four products + entitlements + `witness_access_v1` offering in App Store Connect and RevenueCat, then drop a production `RevenueCatConfig.plist` into the app for the first Test Store/Sandbox purchase. Remaining Phase 5 safe local portion: the premium signed-URL authorization path. In parallel, founder decisions in the Blockers section unblock RevenueCat Test Store evidence and hosted Supabase.
