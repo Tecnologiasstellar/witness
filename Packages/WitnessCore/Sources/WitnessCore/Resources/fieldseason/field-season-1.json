@@ -105,6 +105,111 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fs1-ch02-kakapo",
+      "number": 2,
+      "title": "Every Kākāpō Has a Name",
+      "speciesID": "kakapo",
+      "heroAssetID": "kakapo-plate-01",
+      "audio": {
+        "fileName": "chapter-02-kakapo-ruth",
+        "fileExtension": "mp3",
+        "durationSeconds": 435,
+        "voiceDisclosure": "Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file."
+      },
+      "sections": [
+        {
+          "heading": "FIELD NOTE",
+          "style": "prose",
+          "entries": [
+            { "text": "Here is a fact that no other animal in this Field Season can offer you: every kākāpō alive has a name. Sirocco. Solstice. Hoki. Māhutonga. Not nicknames for a few favorites — all of them, each wearing a small transmitter backpack, each known personally to the rangers of New Zealand's recovery program. When a species can be counted like a classroom — 236 birds at the start of 2026 — you are looking at one of two things: the end of something, or the beginning." },
+            { "text": "The kākāpō is the world's heaviest parrot, moss-green, whiskered, smelling faintly sweet, and completely flightless. It cannot fly, but it climbs twenty-meter trees with its claws and comes down like a parachutist with wings spread. And in 2026, this impossible bird is having the best year of its modern history." }
+          ]
+        },
+        {
+          "heading": "THE PAST — HOW THE NIGHT PARROT FELL",
+          "style": "prose",
+          "entries": [
+            { "text": "For millions of years, the kākāpō's enemies came from the sky by day. So it became a creature of the night and the forest floor, and its one defense was to freeze — perfect stillness, perfect camouflage. Then people arrived, bringing animals that hunt in the dark, by smell: rats, cats, and stoats. Every kākāpō defense became a liability. The freeze that hid it from an eagle simply holds it still for a stoat, and its lovely musty scent is a beacon." },
+            { "text": "The fall was long and nearly total. In 1894, the conservationist Richard Henry moved hundreds of kākāpō to an island refuge — and watched stoats swim across within six years and destroy them all, one of conservation's first great heartbreaks. By the 1970s, decades of searching had turned up a few dozen birds, every one of them male. The species seemed finished. Then, in 1977, about two hundred kākāpō were discovered on Rakiura, Stewart Island — with females. Feral cats were already killing them, so between 1980 and 1997 every bird that could be found was evacuated to small predator-free islands. In 1995, the count bottomed out at 51 birds — and the modern recovery program began." },
+            { "text": "One more name matters here: Richard Henry — not the man, the bird named in his honor. The last kākāpō ever found from the Fiordland mainland, he carried genes the island flock had lost. In 1998 he fathered three chicks before dying around 2010, at an estimated eighty years old. His line still swims in the species' blood." }
+          ]
+        },
+        {
+          "heading": "THE PRESENT — WHERE THE KĀKĀPŌ STANDS",
+          "style": "prose",
+          "entries": [
+            { "text": "The count at the start of 2026 was 236, including 83 breeding-age females. And then the rimu trees — whose mass fruiting, every two to four years, is the only signal that makes kākāpō breed — delivered a great year. The first chick of the season hatched on Valentine's Day. By early April, more than 95 had hatched: the biggest kākāpō breeding season ever recorded, beating 2019's record of 73. Chicks only join the official count when they reach 150 days, so the new total is still being earned, night by night — and some chicks have already been lost, which the program reports as plainly as the wins." },
+            { "text": "The recovery machine behind this is remarkable: transmitters that flag when a female starts nesting, feeding stations that open only to the right bird and weigh her as she eats, and the genome of essentially every living kākāpō sequenced, so pairings can be chosen to protect what diversity remains. In 2023, ten males even returned to the New Zealand mainland for the first time in about forty years — and promptly taught everyone something by climbing the sanctuary's pest fence; several were brought back south, and the boom of a kākāpō was heard on the mainland again anyway." }
+          ]
+        },
+        {
+          "heading": "KNOWN / UNKNOWN",
+          "style": "knownUnknown",
+          "entries": [
+            { "lead": "Known", "text": "The count is exact, because every bird is named and tracked. Breeding follows the rimu mast. The enemies are introduced predators, not mystery." },
+            { "lead": "Unknown", "text": "How long a kākāpō lives — possibly sixty to ninety years; no one has ever watched a whole life. Why infertility and failed eggs remain stubbornly common. The final size of this record season, still being counted. And disease is a standing risk: in 2019 a single fungal strain reached a tenth of the species and killed nine birds." }
+          ]
+        },
+        {
+          "heading": "THE FUTURE — WHAT WOULD IMPROVE ITS ODDS",
+          "style": "numbered",
+          "entries": [
+            { "lead": "More safe ground.", "text": "The islands are near capacity. The great prize is Predator Free Rakiura — clearing 175,000 hectares of cats and rats would let kākāpō go home to the island where they were rediscovered. Nothing that large has ever been done." },
+            { "lead": "Keep the genetics working.", "text": "Every genome is sequenced; smart pairings and artificial insemination — once even delivered by drone — stretch the diversity of 51 survivors as far as it can go." },
+            { "lead": "Hold the biosecurity line.", "text": "One swimming stoat undid Richard Henry's life work in 1894. Quarantine, checks, and vigilance are the unglamorous wall everything else stands behind." },
+            { "lead": "Let them be wild where possible.", "text": "The program's 2026 strategy deliberately intervenes less — fewer handouts, more natural nests — aiming for birds that thrive rather than merely survive." }
+          ]
+        },
+        {
+          "heading": "TIMELINE OF EVIDENCE",
+          "style": "timeline",
+          "entries": [
+            { "lead": "1840s", "text": "The species is described by European science; Māori have known and named it far longer." },
+            { "lead": "1894", "text": "Richard Henry moves hundreds of kākāpō to Resolution Island; stoats swim over within six years." },
+            { "lead": "1977", "text": "About 200 kākāpō found on Rakiura / Stewart Island; the first females confirmed by 1980." },
+            { "lead": "1980–97", "text": "Every findable bird evacuated to predator-free islands as cats kill the Rakiura flock." },
+            { "lead": "1995", "text": "The low point: 51 birds. The Kākāpō Recovery Programme is founded with the iwi Ngāi Tahu." },
+            { "lead": "2010", "text": "Richard Henry (the bird) dies at an estimated 80; Sirocco is appointed New Zealand's official Spokesbird for Conservation." },
+            { "lead": "2019", "text": "Record 73 chicks fledge; the same year an aspergillosis outbreak kills nine birds." },
+            { "lead": "2022", "text": "Population reaches 252, the highest in about fifty years." },
+            { "lead": "2023", "text": "Ten males return to the mainland at Sanctuary Mountain Maungatautari, the first mainland kākāpō in about forty years." },
+            { "lead": "2026", "text": "236 birds at season start; the biggest breeding season on record — first chick on Valentine's Day, 95+ hatched by April. Timeline last verified 2026-08-26; final fledgling totals publish after chicks reach 150 days." }
+          ]
+        },
+        {
+          "heading": "A REFLECTIVE PROMPT",
+          "style": "prompt",
+          "entries": [
+            { "text": "Every kākāpō has a name, and it changed how people fight for them — it is harder to lose \"Solstice\" than to lose \"one of 236.\" What in your own world becomes harder to neglect the moment you name it?" }
+          ]
+        },
+        {
+          "heading": "SOURCES",
+          "style": "sources",
+          "entries": [
+            { "lead": "S1", "text": "NZ Department of Conservation — Kākāpō species pages. doc.govt.nz (accessed 2026-08-26)" },
+            { "lead": "S2", "text": "DOC media release — Kākāpō breeding season officially underway, 2026-01-06 (236 birds, 83 females). (accessed 2026-08-26)" },
+            { "lead": "S3", "text": "DOC — Kākāpō habitat and islands. (accessed 2026-08-26)" },
+            { "lead": "S4", "text": "DOC — Kākāpō behaviour. (accessed 2026-08-26)" },
+            { "lead": "S5", "text": "DOC — History of kākāpō recovery. (accessed 2026-08-26)" },
+            { "lead": "S6", "text": "DOC — Key kākāpō and Sirocco pages. (accessed 2026-08-26)" },
+            { "lead": "S7", "text": "Dussex et al. 2023, species-wide kākāpō genomics, Nature Ecology & Evolution. (accessed 2026-08-26)" },
+            { "lead": "S8", "text": "DOC — mainland translocation media releases, 2023–2025. (accessed 2026-08-26)" },
+            { "lead": "S9", "text": "Mongabay — Record kākāpō breeding season, 2026-04-10. (accessed 2026-08-26)" },
+            { "lead": "S10", "text": "Winter et al. — single-strain origin of the 2019 aspergillosis outbreak (PMC9668684). (accessed 2026-08-26)" },
+            { "lead": "S11", "text": "Predator Free Rakiura. predatorfreerakiura.org.nz (accessed 2026-08-26)" }
+          ]
+        },
+        {
+          "heading": "CREDITS",
+          "style": "sources",
+          "entries": [
+            { "text": "Text: original, Witness editorial, 2026-08-26. Reviewed and approved by Alberto Villalpando. Artwork: Witness original plates, rights on file. Narration: synthetic voice (Amazon Polly, Ruth), rights record on file." }
+          ]
+        }
+      ]
     }
   ]
 }

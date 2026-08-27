@@ -4,11 +4,11 @@ edition: field-season-1
 speciesID: kakapo
 title: "Every Kākāpō Has a Name"
 chapterNumber: 2
-status: draft-for-founder-review
+status: approved  # founder (Alberto Villalpando) approved 2026-08-26 ("Love Love Chapter 2")
 author: Witness editorial (drafted with Claude from the verified fact pack research/kakapo-factpack.md)
 lastFactChecked: 2026-08-26
 sensitiveLocationReview: generalized  # islands named only at the level DOC itself publishes
-narration: pending  # SSML after founder text approval (Ruth, per pipeline)
+narration: ssml-prepared  # content/field-season-1/audio/chapter-02-kakapo.ssml (Ruth)
 rightsNotes: >
   Text is original. Artwork references are the approved kakapo plates
   (rights records in docs/media/). No third-party text reproduced.
@@ -171,5 +171,5 @@ world becomes harder to neglect the moment you name it?
   the verified fact pack; every factual claim carries its source above.
 - Artwork: approved kākāpō plates (rights records in `docs/media/`).
 - Narration: to follow founder text approval (Ruth, synthetic, disclosed).
-- Review: **pending founder editorial approval** — must not ship or be
-  sold until `status` reads `approved`.
+- Review: **approved** by Alberto Villalpando, 2026-08-26. Audio gated on
+  its own rights record before shipping.

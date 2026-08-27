@@ -60,3 +60,6 @@ aws polly list-speech-synthesis-tasks --profile lullable --region us-east-1 --ma
 | Chapter | SSML | Audio synthesized | Rights record |
 |---|---|---|---|
 | 01 vaquita | `chapter-01-vaquita.ssml` (rev 2) | **done** — `rendered/chapter-01-vaquita-ruth.mp3`, Ruth long-form, 6:45 | `docs/media/fs1-ch01-audio-rights.md` |
+| 02 kākāpō | `chapter-02-kakapo.ssml` | **done** — `rendered/chapter-02-kakapo-ruth.mp3`, Ruth long-form, 7:15 | `docs/media/fs1-ch02-audio-rights.md` |
+| 03 javan rhino | pending founder text approval | — | — |
+| 04 red wolf | pending founder text approval | — | — |
