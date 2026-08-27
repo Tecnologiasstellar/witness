@@ -146,6 +146,22 @@
           ]
         },
         {
+          "heading": "TAKE ACTION",
+          "style": "action",
+          "entries": [
+            {
+              "lead": "Sea Shepherd — Operation Milagro",
+              "text": "Funds the crews who patrol the vaquita refuge alongside the Mexican Navy and pull illegal gillnets from its water.",
+              "url": "https://seashepherd.org/vaquita/"
+            },
+            {
+              "lead": "National Marine Mammal Foundation — Operation Esperanza",
+              "text": "Support helps restart and extend acoustic monitoring, health assessments, and vaquita-safe fishing partnerships in the Upper Gulf.",
+              "url": "https://nmmf.org/marine-mammals/vaquita-porpoise/"
+            }
+          ]
+        },
+        {
           "heading": "SOURCES",
           "style": "sources",
           "entries": [
@@ -196,7 +212,8 @@
             }
           ]
         }
-      ]
+      ],
+      "shareText": "I just read the vaquita's chapter in Witness. Around ten of Mexico's little porpoises remain, in one small sea — and crews still patrol their refuge, pulling illegal nets from the water.\n\nThe crews: https://seashepherd.org/vaquita/\n\nWitness — remember what is still here."
     },
     {
       "id": "fs1-ch02-kakapo",
@@ -342,6 +359,22 @@
           ]
         },
         {
+          "heading": "TAKE ACTION",
+          "style": "action",
+          "entries": [
+            {
+              "lead": "Kākāpō Recovery (Department of Conservation)",
+              "text": "Donations fund the monitoring, health checks, and predator control that watch over every living kākāpō — and you can adopt a named bird.",
+              "url": "https://www.doc.govt.nz/our-work/kakapo-recovery/get-involved/"
+            },
+            {
+              "lead": "Re:wild",
+              "text": "The United States route to fund Kākāpō Recovery: donations are tax-deductible and passed through to the programme.",
+              "url": "https://www.rewild.org/wild-about/kakapo"
+            }
+          ]
+        },
+        {
           "heading": "SOURCES",
           "style": "sources",
           "entries": [
@@ -400,7 +433,8 @@
             }
           ]
         }
-      ]
+      ],
+      "shareText": "I just read the kākāpō's chapter in Witness. Every kākāpō alive has a name, and a recovery team watches over each one of them.\n\nThe programme: https://www.doc.govt.nz/our-work/kakapo-recovery/\n\nWitness — remember what is still here."
     },
     {
       "id": "fs1-ch03-javan-rhino",
@@ -554,6 +588,22 @@
           ]
         },
         {
+          "heading": "TAKE ACTION",
+          "style": "action",
+          "entries": [
+            {
+              "lead": "International Rhino Foundation",
+              "text": "Funds the rhino patrol units and habitat work in Ujung Kulon, employing more than one hundred and fifty local community members.",
+              "url": "https://rhinos.org/our-work/where-we-work/java/"
+            },
+            {
+              "lead": "Save the Rhino International",
+              "text": "Makes grants to Ujung Kulon's park partners, including a 2026 resilience plan for the park itself.",
+              "url": "https://www.savetherhino.org/"
+            }
+          ]
+        },
+        {
           "heading": "SOURCES",
           "style": "sources",
           "entries": [
@@ -633,7 +683,8 @@
             }
           ]
         }
-      ]
+      ],
+      "shareText": "I just read the Javan rhino's chapter in Witness. The last of them live on a single Indonesian peninsula — and not one lives in any zoo on Earth.\n\nThe rangers: https://rhinos.org/our-work/where-we-work/java/\n\nWitness — remember what is still here."
     },
     {
       "id": "fs1-ch04-red-wolf",
@@ -785,6 +836,22 @@
           ]
         },
         {
+          "heading": "TAKE ACTION",
+          "style": "action",
+          "entries": [
+            {
+              "lead": "Red Wolf Coalition",
+              "text": "Keeps a full-time voice for red wolves in the recovery area, working alongside the federal recovery program.",
+              "url": "https://redwolves.com/newsite/make-a-donation/"
+            },
+            {
+              "lead": "Wolf Conservation Center",
+              "text": "Breeds red wolves for the national recovery effort; you can adopt a wolf and follow its story.",
+              "url": "https://nywolf.org/"
+            }
+          ]
+        },
+        {
           "heading": "SOURCES",
           "style": "sources",
           "entries": [
@@ -860,7 +927,8 @@
             }
           ]
         }
-      ]
+      ],
+      "shareText": "I just read the red wolf's chapter in Witness. Roughly two dozen are known in the wild, all in one corner of North Carolina — and people stay there, keeping watch.\n\nThe keepers: https://redwolves.com/\n\nWitness — remember what is still here."
     },
     {
       "id": "fs1-ch05-alala",
@@ -1015,6 +1083,22 @@
           ]
         },
         {
+          "heading": "TAKE ACTION",
+          "style": "action",
+          "entries": [
+            {
+              "lead": "San Diego Zoo Wildlife Alliance",
+              "text": "Runs the Hawaiian bird conservation centers that raised the ʻalalā back from fewer than twenty birds and prepared the Maui releases.",
+              "url": "https://sandiegozoowildlifealliance.org/species/alala"
+            },
+            {
+              "lead": "American Bird Conservancy",
+              "text": "Funds habitat restoration and predator control across Hawaiʻi's native forests, where the ʻalalā's future will be decided.",
+              "url": "https://abcbirds.org/birds/alala-hawaiian-crow/"
+            }
+          ]
+        },
+        {
           "heading": "SOURCES",
           "style": "sources",
           "entries": [
@@ -1094,7 +1178,8 @@
             }
           ]
         }
-      ]
+      ],
+      "shareText": "I just read the ʻalalā's chapter in Witness. Hawaiʻi's crow vanished from the wild — and in 2024, five birds flew free again on Maui.\n\nThe centers that raised them: https://sandiegozoowildlifealliance.org/species/alala\n\nWitness — remember what is still here."
     },
     {
       "id": "fs1-ch06-wollemi-pine",
@@ -1248,6 +1333,22 @@
           ]
         },
         {
+          "heading": "TAKE ACTION",
+          "style": "action",
+          "entries": [
+            {
+              "lead": "Foundation & Friends of the Botanic Gardens",
+              "text": "Raises funds for the Botanic Gardens of Sydney, the institution that propagated the Wollemi pine and guards its global backup collection.",
+              "url": "https://www.botanicgardens.org.au/get-involved/foundation-friends-botanic-gardens/about-foundation-friends"
+            },
+            {
+              "lead": "Grow one yourself",
+              "text": "The Gardens' own guide to raising a Wollemi pine at home; seedlings are sold through botanic-garden shops and licensed nurseries.",
+              "url": "https://www.botanicgardens.org.au/discover-and-learn/gardening-home/growing-native-gardens-and-bush-foods/growing-wollemi-pines"
+            }
+          ]
+        },
+        {
           "heading": "SOURCES",
           "style": "sources",
           "entries": [
@@ -1315,7 +1416,8 @@
             }
           ]
         }
-      ]
+      ],
+      "shareText": "I just read the Wollemi pine's chapter in Witness. A tree from the dinosaurs' world survives in a hidden canyon — and you can grow its descendant in your own garden.\n\nThe growers' guide: https://www.botanicgardens.org.au/wollemi-pine-research-projects\n\nWitness — remember what is still here."
     },
     {
       "id": "fs1-ch07-amur-leopard",
@@ -1463,6 +1565,22 @@
           ]
         },
         {
+          "heading": "TAKE ACTION",
+          "style": "action",
+          "entries": [
+            {
+              "lead": "WildCats Conservation Alliance",
+              "text": "Passes one hundred percent of donations to vetted Amur leopard and tiger field projects; its partners cover the overheads.",
+              "url": "https://conservewildcats.org/get-involved/"
+            },
+            {
+              "lead": "Zoological Society of London",
+              "text": "Co-founded the alliance and runs the science behind big-cat recovery worldwide.",
+              "url": "https://www.zsl.org/what-we-do/projects/wildcats-conservation-alliance"
+            }
+          ]
+        },
+        {
           "heading": "SOURCES",
           "style": "sources",
           "entries": [
@@ -1542,7 +1660,8 @@
             }
           ]
         }
-      ]
+      ],
+      "shareText": "I just read the Amur leopard's chapter in Witness. In 2007 about thirty remained. Today, well over two hundred — because the killing, the burning, and the taking stopped.\n\nThe alliance: https://conservewildcats.org/\n\nWitness — remember what is still here."
     },
     {
       "id": "fs1-ch08-axolotl",
@@ -1704,6 +1823,22 @@
           ]
         },
         {
+          "heading": "TAKE ACTION",
+          "style": "action",
+          "entries": [
+            {
+              "lead": "Adoptaxolotl (UNAM)",
+              "text": "The university lab behind the chinampa refuges; a symbolic adoption from ten dollars funds refuge restoration and the farmers who keep them.",
+              "url": "https://www.ib.unam.mx/ib/adopta-axolotl/"
+            },
+            {
+              "lead": "Umbral Axochiatl",
+              "text": "A community biological station in Xochimilco that breeds and releases axolotls; visit their chinampas if you are ever in Mexico City.",
+              "url": "https://axochiatl3.wixsite.com/umbral-axochiatl"
+            }
+          ]
+        },
+        {
           "heading": "SOURCES",
           "style": "sources",
           "entries": [
@@ -1787,7 +1922,8 @@
             }
           ]
         }
-      ]
+      ],
+      "shareText": "I just read the axolotl's chapter in Witness. Wild axolotls still live in Mexico City's canals — and from anywhere on Earth, you can sponsor the refuges that keep them there.\n\nThe refuges: https://www.ib.unam.mx/ib/adopta-axolotl/\n\nWitness — remember what is still here."
     }
   ]
 }

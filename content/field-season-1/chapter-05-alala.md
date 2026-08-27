@@ -23,6 +23,14 @@ dossierWordTarget: 600-1200 additional words (spec §6.2.2)
 
 ---
 
+## Share copy
+
+I just read the ʻalalā's chapter in Witness. Hawaiʻi's crow vanished from the wild — and in 2024, five birds flew free again on Maui.
+
+The centers that raised them: https://sandiegozoowildlifealliance.org/species/alala
+
+Witness — remember what is still here.
+
 ## Premium dossier
 
 ### Field note
@@ -140,6 +148,11 @@ no one has to.
 The ʻalalā's keepers spent twenty years failing in public and trying
 again — and the fifth attempt is flying. What have you stopped
 attempting after two failures?
+
+### Take action
+
+- **San Diego Zoo Wildlife Alliance** — Runs the Hawaiian bird conservation centers that raised the ʻalalā back from fewer than twenty birds and prepared the Maui releases. — https://sandiegozoowildlifealliance.org/species/alala
+- **American Bird Conservancy** — Funds habitat restoration and predator control across Hawaiʻi's native forests, where the ʻalalā's future will be decided. — https://abcbirds.org/birds/alala-hawaiian-crow/
 
 ### Sources
 

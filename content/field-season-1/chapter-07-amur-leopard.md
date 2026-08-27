@@ -23,6 +23,14 @@ dossierWordTarget: 600-1200 additional words (spec §6.2.2)
 
 ---
 
+## Share copy
+
+I just read the Amur leopard's chapter in Witness. In 2007 about thirty remained. Today, well over two hundred — because the killing, the burning, and the taking stopped.
+
+The alliance: https://conservewildcats.org/
+
+Witness — remember what is still here.
+
 ## Premium dossier
 
 ### Field note
@@ -141,6 +149,11 @@ eulogy. Now it is a schedule.
 The Amur leopard needed no rescue technology — only for the killing,
 the burning, and the taking to stop. How often is the most powerful
 thing we can do for something simply to stop doing the harmful thing?
+
+### Take action
+
+- **WildCats Conservation Alliance** — Passes one hundred percent of donations to vetted Amur leopard and tiger field projects; its partners cover the overheads. — https://conservewildcats.org/get-involved/
+- **Zoological Society of London** — Co-founded the alliance and runs the science behind big-cat recovery worldwide. — https://www.zsl.org/what-we-do/projects/wildcats-conservation-alliance
 
 ### Sources
 

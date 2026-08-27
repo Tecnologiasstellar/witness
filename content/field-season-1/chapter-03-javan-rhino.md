@@ -23,6 +23,14 @@ dossierWordTarget: 600-1200 additional words (spec §6.2.2)
 
 ---
 
+## Share copy
+
+I just read the Javan rhino's chapter in Witness. The last of them live on a single Indonesian peninsula — and not one lives in any zoo on Earth.
+
+The rangers: https://rhinos.org/our-work/where-we-work/java/
+
+Witness — remember what is still here.
+
 ## Premium dossier
 
 ### Field note
@@ -146,6 +154,11 @@ to her.
 No one may ever see a Javan rhino — not you, not the rangers, perhaps
 not even the poachers who hunted them. Does something need to be seen to
 be worth saving? What do you protect that you will never look at?
+
+### Take action
+
+- **International Rhino Foundation** — Funds the rhino patrol units and habitat work in Ujung Kulon, employing more than one hundred and fifty local community members. — https://rhinos.org/our-work/where-we-work/java/
+- **Save the Rhino International** — Makes grants to Ujung Kulon's park partners, including a 2026 resilience plan for the park itself. — https://www.savetherhino.org/
 
 ### Sources
 

@@ -25,6 +25,14 @@ dossierWordTarget: 600-1200 additional words (spec §6.2.2)
 
 ---
 
+## Share copy
+
+I just read the axolotl's chapter in Witness. Wild axolotls still live in Mexico City's canals — and from anywhere on Earth, you can sponsor the refuges that keep them there.
+
+The refuges: https://www.ib.unam.mx/ib/adopta-axolotl/
+
+Witness — remember what is still here.
+
 ## Premium dossier
 
 ### Field note
@@ -160,6 +168,11 @@ The axolotl never grows up — and never gives up. Its refuge is not a
 fence in the wilderness but a farmer's canal in a city of millions,
 proof that the wild can live next door if the neighbors want it to.
 What would it take for the place you live to keep one wild thing alive?
+
+### Take action
+
+- **Adoptaxolotl (UNAM)** — The university lab behind the chinampa refuges; a symbolic adoption from ten dollars funds refuge restoration and the farmers who keep them. — https://www.ib.unam.mx/ib/adopta-axolotl/
+- **Umbral Axochiatl** — A community biological station in Xochimilco that breeds and releases axolotls; visit their chinampas if you are ever in Mexico City. — https://axochiatl3.wixsite.com/umbral-axochiatl
 
 ### Sources
 

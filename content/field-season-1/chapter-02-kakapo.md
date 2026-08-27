@@ -23,6 +23,14 @@ dossierWordTarget: 600-1200 additional words (spec §6.2.2)
 
 ---
 
+## Share copy
+
+I just read the kākāpō's chapter in Witness. Every kākāpō alive has a name, and a recovery team watches over each one of them.
+
+The programme: https://www.doc.govt.nz/our-work/kakapo-recovery/
+
+Witness — remember what is still here.
+
 ## Premium dossier
 
 ### Field note
@@ -150,6 +158,11 @@ after chicks reach 150 days [S9].*
 Every kākāpō has a name, and it changed how people fight for them — it
 is harder to lose "Solstice" than to lose "one of 236." What in your own
 world becomes harder to neglect the moment you name it?
+
+### Take action
+
+- **Kākāpō Recovery (Department of Conservation)** — Donations fund the monitoring, health checks, and predator control that watch over every living kākāpō — and you can adopt a named bird. — https://www.doc.govt.nz/our-work/kakapo-recovery/get-involved/
+- **Re:wild** — The United States route to fund Kākāpō Recovery: donations are tax-deductible and passed through to the programme. — https://www.rewild.org/wild-about/kakapo
 
 ### Sources
 

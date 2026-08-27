@@ -23,6 +23,14 @@ dossierWordTarget: 600-1200 additional words (spec §6.2.2)
 
 ---
 
+## Share copy
+
+I just read the Wollemi pine's chapter in Witness. A tree from the dinosaurs' world survives in a hidden canyon — and you can grow its descendant in your own garden.
+
+The growers' guide: https://www.botanicgardens.org.au/wollemi-pine-research-projects
+
+Witness — remember what is still here.
+
 ## Premium dossier
 
 ### Field note
@@ -148,6 +156,11 @@ Scotland. Ninety million years on, its fate has become a collaboration.
 The kindest thing anyone can do for this species is not visit it. Is
 there something — a place, a person, a wild thing — that you could love
 better by leaving alone?
+
+### Take action
+
+- **Foundation & Friends of the Botanic Gardens** — Raises funds for the Botanic Gardens of Sydney, the institution that propagated the Wollemi pine and guards its global backup collection. — https://www.botanicgardens.org.au/get-involved/foundation-friends-botanic-gardens/about-foundation-friends
+- **Grow one yourself** — The Gardens' own guide to raising a Wollemi pine at home; seedlings are sold through botanic-garden shops and licensed nurseries. — https://www.botanicgardens.org.au/discover-and-learn/gardening-home/growing-native-gardens-and-bush-foods/growing-wollemi-pines
 
 ### Sources
 

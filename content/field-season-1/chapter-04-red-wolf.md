@@ -23,6 +23,14 @@ dossierWordTarget: 600-1200 additional words (spec §6.2.2)
 
 ---
 
+## Share copy
+
+I just read the red wolf's chapter in Witness. Roughly two dozen are known in the wild, all in one corner of North Carolina — and people stay there, keeping watch.
+
+The keepers: https://redwolves.com/
+
+Witness — remember what is still here.
+
 ## Premium dossier
 
 ### Field note
@@ -149,6 +157,11 @@ it.
 The red wolf exists because people admitted a mistake and then spent
 fifty years repairing it — and the repair is still not finished. What
 mistake would you be willing to spend that long making right?
+
+### Take action
+
+- **Red Wolf Coalition** — Keeps a full-time voice for red wolves in the recovery area, working alongside the federal recovery program. — https://redwolves.com/newsite/make-a-donation/
+- **Wolf Conservation Center** — Breeds red wolves for the national recovery effort; you can adopt a wolf and follow its story. — https://nywolf.org/
 
 ### Sources
 

@@ -18,13 +18,31 @@ public enum FieldSeasonLoader {
               !edition.chapters.isEmpty else {
             return nil
         }
-        // Every chapter with audio must carry the synthetic-voice disclosure.
+        guard isValid(edition) else { return nil }
+        return edition
+    }
+
+    /// Every chapter with audio must carry the synthetic-voice disclosure,
+    /// and every action door must lead somewhere real: named, explained,
+    /// and reached over https. Anything less and the edition fails closed.
+    public static func isValid(_ edition: FieldSeasonEdition) -> Bool {
         for chapter in edition.chapters {
             if let audio = chapter.audio, audio.voiceDisclosure.isEmpty {
-                return nil
+                return false
+            }
+            for section in chapter.sections where section.style == .action {
+                for entry in section.entries {
+                    guard let url = entry.url,
+                          url.hasPrefix("https://"),
+                          URL(string: url) != nil,
+                          entry.lead?.isEmpty == false,
+                          !entry.text.isEmpty else {
+                        return false
+                    }
+                }
             }
         }
-        return edition
+        return true
     }
 
     private static var resourceBundle: Bundle {

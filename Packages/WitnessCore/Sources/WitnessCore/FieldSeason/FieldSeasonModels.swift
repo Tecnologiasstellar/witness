@@ -18,6 +18,16 @@ public struct FieldSeasonEdition: Codable, Equatable, Sendable {
 }
 
 public struct FieldSeasonChapter: Codable, Equatable, Sendable, Identifiable {
+    /// What a piece is. The edition is more than chapters: it opens with a
+    /// letter, pauses for interludes, and closes with a synthesis. Absent in
+    /// older JSON, so decoding treats nil as `.chapter`.
+    public enum Kind: String, Codable, Sendable {
+        case chapter
+        case letter
+        case interlude
+        case synthesis
+    }
+
     public let id: String
     public let number: Int
     public let title: String
@@ -25,6 +35,11 @@ public struct FieldSeasonChapter: Codable, Equatable, Sendable, Identifiable {
     public let heroAssetID: String?
     public let audio: FieldSeasonAudio?
     public let sections: [FieldSeasonSection]
+    public let kind: Kind?
+    /// Ready-to-send share message shown behind the reader's share button.
+    public let shareText: String?
+
+    public var resolvedKind: Kind { kind ?? .chapter }
 
     public init(
         id: String,
@@ -33,7 +48,9 @@ public struct FieldSeasonChapter: Codable, Equatable, Sendable, Identifiable {
         speciesID: String,
         heroAssetID: String?,
         audio: FieldSeasonAudio?,
-        sections: [FieldSeasonSection]
+        sections: [FieldSeasonSection],
+        kind: Kind? = nil,
+        shareText: String? = nil
     ) {
         self.id = id
         self.number = number
@@ -42,6 +59,8 @@ public struct FieldSeasonChapter: Codable, Equatable, Sendable, Identifiable {
         self.heroAssetID = heroAssetID
         self.audio = audio
         self.sections = sections
+        self.kind = kind
+        self.shareText = shareText
     }
 }
 
@@ -69,6 +88,9 @@ public struct FieldSeasonSection: Codable, Equatable, Sendable, Identifiable {
         case knownUnknown
         case prompt
         case sources
+        /// Doors to real organizations: each entry names an org, says in one
+        /// sentence what supporting it does, and carries the verified URL.
+        case action
     }
 
     public let heading: String
@@ -89,11 +111,15 @@ public struct FieldSeasonSection: Codable, Equatable, Sendable, Identifiable {
 public struct FieldSeasonEntry: Codable, Equatable, Sendable, Identifiable {
     public let lead: String?
     public let text: String
+    /// Where an action entry leads. Only `action` sections carry URLs, and
+    /// the loader rejects any that are not https.
+    public let url: String?
 
     public var id: String { (lead ?? "") + "|" + text.prefix(48) }
 
-    public init(lead: String? = nil, text: String) {
+    public init(lead: String? = nil, text: String, url: String? = nil) {
         self.lead = lead
         self.text = text
+        self.url = url
     }
 }

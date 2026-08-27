@@ -25,6 +25,18 @@ struct ChapterReaderView: View {
         .background(AtlasPaper().ignoresSafeArea())
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            if let shareText = chapter.shareText, !shareText.isEmpty {
+                ToolbarItem(placement: .topBarTrailing) {
+                    ShareLink(item: shareText) {
+                        Image(systemName: "square.and.arrow.up")
+                            .foregroundStyle(AtlasTheme.sepia)
+                    }
+                    .accessibilityLabel("Share this piece")
+                    .accessibilityIdentifier("fieldseason.reader.share")
+                }
+            }
+        }
         .task {
             if let chapterAudio = chapter.audio {
                 audio.load(chapterAudio)
@@ -33,9 +45,18 @@ struct ChapterReaderView: View {
         .onDisappear { audio.stop() }
     }
 
+    private var kindLabel: String {
+        switch chapter.resolvedKind {
+        case .chapter: "CHAPTER \(String(format: "%02d", chapter.number))"
+        case .letter: "OPENING FIELD LETTER"
+        case .interlude: "INTERLUDE"
+        case .synthesis: "CLOSING SYNTHESIS"
+        }
+    }
+
     private var header: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("CHAPTER \(String(format: "%02d", chapter.number))")
+            Text(kindLabel)
                 .font(AtlasType.technical(11, weight: .medium))
                 .foregroundStyle(AtlasTheme.sepia)
             Text(chapter.title)
@@ -160,6 +181,14 @@ struct ChapterReaderView: View {
                 }
             case .prompt:
                 promptView(section)
+            case .action:
+                ForEach(section.entries) { entry in
+                    actionDoor(entry)
+                }
+                Text("These organizations are independent of Witness. Links open in your browser; any support goes directly to them.")
+                    .font(AtlasType.technical(10, weight: .medium))
+                    .foregroundStyle(AtlasTheme.inkMuted)
+                    .lineSpacing(3)
             case .sources:
                 ForEach(section.entries) { entry in
                     HStack(alignment: .firstTextBaseline, spacing: 8) {
@@ -175,6 +204,41 @@ struct ChapterReaderView: View {
                     }
                 }
             }
+        }
+    }
+
+    /// One door to a real organization: name, what support does, and the
+    /// verified link. The loader has already refused any entry without one.
+    @ViewBuilder
+    private func actionDoor(_ entry: FieldSeasonEntry) -> some View {
+        if let urlString = entry.url, let url = URL(string: urlString) {
+            Link(destination: url) {
+                HStack(alignment: .firstTextBaseline, spacing: 12) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(entry.lead ?? "")
+                            .font(.callout.weight(.semibold))
+                        Text(entry.text)
+                            .font(.footnote)
+                            .foregroundStyle(AtlasTheme.inkMuted)
+                            .lineSpacing(4)
+                            .multilineTextAlignment(.leading)
+                    }
+                    Spacer()
+                    Image(systemName: "arrow.up.right")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(AtlasTheme.sepia)
+                }
+                .padding(14)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(AtlasTheme.paperFresh, in: RoundedRectangle(cornerRadius: 6))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 6)
+                        .strokeBorder(AtlasTheme.sepia.opacity(0.35), lineWidth: 1)
+                )
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("\(entry.lead ?? "Organization"): \(entry.text). Opens in browser.")
         }
     }
 

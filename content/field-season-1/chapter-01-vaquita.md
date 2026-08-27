@@ -25,6 +25,14 @@ dossierWordTarget: 600-1200 additional words (spec §6.2.2)
 
 ---
 
+## Share copy
+
+I just read the vaquita's chapter in Witness. Around ten of Mexico's little porpoises remain, in one small sea — and crews still patrol their refuge, pulling illegal nets from the water.
+
+The crews: https://seashepherd.org/vaquita/
+
+Witness — remember what is still here.
+
 ## Premium dossier
 
 ### Field note
@@ -154,6 +162,11 @@ The vaquita's fate is decided by people it will never see, in places it
 will never swim — a banquet table, a customs desk, a fishing cooperative,
 a phone screen like this one. Where else does distance make harm easy?
 And where might it make care possible?
+
+### Take action
+
+- **Sea Shepherd — Operation Milagro** — Funds the crews who patrol the vaquita refuge alongside the Mexican Navy and pull illegal gillnets from its water. — https://seashepherd.org/vaquita/
+- **National Marine Mammal Foundation — Operation Esperanza** — Support helps restart and extend acoustic monitoring, health assessments, and vaquita-safe fishing partnerships in the Upper Gulf. — https://nmmf.org/marine-mammals/vaquita-porpoise/
 
 ### Sources
 
