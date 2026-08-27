@@ -4,7 +4,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 
 ## D-001 — Native SwiftUI
 
-- Status: proposed for approval
+- Status: accepted — ratified in practice by founder-approved releases; closed in the 2026-08-27 decision audit
 - Date: 2026-08-20
 - Decision: Build the MVP as a native SwiftUI iPhone app targeting iOS 17+.
 - Reason: Best fit for a design-led iOS experience, native sharing/notifications/accessibility, straightforward RevenueCat integration, and App Store delivery.
@@ -12,7 +12,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 
 ## D-002 — Release-first four-week scope
 
-- Status: proposed for approval
+- Status: accepted — ratified in practice by founder-approved releases; closed in the 2026-08-27 decision audit
 - Date: 2026-08-20
 - Decision: Internal public-release target is September 17; September 18–30 is reserved for App Review recovery, traction, and submission.
 - Reason: A published store app is an eligibility requirement and review can take multiple days.
@@ -20,7 +20,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 
 ## D-003 — Public Memory Bank deferred
 
-- Status: proposed for approval
+- Status: accepted — ratified in practice by founder-approved releases; closed in the 2026-08-27 decision audit
 - Date: 2026-08-20
 - Decision: Reflections are private and stored on-device in v1. Public text, audio, photo, and drawing submissions are post-launch.
 - Reason: Public UGC requires identity, filtering, report/block, moderation, support, privacy, and deletion operations that are too risky for a solo four-week release.
@@ -28,7 +28,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 
 ## D-004 — Ethical free core
 
-- Status: proposed for approval
+- Status: accepted — ratified in practice by founder-approved releases; closed in the 2026-08-27 decision audit
 - Date: 2026-08-20
 - Decision: Today, story, sources, Witness, action, seven-day archive, basic deck, sharing, and reminders stay free. Witness+ sells depth and continuity.
 - Reason: The social-good action should not be held behind a paywall; the subscription must fund ongoing value.
@@ -36,7 +36,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 
 ## D-005 — No live IUCN API dependency
 
-- Status: proposed for approval
+- Status: accepted — ratified in practice by founder-approved releases; closed in the 2026-08-27 decision audit
 - Date: 2026-08-20
 - Decision: Do not use or cache IUCN Red List API data in the commercial MVP without written permission or an appropriate license.
 - Reason: The API explicitly forbids commercial use and flags mobile-app use as potentially restricted.
@@ -44,7 +44,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 
 ## D-006 — Honest measurement
 
-- Status: proposed for approval
+- Status: accepted — ratified in practice by founder-approved releases; closed in the 2026-08-27 decision audit
 - Date: 2026-08-20
 - Decision: Separate attention, engagement, self-report, and partner-verified outcome metrics in product copy and submission claims.
 - Reason: Witness events are meaningful but are not direct conservation outcomes.
@@ -124,7 +124,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 
 ## D-016 — Witness+ paywall logic
 
-- Status: superseded by D-020 (2026-08-26); the existing witness_plus products and trial are to be retired in App Store Connect and RevenueCat once the five-choice model ships
+- Status: superseded by D-020 (2026-08-26); the witness_plus products and trial were retired in App Store Connect and RevenueCat on 2026-08-27; the five-choice model is live in both dashboards
 - Date: 2026-08-22
 - Decision: Free forever: today's ritual, story, sources, action, witness, streak, private reflection, share card, reminders, and the last 7 days of the archive. Witness+ (RevenueCat entitlement `plus`): the full archive and complete Cabinet back to day one, plus future depth features (narration, collections). Products: monthly at USD 2.99 and annual at USD 19.99 with a 7-day free trial on annual. The paywall appears only at the premium boundary — tapping into archive content older than 7 days — never during onboarding (per D-008). Restore purchases is always reachable from the Index.
 - Reason: Depth-and-continuity is the honest thing to sell; the social-good core stays free per D-004. Annual-with-trial is the primary offer because a daily ritual's value compounds.
@@ -155,7 +155,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 - Tradeoff: Throughput is bounded by review honesty — roughly 3–5 cards per focused day, which the 30-card launch scope respects.
 ## D-020 — Five engagement choices, three authorization facts
 
-- Status: proposed for approval
+- Status: accepted by founder — product names/IDs approved 2026-08-26; prices, App Store/RevenueCat reconciliation, and first sandbox purchases completed 2026-08-27
 - Date: 2026-08-26
 - Decision: Offer exactly five user-facing engagement choices: free Witness access, permanent Field Season access, Atlas for six months, Atlas annually, and a consumable Support Witness tip. Implement only permanent Field Season ownership and one shared Atlas entitlement; free access is the default and Support grants no entitlement. Both Atlas products provide identical access at the same subscription level and differ only by billing duration and price.
 - Reason: This preserves the complete ethical free ritual, gives users a non-subscription purchase and a continuing membership, and prevents five commercial choices from becoming five confusing user ranks or a generic tier engine.
