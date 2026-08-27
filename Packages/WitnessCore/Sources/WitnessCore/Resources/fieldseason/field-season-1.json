@@ -4,6 +4,132 @@
   "plannedChapterCount": 8,
   "chapters": [
     {
+      "id": "fs1-letter-thin-line",
+      "number": 0,
+      "title": "The Thin Line",
+      "speciesID": "season-one",
+      "heroAssetID": null,
+      "audio": {
+        "fileName": "letter-the-thin-line-ruth",
+        "fileExtension": "mp3",
+        "durationSeconds": 255.6,
+        "voiceDisclosure": "Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file."
+      },
+      "sections": [
+        {
+          "heading": "A LETTER, BEFORE THE FIRST CHAPTER",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "You are about to meet eight living things. A porpoise, a parrot, a rhino, a wolf, a crow, a tree, a leopard, and a salamander that never grows up. They have almost nothing in common — not their oceans, not their forests, not their continents — except one thing."
+            },
+            {
+              "text": "Each of them has crossed a line most of us never think about: the line below which a species stops being a crowd and becomes a collection of individuals. Above that line, we count in thousands and round to the nearest million. Below it, someone, somewhere, knows every single one. Every kākāpō alive has a name. Every Amur leopard has a coat pattern filed like a fingerprint. The red wolves of North Carolina are known one by one. The last wild axolotls are so few that scientists search for them by reading the water itself."
+            },
+            {
+              "text": "That is the thin line this season walks: the counted few."
+            },
+            {
+              "text": "It would be easy to make this a season of grief. It is not. You will find grief in these pages, because honesty requires it — but you will also find a leopard population that more than quadrupled when people simply stopped harming it, a crow learning to be wild again on a mountain it had never seen, and a tree that outlived the dinosaurs being raised in backyard gardens. The thin line is not only where species disappear. It is also where they come back — one counted individual at a time."
+            }
+          ]
+        },
+        {
+          "heading": "THE HONESTY CONTRACT",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "Witness makes you three promises, and they hold for every page of this season."
+            },
+            {
+              "text": "First: every claim is sourced and dated. Where the numbers disagree — and for the rarest animals on Earth, they often do — you will see both numbers, and who counted them, and when. We would rather hand you an honest range than a confident fiction."
+            },
+            {
+              "text": "Second: what is unknown stays visible. Each chapter carries its unknowns beside its knowns, at the same size, in the same light. Not knowing is part of the truth of these species."
+            },
+            {
+              "text": "Third: your attention is not an outcome. Reading these chapters does not, by itself, protect anything — and we will never tell you otherwise. What attention can do is lead somewhere. So every chapter ends with doors: real, verified organizations doing the actual work, independent of us. Walking through one is your choice, and it is the only part of this season that changes anything in the world."
+            }
+          ]
+        },
+        {
+          "heading": "HOW TO READ THIS SEASON",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "Take it one chapter at a time — they are short, and they are meant to be carried, not consumed. Each one can be read in about ten minutes or listened to in about seven; the narration uses a synthetic voice, and says so. Between the chapters you will find interludes that connect them, because these eight stories share machinery: the trade in parts, the uninvited species we brought along, the slow repair. The season closes with what the counted few, taken together, have to teach."
+            },
+            {
+              "text": "If a chapter stays with you, share it. If a door draws you, walk through it. And if all you do is finish the season knowing eight living things by name — that is what witnessing means. It is where everything else begins."
+            },
+            {
+              "text": "Welcome to the field."
+            },
+            {
+              "text": "— Witness, Field Season One"
+            }
+          ]
+        },
+        {
+          "heading": "A REFLECTIVE PROMPT",
+          "style": "prompt",
+          "entries": [
+            {
+              "text": "Before the first chapter: can you name, right now, one wild thing that lives within an hour of your home — not a kind of thing, but one particular, individual, living one?"
+            }
+          ]
+        },
+        {
+          "heading": "TAKE ACTION",
+          "style": "action",
+          "entries": [
+            {
+              "lead": "Re:wild",
+              "text": "Passes one hundred percent of donations to on-the-ground partner organizations in more than eighty countries; donors separately cover its operating costs.",
+              "url": "https://www.rewild.org/"
+            },
+            {
+              "lead": "IUCN Red List",
+              "text": "Funds the scientific assessments, by a network of thousands of experts, that determine which species are endangered — the very statuses this season cites.",
+              "url": "https://iucn.org/donate"
+            }
+          ]
+        },
+        {
+          "heading": "SOURCES",
+          "style": "sources",
+          "entries": [
+            {
+              "lead": "S1",
+              "text": "Re:wild, donation model and partner network — rewild.org (verified 2026-08-27)."
+            },
+            {
+              "lead": "S2",
+              "text": "IUCN, Red List of Threatened Species and Species Survival Commission — iucn.org (verified 2026-08-27)."
+            },
+            {
+              "lead": "S3",
+              "text": "All species claims in this letter (named kākāpō, leopard coat identification, red wolf and axolotl counts, ʻalalā releases, Wollemi cultivation) are made and sourced in their own chapters."
+            }
+          ]
+        },
+        {
+          "heading": "CREDITS",
+          "style": "sources",
+          "entries": [
+            {
+              "text": "Written by Witness editorial, drafted with Claude, for Field Season One."
+            },
+            {
+              "text": "Narration, when present, uses a synthetic voice (Amazon Polly, Ruth), disclosed in-app."
+            }
+          ]
+        }
+      ],
+      "kind": "letter",
+      "shareText": "I just started Field Season One in Witness — eight living things so rare that the individuals are counted one by one. Honest stories: what is known, what is not, and real doors to the people doing the work.\n\nWitness — remember what is still here."
+    },
+    {
       "id": "fs1-ch01-vaquita",
       "number": 1,
       "title": "Little Cow of the Upper Gulf",

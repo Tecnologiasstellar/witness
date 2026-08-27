@@ -31,6 +31,7 @@
 		47785AAFC784A6C9F801C628 /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F8098294F922696B8FDD98 /* PurchaseService.swift */; };
 		4F0180C7AAF29665499248B6 /* StoreKitPurchaseAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432B01DAC74F9AED20C43520 /* StoreKitPurchaseAdapterTests.swift */; };
 		4F2473A639039F8A3C80F092 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F6B1989A07CDD335DC75A /* ArchiveView.swift */; };
+		52114D5B5708DBE5F899C054 /* letter-the-thin-line-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF1D964B153E5C9FC2A646ED /* letter-the-thin-line-ruth.mp3 */; };
 		56085BAAD37054233313394D /* WitnessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */; };
 		56CC8679B9EB5736A16D6359 /* SupportWitnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8053EED7F41103FB6DA802 /* SupportWitnessView.swift */; };
 		5716A16FE32D809FAC2F9173 /* ChapterReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A9A762F916DB930D49697 /* ChapterReaderView.swift */; };
@@ -200,6 +201,7 @@
 		EABFC134010BFB1FF062CF1B /* AtlasIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasIcons.swift; sourceTree = "<group>"; };
 		EBDAEC2E8EF7B8E47676E1F3 /* FileSyncQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSyncQueue.swift; sourceTree = "<group>"; };
 		EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogValidator.swift; sourceTree = "<group>"; };
+		EF1D964B153E5C9FC2A646ED /* letter-the-thin-line-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "letter-the-thin-line-ruth.mp3"; sourceTree = "<group>"; };
 		EF52E8333AE9C0AD77C3567F /* WitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessApp.swift; sourceTree = "<group>"; };
 		F61B5DD130AF6E13995DBB95 /* ReminderPrimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderPrimer.swift; sourceTree = "<group>"; };
 		F94BBEDD2578E70EAB053A14 /* FieldSeasonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSeasonModels.swift; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 				192E77993BD98AD5130639B3 /* chapter-06-wollemi-pine-ruth.mp3 */,
 				1DA2098F808686598DBD1727 /* chapter-07-amur-leopard-ruth.mp3 */,
 				8B4D57A0E87B84178EDB8577 /* chapter-08-axolotl-ruth.mp3 */,
+				EF1D964B153E5C9FC2A646ED /* letter-the-thin-line-ruth.mp3 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -736,6 +739,7 @@
 				BA72186464E240CD1E1B353B /* chapter-06-wollemi-pine-ruth.mp3 in Resources */,
 				A22EF91683B2E4DE5C1824EA /* chapter-07-amur-leopard-ruth.mp3 in Resources */,
 				66CA1EB0F3660B3A478F440B /* chapter-08-axolotl-ruth.mp3 in Resources */,
+				52114D5B5708DBE5F899C054 /* letter-the-thin-line-ruth.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

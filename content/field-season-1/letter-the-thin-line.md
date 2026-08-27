@@ -5,7 +5,7 @@ speciesID: season-one
 title: "The Thin Line"
 kind: letter
 chapterNumber: 0
-status: draft  # founder review pending
+status: approved  # founder (Alberto Villalpando) approved 2026-08-27 — "approve both" (letter + doors/share, first-execution binder)
 author: Witness editorial (drafted with Claude)
 lastFactChecked: 2026-08-27
 rightsNotes: >
