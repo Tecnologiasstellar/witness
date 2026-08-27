@@ -4,6 +4,15 @@ Status: production promotion approved, executed, and verified
 Prepared: 2026-08-27  
 Preview deployed: 2026-08-27
 
+## Official-domain migration
+
+- Canonical domain: `https://witnessatlas.com/`
+- Canonical `www` behavior: permanent redirect to the apex domain, preserving the full path.
+- Legacy Vercel alias behavior: permanent redirect to the canonical apex domain, preserving the full path.
+- Registrar and DNS host: GoDaddy; existing nameservers and email-related MX, TXT, DKIM, and DMARC records remain unchanged.
+- Vercel domain attachment: complete for `witnessatlas.com` and `www.witnessatlas.com`.
+- DNS cutover: awaiting explicit approval of the exact GoDaddy record edits.
+
 ## Production result
 
 - Production deployment: `dpl_2oy1gncewf1C2Adihdq2VAP5kuPU`
@@ -31,7 +40,8 @@ Preview deployed: 2026-08-27
 |---|---|
 | Vercel team | `team_cyGKvdd1xun0Cyd5xyWcFQTe` |
 | Vercel project | `witness` (`prj_33pVN7nvYINyD2fzb6Ebdzyw5EbV`) |
-| Existing public alias | `https://witness-rho.vercel.app/` |
+| Official canonical URL | `https://witnessatlas.com/` |
+| Legacy public alias | `https://witness-rho.vercel.app/` |
 | Repository working tree | `/Users/avp/Documents/CODEX/Witness` |
 | Root directory | `witness_web/site` |
 | Framework | Next.js 16.3.2 |

@@ -35,4 +35,4 @@ npx tsc --noEmit
 npm run build -- --webpack
 ```
 
-Production is deployed at `https://witness-rho.vercel.app/`. See `DEPLOYMENT_PAYLOAD_FOR_APPROVAL.md` and `QA_REPORT_2026-08-27.md` for the immutable deployment IDs, validation evidence, and rollback target.
+The official canonical domain is `https://witnessatlas.com/`. The GoDaddy DNS cutover and Vercel production verification are recorded in `DEPLOYMENT_PAYLOAD_FOR_APPROVAL.md` and `QA_REPORT_2026-08-27.md`.

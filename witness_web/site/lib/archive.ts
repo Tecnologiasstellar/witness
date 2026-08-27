@@ -99,7 +99,7 @@ export function sourceMark(record: SpeciesRecord, id: string): number {
 }
 
 export const GITHUB_URL = "https://github.com/Tecnologiasstellar/witness";
-export const SITE_URL = "https://witness-rho.vercel.app";
+export const SITE_URL = "https://witnessatlas.com";
 
 /**
  * The archive's current state. Catalog approval and public app release remain
