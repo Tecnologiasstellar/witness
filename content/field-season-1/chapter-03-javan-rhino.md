@@ -4,7 +4,7 @@ edition: field-season-1
 speciesID: javan-rhino
 title: "The Rhino No One Sees"
 chapterNumber: 3
-status: draft-for-founder-review
+status: approved  # founder (Alberto Villalpando) approved 2026-08-27 (binder review, "final yes")
 author: Witness editorial (drafted with Claude from the verified fact pack research/javan-rhino-factpack.md)
 lastFactChecked: 2026-08-26
 sensitiveLocationReview: generalized  # "Ujung Kulon National Park, Java" only — the level officials themselves publish
@@ -170,5 +170,4 @@ be worth saving? What do you protect that you will never look at?
   the verified fact pack; every factual claim carries its source above.
 - Artwork: approved Javan rhino plates (rights records in `docs/media/`).
 - Narration: to follow founder text approval (Ruth, synthetic, disclosed).
-- Review: **pending founder editorial approval** — must not ship or be
-  sold until `status` reads `approved`.
+- Review: **approved** by Alberto Villalpando, 2026-08-27 (binder review).

@@ -20,88 +20,180 @@
           "heading": "FIELD NOTE",
           "style": "prose",
           "entries": [
-            { "text": "Vaquita means \"little cow\" in Spanish — an affectionate name for an animal that has never asked for attention. If you stood on the shore of the Upper Gulf of California at dawn, where the desert runs straight into a warm green sea, you would probably miss it: a small grey back, a ring-eyed face, one soft breath, gone. The smallest porpoise on Earth is also the shyest, and its entire world is that one corner of sea — the smallest range of any marine mammal. Most people who have fished those waters all their lives have never seen one." },
-            { "text": "This is the story of how a gentle animal nobody hunts became the rarest marine mammal alive — and why the people who know it best have not given up on it. By the end, you may not want to either." }
+            {
+              "text": "Vaquita means \"little cow\" in Spanish — an affectionate name for an animal that has never asked for attention. If you stood on the shore of the Upper Gulf of California at dawn, where the desert runs straight into a warm green sea, you would probably miss it: a small grey back, a ring-eyed face, one soft breath, gone. The smallest porpoise on Earth is also the shyest, and its entire world is that one corner of sea — the smallest range of any marine mammal. Most people who have fished those waters all their lives have never seen one."
+            },
+            {
+              "text": "This is the story of how a gentle animal nobody hunts became the rarest marine mammal alive — and why the people who know it best have not given up on it. By the end, you may not want to either."
+            }
           ]
         },
         {
           "heading": "THE PAST — HOW THE LITTLE COW GOT HERE",
           "style": "prose",
           "entries": [
-            { "text": "The vaquita's trouble began far from its sea, with a different animal entirely. The totoaba is a big silver fish that shares the same water, and its swim bladder — the balloon-like organ that keeps a fish afloat — is treasured in parts of Chinese tradition as a delicacy and a status gift. Dried, one bladder can fetch thousands of dollars; smugglers call it \"aquatic cocaine.\"" },
-            { "text": "Mexico banned totoaba fishing back in 1975, and world trade was outlawed in 1977. But the price survived the ban, so the fishery simply went underground, run more and more by trafficking networks. Poachers catch totoaba with gillnets: walls of mesh hanging invisible in the water, sized to wedge a large body and hold it. And a gillnet cannot tell one animal from another. A vaquita that swims into one — set for totoaba, or for shrimp — cannot back out, and cannot rise to breathe." },
-            { "text": "So the count fell: from about 567 animals in the first full survey of 1997, downward decade after decade — not because anyone wanted vaquitas gone, but because every link of the chain held: a belief, a price, a net, one small sea. The chain has a human hinge, too. The fishing families of San Felipe and El Golfo de Santa Clara built their lives on the same nets, and a ban without real alternatives pushes honest fishers toward the illegal economy it was meant to stop." },
-            { "text": "A chain like that can sound unbreakable. It is not. Every link in it is a human choice — and choices can be unmade." }
+            {
+              "text": "The vaquita's trouble began far from its sea, with a different animal entirely. The totoaba is a big silver fish that shares the same water, and its swim bladder — the balloon-like organ that keeps a fish afloat — is treasured in parts of Chinese tradition as a delicacy and a status gift. Dried, one bladder can fetch thousands of dollars; smugglers call it \"aquatic cocaine.\""
+            },
+            {
+              "text": "Mexico banned totoaba fishing back in 1975, and world trade was outlawed in 1977. But the price survived the ban, so the fishery simply went underground, run more and more by trafficking networks. Poachers catch totoaba with gillnets: walls of mesh hanging invisible in the water, sized to wedge a large body and hold it. And a gillnet cannot tell one animal from another. A vaquita that swims into one — set for totoaba, or for shrimp — cannot back out, and cannot rise to breathe."
+            },
+            {
+              "text": "So the count fell: from about 567 animals in the first full survey of 1997, downward decade after decade — not because anyone wanted vaquitas gone, but because every link of the chain held: a belief, a price, a net, one small sea. The chain has a human hinge, too. The fishing families of San Felipe and El Golfo de Santa Clara built their lives on the same nets, and a ban without real alternatives pushes honest fishers toward the illegal economy it was meant to stop."
+            },
+            {
+              "text": "A chain like that can sound unbreakable. It is not. Every link in it is a human choice — and choices can be unmade."
+            }
           ]
         },
         {
           "heading": "THE PRESENT — WHERE THE VAQUITA STANDS",
           "style": "prose",
           "entries": [
-            { "text": "Here is the sentence scientists waited years to write: the little cow is holding on. Three annual surveys in a row have found no substantial further decline — 8–12 individuals seen in 2023, 6–8 in 2024, and 7–10 in 2025, with one or two newborn calves. One mother, recognizable by her bent dorsal fin and named Frida after the painter, has now been seen with calves in three separate years. In the Zero Tolerance Area — the small guarded polygon where the last vaquitas gather — illegal netting has fallen sharply since the Navy sank hooked concrete blocks there to snag nets." },
-            { "text": "And in 2022, geneticists delivered the decade's best news. Reading the full genomes of twenty vaquitas, they found that the species' long history of natural rarity left it carrying unusually little harmful variation — meaning it is not doomed by inbreeding. In their simulations, if deaths in gillnets stop, the vaquita most likely recovers." }
+            {
+              "text": "Here is the sentence scientists waited years to write: the little cow is holding on. Three annual surveys in a row have found no substantial further decline — 8–12 individuals seen in 2023, 6–8 in 2024, and 7–10 in 2025, with one or two newborn calves. One mother, recognizable by her bent dorsal fin and named Frida after the painter, has now been seen with calves in three separate years. In the Zero Tolerance Area — the small guarded polygon where the last vaquitas gather — illegal netting has fallen sharply since the Navy sank hooked concrete blocks there to snag nets."
+            },
+            {
+              "text": "And in 2022, geneticists delivered the decade's best news. Reading the full genomes of twenty vaquitas, they found that the species' long history of natural rarity left it carrying unusually little harmful variation — meaning it is not doomed by inbreeding. In their simulations, if deaths in gillnets stop, the vaquita most likely recovers."
+            }
           ]
         },
         {
           "heading": "KNOWN / UNKNOWN",
           "style": "knownUnknown",
           "entries": [
-            { "lead": "Known", "text": "The vaquita still exists, still calves, and is genetically capable of coming back; gillnets are the only major threat. Where enforcement is real, illegal netting falls." },
-            { "lead": "Unknown", "text": "The true number — 7–10 is an observation in a murky sea, not a census. Whether the calves reach adulthood. Whether protection holds through political change and totoaba prices. Whether any vaquitas swim undetected outside the monitored area. Honesty requires saying it plainly: this story can still end either way." }
+            {
+              "lead": "Known",
+              "text": "The vaquita still exists, still calves, and is genetically capable of coming back; gillnets are the only major threat. Where enforcement is real, illegal netting falls."
+            },
+            {
+              "lead": "Unknown",
+              "text": "The true number — 7–10 is an observation in a murky sea, not a census. Whether the calves reach adulthood. Whether protection holds through political change and totoaba prices. Whether any vaquitas swim undetected outside the monitored area. Honesty requires saying it plainly: this story can still end either way."
+            }
           ]
         },
         {
           "heading": "THE FUTURE — WHAT WOULD IMPROVE ITS ODDS",
           "style": "numbered",
           "entries": [
-            { "lead": "Keep the Zero Tolerance Area truly zero.", "text": "Patrols, net removal, and the hooked blocks work where they are maintained; where enforcement is real, netting falls." },
-            { "lead": "Pay fishers fairly to change.", "text": "Vaquita-safe gear exists; it becomes real when it earns a living wage, so buyouts, gear programs, and markets for legally caught seafood matter as much as patrol boats." },
-            { "lead": "Shrink the price.", "text": "Demand reduction in consumer countries and customs enforcement along the trafficking route attack the chain at its first link." },
-            { "lead": "Keep counting.", "text": "The acoustic monitors and annual surveys are the species' heartbeat monitor; recovery cannot be managed blind." }
+            {
+              "lead": "Keep the Zero Tolerance Area truly zero.",
+              "text": "Patrols, net removal, and the hooked blocks work where they are maintained; where enforcement is real, netting falls."
+            },
+            {
+              "lead": "Pay fishers fairly to change.",
+              "text": "Vaquita-safe gear exists; it becomes real when it earns a living wage, so buyouts, gear programs, and markets for legally caught seafood matter as much as patrol boats."
+            },
+            {
+              "lead": "Shrink the price.",
+              "text": "Demand reduction in consumer countries and customs enforcement along the trafficking route attack the chain at its first link."
+            },
+            {
+              "lead": "Keep counting.",
+              "text": "The acoustic monitors and annual surveys are the species' heartbeat monitor; recovery cannot be managed blind."
+            }
           ]
         },
         {
           "heading": "TIMELINE OF EVIDENCE",
           "style": "timeline",
           "entries": [
-            { "lead": "1958", "text": "The species is described by scientists Kenneth Norris and William McFarland, from skulls found on a beach. It enters science already rare." },
-            { "lead": "1975–77", "text": "Mexico bans totoaba fishing; CITES bans international totoaba trade." },
-            { "lead": "1997", "text": "First full survey: about 567 vaquitas. The international recovery committee CIRVA has just been convened." },
-            { "lead": "2005", "text": "Mexico declares a Vaquita Refuge; gillnetting is prohibited there on paper, but enforcement is thin." },
-            { "lead": "2015", "text": "With roughly 60 animals left, Mexico announces a two-year emergency gillnet ban across the vaquita's habitat, with compensation for fishers." },
-            { "lead": "2017", "text": "The ban becomes permanent (two fisheries excepted). That autumn, the sea-pen rescue plan VaquitaCPR is halted when a captured female dies of stress: the species cannot be saved in captivity. The only path left is the sea itself." },
-            { "lead": "2020", "text": "Mexico establishes the Zero Tolerance Area." },
-            { "lead": "2022", "text": "The Navy sinks 193 hooked concrete blocks; net-setting drops sharply. Science publishes the genome study: recovery is possible if gillnet deaths stop." },
-            { "lead": "2023–25", "text": "Three consecutive surveys, no substantial decline; 2025 finds 7–10 vaquitas and one or two calves. Timeline last verified 2026-08-26; a full statistical abundance estimate from the 2025 effort is expected during 2026." }
+            {
+              "lead": "1958",
+              "text": "The species is described by scientists Kenneth Norris and William McFarland, from skulls found on a beach. It enters science already rare."
+            },
+            {
+              "lead": "1975–77",
+              "text": "Mexico bans totoaba fishing; CITES bans international totoaba trade."
+            },
+            {
+              "lead": "1997",
+              "text": "First full survey: about 567 vaquitas. The international recovery committee CIRVA has just been convened."
+            },
+            {
+              "lead": "2005",
+              "text": "Mexico declares a Vaquita Refuge; gillnetting is prohibited there on paper, but enforcement is thin."
+            },
+            {
+              "lead": "2015",
+              "text": "With roughly 60 animals left, Mexico announces a two-year emergency gillnet ban across the vaquita's habitat, with compensation for fishers."
+            },
+            {
+              "lead": "2017",
+              "text": "The ban becomes permanent (two fisheries excepted). That autumn, the sea-pen rescue plan VaquitaCPR is halted when a captured female dies of stress: the species cannot be saved in captivity. The only path left is the sea itself."
+            },
+            {
+              "lead": "2020",
+              "text": "Mexico establishes the Zero Tolerance Area."
+            },
+            {
+              "lead": "2022",
+              "text": "The Navy sinks 193 hooked concrete blocks; net-setting drops sharply. Science publishes the genome study: recovery is possible if gillnet deaths stop."
+            },
+            {
+              "lead": "2023–25",
+              "text": "Three consecutive surveys, no substantial decline; 2025 finds 7–10 vaquitas and one or two calves. Timeline last verified 2026-08-26; a full statistical abundance estimate from the 2025 effort is expected during 2026."
+            }
           ]
         },
         {
           "heading": "A REFLECTIVE PROMPT",
           "style": "prompt",
           "entries": [
-            { "text": "The vaquita's fate is decided by people it will never see, in places it will never swim — a banquet table, a customs desk, a fishing cooperative, a phone screen like this one. Where else does distance make harm easy? And where might it make care possible?" }
+            {
+              "text": "The vaquita's fate is decided by people it will never see, in places it will never swim — a banquet table, a customs desk, a fishing cooperative, a phone screen like this one. Where else does distance make harm easy? And where might it make care possible?"
+            }
           ]
         },
         {
           "heading": "SOURCES",
           "style": "sources",
           "entries": [
-            { "lead": "S1", "text": "NOAA Fisheries — Vaquita species directory. fisheries.noaa.gov/species/vaquita (accessed 2026-08-26)" },
-            { "lead": "S2", "text": "CITES — Totoaba (Totoaba macdonaldi). cites.org/eng/node/48556 (accessed 2026-08-26)" },
-            { "lead": "S3", "text": "Marine Mammal Commission — Vaquita. mmc.gov/priority-topics/species-of-concern/vaquita (accessed 2026-08-26)" },
-            { "lead": "S4", "text": "IUCN SSC Cetacean Specialist Group — Vaquita. iucn-csg.org/vaquita (accessed 2026-08-26)" },
-            { "lead": "S5", "text": "IUCN-CSG / SEMARNAT / Sea Shepherd — Report of the September 2025 vaquita survey (accessed 2026-08-26)" },
-            { "lead": "S6", "text": "NOAA Fisheries — Vaquita conservation and management. fisheries.noaa.gov/species/vaquita/conservation-management (accessed 2026-08-26)" },
-            { "lead": "S7", "text": "VaquitaCPR consortium. vaquitacpr.org (accessed 2026-08-26)" },
-            { "lead": "S8", "text": "Robinson, J.A. et al. (2022). \"The critically endangered vaquita is not doomed to extinction by inbreeding depression.\" Science 376(6593). (accessed 2026-08-26)" },
-            { "lead": "S9", "text": "Sea Shepherd Conservation Society — Results of the 2025 vaquita monitoring effort, 2025-10-28. (accessed 2026-08-26)" }
+            {
+              "lead": "S1",
+              "text": "NOAA Fisheries — Vaquita species directory. fisheries.noaa.gov/species/vaquita (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S2",
+              "text": "CITES — Totoaba (Totoaba macdonaldi). cites.org/eng/node/48556 (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S3",
+              "text": "Marine Mammal Commission — Vaquita. mmc.gov/priority-topics/species-of-concern/vaquita (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S4",
+              "text": "IUCN SSC Cetacean Specialist Group — Vaquita. iucn-csg.org/vaquita (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S5",
+              "text": "IUCN-CSG / SEMARNAT / Sea Shepherd — Report of the September 2025 vaquita survey (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S6",
+              "text": "NOAA Fisheries — Vaquita conservation and management. fisheries.noaa.gov/species/vaquita/conservation-management (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S7",
+              "text": "VaquitaCPR consortium. vaquitacpr.org (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S8",
+              "text": "Robinson, J.A. et al. (2022). \"The critically endangered vaquita is not doomed to extinction by inbreeding depression.\" Science 376(6593). (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S9",
+              "text": "Sea Shepherd Conservation Society — Results of the 2025 vaquita monitoring effort, 2025-10-28. (accessed 2026-08-26)"
+            }
           ]
         },
         {
           "heading": "CREDITS",
           "style": "sources",
           "entries": [
-            { "text": "Text: original, Witness editorial, 2026-08-26. Reviewed and approved by Alberto Villalpando. Artwork: Witness original plates, rights on file. Narration: synthetic voice (Amazon Polly, Ruth), rights record on file." }
+            {
+              "text": "Text: original, Witness editorial, 2026-08-26. Reviewed and approved by Alberto Villalpando. Artwork: Witness original plates, rights on file. Narration: synthetic voice (Amazon Polly, Ruth), rights record on file."
+            }
           ]
         }
       ]
@@ -123,90 +215,1576 @@
           "heading": "FIELD NOTE",
           "style": "prose",
           "entries": [
-            { "text": "Here is a fact that no other animal in this Field Season can offer you: every kākāpō alive has a name. Sirocco. Solstice. Hoki. Māhutonga. Not nicknames for a few favorites — all of them, each wearing a small transmitter backpack, each known personally to the rangers of New Zealand's recovery program. When a species can be counted like a classroom — 236 birds at the start of 2026 — you are looking at one of two things: the end of something, or the beginning." },
-            { "text": "The kākāpō is the world's heaviest parrot, moss-green, whiskered, smelling faintly sweet, and completely flightless. It cannot fly, but it climbs twenty-meter trees with its claws and comes down like a parachutist with wings spread. And in 2026, this impossible bird is having the best year of its modern history." }
+            {
+              "text": "Here is a fact that no other animal in this Field Season can offer you: every kākāpō alive has a name. Sirocco. Solstice. Hoki. Māhutonga. Not nicknames for a few favorites — all of them, each wearing a small transmitter backpack, each known personally to the rangers of New Zealand's recovery program. When a species can be counted like a classroom — 236 birds at the start of 2026 — you are looking at one of two things: the end of something, or the beginning."
+            },
+            {
+              "text": "The kākāpō is the world's heaviest parrot, moss-green, whiskered, smelling faintly sweet, and completely flightless. It cannot fly, but it climbs twenty-meter trees with its claws and comes down like a parachutist with wings spread. And in 2026, this impossible bird is having the best year of its modern history."
+            }
           ]
         },
         {
           "heading": "THE PAST — HOW THE NIGHT PARROT FELL",
           "style": "prose",
           "entries": [
-            { "text": "For millions of years, the kākāpō's enemies came from the sky by day. So it became a creature of the night and the forest floor, and its one defense was to freeze — perfect stillness, perfect camouflage. Then people arrived, bringing animals that hunt in the dark, by smell: rats, cats, and stoats. Every kākāpō defense became a liability. The freeze that hid it from an eagle simply holds it still for a stoat, and its lovely musty scent is a beacon." },
-            { "text": "The fall was long and nearly total. In 1894, the conservationist Richard Henry moved hundreds of kākāpō to an island refuge — and watched stoats swim across within six years and destroy them all, one of conservation's first great heartbreaks. By the 1970s, decades of searching had turned up a few dozen birds, every one of them male. The species seemed finished. Then, in 1977, about two hundred kākāpō were discovered on Rakiura, Stewart Island — with females. Feral cats were already killing them, so between 1980 and 1997 every bird that could be found was evacuated to small predator-free islands. In 1995, the count bottomed out at 51 birds — and the modern recovery program began." },
-            { "text": "One more name matters here: Richard Henry — not the man, the bird named in his honor. The last kākāpō ever found from the Fiordland mainland, he carried genes the island flock had lost. In 1998 he fathered three chicks before dying around 2010, at an estimated eighty years old. His line still swims in the species' blood." }
+            {
+              "text": "For millions of years, the kākāpō's enemies came from the sky by day. So it became a creature of the night and the forest floor, and its one defense was to freeze — perfect stillness, perfect camouflage. Then people arrived, bringing animals that hunt in the dark, by smell: rats, cats, and stoats. Every kākāpō defense became a liability. The freeze that hid it from an eagle simply holds it still for a stoat, and its lovely musty scent is a beacon."
+            },
+            {
+              "text": "The fall was long and nearly total. In 1894, the conservationist Richard Henry moved hundreds of kākāpō to an island refuge — and watched stoats swim across within six years and destroy them all, one of conservation's first great heartbreaks. By the 1970s, decades of searching had turned up a few dozen birds, every one of them male. The species seemed finished. Then, in 1977, about two hundred kākāpō were discovered on Rakiura, Stewart Island — with females. Feral cats were already killing them, so between 1980 and 1997 every bird that could be found was evacuated to small predator-free islands. In 1995, the count bottomed out at 51 birds — and the modern recovery program began."
+            },
+            {
+              "text": "One more name matters here: Richard Henry — not the man, the bird named in his honor. The last kākāpō ever found from the Fiordland mainland, he carried genes the island flock had lost. In 1998 he fathered three chicks before dying around 2010, at an estimated eighty years old. His line still swims in the species' blood."
+            }
           ]
         },
         {
           "heading": "THE PRESENT — WHERE THE KĀKĀPŌ STANDS",
           "style": "prose",
           "entries": [
-            { "text": "The count at the start of 2026 was 236, including 83 breeding-age females. And then the rimu trees — whose mass fruiting, every two to four years, is the only signal that makes kākāpō breed — delivered a great year. The first chick of the season hatched on Valentine's Day. By early April, more than 95 had hatched: the biggest kākāpō breeding season ever recorded, beating 2019's record of 73. Chicks only join the official count when they reach 150 days, so the new total is still being earned, night by night — and some chicks have already been lost, which the program reports as plainly as the wins." },
-            { "text": "The recovery machine behind this is remarkable: transmitters that flag when a female starts nesting, feeding stations that open only to the right bird and weigh her as she eats, and the genome of essentially every living kākāpō sequenced, so pairings can be chosen to protect what diversity remains. In 2023, ten males even returned to the New Zealand mainland for the first time in about forty years — and promptly taught everyone something by climbing the sanctuary's pest fence; several were brought back south, and the boom of a kākāpō was heard on the mainland again anyway." }
+            {
+              "text": "The count at the start of 2026 was 236, including 83 breeding-age females. And then the rimu trees — whose mass fruiting, every two to four years, is the only signal that makes kākāpō breed — delivered a great year. The first chick of the season hatched on Valentine's Day. By early April, more than 95 had hatched: the biggest kākāpō breeding season ever recorded, beating 2019's record of 73. Chicks only join the official count when they reach 150 days, so the new total is still being earned, night by night — and some chicks have already been lost, which the program reports as plainly as the wins."
+            },
+            {
+              "text": "The recovery machine behind this is remarkable: transmitters that flag when a female starts nesting, feeding stations that open only to the right bird and weigh her as she eats, and the genome of essentially every living kākāpō sequenced, so pairings can be chosen to protect what diversity remains. In 2023, ten males even returned to the New Zealand mainland for the first time in about forty years — and promptly taught everyone something by climbing the sanctuary's pest fence; several were brought back south, and the boom of a kākāpō was heard on the mainland again anyway."
+            }
           ]
         },
         {
           "heading": "KNOWN / UNKNOWN",
           "style": "knownUnknown",
           "entries": [
-            { "lead": "Known", "text": "The count is exact, because every bird is named and tracked. Breeding follows the rimu mast. The enemies are introduced predators, not mystery." },
-            { "lead": "Unknown", "text": "How long a kākāpō lives — possibly sixty to ninety years; no one has ever watched a whole life. Why infertility and failed eggs remain stubbornly common. The final size of this record season, still being counted. And disease is a standing risk: in 2019 a single fungal strain reached a tenth of the species and killed nine birds." }
+            {
+              "lead": "Known",
+              "text": "The count is exact, because every bird is named and tracked. Breeding follows the rimu mast. The enemies are introduced predators, not mystery."
+            },
+            {
+              "lead": "Unknown",
+              "text": "How long a kākāpō lives — possibly sixty to ninety years; no one has ever watched a whole life. Why infertility and failed eggs remain stubbornly common. The final size of this record season, still being counted. And disease is a standing risk: in 2019 a single fungal strain reached a tenth of the species and killed nine birds."
+            }
           ]
         },
         {
           "heading": "THE FUTURE — WHAT WOULD IMPROVE ITS ODDS",
           "style": "numbered",
           "entries": [
-            { "lead": "More safe ground.", "text": "The islands are near capacity. The great prize is Predator Free Rakiura — clearing 175,000 hectares of cats and rats would let kākāpō go home to the island where they were rediscovered. Nothing that large has ever been done." },
-            { "lead": "Keep the genetics working.", "text": "Every genome is sequenced; smart pairings and artificial insemination — once even delivered by drone — stretch the diversity of 51 survivors as far as it can go." },
-            { "lead": "Hold the biosecurity line.", "text": "One swimming stoat undid Richard Henry's life work in 1894. Quarantine, checks, and vigilance are the unglamorous wall everything else stands behind." },
-            { "lead": "Let them be wild where possible.", "text": "The program's 2026 strategy deliberately intervenes less — fewer handouts, more natural nests — aiming for birds that thrive rather than merely survive." }
+            {
+              "lead": "More safe ground.",
+              "text": "The islands are near capacity. The great prize is Predator Free Rakiura — clearing 175,000 hectares of cats and rats would let kākāpō go home to the island where they were rediscovered. Nothing that large has ever been done."
+            },
+            {
+              "lead": "Keep the genetics working.",
+              "text": "Every genome is sequenced; smart pairings and artificial insemination — once even delivered by drone — stretch the diversity of 51 survivors as far as it can go."
+            },
+            {
+              "lead": "Hold the biosecurity line.",
+              "text": "One swimming stoat undid Richard Henry's life work in 1894. Quarantine, checks, and vigilance are the unglamorous wall everything else stands behind."
+            },
+            {
+              "lead": "Let them be wild where possible.",
+              "text": "The program's 2026 strategy deliberately intervenes less — fewer handouts, more natural nests — aiming for birds that thrive rather than merely survive."
+            }
           ]
         },
         {
           "heading": "TIMELINE OF EVIDENCE",
           "style": "timeline",
           "entries": [
-            { "lead": "1840s", "text": "The species is described by European science; Māori have known and named it far longer." },
-            { "lead": "1894", "text": "Richard Henry moves hundreds of kākāpō to Resolution Island; stoats swim over within six years." },
-            { "lead": "1977", "text": "About 200 kākāpō found on Rakiura / Stewart Island; the first females confirmed by 1980." },
-            { "lead": "1980–97", "text": "Every findable bird evacuated to predator-free islands as cats kill the Rakiura flock." },
-            { "lead": "1995", "text": "The low point: 51 birds. The Kākāpō Recovery Programme is founded with the iwi Ngāi Tahu." },
-            { "lead": "2010", "text": "Richard Henry (the bird) dies at an estimated 80; Sirocco is appointed New Zealand's official Spokesbird for Conservation." },
-            { "lead": "2019", "text": "Record 73 chicks fledge; the same year an aspergillosis outbreak kills nine birds." },
-            { "lead": "2022", "text": "Population reaches 252, the highest in about fifty years." },
-            { "lead": "2023", "text": "Ten males return to the mainland at Sanctuary Mountain Maungatautari, the first mainland kākāpō in about forty years." },
-            { "lead": "2026", "text": "236 birds at season start; the biggest breeding season on record — first chick on Valentine's Day, 95+ hatched by April. Timeline last verified 2026-08-26; final fledgling totals publish after chicks reach 150 days." }
+            {
+              "lead": "1840s",
+              "text": "The species is described by European science; Māori have known and named it far longer."
+            },
+            {
+              "lead": "1894",
+              "text": "Richard Henry moves hundreds of kākāpō to Resolution Island; stoats swim over within six years."
+            },
+            {
+              "lead": "1977",
+              "text": "About 200 kākāpō found on Rakiura / Stewart Island; the first females confirmed by 1980."
+            },
+            {
+              "lead": "1980–97",
+              "text": "Every findable bird evacuated to predator-free islands as cats kill the Rakiura flock."
+            },
+            {
+              "lead": "1995",
+              "text": "The low point: 51 birds. The Kākāpō Recovery Programme is founded with the iwi Ngāi Tahu."
+            },
+            {
+              "lead": "2010",
+              "text": "Richard Henry (the bird) dies at an estimated 80; Sirocco is appointed New Zealand's official Spokesbird for Conservation."
+            },
+            {
+              "lead": "2019",
+              "text": "Record 73 chicks fledge; the same year an aspergillosis outbreak kills nine birds."
+            },
+            {
+              "lead": "2022",
+              "text": "Population reaches 252, the highest in about fifty years."
+            },
+            {
+              "lead": "2023",
+              "text": "Ten males return to the mainland at Sanctuary Mountain Maungatautari, the first mainland kākāpō in about forty years."
+            },
+            {
+              "lead": "2026",
+              "text": "236 birds at season start; the biggest breeding season on record — first chick on Valentine's Day, 95+ hatched by April. Timeline last verified 2026-08-26; final fledgling totals publish after chicks reach 150 days."
+            }
           ]
         },
         {
           "heading": "A REFLECTIVE PROMPT",
           "style": "prompt",
           "entries": [
-            { "text": "Every kākāpō has a name, and it changed how people fight for them — it is harder to lose \"Solstice\" than to lose \"one of 236.\" What in your own world becomes harder to neglect the moment you name it?" }
+            {
+              "text": "Every kākāpō has a name, and it changed how people fight for them — it is harder to lose \"Solstice\" than to lose \"one of 236.\" What in your own world becomes harder to neglect the moment you name it?"
+            }
           ]
         },
         {
           "heading": "SOURCES",
           "style": "sources",
           "entries": [
-            { "lead": "S1", "text": "NZ Department of Conservation — Kākāpō species pages. doc.govt.nz (accessed 2026-08-26)" },
-            { "lead": "S2", "text": "DOC media release — Kākāpō breeding season officially underway, 2026-01-06 (236 birds, 83 females). (accessed 2026-08-26)" },
-            { "lead": "S3", "text": "DOC — Kākāpō habitat and islands. (accessed 2026-08-26)" },
-            { "lead": "S4", "text": "DOC — Kākāpō behaviour. (accessed 2026-08-26)" },
-            { "lead": "S5", "text": "DOC — History of kākāpō recovery. (accessed 2026-08-26)" },
-            { "lead": "S6", "text": "DOC — Key kākāpō and Sirocco pages. (accessed 2026-08-26)" },
-            { "lead": "S7", "text": "Dussex et al. 2023, species-wide kākāpō genomics, Nature Ecology & Evolution. (accessed 2026-08-26)" },
-            { "lead": "S8", "text": "DOC — mainland translocation media releases, 2023–2025. (accessed 2026-08-26)" },
-            { "lead": "S9", "text": "Mongabay — Record kākāpō breeding season, 2026-04-10. (accessed 2026-08-26)" },
-            { "lead": "S10", "text": "Winter et al. — single-strain origin of the 2019 aspergillosis outbreak (PMC9668684). (accessed 2026-08-26)" },
-            { "lead": "S11", "text": "Predator Free Rakiura. predatorfreerakiura.org.nz (accessed 2026-08-26)" }
+            {
+              "lead": "S1",
+              "text": "NZ Department of Conservation — Kākāpō species pages. doc.govt.nz (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S2",
+              "text": "DOC media release — Kākāpō breeding season officially underway, 2026-01-06 (236 birds, 83 females). (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S3",
+              "text": "DOC — Kākāpō habitat and islands. (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S4",
+              "text": "DOC — Kākāpō behaviour. (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S5",
+              "text": "DOC — History of kākāpō recovery. (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S6",
+              "text": "DOC — Key kākāpō and Sirocco pages. (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S7",
+              "text": "Dussex et al. 2023, species-wide kākāpō genomics, Nature Ecology & Evolution. (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S8",
+              "text": "DOC — mainland translocation media releases, 2023–2025. (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S9",
+              "text": "Mongabay — Record kākāpō breeding season, 2026-04-10. (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S10",
+              "text": "Winter et al. — single-strain origin of the 2019 aspergillosis outbreak (PMC9668684). (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S11",
+              "text": "Predator Free Rakiura. predatorfreerakiura.org.nz (accessed 2026-08-26)"
+            }
           ]
         },
         {
           "heading": "CREDITS",
           "style": "sources",
           "entries": [
-            { "text": "Text: original, Witness editorial, 2026-08-26. Reviewed and approved by Alberto Villalpando. Artwork: Witness original plates, rights on file. Narration: synthetic voice (Amazon Polly, Ruth), rights record on file." }
+            {
+              "text": "Text: original, Witness editorial, 2026-08-26. Reviewed and approved by Alberto Villalpando. Artwork: Witness original plates, rights on file. Narration: synthetic voice (Amazon Polly, Ruth), rights record on file."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fs1-ch03-javan-rhino",
+      "number": 3,
+      "title": "The Rhino No One Sees",
+      "speciesID": "javan-rhino",
+      "heroAssetID": "javan-rhino-plate-01",
+      "audio": {
+        "fileName": "chapter-03-javan-rhino-ruth",
+        "fileExtension": "mp3",
+        "durationSeconds": 401,
+        "voiceDisclosure": "Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file."
+      },
+      "sections": [
+        {
+          "heading": "FIELD NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "You will never see a Javan rhino. Almost no one alive ever has. There is none in any zoo on Earth — the last captive one died in Adelaide in 1907 — and in the wild they live deep inside one rainforest peninsula on the tip of Java, browsing alone in vegetation so dense that even the rangers who protect them almost never lay eyes on one. The world knows them the way you know a heartbeat on a monitor: through camera traps. On January 29, 2026, at 10:17 at night, one of those cameras recorded a mother named Arum walking past with a calf less than five months old — the first new Javan rhino recorded that year."
+            },
+            {
+              "text": "This chapter is the hardest one in this season, and the most important: a story about betrayal, about a species living on one small piece of ground, and about why its people refused to let that be the end."
+            }
+          ]
+        },
+        {
+          "heading": "THE PAST — DOWN TO ONE PENINSULA",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "Two centuries ago, Javan rhinos walked from Bangladesh across Southeast Asia to the islands of Indonesia. They carry the smallest horn of any rhino — often under twenty centimeters, and many females have none at all — yet that modest horn, prized in traditional medicine, plus the felling of lowland forest, erased them from country after country."
+            },
+            {
+              "text": "By the twenty-first century, two pockets remained. One was in Vietnam. In April 2010, the last rhino there was found dead with a bullet in its leg and its horn cut away; genetic testing of every dung sample in the forest confirmed they had all come from that single animal. In 2011, the Vietnamese population was declared extinct. That left one place on Earth: Ujung Kulon National Park, Java, where monitoring began in 1967 with about 25 rhinos and, through decades of quiet protection, the count climbed to an estimated 76 by 2022."
+            }
+          ]
+        },
+        {
+          "heading": "THE PRESENT — THE BETRAYAL AND THE ANSWER",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "Then came the discovery that gives this chapter its ache. In May 2023, rangers reported camera traps missing. The recovered footage showed armed men. Police investigation revealed that two poaching gangs had worked the park from 2019 to 2023 — and had used the park's own stolen camera-trap data as a map to find the rhinos. Their confessions covered up to 26 animals: roughly a third of every Javan rhino on Earth."
+            },
+            {
+              "text": "The answer was the strongest wildlife-crime response in Indonesia's history. Thirteen arrests. In June 2024, the gang leader Sunendi was sentenced to twelve years — the longest sentence ever given for a wildlife crime in the country. In February 2025, five more men received eleven years each and a second leader twelve; by May 2025 the prosecutions had climbed the trafficking chain to a broker convicted by Indonesia's Supreme Court."
+            },
+            {
+              "text": "How many rhinos remain? Here honesty requires two numbers. The IUCN's rhino specialists say about 50. Indonesia's government, using a different counting method, says 87 to 100. Nobody can precisely census an animal this invisible; the honest statement is that the two methods disagree, and both agree on what matters — the species is critically few, and every one is in the same place."
+            },
+            {
+              "text": "That single place is itself a risk. In December 2018, the volcano Anak Krakatau collapsed into the sea and sent a tsunami into the park's coast, killing two park officers. The rhinos happened to be on the sheltered southern shore. It was a warning written in water: one bad night could end a species."
+            }
+          ]
+        },
+        {
+          "heading": "KNOWN / UNKNOWN",
+          "style": "knownUnknown",
+          "entries": [
+            {
+              "lead": "Known",
+              "text": "every wild Javan rhino lives in Ujung Kulon; there is no captive backup anywhere; the poaching gangs are caught and sentenced; and calves keep coming — recorded in 2023, 2024, and 2026."
+            },
+            {
+              "lead": "Unknown",
+              "text": "the true count (50 versus 87–100); the exact poaching toll (courts confirmed part of the confessed 18–26); and the odds the volcano ever repeats its 2018 night."
+            }
+          ]
+        },
+        {
+          "heading": "THE FUTURE — WHAT WOULD IMPROVE ITS ODDS",
+          "style": "numbered",
+          "entries": [
+            {
+              "lead": "A second home.",
+              "text": "All eggs, one basket — the oldest problem in conservation. In November 2025 Indonesia attempted its first-ever Javan rhino move, to a fenced sanctuary within the park; the male, Musofa, died two days later of what necropsy found to be severe chronic parasitic infection. A painful first step — and experts are clear the attempts must continue, carefully, anyway."
+            },
+            {
+              "lead": "Guard the guards' data.",
+              "text": "The gangs hunted with stolen camera-trap maps. Hardened monitoring, patrols, and continued prosecutions under Indonesia's new conservation law protect the protectors' own tools."
+            },
+            {
+              "lead": "Grow the pantry.",
+              "text": "An invasive palm has overrun more than half the peninsula, shading out the rhino's food plants. Clearing it raises how many rhinos the one park can hold."
+            },
+            {
+              "lead": "Keep watching the only basket.",
+              "text": "The camera network and dung genetics are the species' entire medical chart; a count this uncertain can only be managed by counting harder."
+            }
+          ]
+        },
+        {
+          "heading": "CLOSING NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "A third of them were taken, and the poachers are in prison, and the mothers are still walking their calves past the cameras at night. Arum did not get the news that her species is doomed. No one should hand it to her."
+            }
+          ]
+        },
+        {
+          "heading": "TIMELINE OF EVIDENCE",
+          "style": "timeline",
+          "entries": [
+            {
+              "lead": "1822",
+              "text": "The species is described by science (Desmarest)."
+            },
+            {
+              "lead": "1907",
+              "text": "The last captive Javan rhino dies at Adelaide Zoo; none has lived in any zoo since."
+            },
+            {
+              "lead": "1967",
+              "text": "Monitoring begins at Ujung Kulon: about 25 rhinos."
+            },
+            {
+              "lead": "2010–2011",
+              "text": "The last Vietnamese Javan rhino is shot for its horn; that population is declared extinct — one park remains."
+            },
+            {
+              "lead": "2018",
+              "text": "The Anak Krakatau tsunami strikes the park's coast, killing two park officers; the rhinos are spared by chance."
+            },
+            {
+              "lead": "2019–2023",
+              "text": "Two gangs kill up to 26 rhinos using stolen camera-trap data; exposed May 2023; thirteen arrests."
+            },
+            {
+              "lead": "2024–2025",
+              "text": "Record sentences: twelve years for the ringleader; convictions reach Indonesia's Supreme Court."
+            },
+            {
+              "lead": "2025",
+              "text": "First-ever translocation attempt ends in the death of the male Musofa; the second-site question stays open."
+            },
+            {
+              "lead": "2026",
+              "text": "January 29, 10:17 p.m.: a camera trap records Arum with a calf under five months old — the year's first new Javan rhino. Timeline last verified 2026-08-26."
+            }
+          ]
+        },
+        {
+          "heading": "A REFLECTIVE PROMPT",
+          "style": "prompt",
+          "entries": [
+            {
+              "text": "No one may ever see a Javan rhino — not you, not the rangers, perhaps not even the poachers who hunted them. Does something need to be seen to be worth saving? What do you protect that you will never look at?"
+            }
+          ]
+        },
+        {
+          "heading": "SOURCES",
+          "style": "sources",
+          "entries": [
+            {
+              "lead": "S1",
+              "text": "Save the Rhino International — Javan rhino. https://www.savetherhino.org/rhino-info/rhino-species/javan-rhino/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S2",
+              "text": "International Rhino Foundation — Javan rhino. https://rhinos.org/about-rhinos/rhino-species/javan-rhino/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S3",
+              "text": "ANTARA News — Rare Javan rhino calf recorded in Ujung Kulon (Arum), 2026-02-04. https://en.antaranews.com/news/402946/rare-javan-rhino-calf-recorded-in-ujung-kulon-national-park (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S4",
+              "text": "TRAFFIC — Javan rhino extinct in Viet Nam, 2011-10-25. https://www.traffic.org/news/javan-rhino-extinct-in-viet-nam/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S5",
+              "text": "Mongabay — record sentence coverage (horn trade context), 2024-06. https://news.mongabay.com/2024/06/javan-rhino-poacher-gets-12-years-in-record-sentence-for-wildlife-crime-in-indonesia/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S6",
+              "text": "A-Z Animals — Ujung Kulon count history (1967 ~25 → 2022 ~76). https://a-z-animals.com/articles/from-76-to-50-what-the-latest-javan-rhino-numbers-tell-us-about-poaching-pressure/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S7",
+              "text": "Mongabay — Poachers claim to have killed one-third of all Javan rhinos, 2024-05. https://news.mongabay.com/2024/05/poachers-claim-to-have-killed-one-third-of-all-javan-rhinos-indonesian-police-say/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S8",
+              "text": "International Rhino Foundation — More justice for Javan rhinos (Feb 2025 verdicts); Mongabay — Supreme Court conviction, 2025-05. https://rhinos.org/blog/more-justice-for-javan-rhinos/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S9",
+              "text": "Mongabay — Javan rhino numbers plunge (IUCN specialist report, ~50), 2025-08. https://news.mongabay.com/2025/08/javan-rhino-numbers-plunge-sumatran-rhinos-remain-near-extinction-report/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S10",
+              "text": "ANTARA News — Indonesia's KLHK estimate 87–100 (World Rhino Day 2025). https://en.antaranews.com/news/381452/indonesia-reveals-critical-decline-of-native-rhino-species (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S11",
+              "text": "Mongabay — Deadly tsunami leaves Javan rhinos untouched, but peril persists, 2018-12. https://news.mongabay.com/2018/12/deadly-tsunami-leaves-javan-rhinos-untouched-but-peril-persists/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S12",
+              "text": "Mongabay — Indonesia's first Javan rhino translocation ends in death, 2025-12. https://news.mongabay.com/2025/12/indonesias-1st-javan-rhino-translocation-ends-in-death-in-conservation-setback/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S13",
+              "text": "Mongabay — Invasive arenga palm coverage, 2014-07. https://news.mongabay.com/2014/07/on-the-brink-of-extinction-javan-rhino-has-new-enemy-in-invasive-palm/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S14",
+              "text": "Rhino Resource Center — R. sondaicus Desmarest, 1822 (taxonomy citation). https://rhinoresourcecenter.com (accessed 2026-08-26)"
+            }
+          ]
+        },
+        {
+          "heading": "CREDITS",
+          "style": "sources",
+          "entries": [
+            {
+              "text": "Text: original, Witness editorial, 2026-08-26. Drafted with Claude from the verified fact pack; every factual claim carries its source above."
+            },
+            {
+              "text": "Artwork: approved Javan rhino plates (rights records in `docs/media/`)."
+            },
+            {
+              "text": "Narration: to follow founder text approval (Ruth, synthetic, disclosed)."
+            },
+            {
+              "text": "Review: approved by Alberto Villalpando, 2026-08-27 (binder review)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fs1-ch04-red-wolf",
+      "number": 4,
+      "title": "Fourteen Founders",
+      "speciesID": "red-wolf",
+      "heroAssetID": "red-wolf-plate-01",
+      "audio": {
+        "fileName": "chapter-04-red-wolf-ruth",
+        "fileExtension": "mp3",
+        "durationSeconds": 394,
+        "voiceDisclosure": "Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file."
+      },
+      "sections": [
+        {
+          "heading": "FIELD NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "Every wild red wolf on Earth — every single one — lives in one green corner of eastern North Carolina, on a peninsula of pocosin swamp and farm fields about the size of a small country county. There are roughly two dozen of them. And every red wolf alive, wild or captive, descends from just fourteen animals: the founders, caught in the late 1970s when catching them all was the only way left to save them."
+            },
+            {
+              "text": "The red wolf is smaller than its gray cousin — long-legged, cinnamon behind the ears — and it lives the way wolves actually live: not as a horde but as a family, a mother and father and their kids. This is the story of a species that has already died out once, came back, nearly died again, and this spring filled four dens with pups."
+            }
+          ]
+        },
+        {
+          "heading": "THE PAST — THE WOLF WE REMOVED, THEN MISSED",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "For two centuries, the American South ran a campaign against its predators — bounties, traps, poison — while the forests themselves were cleared. The red wolf's range collapsed to the Gulf Coast of Texas and Louisiana, and as the wolves grew rare, coyotes moved into the emptiness and began absorbing them, litter by mixed litter. By the 1970s the species was dissolving. So the U.S. Fish and Wildlife Service did something desperate: it caught every red wolf it could find and, in 1980, declared the species extinct in the wild. Seventeen animals were captured; fourteen proved to be pure red wolves. Those fourteen became the ancestors of every red wolf that has lived since."
+            },
+            {
+              "text": "Seven years later came the redemption: in 1987, four pairs were released at Alligator River National Wildlife Refuge in North Carolina — the first time anywhere on Earth that a carnivore declared extinct in the wild was returned to it. The first wild litter arrived within a year. By the late 2000s, around 120 to 130 red wolves ran wild. Then it unraveled: wolves shot in the confusion of coyote hunting, packs fractured, releases suspended in 2015 — and by 2020, only about seven known wolves remained."
+            }
+          ]
+        },
+        {
+          "heading": "THE PRESENT — THE SECOND SECOND-CHANCE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "In January 2021, a federal court ruled the no-release policy unlawful and ordered the wolves' keepers back to work; a 2023 settlement locked in eight years of annual release plans. The recovery is now visibly, carefully, breathing again. This spring — 2026 — four wild litters were born, twelve to sixteen pups surviving their first months, one litter on a private landowner's property enrolled in a coexistence program. About 280 more red wolves stand ready in breeding centers across the country."
+            },
+            {
+              "text": "The program's inventiveness is quietly moving. Biologists sterilize territorial coyotes and release them as \"placeholders\" — they hold the ground without breeding until a wolf family displaces them. In April 2025, for the first time ever, a captive-born pup was slipped into a wild litter, and the wild mother raised it as her own. The deadliest remaining enemy is ordinary: a highway. Vehicle strikes on US-64 are now the leading cause of death — eight wolves since 2020, including a father whose five pups did not survive his loss."
+            }
+          ]
+        },
+        {
+          "heading": "KNOWN / UNKNOWN",
+          "style": "knownUnknown",
+          "entries": [
+            {
+              "lead": "Known",
+              "text": "all wild red wolves live in that one five-county recovery area; the species descends from fourteen founders; the collapse to about seven has turned back to roughly two dozen plus this spring's pups."
+            },
+            {
+              "lead": "Unknown",
+              "text": "the true count — only collared wolves are \"known,\" so every number is a floor; and the wolf's very origins are honestly debated (its genome sits close to the coyote's, though a National Academies review affirmed it as a distinct species worth saving). The debate is real. The animal in the den, raising pups in the world's last red wolf territory, is not."
+            }
+          ]
+        },
+        {
+          "heading": "THE FUTURE — WHAT WOULD IMPROVE ITS ODDS",
+          "style": "numbered",
+          "entries": [
+            {
+              "lead": "Build the underpasses.",
+              "text": "A $25 million federal grant, announced December 2024 and matched to about $31 million, will put eleven wildlife crossings and fencing under US-64 — turning the deadliest road into a doorway. Construction is planned for the late 2020s."
+            },
+            {
+              "lead": "Keep the pipeline flowing.",
+              "text": "The settlement guarantees annual releases; 33 captive breeding pairs were matched this season, and cross-fostering now moves genes both ways between pens and dens."
+            },
+            {
+              "lead": "Make neighbors into partners.",
+              "text": "Prey for the Pack and the Red Wolf Coalition pay and support the landowners whose fields the wolves share — this spring's private-land litter is what that looks like when it works."
+            },
+            {
+              "lead": "Grow beyond one corner.",
+              "text": "The official recovery plan calls for three wild populations — 740 wolves — before the species is considered safe, a fifty-year project whose next two homes are still unchosen. And in the coyotes of the Gulf Coast, scientists have found \"ghost\" red wolf genes — a possible reservoir of lost diversity for a species built on fourteen ancestors."
+            }
+          ]
+        },
+        {
+          "heading": "CLOSING NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "As the program's coordinator put it: \"We cannot recover this species on our own... it's the relationships, the trust, the collaboration, that really determine what is achievable\". The red wolf has now been given a second chance twice. This spring, four dens said it was worth it."
+            }
+          ]
+        },
+        {
+          "heading": "TIMELINE OF EVIDENCE",
+          "style": "timeline",
+          "entries": [
+            {
+              "lead": "1973",
+              "text": "The red wolf is listed under the new Endangered Species Act."
+            },
+            {
+              "lead": "1980",
+              "text": "Declared extinct in the wild; fourteen of seventeen captured wolves become the founders of every red wolf since."
+            },
+            {
+              "lead": "1987",
+              "text": "Four pairs released at Alligator River, North Carolina — the world's first carnivore reintroduction; first wild litter in 1988."
+            },
+            {
+              "lead": "Late 2000s",
+              "text": "The wild population peaks around 120–130."
+            },
+            {
+              "lead": "2015–2020",
+              "text": "Releases suspended; the population collapses to about seven known wolves."
+            },
+            {
+              "lead": "2021–2023",
+              "text": "A federal court orders releases resumed; a settlement locks in eight years of annual release plans."
+            },
+            {
+              "lead": "2023",
+              "text": "The revised recovery plan sets the long goal: three wild populations, 740 wolves, roughly fifty years."
+            },
+            {
+              "lead": "2024",
+              "text": "December: $25 million granted for eleven US-64 wildlife crossings."
+            },
+            {
+              "lead": "2025",
+              "text": "April: the first-ever red wolf cross-foster — a captive pup raised by a wild mother."
+            },
+            {
+              "lead": "2026",
+              "text": "Four wild litters; twelve to sixteen pups; roughly two dozen known adults. Timeline last verified 2026-08-26."
+            }
+          ]
+        },
+        {
+          "heading": "A REFLECTIVE PROMPT",
+          "style": "prompt",
+          "entries": [
+            {
+              "text": "The red wolf exists because people admitted a mistake and then spent fifty years repairing it — and the repair is still not finished. What mistake would you be willing to spend that long making right?"
+            }
+          ]
+        },
+        {
+          "heading": "SOURCES",
+          "style": "sources",
+          "entries": [
+            {
+              "lead": "S1",
+              "text": "Center for Biological Diversity — Four litters of wild red wolf pups born in North Carolina, 2026-07-15. https://biologicaldiversity.org/w/news/press-releases/four-litters-of-wild-red-wolf-pups-born-in-north-carolina-2026-07-15/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S2",
+              "text": "Wolf Conservation Center — Red wolf. https://nywolf.org/learn/red-wolf/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S3",
+              "text": "National Wildlife Federation — Red Wolves (Oct–Nov 2020). https://www.nwf.org/Magazines/National-Wildlife/2020/Oct-Nov/Animals/Red-Wolves (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S4",
+              "text": "Red Wolf Coalition — Captive breeding facilities. https://redwolves.com/newsite/learn-about-red-wolves/captive-breeding-facilities/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S5",
+              "text": "Coastal Review — Biologists heartened by red wolf program's recent successes, 2025-09. https://coastalreview.org/2025/09/biologists-heartened-by-red-wolf-programs-recent-successes/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S6",
+              "text": "Animal Welfare Institute — Settlement secures red wolf conservation (Winter 2023). https://awionline.org/awi-quarterly/winter-2023/settlement-secures-red-wolf-conservation/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S7",
+              "text": "NC Wildlife Federation — Red wolf updates (Aug 2025; cross-foster, SAFE program). https://ncwf.org/blog/red-wolf-updates/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S8",
+              "text": "NC Wildlife Federation — Red wolf science (coyote sterilization placeholders). https://ncwf.org/blog/red-wolf-science/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S9",
+              "text": "Defenders of Wildlife — New federal grant: US-64 crossings could save endangered red wolves, 2024-12. https://defenders.org/newsroom/new-federal-grant-us-hwy-64-crossings-could-save-endangered-red-wolves-and-other-wildlife (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S10",
+              "text": "National Academies (2019) — Evaluating the taxonomic status of the red wolf. https://www.ncbi.nlm.nih.gov/books/NBK542544/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S11",
+              "text": "Coastal Review — Budget, donors, grants total $31 million for wildlife crossings, 2026-07. https://coastalreview.org/2026/07/budget-donors-grants-total-31-million-for-wildlife-crossings/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S12",
+              "text": "Center for Biological Diversity — New red wolf recovery plan, 2023-09-29. https://biologicaldiversity.org/w/news/press-releases/new-red-wolf-recovery-plan-calls-for-more-reintroductions-fewer-killings-2023-09-29/ (accessed 2026-08-26)"
+            },
+            {
+              "lead": "S13",
+              "text": "Barnes et al. 2022, BMC Ecology and Evolution — red wolf ancestry in Gulf Coast coyotes. https://pmc.ncbi.nlm.nih.gov/articles/PMC9664737/ (accessed 2026-08-26)"
+            }
+          ]
+        },
+        {
+          "heading": "CREDITS",
+          "style": "sources",
+          "entries": [
+            {
+              "text": "Text: original, Witness editorial, 2026-08-26. Drafted with Claude from the verified fact pack; every factual claim carries its source above."
+            },
+            {
+              "text": "Artwork: approved red wolf plates (rights records in `docs/media/`)."
+            },
+            {
+              "text": "Narration: to follow founder text approval (Ruth, synthetic, disclosed)."
+            },
+            {
+              "text": "Review: approved by Alberto Villalpando, 2026-08-27 (binder review)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fs1-ch05-alala",
+      "number": 5,
+      "title": "The Voice Returns to the Forest",
+      "speciesID": "hawaiian-crow",
+      "heroAssetID": "hawaiian-crow-plate-01",
+      "audio": {
+        "fileName": "chapter-05-alala-ruth",
+        "fileExtension": "mp3",
+        "durationSeconds": 372,
+        "voiceDisclosure": "Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file."
+      },
+      "sections": [
+        {
+          "heading": "FIELD NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "There is a category of endangered animal sadder than \"critically endangered.\" It is called extinct in the wild — a species that still exists, but only behind fences. Since 2002, the ʻalalā, Hawaiʻi's crow, has lived there: roughly 110 to 120 birds in two conservation centers, and none at all in the forests that shaped them."
+            },
+            {
+              "text": "This chapter is about the day that stopped being the whole story. In November 2024, five young ʻalalā stepped through an open aviary door on the slopes of Haleakalā, on Maui — and as of January 2026, more than a year later, all five are still out there, alive and free. One pair has already built a nest and laid an egg. The people who raised them wept at the door. So might you."
+            }
+          ]
+        },
+        {
+          "heading": "THE PAST — HOW THE FOREST LOST ITS VOICE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "The ʻalalā is a crow the way Hawaiʻi is an island: the same idea, transformed into something found nowhere else. Larger than mainland crows, with bristly feathers about the bill, it mates for life and speaks in dozens of calls — sweet chirps, rhythmic whoops, cries that visitors describe as eerily human. In Hawaiian tradition the ʻalalā is ʻaumakua — an ancestral guardian — and it appears in the Kumulipo, the creation chant. As one of its keepers, Keanini Aarona, puts it: \"These birds, they are our ancestors\"."
+            },
+            {
+              "text": "The forest needed the bird as much as the culture did: ʻalalā swallow and spread the seeds of more than thirty native plants — for some, they were the only courier. Then the threats arrived in layers: forests cleared for cattle and cane; rats, cats, and mongoose finding the nests; mosquitoes carrying avian malaria upslope; and the ʻio, the native Hawaiian hawk, picking off young birds that no longer had elders to warn them. Seventy-six birds in 1976. Thirteen by 1992. In 2002, the last wild pair was seen in South Kona, and the wild story ended."
+            },
+            {
+              "text": "Two rescue attempts failed painfully: 27 birds released in the 1990s — 21 died. About 30 more between 2016 and 2020 — roughly 25 died, many taken by ʻio, and the five survivors were brought back inside."
+            }
+          ]
+        },
+        {
+          "heading": "THE PRESENT — FIVE BIRDS ON A NEW ISLAND",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "The program learned from every loss. And then it changed the map: Maui has no ʻio at all. In November 2024, five juveniles — hatched in conservation care, schooled to fear predators using a taxidermy hawk with flapping wings, named by children from five Maui schools — were released into the Kīpahulu Forest Reserve on Haleakalā's leeward slopes, carrying the first GPS backpacks ever worn by their species."
+            },
+            {
+              "text": "Everything before this said they would die. Instead: after five months, all five were foraging on native fruits, riding out storms, expanding their vocabulary. After a year — all five, still. In late 2025 two of them paired, built a nest, and produced an egg; the female sat the full three weeks of incubation. First eggs rarely hatch, and this one's fate is unknown — but a species that was extinct in the wild is nesting in it again. Two more birds have been staged for release to join them."
+            }
+          ]
+        },
+        {
+          "heading": "KNOWN / UNKNOWN",
+          "style": "knownUnknown",
+          "entries": [
+            {
+              "lead": "Known",
+              "text": "the five have outlived every previous release cohort's trajectory; the trained fear of hawks held in the real forest; and the whole species can use stick tools — a 2016 Nature cover study found 78% of tested birds do it spontaneously, making the ʻalalā one of only two tool-using crows on Earth."
+            },
+            {
+              "lead": "Unknown",
+              "text": "whether the pairs will raise chicks; and the hard ceiling underneath everything — every living ʻalalā descends from just nine founders, and more than half of the program's eggs fail to hatch, a burden written in the genes that no single good year can lift."
+            }
+          ]
+        },
+        {
+          "heading": "THE FUTURE — WHAT WOULD IMPROVE ITS ODDS",
+          "style": "numbered",
+          "entries": [
+            {
+              "lead": "Grow the Maui flock.",
+              "text": "Each new release into hawk-free Kīpahulu tests and teaches; the birds' own culture — warning calls, foraging knowledge — rebuilds only in the wild."
+            },
+            {
+              "lead": "Take back the mosquitoes.",
+              "text": "A coalition is dropping roughly half a million lab-reared male mosquitoes per week over East Maui's forests — males that father no offspring — to crash the population carrying avian malaria."
+            },
+            {
+              "lead": "Manage nine founders' worth of genes.",
+              "text": "Genome-guided pairing is the program's quiet daily labor against the hatch-failure ceiling."
+            },
+            {
+              "lead": "Go home eventually.",
+              "text": "Maui is a stepping stone; the long plan returns the ʻalalā to Hawaiʻi Island itself, once the hawk problem has an answer."
+            }
+          ]
+        },
+        {
+          "heading": "CLOSING NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "\"In the deep past, people picked out that voice from all the voices of the forest,\" says Martin Frye of the recovery project. \"We can't lose that voice\". For the first time in a generation, on one mountain, no one has to."
+            }
+          ]
+        },
+        {
+          "heading": "TIMELINE OF EVIDENCE",
+          "style": "timeline",
+          "entries": [
+            {
+              "lead": "1890s",
+              "text": "ʻAlalā still widespread on Hawaiʻi Island; the long decline begins."
+            },
+            {
+              "lead": "1976",
+              "text": "Seventy-six birds remain, in four forest pockets."
+            },
+            {
+              "lead": "Late 1970s",
+              "text": "The conservation flock is founded; ultimately nine genetic founders."
+            },
+            {
+              "lead": "1993–1998",
+              "text": "Twenty-seven birds released in South Kona; twenty-one die; the rest are brought back."
+            },
+            {
+              "lead": "2002",
+              "text": "The last wild pair is seen. Extinct in the wild."
+            },
+            {
+              "lead": "2016",
+              "text": "Nature cover: the species is a natural tool user."
+            },
+            {
+              "lead": "2016–2020",
+              "text": "About thirty released on Hawaiʻi Island; roughly twenty-five die; five survivors recalled."
+            },
+            {
+              "lead": "November 2024",
+              "text": "Five ʻalalā released in Kīpahulu Forest Reserve, Maui — the first release beyond Hawaiʻi Island."
+            },
+            {
+              "lead": "Late 2025",
+              "text": "First wild nest and egg in a generation; two more birds staged for release."
+            },
+            {
+              "lead": "January 2026",
+              "text": "All five confirmed alive past the one-year mark. Timeline last verified 2026-08-27."
+            }
+          ]
+        },
+        {
+          "heading": "A REFLECTIVE PROMPT",
+          "style": "prompt",
+          "entries": [
+            {
+              "text": "The ʻalalā's keepers spent twenty years failing in public and trying again — and the fifth attempt is flying. What have you stopped attempting after two failures?"
+            }
+          ]
+        },
+        {
+          "heading": "SOURCES",
+          "style": "sources",
+          "entries": [
+            {
+              "lead": "S1",
+              "text": "Hawaiʻi DLNR — The ʻAlalā Project: history. https://dlnr.hawaii.gov/alalaproject/about-%CA%BBalala/history/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S2",
+              "text": "San Diego Zoo Wildlife Alliance — ʻalalā release announcement, 2024-12. https://sandiegozoowildlifealliance.org/PR/alala-release (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S3",
+              "text": "DLNR news release — historic Maui release, 2024-12-04. https://dlnr.hawaii.gov/blog/2024/12/04/nr24-162/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S4",
+              "text": "Honolulu Civil Beat — \"Hawaiʻi's critically endangered crow is soaring in Maui forests,\" 2026-01-09. https://civilbeat.org/2026/01/hawaiis-critically-endangered-crow-is-soaring-in-maui-forests/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S5",
+              "text": "American Bird Conservancy — ʻAlalā profile. https://abcbirds.org/birds/alala-hawaiian-crow/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S6",
+              "text": "Maui Forest Bird Recovery Project — ʻAlalā recovery. https://www.mauiforestbirds.org/alala-recovery/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S7",
+              "text": "MFBRP / DLNR — seed-dispersal role (30+ native fruits). https://www.mauiforestbirds.org/alala/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S8",
+              "text": "Hawaiian Bird Conservation Action Plan — ʻalalā profile (1990s releases); DLNR release 2020-10-05 (recall). https://dlnr.hawaii.gov/blog/2020/10/05/nr20-156/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S9",
+              "text": "Maui Now — five-month field update, 2025-04-14; Greggor et al. 2021 (predator-aversion training). https://mauinow.com/2025/04/14/%CA%BBalala-show-resolve-five-months-after-release-in-east-maui-forest/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S10",
+              "text": "The Garden Island — two ʻalalā added to Maui flock, 2025-11-27. https://www.thegardenisland.com/2025/11/27/hawaii-news/two-alala-added-to-maui-flock/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S11",
+              "text": "Rutz et al. 2016, Nature — species-wide tool use. https://www.nature.com/articles/nature19103 (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S12",
+              "text": "Conservation Genetics 2015 — nine founders. https://link.springer.com/article/10.1007/s10592-015-0788-z (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S13",
+              "text": "2026 preprint — hatch failure linked to recessive lethals. https://www.biorxiv.org/content/10.64898/2026.03.24.713968v1.full (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S14",
+              "text": "Birds, Not Mosquitoes — incompatible-insect technique. https://www.birdsnotmosquitoes.org/iit (accessed 2026-08-27)"
+            }
+          ]
+        },
+        {
+          "heading": "CREDITS",
+          "style": "sources",
+          "entries": [
+            {
+              "text": "Text: original, Witness editorial, 2026-08-27. Drafted with Claude from the verified fact pack; every factual claim carries its source above."
+            },
+            {
+              "text": "Artwork: approved ʻalalā plates (rights records in `docs/media/`)."
+            },
+            {
+              "text": "Narration: to follow founder text approval (Ruth, synthetic, disclosed)."
+            },
+            {
+              "text": "Review: approved by Alberto Villalpando, 2026-08-27 (binder review)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fs1-ch06-wollemi-pine",
+      "number": 6,
+      "title": "The Tree That Outlived the Dinosaurs",
+      "speciesID": "wollemi-pine",
+      "heroAssetID": "wollemi-pine-plate-01",
+      "audio": {
+        "fileName": "chapter-06-wollemi-pine-ruth",
+        "fileExtension": "mp3",
+        "durationSeconds": 374,
+        "voiceDisclosure": "Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file."
+      },
+      "sections": [
+        {
+          "heading": "FIELD NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "This chapter's subject cannot run, hide, call, or care that you are reading about it. It is a tree — the first plant in this Field Season — and it may be the oldest story any living thing on Earth can tell. About forty-five mature Wollemi pines grow wild today, in four small stands at the bottom of one canyon system in Australia's Blue Mountains. Their pollen is indistinguishable from fossil pollen ninety million years old. Their lineage watched the dinosaurs leave."
+            },
+            {
+              "text": "And here is the one thing you must know before anything else: nobody will tell you where they are. Not us, not the botanists, not the government of New South Wales. The secret is not a tease. It is the species' strongest shield — and this chapter is partly about why."
+            }
+          ]
+        },
+        {
+          "heading": "THE PAST — NINETY MILLION YEARS, THEN A ROPE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "The Wollemi pine's family flourished across the ancient southern supercontinent. Then Australia dried out, epoch after epoch, and the rainforest lineages retreated to the last damp, fire-sheltered places — until, about two million years ago, the tree's pollen vanishes from the fossil record entirely. Science reasonably filed it as extinct."
+            },
+            {
+              "text": "On the 10th of September, 1994, a national parks ranger named David Noble rappelled into a remote canyon on his day off and walked into a grove of trees he could not name. Botanists could — barely: it was a new genus, alive out of deep time. The director of Sydney's botanic gardens called it \"the equivalent of finding a small dinosaur alive on Earth\"."
+            },
+            {
+              "text": "Fame nearly finished what the ice ages could not. Within a decade, trespassers had found the site — and on their boots came Phytophthora cinnamomi, a root-rot pathogen confirmed in the largest stand in 2005. The only known infection of the wild grove was carried in, almost certainly, by uninvited admirers. That is why the location is secret, and why even loving this tree from a distance is a form of protection."
+            }
+          ]
+        },
+        {
+          "heading": "THE PRESENT — THE FIRE, THE RESCUE, THE INSURANCE POLICY",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "In the Black Summer of 2019–20, the Gospers Mountain mega-fire burned about ninety percent of Wollemi National Park, and it came for the canyon. What followed became famous: a covert operation, kept quiet to protect the site, in which air tankers laid retardant along the canyon rim while specialist firefighters were winched from helicopters into the gorge to run irrigation lines and pump water, day after day, under a sky full of smoke. The groves survived. Of forty-nine large trees, only four escaped scorching — but the canopy held, and the canopy is what saved them."
+            },
+            {
+              "text": "The counts since then are almost absurdly intimate: the 2025 national recovery plan records 45 mature trees and 46 wild seedlings (a parallel official page says 46 adults and 43 juveniles — with a tree that sprouts multiple trunks from one root, even \"an individual\" is a judgment call). Genetically, the news is stranger still: studies across hundreds of markers found no detectable diversity at all. The wild Wollemi pines are, in effect, one plant, copied."
+            },
+            {
+              "text": "So its people built the broadest insurance policy in conservation: since 2006 anyone has been able to legally buy a cultivated Wollemi pine, and citizen scientists have now recorded them growing in 27 countries; more than 210 young trees went out in 2024–25 to botanic gardens on three continents; and over 835 saplings now grow at new secret sites inside the park."
+            }
+          ]
+        },
+        {
+          "heading": "KNOWN / UNKNOWN",
+          "style": "knownUnknown",
+          "entries": [
+            {
+              "lead": "Known",
+              "text": "the wild population is counted nearly tree by tree; the threats — a pathogen, a fire, a footprint — are precisely identified; and the species now also lives in thousands of gardens that can never all burn at once."
+            },
+            {
+              "lead": "Unknown",
+              "text": "whether the burnt juveniles recover and new seedlings reach adulthood; whether the translocated groves — planted, burned within months, replanted — will ever be self-sustaining; and whether a species with essentially one genome can adapt to a changing climate at all."
+            }
+          ]
+        },
+        {
+          "heading": "THE FUTURE — WHAT WOULD IMPROVE ITS ODDS",
+          "style": "numbered",
+          "entries": [
+            {
+              "lead": "More hidden groves.",
+              "text": "The recovery plan's aim is more wild sites, in more canyons, chosen by soil and fire shelter — so no single catastrophe can be the last one."
+            },
+            {
+              "lead": "Clean boots, closed doors.",
+              "text": "Strict access control and decontamination are the whole defense against Phytophthora; the pathogen has no cure in the wild, only prevention."
+            },
+            {
+              "lead": "Buy the tree; never seek it.",
+              "text": "Every legally cultivated Wollemi pine funds conservation and thickens the insurance population. The public's greatest gift to this species is enthusiastic distance."
+            },
+            {
+              "lead": "Guard the recovery time.",
+              "text": "The groves survived one fire age; what they need is enough quiet years between fires to grow back — the central climate-era question for their keepers."
+            }
+          ]
+        },
+        {
+          "heading": "CLOSING NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "A tree that stood among polar dinosaurs is now guarded like a state secret, watered by helicopter, and planted in backyards from Sydney to Scotland. Ninety million years on, its fate has become a collaboration."
+            }
+          ]
+        },
+        {
+          "heading": "TIMELINE OF EVIDENCE",
+          "style": "timeline",
+          "entries": [
+            {
+              "lead": "~90 million years ago",
+              "text": "Pollen identical to the Wollemi pine's enters the fossil record; Gondwana's forests."
+            },
+            {
+              "lead": "~2 million years ago",
+              "text": "The pollen vanishes; the lineage is presumed extinct."
+            },
+            {
+              "lead": "1994",
+              "text": "September 10: David Noble finds living trees in a Wollemi canyon."
+            },
+            {
+              "lead": "2005",
+              "text": "Sotheby's auctions the first cultivated saplings (AU$1.59 million); retail sales begin 2006. The same year, Phytophthora is confirmed at the wild site, likely brought by trespassers."
+            },
+            {
+              "lead": "2019",
+              "text": "436 saplings planted at new secret sites — burned months later in the Black Summer, before establishing."
+            },
+            {
+              "lead": "2020",
+              "text": "January: the covert helicopter-and-irrigation operation saves the wild groves as ~90% of the park burns."
+            },
+            {
+              "lead": "2023",
+              "text": "The full genome confirms near-zero genetic diversity."
+            },
+            {
+              "lead": "2024",
+              "text": "30th anniversary: translocated saplings surpass 835; a global meta-collection ships to botanic gardens worldwide."
+            },
+            {
+              "lead": "2025",
+              "text": "March 27: the third National Recovery Plan takes effect — 45 mature wild trees, 46 seedlings. Timeline last verified 2026-08-27."
+            }
+          ]
+        },
+        {
+          "heading": "A REFLECTIVE PROMPT",
+          "style": "prompt",
+          "entries": [
+            {
+              "text": "The kindest thing anyone can do for this species is not visit it. Is there something — a place, a person, a wild thing — that you could love better by leaving alone?"
+            }
+          ]
+        },
+        {
+          "heading": "SOURCES",
+          "style": "sources",
+          "entries": [
+            {
+              "lead": "S1",
+              "text": "DCCEEW (Australia) — National Recovery Plan for the Wollemi Pine, effective 2025-03-27. https://www.dcceew.gov.au/environment/biodiversity/threatened/publications/recovery/wollemi-pine (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S2",
+              "text": "NSW Environment — 30 years since historic discovery, 2024-09; NSW NPWS Wollemi Pine Conservation Project. https://www.environment.nsw.gov.au/news/30-years-since-historic-discovery-of-ancient-dinosaur-trees (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S3",
+              "text": "RBGE Threatened Conifers of the World — Wollemia nobilis (Dilwynites; IUCN CR). https://threatenedconifers.rbge.org.uk/conifers/wollemia-nobilis (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S4",
+              "text": "Wollemi pine nuclear genome, 2023 (PMC10473749) — near-zero diversity; decline history. https://pmc.ncbi.nlm.nih.gov/articles/PMC10473749/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S5",
+              "text": "JSTOR Daily / Trebah Garden — Chambers \"small dinosaur\" quotation context. https://daily.jstor.org/wollemi-pine-dinosaur-tree (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S6",
+              "text": "ABC Science, 2005-11 — Phytophthora confirmed, trespasser introduction. https://www.abc.net.au/science/articles/2005/11/04/1497961.htm (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S7",
+              "text": "Smithsonian Magazine — Australian firefighters save the last groves, 2020-01. https://www.smithsonianmag.com/smart-news/australian-firefighters-have-saved-last-groves-rare-prehistoric-tree-180974013/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S8",
+              "text": "ABC News, 2020-05-27 — post-fire assessment (4 of 49 unscorched; canopy decisive). https://www.abc.net.au/news/2020-05-27/bushfire-royal-commission-summer-ecological-disaster-wildlife/12290454 (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S9",
+              "text": "The Conversation — backyard gardeners as insurance (27 countries); Botanic Gardens of Sydney — global meta-collection. https://theconversation.com/backyard-gardeners-around-the-world-are-helping-to-save-australias-deeply-ancient-wollemi-pine-138797 (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S10",
+              "text": "PLOS One 2016 — translocation experiment (83% seedling survival). https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157559 (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S11",
+              "text": "International Dendrology Society — the 2005 Sotheby's Wollemi auction. https://www.dendrology.org/publications/dendrology/wollemi-pine-auction-ids-yearbook-2005/ (accessed 2026-08-27)"
+            }
+          ]
+        },
+        {
+          "heading": "CREDITS",
+          "style": "sources",
+          "entries": [
+            {
+              "text": "Text: original, Witness editorial, 2026-08-27. Drafted with Claude from the verified fact pack; every factual claim carries its source above."
+            },
+            {
+              "text": "Artwork: approved Wollemi pine plates (rights records in `docs/media/`)."
+            },
+            {
+              "text": "Narration: to follow founder text approval (Ruth, synthetic, disclosed)."
+            },
+            {
+              "text": "Review: approved by Alberto Villalpando, 2026-08-27 (binder review)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fs1-ch07-amur-leopard",
+      "number": 7,
+      "title": "The Cat That Came Back by Being Left Alone",
+      "speciesID": "amur-leopard",
+      "heroAssetID": "amur-leopard-plate-01",
+      "audio": {
+        "fileName": "chapter-07-amur-leopard-ruth",
+        "fileExtension": "mp3",
+        "durationSeconds": 372,
+        "voiceDisclosure": "Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file."
+      },
+      "sections": [
+        {
+          "heading": "FIELD NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "Forget the leopard you know — the one sprawled in an African acacia. Now give it a winter coat seven centimeters deep, long legs for wading through snow, and a tail thick as a scarf that it wraps around itself at night. Put it in a forest where winters are long and brutally cold, on the border where Russia meets China. That is the Amur leopard: the rarest big cat on Earth — and, quietly, one of conservation's greatest comebacks."
+            },
+            {
+              "text": "In 2007 there were perhaps thirty of them. Today there are about 130 in Russia and 115 counted in China's border park, with at least 27 cats walking between the two countries — well over two hundred, though no one can give one exact total for an animal that ignores borders. What makes this story remarkable is what it did not take: no captive releases, no genetic rescue. The leopards did it themselves, the moment people stopped killing them and their prey."
+            }
+          ]
+        },
+        {
+          "heading": "THE PAST — HOW A LEOPARD ENDS UP IN THE SNOW, ALONE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "The Amur leopard's crisis was ordinary, which is what made it so effective. Its coat — the thickest and most beautiful of any leopard — had a price: poached pelts were offered for a few hundred to a thousand dollars apiece in the 1990s. Its food — sika deer, roe deer, wild boar — was poached too, for meat, so even an uncaught leopard could starve. And every spring, farmers burned fields; between 1996 and 2003, almost half of the leopard's remaining habitat burned at least once, converting forest to open ground the cats avoid."
+            },
+            {
+              "text": "Squeezed by fur, hunger, and fire, a cat that once ranged across northeast China and Korea shrank to a single pocket of Russian forest smaller than many counties. The censuses read like a countdown: around forty in the 1970s, thirty-some in 1990, and by 2007 an estimate of just 19 to 26 leopards left on Earth."
+            }
+          ]
+        },
+        {
+          "heading": "THE PRESENT — WHAT PROTECTION, BY ITSELF, CAN DO",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "In April 2012, Russia gathered most of the survivors' habitat into one protected area: Land of the Leopard National Park. Rangers went after poachers and set fires; the deer came back; and someone finally counted properly — the park now runs about three hundred camera traps, the largest such network in Russia, and because every leopard's rosette pattern is unique as a fingerprint, the cats can be known one by one. There is Typhoon, whose territorial call became the first ever recorded from a wild Amur leopard; there is Kazanova, who walked out of the park on his own and re-founded territory his species had lost for fifty years."
+            },
+            {
+              "text": "The numbers answered. The 2015 census announced the population had doubled. By 2018 it passed one hundred. The most rigorous scientific estimate — 118 leopards, published in 2025 — comes with a confidence interval tighter than almost any wild cat population on Earth, and the core-area density has nearly tripled since 2015. Across the border, China built its own vast park; its count rose from 42 in 2017 to 115 in 2025, with fifteen cubs in a single year. Even the road got fixed: in 2016 Russia buried a highway inside the 575-meter Narvinsky tunnel — the country's first — so leopards could cross their mountain pass above the traffic."
+            }
+          ]
+        },
+        {
+          "heading": "KNOWN / UNKNOWN",
+          "style": "knownUnknown",
+          "entries": [
+            {
+              "lead": "Known",
+              "text": "the recovery is real, measured, and was achieved by protection alone — anti-poaching, fire control, prey recovery, one tunnel."
+            },
+            {
+              "lead": "Unknown",
+              "text": "the exact total (border-crossing cats defeat simple addition); the cost of inbreeding in a population rebuilt from a few dozen (kinked tails and white paws already whisper of it); and the reach of canine distemper, a dog-borne disease confirmed in one wild leopard, whose worst-case models are grim."
+            }
+          ]
+        },
+        {
+          "heading": "THE FUTURE — WHAT WOULD IMPROVE ITS ODDS",
+          "style": "numbered",
+          "entries": [
+            {
+              "lead": "Grow into China.",
+              "text": "Five cross-border corridors now connect the Russian pocket to a park system with room for many more cats — the species' way out of its own small map."
+            },
+            {
+              "lead": "Found a second population.",
+              "text": "In 2023, three leopards were released into Ussuriysky Reserve — the first deliberate step toward a backup population, with a breeding center planned in the species' old southern range."
+            },
+            {
+              "lead": "Head off the disease.",
+              "text": "Vaccinating even a few wild leopards and managing village dogs, models show, dramatically improves the odds against distemper."
+            },
+            {
+              "lead": "Keep the insurance current.",
+              "text": "More than two hundred Amur leopards in the world's zoos preserve 91% of the founders' genetic diversity — a reserve the wild population may someday need."
+            }
+          ]
+        },
+        {
+          "heading": "CLOSING NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "The park's scientist Taisiia Marchenkova states the ambition plainly: \"We hope to see Amur leopards back across their historic range in two decades\". Twenty years ago that sentence would have been a eulogy. Now it is a schedule."
+            }
+          ]
+        },
+        {
+          "heading": "TIMELINE OF EVIDENCE",
+          "style": "timeline",
+          "entries": [
+            {
+              "lead": "1857",
+              "text": "The subspecies is described from a leopard skin from Korea."
+            },
+            {
+              "lead": "1970s",
+              "text": "The range collapses to one pocket of southwest Primorye; gone from Korea."
+            },
+            {
+              "lead": "2007",
+              "text": "The low point: an estimated 19–26 individuals — the world's rarest big cat."
+            },
+            {
+              "lead": "2012",
+              "text": "April: Russia creates Land of the Leopard National Park, covering most remaining habitat."
+            },
+            {
+              "lead": "2015",
+              "text": "Census: the population has roughly doubled since the low."
+            },
+            {
+              "lead": "2016",
+              "text": "March: the Narvinsky wildlife tunnel opens — Russia's first."
+            },
+            {
+              "lead": "2018",
+              "text": "The count passes one hundred; China formalizes its Northeast Tiger and Leopard National Park in 2021."
+            },
+            {
+              "lead": "2023",
+              "text": "May: three leopards released in Ussuriysky Reserve — the second-population project begins."
+            },
+            {
+              "lead": "2025–2026",
+              "text": "Peer-reviewed estimate of 118 in Russia; record density; China announces 115 with fifteen cubs in a year. Timeline last verified 2026-08-27."
+            }
+          ]
+        },
+        {
+          "heading": "A REFLECTIVE PROMPT",
+          "style": "prompt",
+          "entries": [
+            {
+              "text": "The Amur leopard needed no rescue technology — only for the killing, the burning, and the taking to stop. How often is the most powerful thing we can do for something simply to stop doing the harmful thing?"
+            }
+          ]
+        },
+        {
+          "heading": "SOURCES",
+          "style": "sources",
+          "entries": [
+            {
+              "lead": "S1",
+              "text": "WildCats Conservation Alliance — Amur leopard facts. https://conservewildcats.org/resources/amur-leopard-facts/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S2",
+              "text": "Mongabay — \"Amur leopards, once nearly extinct, are making a comeback,\" 2025-07. https://news.mongabay.com/short-article/2025/07/amur-leopards-once-nearly-extinct-are-making-a-comeback-in-far-east-asia/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S3",
+              "text": "Marchenkova et al. 2025, Wildlife Letters — SECR estimate 118 (115–121), 2022 data. https://onlinelibrary.wiley.com/doi/full/10.1002/wll2.70024 (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S4",
+              "text": "Global Times — NE China Tiger and Leopard NP: 115 leopards, 15 cubs, 27 cross-border, 2026-07-29. https://www.globaltimes.cn/page/202607/1367047.shtml (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S5",
+              "text": "Amur leopard reference compilation (pelt prices, census history, 1857 description). https://en.wikipedia.org/wiki/Amur_leopard (accessed 2026-08-27; underlying citations checked)"
+            },
+            {
+              "lead": "S6",
+              "text": "WildCats / Tigris Foundation fire analysis — 46% of habitat burned ≥once 1996–2003. https://conservewildcats.org/wp-content/uploads/sites/5/WildCats/ProjectReports/Russia/Tigris_fire_analysis_report.pdf (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S7",
+              "text": "bioGraphic — Land of the Leopards (camera-trap network). https://www.biographic.com/land-of-the-leopards/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S8",
+              "text": "WildCats — 2023 Ussuriysky relocation (Narva, Kazanova); Vostok forum (Lazovsky centre plan). https://conservewildcats.org/2023/06/16/amur-leopard-relocation/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S9",
+              "text": "WildCats — density record 1.86/100 km², 2025-06-24; 2018 census. https://conservewildcats.org/2025/06/24/amur-leopard-density/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S10",
+              "text": "WCS — statement on the Narvinsky tunnel opening, 2016-03. https://newsroom.wcs.org/News-Releases/articleType/ArticleView/articleId/8914/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S11",
+              "text": "Cornell Chronicle — canine distemper confirmed in a wild Amur leopard, 2018-01. https://news.cornell.edu/stories/2018/01/critically-endangered-amur-leopard-faces-new-threat (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S12",
+              "text": "Communications Biology 2022 — distemper viability analysis and vaccination strategy. https://www.nature.com/articles/s42003-022-04127-9 (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S13",
+              "text": "WAZA — Amur leopard Global Species Management Plan (EEP: 217 leopards, 91% founder diversity). https://www.waza.org/priorities/conservation/conservation-breeding-programmes/global-species-management-plans/amur-leopard/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S14",
+              "text": "Down To Earth — interview with Taisiia Marchenkova. https://www.downtoearth.org.in/interviews/wildlife-biodiversity/we-hope-to-see-amur-leopards-back-across-their-historic-range-in-two-decades-taisiia-marchenkova-88492 (accessed 2026-08-27)"
+            }
+          ]
+        },
+        {
+          "heading": "CREDITS",
+          "style": "sources",
+          "entries": [
+            {
+              "text": "Text: original, Witness editorial, 2026-08-27. Drafted with Claude from the verified fact pack; every factual claim carries its source above."
+            },
+            {
+              "text": "Artwork: approved Amur leopard plates (rights records in `docs/media/`)."
+            },
+            {
+              "text": "Narration: to follow founder text approval (Ruth, synthetic, disclosed)."
+            },
+            {
+              "text": "Review: approved by Alberto Villalpando, 2026-08-27 (binder review)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fs1-ch08-axolotl",
+      "number": 8,
+      "title": "The God Who Refused to Die",
+      "speciesID": "axolotl",
+      "heroAssetID": "axolotl-plate-01",
+      "audio": {
+        "fileName": "chapter-08-axolotl-ruth",
+        "fileExtension": "mp3",
+        "durationSeconds": 427,
+        "voiceDisclosure": "Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file."
+      },
+      "sections": [
+        {
+          "heading": "FIELD NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "This Field Season opened in Mexico's sea, with a small porpoise almost no one has seen. It closes in Mexico's water again — in the canals of Xochimilco, on the southern edge of Mexico City, where the last wild axolotls live among thousand-year-old floating gardens."
+            },
+            {
+              "text": "You know this animal's face: the feathery gills like a headdress, the permanent small smile. It is on Mexico's fifty-peso bill, in video games, on murals. But the famous pink creature is a laboratory bloodline — wild axolotls are dark, mottled like canal mud. And the Aztecs knew the truth of it before anyone: they named it for Xolotl, the god who transformed himself into an axolotl to escape death. The god who refused to die. This chapter is about whether that refusal holds."
+            }
+          ]
+        },
+        {
+          "heading": "THE PAST — THE LAKE THAT BECAME A CITY",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "Five great lakes once filled the Valley of Mexico, and the axolotl lived in them beside the island city of Tenochtitlan, where it was sold in the markets — the Florentine Codex calls it food of the lords. After the conquest came four centuries of draining: flood control, farmland, streets, until a metropolis of more than twenty million people stood where the water had been. Of the five lakes, what mostly remains is Xochimilco — a lattice of canals threading between chinampas, the artificial garden-islands Aztec farmers built and their successors still farm."
+            },
+            {
+              "text": "The survivors' refuge then turned hostile. In the 1970s and 80s, tilapia and carp were introduced as food fish — and ate the axolotl's eggs and young. The canals came to depend on treated wastewater; pollution seeped from every direction. The census numbers fell like a stone dropped in dark water: roughly 6,000 axolotls per square kilometer in 1998, about 1,000 in 2003, about 100 in 2008, and by 2014, around 36. Meanwhile — the great paradox — the axolotl became one of the most abundant laboratory animals on Earth, descended largely from a shipment of 34 sent to Paris in 1863: by some estimates a million or more in tanks worldwide, famous for regrowing limbs, spinal cord, heart tissue, even parts of the brain, with a genome ten times the size of ours."
+            },
+            {
+              "text": "A creature that can regenerate almost anything cannot regenerate a lake."
+            }
+          ]
+        },
+        {
+          "heading": "THE PRESENT — NETS, DNA, AND EIGHTEEN BRAVE ANIMALS",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "In late 2024, scientists from Mexico's national university, UNAM, began the first full census in a decade, working 115 sites across the protected wetland. The nets, cast again and again, caught zero axolotls. But the water itself testified: environmental DNA — the molecular traces a body sheds — confirmed axolotls still live in the canals, unseen. Present, invisible; the full results are due in 2026."
+            },
+            {
+              "text": "And in 2025 came the evidence that changes the ending. Researchers led by Alejandra Ramos and Luis Zambrano released eighteen captive-bred axolotls — ten into a restored chinampa refuge in Xochimilco, eight into a spring-fed wetland across the city — each carrying a tiny radio transmitter. All eighteen survived the study. Recaptured animals had gained weight: they were hunting, in the wild, on their own. Two were eventually taken by egrets — which is itself a kind of good news; being prey is part of being wild. \"The amazing news is that they all survived,\" Ramos said. \"They're hunting\"."
+            },
+            {
+              "text": "The refuge they thrived in is the oldest idea in the valley: UNAM works with chinampero farmers to seal off canal stretches with biofilters of wood, gravel, and native plants — cleaning the water and walling out carp and tilapia. Depending on the count and date, 21 to 36 such refuges now exist, covering perhaps half of one percent of the canal network. Where they exist, water clears, native fish return, and the farmers' harvests improve."
+            }
+          ]
+        },
+        {
+          "heading": "KNOWN / UNKNOWN",
+          "style": "knownUnknown",
+          "entries": [
+            {
+              "lead": "Known",
+              "text": "the axolotl persists in the wild, captive-bred animals can survive and hunt there, and the refuge model works — for the animal and the farmer both."
+            },
+            {
+              "lead": "Unknown",
+              "text": "the true wild number (the last completed count found ~36 per square kilometer; official estimates span 50 to 1,000 mature animals); whether lab-lineage axolotls carry the right instincts and genes for canal life; and whether Xochimilco's water can outlast the thirst of a megacity."
+            }
+          ]
+        },
+        {
+          "heading": "THE FUTURE — WHAT WOULD IMPROVE ITS ODDS",
+          "style": "numbered",
+          "entries": [
+            {
+              "lead": "Multiply the refuges.",
+              "text": "From half a percent of the canals toward a connected sanctuary system — built with, and profitable for, the chinampa farmers whose ancestors built the lake's gardens in the first place."
+            },
+            {
+              "lead": "Fight for the water.",
+              "text": "Biofilters and better treatment of the inflow are the axolotl's life support; every improvement also protects two hundred bird species and a city's flood buffer."
+            },
+            {
+              "lead": "Keep the invaders out.",
+              "text": "Barriers and removal of carp and tilapia are what make a refuge a refuge."
+            },
+            {
+              "lead": "Release, watch, learn.",
+              "text": "The 2025 study proved survival is possible and taught the next lesson — train captive axolotls to fear herons before the water takes them back."
+            }
+          ]
+        },
+        {
+          "heading": "CLOSING NOTE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "Zambrano says it best: \"If we can restore this habitat and restore the axolotl's population in a city of more than 20 million people... we have hope for humanity\". The god refused to die. Eighteen small ambassadors just showed he might be right."
+            }
+          ]
+        },
+        {
+          "heading": "TIMELINE OF EVIDENCE",
+          "style": "timeline",
+          "entries": [
+            {
+              "lead": "14th–16th century",
+              "text": "Axolotls thrive in the five lakes around Tenochtitlan; named for the god Xolotl; sold in the markets."
+            },
+            {
+              "lead": "1521 onward",
+              "text": "The centuries-long draining of the Valley of Mexico begins."
+            },
+            {
+              "lead": "1863",
+              "text": "Thirty-four axolotls are shipped to Paris; six survivors found the laboratory lineage behind most captive axolotls today."
+            },
+            {
+              "lead": "1970s–80s",
+              "text": "Carp and tilapia introduced; the canals shift to treated wastewater."
+            },
+            {
+              "lead": "1987",
+              "text": "Xochimilco inscribed as UNESCO World Heritage with Mexico City's historic center."
+            },
+            {
+              "lead": "1998–2014",
+              "text": "The census crash: ~6,000 → ~36 per km² — 99% in sixteen years."
+            },
+            {
+              "lead": "2006",
+              "text": "Listed Critically Endangered."
+            },
+            {
+              "lead": "2018",
+              "text": "The 32-billion-letter axolotl genome is published — among the largest ever sequenced."
+            },
+            {
+              "lead": "2021",
+              "text": "The axolotl 50-peso note enters circulation; it is named banknote of the year, and millions of Mexicans keep it rather than spend it."
+            },
+            {
+              "lead": "2024–2026",
+              "text": "First census in a decade: nets find none; eDNA finds them. Full results due 2026."
+            },
+            {
+              "lead": "2025",
+              "text": "April: all eighteen released captive-bred axolotls survive and hunt in the wild. Timeline last verified 2026-08-27."
+            }
+          ]
+        },
+        {
+          "heading": "A REFLECTIVE PROMPT",
+          "style": "prompt",
+          "entries": [
+            {
+              "text": "The axolotl never grows up — and never gives up. Its refuge is not a fence in the wilderness but a farmer's canal in a city of millions, proof that the wild can live next door if the neighbors want it to. What would it take for the place you live to keep one wild thing alive?"
+            }
+          ]
+        },
+        {
+          "heading": "SOURCES",
+          "style": "sources",
+          "entries": [
+            {
+              "lead": "S1",
+              "text": "Conservation International — \"Axolotls are on the brink. Can we bring them back?\" (census, eDNA, refuges). https://www.conservation.org/news/axolotls-are-on-the-brink-can-we-bring-them-back (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S2",
+              "text": "National Geographic — Axolotl facts (biology; wild coloration). https://www.nationalgeographic.com/animals/amphibians/facts/axolotl (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S3",
+              "text": "History.com — Axolotl in Aztec mythology (Xolotl). https://www.history.com/articles/axolotl-ancient-aztec-mythology (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S4",
+              "text": "\"The Axolotl as Food and Symbol in the Basin of Mexico\" (Florentine Codex context). https://www.researchgate.net/publication/251277784 (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S5",
+              "text": "NBC News — the draining of the lakes and introduced fish. https://www.nbcnews.com/id/wbna27503150 (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S6",
+              "text": "Gaceta UNAM — \"Levantan nuevo censo del axolote en Xochimilco\" (census history and methods; Zambrano). https://www.gaceta.unam.mx/levantan-nuevo-censo-del-axolote-en-xochimilco/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S7",
+              "text": "JSTOR Daily — the 1863 Paris shipment and the lab lineage. https://daily.jstor.org/the-race-to-save-the-axolotl/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S8",
+              "text": "Nowoshilow et al. 2018, Nature — the 32 Gb axolotl genome. https://www.nature.com/articles/nature25458 (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S9",
+              "text": "Wild Hope / National Geographic — wild (dark) vs leucistic (pink lab) morphs. https://www.wildhope.tv/profile/axolotls/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S10",
+              "text": "Ramos, Mena, Schneider & Zambrano 2025, PLOS One — movement ecology of released captive-bred axolotls (all 18 survived). https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0314257 (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S11",
+              "text": "Mongabay — release-study coverage with Ramos and Zambrano quotations, 2025-05. https://news.mongabay.com/short-article/2025/05/hope-for-endangered-axolotls-as-captive-bred-group-survives-in-wild/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S12",
+              "text": "Fundación UNAM — AdoptAxolotl (refuge counts, 5.5 km of canals); The Wildlife Society — creating refuges. https://www.fundacionunam.org.mx/unam-al-dia/adoptaxolotl-una-campana-universitaria-para-salvaguardar-el-ajolote-mexicano/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S13",
+              "text": "Mexico News Daily — UNAM 2024 warning; IUCN 2019 estimate 50–1,000 mature. https://mexiconewsdaily.com/news/axolotl-disappear-xochimilco-canals-2025/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S14",
+              "text": "UNESCO World Heritage — Historic Centre of Mexico City and Xochimilco. https://whc.unesco.org/en/list/412/ (accessed 2026-08-27)"
+            },
+            {
+              "lead": "S15",
+              "text": "Mexico News Daily / Infobae — the 50-peso axolotl note and Banknote of the Year 2021. https://mexiconewsdaily.com/news/axolotl-to-appear-on-new-50-peso-bill/ (accessed 2026-08-27)"
+            }
+          ]
+        },
+        {
+          "heading": "CREDITS",
+          "style": "sources",
+          "entries": [
+            {
+              "text": "Text: original, Witness editorial, 2026-08-27. Drafted with Claude from the verified fact pack; every factual claim carries its source above."
+            },
+            {
+              "text": "Artwork: approved axolotl plates (rights records in `docs/media/`)."
+            },
+            {
+              "text": "Narration: to follow founder text approval (Ruth, synthetic, disclosed)."
+            },
+            {
+              "text": "Review: approved by Alberto Villalpando, 2026-08-27 (binder review)."
+            }
           ]
         }
       ]

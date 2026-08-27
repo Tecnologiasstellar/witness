@@ -61,5 +61,9 @@ aws polly list-speech-synthesis-tasks --profile lullable --region us-east-1 --ma
 |---|---|---|---|
 | 01 vaquita | `chapter-01-vaquita.ssml` (rev 2) | **done** — `rendered/chapter-01-vaquita-ruth.mp3`, Ruth long-form, 6:45 | `docs/media/fs1-ch01-audio-rights.md` |
 | 02 kākāpō | `chapter-02-kakapo.ssml` | **done** — `rendered/chapter-02-kakapo-ruth.mp3`, Ruth long-form, 7:15 | `docs/media/fs1-ch02-audio-rights.md` |
-| 03 javan rhino | pending founder text approval | — | — |
-| 04 red wolf | pending founder text approval | — | — |
+| 03 javan rhino | `chapter-03-javan-rhino.ssml` | **done** — Ruth long-form, 6:41 | `docs/media/fs1-ch03-audio-rights.md` |
+| 04 red wolf | `chapter-04-red-wolf.ssml` | **done** — Ruth long-form, 6:34 | `docs/media/fs1-ch04-audio-rights.md` |
+| 05 ʻalalā | `chapter-05-alala.ssml` | **done** — Ruth long-form, 6:12 | `docs/media/fs1-ch05-audio-rights.md` |
+| 06 wollemi pine | `chapter-06-wollemi-pine.ssml` | **done** — Ruth long-form, 6:14 | `docs/media/fs1-ch06-audio-rights.md` |
+| 07 amur leopard | `chapter-07-amur-leopard.ssml` | **done** — Ruth long-form, 6:12 | `docs/media/fs1-ch07-audio-rights.md` |
+| 08 axolotl | `chapter-08-axolotl.ssml` | **done** — Ruth long-form, 7:07 | `docs/media/fs1-ch08-audio-rights.md` |

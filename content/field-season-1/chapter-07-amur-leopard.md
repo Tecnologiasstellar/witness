@@ -4,7 +4,7 @@ edition: field-season-1
 speciesID: amur-leopard
 title: "The Cat That Came Back by Being Left Alone"
 chapterNumber: 7
-status: draft-for-founder-review
+status: approved  # founder (Alberto Villalpando) approved 2026-08-27 (binder review, "final yes")
 author: Witness editorial (drafted with Claude from the verified fact pack research/amur-leopard-factpack.md)
 lastFactChecked: 2026-08-27
 sensitiveLocationReview: generalized  # protected-area level only
@@ -165,5 +165,4 @@ thing we can do for something simply to stop doing the harmful thing?
   the verified fact pack; every factual claim carries its source above.
 - Artwork: approved Amur leopard plates (rights records in `docs/media/`).
 - Narration: to follow founder text approval (Ruth, synthetic, disclosed).
-- Review: **pending founder editorial approval** — must not ship or be
-  sold until `status` reads `approved`.
+- Review: **approved** by Alberto Villalpando, 2026-08-27 (binder review).

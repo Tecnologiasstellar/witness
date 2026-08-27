@@ -4,7 +4,7 @@ edition: field-season-1
 speciesID: axolotl
 title: "The God Who Refused to Die"
 chapterNumber: 8
-status: draft-for-founder-review
+status: approved  # founder (Alberto Villalpando) approved 2026-08-27 (binder review, "final yes")
 author: Witness editorial (drafted with Claude from the verified fact pack research/axolotl-factpack.md)
 lastFactChecked: 2026-08-27
 sensitiveLocationReview: generalized  # "Lake Xochimilco, Mexico City" only
@@ -185,5 +185,4 @@ What would it take for the place you live to keep one wild thing alive?
   the verified fact pack; every factual claim carries its source above.
 - Artwork: approved axolotl plates (rights records in `docs/media/`).
 - Narration: to follow founder text approval (Ruth, synthetic, disclosed).
-- Review: **pending founder editorial approval** — must not ship or be
-  sold until `status` reads `approved`.
+- Review: **approved** by Alberto Villalpando, 2026-08-27 (binder review).

@@ -4,7 +4,7 @@ edition: field-season-1
 speciesID: red-wolf
 title: "Fourteen Founders"
 chapterNumber: 4
-status: draft-for-founder-review
+status: approved  # founder (Alberto Villalpando) approved 2026-08-27 (binder review, "final yes")
 author: Witness editorial (drafted with Claude from the verified fact pack research/red-wolf-factpack.md)
 lastFactChecked: 2026-08-26
 sensitiveLocationReview: generalized  # five-county recovery area / refuge names only; no den locations
@@ -172,5 +172,4 @@ mistake would you be willing to spend that long making right?
   the verified fact pack; every factual claim carries its source above.
 - Artwork: approved red wolf plates (rights records in `docs/media/`).
 - Narration: to follow founder text approval (Ruth, synthetic, disclosed).
-- Review: **pending founder editorial approval** — must not ship or be
-  sold until `status` reads `approved`.
+- Review: **approved** by Alberto Villalpando, 2026-08-27 (binder review).

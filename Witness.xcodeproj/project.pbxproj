@@ -16,6 +16,7 @@
 		1DE1B6B6102E962A1D7BBC10 /* FakePurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A812DF59A75B1A81DA5AD /* FakePurchaseService.swift */; };
 		224FC55D98C252D3C06B08BF /* BundledSpeciesCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9DEB3D56300C4B0646299 /* BundledSpeciesCatalog.swift */; };
 		261D3665C87B2E3207AE4386 /* FieldSeasonPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FA1866C21BBC935664EA5 /* FieldSeasonPreviewView.swift */; };
+		27F06FD1EF2D6F51C225A85D /* RevenueCatConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69F8CC0B121B3CF8F09B6BF6 /* RevenueCatConfig.plist */; };
 		2AD518CBE30180C4E30E2336 /* fieldseason in Resources */ = {isa = PBXBuildFile; fileRef = 79701A6F60B808BEB81DB0B1 /* fieldseason */; };
 		2D7E2C8B3FBD5469CC697E17 /* CommerceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC501D26CAA17AAD48CE24 /* CommerceConfiguration.swift */; };
 		2DB8EC5552B2AA6AE65EB074 /* ReminderPrimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61B5DD130AF6E13995DBB95 /* ReminderPrimer.swift */; };
@@ -38,6 +39,7 @@
 		64E842D506FF8810AB00BAFA /* chapter-02-kakapo-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A590A07F1491955B4BDE5F6F /* chapter-02-kakapo-ruth.mp3 */; };
 		64F12E527B41CD3BC05C6889 /* WitnessCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66792FAAD28C4692A18458B0 /* VaquitaHeroArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */; };
+		66CA1EB0F3660B3A478F440B /* chapter-08-axolotl-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D57A0E87B84178EDB8577 /* chapter-08-axolotl-ruth.mp3 */; };
 		68D6C9D187410805167434BB /* SpeciesCardV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6741E8E552598D4CEB9F6 /* SpeciesCardV2.swift */; };
 		6CB63D7D22BC7C5FF46E1BAC /* WitnessTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */; };
 		7436B0FED665FD5428FFD5D6 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F19751D24B01B066DD7EB /* ReminderService.swift */; };
@@ -46,6 +48,7 @@
 		84987ABAB9FFB62FE7E68E24 /* PlateFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */; };
 		863807471CD08448FBCFEF3A /* chapter-01-vaquita-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E07C476D3E2B6D5AC76A7F7F /* chapter-01-vaquita-ruth.mp3 */; };
 		894A133FC42DE9A310BAC551 /* ChapterAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12449CF4B46C6893745B0A97 /* ChapterAudioPlayer.swift */; };
+		90A27A2892AF86DE41CE7C1F /* chapter-04-red-wolf-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 529CD65BB1578906F8DD52FC /* chapter-04-red-wolf-ruth.mp3 */; };
 		94970226C85A893618954AD7 /* Witness.storekit in Resources */ = {isa = PBXBuildFile; fileRef = E7BEABEDF9098E49B34C4502 /* Witness.storekit */; };
 		96F3A4FFD4A74F87186363AE /* FieldSeasonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1D057025BC3136386EBDC0 /* FieldSeasonLoader.swift */; };
 		970FC89F680BB805DAFD3E50 /* AtlasAccessSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F287F923906A5B978B7D0A3 /* AtlasAccessSheet.swift */; };
@@ -53,15 +56,19 @@
 		9CC718B894A343A4A184A7D9 /* CommerceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F117FE2D9BF316A30D9A82A /* CommerceModel.swift */; };
 		9FD70CC0C4270FC66253908D /* WitnessProductCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB257F713509D3ED1A2A49F /* WitnessProductCatalog.swift */; };
 		A16041A90DD5333A1728F811 /* WitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E8333AE9C0AD77C3567F /* WitnessApp.swift */; };
+		A22EF91683B2E4DE5C1824EA /* chapter-07-amur-leopard-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2098F808686598DBD1727 /* chapter-07-amur-leopard-ruth.mp3 */; };
 		A4530880FC2FA582FFD3F4FC /* FieldSeasonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BBEDD2578E70EAB053A14 /* FieldSeasonModels.swift */; };
 		A536A1761E475036B749FBA4 /* FileWitnessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89A757DBBF5D9080AB542D /* FileWitnessRepository.swift */; };
+		A9E841EC51520AC57CC542A9 /* chapter-05-alala-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 466E4F25EB9148AC89E23A33 /* chapter-05-alala-ruth.mp3 */; };
 		AC9C55BD3124DCD919946D44 /* FileSyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAEC2E8EF7B8E47676E1F3 /* FileSyncQueue.swift */; };
 		AEE9CFCC7ED6423851B4C1AA /* SupabaseTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BBBFD25BDE3FD1CA7575E8 /* SupabaseTransport.swift */; };
 		AF0936883DF38BF516D11C1D /* RevenueCatMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4161F382EB4D43A8665E3C9 /* RevenueCatMappingTests.swift */; };
 		B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */; };
 		B1B2F3500979E875B3E27F3E /* WitnessRitualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */; };
+		BA72186464E240CD1E1B353B /* chapter-06-wollemi-pine-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 192E77993BD98AD5130639B3 /* chapter-06-wollemi-pine-ruth.mp3 */; };
 		BB0F4CF918CDA9C32D738CF8 /* RevenueCatSnapshotMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAE32719F21615010A01FE /* RevenueCatSnapshotMapper.swift */; };
 		C2187594DDD99E4D49BE4ED2 /* StorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F03B2889D871D9EFAF85F /* StorySheet.swift */; };
+		C72539010F2B84A628DCDD19 /* chapter-03-javan-rhino-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D227F16474FBFD28F8FD6CBA /* chapter-03-javan-rhino-ruth.mp3 */; };
 		CAB4D17A5D8E737A798E992D /* ContentAccessPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8FD3F59ADE1D681395FC2 /* ContentAccessPolicy.swift */; };
 		D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */; };
 		D76814029898F318CCF0563B /* SharePlateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2C63F351BC9C606D1E9AD /* SharePlateCard.swift */; };
@@ -127,7 +134,9 @@
 		0E6F03B2889D871D9EFAF85F /* StorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySheet.swift; sourceTree = "<group>"; };
 		12449CF4B46C6893745B0A97 /* ChapterAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterAudioPlayer.swift; sourceTree = "<group>"; };
 		18A60CD149F67142BEB56EB1 /* WitnessAppTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		192E77993BD98AD5130639B3 /* chapter-06-wollemi-pine-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-06-wollemi-pine-ruth.mp3"; sourceTree = "<group>"; };
 		1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateFrame.swift; sourceTree = "<group>"; };
+		1DA2098F808686598DBD1727 /* chapter-07-amur-leopard-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-07-amur-leopard-ruth.mp3"; sourceTree = "<group>"; };
 		1F117FE2D9BF316A30D9A82A /* CommerceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceModel.swift; sourceTree = "<group>"; };
 		23B9DEB3D56300C4B0646299 /* BundledSpeciesCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundledSpeciesCatalog.swift; sourceTree = "<group>"; };
 		2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRecord.swift; sourceTree = "<group>"; };
@@ -140,11 +149,14 @@
 		3F51A47DA17207B45AE09C8E /* CollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailView.swift; sourceTree = "<group>"; };
 		432B01DAC74F9AED20C43520 /* StoreKitPurchaseAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitPurchaseAdapterTests.swift; sourceTree = "<group>"; };
 		44CD33A3724FC2B62AFE1818 /* catalog */ = {isa = PBXFileReference; lastKnownFileType = folder; name = catalog; path = Packages/WitnessCore/Sources/WitnessCore/Resources/catalog; sourceTree = SOURCE_ROOT; };
+		466E4F25EB9148AC89E23A33 /* chapter-05-alala-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-05-alala-ruth.mp3"; sourceTree = "<group>"; };
 		5247498298198A44564825C9 /* AccessModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessModels.swift; sourceTree = "<group>"; };
+		529CD65BB1578906F8DD52FC /* chapter-04-red-wolf-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-04-red-wolf-ruth.mp3"; sourceTree = "<group>"; };
 		547FA1866C21BBC935664EA5 /* FieldSeasonPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSeasonPreviewView.swift; sourceTree = "<group>"; };
 		5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessSync.swift; sourceTree = "<group>"; };
 		56AD8E8C40D0019EBB30514B /* WeeklySpeciesSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySpeciesSelector.swift; sourceTree = "<group>"; };
 		65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaquitaHeroArtwork.swift; sourceTree = "<group>"; };
+		69F8CC0B121B3CF8F09B6BF6 /* RevenueCatConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = RevenueCatConfig.plist; sourceTree = "<group>"; };
 		6BC9CF6489D7C89535986EFB /* WitnessUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		728216AE022B82B5021127E5 /* FileHelpingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelpingStore.swift; sourceTree = "<group>"; };
 		748A9A762F916DB930D49697 /* ChapterReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterReaderView.swift; sourceTree = "<group>"; };
@@ -153,6 +165,7 @@
 		7D1967F70178EF22D72429A3 /* WitnessCounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessCounts.swift; sourceTree = "<group>"; };
 		841F6B1989A07CDD335DC75A /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
 		8698B087FB05A16501745D67 /* WitnessShareCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessShareCopy.swift; sourceTree = "<group>"; };
+		8B4D57A0E87B84178EDB8577 /* chapter-08-axolotl-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-08-axolotl-ruth.mp3"; sourceTree = "<group>"; };
 		8FDFC8711953263B8B59139B /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		900C4A43A6AC261C6A25B5E1 /* SpeciesRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesRecord.swift; sourceTree = "<group>"; };
 		98FE485E4A09EEE93616F399 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
@@ -175,6 +188,7 @@
 		C4161F382EB4D43A8665E3C9 /* RevenueCatMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatMappingTests.swift; sourceTree = "<group>"; };
 		C9C8FD3F59ADE1D681395FC2 /* ContentAccessPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAccessPolicy.swift; sourceTree = "<group>"; };
 		CC1D057025BC3136386EBDC0 /* FieldSeasonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSeasonLoader.swift; sourceTree = "<group>"; };
+		D227F16474FBFD28F8FD6CBA /* chapter-03-javan-rhino-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-03-javan-rhino-ruth.mp3"; sourceTree = "<group>"; };
 		D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D5BBBFD25BDE3FD1CA7575E8 /* SupabaseTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseTransport.swift; sourceTree = "<group>"; };
 		E07C476D3E2B6D5AC76A7F7F /* chapter-01-vaquita-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-01-vaquita-ruth.mp3"; sourceTree = "<group>"; };
@@ -353,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				E5912AC6B4687E04E2D975DE /* Assets.xcassets */,
+				69F8CC0B121B3CF8F09B6BF6 /* RevenueCatConfig.plist */,
 				CFD8CBB54872203BC35154E5 /* App */,
 				60018E1299DF4AA5EED06E46 /* Commerce */,
 				BD6C382569C53F55C701C8C7 /* DesignSystem */,
@@ -546,6 +561,12 @@
 			children = (
 				E07C476D3E2B6D5AC76A7F7F /* chapter-01-vaquita-ruth.mp3 */,
 				A590A07F1491955B4BDE5F6F /* chapter-02-kakapo-ruth.mp3 */,
+				D227F16474FBFD28F8FD6CBA /* chapter-03-javan-rhino-ruth.mp3 */,
+				529CD65BB1578906F8DD52FC /* chapter-04-red-wolf-ruth.mp3 */,
+				466E4F25EB9148AC89E23A33 /* chapter-05-alala-ruth.mp3 */,
+				192E77993BD98AD5130639B3 /* chapter-06-wollemi-pine-ruth.mp3 */,
+				1DA2098F808686598DBD1727 /* chapter-07-amur-leopard-ruth.mp3 */,
+				8B4D57A0E87B84178EDB8577 /* chapter-08-axolotl-ruth.mp3 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -706,8 +727,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E548CB4F18E023489E9A2D98 /* Assets.xcassets in Resources */,
+				27F06FD1EF2D6F51C225A85D /* RevenueCatConfig.plist in Resources */,
 				863807471CD08448FBCFEF3A /* chapter-01-vaquita-ruth.mp3 in Resources */,
 				64E842D506FF8810AB00BAFA /* chapter-02-kakapo-ruth.mp3 in Resources */,
+				C72539010F2B84A628DCDD19 /* chapter-03-javan-rhino-ruth.mp3 in Resources */,
+				90A27A2892AF86DE41CE7C1F /* chapter-04-red-wolf-ruth.mp3 in Resources */,
+				A9E841EC51520AC57CC542A9 /* chapter-05-alala-ruth.mp3 in Resources */,
+				BA72186464E240CD1E1B353B /* chapter-06-wollemi-pine-ruth.mp3 in Resources */,
+				A22EF91683B2E4DE5C1824EA /* chapter-07-amur-leopard-ruth.mp3 in Resources */,
+				66CA1EB0F3660B3A478F440B /* chapter-08-axolotl-ruth.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

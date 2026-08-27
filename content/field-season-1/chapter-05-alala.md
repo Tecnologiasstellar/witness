@@ -4,7 +4,7 @@ edition: field-season-1
 speciesID: hawaiian-crow
 title: "The Voice Returns to the Forest"
 chapterNumber: 5
-status: draft-for-founder-review
+status: approved  # founder (Alberto Villalpando) approved 2026-08-27 (binder review, "final yes")
 author: Witness editorial (drafted with Claude from the verified fact pack research/alala-factpack.md)
 lastFactChecked: 2026-08-27
 sensitiveLocationReview: generalized  # "Kīpahulu Forest Reserve, leeward Haleakalā, East Maui" — the level officials publish
@@ -164,5 +164,4 @@ attempting after two failures?
   the verified fact pack; every factual claim carries its source above.
 - Artwork: approved ʻalalā plates (rights records in `docs/media/`).
 - Narration: to follow founder text approval (Ruth, synthetic, disclosed).
-- Review: **pending founder editorial approval** — must not ship or be
-  sold until `status` reads `approved`.
+- Review: **approved** by Alberto Villalpando, 2026-08-27 (binder review).

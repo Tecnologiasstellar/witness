@@ -4,7 +4,7 @@ edition: field-season-1
 speciesID: wollemi-pine
 title: "The Tree That Outlived the Dinosaurs"
 chapterNumber: 6
-status: draft-for-founder-review
+status: approved  # founder (Alberto Villalpando) approved 2026-08-27 (binder review, "final yes")
 author: Witness editorial (drafted with Claude from the verified fact pack research/wollemi-pine-factpack.md)
 lastFactChecked: 2026-08-27
 sensitiveLocationReview: generalized  # "a remote canyon system in Wollemi National Park, ~150 km NW of Sydney" — nothing closer; secrecy is a conservation tool and the chapter says so
@@ -169,5 +169,4 @@ better by leaving alone?
   the verified fact pack; every factual claim carries its source above.
 - Artwork: approved Wollemi pine plates (rights records in `docs/media/`).
 - Narration: to follow founder text approval (Ruth, synthetic, disclosed).
-- Review: **pending founder editorial approval** — must not ship or be
-  sold until `status` reads `approved`.
+- Review: **approved** by Alberto Villalpando, 2026-08-27 (binder review).
