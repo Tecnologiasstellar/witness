@@ -22,31 +22,31 @@ Lullable AWS account, with Witness work kept strictly separated.
 ## How to synthesize a chapter
 
 The SSML exceeds the 3,000-character synchronous limit, so use an async
-task with S3 output. With the Lullable-account AWS CLI profile (replace
-`PROFILE` and `BUCKET`):
+task with S3 output. With the Lullable-account AWS CLI profile (profile `lullable`;
+bucket `witness-audio-fs1-a4724`, private, us-east-1):
 
 ```sh
 aws polly start-speech-synthesis-task \
-  --profile PROFILE \
+  --profile lullable \
   --region us-east-1 \
   --engine long-form \
   --voice-id Ruth \
   --output-format mp3 \
   --text-type ssml \
   --text file://content/field-season-1/audio/chapter-01-vaquita.ssml \
-  --output-s3-bucket-name BUCKET \
+  --output-s3-bucket-name witness-audio-fs1-a4724 \
   --output-s3-key-prefix witness-audio/fs1/chapter-01-vaquita
 ```
 
 Then check status / fetch:
 
 ```sh
-aws polly list-speech-synthesis-tasks --profile PROFILE --region us-east-1 --max-results 5
+aws polly list-speech-synthesis-tasks --profile lullable --region us-east-1 --max-results 5
 ```
 
-- Recommended voice: **Ruth (long-form engine)** — warmest sustained
-  read for editorial audio. Fallbacks: Danielle (long-form), or Ruth
-  (neural) at lower cost.
+- Voice: **Ruth (long-form engine)** — founder-selected 2026-08-26 after
+  a three-voice audition (Ruth/Danielle/Gregory); the standard narrator
+  for all Field Season 1 chapters.
 - Cost: long-form is $100 per 1M characters — roughly **$0.60 per chapter,
   under $6 for all eight**. Neural is ~6× cheaper if the long-form voice
   isn't clearly better. Failure mode: an S3 bucket policy typo leaves the
@@ -59,4 +59,4 @@ aws polly list-speech-synthesis-tasks --profile PROFILE --region us-east-1 --max
 
 | Chapter | SSML | Audio synthesized | Rights record |
 |---|---|---|---|
-| 01 vaquita | `chapter-01-vaquita.ssml` (rev 2) | pending (founder runs command) | pending |
+| 01 vaquita | `chapter-01-vaquita.ssml` (rev 2) | **done** — `rendered/chapter-01-vaquita-ruth.mp3`, Ruth long-form, 6:45 | `docs/media/fs1-ch01-audio-rights.md` |
