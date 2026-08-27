@@ -32,6 +32,7 @@
 		4F0180C7AAF29665499248B6 /* StoreKitPurchaseAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432B01DAC74F9AED20C43520 /* StoreKitPurchaseAdapterTests.swift */; };
 		4F2473A639039F8A3C80F092 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F6B1989A07CDD335DC75A /* ArchiveView.swift */; };
 		52114D5B5708DBE5F899C054 /* letter-the-thin-line-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF1D964B153E5C9FC2A646ED /* letter-the-thin-line-ruth.mp3 */; };
+		53A52BB3592A35445B396EE3 /* interlude-price-of-parts-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E4D454920A0D005027064B2 /* interlude-price-of-parts-ruth.mp3 */; };
 		56085BAAD37054233313394D /* WitnessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBA5CD93CF57041234C41B /* WitnessRepository.swift */; };
 		56CC8679B9EB5736A16D6359 /* SupportWitnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8053EED7F41103FB6DA802 /* SupportWitnessView.swift */; };
 		5716A16FE32D809FAC2F9173 /* ChapterReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A9A762F916DB930D49697 /* ChapterReaderView.swift */; };
@@ -77,6 +78,7 @@
 		E388B5ED07FA84F3140DBC9C /* WitnessRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */; };
 		E548CB4F18E023489E9A2D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5912AC6B4687E04E2D975DE /* Assets.xcassets */; };
 		E995E7B6466D825AB81A803A /* catalog in Resources */ = {isa = PBXBuildFile; fileRef = 44CD33A3724FC2B62AFE1818 /* catalog */; };
+		EAB34DEE96DE9D444F5D303C /* interlude-the-uninvited-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E91B25A0EC1AFC5E28D4E48 /* interlude-the-uninvited-ruth.mp3 */; };
 		EAB93BBE70E97B6408C99333 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE485E4A09EEE93616F399 /* TodayView.swift */; };
 		EB4CE56961B2D550242DDF32 /* WitnessEventOutbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B708FCDDDDFB64362D76A8C9 /* WitnessEventOutbox.swift */; };
 		EC70675220171430DB535941 /* BackendConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70D6CD14579FD2FAEF6AA1 /* BackendConfig.swift */; };
@@ -138,6 +140,7 @@
 		192E77993BD98AD5130639B3 /* chapter-06-wollemi-pine-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-06-wollemi-pine-ruth.mp3"; sourceTree = "<group>"; };
 		1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateFrame.swift; sourceTree = "<group>"; };
 		1DA2098F808686598DBD1727 /* chapter-07-amur-leopard-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-07-amur-leopard-ruth.mp3"; sourceTree = "<group>"; };
+		1E4D454920A0D005027064B2 /* interlude-price-of-parts-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "interlude-price-of-parts-ruth.mp3"; sourceTree = "<group>"; };
 		1F117FE2D9BF316A30D9A82A /* CommerceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceModel.swift; sourceTree = "<group>"; };
 		23B9DEB3D56300C4B0646299 /* BundledSpeciesCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundledSpeciesCatalog.swift; sourceTree = "<group>"; };
 		2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRecord.swift; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 		432B01DAC74F9AED20C43520 /* StoreKitPurchaseAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitPurchaseAdapterTests.swift; sourceTree = "<group>"; };
 		44CD33A3724FC2B62AFE1818 /* catalog */ = {isa = PBXFileReference; lastKnownFileType = folder; name = catalog; path = Packages/WitnessCore/Sources/WitnessCore/Resources/catalog; sourceTree = SOURCE_ROOT; };
 		466E4F25EB9148AC89E23A33 /* chapter-05-alala-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-05-alala-ruth.mp3"; sourceTree = "<group>"; };
+		4E91B25A0EC1AFC5E28D4E48 /* interlude-the-uninvited-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "interlude-the-uninvited-ruth.mp3"; sourceTree = "<group>"; };
 		5247498298198A44564825C9 /* AccessModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessModels.swift; sourceTree = "<group>"; };
 		529CD65BB1578906F8DD52FC /* chapter-04-red-wolf-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-04-red-wolf-ruth.mp3"; sourceTree = "<group>"; };
 		547FA1866C21BBC935664EA5 /* FieldSeasonPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSeasonPreviewView.swift; sourceTree = "<group>"; };
@@ -569,6 +573,8 @@
 				192E77993BD98AD5130639B3 /* chapter-06-wollemi-pine-ruth.mp3 */,
 				1DA2098F808686598DBD1727 /* chapter-07-amur-leopard-ruth.mp3 */,
 				8B4D57A0E87B84178EDB8577 /* chapter-08-axolotl-ruth.mp3 */,
+				1E4D454920A0D005027064B2 /* interlude-price-of-parts-ruth.mp3 */,
+				4E91B25A0EC1AFC5E28D4E48 /* interlude-the-uninvited-ruth.mp3 */,
 				EF1D964B153E5C9FC2A646ED /* letter-the-thin-line-ruth.mp3 */,
 			);
 			path = Resources;
@@ -739,6 +745,8 @@
 				BA72186464E240CD1E1B353B /* chapter-06-wollemi-pine-ruth.mp3 in Resources */,
 				A22EF91683B2E4DE5C1824EA /* chapter-07-amur-leopard-ruth.mp3 in Resources */,
 				66CA1EB0F3660B3A478F440B /* chapter-08-axolotl-ruth.mp3 in Resources */,
+				53A52BB3592A35445B396EE3 /* interlude-price-of-parts-ruth.mp3 in Resources */,
+				EAB34DEE96DE9D444F5D303C /* interlude-the-uninvited-ruth.mp3 in Resources */,
 				52114D5B5708DBE5F899C054 /* letter-the-thin-line-ruth.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

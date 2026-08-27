@@ -68,3 +68,5 @@ aws polly list-speech-synthesis-tasks --profile lullable --region us-east-1 --ma
 | 07 amur leopard | `chapter-07-amur-leopard.ssml` | **done** — Ruth long-form, 6:12 | `docs/media/fs1-ch07-audio-rights.md` |
 | 08 axolotl | `chapter-08-axolotl.ssml` | **done** — Ruth long-form, 7:07 | `docs/media/fs1-ch08-audio-rights.md` |
 | letter (opening) | `letter-the-thin-line.ssml` | **done** — Ruth long-form, 4:16 | `docs/media/fs1-letter-audio-rights.md` |
+| interlude 1 | `interlude-price-of-parts.ssml` | **done** — Ruth long-form, 5:59 | `docs/media/fs1-interludes-audio-rights.md` |
+| interlude 2 | `interlude-the-uninvited.ssml` | **done** — Ruth long-form, 5:48 | `docs/media/fs1-interludes-audio-rights.md` |

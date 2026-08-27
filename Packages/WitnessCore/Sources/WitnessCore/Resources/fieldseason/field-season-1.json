@@ -813,6 +813,170 @@
       "shareText": "I just read the Javan rhino's chapter in Witness. The last of them live on a single Indonesian peninsula — and not one lives in any zoo on Earth.\n\nThe rangers: https://rhinos.org/our-work/where-we-work/java/\n\nWitness — remember what is still here."
     },
     {
+      "id": "fs1-interlude-price-of-parts",
+      "number": 0,
+      "title": "The Price of Parts",
+      "speciesID": "season-one",
+      "heroAssetID": null,
+      "audio": {
+        "fileName": "interlude-price-of-parts-ruth",
+        "fileExtension": "mp3",
+        "durationSeconds": 359.1,
+        "voiceDisclosure": "Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file."
+      },
+      "sections": [
+        {
+          "heading": "A PAUSE, BETWEEN CHAPTERS",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "You have now met a porpoise that drowns in nets set for another animal's swim bladder, and a rhino whose last cousin in Vietnam was shot for twenty centimeters of horn. Later in this season you will meet a leopard whose winter coat once sold for more than the people around it earned in a year. Three animals; oceans and forests apart; nothing in common — except the same machine humming behind all three."
+            },
+            {
+              "text": "This is the first of two pauses in Field Season One. No new animal here. Just a look at the machinery, because you cannot witness the counted few honestly without seeing what is counting them down."
+            }
+          ]
+        },
+        {
+          "heading": "THE MACHINE",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "The machine is old and simple: it turns an animal into parts, and parts into money. Its fuel is belief — that a dried swim bladder confers status, that ground horn confers health, that a spotted pelt confers rank. Belief sets a price, the price arms a weapon — a net, a rifle, a snare — and the weapon does not care what else it catches."
+            },
+            {
+              "text": "How big is the machine? Here the honest answer is: nobody can say precisely. Estimates for the illegal wildlife trade run from the single-digit billions to more than twenty billion dollars a year, and the United Nations' own 2024 crime report declines to put one number on it — what it documents instead is seizures touching 162 countries and territories and roughly 4,000 species."
+            },
+            {
+              "text": "What the prices do to animals, you have already seen. A single dried totoaba bladder can bring tens of thousands of dollars per kilogram in its end market — while the fisher who sets the net is paid a small fraction, and the vaquita pays the rest. Rhino horn is keratin, the same protein as your fingernails; its legend says sixty-five thousand dollars a kilogram, but investigators who measured real wholesale prices found less than a third of that, and as little as a tenth at the source. The gap between the legendary price and the real one is not a comfort. It is a lesson: the myth of the price is itself part of the machine, recruiting new hands with a promise it rarely keeps. And the demand has quietly changed shape — today's measured trade in horn is driven less by medicine than by luxury carvings: status, not sickness."
+            }
+          ]
+        },
+        {
+          "heading": "THE LIMITS",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "Witness owes you the hard part. The main lever we have — ban it, then enforce the ban — has real limits, and the people fighting this trade say so themselves."
+            },
+            {
+              "text": "The UN's 2024 assessment is blunt: after two decades of concerted global action, wildlife trafficking has not been substantially reduced. Totoaba fishing has been illegal since 1975, its trade banned worldwide since 1977 — and the vaquita still fell to about ten animals, because a high enough price makes enforcement a dam that always leaks. Researchers add two more uncomfortable truths: a ban with no livelihood behind it lands hardest on the poorest link in the chain, the fisher and the hunter, not the broker — and scientists genuinely disagree about whether prohibition or tightly regulated legal trade protects species better. That debate is unresolved, and we will not pretend otherwise."
+            }
+          ]
+        },
+        {
+          "heading": "WHAT WORKS — WHERE THE CHAIN HAS BROKEN",
+          "style": "numbered",
+          "entries": [
+            {
+              "lead": "Convict the traffickers, not just the poachers.",
+              "text": "In 2023, a Malaysian broker who moved some 219 kilograms of rhino horn was convicted in a United States federal court — one of the network men, not the man with the rifle. His sentence was eighteen months, which is its own honest data point about how lightly the law still weighs this crime."
+            },
+            {
+              "lead": "Make the treaty bite.",
+              "text": "In March 2023 the CITES treaty suspended all wildlife trade with Mexico over the vaquita's protection; within three weeks Mexico filed an acceptable action plan and the suspension lifted. A procedural win — a plan is not a net out of the water — but proof the treaty has teeth when it chooses to use them."
+            },
+            {
+              "lead": "Unmake the belief.",
+              "text": "The machine's first link is the softest. Demand-reduction campaigns work on the buyer's mind — horn is fingernail; the bladder cures nothing — because when the belief dies, the price dies with it."
+            },
+            {
+              "lead": "Take the profit out sideways.",
+              "text": "China's first totoaba-trafficking convictions came in 2018, with sentences of seven and eight years — and researchers are now testing whether legally farmed totoaba could undercut the black-market price entirely. An experiment, not a victory; we will report what it becomes."
+            }
+          ]
+        },
+        {
+          "heading": "A REFLECTIVE PROMPT",
+          "style": "prompt",
+          "entries": [
+            {
+              "text": "The machine runs on one idea: that a rare thing's value lives in its parts. Witnessing bets on the opposite — that its value lives in its being alive. Every purchase is a vote between those two ideas. Which one did your last one feed?"
+            }
+          ]
+        },
+        {
+          "heading": "TAKE ACTION",
+          "style": "action",
+          "entries": [
+            {
+              "lead": "Wildlife Justice Commission",
+              "text": "Funds undercover, intelligence-led investigations that put wildlife traffickers — the brokers and networks, not just the poachers — in front of judges.",
+              "url": "https://wildlifejustice.org/"
+            },
+            {
+              "lead": "WildAid",
+              "text": "Funds mass-media campaigns in consumer countries to unmake the demand itself; its slogan: \"when the buying stops, the killing can too.\"",
+              "url": "https://wildaid.org/"
+            }
+          ]
+        },
+        {
+          "heading": "SOURCES",
+          "style": "sources",
+          "entries": [
+            {
+              "lead": "S1",
+              "text": "UNODC, World Wildlife Crime Report 2024 (3rd edition, May 2024): seizure data across 162 countries/territories and ~4,000 species; assessment that two decades of action have not substantially reduced trafficking; no single global value endorsed."
+            },
+            {
+              "lead": "S2",
+              "text": "UNEP–INTERPOL, The Rise of Environmental Crime (2016): illegal wildlife trade estimated at US$7–23 billion/year; earlier UNODC statements cited $8–10 billion (2014)."
+            },
+            {
+              "lead": "S3",
+              "text": "UC Santa Barbara news (2025) and Global Initiative Against Transnational Organized Crime: totoaba bladder end-market prices ~$20,000–80,000/kg; totoaba CITES Appendix I (1976/77); farmed-totoaba supply research."
+            },
+            {
+              "lead": "S4",
+              "text": "Wildlife Justice Commission, rhino horn trafficking report (2022): measured wholesale prices under one-third of the cited $65,000/kg retail legend, as low as one-tenth at source (highest recorded $7,529/kg, South Africa, Feb 2022); demand shift toward luxury carvings. Keratin: TRAFFIC / Save the Rhino."
+            },
+            {
+              "lead": "S5",
+              "text": "Duffy et al., Conservation Biology: poaching as livelihood strategy; enforcement without alternatives burdens the poorest participants."
+            },
+            {
+              "lead": "S6",
+              "text": "Biological Conservation (2021), \"Trading Tactics\" (2020): the unresolved scientific debate between trade bans and regulated legal trade."
+            },
+            {
+              "lead": "S7",
+              "text": "US Department of Justice, SDNY press release (19 Sep 2023): Teo Boon Ching sentenced to 18 months for conspiring to traffic ~219 kg of rhino horn (~$2.1M)."
+            },
+            {
+              "lead": "S8",
+              "text": "CITES Standing Committee / EIA / Center for Biological Diversity (Mar–Apr 2023): suspension of wildlife trade with Mexico over vaquita protection, lifted 13 April 2023 on acceptance of Mexico's compliance plan."
+            },
+            {
+              "lead": "S9",
+              "text": "WildAid demand-reduction campaign model and reporting."
+            },
+            {
+              "lead": "S10",
+              "text": "Dialogue Earth: China's first totoaba-smuggling convictions, Shanghai, December 2018 (sentences of 7 and 8 years)."
+            },
+            {
+              "text": "Cross-references: vaquita chain and 1975/1977 bans, chapter one; Vietnamese rhino 2010 and horn trade, chapter three; pelt and prey poaching, chapter seven."
+            }
+          ]
+        },
+        {
+          "heading": "CREDITS",
+          "style": "sources",
+          "entries": [
+            {
+              "text": "Written by Witness editorial, drafted with Claude, fact-checked against the sources above (research pack: `research/interludes-factpack.md`)."
+            },
+            {
+              "text": "Narration, when present, uses a synthetic voice (Amazon Polly, Ruth), disclosed in-app."
+            }
+          ]
+        }
+      ],
+      "kind": "interlude",
+      "shareText": "I just read an interlude in Witness about the machine behind three endangered species: a belief, a price, a weapon. The UN's own report admits two decades of enforcement have not substantially reduced the trade — and there are still people breaking the chain, link by link.\n\nThe investigators: wildlifejustice.org\n\nWitness — remember what is still here."
+    },
+    {
       "id": "fs1-ch04-red-wolf",
       "number": 4,
       "title": "Fourteen Founders",
@@ -1544,6 +1708,169 @@
         }
       ],
       "shareText": "I just read the Wollemi pine's chapter in Witness. A tree from the dinosaurs' world survives in a hidden canyon — and you can grow its descendant in your own garden.\n\nThe growers' guide: https://www.botanicgardens.org.au/wollemi-pine-research-projects\n\nWitness — remember what is still here."
+    },
+    {
+      "id": "fs1-interlude-uninvited",
+      "number": 0,
+      "title": "The Uninvited",
+      "speciesID": "season-one",
+      "heroAssetID": null,
+      "audio": {
+        "fileName": "interlude-the-uninvited-ruth",
+        "fileExtension": "mp3",
+        "durationSeconds": 348.0,
+        "voiceDisclosure": "Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file."
+      },
+      "sections": [
+        {
+          "heading": "A PAUSE, BETWEEN CHAPTERS",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "You have now met a parrot whose island refuges were reached by swimming stoats, a crow held out of its own forest partly by a mosquito, and a tree nearly poisoned by what rode in on a bootsole. Ahead is a salamander whose canals filled with fish that were never supposed to be there."
+            },
+            {
+              "text": "This is the season's second pause, and its second pattern. The first pattern was a trade — deliberate, priced, criminal. This one is stranger, because most of it was never anyone's plan. It is the story of everything we bring with us."
+            }
+          ]
+        },
+        {
+          "heading": "THE PATTERN",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "Wherever people have gone, other species have traveled in our wake — in ship hulls and cargo holds, in ballast water and potted plants, on boot soles, and often on purpose, released with good intentions that curdled. The tilapia and carp in the axolotl's canals were introduced as food fish. The stoats in New Zealand were brought to control the rabbits that earlier settlers had also brought."
+            },
+            {
+              "text": "The uninvited mean no harm. A stoat in a kākāpō burrow is simply being a stoat; the mosquito carrying avian malaria upslope is only following the warmth. That is what makes this pattern hard to hate and harder to stop: the fault line runs not through the creatures that moved, but through the moving itself."
+            },
+            {
+              "text": "The bill is now measured. The world's biodiversity panel assessed it in 2023: invasive alien species have played a major role in sixty percent of the world's recorded plant and animal extinctions where the causes are known — and were the sole driver in sixteen percent. The measured economic cost passed 423 billion dollars a year in 2019, and it has at least quadrupled every decade since 1970."
+            },
+            {
+              "text": "Even the season's quietest chapter belongs to this pattern. The organism found in the Wollemi pine's secret grove in 2005 — Phytophthora cinnamomi, a water mould, not a true fungus — was almost certainly carried in by admirers. The infection is documented and the threat is real and ongoing; the grove is not dying of it, and the quarantine exists so that sentence stays true."
+            }
+          ]
+        },
+        {
+          "heading": "THE LIMITS",
+          "style": "prose",
+          "entries": [
+            {
+              "text": "Here is the hard part, told straight. Against established invaders, full eradication has only ever reliably worked in one arena: islands, and island-like places with defensible edges. No one has ever eradicated an established mammal invader from an entire continent. New Zealand's famous Predator Free 2050 goal — a whole nation without rats, possums, or stoats — openly depends on scientific breakthroughs that do not yet exist. And in 2025, the government wound down the dedicated company that funded its landscape projects, folding the work back into the conservation department — ambition and budget do not always travel together."
+            },
+            {
+              "text": "There is also an honest ethical argument inside this fight. Eradication means killing, at scale, animals that did nothing but exist where we put them. Some scientists and advocates call that unjustifiable; others answer that a permanent eradication ends more suffering than control that never stops. Witness reports the debate; it will not pretend the question is easy."
+            }
+          ]
+        },
+        {
+          "heading": "WHAT WORKS — WHERE THE TIDE HAS TURNED",
+          "style": "numbered",
+          "entries": [
+            {
+              "lead": "Defend the defensible edge.",
+              "text": "On Wellington's Miramar Peninsula, rats, stoats, and weasels were declared eliminated in 2023 — and wild kiwi now walk hills above the capital for the first time in living memory. Islands and peninsulas are where this fight is being won, one edge at a time."
+            },
+            {
+              "lead": "Send a mosquito against the mosquito.",
+              "text": "Over the forests of East Maui, and since February 2025 over Kauaʻi's Alakaʻi Plateau, helicopters and drones release lab-reared male mosquitoes whose matings produce eggs that never hatch. Tens of millions have flown; the aim is to crash the population carrying avian malaria — the same disease system that stands between the ʻalalā and its old forests."
+            },
+            {
+              "lead": "Clean boots, closed doors.",
+              "text": "The least glamorous lever is the strongest: quarantine. The Wollemi grove's secrecy and sterilized-boot protocols, and New Zealand's border biosecurity, are the pattern's true front line — keeping the uninvited from arriving at all."
+            },
+            {
+              "lead": "Build the wall in the water.",
+              "text": "In Xochimilco, refuge canals are sealed with volcanic-rock filters and gates the carp and tilapia cannot pass — a wall that lets the water through and holds the invaders out, built with the farmers whose ancestors built the canals."
+            }
+          ]
+        },
+        {
+          "heading": "A REFLECTIVE PROMPT",
+          "style": "prompt",
+          "entries": [
+            {
+              "text": "Every uninvited species had a courier, and the courier rarely knew. Look at your own boots, your garden, your luggage: what might you be moving right now, without meaning anything by it?"
+            }
+          ]
+        },
+        {
+          "heading": "TAKE ACTION",
+          "style": "action",
+          "entries": [
+            {
+              "lead": "Island Conservation",
+              "text": "Funds the removal of invasive species from islands — the one arena where eradication reliably works — and the return of the native wildlife that follows.",
+              "url": "https://www.islandconservation.org/"
+            },
+            {
+              "lead": "Predator Free NZ Trust",
+              "text": "Funds and connects the backyard and community trapping groups working, edge by edge, toward a predator-free New Zealand.",
+              "url": "https://predatorfreenz.org/"
+            }
+          ]
+        },
+        {
+          "heading": "SOURCES",
+          "style": "sources",
+          "entries": [
+            {
+              "lead": "S1",
+              "text": "IPBES, Invasive Alien Species Assessment (approved September 2023; 86 experts, 49 countries): major role in 60% of recorded extinctions with known drivers, sole driver in 16%; >US$423 billion/year cost (2019), at least quadrupling per decade since 1970."
+            },
+            {
+              "lead": "S2",
+              "text": "Predator Free Wellington / NZ Department of Conservation (Nov 2023; DOC progress blog, Sep 2025): Miramar Peninsula elimination of rats, stoats, and weasels; Capital Kiwi releases."
+            },
+            {
+              "lead": "S3",
+              "text": "Journal of the Royal Society of New Zealand (2019), \"Scale and complexity implications of making New Zealand predator-free by 2050\"; Biological Conservation (2023): landscape-scale eradication requires tools that do not yet exist."
+            },
+            {
+              "lead": "S4",
+              "text": "1News (26 May 2025): disestablishment of Predator Free 2050 Ltd; functions absorbed into the Department of Conservation."
+            },
+            {
+              "lead": "S5",
+              "text": "ABC Science (2005): Phytophthora cinnamomi confirmed in the wild Wollemi stand, likely via unauthorized visitors; NSW National Parks anti-Phytophthora program and Wollemi Pine Conservation Project (ongoing quarantine)."
+            },
+            {
+              "lead": "S6",
+              "text": "Mongabay (May 2024); TecScience: chinampa refuge design — tezontle biofilters and invader-proof gates; tilapia and carp introduced as food fish (chapter eight sources)."
+            },
+            {
+              "lead": "S7",
+              "text": "NZ Department of Conservation, Predator Free 2050 programme: history of introduced predators; border biosecurity."
+            },
+            {
+              "lead": "S8",
+              "text": "Journal of Agricultural and Environmental Ethics (2019), \"Predator Free New Zealand and the 'War' on Pests: Is it a Just War?\"; NZ Science Media Centre expert reactions (2022): the animal-welfare debate over eradication."
+            },
+            {
+              "lead": "S9",
+              "text": "Birds, Not Mosquitoes coalition; Smithsonian (2025): Maui incompatible-male releases since Nov 2023, 40+ million by mid-2025; Kauai Now / Hawaiʻi DLNR (Feb 2025): first Kauaʻi release, scaling toward ~500,000 males/week. (Flagship beneficiaries are honeycreepers; the ʻalalā shares the disease system, not the program.)"
+            },
+            {
+              "text": "Cross-references: stoats and island evacuations, chapter two; mosquitoes and malaria, chapter five; the bootsole pathogen, chapter six; the canal invaders and refuge filters, chapter eight."
+            }
+          ]
+        },
+        {
+          "heading": "CREDITS",
+          "style": "sources",
+          "entries": [
+            {
+              "text": "Written by Witness editorial, drafted with Claude, fact-checked against the sources above (research pack: `research/interludes-factpack.md`)."
+            },
+            {
+              "text": "Narration, when present, uses a synthetic voice (Amazon Polly, Ruth), disclosed in-app."
+            }
+          ]
+        }
+      ],
+      "kind": "interlude",
+      "shareText": "I just read an interlude in Witness about the species we carry with us. Invasive species have played a major role in six out of ten recorded extinctions — and a peninsula in New Zealand's capital just got its rats, stoats, and weasels to zero.\n\nThe trappers: predatorfreenz.org\n\nWitness — remember what is still here."
     },
     {
       "id": "fs1-ch07-amur-leopard",

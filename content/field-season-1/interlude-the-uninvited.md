@@ -5,7 +5,7 @@ speciesID: season-one
 title: "The Uninvited"
 kind: interlude
 chapterNumber: 0
-status: draft  # founder review pending
+status: approved  # founder (Alberto Villalpando) approved 2026-08-27 — "Approve both interludes" (execution-two binder)
 author: Witness editorial (drafted with Claude, fact-checked against cited sources)
 lastFactChecked: 2026-08-27
 rightsNotes: >
