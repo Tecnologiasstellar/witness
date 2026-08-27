@@ -8,35 +8,36 @@ Preview deployed: 2026-08-27
 
 - Canonical domain: `https://witnessatlas.com/`
 - Canonical `www` behavior: permanent redirect to the apex domain, preserving the full path.
-- Legacy Vercel alias behavior: permanent redirect to the canonical apex domain, preserving the full path.
+- Public legacy Vercel alias behavior: `witness-rho.vercel.app` permanently redirects to the canonical apex domain while preserving the full path. The team-scoped Vercel alias remains behind existing Vercel SSO protection.
 - Registrar and DNS host: GoDaddy; existing nameservers and email-related MX, TXT, DKIM, and DMARC records remain unchanged.
 - Vercel domain attachment: complete for `witnessatlas.com` and `www.witnessatlas.com`.
-- DNS cutover: awaiting explicit approval of the exact GoDaddy record edits.
+- DNS cutover: complete and publicly verified. GoDaddy nameservers and all existing email-related records were preserved.
 
 ## Production result
 
-- Production deployment: `dpl_2oy1gncewf1C2Adihdq2VAP5kuPU`
-- Production URL: `https://witness-rho.vercel.app/`
-- Immutable source preview: `dpl_6r2sc7t33BA364mk5ySHc7oHWG8W`
-- Source commits: `528df0e` and `a5d4b0c` on top of website commit `b2eaf2b`
+- Production deployment: `dpl_FmuXZobtMx4c6cJqY3DeqxgNsUXc`
+- Production URL: `https://witnessatlas.com/`
+- Immutable source preview promoted: `dpl_7EEcHfH32Vgku7wsDfeJZ1QnEiYt`
+- Source commit: `a01d5df` (`Prepare Witness official domain migration`)
 - Status: `Ready`
 - Public crawl: PASS; 39/39 routes returned HTTP 200
 - Production Lighthouse: Performance 95, Accessibility 100, Best Practices 100, SEO 100
-- Project settings, domains, and environment variables changed: no
-- Previous rollback deployment: `dpl_5wrYmeupoDBZavQ4MJDczCcoCJT5`
+- Domain aliases changed: `witnessatlas.com` and `www.witnessatlas.com` became production aliases; the public legacy alias now redirects permanently to the apex.
+- Project environment variables changed: no
+- Immediate pre-cutover rollback deployment: `dpl_2oy1gncewf1C2Adihdq2VAP5kuPU`
 
 ## Preview result
 
-- Deployment ID: `dpl_Ayhs6hCU8toWkboddv3qdBdK6Saa`
-- Preview URL: `https://witness-4nvnhbw96-tecnologiasstellars-projects.vercel.app`
-- Inspector: `https://vercel.com/tecnologiasstellars-projects/witness/Ayhs6hCU8toWkboddv3qdBdK6Saa`
+- Deployment ID: `dpl_7EEcHfH32Vgku7wsDfeJZ1QnEiYt`
+- Preview URL: `https://witness-qyz2kpeos-tecnologiasstellars-projects.vercel.app`
+- Inspector: `https://vercel.com/tecnologiasstellars-projects/witness/7EEcHfH32Vgku7wsDfeJZ1QnEiYt`
 - Status: `Ready`
 - Production alias changed at the founder-approved promotion step
 - Project settings, domains, and environment variables changed: no
 
 ## Exact target
 
-| Setting | Proposed value |
+| Setting | Final value |
 |---|---|
 | Vercel team | `team_cyGKvdd1xun0Cyd5xyWcFQTe` |
 | Vercel project | `witness` (`prj_33pVN7nvYINyD2fzb6Ebdzyw5EbV`) |
@@ -80,21 +81,23 @@ The local `.env.local` contains only a Vercel CLI OIDC token and is ignored. It 
 
 ## Executed sequence
 
-1. Deploy this exact committed site to a Vercel preview, without changing domains, environment variables, project settings, or the production alias.
-2. Verify every generated route, mobile and desktop layout, keyboard behavior, metadata, external links, and Lighthouse on that preview.
-3. Present the preview URL and evidence. Request a separate explicit approval to promote it to production.
-4. Only after production approval, promote the verified immutable preview to the existing project alias.
+1. Deployed the exact committed site to an immutable Vercel preview and verified it before changing production.
+2. Attached and verified `witnessatlas.com` and `www.witnessatlas.com` on the existing Vercel project.
+3. After explicit approval, replaced only the GoDaddy parking records with `A @ 216.198.79.1`, `A @ 64.29.17.1`, and `CNAME www 9da28e999f1f52d9.vercel-dns-017.com`, all at TTL 600.
+4. Preserved GoDaddy nameservers plus all MX, SPF, DMARC, DKIM, bounce, and Domain Connect records.
+5. Verified public DNS and Vercel configuration, issued managed TLS for apex and `www`, then promoted preview `dpl_7EEcHfH32Vgku7wsDfeJZ1QnEiYt` to production.
+6. Verified the official homepage, canonical metadata, all 39 public routes/assets, Lighthouse, and path-preserving 308 redirects from `www` and the public legacy Vercel alias. The team-scoped Vercel alias correctly remains behind its pre-existing SSO protection.
 
-## Expected result
+## Final result
 
 - 41 generated static pages, including the favicon route.
 - No database, API route, analytics, cookies, account, email capture, payment, or production collective count.
-- Replacement of the current public presentation only after the separate production approval.
+- Official traffic now resolves to the promoted presentation after separate DNS-cutover and production-promotion approval.
 
 ## Rollback
 
-If the approved production promotion regresses, immediately reassign the production alias to the prior known-good Vercel deployment. No data migration or environment rollback is required because this payload introduces no persisted data or environment changes.
+If the approved production promotion regresses, reassign the production aliases to `dpl_2oy1gncewf1C2Adihdq2VAP5kuPU`. If the domain cutover itself must be reversed, restore the prior GoDaddy parking A record and `www` alias from the pre-cutover inventory. No data migration or environment rollback is required because this payload introduces no persisted data or environment changes.
 
 ## Approval record
 
-Preview approval was received first. Production promotion was separately and explicitly approved afterward. No other external mutation was authorized or performed.
+Preview approval was received first. The founder then explicitly approved both the GoDaddy DNS cutover and production promotion. Only the three approved DNS record changes, Vercel managed-certificate issuance, and promotion of the verified immutable preview were performed.
