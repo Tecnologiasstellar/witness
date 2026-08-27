@@ -1,8 +1,17 @@
 # Proposed Vercel deployment payload
 
-Status: awaiting founder approval  
+Status: preview deployment approved and executed; production promotion not approved  
 Prepared: 2026-08-27  
-No Vercel mutation has been made.
+Preview deployed: 2026-08-27
+
+## Preview result
+
+- Deployment ID: `dpl_Ayhs6hCU8toWkboddv3qdBdK6Saa`
+- Preview URL: `https://witness-4nvnhbw96-tecnologiasstellars-projects.vercel.app`
+- Inspector: `https://vercel.com/tecnologiasstellars-projects/witness/Ayhs6hCU8toWkboddv3qdBdK6Saa`
+- Status: `Ready`
+- Production alias changed: no
+- Project settings, domains, and environment variables changed: no
 
 ## Exact target
 
