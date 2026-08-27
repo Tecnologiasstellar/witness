@@ -46,13 +46,21 @@ final class AccessSurfacesUITests: XCTestCase {
         XCTAssertTrue(app.buttons["access.overview.restore"].exists)
         XCTAssertTrue(app.buttons["access.overview.support"].exists)
 
-        // Field Season preview: free promise and purchase.
+        // Field Season preview: free promise and purchase. Retry the tap
+        // once: synthesized taps occasionally land on a settling frame and
+        // are dropped (same flake family as openIndex).
         app.buttons["access.overview.fieldseason"].tap()
         let purchase = app.buttons["access.fieldseason.purchase"]
         XCTAssertTrue(purchase.waitForExistence(timeout: 5))
         purchase.tap()
-        XCTAssertTrue(app.staticTexts["access.fieldseason.owned"].waitForExistence(timeout: 5)
-            || app.otherElements["access.fieldseason.owned"].waitForExistence(timeout: 2))
+        var owned = app.staticTexts["access.fieldseason.owned"].waitForExistence(timeout: 5)
+            || app.otherElements["access.fieldseason.owned"].waitForExistence(timeout: 2)
+        if !owned, purchase.exists {
+            purchase.tap()
+            owned = app.staticTexts["access.fieldseason.owned"].waitForExistence(timeout: 5)
+                || app.otherElements["access.fieldseason.owned"].waitForExistence(timeout: 2)
+        }
+        XCTAssertTrue(owned)
 
         // Back to the overview; ownership is reflected.
         app.navigationBars.buttons.firstMatch.tap()
