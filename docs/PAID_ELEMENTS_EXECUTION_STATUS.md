@@ -191,6 +191,12 @@ Discovered local `main` was stale at 363ad14 while `origin/main` (f81b011) carri
 - Revision 2 (founder notes 2026-08-26): warmer storytelling tone; restructured into The Past / The Present / The Future blocks (threat chain lives inside The Past, known/unknown inside The Present, odds-improving levers in The Future); dossier now 1,132 words (still under the 1,200 cap). Artifact republished at the same URL.
 - Narration decided: synthetic voice via AWS Polly on the Lullable AWS account with strict separation (dedicated `witness-audio` S3 prefix, founder-run commands, credentials never in repo/chat). `content/field-season-1/audio/chapter-01-vaquita.ssml` + synthesis runbook committed; the app must disclose the synthetic voice; per-chapter audio rights record required before shipping. No "complete narrated edition" promise until every chapter has audio.
 
+## Reader + chapter production evidence (2026-08-26 night)
+
+- **In-app reading/listening screen SHIPPED** (commit eb4e84d): WitnessCore FieldSeason models + fail-closed loader (edition JSON bundled from the approved chapter 1; 63 core tests / 15 suites green), FieldSeasonView chapter list with honest "in production" rows, ChapterReaderView (plate, sections, timeline, prompt), ChapterAudioPlayer (AVAudioPlayer, play/pause/scrub, mandatory synthetic-voice disclosure), gated entry from the owned/included Field Season states. Proven end-to-end by new UI test (fake purchase → open edition → chapter 1 → disclosure) — 4/4 access UI tests pass; JSON + chapter-1 mp3 verified inside the built app bundle.
+- **Chapter 2 drafted** (kākāpō, "Every Kākāpō Has a Name", 1,169 words, status draft-for-founder-review) from a web-verified fact pack; review artifact https://claude.ai/code/artifact/6974eeb1-5c35-494e-936e-0539ab3da660. Star fact: 2026 is the biggest kākāpō breeding season on record (95+ chicks by April, DOC/Mongabay).
+- **Fact packs banked** for chapters 3 (Javan rhino) and 4 (red wolf) in `content/field-season-1/research/` — dramatic, verified, with count-conflict cautions.
+
 ## Next highest-leverage action
 
 With the founder, retire the old Witness+ products and create the approved four products + entitlements + `witness_access_v1` offering in App Store Connect and RevenueCat, then drop a production `RevenueCatConfig.plist` into the app for the first Test Store/Sandbox purchase. Remaining Phase 5 safe local portion: the premium signed-URL authorization path. In parallel, founder decisions in the Blockers section unblock RevenueCat Test Store evidence and hosted Supabase.
