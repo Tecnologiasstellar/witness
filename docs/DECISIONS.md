@@ -172,7 +172,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 
 ## D-022 — Grace period grants Atlas access; billing retry does not
 
-- Status: proposed for approval
+- Status: accepted by founder (Alberto Villalpando, 2026-08-27 — "approve D-022")
 - Date: 2026-08-26
 - Decision: `StandardContentAccessPolicy` treats an Atlas subscription in Apple's grace period as access-granting and a billing-retry period after grace as access-denying. Expired, revoked, inactive, and unknown states deny paid access. Free content is always authorized regardless of provider state.
 - Reason: Grace period is Apple's mechanism for continuing service while payment recovers; denying during it punishes a paying member for a card hiccup. Billing retry after grace means the paid period genuinely lapsed.
