@@ -211,6 +211,12 @@ Discovered local `main` was stale at 363ad14 while `origin/main` (f81b011) carri
 - **Founder-executed sandbox test PASSED**: live price "$19.99" rendered from the store; purchase completed with sandbox tester (albertovillalpando+lullable2@gmail.com); owned state appeared; OPEN THE EDITION showed 2 of 8 chapters; narration audio played. Founder quote: "It works... it worked perfectly."
 - Gates advanced: RevenueCat production adapter now evidenced on device with a real StoreKit sandbox transaction. REMAINING in the purchase matrix: Support tip, Atlas six-month + annual (incl. accelerated sandbox renewal/expiry), restore-purchases, Atlas-active "included" state on the Field Season page, Ask-to-Buy pending, and RevenueCat dashboard event evidence.
 
+### Purchase-matrix round 2 (2026-08-27, founder-executed)
+
+- Atlas: both durations rendered with live prices; calculated "Best value" badge showed on annual; founder purchased ANNUAL in sandbox → access-confirmed state. RevenueCat Customers shows 2 sandbox app-user rows.
+- Support tip: app showed its honest fallback "Support is not available in this build" — the code path fires only when the store returns no support product; FS + both Atlas products returned fine, so the consumable specifically isn't being served by Apple yet (propagation lag or ASC status not yet Ready to Submit). Not an app defect; retest after checking the consumable's ASC status.
+- Remaining matrix: tip retest, six-month duration, accelerated sandbox renewal/expiry observation, restore-purchases, Ask-to-Buy.
+
 ## Next highest-leverage action
 
 With the founder, retire the old Witness+ products and create the approved four products + entitlements + `witness_access_v1` offering in App Store Connect and RevenueCat, then drop a production `RevenueCatConfig.plist` into the app for the first Test Store/Sandbox purchase. Remaining Phase 5 safe local portion: the premium signed-URL authorization path. In parallel, founder decisions in the Blockers section unblock RevenueCat Test Store evidence and hosted Supabase.
