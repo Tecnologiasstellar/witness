@@ -31,13 +31,13 @@ CHAPTERS = [
     ("chapter-08-axolotl.md", "axolotl-plate-01", "chapter-08-axolotl-ruth"),
 ]
 
-# Supporting pieces: (md file, audio basename or None). Position in the
-# edition comes from READING_ORDER below, not from chapter numbers.
+# Supporting pieces: (md file, hero asset or None, audio basename). Position
+# in the edition comes from READING_ORDER below, not from chapter numbers.
 PIECES = [
-    ("letter-the-thin-line.md", "letter-the-thin-line-ruth"),
-    ("interlude-price-of-parts.md", "interlude-price-of-parts-ruth"),
-    ("interlude-the-uninvited.md", "interlude-the-uninvited-ruth"),
-    ("synthesis-what-the-counted-teach.md", "synthesis-what-the-counted-teach-ruth"),
+    ("letter-the-thin-line.md", None, "letter-the-thin-line-ruth"),
+    ("interlude-price-of-parts.md", None, "interlude-price-of-parts-ruth"),
+    ("interlude-the-uninvited.md", None, "interlude-the-uninvited-ruth"),
+    ("synthesis-what-the-counted-teach.md", "season-plate-01", "synthesis-what-the-counted-teach-ruth"),
 ]
 
 READING_ORDER = [
@@ -263,10 +263,10 @@ pieces = [patch_kept(c) for c in edition["chapters"] if c["number"] <= 2 and not
 for md_name, hero, audio_file in CHAPTERS:
     if piece := build(md_name, hero, audio_file):
         pieces.append(piece)
-for md_name, audio_file in PIECES:
+for md_name, hero, audio_file in PIECES:
     if not (CONTENT / md_name).exists():
         continue
-    if piece := build(md_name, None, audio_file):
+    if piece := build(md_name, hero, audio_file):
         pieces.append(piece)
 
 order = {chap_id: i for i, chap_id in enumerate(READING_ORDER)}
