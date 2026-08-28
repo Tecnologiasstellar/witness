@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0391F7D6F1F5D522AE12E605 /* synthesis-what-the-counted-teach-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6AD83ABA3AFD8E46B6D7478F /* synthesis-what-the-counted-teach-ruth.mp3 */; };
 		039DD09DE0BA0852B7173E02 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 354B4FA9912938B2089D120C /* RevenueCat */; };
 		09C0E9F2401FF72DB6D73683 /* FileHelpingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728216AE022B82B5021127E5 /* FileHelpingStore.swift */; };
 		106976C13CF5B0CEDEF07791 /* StoreKitPurchaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0847C1B3D0DEC53D13F6F6 /* StoreKitPurchaseAdapter.swift */; };
@@ -162,6 +163,7 @@
 		56AD8E8C40D0019EBB30514B /* WeeklySpeciesSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySpeciesSelector.swift; sourceTree = "<group>"; };
 		65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaquitaHeroArtwork.swift; sourceTree = "<group>"; };
 		69F8CC0B121B3CF8F09B6BF6 /* RevenueCatConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = RevenueCatConfig.plist; sourceTree = "<group>"; };
+		6AD83ABA3AFD8E46B6D7478F /* synthesis-what-the-counted-teach-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "synthesis-what-the-counted-teach-ruth.mp3"; sourceTree = "<group>"; };
 		6BC9CF6489D7C89535986EFB /* WitnessUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		728216AE022B82B5021127E5 /* FileHelpingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelpingStore.swift; sourceTree = "<group>"; };
 		748A9A762F916DB930D49697 /* ChapterReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterReaderView.swift; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 				1E4D454920A0D005027064B2 /* interlude-price-of-parts-ruth.mp3 */,
 				4E91B25A0EC1AFC5E28D4E48 /* interlude-the-uninvited-ruth.mp3 */,
 				EF1D964B153E5C9FC2A646ED /* letter-the-thin-line-ruth.mp3 */,
+				6AD83ABA3AFD8E46B6D7478F /* synthesis-what-the-counted-teach-ruth.mp3 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -748,6 +751,7 @@
 				53A52BB3592A35445B396EE3 /* interlude-price-of-parts-ruth.mp3 in Resources */,
 				EAB34DEE96DE9D444F5D303C /* interlude-the-uninvited-ruth.mp3 in Resources */,
 				52114D5B5708DBE5F899C054 /* letter-the-thin-line-ruth.mp3 in Resources */,
+				0391F7D6F1F5D522AE12E605 /* synthesis-what-the-counted-teach-ruth.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

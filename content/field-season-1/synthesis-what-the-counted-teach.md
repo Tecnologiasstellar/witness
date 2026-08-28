@@ -5,7 +5,7 @@ speciesID: season-one
 title: "What the Counted Teach"
 kind: synthesis
 chapterNumber: 0
-status: draft  # founder review pending
+status: approved  # founder (Alberto Villalpando) approved 2026-08-27 — "Approve the close" (execution-three binder: plate + synthesis)
 author: Witness editorial (drafted with Claude)
 lastFactChecked: 2026-08-27
 rightsNotes: >

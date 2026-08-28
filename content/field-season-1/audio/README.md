@@ -70,3 +70,4 @@ aws polly list-speech-synthesis-tasks --profile lullable --region us-east-1 --ma
 | letter (opening) | `letter-the-thin-line.ssml` | **done** — Ruth long-form, 4:16 | `docs/media/fs1-letter-audio-rights.md` |
 | interlude 1 | `interlude-price-of-parts.ssml` | **done** — Ruth long-form, 5:59 | `docs/media/fs1-interludes-audio-rights.md` |
 | interlude 2 | `interlude-the-uninvited.ssml` | **done** — Ruth long-form, 5:48 | `docs/media/fs1-interludes-audio-rights.md` |
+| synthesis (closing) | `synthesis-what-the-counted-teach.ssml` | **done** — Ruth long-form, 5:37 | `docs/media/fs1-synthesis-audio-rights.md` |
