@@ -1,5 +1,22 @@
+import CoreTransferable
 import SwiftUI
 import WitnessCore
+
+/// The keepsake album, rendered only when the user actually exports it.
+struct FieldAlbumExport: Transferable {
+    let edition: FieldSeasonEdition
+
+    static var transferRepresentation: some TransferRepresentation {
+        FileRepresentation(exportedContentType: .pdf) { export in
+            let url = FileManager.default.temporaryDirectory
+                .appendingPathComponent("Witness-Field-Season-One.pdf")
+            try await MainActor.run {
+                try FieldAlbumComposer.render(edition: export.edition, to: url)
+            }
+            return SentTransferredFile(url)
+        }
+    }
+}
 
 /// The owned Field Season edition: chapter list and reading/listening
 /// entry. Reached only from entitled states, and still fails closed —
@@ -45,6 +62,8 @@ struct FieldSeasonView: View {
                                 : "fieldseason.piece.\(chapter.id)"
                         )
                     }
+
+                    albumExport(edition)
 
                     let shippedChapters = edition.chapters.filter { $0.resolvedKind == .chapter }.count
                     if shippedChapters < edition.plannedChapterCount {
@@ -95,6 +114,45 @@ struct FieldSeasonView: View {
         .overlay(alignment: .bottom) {
             Rectangle().fill(AtlasTheme.ruleSoft).frame(height: 1)
         }
+    }
+
+    /// One tap renders the season into a keepsake PDF and hands it to the
+    /// share sheet — the plate as cover, every piece, every door as a link.
+    private func albumExport(_ edition: FieldSeasonEdition) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            AccessSectionHeading(text: "THE FIELD ALBUM")
+            ShareLink(
+                item: FieldAlbumExport(edition: edition),
+                preview: SharePreview("Witness — \(edition.title)", image: Image("season-plate-01"))
+            ) {
+                HStack(alignment: .firstTextBaseline, spacing: 12) {
+                    Image(systemName: "square.and.arrow.down.on.square")
+                        .font(.title3)
+                        .foregroundStyle(AtlasTheme.sepia)
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("Export the season as a field album")
+                            .font(AtlasType.display(16, weight: .medium))
+                        Text("A keepsake PDF — the plate as cover, every piece, every door. Yours to keep and pass on.")
+                            .font(.footnote)
+                            .foregroundStyle(AtlasTheme.inkMuted)
+                            .lineSpacing(3)
+                            .multilineTextAlignment(.leading)
+                    }
+                    Spacer()
+                }
+                .padding(14)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(AtlasTheme.paperFresh, in: RoundedRectangle(cornerRadius: 6))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 6)
+                        .strokeBorder(AtlasTheme.sepia.opacity(0.35), lineWidth: 1)
+                )
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("fieldseason.album.export")
+        }
+        .padding(.top, 8)
     }
 
     /// Chapters keep their number; the letter, interludes, and synthesis
