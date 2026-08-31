@@ -1,10 +1,15 @@
 import SwiftUI
 import WitnessCore
 
-/// Preview and purchase surface for the first Field Season edition.
+/// Preview and purchase surface for the first Field Season edition —
+/// presented like the cover of a bound book: the season plate, the real
+/// contents, and the opening letter's narration to taste before buying.
 /// Permanent one-edition ownership; included while Atlas is active.
 struct FieldSeasonPreviewView: View {
     @ObservedObject var commerce: CommerceModel
+    @StateObject private var samplePlayer = ChapterAudioPlayer()
+
+    private let edition = FieldSeasonLoader.loadBundledEdition()
 
     var body: some View {
         ScrollView {
@@ -13,18 +18,16 @@ struct FieldSeasonPreviewView: View {
                     .font(AtlasType.display(30, weight: .semibold))
                     .accessibilityAddTraits(.isHeader)
 
+                seasonPlate
+
                 Text("A finite, authored edition about one ecological edge: its species, pressures, uncertainties, and possible forms of attention. Purchasing keeps this edition permanently — it is not a subscription.")
                     .font(.callout)
                     .lineSpacing(4)
 
-                AccessSectionHeading(text: "THE EDITION CONTAINS")
-                VStack(alignment: .leading, spacing: 8) {
-                    deliverable("An opening field letter")
-                    deliverable("Eight species chapters, each with its complete free record and a premium dossier")
-                    deliverable("Two system interludes and a closing synthesis")
-                    deliverable("The season plate, drawn for this edition")
-                    deliverable("Every piece narrated — about eighty minutes of audio, with the full text on every page")
-                    deliverable("A one-tap field album: the season as a keepsake PDF")
+                if let edition {
+                    statRow(edition)
+                    sampleRow(edition)
+                    contents(edition)
                 }
 
                 AccessStateNotice(
@@ -58,8 +61,164 @@ struct FieldSeasonPreviewView: View {
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .task { await commerce.startIfNeeded() }
-        .onDisappear { commerce.clearTransientPhases() }
+        .onDisappear {
+            commerce.clearTransientPhases()
+            samplePlayer.stop()
+        }
     }
+
+    // MARK: - Cover
+
+    @ViewBuilder
+    private var seasonPlate: some View {
+        if UIImage(named: "season-plate-01") != nil {
+            VStack(alignment: .leading, spacing: 8) {
+                Image("season-plate-01")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity)
+                    .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+                Text("THE COUNTED FEW · SEASON PLATE")
+                    .font(AtlasType.technical(9, weight: .medium))
+                    .tracking(1.1)
+                    .foregroundStyle(AtlasTheme.inkMuted)
+            }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("The season plate, titled The Counted Few: the eight species of the edition drawn together")
+        }
+    }
+
+    private func statRow(_ edition: FieldSeasonEdition) -> some View {
+        let chapterCount = edition.chapters.filter { $0.resolvedKind == .chapter }.count
+        let narratedMinutes = Int((edition.chapters.compactMap { $0.audio?.durationSeconds }.reduce(0, +) / 60).rounded())
+        return HStack(spacing: 10) {
+            statTile(value: "\(edition.chapters.count)", label: "PIECES")
+            statTile(value: "\(chapterCount)", label: "SPECIES")
+            statTile(value: "\(narratedMinutes) MIN", label: "NARRATED")
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(edition.chapters.count) pieces, \(chapterCount) species, \(narratedMinutes) minutes narrated")
+    }
+
+    private func statTile(value: String, label: String) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(label)
+                .font(AtlasType.technical(9, weight: .bold))
+                .tracking(1.1)
+                .foregroundStyle(AtlasTheme.sepia)
+            Text(value)
+                .font(AtlasType.display(20, weight: .semibold))
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 10)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(AtlasTheme.paperFresh)
+        .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+    }
+
+    // MARK: - Taste
+
+    /// The opening letter's full narration, playable before any purchase —
+    /// the edition's honest sample.
+    @ViewBuilder
+    private func sampleRow(_ edition: FieldSeasonEdition) -> some View {
+        if let letter = edition.chapters.first(where: { $0.resolvedKind == .letter }), let audio = letter.audio {
+            Button {
+                samplePlayer.load(audio)
+                samplePlayer.toggle()
+            } label: {
+                HStack(spacing: 12) {
+                    Image(systemName: samplePlayer.isPlaying ? "pause.circle.fill" : "play.circle.fill")
+                        .font(.title)
+                        .foregroundStyle(AtlasTheme.sepia)
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("HEAR THE OPENING")
+                            .font(AtlasType.technical(10, weight: .bold))
+                            .tracking(1.1)
+                            .foregroundStyle(AtlasTheme.sepia)
+                        Text("“\(letter.title)” · \(ChapterAudioPlayer.timestamp(audio.durationSeconds))")
+                            .font(AtlasType.display(15, weight: .medium))
+                            .foregroundStyle(AtlasTheme.ink)
+                    }
+                    Spacer()
+                }
+                .padding(14)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(AtlasTheme.paperFresh)
+                .overlay(Rectangle().stroke(AtlasTheme.sepia.opacity(0.35), lineWidth: 1))
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("access.fieldseason.sample")
+            .accessibilityLabel(samplePlayer.isPlaying ? "Pause the opening letter narration" : "Play the opening letter narration, \(letter.title)")
+        }
+    }
+
+    // MARK: - Contents
+
+    private func contents(_ edition: FieldSeasonEdition) -> some View {
+        VStack(alignment: .leading, spacing: 0) {
+            AccessSectionHeading(text: "THE EDITION CONTAINS")
+                .padding(.bottom, 4)
+            ForEach(edition.chapters) { piece in
+                contentsRow(piece)
+            }
+        }
+    }
+
+    private func contentsRow(_ piece: FieldSeasonChapter) -> some View {
+        HStack(alignment: .center, spacing: 12) {
+            Text(rowMark(piece))
+                .font(AtlasType.display(18, weight: .medium))
+                .foregroundStyle(AtlasTheme.sepia)
+                .frame(minWidth: 26, alignment: .leading)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(piece.title)
+                    .font(AtlasType.display(16, weight: .medium))
+                    .multilineTextAlignment(.leading)
+                Text(rowSubtitle(piece))
+                    .font(AtlasType.technical(9, weight: .medium))
+                    .tracking(0.8)
+                    .foregroundStyle(AtlasTheme.inkMuted)
+            }
+            Spacer()
+            if piece.resolvedKind == .chapter,
+               let assetID = piece.heroAssetID, UIImage(named: assetID) != nil {
+                Image(assetID)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 44, height: 44)
+                    .clipped()
+                    .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+                    .accessibilityHidden(true)
+            }
+        }
+        .padding(.vertical, 9)
+        .overlay(alignment: .bottom) {
+            Rectangle().fill(AtlasTheme.ruleSoft).frame(height: 1)
+        }
+        .accessibilityElement(children: .combine)
+    }
+
+    private func rowMark(_ piece: FieldSeasonChapter) -> String {
+        switch piece.resolvedKind {
+        case .chapter: String(format: "%02d", piece.number)
+        case .letter: "✦"
+        case .interlude: "·"
+        case .synthesis: "✦"
+        }
+    }
+
+    private func rowSubtitle(_ piece: FieldSeasonChapter) -> String {
+        switch piece.resolvedKind {
+        case .chapter: "CHAPTER · FREE RECORD + PREMIUM DOSSIER"
+        case .letter: "OPENING FIELD LETTER"
+        case .interlude: "INTERLUDE"
+        case .synthesis: "CLOSING SYNTHESIS + SEASON PLATE"
+        }
+    }
+
+    // MARK: - Purchase
 
     @ViewBuilder
     private var purchaseArea: some View {
@@ -128,12 +287,5 @@ struct FieldSeasonPreviewView: View {
         }
         .buttonStyle(.plain)
         .accessibilityIdentifier("access.fieldseason.open")
-    }
-
-    private func deliverable(_ text: String) -> some View {
-        HStack(alignment: .firstTextBaseline, spacing: 8) {
-            Text("·").foregroundStyle(AtlasTheme.sepia)
-            Text(text).font(.footnote).lineSpacing(2)
-        }
     }
 }

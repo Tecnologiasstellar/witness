@@ -12,6 +12,7 @@ struct SpeciesCardV2: View {
     var topInset: CGFloat = 0
     let onOpenIndex: () -> Void
     let onOpenReflection: () -> Void
+    var onOpenFieldSeason: (() -> Void)? = nil
 
     var body: some View {
         VStack(spacing: 0) {
@@ -45,6 +46,12 @@ struct SpeciesCardV2: View {
             WitnessActionView(species: species, model: model, onOpenReflection: onOpenReflection)
                 .padding(.horizontal, 24)
                 .padding(.top, 40)
+
+            if let onOpenFieldSeason {
+                FieldSeasonDoor(species: species, onOpen: onOpenFieldSeason)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 34)
+            }
 
             EvidenceFooter(species: species)
                 .padding(.horizontal, 24)
@@ -555,6 +562,60 @@ private struct EvidenceFooter: View {
             }
             Text("Record last fact-checked \(species.editorial.lastFactChecked). Artwork: \(species.media.depictionType.lowercased()).")
                 .font(.caption).foregroundStyle(AtlasTheme.inkMuted)
+        }
+    }
+}
+
+// MARK: - Field Season door
+
+/// A quiet, honest door shown when this week's species has a full chapter
+/// in the season edition — the highest-intent moment to mention it exists.
+/// States a fact, promises nothing, and opens the Field Season preview.
+private struct FieldSeasonDoor: View {
+    let species: SpeciesRecord
+    let onOpen: () -> Void
+
+    private let chapter: FieldSeasonChapter?
+
+    init(species: SpeciesRecord, onOpen: @escaping () -> Void) {
+        self.species = species
+        self.onOpen = onOpen
+        self.chapter = FieldSeasonLoader.loadBundledEdition()?
+            .chapters.first { $0.resolvedKind == .chapter && $0.speciesID == species.id }
+    }
+
+    var body: some View {
+        if let chapter {
+            Button(action: onOpen) {
+                HStack(alignment: .center, spacing: 12) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("CHAPTER \(String(format: "%02d", chapter.number)) · FIELD SEASON ONE")
+                            .font(AtlasType.technical(9, weight: .bold))
+                            .tracking(1.1)
+                            .foregroundStyle(AtlasTheme.sepia)
+                        Text("“\(chapter.title)”")
+                            .font(AtlasType.display(17, weight: .medium))
+                            .multilineTextAlignment(.leading)
+                        Text("The \(species.commonName.lowercased()) has a full chapter in the season edition — narrated, sourced, with its premium dossier.")
+                            .font(.footnote)
+                            .foregroundStyle(AtlasTheme.inkMuted)
+                            .lineSpacing(3)
+                            .multilineTextAlignment(.leading)
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.caption)
+                        .foregroundStyle(AtlasTheme.sepia)
+                }
+                .padding(14)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(AtlasTheme.paperFresh)
+                .overlay(Rectangle().stroke(AtlasTheme.sepia.opacity(0.35), lineWidth: 1))
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("today.fieldseason.door")
+            .accessibilityLabel("Chapter \(chapter.number) of Field Season One, \(chapter.title). Opens the Field Season page.")
         }
     }
 }

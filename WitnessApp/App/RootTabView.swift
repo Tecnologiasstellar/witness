@@ -26,6 +26,7 @@ struct RootTabView: View {
     @State private var selection: AtlasTab = .today
     @State private var isIndexPresented = false
     @State private var isReflectionPresented = false
+    @State private var isFieldSeasonPresented = false
 
     var body: some View {
         // A plain VStack, not a safeAreaInset: insets applied outside a
@@ -38,7 +39,12 @@ struct RootTabView: View {
                     switch selection {
                     case .today:
                         NavigationStack {
-                            TodayView(model: model, onOpenIndex: { isIndexPresented = true }, onOpenReflection: { isReflectionPresented = true })
+                            TodayView(
+                                model: model,
+                                onOpenIndex: { isIndexPresented = true },
+                                onOpenReflection: { isReflectionPresented = true },
+                                onOpenFieldSeason: { isFieldSeasonPresented = true }
+                            )
                         }
                     case .cabinet:
                         NavigationStack { ArchiveView(model: model, commerce: commerce) }
@@ -51,6 +57,9 @@ struct RootTabView: View {
         }
         .background(AtlasTheme.paper.ignoresSafeArea())
         .sheet(isPresented: $isIndexPresented) { SettingsView(commerce: commerce) }
+        .sheet(isPresented: $isFieldSeasonPresented) {
+            NavigationStack { FieldSeasonPreviewView(commerce: commerce) }
+        }
         .sheet(isPresented: $isReflectionPresented) { PrivateReflectionSheet(model: model) }
     }
 }

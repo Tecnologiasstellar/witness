@@ -5,6 +5,7 @@ struct TodayView: View {
     @ObservedObject var model: AppModel
     let onOpenIndex: () -> Void
     let onOpenReflection: () -> Void
+    var onOpenFieldSeason: (() -> Void)? = nil
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
@@ -22,7 +23,8 @@ struct TodayView: View {
                                 model: model,
                                 topInset: geo.safeAreaInsets.top,
                                 onOpenIndex: onOpenIndex,
-                                onOpenReflection: onOpenReflection
+                                onOpenReflection: onOpenReflection,
+                                onOpenFieldSeason: onOpenFieldSeason
                             )
                         }
                         .scrollIndicators(.hidden)

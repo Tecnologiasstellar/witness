@@ -81,7 +81,7 @@ Description:
 > FIELD SEASON ONE — a complete, finite edition: an opening field
 > letter, eight species chapters with premium dossiers, two interludes,
 > a closing synthesis, and the season plate. Every piece narrated —
-> about eighty minutes of audio — with a one-tap keepsake field album.
+> seventy-five minutes of audio — with a one-tap keepsake field album.
 > Buy it once and it is permanently yours; it is not a subscription.
 >
 > ATLAS — the living library: the complete archive of every featured
