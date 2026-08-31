@@ -43,7 +43,7 @@ struct FieldSeasonView: View {
                         .accessibilityAddTraits(.isHeader)
                         .accessibilityIdentifier("fieldseason.title")
 
-                    Text("A finite, authored edition. Chapters appear here as each one finishes sources, rights, and review.")
+                    Text("A finite, authored edition — complete at twelve pieces. Every piece shipped only after sources, rights, and review were finished.")
                         .font(.footnote)
                         .foregroundStyle(AtlasTheme.inkMuted)
                         .lineSpacing(3)

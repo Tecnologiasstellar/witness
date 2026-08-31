@@ -13,12 +13,12 @@ struct AtlasAccessSheet: View {
                     .font(AtlasType.display(30, weight: .semibold))
                     .accessibilityAddTraits(.isHeader)
 
-                Text("Atlas is the living library of Witness: every released field season, the complete archive beyond the free window, narration, extended field notes, corrections, and a monthly field dispatch — for as long as membership is active.")
+                Text("Atlas is the living library of Witness: the complete archive of every featured week beyond the free window, and every released field season — narration included — for as long as membership is active.")
                     .font(.callout)
                     .lineSpacing(4)
 
                 AccessStateNotice(
-                    text: "The Atlas library is in production and membership is not yet on sale. It opens only once its ongoing deliverables are real.",
+                    text: "Atlas today holds Field Season One, complete and narrated, and the weekly archive as it grows. New seasons join the library as they are published.",
                     identifier: "access.atlas.production.notice"
                 )
 

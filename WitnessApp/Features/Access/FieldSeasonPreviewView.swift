@@ -21,13 +21,14 @@ struct FieldSeasonPreviewView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     deliverable("An opening field letter")
                     deliverable("Eight species chapters, each with its complete free record and a premium dossier")
-                    deliverable("A narrated edition with transcripts")
-                    deliverable("Two system interludes and one generalized ecosystem plate")
-                    deliverable("A closing synthesis, a permanent field album, and one dated return note")
+                    deliverable("Two system interludes and a closing synthesis")
+                    deliverable("The season plate, drawn for this edition")
+                    deliverable("Every piece narrated — about eighty minutes of audio, with the full text on every page")
+                    deliverable("A one-tap field album: the season as a keepsake PDF")
                 }
 
                 AccessStateNotice(
-                    text: "The first Field Season is in production and is not yet on sale. Every chapter ships only after sources, rights, and review are complete.",
+                    text: "This edition is complete: twelve pieces, every one shipped only after sources, rights, and review were finished. Corrections and accessibility updates arrive free.",
                     identifier: "access.fieldseason.production.notice"
                 )
 

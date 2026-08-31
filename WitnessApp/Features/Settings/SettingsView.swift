@@ -6,8 +6,8 @@ struct SettingsView: View {
     @ObservedObject private var reminders = ReminderService.shared
     @State private var reminderTime = Calendar.current.date(from: DateComponents(hour: 8)) ?? .now
 
-    private static let privacyURL = URL(string: "https://witness-rho.vercel.app/privacy")!
-    private static let termsURL = URL(string: "https://witness-rho.vercel.app/terms")!
+    private static let privacyURL = URL(string: "https://witnessatlas.com/privacy")!
+    private static let termsURL = URL(string: "https://witnessatlas.com/terms")!
     private static let supportEmailURL = URL(string: "mailto:albertovillalpando@gmail.com?subject=Witness%20support")!
     private static let correctionsEmailURL = URL(string: "mailto:albertovillalpando@gmail.com?subject=Witness%20correction")!
 

@@ -1,5 +1,10 @@
 # App Store Connect — initial setup
 
+> **SUPERSEDED 2026-08-31 by [`APP_STORE_RECORD_V1.md`](APP_STORE_RECORD_V1.md).**
+> This file predates the weekly cadence (D-023), the Witness+ retirement,
+> the D-020 product set, and the witnessatlas.com cutover. Kept as history;
+> paste nothing from it.
+
 Status: 2026-08-25. Bundle ID `com.avp.witness` and the app record already exist in ASC per AV. This is the checklist for everything else in the app record, with content ready to paste where the content itself (not an account action) is the blocker. Every item below is something only AV can click — none of it can be done from this session, since it all lives behind Apple ID sign-in.
 
 ## 1. App Information tab
