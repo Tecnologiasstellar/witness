@@ -1,5 +1,44 @@
 # Witness V1.0 launch week — plan of record
 
+## Day 1 outcome (Monday 2026-08-31, wrapped) — pickup Tuesday 2026-09-01
+
+**Done today, all pushed and verified:**
+- Block 1 complete: truthfulness pass on every commerce string, version
+  1.0.0 (build 3), witnessatlas.com links, all tests green, founder
+  walkthrough build installed and reviewed on the founder's iPhone 12.
+- Paid-surface redesign shipped (slices A+B): Field Season page is a
+  book cover (season plate, computed stats 12/8/75min, playable letter
+  narration sample, real contents with plate thumbnails); contextual
+  chapter door on the Today card (kākāpō → chapter 02).
+- App Store record V1 drafted and **the full ASC paste session is done**:
+  name **Witness-Endangered Species**, subtitle "Take action &
+  help:once a week", privacy label (Data Not Linked to You), age 4+,
+  URLs, description, keywords, screenshots (final 1284×2778 set in
+  docs/appstore/screenshots/final), review notes, manual release
+  selected, all four IAPs metadata-complete with review screenshots
+  (docs/appstore/iap-review). "Prepare for Submission" on products is
+  the normal resting state in current ASC — they attach at submission.
+- Icon confirmed final (shipped arcs-and-dot, 98ca3e0). Server
+  notifications already point at RevenueCat. Content Rights set.
+
+**Tuesday 2026-09-01, in order:**
+1. **Block 4 first — TestFlight.** Claude adds
+   `ITSAppUsesNonExemptEncryption: NO` to Info.plist keys (kills the
+   export-compliance question), regenerates, tests, then joint archive +
+   upload with founder signing. Internal TestFlight to the founder.
+2. **Block 2 on the TestFlight build** (joint, ~1h): restore purchases
+   (delete/reinstall/restore), Atlas six-month sandbox purchase (never
+   exercised), Ask to Buy if sandbox allows, accelerated renewal/expiry
+   → confirm fail-closed (D-022).
+3. **Shipathon demo video shot list** (Claude drafts; founder shoots).
+4. If time: production webhook deploy (founder-gated secrets; optional).
+Then **submit for review** — buffer remains before 09-15.
+
+**Small opens:** verify the tip IAP's review screenshot actually saved;
+the double-rendered Annual row in the Atlas group listing is a display
+glitch if both rows open the same record (do not delete anything).
+
+
 Written 2026-08-27 (Wednesday night wrap). Pickup: **Monday 2026-08-31**.
 Goal: **V1.0 MVP submitted to the App Store**, ahead of the RevenueCat
 Shipathon submission (2026-09-15) and Devpost deadline (2026-09-30).
