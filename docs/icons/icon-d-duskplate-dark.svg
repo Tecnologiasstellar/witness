@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Candidate D: "Dusk Plate" - the archive-at-dusk concept made literal:
+       the app's own dusk mark, framed like a specimen plate. Dark variant. -->
+  <defs>
+    <radialGradient id="paper" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#221E18"/>
+      <stop offset="100%" stop-color="#15130F"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#paper)"/>
+  <!-- double-rule plate frame -->
+  <rect x="96" y="96" width="832" height="832" fill="none" stroke="#EFE6D2" stroke-width="14"/>
+  <rect x="136" y="136" width="752" height="752" fill="none" stroke="#C6A98A" stroke-width="5"/>
+  <!-- ground below the horizon: the page already written -->
+  <rect x="143" y="618" width="738" height="263" fill="#1D1A15"/>
+  <!-- horizon rule -->
+  <line x1="176" y1="618" x2="848" y2="618" stroke="#EFE6D2" stroke-width="14" stroke-linecap="round"/>
+  <!-- the sun, half kept: ink line, warm center -->
+  <path d="M 366 618 A 146 146 0 0 1 658 618 Z" fill="#221E18" stroke="#EFE6D2" stroke-width="14"/>
+  <path d="M 412 618 A 100 100 0 0 1 612 618 Z" fill="#B08C68" opacity="0.55"/>
+  <!-- last light: five rays -->
+  <g stroke="#C6A98A" stroke-width="12" stroke-linecap="round">
+    <line x1="512" y1="404" x2="512" y2="332"/>
+    <line x1="392" y1="442" x2="348" y2="384"/>
+    <line x1="632" y1="442" x2="676" y2="384"/>
+    <line x1="310" y1="540" x2="246" y2="512"/>
+    <line x1="714" y1="540" x2="778" y2="512"/>
+  </g>
+  <!-- one living point on the ground: what is still here -->
+  <circle cx="512" cy="748" r="34" fill="#93A886"/>
+</svg>

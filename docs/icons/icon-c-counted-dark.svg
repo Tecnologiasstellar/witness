@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Candidate C: "The Counted" - the season plate's own geometry abstracted:
+       eight counted lives in orbit around the thin line. Dark variant. -->
+  <defs>
+    <radialGradient id="paper" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#221E18"/>
+      <stop offset="100%" stop-color="#15130F"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#paper)"/>
+  <!-- spokes, quiet -->
+  <g stroke="#C6A98A" stroke-width="4" opacity="0.28">
+    <line x1="512" y1="512" x2="512" y2="182"/>
+    <line x1="512" y1="512" x2="745" y2="279"/>
+    <line x1="512" y1="512" x2="842" y2="512"/>
+    <line x1="512" y1="512" x2="745" y2="745"/>
+    <line x1="512" y1="512" x2="512" y2="842"/>
+    <line x1="512" y1="512" x2="279" y2="745"/>
+    <line x1="512" y1="512" x2="182" y2="512"/>
+    <line x1="512" y1="512" x2="279" y2="279"/>
+  </g>
+  <!-- eight counted circles -->
+  <g fill="#221E18" stroke="#EFE6D2" stroke-width="14">
+    <circle cx="512" cy="182" r="62"/>
+    <circle cx="745" cy="279" r="62"/>
+    <circle cx="842" cy="512" r="62"/>
+    <circle cx="745" cy="745" r="62"/>
+    <circle cx="512" cy="842" r="62"/>
+    <circle cx="279" cy="745" r="62"/>
+    <circle cx="182" cy="512" r="62"/>
+    <circle cx="279" cy="279" r="62"/>
+  </g>
+  <!-- the thin line: center ring + held point -->
+  <circle cx="512" cy="512" r="118" fill="#221E18" stroke="#EFE6D2" stroke-width="16"/>
+  <circle cx="512" cy="512" r="96" fill="none" stroke="#C6A98A" stroke-width="5"/>
+  <circle cx="512" cy="512" r="40" fill="#93A886"/>
+</svg>

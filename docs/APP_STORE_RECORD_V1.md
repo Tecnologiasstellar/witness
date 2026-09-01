@@ -130,17 +130,33 @@ after the production webhook deploy (Tuesday item; not a launch blocker).
 
 Demo account: none needed (state this explicitly in the field).
 
-## 8. Screenshots (deferred, deliberately)
+## 8. Screenshots (produced 2026-08-31, founder approval pending)
 
-Required sets: 6.9" (iPhone 17 Pro Max class) and 6.3" (iPhone 17 Pro
-class), from the simulator. Shot list per the plan: the shelf, a chapter
-with narration, a doors block, the plate/synthesis, the album export.
+Both required sets are in `docs/appstore/screenshots/` — `6.9/`
+(1320×2868, iPhone 17 Pro Max) and `6.3/` (1206×2622, iPhone 17 Pro),
+clean 9:41 status bar, five shots each:
 
-**Deferred until after the paid-surface design pass** (founder direction
-2026-08-31): three of the five shots feature exactly the surfaces being
-redesigned; producing them now would mean producing them twice.
+1. This week's card (kākāpō hero)
+2. The witness moment + the season-chapter door
+3. Field Season cover (season plate + stats)
+4. The edition contents with the narration sample
+5. Chapter reader with narration playing (honest voice disclosure visible)
 
-## 9. Still open (decisions, not paste-work)
+Shot 5's owned state was produced with the deterministic test purchase
+service on a simulator (the same fake the UI tests use), then the app was
+uninstalled from both simulators — no real or sandbox purchase involved,
+and the rendered UI is identical to the owned state. Founder picks the
+final ordering (Apple allows up to 10 per device size; 5 is plenty).
 
-- App icon (see `docs/ICON_DESIGN_BRIEF.md`).
+## 9. App icon (already decided — brief is stale)
+
+The icon shipped 2026-08-25 (`98ca3e0`): founder-approved arcs-and-dot
+mark, light/dark/tinted variants wired in
+`WitnessApp/Assets.xcassets/AppIcon.appiconset`. `ICON_DESIGN_BRIEF.md`
+predates this. Three fresh alternatives (C "The Counted", D "Dusk
+Plate", E "The Tally") exist in `docs/icons/` for comparison only —
+swapping is optional, not a blocker.
+
+## 10. Still open (decisions, not paste-work)
+
 - Whether any Atlas intro offer exists at launch (current record: none).

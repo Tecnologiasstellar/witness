@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Candidate E: "The Tally" - a witness count in a field journal:
+       four ink strokes, and the fifth - alive, in sage - completes it.
+       Light variant. -->
+  <defs>
+    <radialGradient id="paper" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#F7F1E3"/>
+      <stop offset="100%" stop-color="#EDE2CB"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#paper)"/>
+  <!-- four counted strokes, hand-set (slight individual lean) -->
+  <g stroke="#25231F" stroke-width="58" stroke-linecap="round">
+    <line x1="330" y1="308" x2="318" y2="716"/>
+    <line x1="454" y1="300" x2="450" y2="720"/>
+    <line x1="578" y1="304" x2="586" y2="718"/>
+    <line x1="702" y1="298" x2="712" y2="714"/>
+  </g>
+  <!-- the fifth stroke: the living one -->
+  <line x1="232" y1="642" x2="796" y2="386" stroke="#65745A" stroke-width="58" stroke-linecap="round"/>
+</svg>
