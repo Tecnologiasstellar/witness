@@ -13,8 +13,8 @@ nothing here can be entered from this session.
 
 | Field | Value |
 |---|---|
-| Name | `Witness` |
-| Subtitle (30 max) | `One species. Every week.` |
+| Name | `Witness-Endangered Species` *(founder-final, entered in ASC 2026-08-31)* |
+| Subtitle (30 max) | `Take action & help:once a week` *(founder-final; exactly 30 chars, no space after the colon)* |
 | Primary category | Education |
 | Secondary category | Lifestyle |
 | Content rights | Contains no third-party content requiring clearance (art is original/owned per `docs/media/*-rights.md`; facts are sourced, not reproduced) |
@@ -109,8 +109,10 @@ Subscription group: one group, two durations, identical access (D-020).
 | `com.avp.witness.atlas.annual` | Auto-renew, 1 year | $24.99 |
 | `com.avp.witness.support.once` | Consumable | $9.99 |
 
-No intro offers at launch. App Store Server Notifications URL: set only
-after the production webhook deploy (Tuesday item; not a launch blocker).
+No intro offers at launch. App Store Server Notifications: **already
+configured** (verified in ASC 2026-08-31) — production and sandbox URLs
+point at RevenueCat's apple-server-to-server endpoints. The Supabase
+webhook deploy remains a separate, optional Tuesday item.
 
 ## 7. Review notes (App Review information)
 
