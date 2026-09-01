@@ -27,11 +27,8 @@ final class WitnessRitualUITests: XCTestCase {
         let restoredExpectation = XCTNSPredicateExpectation(predicate: disabled, object: relaunchedButton)
         XCTAssertEqual(XCTWaiter().wait(for: [restoredExpectation], timeout: 10), .completed)
 
-        app.buttons["atlas.tab.notes"].tap()
-        let leaveNote = app.buttons["LEAVE A NOTE"]
-        XCTAssertTrue(leaveNote.waitForExistence(timeout: 3))
-        leaveNote.tap()
-
+        // The private note lives on Today's own door now that NOTES is gone.
+        app.buttons["today.privateNote"].tap()
         let reflection = app.textViews["witnessed.reflectionEditor"]
         XCTAssertTrue(reflection.waitForExistence(timeout: 3))
         reflection.tap()
@@ -39,12 +36,20 @@ final class WitnessRitualUITests: XCTestCase {
         reflection.typeText(reflectionText)
         app.buttons["witnessed.saveReflectionButton"].tap()
 
-        let sharePreview = app.buttons["witnessed.sharePreviewButton"]
-        XCTAssertTrue(sharePreview.waitForExistence(timeout: 3))
-        sharePreview.tap()
-        XCTAssertTrue(app.navigationBars["SHARE PLATE"].waitForExistence(timeout: 5))
-        let exportButton = app.buttons["share.exportButton"]
-        XCTAssertTrue(exportButton.waitForExistence(timeout: 5))
+        // The share affordance stays present on the ritual surface.
+        let shareButton = app.descendants(matching: .any).matching(identifier: "share.plateButton").firstMatch
+        XCTAssertTrue(shareButton.waitForExistence(timeout: 3))
+
+        // ACTS replaces NOTES: this week's vetted act is present, the
+        // helping commitment records as a quiet dated trace, and the
+        // private note never leaks onto the tab.
+        app.buttons["atlas.tab.acts"].tap()
+        XCTAssertTrue(app.buttons["acts.weekly.open"].waitForExistence(timeout: 3))
+        let helpingButton = app.buttons["acts.weekly.helping"]
+        XCTAssertTrue(helpingButton.waitForExistence(timeout: 3))
+        helpingButton.tap()
+        let helpingSince = app.descendants(matching: .any).matching(identifier: "acts.weekly.helpingSince").firstMatch
+        XCTAssertTrue(helpingSince.waitForExistence(timeout: 5))
         XCTAssertFalse(app.staticTexts[reflectionText].exists)
     }
 
@@ -100,7 +105,7 @@ final class WitnessRitualUITests: XCTestCase {
                 // ~11.9:1 — the same pixel-verified pair as the count line);
                 // the 26.5 sampler intermittently flags them anyway.
                 let normalized = label.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-                if ["today", "cabinet", "notes"].contains(where: {
+                if ["today", "cabinet", "acts"].contains(where: {
                     normalized == $0 || normalized.hasPrefix($0 + ",")
                 }) {
                     return true

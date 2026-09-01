@@ -1,73 +1,229 @@
 import SwiftUI
 import WitnessCore
 
-struct WitnessedView: View {
+/// ACTS — the third tab. Every species ships one vetted conservation act
+/// (a real organization, a real door, sources, an honest effort level).
+/// This tab is the field ledger of those acts: this week's act up top,
+/// the acts of everything witnessed beneath. Deliberately absent, by
+/// evidence and doctrine: deadlines, goals, progress bars, points,
+/// streaks, and any claim that an act caused an outcome.
+struct ActsView: View {
     @ObservedObject var model: AppModel
-    @State private var showsSharePreview = false
-    @State private var showsReflection = false
+    @Environment(\.openURL) private var openURL
 
     var body: some View {
-        Group {
-            if let record = model.latestWitnessRecord, let species = model.species {
-                witnessedPlate(species: species, date: record.witnessedAt)
-            } else {
-                emptyState
-            }
-        }
-        .background(AtlasPaper().ignoresSafeArea())
-        .toolbar(.hidden, for: .navigationBar)
-        .sheet(isPresented: $showsSharePreview) {
-            if let species = model.species { WitnessSharePreviewSheet(species: species) }
-        }
-        .sheet(isPresented: $showsReflection) { PrivateReflectionSheet(model: model) }
-    }
-
-    private func witnessedPlate(species: SpeciesRecord, date: Date) -> some View {
         ScrollView {
-            ZStack {
-                PlateFrame()
-                VStack(spacing: 12) {
-                    Text("WITNESSED")
-                        .font(AtlasType.technical(11, weight: .bold)).tracking(1.55)
+            VStack(alignment: .leading, spacing: 22) {
+                HStack {
+                    Text("ACTS")
+                        .font(AtlasType.display(32, weight: .semibold))
+                    Spacer()
+                    Text(countLabel)
+                        .font(AtlasType.technical(10, weight: .bold)).tracking(1.1)
                         .foregroundStyle(AtlasTheme.sepia)
-                    AtlasSeal(date: date)
-                    SpecimenPlate(species: species, showsLeaderLabels: false).frame(height: 176)
-                    Text(species.commonName.uppercased())
-                        .font(AtlasType.display(30, weight: .semibold)).tracking(AtlasType.tracking(0.06, at: 30, dynamicTypeSize: .large))
-                    Text(species.scientificName)
-                        .font(AtlasType.display(14, italic: true)).foregroundStyle(AtlasTheme.inkMuted)
-                    Text("PRIVATE ON-DEVICE RECORD")
-                        .font(AtlasType.technical(9, weight: .bold)).tracking(1.1)
-                        .foregroundStyle(AtlasTheme.inkMuted)
-                    Spacer(minLength: 4)
-                    HStack(spacing: 26) {
-                        Button("LEAVE A NOTE") { showsReflection = true }
-                            .font(AtlasType.technical(11, weight: .bold)).tracking(1.15)
-                            .foregroundStyle(AtlasTheme.sepia).frame(minHeight: 44)
-                        Button("SHARE PLATE") { showsSharePreview = true }
-                            .font(AtlasType.technical(11, weight: .bold)).tracking(1.15)
-                            .foregroundStyle(AtlasTheme.sepia).frame(minHeight: 44)
-                            .accessibilityIdentifier("witnessed.sharePreviewButton")
-                    }
                 }
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 28).padding(.vertical, 18)
+
+                if let species = model.species {
+                    weeklyAct(species)
+                }
+
+                ledger
+
+                Text("Every act opens a real door at the organization named, checked against sources before it ships. Witness records attention and acts honestly, and claims no outcome.")
+                    .font(.footnote)
+                    .foregroundStyle(AtlasTheme.inkMuted)
+                    .lineSpacing(3)
             }
-            .frame(maxWidth: .infinity, minHeight: 620)
+            .padding(22)
         }
         .scrollIndicators(.hidden)
         .foregroundStyle(AtlasTheme.ink)
+        .background(AtlasPaper().ignoresSafeArea())
+        .toolbar(.hidden, for: .navigationBar)
     }
 
-    private var emptyState: some View {
-        VStack(spacing: 14) {
-            AtlasIconView(icon: .fieldMark, size: 28)
-            Text("NO PRIVATE PLATE YET")
-                .font(AtlasType.technical(12, weight: .bold)).tracking(1.2)
-            Text("Witness this week’s species and its card will remain on this device.")
-                .font(.body).multilineTextAlignment(.center).foregroundStyle(AtlasTheme.inkMuted)
+    private var countLabel: String {
+        let helping = model.helpingRecords.count
+        return helping > 0 ? "\(helping) HELPING" : "ONE ACT A WEEK"
+    }
+
+    // MARK: - This week's act
+
+    private func weeklyAct(_ species: SpeciesRecord) -> some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text("THIS WEEK · FOR THE \(species.commonName.uppercased())")
+                .font(AtlasType.technical(9, weight: .bold)).tracking(1.2)
+                .foregroundStyle(AtlasTheme.sepia)
+
+            if let asset = species.gallery?.first, let art = UIImage(named: asset) {
+                Image(uiImage: art)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 150)
+                    .clipped()
+                    .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+                    .accessibilityHidden(true)
+            }
+
+            Text(species.action.title)
+                .font(AtlasType.display(22, weight: .semibold))
+                .fixedSize(horizontal: false, vertical: true)
+
+            Text(species.action.summary)
+                .font(.callout)
+                .lineSpacing(4)
+
+            Text("with \(species.action.destinationOrganization)")
+                .font(AtlasType.display(15, weight: .regular, italic: true))
+                .foregroundStyle(AtlasTheme.sepia)
+
+            Text("\(species.action.effort.uppercased()) · \(species.action.geographicApplicability.uppercased()) · VERIFIED \(species.action.lastVerified)")
+                .font(AtlasType.technical(9, weight: .medium)).tracking(0.8)
+                .foregroundStyle(AtlasTheme.inkMuted)
+                .fixedSize(horizontal: false, vertical: true)
+
+            openButton(for: species, identifier: "acts.weekly.open")
+            helpingRow(for: species)
         }
-        .padding(28).foregroundStyle(AtlasTheme.ink)
+        .padding(16)
+        .background(AtlasTheme.paperFresh)
+        .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("acts.weekly")
+    }
+
+    private func openButton(for species: SpeciesRecord, identifier: String) -> some View {
+        Button {
+            open(species)
+        } label: {
+            HStack(spacing: 10) {
+                Text("OPEN · \(species.action.destinationOrganization.uppercased())")
+                    .font(AtlasType.technical(11, weight: .bold)).tracking(1.2)
+                    .lineLimit(1).minimumScaleFactor(0.7)
+                Spacer()
+                AtlasIconView(icon: .returnMark, size: 15, color: AtlasTheme.paper)
+            }
+            .foregroundStyle(AtlasTheme.paper)
+            .padding(.horizontal, 16)
+            .frame(maxWidth: .infinity, minHeight: 52)
+            .background(AtlasTheme.ink)
+            .overlay(
+                Rectangle()
+                    .strokeBorder(AtlasTheme.paper.opacity(0.35), lineWidth: 1)
+                    .padding(3)
+            )
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(AtlasPressStyle())
+        .accessibilityIdentifier(identifier)
+        .accessibilityLabel("Open \(species.action.title) at \(species.action.destinationOrganization)")
+    }
+
+    @ViewBuilder
+    private func helpingRow(for species: SpeciesRecord) -> some View {
+        if let helping = model.helpingRecord(for: species.id) {
+            HStack(spacing: 8) {
+                AtlasIconView(icon: .fieldMark, size: 14, color: AtlasTheme.accentSage)
+                Text("HELPING SINCE · \(helping.startedAt.formatted(.dateTime.month(.abbreviated).day()).uppercased())")
+                    .font(AtlasType.technical(10, weight: .bold)).tracking(1.0)
+                    .foregroundStyle(AtlasTheme.accentSage)
+                Spacer()
+            }
+            .frame(minHeight: 44)
+            .accessibilityIdentifier("acts.weekly.helpingSince")
+        } else {
+            Button {
+                Task { await model.startHelping(speciesID: species.id) }
+            } label: {
+                HStack(spacing: 8) {
+                    AtlasIconView(icon: .fieldMark, size: 14, color: AtlasTheme.sepia)
+                    Text("I’M HELPING THIS SPECIES")
+                        .font(AtlasType.technical(10, weight: .bold)).tracking(1.1)
+                    Spacer()
+                }
+                .foregroundStyle(AtlasTheme.sepia)
+                .padding(.horizontal, 14)
+                .frame(maxWidth: .infinity, minHeight: 46)
+                .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("acts.weekly.helping")
+        }
+    }
+
+    // MARK: - The ledger
+
+    private var ledgerRows: [(species: SpeciesRecord, witnessedAt: Date, helping: HelpingRecord?)] {
+        model.witnessedCollection.filter { $0.species.id != model.species?.id }
+    }
+
+    @ViewBuilder
+    private var ledger: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text("THE LEDGER")
+                .font(AtlasType.technical(10, weight: .bold)).tracking(1.2)
+                .foregroundStyle(AtlasTheme.sepia)
+                .padding(.bottom, 8)
+                .accessibilityAddTraits(.isHeader)
+            if ledgerRows.isEmpty {
+                Text("Witness a species and its act takes a line here — one vetted door for every plate in your cabinet.")
+                    .font(.footnote)
+                    .foregroundStyle(AtlasTheme.inkMuted)
+                    .lineSpacing(3)
+                    .padding(.vertical, 10)
+            } else {
+                ForEach(ledgerRows, id: \.species.id) { row in
+                    ledgerRow(row.species, helping: row.helping)
+                }
+            }
+        }
+    }
+
+    private func ledgerRow(_ species: SpeciesRecord, helping: HelpingRecord?) -> some View {
+        Button {
+            open(species)
+        } label: {
+            HStack(spacing: 12) {
+                if let asset = species.gallery?.first, let art = UIImage(named: asset) {
+                    Image(uiImage: art)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 44, height: 56)
+                        .clipped()
+                        .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+                        .accessibilityHidden(true)
+                }
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(species.commonName.uppercased())
+                        .font(AtlasType.technical(9, weight: .bold)).tracking(1.0)
+                        .foregroundStyle(AtlasTheme.sepia)
+                    Text(species.action.title)
+                        .font(AtlasType.display(16, weight: .medium))
+                        .multilineTextAlignment(.leading)
+                    Text(helping == nil
+                         ? "with \(species.action.destinationOrganization)"
+                         : "HELPING SINCE · \(helping!.startedAt.formatted(.dateTime.month(.abbreviated).day()).uppercased())")
+                        .font(AtlasType.technical(9, weight: .medium)).tracking(0.7)
+                        .foregroundStyle(helping == nil ? AtlasTheme.inkMuted : AtlasTheme.accentSage)
+                }
+                Spacer()
+                AtlasIconView(icon: .returnMark, size: 14, color: AtlasTheme.sepia)
+            }
+            .padding(.vertical, 10)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .overlay(alignment: .bottom) { Rectangle().fill(AtlasTheme.ruleSoft).frame(height: 1) }
+        .accessibilityLabel("\(species.commonName): \(species.action.title), with \(species.action.destinationOrganization)")
+    }
+
+    private func open(_ species: SpeciesRecord) {
+        guard let url = URL(string: species.action.destinationURL) else { return }
+        let speciesID = species.id
+        Task.detached { await WitnessSync.shared.logEvent("action_opened", metadata: ["species": speciesID]) }
+        openURL(url)
     }
 }
 
@@ -121,19 +277,5 @@ struct PrivateReflectionSheet: View {
             .background(AtlasPaper().ignoresSafeArea())
             .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("CLOSE") { dismiss() }.font(AtlasType.technical(10, weight: .bold)) } }
         }
-    }
-}
-
-private struct AtlasSeal: View {
-    let date: Date
-    var body: some View {
-        ZStack {
-            Circle().stroke(AtlasTheme.sepia, lineWidth: 1).frame(width: 64, height: 64)
-            Circle().stroke(AtlasTheme.ruleSoft, lineWidth: 1).frame(width: 52, height: 52)
-            Text(date.formatted(.dateTime.day().month(.abbreviated)).uppercased())
-                .font(AtlasType.technical(9, weight: .bold)).tracking(0.8)
-                .multilineTextAlignment(.center)
-        }
-        .accessibilityLabel("Witnessed on \(date.formatted(date: .long, time: .omitted))")
     }
 }

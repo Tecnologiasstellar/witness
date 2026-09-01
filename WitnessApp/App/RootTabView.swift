@@ -1,13 +1,13 @@
 import SwiftUI
 
 enum AtlasTab: String, CaseIterable, Hashable {
-    case today, cabinet, notes
+    case today, cabinet, acts
 
     var title: String {
         switch self {
         case .today: "THIS WEEK"
         case .cabinet: "CABINET"
-        case .notes: "NOTES"
+        case .acts: "ACTS"
         }
     }
 
@@ -15,7 +15,7 @@ enum AtlasTab: String, CaseIterable, Hashable {
         switch self {
         case .today: .dusk
         case .cabinet: .drawer
-        case .notes: .nib
+        case .acts: .fieldMark
         }
     }
 }
@@ -48,8 +48,8 @@ struct RootTabView: View {
                         }
                     case .cabinet:
                         NavigationStack { ArchiveView(model: model, commerce: commerce) }
-                    case .notes:
-                        NavigationStack { WitnessedView(model: model) }
+                    case .acts:
+                        NavigationStack { ActsView(model: model) }
                     }
                 }
             }
