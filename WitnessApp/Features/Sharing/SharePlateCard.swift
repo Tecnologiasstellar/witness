@@ -89,6 +89,12 @@ struct SharePlate: Transferable {
 
 /// The ceremonial share affordance, used at the witness climax and in the
 /// Cabinet. Renders lazily and hands the plate to the system share sheet.
+/// The one sentence a shared plate travels with — an invitation, not a
+/// boast: learning plus small honest help, at the weekly cadence.
+func sharePlateMessage(for species: SpeciesRecord) -> String {
+    "This week I’m witnessing the \(species.commonName) — learning its story and helping in a small way. One species a week, on Witness."
+}
+
 struct SharePlateButton: View {
     let species: SpeciesRecord
     var prominent = false
@@ -99,7 +105,7 @@ struct SharePlateButton: View {
             if let plate {
                 ShareLink(
                     item: plate,
-                    message: Text("I witnessed the \(species.commonName) today. One species a day, on Witness."),
+                    message: Text(sharePlateMessage(for: species)),
                     preview: SharePreview(
                         "\(species.commonName) — Witness",
                         image: Image(uiImage: UIImage(data: plate.pngData) ?? UIImage())
@@ -136,5 +142,48 @@ struct SharePlateButton: View {
         .frame(maxWidth: .infinity, minHeight: 52)
         .background(prominent ? AtlasTheme.sepia : .clear)
         .overlay(Rectangle().stroke(prominent ? AtlasTheme.sepia : AtlasTheme.ruleSoft, lineWidth: 1))
+    }
+}
+
+/// Icon-only share affordance for the hero card's top corner: the same
+/// rendered plate and invitation as SharePlateButton, in the hero-scrim
+/// circle language. The viral door sits where the eye already rests.
+struct ShareHeroButton: View {
+    let species: SpeciesRecord
+    @State private var plate: SharePlate?
+
+    var body: some View {
+        Group {
+            if let plate {
+                ShareLink(
+                    item: plate,
+                    message: Text(sharePlateMessage(for: species)),
+                    preview: SharePreview(
+                        "\(species.commonName) — Witness",
+                        image: Image(uiImage: UIImage(data: plate.pngData) ?? UIImage())
+                    )
+                ) {
+                    icon
+                }
+                .simultaneousGesture(TapGesture().onEnded {
+                    let name = species.id
+                    Task.detached { await WitnessSync.shared.logEvent("share_created", metadata: ["species": name, "surface": "hero"]) }
+                })
+            } else {
+                icon.opacity(0.4)
+            }
+        }
+        .task { plate = SharePlate.render(for: species) }
+        .accessibilityLabel("Share this plate")
+        .accessibilityIdentifier("today.share")
+    }
+
+    private var icon: some View {
+        Image(systemName: "square.and.arrow.up")
+            .font(.system(size: 17, weight: .semibold))
+            .foregroundStyle(AtlasTheme.heroInk)
+            .frame(width: 44, height: 44)
+            .background(AtlasTheme.heroScrim.opacity(0.35), in: Circle())
+            .contentShape(Rectangle())
     }
 }

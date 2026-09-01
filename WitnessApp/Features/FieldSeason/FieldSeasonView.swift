@@ -105,6 +105,17 @@ struct FieldSeasonView: View {
                     .foregroundStyle(AtlasTheme.inkMuted)
             }
             Spacer()
+            // The contents page is the edition's art moment as well as its
+            // launcher — each story shows its plate on the shelf.
+            if let assetID = chapter.heroAssetID, UIImage(named: assetID) != nil {
+                Image(assetID)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 44, height: 56)
+                    .clipped()
+                    .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+                    .accessibilityHidden(true)
+            }
             Image(systemName: "chevron.right")
                 .font(.caption)
                 .foregroundStyle(AtlasTheme.inkMuted)

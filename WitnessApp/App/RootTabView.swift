@@ -58,7 +58,15 @@ struct RootTabView: View {
         .background(AtlasTheme.paper.ignoresSafeArea())
         .sheet(isPresented: $isIndexPresented) { SettingsView(commerce: commerce) }
         .sheet(isPresented: $isFieldSeasonPresented) {
-            NavigationStack { FieldSeasonPreviewView(commerce: commerce) }
+            // Owners and Atlas members go straight to the stories; the
+            // preview is a seller's page and only non-entitled readers see it.
+            NavigationStack {
+                if commerce.ownsFieldSeason || commerce.atlasIsActive {
+                    FieldSeasonView(commerce: commerce)
+                } else {
+                    FieldSeasonPreviewView(commerce: commerce)
+                }
+            }
         }
         .sheet(isPresented: $isReflectionPresented) { PrivateReflectionSheet(model: model) }
     }

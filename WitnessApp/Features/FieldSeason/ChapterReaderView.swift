@@ -182,8 +182,25 @@ struct ChapterReaderView: View {
             case .prompt:
                 promptView(section)
             case .action:
-                ForEach(section.entries) { entry in
-                    actionDoor(entry)
+                // The hand-off happens in the story's own voice — a serif
+                // aside, then one unmistakable door. The first organization
+                // gets the letterpress treatment; the rest stay quiet cards.
+                VStack(spacing: 14) {
+                    Rectangle().fill(AtlasTheme.sepia).frame(width: 56, height: 1)
+                    Text("The story is told. What remains is a door — real people already doing this work, and a way to stand with them.")
+                        .font(AtlasType.display(18, weight: .regular, italic: true))
+                        .multilineTextAlignment(.center)
+                        .lineSpacing(6)
+                    Rectangle().fill(AtlasTheme.sepia).frame(width: 56, height: 1)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 6)
+                ForEach(Array(section.entries.enumerated()), id: \.element.id) { index, entry in
+                    if index == 0 {
+                        primaryActionDoor(entry)
+                    } else {
+                        actionDoor(entry)
+                    }
                 }
                 Text("These organizations are independent of Witness. Links open in your browser; any support goes directly to them.")
                     .font(AtlasType.technical(10, weight: .medium))
@@ -204,6 +221,44 @@ struct ChapterReaderView: View {
                     }
                 }
             }
+        }
+    }
+
+    /// The chapter's first door, set like a letterpress plate — the one
+    /// action a moved reader should not be able to miss.
+    @ViewBuilder
+    private func primaryActionDoor(_ entry: FieldSeasonEntry) -> some View {
+        if let urlString = entry.url, let url = URL(string: urlString) {
+            Link(destination: url) {
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack(spacing: 10) {
+                        Text("OPEN THE DOOR · \((entry.lead ?? "").uppercased())")
+                            .font(AtlasType.technical(11, weight: .bold)).tracking(1.2)
+                            .lineLimit(1).minimumScaleFactor(0.65)
+                        Spacer()
+                        Image(systemName: "arrow.up.right")
+                            .font(.caption.weight(.bold))
+                    }
+                    Text(entry.text)
+                        .font(AtlasType.display(15, weight: .regular, italic: true))
+                        .opacity(0.9)
+                        .lineSpacing(3)
+                        .multilineTextAlignment(.leading)
+                }
+                .foregroundStyle(AtlasTheme.paper)
+                .padding(16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(AtlasTheme.ink)
+                .overlay(
+                    Rectangle()
+                        .strokeBorder(AtlasTheme.paper.opacity(0.35), lineWidth: 1)
+                        .padding(3)
+                )
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(AtlasPressStyle())
+            .accessibilityLabel("Open the door at \(entry.lead ?? "the organization"): \(entry.text). Opens in browser.")
+            .accessibilityIdentifier("fieldseason.reader.primaryDoor")
         }
     }
 

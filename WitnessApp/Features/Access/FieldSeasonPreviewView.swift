@@ -18,6 +18,12 @@ struct FieldSeasonPreviewView: View {
                     .font(AtlasType.display(30, weight: .semibold))
                     .accessibilityAddTraits(.isHeader)
 
+                // Entitled readers get the stories first, not the sales page:
+                // one tap from here into the edition, before any scrolling.
+                if commerce.ownsFieldSeason || commerce.atlasIsActive {
+                    openEditionLink
+                }
+
                 seasonPlate
 
                 Text("A finite, authored edition about one ecological edge: its species, pressures, uncertainties, and possible forms of attention. Purchasing keeps this edition permanently — it is not a subscription.")
@@ -161,7 +167,18 @@ struct FieldSeasonPreviewView: View {
             AccessSectionHeading(text: "THE EDITION CONTAINS")
                 .padding(.bottom, 4)
             ForEach(edition.chapters) { piece in
-                contentsRow(piece)
+                // Entitled readers step straight from the contents into the
+                // piece itself; for everyone else the list stays a preview.
+                if commerce.ownsFieldSeason || commerce.atlasIsActive {
+                    NavigationLink {
+                        ChapterReaderView(chapter: piece)
+                    } label: {
+                        contentsRow(piece)
+                    }
+                    .buttonStyle(.plain)
+                } else {
+                    contentsRow(piece)
+                }
             }
         }
     }
@@ -224,16 +241,14 @@ struct FieldSeasonPreviewView: View {
     private var purchaseArea: some View {
         if commerce.ownsFieldSeason {
             AccessStateNotice(
-                text: "Field Season is yours permanently.",
+                text: "Field Season is yours permanently. The edition is open above — every piece, read and narrated.",
                 identifier: "access.fieldseason.owned"
             )
-            openEditionLink
         } else if commerce.atlasIsActive {
             AccessStateNotice(
                 text: "Included with your active Atlas membership. If Atlas ever lapses, the season remains readable only with a separate permanent purchase.",
                 identifier: "access.fieldseason.included"
             )
-            openEditionLink
         } else {
             switch commerce.productsState {
             case .loading:

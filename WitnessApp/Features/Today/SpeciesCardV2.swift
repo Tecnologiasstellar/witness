@@ -16,7 +16,7 @@ struct SpeciesCardV2: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            HeroHeader(species: species, topInset: topInset, onOpenIndex: onOpenIndex, onOpenReflection: onOpenReflection)
+            HeroHeader(species: species, topInset: topInset, onOpenIndex: onOpenIndex)
             VStack(alignment: .leading, spacing: 34) {
                 HookBlock(hook: species.hook)
                 if let stats = species.stats {
@@ -68,7 +68,6 @@ private struct HeroHeader: View {
     let species: SpeciesRecord
     let topInset: CGFloat
     let onOpenIndex: () -> Void
-    let onOpenReflection: () -> Void
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
@@ -106,7 +105,7 @@ private struct HeroHeader: View {
             .padding(.bottom, 22)
         }
         .overlay(alignment: .top) {
-            HeroControls(onOpenIndex: onOpenIndex, onOpenReflection: onOpenReflection)
+            HeroControls(species: species, onOpenIndex: onOpenIndex)
                 .padding(.top, topInset)
         }
         .accessibilityElement(children: .contain)
@@ -114,16 +113,18 @@ private struct HeroHeader: View {
 }
 
 /// Hero controls anchored to the hero image (they scroll away with it),
-/// pushed below the status bar by the passed safe-area inset.
+/// pushed below the status bar by the passed safe-area inset. The right
+/// slot is the share door — the viral loop lives where the plate is most
+/// beautiful; the private note keeps its quieter door further down.
 struct HeroControls: View {
+    let species: SpeciesRecord
     let onOpenIndex: () -> Void
-    let onOpenReflection: () -> Void
 
     var body: some View {
         HStack {
             heroButton(icon: .contents, label: "Contents index", id: "today.contents", action: onOpenIndex)
             Spacer()
-            heroButton(icon: .nib, label: "Add a private note", id: "today.privateNote", action: onOpenReflection)
+            ShareHeroButton(species: species)
         }
         .padding(.horizontal, 12)
         .padding(.top, 4)
@@ -515,6 +516,7 @@ struct WitnessActionView: View {
                 .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
             }
             .buttonStyle(.plain)
+            .accessibilityIdentifier("today.leaveNote")
             if let url = URL(string: species.action.destinationURL) {
                 VStack(alignment: .leading, spacing: 7) {
                     Text("GO FURTHER · \(species.action.effort.uppercased())")

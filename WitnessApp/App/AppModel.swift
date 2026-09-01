@@ -61,9 +61,7 @@ final class AppModel: ObservableObject {
         calendar: Calendar = .current
     ) {
         self.witnessRepository = witnessRepository ?? FileWitnessRepository(fileURL: Self.defaultArchiveURL)
-        self.helpingStore = FileHelpingStore(fileURL: Self.defaultArchiveURL
-            .deletingLastPathComponent()
-            .appendingPathComponent("helping.json"))
+        self.helpingStore = FileHelpingStore(fileURL: Self.helpingStoreURL)
         self.dateProvider = dateProvider
         self.calendar = calendar
 
@@ -191,5 +189,23 @@ final class AppModel: ObservableObject {
         return base
             .appendingPathComponent("Witness", isDirectory: true)
             .appendingPathComponent("witness-archive.json")
+    }
+
+    /// Helping records sit beside the witness archive. Under a UI-test
+    /// archive the file is keyed per run like the archive itself —
+    /// otherwise runs share one helping.json and leak state into each
+    /// other. The production path is unchanged so no device records move.
+    private static var helpingStoreURL: URL {
+#if DEBUG
+        if let testArchive = ProcessInfo.processInfo.environment["WITNESS_TEST_ARCHIVE"],
+           !testArchive.isEmpty {
+            return defaultArchiveURL
+                .deletingPathExtension()
+                .appendingPathExtension("helping.json")
+        }
+#endif
+        return defaultArchiveURL
+            .deletingLastPathComponent()
+            .appendingPathComponent("helping.json")
     }
 }

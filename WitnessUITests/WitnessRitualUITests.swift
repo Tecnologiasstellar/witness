@@ -27,8 +27,19 @@ final class WitnessRitualUITests: XCTestCase {
         let restoredExpectation = XCTNSPredicateExpectation(predicate: disabled, object: relaunchedButton)
         XCTAssertEqual(XCTWaiter().wait(for: [restoredExpectation], timeout: 10), .completed)
 
-        // The private note lives on Today's own door now that NOTES is gone.
-        app.buttons["today.privateNote"].tap()
+        // The hero's top-right slot is now the share door; the private note
+        // lives further down the card, in the action area.
+        let heroShare = app.descendants(matching: .any).matching(identifier: "today.share").firstMatch
+        XCTAssertTrue(heroShare.waitForExistence(timeout: 3))
+
+        let leaveNote = app.buttons["today.leaveNote"]
+        var scrollAttempts = 0
+        while !leaveNote.isHittable && scrollAttempts < 10 {
+            app.swipeUp()
+            scrollAttempts += 1
+        }
+        XCTAssertTrue(leaveNote.isHittable)
+        leaveNote.tap()
         let reflection = app.textViews["witnessed.reflectionEditor"]
         XCTAssertTrue(reflection.waitForExistence(timeout: 3))
         reflection.tap()
@@ -36,7 +47,7 @@ final class WitnessRitualUITests: XCTestCase {
         reflection.typeText(reflectionText)
         app.buttons["witnessed.saveReflectionButton"].tap()
 
-        // The share affordance stays present on the ritual surface.
+        // The full share affordance stays present on the ritual surface.
         let shareButton = app.descendants(matching: .any).matching(identifier: "share.plateButton").firstMatch
         XCTAssertTrue(shareButton.waitForExistence(timeout: 3))
 
