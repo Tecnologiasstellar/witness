@@ -31,7 +31,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.avp.witness.core
         PRODUCT_NAME: WitnessCore
         MARKETING_VERSION: 1.0.0
-        CURRENT_PROJECT_VERSION: 3
+        CURRENT_PROJECT_VERSION: 4
         SWIFT_VERSION: 6.0
         GENERATE_INFOPLIST_FILE: YES
         SKIP_INSTALL: YES
@@ -39,6 +39,17 @@ targets:
   Witness:
     type: application
     platform: iOS
+    # Merged with the generated Info.plist keys below; declares the app
+    # uses no non-exempt encryption so TestFlight skips the export
+    # compliance question on every upload.
+    info:
+      path: WitnessApp/Info.plist
+      properties:
+        # Keep version/build sourced from build settings, not the
+        # XcodeGen literals ("1.0"/"1") that would otherwise win.
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        ITSAppUsesNonExemptEncryption: false
     sources:
       - path: WitnessApp
     dependencies:
@@ -50,7 +61,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.avp.witness
         PRODUCT_NAME: Witness
         MARKETING_VERSION: 1.0.0
-        CURRENT_PROJECT_VERSION: 3
+        CURRENT_PROJECT_VERSION: 4
         SWIFT_VERSION: 6.0
         TARGETED_DEVICE_FAMILY: 1
         GENERATE_INFOPLIST_FILE: YES

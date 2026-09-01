@@ -141,6 +141,7 @@
 		12449CF4B46C6893745B0A97 /* ChapterAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterAudioPlayer.swift; sourceTree = "<group>"; };
 		18A60CD149F67142BEB56EB1 /* WitnessAppTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		192E77993BD98AD5130639B3 /* chapter-06-wollemi-pine-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-06-wollemi-pine-ruth.mp3"; sourceTree = "<group>"; };
+		1A42D6CE679E0591ADBC8FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1D81C31EC3BF3A59903C6B2F /* PlateFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateFrame.swift; sourceTree = "<group>"; };
 		1DA2098F808686598DBD1727 /* chapter-07-amur-leopard-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-07-amur-leopard-ruth.mp3"; sourceTree = "<group>"; };
 		1E4D454920A0D005027064B2 /* interlude-price-of-parts-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "interlude-price-of-parts-ruth.mp3"; sourceTree = "<group>"; };
@@ -381,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				E5912AC6B4687E04E2D975DE /* Assets.xcassets */,
+				1A42D6CE679E0591ADBC8FBE /* Info.plist */,
 				69F8CC0B121B3CF8F09B6BF6 /* RevenueCatConfig.plist */,
 				CFD8CBB54872203BC35154E5 /* App */,
 				60018E1299DF4AA5EED06E46 /* Commerce */,
@@ -910,9 +912,10 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = L5R9XW45B6;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WitnessApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Witness;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1016,7 +1019,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1042,7 +1045,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1145,9 +1148,10 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = L5R9XW45B6;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WitnessApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Witness;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
