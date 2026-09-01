@@ -254,7 +254,7 @@ struct FieldSeasonPreviewView: View {
                 if let product = commerce.fieldSeasonProduct {
                     AccessPrimaryButton(
                         title: "KEEP FIELD SEASON PERMANENTLY",
-                        subtitle: product.localizedPrice,
+                        subtitle: "\(product.localizedPrice) · one-time purchase",
                         isBusy: commerce.purchasePhase == .purchasing(productID: product.id),
                         isEnabled: true,
                         identifier: "access.fieldseason.purchase"

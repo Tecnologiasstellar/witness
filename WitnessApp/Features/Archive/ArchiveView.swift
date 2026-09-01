@@ -223,23 +223,32 @@ private struct ArchiveCard: View {
                         SpecimenPlate(species: plate.species, showsLeaderLabels: false).frame(height: 120)
                     }
                 }
-                .opacity(isLocked ? 0.35 : 1)
+                // The lock hides access, never identity: locked plates keep
+                // their full artwork and legible name, with one small chip.
                 if isCurrentWeek {
                     Text("THIS WEEK")
                         .font(AtlasType.technical(8, weight: .bold)).tracking(1)
                         .foregroundStyle(AtlasTheme.sepia).padding(7)
                 }
                 if isLocked {
-                    Text("ATLAS")
-                        .font(AtlasType.technical(8, weight: .bold)).tracking(1)
-                        .foregroundStyle(AtlasTheme.sepia).padding(7)
+                    HStack(spacing: 4) {
+                        Image(systemName: "lock.fill")
+                            .font(.system(size: 8, weight: .semibold))
+                        Text("ATLAS")
+                            .font(AtlasType.technical(8, weight: .bold)).tracking(1)
+                    }
+                    .foregroundStyle(AtlasTheme.heroInk)
+                    .padding(.horizontal, 7)
+                    .padding(.vertical, 4)
+                    .background(AtlasTheme.heroScrim.opacity(0.72))
+                    .clipShape(Capsule())
+                    .padding(7)
                 }
             }
             .clipShape(RoundedRectangle(cornerRadius: 14))
             Text(plate.species.commonName.uppercased())
                 .font(AtlasType.technical(10, weight: .bold)).tracking(0.9)
                 .lineLimit(1)
-                .opacity(isLocked ? 0.6 : 1)
             Text(plate.period)
                 .font(AtlasType.display(12, italic: true)).foregroundStyle(AtlasTheme.inkMuted)
         }

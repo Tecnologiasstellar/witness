@@ -13,6 +13,22 @@ struct SupportWitnessView: View {
                     .font(AtlasType.display(30, weight: .semibold))
                     .accessibilityAddTraits(.isHeader)
 
+                // The work the tip funds, shown as work: three studies from
+                // the drawing table, not a benefits list.
+                VStack(spacing: 14) {
+                    PlateCollageStrip(
+                        assets: ["vaquita-detail-01", "amur-leopard-detail-01", "whooping-crane-detail-01"],
+                        height: 104
+                    )
+                    Text("RESEARCH · ILLUSTRATION · NARRATION · ACCESSIBILITY")
+                        .font(AtlasType.technical(9, weight: .bold))
+                        .tracking(1.3)
+                        .foregroundStyle(AtlasTheme.sepia)
+                        .multilineTextAlignment(.center)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.top, 2)
+
                 Text("A one-time tip to the person making Witness. It helps fund research, fact-checking, illustration, narration, accessibility, hosting, and continued operation of the app.")
                     .font(.callout)
                     .lineSpacing(4)
@@ -25,6 +41,17 @@ struct SupportWitnessView: View {
                 tipArea
 
                 PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("A tip is never expected here. It is always felt.")
+                        .font(AtlasType.display(15, weight: .regular, italic: true))
+                        .foregroundStyle(AtlasTheme.inkMuted)
+                    Text("— Alberto, who makes Witness")
+                        .font(AtlasType.display(14, weight: .regular, italic: true))
+                        .foregroundStyle(AtlasTheme.sepia)
+                }
+                .padding(.top, 6)
+                .accessibilityElement(children: .combine)
             }
             .padding(22)
             .foregroundStyle(AtlasTheme.ink)

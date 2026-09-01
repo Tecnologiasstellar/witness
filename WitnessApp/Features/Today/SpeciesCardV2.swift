@@ -587,7 +587,20 @@ private struct FieldSeasonDoor: View {
     var body: some View {
         if let chapter {
             Button(action: onOpen) {
-                HStack(alignment: .center, spacing: 12) {
+                HStack(alignment: .center, spacing: 14) {
+                    // The chapter's own plate, matted like a page from the
+                    // edition — the door shows the thing itself, never a price.
+                    if let assetID = chapter.heroAssetID, let art = UIImage(named: assetID) {
+                        Image(uiImage: art)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 58, height: 74)
+                            .clipped()
+                            .padding(3)
+                            .background(AtlasTheme.paperFresh)
+                            .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+                            .accessibilityHidden(true)
+                    }
                     VStack(alignment: .leading, spacing: 4) {
                         Text("CHAPTER \(String(format: "%02d", chapter.number)) · FIELD SEASON ONE")
                             .font(AtlasType.technical(9, weight: .bold))

@@ -52,7 +52,8 @@ struct SettingsView: View {
             } label: {
                 navigationRowLabel(
                     title: "FIELD SEASON",
-                    detail: commerce.ownsFieldSeason ? "Owned" : "View"
+                    detail: commerce.ownsFieldSeason ? "Owned" : "View",
+                    thumb: "vaquita-plate-01"
                 )
             }
             .buttonStyle(.plain)
@@ -61,7 +62,7 @@ struct SettingsView: View {
             NavigationLink {
                 AtlasAccessSheet(commerce: commerce)
             } label: {
-                navigationRowLabel(title: "ATLAS", detail: commerce.atlasStatusLine)
+                navigationRowLabel(title: "ATLAS", detail: commerce.atlasStatusLine, thumb: "snow-leopard-plate-01")
             }
             .buttonStyle(.plain)
             .accessibilityIdentifier("access.overview.atlas")
@@ -99,8 +100,19 @@ struct SettingsView: View {
         }
     }
 
-    private func navigationRowLabel(title: String, detail: String?) -> some View {
-        HStack {
+    private func navigationRowLabel(title: String, detail: String?, thumb: String? = nil) -> some View {
+        HStack(spacing: 12) {
+            // A sliver of the actual work behind the row — the paid pieces
+            // stay visible from the menu without a word of selling.
+            if let thumb, let art = UIImage(named: thumb) {
+                Image(uiImage: art)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 30, height: 38)
+                    .clipped()
+                    .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+                    .accessibilityHidden(true)
+            }
             Text(title).font(AtlasType.technical(11, weight: .medium)).tracking(0.7)
             Spacer()
             if let detail {
