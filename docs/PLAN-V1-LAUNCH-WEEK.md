@@ -1,5 +1,27 @@
 # Witness V1.0 launch week — plan of record
 
+## Day 2 outcome (Tuesday 2026-09-01) — TestFlight upload BLOCKED
+
+**Done:** export-compliance key (`ITSAppUsesNonExemptEncryption: NO`)
+added via an XcodeGen `info:` block, version/build kept sourced from
+build settings, build bumped to **1.0.0 (4)** (commit `fbe2597`).
+WitnessCore 65/65 and app unit tests 13/13 green. Release archive built
+and verified (key present, team L5R9XW45B6) — saved permanently in
+Xcode Organizer (`~/Library/Developer/Xcode/Archives/2026-09-01/`).
+
+**Blocked:** the upload itself. The founder's Apple Distribution
+certificates are frozen by an Apple developer account transition — no
+"iOS Distribution" cert can be created until it clears. When it does:
+Xcode → Window → Organizer → select Witness 1.0.0 (4) → Distribute App
+→ App Store Connect → Upload (defaults). No rebuild needed.
+
+**Consequently deferred:** Block 2 purchase matrix (runs on the
+TestFlight build) and submission. **The account transition is now the
+critical path to the 09-15 target** — check its status daily.
+
+**Doable while blocked:** demo video shot list, optional webhook
+deploy, tip-IAP screenshot check, Annual-row glitch check.
+
 ## Day 1 outcome (Monday 2026-08-31, wrapped) — pickup Tuesday 2026-09-01
 
 **Done today, all pushed and verified:**
