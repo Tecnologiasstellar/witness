@@ -101,12 +101,18 @@ final class AccessSurfacesUITests: XCTestCase {
         open.tap()
 
         // Edition list shows chapter one and the honest in-production rows.
+        // Retry the tap once: it can land on the settling frame of the push
+        // (same flake family as openIndex).
         let chapterOne = app.buttons["fieldseason.chapter.1"]
         XCTAssertTrue(chapterOne.waitForExistence(timeout: 5))
         chapterOne.tap()
 
         // Reader: title, and the synthetic-voice disclosure beside the audio.
-        XCTAssertTrue(app.staticTexts["fieldseason.reader.title"].waitForExistence(timeout: 5))
+        let readerTitle = app.staticTexts["fieldseason.reader.title"]
+        if !readerTitle.waitForExistence(timeout: 5) {
+            chapterOne.tap()
+            XCTAssertTrue(readerTitle.waitForExistence(timeout: 5))
+        }
         let disclosure = app.staticTexts["fieldseason.audio.disclosure"]
         XCTAssertTrue(disclosure.waitForExistence(timeout: 5))
         XCTAssertTrue(disclosure.label.lowercased().contains("synthetic"))

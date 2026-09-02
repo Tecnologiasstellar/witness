@@ -5,18 +5,41 @@ import WitnessCore
 struct WitnessApp: App {
     @StateObject private var model = AppModel()
     @StateObject private var commerce = Self.makeCommerceModel()
+    @StateObject private var onboarding = OnboardingState()
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
         WindowGroup {
-            RootTabView(model: model, commerce: commerce)
-                .onChange(of: scenePhase) { _, phase in
-                    guard phase == .active else { return }
-                    Task.detached {
-                        await WitnessSync.shared.drain()
+            Group {
+                if onboarding.hasSeen {
+                    RootTabView(model: model, commerce: commerce)
+                        .transition(.opacity)
+                } else {
+                    // The introduction is the root itself, not a cover, so
+                    // the card underneath never renders until it is meant to.
+                    OnboardingView(
+                        mode: .firstRun,
+                        weeklyPlate: model.species?.gallery?.first ?? "vaquita-plate-01",
+                        weeklyName: model.species?.commonName
+                    ) { outcome in
+                        withAnimation(.easeInOut(duration: 0.45)) {
+                            onboarding.complete(
+                                pagesSeen: outcome.pagesSeen,
+                                skipped: outcome.skipped,
+                                reminder: outcome.reminder
+                            )
+                        }
                     }
-                    Task { await commerce.refreshAccess() }
+                    .transition(.opacity)
                 }
+            }
+            .onChange(of: scenePhase) { _, phase in
+                guard phase == .active else { return }
+                Task.detached {
+                    await WitnessSync.shared.drain()
+                }
+                Task { await commerce.refreshAccess() }
+            }
         }
     }
 

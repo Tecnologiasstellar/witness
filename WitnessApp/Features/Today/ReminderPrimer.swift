@@ -40,27 +40,43 @@ struct ReminderPrimer: View {
 
     private var primer: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("RETURN TOMORROW")
+            Text("A WEEKLY REMINDER")
                 .font(AtlasType.technical(9, weight: .bold)).tracking(1.2)
                 .foregroundStyle(AtlasTheme.sepia)
-            Text("A new species arrives each morning. Choose a time and Witness will remind you.")
+            Text(reminders.hasPreference
+                 ? "A new species arrives every Monday. You asked for it \(reminders.preferredPhrase) — turn the reminder on, and iOS will ask for permission once."
+                 : "A new species arrives every Monday. Choose a time and Witness will remind you.")
                 .font(AtlasType.display(16))
                 .lineSpacing(6)
 
-            HStack(spacing: 8) {
-                ForEach(ReminderService.presets, id: \.label) { preset in
-                    Button {
-                        enable(hour: preset.hour, minute: preset.minute)
-                    } label: {
-                        Text(preset.label)
-                            .font(AtlasType.technical(10, weight: .bold)).tracking(0.9)
-                            .frame(maxWidth: .infinity, minHeight: 44)
-                            .overlay(Rectangle().stroke(AtlasTheme.sepia.opacity(0.5), lineWidth: 1))
-                    }
-                    .buttonStyle(.plain)
+            if reminders.hasPreference {
+                // The time named in the introduction (D-026): one tap here
+                // is the first and only moment the iOS prompt can appear.
+                AccessPrimaryButton(
+                    title: "TURN ON · \(reminders.timeLabel.uppercased())",
+                    subtitle: nil,
+                    isBusy: false,
+                    isEnabled: true,
+                    identifier: "today.reminderPrimer.turnOn"
+                ) {
+                    enable(hour: reminders.hour, minute: reminders.minute)
                 }
+            } else {
+                HStack(spacing: 8) {
+                    ForEach(ReminderService.presets, id: \.label) { preset in
+                        Button {
+                            enable(hour: preset.hour, minute: preset.minute)
+                        } label: {
+                            Text(preset.label)
+                                .font(AtlasType.technical(10, weight: .bold)).tracking(0.9)
+                                .frame(maxWidth: .infinity, minHeight: 44)
+                                .overlay(Rectangle().stroke(AtlasTheme.sepia.opacity(0.5), lineWidth: 1))
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .foregroundStyle(AtlasTheme.sepia)
             }
-            .foregroundStyle(AtlasTheme.sepia)
 
             if isChoosingTime {
                 HStack {
@@ -108,6 +124,15 @@ struct ReminderPrimer: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(AtlasTheme.paperFresh)
         .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
+        // A container, not a merged element: the buttons inside stay
+        // reachable to VoiceOver and to the UI tests.
+        .accessibilityElement(children: .contain)
         .accessibilityIdentifier("today.reminderPrimer")
+        .onAppear {
+            // The custom picker opens on the named time, if any.
+            customTime = Calendar.current.date(
+                from: DateComponents(hour: reminders.hour, minute: reminders.minute)
+            ) ?? .now
+        }
     }
 }

@@ -2,9 +2,10 @@ import SwiftUI
 @preconcurrency import UserNotifications
 import WitnessCore
 
-/// Daily local-notification reminder (D-008: primed only after the first
-/// completed witness). Zero server infrastructure — the catalog rotates
-/// on-device, so a repeating local notification is the whole feature.
+/// Weekly local-notification reminder (D-023; D-008: the iOS prompt fires
+/// only after the first completed witness). Zero server infrastructure —
+/// the catalog rotates on-device, so a repeating local notification is the
+/// whole feature.
 @MainActor
 final class ReminderService: ObservableObject {
     static let shared = ReminderService()
@@ -16,6 +17,11 @@ final class ReminderService: ObservableObject {
     @Published private(set) var isSystemDenied = false
     /// The post-first-witness primer was answered (any choice) — never ask again.
     @Published private(set) var primerAnswered: Bool
+    /// A time was named during the introduction (D-026). `hour`/`minute`
+    /// hold it; the primer turns it into a real reminder — and only then
+    /// asks iOS. Needed because 8:00 is also the default and cannot signal
+    /// intent on its own.
+    @Published private(set) var hasPreference: Bool
 
     static let presets: [(label: String, hour: Int, minute: Int)] = [
         ("MORNING", 8, 0),
@@ -31,8 +37,40 @@ final class ReminderService: ObservableObject {
         hour = defaults.object(forKey: "reminder.hour") as? Int ?? 8
         minute = defaults.object(forKey: "reminder.minute") as? Int ?? 0
         primerAnswered = defaults.bool(forKey: "reminder.primerAnswered")
+        hasPreference = defaults.bool(forKey: "reminder.hasPreference")
         Task { await refreshAuthorization() }
     }
+
+    /// Records a preferred time without touching the notification API.
+    func setPreferredTime(hour: Int, minute: Int) {
+        self.hour = hour
+        self.minute = minute
+        hasPreference = true
+        defaults.set(hour, forKey: "reminder.hour")
+        defaults.set(minute, forKey: "reminder.minute")
+        defaults.set(true, forKey: "reminder.hasPreference")
+    }
+
+    /// "in the morning" / "at midday" / "in the evening" / "at 8:00 AM".
+    var preferredPhrase: String {
+        switch Self.presets.first(where: { $0.hour == hour && $0.minute == minute })?.label {
+        case "MORNING": "in the morning"
+        case "MIDDAY": "at midday"
+        case "EVENING": "in the evening"
+        default: "at \(timeLabel)"
+        }
+    }
+
+#if DEBUG
+    /// A forced introduction (UI tests) means a fresh person: the primer is
+    /// unanswered and no time has been named.
+    func resetFirstRunState() {
+        primerAnswered = false
+        hasPreference = false
+        defaults.removeObject(forKey: "reminder.primerAnswered")
+        defaults.removeObject(forKey: "reminder.hasPreference")
+    }
+#endif
 
     var timeLabel: String {
         var components = DateComponents()
@@ -62,9 +100,11 @@ final class ReminderService: ObservableObject {
         self.hour = hour
         self.minute = minute
         isEnabled = true
+        hasPreference = false
         defaults.set(true, forKey: "reminder.enabled")
         defaults.set(hour, forKey: "reminder.hour")
         defaults.set(minute, forKey: "reminder.minute")
+        defaults.set(false, forKey: "reminder.hasPreference")
 
         let content = UNMutableNotificationContent()
         content.title = "This week's species is waiting"

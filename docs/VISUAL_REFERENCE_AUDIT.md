@@ -100,6 +100,8 @@ These are prototype tokens, not locked brand colors. Status categories should re
 
 ## Recommended onboarding
 
+> Superseded 2026-09-02 by D-026 and `WitnessApp/Features/Onboarding/OnboardingView.swift`: six skippable pages on the weekly cadence (D-023), reminder intent recorded in the introduction, iOS prompt still only after the first Witness. The copy below is kept as the original daily-worded reference.
+
 ### Screen 1 — Why
 
 Hero: an original Witness composition or approved flagship image.  

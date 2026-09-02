@@ -193,6 +193,15 @@ struct SettingsView: View {
             staticRow("SOURCES", detail: "Cited on every card")
             staticRow("ILLUSTRATION", detail: "AI-assisted, accuracy-reviewed")
             staticRow("NARRATION", detail: "Synthetic voice, disclosed in each chapter")
+            NavigationLink {
+                // The introduction, readable again (D-026) — pushed inside
+                // this stack, without the reminder page.
+                OnboardingView(mode: .review, weeklyPlate: weeklyPlate ?? "vaquita-plate-01")
+            } label: {
+                navigationRowLabel(title: "HOW WITNESS WORKS", detail: "Five pages")
+            }
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("index.howItWorks")
             linkRow("REPORT A CORRECTION", url: Self.correctionsEmailURL)
             linkRow("WRITE TO THE MAKER", url: Self.supportEmailURL)
         }

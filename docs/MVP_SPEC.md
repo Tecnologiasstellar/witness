@@ -14,11 +14,11 @@ A curious, emotionally engaged adult who cares about nature but does not want a 
 
 ### 1. First launch
 
-- Two introductory panels maximum: `Why Witness exists` and `One species. One minute. One act.`
-- Continue directly into the first daily species. Do not ask for sign-in, notifications, or payment before the user can experience the ritual.
-- After the first completed Witness, offer a reminder-time primer with Morning, Midday, Evening, and Choose a time. Invoke the system notification prompt only after explicit intent.
+- A six-page introduction (D-026), one idea per page, SKIP on every page: why Witness exists · one species a week · bear witness · the acts · a weekly reminder (intent only) · the works and the Index. Readable again from INDEX › COLOPHON › HOW WITNESS WORKS, without the reminder page.
+- Continue directly into this week's species. Do not ask for sign-in, notifications, or payment before the user can experience the ritual: the reminder page records a preferred time and never invokes the system prompt.
+- After the first completed Witness, offer a reminder-time primer with Morning, Midday, Evening, and Choose a time — pre-filled as a one-tap confirm when the introduction named a time. Invoke the system notification prompt only after explicit intent.
 - No account requirement.
-- Do not show the Witness+ paywall in onboarding.
+- No paywall, price, or purchase control in the introduction; Field Season and the Atlas appear as named doors only.
 
 ### 2. Today
 
