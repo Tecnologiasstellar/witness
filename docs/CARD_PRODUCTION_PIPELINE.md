@@ -21,6 +21,8 @@ Pick the next species from `SPECIES_BACKLOG.md`. Prefer story strength, a genuin
 
 Scaffold with `python3 tools/new-card.py "Common Name" "Scientific name"` — it writes the v2-shaped record to `Resources/catalog/<id>.json` (one file per species; the loader merges them), a worksheet with the source checklist and five pre-filled image prompts under `docs/cards/`, and a rights stub under `docs/media/`. Resolve every TODO: sources, action, stats (4+ threats), generalized range regions, insight, reproduction, programs, story. The skeleton fails the validator by design until complete. Check URLs as you go: `python3 tools/check_links.py --all --only <id>`.
 
+**Staged drafts.** A record that is text-complete but still waiting for plates or approval must not sit in `Resources/catalog/` — the production test requires every bundled record to be `approved`, and the loader would put a plate-less card into the rotation. Move it to `content/cards/drafts/<id>.json` (keep its `publishDate`; the next free slots chain from the last bundled card) and check it offline with `python3 tools/validate_card.py content/cards/drafts/<id>.json` and `python3 tools/check_links.py --all --dir content/cards/drafts --only <id>`. Promotion, after stages 4–6: `mv` the JSON back into the catalog, bump the record count in `CatalogValidatorTests.swift`, run `tools/export_catalog.py`, then `swift test`.
+
 ### 4. Artwork (Higgsfield) — five plates per card
 
 Five plates per v2 card: hero 2:3, habitat 3:2, head study 1:1, behavior 3:2, human scale 1:1. The worksheet from stage 3 carries all five prompts pre-filled from the locked template.

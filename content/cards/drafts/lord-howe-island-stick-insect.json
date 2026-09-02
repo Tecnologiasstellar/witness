@@ -1,0 +1,288 @@
+{
+  "id": "lord-howe-island-stick-insect",
+  "schemaVersion": 1,
+  "commonName": "Lord Howe Island Stick Insect",
+  "scientificName": "Dryococelus australis",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Lord Howe Island group, Tasman Sea, off eastern Australia",
+  "hook": "Gone by 1935. In 2001, three turned up on one shrub on a sea stack.",
+  "story": [
+    {
+      "id": "lord-howe-island-stick-insect-opening",
+      "text": "Islanders called it the tree lobster: a glossy black, hand-length stick insect once so common it was used as fishing bait.",
+      "sourceIDs": [
+        "lhi-museum-phasmids",
+        "nsw-tssc-cr-listing-2012"
+      ]
+    },
+    {
+      "id": "lord-howe-island-stick-insect-life",
+      "text": "Wingless and nocturnal, it rests by day in tree hollows — in 1916 an entomologist counted 68 in one.",
+      "sourceIDs": [
+        "zoos-victoria-lhisi",
+        "conversation-chapman-2013"
+      ]
+    },
+    {
+      "id": "lord-howe-island-stick-insect-threat",
+      "text": "In 1918 the supply ship Makambo ran aground, ship rats came ashore, and the last was seen on the island in 1920.",
+      "sourceIDs": [
+        "nsw-tssc-cr-listing-2012",
+        "lhi-museum-phasmids"
+      ]
+    },
+    {
+      "id": "lord-howe-island-stick-insect-gone",
+      "text": "By 1935 it was recorded as very rare, if not already extinct.",
+      "sourceIDs": [
+        "nsw-tssc-cr-listing-2012"
+      ]
+    },
+    {
+      "id": "lord-howe-island-stick-insect-rediscovery",
+      "text": "In 2001 a night survey of Balls Pyramid, a sea stack 23 km away, found two adults and one nymph on a few Melaleuca shrubs.",
+      "sourceIDs": [
+        "nsw-tssc-cr-listing-2012",
+        "australian-museum-vip-phasmid"
+      ]
+    },
+    {
+      "id": "lord-howe-island-stick-insect-patch",
+      "text": "The whole known wild population fed on six shrubs in a patch 30 metres by 6.",
+      "sourceIDs": [
+        "nsw-tssc-cr-listing-2012"
+      ]
+    },
+    {
+      "id": "lord-howe-island-stick-insect-hope",
+      "text": "On Valentine's night 2003 two pairs were carried to the mainland; at Melbourne Zoo, Eve laid 248 eggs and the first nymph hatched that September.",
+      "sourceIDs": [
+        "australian-museum-vip-phasmid",
+        "zoos-victoria-lhisi"
+      ]
+    },
+    {
+      "id": "lord-howe-island-stick-insect-generations",
+      "text": "The program has since raised 19 generations, holds 700–800 insects, and shares eggs with zoos in San Diego, Bristol, Toronto and Prague.",
+      "sourceIDs": [
+        "abc-news-2026-discovery",
+        "sdzwa-lhisi"
+      ]
+    },
+    {
+      "id": "lord-howe-island-stick-insect-rats",
+      "text": "Between May and December 2019 the Lord Howe Island Board baited the island for rats and mice; by July 2023 none had been found for over two years.",
+      "sourceIDs": [
+        "lhib-rodent-eradication-project",
+        "lhib-checkpoint-2023"
+      ]
+    },
+    {
+      "id": "lord-howe-island-stick-insect-witness",
+      "text": "To witness the Lord Howe Island stick insect is to keep a door open — back to the island forest it was lost from, now without rats.",
+      "sourceIDs": [
+        "zoos-victoria-lhisi",
+        "abc-news-2026-discovery"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-lord-howe-island-stick-insect",
+    "title": "Meet the tree lobster",
+    "summary": "Read Zoos Victoria's profile of the stick insect: the rediscovery on Balls Pyramid, the breeding program at Melbourne Zoo, and the plan for its return.",
+    "effort": "4 minutes",
+    "destinationURL": "https://www.zoo.org.au/fighting-extinction/local-threatened-species/lord-howe-island-stick-insect/",
+    "destinationOrganization": "Zoos Victoria",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "zoos-victoria-lhisi"
+    ],
+    "lastVerified": "2026-09-02",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "lord-howe-island-stick-insect-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-02; rights record docs/media/lord-howe-island-stick-insect-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-22",
+  "sources": [
+    {
+      "id": "zoos-victoria-lhisi",
+      "title": "Lord Howe Island Stick Insect",
+      "organization": "Zoos Victoria",
+      "url": "https://www.zoo.org.au/fighting-extinction/local-threatened-species/lord-howe-island-stick-insect/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "nsw-tssc-cr-listing-2012",
+      "title": "Lord Howe Island phasmid (Dryococelus australis) — critically endangered species listing",
+      "organization": "NSW Department of Climate Change, Energy, the Environment and Water (NSW Threatened Species Scientific Committee)",
+      "url": "https://www.environment.nsw.gov.au/topics/animals-and-plants/threatened-species/nsw-threatened-species-scientific-committee/determinations/final-determinations/2011-2012/lord-howe-island-phasmid-dryococelus-australis-critically-endangered-species-listing",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "sdzwa-lhisi",
+      "title": "Lord Howe Island Stick Insect",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/lord-howe-island-stick-insect",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "sdzwa-how-lord-howe",
+      "title": "How, Lord Howe?",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://sandiegozoowildlifealliance.org/story-hub/zoonooz/how-lord-howe",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "sdzwa-library-factsheet",
+      "title": "Lord Howe Island Stick Insect (Dryococelus australis) Fact Sheet",
+      "organization": "San Diego Zoo Wildlife Alliance Library",
+      "url": "https://ielc.libguides.com/sdzg/factsheets/lord-howe-island-stick-insect",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "australian-museum-vip-phasmid",
+      "title": "VIP: Very Important Phasmid",
+      "organization": "Australian Museum",
+      "url": "https://australian.museum/blog/museullaneous/vip-very-important-phasmid/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "lhib-rodent-eradication-project",
+      "title": "Rodent Eradication Project",
+      "organization": "Lord Howe Island Board",
+      "url": "https://www.lhib.nsw.gov.au/environment/rodent-eradication-project",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "lhib-checkpoint-2023",
+      "title": "Checkpoint program 2023",
+      "organization": "Lord Howe Island Board",
+      "url": "https://www.lhib.nsw.gov.au/environment/rodent-eradication-project/environmental-monitoring/checkpoint-program-2023",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "lhi-museum-phasmids",
+      "title": "Phasmids",
+      "organization": "Lord Howe Island Museum",
+      "url": "https://lhimuseum.com/learn/phasmids/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "conversation-chapman-2013",
+      "title": "Australian endangered species: Lord Howe Island stick insect",
+      "organization": "The Conversation (Beth Chapman, CSIRO)",
+      "url": "https://theconversation.com/australian-endangered-species-lord-howe-island-stick-insect-11789",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "abc-news-2026-discovery",
+      "title": "New discovery of rare Lord Howe Island stick insect colonies",
+      "organization": "ABC News (Australia)",
+      "url": "https://www.abc.net.au/news/2026-03-15/lord-howe-island-stick-insect-discovery-balls-pyramid/106381564",
+      "lastAccessed": "2026-09-02"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-02",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-02 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "Females to 15 cm · about 25 g — hand-length",
+    "lifespan": "12–18 months",
+    "diet": "Melaleuca howeana leaves · eaten at night",
+    "populationEstimate": "Fewer than 50 mature in the wild",
+    "populationAsOf": "2012 · per NSW Threatened Species Scientific Committee",
+    "trend": "decreasing",
+    "threats": [
+      "Ship rats, if they return",
+      "Morning glory vine",
+      "One tiny wild colony",
+      "Six shrubs of food"
+    ],
+    "sourceIDs": [
+      "nsw-tssc-cr-listing-2012",
+      "sdzwa-lhisi",
+      "lhi-museum-phasmids",
+      "zoos-victoria-lhisi"
+    ]
+  },
+  "reproduction": {
+    "id": "lord-howe-island-stick-insect-reproduction",
+    "text": "A female lays clutches of nine or ten eggs, up to 300 in her life, each taking six to nine months to hatch — and unfertilised eggs can hatch too, all of them female.",
+    "sourceIDs": [
+      "sdzwa-library-factsheet",
+      "sdzwa-lhisi"
+    ]
+  },
+  "insight": {
+    "id": "lord-howe-island-stick-insect-insight",
+    "text": "Hatchlings emerge bright green and darken with every moult to glossy black — and by day the young pile together in living clusters inside hollow logs.",
+    "sourceIDs": [
+      "sdzwa-how-lord-howe",
+      "sdzwa-library-factsheet"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Balls Pyramid",
+      "latitude": -31.75,
+      "longitude": 159.25,
+      "radiusKm": 50
+    },
+    {
+      "name": "Lord Howe Island",
+      "latitude": -31.55,
+      "longitude": 159.08,
+      "radiusKm": 50
+    }
+  ],
+  "gallery": [
+    "lord-howe-island-stick-insect-plate-01",
+    "lord-howe-island-stick-insect-context-01",
+    "lord-howe-island-stick-insect-detail-01",
+    "lord-howe-island-stick-insect-behavior-01",
+    "lord-howe-island-stick-insect-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "zoos-victoria-lhisi-breeding-program",
+      "organization": "Zoos Victoria",
+      "title": "Melbourne Zoo breeding program",
+      "summary": "Breeds the species at Melbourne Zoo from the two pairs collected on Balls Pyramid in 2003, shares eggs with partner zoos overseas, and plans to release free-ranging insects on Lord Howe Island once it stays rat-free.",
+      "url": "https://www.zoo.org.au/fighting-extinction/local-threatened-species/lord-howe-island-stick-insect/",
+      "kind": "program",
+      "sourceIDs": [
+        "zoos-victoria-lhisi",
+        "sdzwa-lhisi"
+      ],
+      "lastVerified": "2026-09-02"
+    },
+    {
+      "id": "lhib-rodent-eradication-project",
+      "organization": "Lord Howe Island Board",
+      "title": "Rodent Eradication Project",
+      "summary": "Baited Lord Howe Island for ship rats and house mice between May and December 2019, then ran a July 2023 checkpoint search with 140 tracking tunnels, 32 trail cameras and detection dogs that found none.",
+      "url": "https://www.lhib.nsw.gov.au/environment/rodent-eradication-project",
+      "kind": "program",
+      "sourceIDs": [
+        "lhib-rodent-eradication-project",
+        "lhib-checkpoint-2023"
+      ],
+      "lastVerified": "2026-09-02"
+    }
+  ]
+}

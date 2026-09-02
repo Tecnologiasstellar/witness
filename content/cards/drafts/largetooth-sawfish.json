@@ -1,0 +1,295 @@
+{
+  "id": "largetooth-sawfish",
+  "schemaVersion": 1,
+  "commonName": "Largetooth Sawfish",
+  "scientificName": "Pristis pristis",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Northern Australia's rivers and coasts; scattered tropical populations elsewhere",
+  "hook": "It once swam the coasts of 75 countries. Its saw snags every net.",
+  "story": [
+    {
+      "id": "largetooth-sawfish-saw",
+      "text": "The largetooth sawfish is a shark-like ray of up to seven metres, a quarter of it toothed saw.",
+      "sourceIDs": [
+        "fishes-of-australia-pristis-pristis",
+        "scs-largetooth-sawfish"
+      ]
+    },
+    {
+      "id": "largetooth-sawfish-sense",
+      "text": "The saw is a sense organ first: it reads the faint electric fields of prey, then swings sideways to stun them.",
+      "sourceIDs": [
+        "noaa-largetooth-sawfish",
+        "shark-trust-see-a-saw"
+      ]
+    },
+    {
+      "id": "largetooth-sawfish-river",
+      "text": "Pups push upstream for their first years — in the Fitzroy River, more than 400 km from the sea.",
+      "sourceIDs": [
+        "fishes-of-australia-pristis-pristis",
+        "florida-museum-pristis-pristis"
+      ]
+    },
+    {
+      "id": "largetooth-sawfish-range",
+      "text": "It once lived in the coastal waters of 75 countries, the widest range of any sawfish.",
+      "sourceIDs": [
+        "iucn-ssg-ghosts-of-the-coast"
+      ]
+    },
+    {
+      "id": "largetooth-sawfish-nets",
+      "text": "The saw snags in gillnets and trawls, and outside Australia a caught sawfish is usually kept for its fins and rostrum.",
+      "sourceIDs": [
+        "frdc-report-card-2023",
+        "noaa-largetooth-conservation"
+      ]
+    },
+    {
+      "id": "largetooth-sawfish-decline",
+      "text": "Since 1900 its range has shrunk by an estimated 61 percent, mapped by researchers from Simon Fraser and Charles Darwin universities.",
+      "sourceIDs": [
+        "iucn-ssg-ghosts-of-the-coast"
+      ]
+    },
+    {
+      "id": "largetooth-sawfish-stronghold",
+      "text": "Northern Australia is now the Indo-West Pacific stronghold: protected in all its waters since 2000, still common in the Fitzroy.",
+      "sourceIDs": [
+        "frdc-report-card-2023",
+        "scs-largetooth-sawfish"
+      ]
+    },
+    {
+      "id": "largetooth-sawfish-surveys",
+      "text": "Surveys keep the count: Murdoch University with the Nyikina-Mangala Rangers tracked 32 juveniles in the Fitzroy over eight years, and CSIRO with the APN Rangers found 47 on the Archer River in 2022.",
+      "sourceIDs": [
+        "wamsi-fitzroy-nursery",
+        "csiro-archer-river"
+      ]
+    },
+    {
+      "id": "largetooth-sawfish-trade",
+      "text": "Trade has been banned under CITES since 2007, and the Sawfish Conservation Society asks anyone who meets a sawfish, or finds an old saw, to report it.",
+      "sourceIDs": [
+        "iucn-ssg-ghosts-of-the-coast",
+        "scs-home"
+      ]
+    },
+    {
+      "id": "largetooth-sawfish-witness",
+      "text": "To witness the largetooth sawfish is to keep faith with tropical rivers, and the floods that carry each year's pups upstream.",
+      "sourceIDs": [
+        "frdc-report-card-2023",
+        "wamsi-fitzroy-nursery"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-largetooth-sawfish",
+    "title": "Meet the ray with a saw",
+    "summary": "Read NOAA Fisheries' largetooth sawfish profile: the saw, the river nurseries, and where the species still holds on.",
+    "effort": "5 minutes",
+    "destinationURL": "https://www.fisheries.noaa.gov/species/largetooth-sawfish",
+    "destinationOrganization": "NOAA Fisheries",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "noaa-largetooth-sawfish"
+    ],
+    "lastVerified": "2026-09-02",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "largetooth-sawfish-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending (plates not yet generated), 2026-09-02; rights record docs/media/largetooth-sawfish-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-24",
+  "sources": [
+    {
+      "id": "noaa-largetooth-sawfish",
+      "title": "Largetooth Sawfish",
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/largetooth-sawfish",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "noaa-largetooth-conservation",
+      "title": "Largetooth Sawfish: Conservation & Management",
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/largetooth-sawfish/conservation-management",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "florida-museum-pristis-pristis",
+      "title": "Pristis pristis — Largetooth Sawfish",
+      "organization": "Florida Museum of Natural History",
+      "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/pristis-pristis/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "frdc-report-card-2023",
+      "title": "Largetooth Sawfish, Pristis pristis — Shark Report Card 2023",
+      "organization": "Fisheries Research and Development Corporation (Australian Government)",
+      "url": "https://fish.gov.au/docs/SharkReport/2023_FRDC_Pristis_pristis_Final.pdf",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "iucn-ssg-ghosts-of-the-coast",
+      "title": "Ghosts of the coast: global extinction risk and conservation of sawfishes (Dulvy et al., Aquatic Conservation 2016)",
+      "organization": "IUCN SSC Shark Specialist Group",
+      "url": "https://www.iucnssg.org/uploads/5/4/1/2/54120303/2016_-_ghosts_of_the_coast_-_global_extinction_risk_and_conservation_of_sawfishes.pdf",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "fishes-of-australia-pristis-pristis",
+      "title": "Pristis pristis — Largetooth Sawfish",
+      "organization": "Fishes of Australia (Museums Victoria)",
+      "url": "https://fishesofaustralia.net.au/home/species/3277",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "scs-home",
+      "title": "Sawfish Conservation Society",
+      "organization": "Sawfish Conservation Society",
+      "url": "https://www.sawfishconservationsociety.org/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "scs-largetooth-sawfish",
+      "title": "Largetooth Sawfish",
+      "organization": "Sawfish Conservation Society",
+      "url": "https://www.sawfishconservationsociety.org/largetooth-sawfish",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "scs-report-a-sawfish",
+      "title": "Report a Sawfish",
+      "organization": "Sawfish Conservation Society",
+      "url": "https://www.sawfishconservationsociety.org/report-a-sawfish-1",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "shark-trust-see-a-saw",
+      "title": "Sawfish: See A Saw",
+      "organization": "The Shark Trust",
+      "url": "https://www.sharktrust.org/sawfish",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "csiro-archer-river",
+      "title": "New findings offer hope for the endangered sawfish",
+      "organization": "CSIRO",
+      "url": "https://www.csiro.au/en/news/All/Articles/2022/May/largetooth-sawfish",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "wamsi-fitzroy-nursery",
+      "title": "Critical sawfish nursery habitats identified in Fitzroy River",
+      "organization": "Western Australian Marine Science Institution",
+      "url": "https://wamsi.org.au/news/critical-sawfish-nursery-habitats-identified-in-fitzroy-river/",
+      "lastAccessed": "2026-09-02"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-02",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-02 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "Up to 7 m (23 ft) · saw about a quarter of its length",
+    "lifespan": "Estimated 36 years · mature at 8–10",
+    "diet": "Fish, crabs & shrimp — stunned with the saw",
+    "populationEstimate": "No global count · range down 61% since 1900",
+    "populationAsOf": "2016 · per Dulvy et al., IUCN SSC Shark Specialist Group",
+    "trend": "decreasing",
+    "threats": [
+      "Gillnet & trawl bycatch",
+      "Fin & rostrum trade",
+      "Altered river flows",
+      "Mangrove & estuary loss"
+    ],
+    "sourceIDs": [
+      "frdc-report-card-2023",
+      "noaa-largetooth-sawfish",
+      "noaa-largetooth-conservation",
+      "iucn-ssg-ghosts-of-the-coast",
+      "scs-largetooth-sawfish"
+    ]
+  },
+  "reproduction": {
+    "id": "largetooth-sawfish-reproduction",
+    "text": "Litters of one to thirteen pups, each about 75 cm long, arrive after a five-month gestation and only every other year — and a female is not mature until roughly ten years old.",
+    "sourceIDs": [
+      "florida-museum-pristis-pristis",
+      "noaa-largetooth-sawfish"
+    ]
+  },
+  "insight": {
+    "id": "largetooth-sawfish-insight",
+    "text": "In Australia this ray counts as the largest freshwater fish — juveniles have been recorded more than 400 km up the Fitzroy River before they ever reach the sea.",
+    "sourceIDs": [
+      "fishes-of-australia-pristis-pristis",
+      "wamsi-fitzroy-nursery"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Fitzroy River and the Kimberley coast",
+      "latitude": -17.5,
+      "longitude": 124.0,
+      "radiusKm": 250
+    },
+    {
+      "name": "Gulf of Carpentaria rivers",
+      "latitude": -15.0,
+      "longitude": 140.0,
+      "radiusKm": 300
+    }
+  ],
+  "gallery": [
+    "largetooth-sawfish-plate-01",
+    "largetooth-sawfish-context-01",
+    "largetooth-sawfish-detail-01",
+    "largetooth-sawfish-behavior-01",
+    "largetooth-sawfish-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "scs-sawfish-reports",
+      "organization": "Sawfish Conservation Society",
+      "title": "Sawfish sighting & saw reports",
+      "summary": "Collects reports of sawfish encounters and isolated saws for field researchers, publishes multilingual identification guides, funds small research grants, and runs the annual International Sawfish Day.",
+      "url": "https://www.sawfishconservationsociety.org/",
+      "kind": "program",
+      "sourceIDs": [
+        "scs-home",
+        "scs-report-a-sawfish"
+      ],
+      "lastVerified": "2026-09-02"
+    },
+    {
+      "id": "shark-trust-see-a-saw",
+      "organization": "The Shark Trust",
+      "title": "See a Saw",
+      "summary": "Finds and documents old sawfish rostra in homes, museums and auction houses — photographing each to identify the species by tooth count, recording its history, and taking DNA samples for researchers.",
+      "url": "https://www.sharktrust.org/sawfish",
+      "kind": "program",
+      "sourceIDs": [
+        "shark-trust-see-a-saw"
+      ],
+      "lastVerified": "2026-09-02"
+    }
+  ]
+}

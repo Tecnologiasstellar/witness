@@ -1,0 +1,290 @@
+{
+  "id": "great-indian-bustard",
+  "schemaVersion": 1,
+  "commonName": "Great Indian Bustard",
+  "scientificName": "Ardeotis nigriceps",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Thar Desert of western Rajasthan, with a remnant in Kutch, Gujarat",
+  "hook": "Near fifteen kilos and it still flies. Seventy now hatched by hand.",
+  "story": [
+    {
+      "id": "great-indian-bustard-size",
+      "text": "Just over a metre tall and close to fifteen kilograms, the Great Indian Bustard is among the heaviest birds that still fly.",
+      "sourceIDs": [
+        "corbett-kutch-blog",
+        "wii-2020-final-report"
+      ]
+    },
+    {
+      "id": "great-indian-bustard-lek",
+      "text": "Its booming call has been likened to thunder; at yearly leks males inflate and leap at one another.",
+      "sourceIDs": [
+        "birdlife-2021-powerline-ruling"
+      ]
+    },
+    {
+      "id": "great-indian-bustard-egg",
+      "text": "A female lays one egg on open ground and carries her chick from danger under her wing.",
+      "sourceIDs": [
+        "birdlife-2021-powerline-ruling"
+      ]
+    },
+    {
+      "id": "great-indian-bustard-decline",
+      "text": "Hunting and egg collection left about 1,260 birds by 1969; by 2018 some 150 remained, nearly all in India.",
+      "sourceIDs": [
+        "wii-2020-final-report"
+      ]
+    },
+    {
+      "id": "great-indian-bustard-wires",
+      "text": "Heavy and low-flying, it never evolved to avoid wires: about 18 a year died on Thar power lines in 2017–18 — a fifth of the species.",
+      "sourceIDs": [
+        "wii-2020-final-report",
+        "birdlife-2021-powerline-ruling"
+      ]
+    },
+    {
+      "id": "great-indian-bustard-court",
+      "text": "India's Supreme Court took up the wires in 2021 and in December 2025 fixed a Rajasthan priority area: critical lines underground, no new turbines.",
+      "sourceIDs": [
+        "sci-2025-judgment"
+      ]
+    },
+    {
+      "id": "great-indian-bustard-sam",
+      "text": "Since 2019 the Wildlife Institute of India has hatched wild-laid eggs at Sam, near Jaisalmer; the first captive-bred chick arrived in March 2023.",
+      "sourceIDs": [
+        "wii-2023-annual-report"
+      ]
+    },
+    {
+      "id": "great-indian-bustard-seventy",
+      "text": "By March 2026 the Jaisalmer centres held seventy birds, up from sixteen in 2022, with first soft releases due this year.",
+      "sourceIDs": [
+        "newsonair-2026-fourth-year",
+        "pib-2022-protection"
+      ]
+    },
+    {
+      "id": "great-indian-bustard-kutch",
+      "text": "That month an egg rode nineteen hours by road to Kutch, where a wild female hatched Gujarat's first chick in a decade.",
+      "sourceIDs": [
+        "newsonair-2026-kutch-chick"
+      ]
+    },
+    {
+      "id": "great-indian-bustard-witness",
+      "text": "To witness the Great Indian Bustard is to stand with the Bishnoi villagers who lent their grassland to it — and with the open horizon it needs.",
+      "sourceIDs": [
+        "bnhs-thar-blog",
+        "wii-campa-gib"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-great-indian-bustard",
+    "title": "Read the powerline ruling",
+    "summary": "Read BirdLife's account of the Thar, the wires, and the 2021 Supreme Court ruling that put the bustard first.",
+    "effort": "5 minutes",
+    "destinationURL": "https://www.birdlife.org/news/2021/07/14/new-india-powerline-ruling-is-lifeline-for-critically-endangered-bustard/",
+    "destinationOrganization": "BirdLife International",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "birdlife-2021-powerline-ruling"
+    ],
+    "lastVerified": "2026-09-02",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "great-indian-bustard-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-02; rights record docs/media/great-indian-bustard-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-21",
+  "sources": [
+    {
+      "id": "wii-2020-final-report",
+      "title": "Conserving Great Indian Bustard Landscape — Final Report 2015–2020",
+      "organization": "Wildlife Institute of India",
+      "url": "https://v1.wii.gov.in/images//images/documents/publications/rr_2020_GIB_Conserving_GIB_landscape_Report.pdf",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "wii-2022-progress-report",
+      "title": "Bustard Recovery Program — Progress Report 2020–2022",
+      "organization": "Wildlife Institute of India",
+      "url": "https://v1.wii.gov.in/images/images/documents/publications/rr_2022_GIB_Project_Report_CAMPA.pdf",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "wii-2023-annual-report",
+      "title": "Bustard Recovery Program — Annual Report 2022–2023",
+      "organization": "Wildlife Institute of India",
+      "url": "https://v1.wii.gov.in/images//images/documents/publications/rr_2023_GIB_Project_Report_CAMPA.pdf",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "wii-campa-gib",
+      "title": "Habitat improvement and conservation breeding of great Indian bustard: an integrated approach",
+      "organization": "Wildlife Institute of India",
+      "url": "https://v1.wii.gov.in/campa_gib",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "pib-2022-protection",
+      "title": "Protection of Great Indian Bustards",
+      "organization": "Press Information Bureau, Ministry of Environment, Forest and Climate Change",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1805796",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "newsonair-2026-fourth-year",
+      "title": "Project Great Indian Bustard captive breeding programme enters 4th year with two new chicks",
+      "organization": "All India Radio News (Prasar Bharati)",
+      "url": "https://www.newsonair.gov.in/project-great-indian-bustard-captive-breeding-programme-enters-4th-year-with-two-new-chicks",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "newsonair-2026-kutch-chick",
+      "title": "Great Indian Bustard chick born in Kutch marks breakthrough in conservation efforts",
+      "organization": "All India Radio News (Prasar Bharati)",
+      "url": "https://www.newsonair.gov.in/great-indian-bustard-chick-born-in-kutch-marks-breakthrough-in-conservation-efforts",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "birdlife-2021-powerline-ruling",
+      "title": "New India powerline ruling is lifeline for Critically Endangered bustard",
+      "organization": "BirdLife International",
+      "url": "https://www.birdlife.org/news/2021/07/14/new-india-powerline-ruling-is-lifeline-for-critically-endangered-bustard/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "sci-2025-judgment",
+      "title": "M.K. Ranjitsinh & Ors. v. Union of India & Ors., judgment of 19 December 2025 (2025 INSC 1472)",
+      "organization": "Supreme Court of India",
+      "url": "https://api.sci.gov.in/supremecourt/2019/20754/20754_2019_6_1501_67109_Judgement_19-Dec-2025.pdf",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "bnhs-thar-blog",
+      "title": "Battling the many threats to save the Great Indian Bustards in their last stronghold in the Thar grasslands",
+      "organization": "Bombay Natural History Society",
+      "url": "https://blog.bnhs.org/bnhs-is-battling-many-threats-to-save-the-great-indian-bustards-in-their-last-stronghold-in-the-thar-grasslands/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "corbett-kutch-blog",
+      "title": "The threatened biodiversity of fascinating Kutch",
+      "organization": "The Corbett Foundation",
+      "url": "https://corbettfoundation.org/blogs/the-threatened-biodiversity-of-fascinating-kutch",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "tribune-2026-130",
+      "title": "Critically endangered Great Indian Bustard population stable at 130: Environment Ministry report",
+      "organization": "The Tribune (reporting the Wildlife Institute of India's July 2026 Thar status report)",
+      "url": "https://www.tribuneindia.com/news/india/critically-endangered-great-indian-bustard-population-stable-at-130-environment-ministry-report/",
+      "lastAccessed": "2026-09-02"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-02",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-02 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "Just over 1 m tall · males near 15 kg",
+    "lifespan": "Slow life history · ~9-year generation time",
+    "diet": "Omnivore · grasshoppers, beetles, fruit & crops",
+    "populationEstimate": "About 130 in the Thar (±21)",
+    "populationAsOf": "2026 · per Wildlife Institute of India",
+    "trend": "stable",
+    "threats": [
+      "Power-line collisions",
+      "Grassland loss & fencing",
+      "Free-ranging dogs",
+      "Solar & wind expansion"
+    ],
+    "sourceIDs": [
+      "corbett-kutch-blog",
+      "wii-2022-progress-report",
+      "wii-2020-final-report",
+      "tribune-2026-130",
+      "bnhs-thar-blog"
+    ]
+  },
+  "reproduction": {
+    "id": "great-indian-bustard-reproduction",
+    "text": "She lays a single egg on bare ground and may lay again up to five times in a season, yet in the wild only about a quarter of eggs hatch — and the chick that does is carried from danger under her wing.",
+    "sourceIDs": [
+      "wii-2022-progress-report",
+      "birdlife-2021-powerline-ruling"
+    ]
+  },
+  "insight": {
+    "id": "great-indian-bustard-insight",
+    "text": "In 2017–18 the power lines in about 4,000 square kilometres of the Thar were estimated to kill some 90,000 birds of 49 species a year — and roughly 18 of them were Great Indian Bustards, from a species of perhaps 150.",
+    "sourceIDs": [
+      "wii-2020-final-report"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Thar Desert grasslands, Jaisalmer district",
+      "latitude": 26.9,
+      "longitude": 70.9,
+      "radiusKm": 120
+    },
+    {
+      "name": "Kutch grasslands, Gujarat",
+      "latitude": 23.3,
+      "longitude": 68.9,
+      "radiusKm": 60
+    }
+  ],
+  "gallery": [
+    "great-indian-bustard-plate-01",
+    "great-indian-bustard-context-01",
+    "great-indian-bustard-detail-01",
+    "great-indian-bustard-behavior-01",
+    "great-indian-bustard-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "wii-bustard-recovery-program",
+      "organization": "Wildlife Institute of India",
+      "title": "Bustard Recovery Program",
+      "summary": "Hatches wild-laid eggs at the Sam and Ramdevra centres near Jaisalmer, tracks tagged birds, maps the power lines that need burying, and trains forest staff across the bustard states.",
+      "url": "https://v1.wii.gov.in/campa_gib",
+      "kind": "program",
+      "sourceIDs": [
+        "wii-campa-gib",
+        "wii-2023-annual-report"
+      ],
+      "lastVerified": "2026-09-02"
+    },
+    {
+      "id": "bnhs-khetolai-grassland-reserve",
+      "organization": "Bombay Natural History Society",
+      "title": "Khetolai grassland reserve",
+      "summary": "Fenced 35 hectares of Bishnoi community grassland at Khetolai against free-ranging dogs and wild boar, cleared invasive Prosopis, and runs camera-trap surveys with local community officers.",
+      "url": "https://blog.bnhs.org/bnhs-is-battling-many-threats-to-save-the-great-indian-bustards-in-their-last-stronghold-in-the-thar-grasslands/",
+      "kind": "program",
+      "sourceIDs": [
+        "bnhs-thar-blog"
+      ],
+      "lastVerified": "2026-09-02"
+    }
+  ]
+}

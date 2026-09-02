@@ -1,0 +1,289 @@
+{
+  "id": "hainan-gibbon",
+  "schemaVersion": 1,
+  "commonName": "Hainan Gibbon",
+  "scientificName": "Nomascus hainanus",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Mountain rainforest of western Hainan Island, southern China",
+  "hook": "In the 1970s fewer than ten remained. Now seven families sing at dawn.",
+  "story": [
+    {
+      "id": "hainan-gibbon-rarest",
+      "text": "The Hainan gibbon is the rarest ape on Earth; every wild one lives in one patch of mountain forest at Bawangling, Hainan Island.",
+      "sourceIDs": [
+        "kfbg-hainan-gibbon",
+        "science-advances-2025-rarest-primate"
+      ]
+    },
+    {
+      "id": "hainan-gibbon-duet",
+      "text": "At dawn each family sings a duet — the male leads, the females answer — to mark its territory and bind the group.",
+      "sourceIDs": [
+        "kfbg-hainan-gibbon",
+        "adw-nomascus-hainanus"
+      ]
+    },
+    {
+      "id": "hainan-gibbon-look",
+      "text": "Males are jet black with a hairy crest, females golden with a black crown; a family is one male, two females, their young.",
+      "sourceIDs": [
+        "kfbg-hainan-gibbon"
+      ]
+    },
+    {
+      "id": "hainan-gibbon-decline",
+      "text": "Once found across the island, it lost 99.9 percent of its forest range, and by the 1970s fewer than ten remained.",
+      "sourceIDs": [
+        "frontiers-2020-genetic-status",
+        "kfbg-hainan-gibbon"
+      ]
+    },
+    {
+      "id": "hainan-gibbon-census",
+      "text": "A 2003 census found thirteen in two groups; Kadoorie Farm & Botanic Garden began funding monitoring teams and planting native food trees.",
+      "sourceIDs": [
+        "kfbg-hainan-gibbon",
+        "science-advances-2025-rarest-primate"
+      ]
+    },
+    {
+      "id": "hainan-gibbon-bridge",
+      "text": "When a July 2014 typhoon landslide cut the canopy, tree climbers strung mountaineering rope across the gap; 176 days later the first gibbon crossed.",
+      "sourceIDs": [
+        "chan-2020-canopy-bridge"
+      ]
+    },
+    {
+      "id": "hainan-gibbon-park",
+      "text": "In 2021 the forest became part of Hainan Tropical Rainforest National Park, 4,269 square kilometres of mountain.",
+      "sourceIDs": [
+        "hainan-gov-rainforests-2025",
+        "chinadailyhk-2025-gibbons"
+      ]
+    },
+    {
+      "id": "hainan-gibbon-growth",
+      "text": "New groups formed in 2014, 2020, 2022 and 2024; by February 2024 there were 42 gibbons in seven groups.",
+      "sourceIDs": [
+        "frontiers-2025-infant-death",
+        "hainan-gov-rainforests-2025"
+      ]
+    },
+    {
+      "id": "hainan-gibbon-fragile",
+      "text": "It remains fragile: new breeding pairs are increasingly related, and a female bears an infant only every three years or so.",
+      "sourceIDs": [
+        "science-advances-2025-rarest-primate",
+        "frontiers-2020-genetic-status"
+      ]
+    },
+    {
+      "id": "hainan-gibbon-witness",
+      "text": "To witness the Hainan gibbon is to keep company with a song that nearly fell silent — and with those who climb trees to carry it across.",
+      "sourceIDs": [
+        "kfbg-hainan-gibbon",
+        "chan-2020-canopy-bridge"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-hainan-gibbon",
+    "title": "Meet the rarest ape",
+    "summary": "Read Kadoorie Farm & Botanic Garden's Hainan gibbon page: the census that found thirteen, the monitoring teams, and the food trees they plant.",
+    "effort": "5 minutes",
+    "destinationURL": "https://kfbg.org/en/fauna-conservation/hainan-gibbon",
+    "destinationOrganization": "Kadoorie Farm & Botanic Garden",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "kfbg-hainan-gibbon"
+    ],
+    "lastVerified": "2026-09-02",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "hainan-gibbon-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-02; rights record docs/media/hainan-gibbon-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-27",
+  "sources": [
+    {
+      "id": "kfbg-hainan-gibbon",
+      "title": "Hainan Gibbon — Fauna Conservation",
+      "organization": "Kadoorie Farm & Botanic Garden",
+      "url": "https://kfbg.org/en/fauna-conservation/hainan-gibbon",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "kfbg-five-groups-2020",
+      "title": "Milestone for Hainan Gibbon conservation: Family number and population hit record high in over 40 years",
+      "organization": "Kadoorie Farm & Botanic Garden",
+      "url": "https://www.kfbg.org/en/press-release/article/Milestone-for-Hainan-Gibbon-conservation-Family-number-and-population-hit-record-high-in-over-40-years",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "iucn-red-list-hainan-gibbon",
+      "title": "Nomascus hainanus — The IUCN Red List of Threatened Species",
+      "organization": "IUCN Red List",
+      "url": "https://www.iucnredlist.org/species/41643/17969392",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "chan-2020-canopy-bridge",
+      "title": "First use of artificial canopy bridge by the world's most critically endangered primate the Hainan gibbon Nomascus hainanus (Scientific Reports, 2020)",
+      "organization": "PubMed Central / Kadoorie Farm & Botanic Garden",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7567071/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "science-advances-2025-rarest-primate",
+      "title": "Science-based suggestions to save the world's rarest primate species Nomascus hainanus (Science Advances, 2025)",
+      "organization": "PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11988426/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "frontiers-2020-genetic-status",
+      "title": "The Genetic Status of the Critically Endangered Hainan Gibbon (Nomascus hainanus): A Species Moving Toward Extinction",
+      "organization": "Frontiers in Genetics",
+      "url": "https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2020.608633/full",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "frontiers-2025-infant-death",
+      "title": "Preliminary study on premature infant death of Hainan gibbons (Nomascus hainanus): implications for conservation",
+      "organization": "Frontiers in Conservation Science",
+      "url": "https://www.frontiersin.org/journals/conservation-science/articles/10.3389/fcosc.2025.1652155/full",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "hainan-gov-rainforests-2025",
+      "title": "Hainan Island's tropical rainforests teem with life",
+      "organization": "Hainan Provincial People's Government",
+      "url": "https://en.hainan.gov.cn/englishsite/mr8/202507/dc522c29ed88468ba527a84d17345e67.shtml",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "hntrnp-official",
+      "title": "National Park of Hainan Tropical Rainforest",
+      "organization": "Hainan Tropical Rainforest National Park Administration",
+      "url": "https://en.hntrnp.com/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "chinadailyhk-2025-gibbons",
+      "title": "Rainforest brings gibbons back from edge of extinction",
+      "organization": "China Daily Hong Kong",
+      "url": "https://www.chinadailyhk.com/hk/article/602902",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "adw-nomascus-hainanus",
+      "title": "Nomascus hainanus (Hainan gibbon)",
+      "organization": "Animal Diversity Web, University of Michigan",
+      "url": "https://animaldiversity.org/accounts/Nomascus_hainanus/",
+      "lastAccessed": "2026-09-02"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-02",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-02 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "42–60 cm body · 6–8 kg — no tail, arms longer than legs",
+    "lifespan": "Unrecorded for the species · kin gibbons to 60 in care",
+    "diet": "Fruit, about 85% · figs when the dry season bites",
+    "populationEstimate": "42 in seven groups",
+    "populationAsOf": "2024 · per Hainan Provincial Government",
+    "trend": "increasing",
+    "threats": [
+      "Tiny single population",
+      "Rising inbreeding",
+      "Typhoon landslides",
+      "Forest lost to plantations"
+    ],
+    "sourceIDs": [
+      "science-advances-2025-rarest-primate",
+      "adw-nomascus-hainanus",
+      "frontiers-2020-genetic-status",
+      "hainan-gov-rainforests-2025",
+      "chan-2020-canopy-bridge",
+      "chinadailyhk-2025-gibbons"
+    ]
+  },
+  "reproduction": {
+    "id": "hainan-gibbon-reproduction",
+    "text": "A female first breeds at seven or eight and then bears one infant about every three years, nursing it for two — which is why it took two decades for thirteen gibbons to become forty-two.",
+    "sourceIDs": [
+      "frontiers-2025-infant-death",
+      "science-advances-2025-rarest-primate"
+    ]
+  },
+  "insight": {
+    "id": "hainan-gibbon-insight",
+    "text": "The Hainan gibbon holds the largest home range of any gibbon — up to ten square kilometres per family — most likely because so few families remain to press against its borders.",
+    "sourceIDs": [
+      "iucn-red-list-hainan-gibbon"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Bawangling, Hainan Tropical Rainforest National Park",
+      "latitude": 19.0,
+      "longitude": 109.1,
+      "radiusKm": 40
+    },
+    {
+      "name": "Hainan's central mountain rainforests",
+      "latitude": 18.9,
+      "longitude": 109.6,
+      "radiusKm": 70
+    }
+  ],
+  "gallery": [
+    "hainan-gibbon-plate-01",
+    "hainan-gibbon-context-01",
+    "hainan-gibbon-detail-01",
+    "hainan-gibbon-behavior-01",
+    "hainan-gibbon-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "kfbg-hainan-gibbon-programme",
+      "organization": "Kadoorie Farm & Botanic Garden",
+      "title": "Hainan Gibbon conservation programme",
+      "summary": "Funds and trains two gibbon monitoring teams, runs the annual census with Bawangling reserve staff, and plants the gibbons' native food trees from a local nursery.",
+      "url": "https://kfbg.org/en/fauna-conservation/hainan-gibbon",
+      "kind": "program",
+      "sourceIDs": [
+        "kfbg-hainan-gibbon",
+        "kfbg-five-groups-2020"
+      ],
+      "lastVerified": "2026-09-02"
+    },
+    {
+      "id": "hntrnp-bawangling-branch",
+      "organization": "Hainan Tropical Rainforest National Park",
+      "title": "Bawangling branch",
+      "summary": "Manages the forest where every wild Hainan gibbon lives, replants the fig and bischofia trees the gibbons feed on, and has strung six rope corridors across landslide gaps.",
+      "url": "https://en.hntrnp.com/",
+      "kind": "program",
+      "sourceIDs": [
+        "hntrnp-official",
+        "chinadailyhk-2025-gibbons"
+      ],
+      "lastVerified": "2026-09-02"
+    }
+  ]
+}

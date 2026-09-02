@@ -1,0 +1,293 @@
+{
+  "id": "black-rhino",
+  "schemaVersion": 1,
+  "commonName": "Black Rhino",
+  "scientificName": "Diceros bicornis",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Eastern and southern Africa — Namibia, South Africa, Kenya, Zimbabwe and a handful of other range states",
+  "hook": "In 1970, some 65,000. By 1993, about 2,300. The count climbs again.",
+  "story": [
+    {
+      "id": "black-rhino-lip",
+      "text": "The black rhino is a browser: a hooked, prehensile upper lip pulls leaves and thorny branches into its mouth.",
+      "sourceIDs": [
+        "save-the-rhino-black-rhino",
+        "sdzwa-rhinoceros"
+      ]
+    },
+    {
+      "id": "black-rhino-horn",
+      "text": "Its two horns — the front up to four feet — are keratin, thousands of compressed strands of the stuff of fingernails.",
+      "sourceIDs": [
+        "save-the-rhino-black-rhino",
+        "sdzwa-rhinoceros"
+      ]
+    },
+    {
+      "id": "black-rhino-collapse",
+      "text": "In 1970 there were about 65,000; by 1993 poaching for that horn had cut them to some 2,300, a loss of 96 percent.",
+      "sourceIDs": [
+        "irf-black-rhino",
+        "save-the-rhino-black-rhino"
+      ]
+    },
+    {
+      "id": "black-rhino-western",
+      "text": "One of four subspecies did not survive: the western black rhino, last seen in Cameroon in 2003, was declared extinct in 2011.",
+      "sourceIDs": [
+        "save-the-rhino-western-extinct",
+        "irf-black-rhino"
+      ]
+    },
+    {
+      "id": "black-rhino-kunene",
+      "text": "In Namibia's Kunene, fewer than 40 remained in Damaraland by 1982, fewer than 10 in Kaokoland.",
+      "sourceIDs": [
+        "save-the-rhino-srt-namibia"
+      ]
+    },
+    {
+      "id": "black-rhino-rangers",
+      "text": "Today more than 60 rhino rangers from 13 community conservancies walk its 25,000 square kilometers in 20-day patrols, every sighting reported to the Ministry.",
+      "sourceIDs": [
+        "iucn-kunene-rhino-rangers"
+      ]
+    },
+    {
+      "id": "black-rhino-guarded",
+      "text": "Rhinos in high-risk areas are dehorned or moved to safer ground; Namibia now holds more than a third of Africa's black rhinos.",
+      "sourceIDs": [
+        "save-the-rhino-namibia-meft"
+      ]
+    },
+    {
+      "id": "black-rhino-trade",
+      "text": "The market has not gone away: South Africa lost 420 rhinos to poachers in 2024, with horn still moving toward Malaysia and Viet Nam.",
+      "sourceIDs": [
+        "save-the-rhino-poaching-stats",
+        "iucn-rhino-status-2025"
+      ]
+    },
+    {
+      "id": "black-rhino-count",
+      "text": "The 2024 count stood at 6,788, up 5.2 percent in a year, at Africa's lowest poaching rate since 2011.",
+      "sourceIDs": [
+        "iucn-rhino-status-2025",
+        "iucn-afrsg"
+      ]
+    },
+    {
+      "id": "black-rhino-witness",
+      "text": "To witness the black rhino is to walk a while with the rangers — and to remember the fourth subspecies no one will count again.",
+      "sourceIDs": [
+        "iucn-kunene-rhino-rangers",
+        "save-the-rhino-western-extinct"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-black-rhino",
+    "title": "Meet the hook-lipped rhino",
+    "summary": "Read Save the Rhino International's black rhino profile: the three surviving subspecies, the one lost, and the countries holding the line.",
+    "effort": "5 minutes",
+    "destinationURL": "https://www.savetherhino.org/rhino-info/rhino-species/black-rhinos/",
+    "destinationOrganization": "Save the Rhino International",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "save-the-rhino-black-rhino"
+    ],
+    "lastVerified": "2026-09-02",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "black-rhino-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-02; rights record docs/media/black-rhino-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-20",
+  "sources": [
+    {
+      "id": "save-the-rhino-black-rhino",
+      "title": "Black rhinos",
+      "organization": "Save the Rhino International",
+      "url": "https://www.savetherhino.org/rhino-info/rhino-species/black-rhinos/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "save-the-rhino-poaching-stats",
+      "title": "Poaching stats",
+      "organization": "Save the Rhino International",
+      "url": "https://www.savetherhino.org/rhino-info/poaching-stats/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "save-the-rhino-western-extinct",
+      "title": "Western black rhino declared extinct in 2011",
+      "organization": "Save the Rhino International",
+      "url": "https://www.savetherhino.org/rhino-species/black-rhino/western-black-rhino-declared-extinct-in-2011-journalists-reporting-news-two-years-later/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "save-the-rhino-srt-namibia",
+      "title": "Namibia: Save the Rhino Trust",
+      "organization": "Save the Rhino International",
+      "url": "https://www.savetherhino.org/programmes/save-the-rhino-trust/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "save-the-rhino-namibia-meft",
+      "title": "Namibia: Ministry of Environment, Forestry and Tourism",
+      "organization": "Save the Rhino International",
+      "url": "https://www.savetherhino.org/programmes/ministry-of-environment-and-tourism/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "save-the-rhino-kunene",
+      "title": "Kunene: a special place for rhinos and people",
+      "organization": "Save the Rhino International",
+      "url": "https://www.savetherhino.org/rhino-species/black-rhino/the-kunene-a-special-place-for-rhinos-and-people/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "iucn-rhino-status-2025",
+      "title": "Poaching of African rhinos down – but drought and other threats drive losses globally",
+      "organization": "IUCN",
+      "url": "https://iucn.org/press-release/202508/poaching-african-rhinos-down-drought-and-other-threats-drive-losses-globally",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "iucn-afrsg",
+      "title": "IUCN SSC African Rhino Specialist Group",
+      "organization": "IUCN Species Survival Commission",
+      "url": "https://iucn.org/our-union/commissions/group/iucn-ssc-african-rhino-specialist-group",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "iucn-kunene-rhino-rangers",
+      "title": "Inspiring People: Rhino Rangers in the Kunene Basin in north-western Namibia",
+      "organization": "IUCN",
+      "url": "https://iucn.org/news/protected-areas/202111/inspiring-people-rhino-rangers-kunene-basin-north-western-namibia",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "sdzwa-rhinoceros",
+      "title": "Rhinoceros",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/rhinoceros",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "irf-black-rhino",
+      "title": "Black rhino",
+      "organization": "International Rhino Foundation",
+      "url": "https://rhinos.org/about-rhinos/rhino-species/black-rhino/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "irf-zimbabwe",
+      "title": "Our work in Zimbabwe",
+      "organization": "International Rhino Foundation",
+      "url": "https://rhinos.org/our-work/where-we-work/zimbabwe/",
+      "lastAccessed": "2026-09-02"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-02",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-02 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "Up to 5.5 ft at the shoulder · 3,000 lbs",
+    "lifespan": "30–35 years in the wild",
+    "diet": "Browser — leaves, shrubs & thorny branches",
+    "populationEstimate": "6,788",
+    "populationAsOf": "2024 · per IUCN SSC African Rhino Specialist Group",
+    "trend": "increasing",
+    "threats": [
+      "Poaching for horn",
+      "Horn trafficking networks",
+      "Loss of safe habitat",
+      "Extended droughts"
+    ],
+    "sourceIDs": [
+      "save-the-rhino-black-rhino",
+      "irf-black-rhino",
+      "iucn-rhino-status-2025",
+      "sdzwa-rhinoceros"
+    ]
+  },
+  "reproduction": {
+    "id": "black-rhino-reproduction",
+    "text": "A single calf after fifteen to seventeen months, roughly one every two and a half to three years, and it stays with its mother for two to four years before she turns it away.",
+    "sourceIDs": [
+      "save-the-rhino-black-rhino",
+      "irf-black-rhino"
+    ]
+  },
+  "insight": {
+    "id": "black-rhino-insight",
+    "text": "A black rhino can go up to five days without drinking — and Kunene's desert rhinos live on a staple plant that is deadly to most other mammals, humans included.",
+    "sourceIDs": [
+      "sdzwa-rhinoceros",
+      "save-the-rhino-kunene"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Northwest Namibia — Kunene to Etosha",
+      "latitude": -19.3,
+      "longitude": 15.0,
+      "radiusKm": 250
+    },
+    {
+      "name": "Zimbabwe's Lowveld conservancies",
+      "latitude": -21.0,
+      "longitude": 31.5,
+      "radiusKm": 120
+    }
+  ],
+  "gallery": [
+    "black-rhino-plate-01",
+    "black-rhino-context-01",
+    "black-rhino-detail-01",
+    "black-rhino-behavior-01",
+    "black-rhino-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "save-the-rhino-trust-program",
+      "organization": "Save the Rhino Trust",
+      "title": "Rhino Ranger Programme, Kunene",
+      "summary": "Tracks Kunene's desert-adapted black rhinos on foot with rangers from the community conservancies, mentoring them on patrol and keeping a photographic life-history record of every animal.",
+      "url": "https://www.savetherhino.org/programmes/save-the-rhino-trust/",
+      "kind": "program",
+      "sourceIDs": [
+        "save-the-rhino-srt-namibia",
+        "iucn-kunene-rhino-rangers"
+      ],
+      "lastVerified": "2026-09-02"
+    },
+    {
+      "id": "irf-lowveld-program",
+      "organization": "International Rhino Foundation",
+      "title": "Lowveld rhino program, Zimbabwe",
+      "summary": "With the Lowveld Rhino Trust, monitors Zimbabwe's black rhinos daily, treats poaching injuries, and moves animals out of high-risk areas — the Lowveld conservancies hold about 90 percent of the country's rhinos.",
+      "url": "https://rhinos.org/our-work/where-we-work/zimbabwe/",
+      "kind": "program",
+      "sourceIDs": [
+        "irf-zimbabwe"
+      ],
+      "lastVerified": "2026-09-02"
+    }
+  ]
+}

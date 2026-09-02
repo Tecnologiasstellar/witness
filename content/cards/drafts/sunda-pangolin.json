@@ -1,0 +1,299 @@
+{
+  "id": "sunda-pangolin",
+  "schemaVersion": 1,
+  "commonName": "Sunda Pangolin",
+  "scientificName": "Manis javanica",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Southeast Asia, from Myanmar through Malaysia and Singapore to Sumatra, Java and Borneo",
+  "hook": "No teeth, scales of fingernail, and the most trafficked mammals alive.",
+  "story": [
+    {
+      "id": "sunda-pangolin-scales",
+      "text": "The Sunda pangolin is the only kind of mammal armoured head to tail in scales — keratin, the stuff of fingernails, grown from compressed hair.",
+      "sourceIDs": [
+        "nparks-avs-pangolins",
+        "fws-cites-2016"
+      ]
+    },
+    {
+      "id": "sunda-pangolin-tongue",
+      "text": "It has no teeth; a sticky tongue does the work, taking in some two hundred thousand ants and termites a day.",
+      "sourceIDs": [
+        "world-land-trust-sunda",
+        "svw-pangolin"
+      ]
+    },
+    {
+      "id": "sunda-pangolin-ball",
+      "text": "Threatened, it curls into a ball with its soft belly inside and waits.",
+      "sourceIDs": [
+        "nparks-biodiversity-sunda",
+        "mandai-night-safari-pangolin-trail"
+      ]
+    },
+    {
+      "id": "sunda-pangolin-climber",
+      "text": "More climber than its Chinese cousin, it grips branches with a prehensile tail and dens in tree hollows.",
+      "sourceIDs": [
+        "pangolinsg-sunda",
+        "mandai-night-safari-pangolin-trail"
+      ]
+    },
+    {
+      "id": "sunda-pangolin-young",
+      "text": "One young is born after six or seven months and rides on its mother's back or tail.",
+      "sourceIDs": [
+        "pangolinsg-sunda",
+        "nparks-biodiversity-sunda"
+      ]
+    },
+    {
+      "id": "sunda-pangolin-trade",
+      "text": "In Asia it is the mammal most often found in illegal trade; the equivalent of more than 895,000 pangolins were trafficked worldwide from 2000 to 2019.",
+      "sourceIDs": [
+        "pangolinsg-sunda",
+        "pangolinsg-pangolins"
+      ]
+    },
+    {
+      "id": "sunda-pangolin-cites",
+      "text": "In September 2016 the nations of CITES voted all eight pangolin species onto Appendix I, closing international commercial trade.",
+      "sourceIDs": [
+        "fws-cites-2016",
+        "pangolinsg-pangolins"
+      ]
+    },
+    {
+      "id": "sunda-pangolin-vietnam",
+      "text": "At Cuc Phuong, Save Vietnam's Wildlife has taken in 1,823 pangolins from confiscations and returned 1,019 to the forest.",
+      "sourceIDs": [
+        "svw-pangolin",
+        "svw-rescue"
+      ]
+    },
+    {
+      "id": "sunda-pangolin-singapore",
+      "text": "In Singapore, where roads are the greater danger, about a hundred still move through the island's reserves, and some twenty rescued each year pass through Mandai's hospital before release.",
+      "sourceIDs": [
+        "nparks-biodiversity-sunda",
+        "reverse-the-red-singapore"
+      ]
+    },
+    {
+      "id": "sunda-pangolin-witness",
+      "text": "To witness the Sunda pangolin is to keep company with an animal whose only defence is to close — and to stand with those carrying it back to the trees.",
+      "sourceIDs": [
+        "nparks-avs-pangolins",
+        "svw-rescue"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-sunda-pangolin",
+    "title": "Meet the scaled climber",
+    "summary": "Read the IUCN SSC Pangolin Specialist Group's profile of the Sunda pangolin: what sets it apart, where it lives, and why it is so often found in trade.",
+    "effort": "4 minutes",
+    "destinationURL": "https://pangolinsg.org/portfolio/sunda-pangolin/",
+    "destinationOrganization": "IUCN SSC Pangolin Specialist Group",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "pangolinsg-sunda"
+    ],
+    "lastVerified": "2026-09-02",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "sunda-pangolin-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-02; rights record docs/media/sunda-pangolin-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-25",
+  "sources": [
+    {
+      "id": "pangolinsg-sunda",
+      "title": "Sunda Pangolin",
+      "organization": "IUCN SSC Pangolin Specialist Group",
+      "url": "https://pangolinsg.org/portfolio/sunda-pangolin/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "pangolinsg-pangolins",
+      "title": "Pangolins",
+      "organization": "IUCN SSC Pangolin Specialist Group",
+      "url": "https://pangolinsg.org/pangolins/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "pangolinsg-red-list-2019",
+      "title": "IUCN Red List update highlights need for concerted conservation action for pangolins",
+      "organization": "IUCN SSC Pangolin Specialist Group",
+      "url": "https://pangolinsg.org/2019/12/23/iucn-red-list-update-highlights-need-for-concerted-conservation-action-for-pangolins/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "traffic-pangolins",
+      "title": "Pangolins",
+      "organization": "TRAFFIC",
+      "url": "https://www.traffic.org/what-we-do/species/pangolins/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "fws-cites-2016",
+      "title": "CITES Unites to Change the Fate of Pangolins",
+      "organization": "U.S. Fish & Wildlife Service",
+      "url": "https://www.fws.gov/press-release/2016-09/cites-unites-change-fate-pangolins",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "world-land-trust-sunda",
+      "title": "Sunda Pangolin",
+      "organization": "World Land Trust",
+      "url": "https://www.worldlandtrust.org/species/sunda-pangolin/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "reverse-the-red-singapore",
+      "title": "Singapore's Research and Rescue Conservation Efforts for the Sunda Pangolin",
+      "organization": "Reverse the Red",
+      "url": "https://www.reversethered.org/stories/sunda-pangolin",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "mandai-night-safari-pangolin-trail",
+      "title": "Pangolin Trail",
+      "organization": "Mandai Wildlife Group (Night Safari, Singapore)",
+      "url": "https://www.mandai.com/en/night-safari/animals-and-zones/pangolin-trail.html",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "nparks-biodiversity-sunda",
+      "title": "Sunda Pangolin",
+      "organization": "National Parks Board Singapore (BiodiversitySG)",
+      "url": "https://biodiversitysg.nparks.gov.sg/our-biodiversity/mammals/other-mammals/sunda-pangolin/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "nparks-avs-pangolins",
+      "title": "Pangolins in Singapore",
+      "organization": "National Parks Board Singapore, Animal & Veterinary Service",
+      "url": "https://avs.nparks.gov.sg/wildlife/encountering-wildlife/pangolins/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "svw-rescue",
+      "title": "Rescue, Rehabilitate and Release",
+      "organization": "Save Vietnam's Wildlife",
+      "url": "https://www.svw.vn/rescue-rehabilitate-and-release",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "svw-pangolin",
+      "title": "Pangolin (Tê tê)",
+      "organization": "Save Vietnam's Wildlife",
+      "url": "https://www.svw.vn/animals/te-te-3",
+      "lastAccessed": "2026-09-02"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-02",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-02 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "40–65 cm body · tail to 57 cm · up to 10 kg",
+    "lifespan": "Unknown in the wild",
+    "diet": "Ants & termites — ~200,000 a day",
+    "populationEstimate": "No global count · ~80% decline 1998–2019",
+    "populationAsOf": "2019 · per IUCN Red List, via World Land Trust",
+    "trend": "decreasing",
+    "threats": [
+      "Poaching for scales",
+      "Trade in meat",
+      "Forest loss",
+      "Roadkill in Singapore"
+    ],
+    "sourceIDs": [
+      "world-land-trust-sunda",
+      "svw-pangolin",
+      "traffic-pangolins",
+      "pangolinsg-red-list-2019",
+      "nparks-avs-pangolins"
+    ]
+  },
+  "reproduction": {
+    "id": "sunda-pangolin-reproduction",
+    "text": "One young, rarely two, is born after a gestation of six to seven months, usually in a tree hollow; it rides on its mother's back or tail and stays with her for three or four months.",
+    "sourceIDs": [
+      "pangolinsg-sunda",
+      "world-land-trust-sunda",
+      "nparks-biodiversity-sunda"
+    ]
+  },
+  "insight": {
+    "id": "sunda-pangolin-insight",
+    "text": "A pangolin has no teeth and a tongue that reaches 25 cm — enough to take in roughly 200,000 ants and termites a day, or about 70 million in a year.",
+    "sourceIDs": [
+      "world-land-trust-sunda",
+      "nparks-avs-pangolins"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Bornean lowland forests",
+      "latitude": 0.5,
+      "longitude": 114.5,
+      "radiusKm": 450
+    },
+    {
+      "name": "Singapore's central nature reserves",
+      "latitude": 1.36,
+      "longitude": 103.8,
+      "radiusKm": 30
+    }
+  ],
+  "gallery": [
+    "sunda-pangolin-plate-01",
+    "sunda-pangolin-context-01",
+    "sunda-pangolin-detail-01",
+    "sunda-pangolin-behavior-01",
+    "sunda-pangolin-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "svw-pangolin-rescue-program",
+      "organization": "Save Vietnam's Wildlife",
+      "title": "Pangolin rescue, rehabilitation & release",
+      "summary": "Receives pangolins confiscated from traffickers at its Cuc Phuong centre, treats and rehabilitates them, and has returned 1,019 of 1,823 rescued pangolins to the wild with post-release monitoring.",
+      "url": "https://www.svw.vn/rescue-rehabilitate-and-release",
+      "kind": "program",
+      "sourceIDs": [
+        "svw-rescue",
+        "svw-pangolin"
+      ],
+      "lastVerified": "2026-09-02"
+    },
+    {
+      "id": "mandai-singapore-pangolin-program",
+      "organization": "Mandai Wildlife Group",
+      "title": "Singapore pangolin rescue & research",
+      "summary": "Treats the twenty-odd wild pangolins rescued in Singapore each year for release by NParks, radio-tracks animals to learn their ranges and road crossings, and co-chairs the Singapore Pangolin Working Group behind the 2018 national action plan.",
+      "url": "https://www.mandai.com/en/night-safari/animals-and-zones/pangolin-trail.html",
+      "kind": "program",
+      "sourceIDs": [
+        "mandai-night-safari-pangolin-trail",
+        "reverse-the-red-singapore"
+      ],
+      "lastVerified": "2026-09-02"
+    }
+  ]
+}

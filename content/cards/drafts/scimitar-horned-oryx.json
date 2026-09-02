@@ -1,0 +1,294 @@
+{
+  "id": "scimitar-horned-oryx",
+  "schemaVersion": 1,
+  "commonName": "Scimitar-horned Oryx",
+  "scientificName": "Oryx dammah",
+  "conservationStatus": {
+    "displayName": "Endangered",
+    "normalizedValue": "endangered"
+  },
+  "generalizedRange": "Sahelian grasslands of central Chad (reintroduced); formerly North Africa",
+  "hook": "Extinct in the wild by 2000. By 2023, six hundred ran free in Chad.",
+  "story": [
+    {
+      "id": "scimitar-horned-oryx-horns",
+      "text": "Both sexes carry the horns that name it — ridged, sharp-tipped, several feet long, curved back like a scimitar.",
+      "sourceIDs": [
+        "si-national-zoo-oryx"
+      ]
+    },
+    {
+      "id": "scimitar-horned-oryx-desert",
+      "text": "It grazes by night, lets its body temperature climb to 116°F, and goes months, even years, without drinking.",
+      "sourceIDs": [
+        "si-national-zoo-oryx"
+      ]
+    },
+    {
+      "id": "scimitar-horned-oryx-herds",
+      "text": "Hundreds of thousands once ranged the grasslands fringing the Sahara, in herds that swelled past a thousand on migration.",
+      "sourceIDs": [
+        "si-national-zoo-back-from-brink",
+        "si-national-zoo-oryx"
+      ]
+    },
+    {
+      "id": "scimitar-horned-oryx-hunting",
+      "text": "Hunting, armed by the vehicles and weapons of World War II, emptied that range; the last wild photograph was taken in Niger in 1980.",
+      "sourceIDs": [
+        "si-national-zoo-back-from-brink",
+        "si-national-zoo-oryx"
+      ]
+    },
+    {
+      "id": "scimitar-horned-oryx-extinct",
+      "text": "By the late 1980s the last were gone from Chad; in 2000 the IUCN declared it Extinct in the Wild.",
+      "sourceIDs": [
+        "sahara-conservation-oryx-downlisted",
+        "sahara-conservation-oryx-reintroduction"
+      ]
+    },
+    {
+      "id": "scimitar-horned-oryx-ark",
+      "text": "It survived in zoos — Marwell has kept it since 1972 — and in Abu Dhabi's world herd, now over 4,000.",
+      "sourceIDs": [
+        "marwell-back-from-brink",
+        "sahara-conservation-oryx-downlisted"
+      ]
+    },
+    {
+      "id": "scimitar-horned-oryx-return",
+      "text": "In 2016 the first oryx flew from Abu Dhabi to Chad's Ouadi Rimé-Ouadi Achim reserve, each wearing a satellite collar; the first wild calf came that December.",
+      "sourceIDs": [
+        "sahara-conservation-oryx-reintroduction",
+        "si-cec-oryx-reintroduction"
+      ]
+    },
+    {
+      "id": "scimitar-horned-oryx-count",
+      "text": "Since then 285 have been released and 510 calves born wild; by 2023 the herd passed 600, survival above 85 percent.",
+      "sourceIDs": [
+        "sahara-conservation-oryx-downlisted",
+        "ead-oryx-reclassification"
+      ]
+    },
+    {
+      "id": "scimitar-horned-oryx-downlisted",
+      "text": "On 11 December 2023 the IUCN moved it from Extinct in the Wild to Endangered — the fourth large mammal returned to the wild in a century.",
+      "sourceIDs": [
+        "iucn-red-list-update-2023",
+        "sahara-conservation-oryx-downlisted"
+      ]
+    },
+    {
+      "id": "scimitar-horned-oryx-witness",
+      "text": "To witness the scimitar-horned oryx is to stand with the ecoguards, communities and scientists of central Chad keeping a returned animal wild.",
+      "sourceIDs": [
+        "sahara-conservation-oryx-decade",
+        "sahara-conservation-oroa-reserve"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-scimitar-horned-oryx",
+    "title": "Meet the oryx that came back",
+    "summary": "Read the Smithsonian National Zoo's scimitar-horned oryx profile: the desert adaptations, the loss, and the return to Chad.",
+    "effort": "5 minutes",
+    "destinationURL": "https://nationalzoo.si.edu/animals/scimitar-horned-oryx",
+    "destinationOrganization": "Smithsonian's National Zoo",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "si-national-zoo-oryx"
+    ],
+    "lastVerified": "2026-09-02",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "scimitar-horned-oryx-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-02; rights record docs/media/scimitar-horned-oryx-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-26",
+  "sources": [
+    {
+      "id": "si-national-zoo-oryx",
+      "title": "Scimitar-horned Oryx",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/animals/scimitar-horned-oryx",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "si-national-zoo-back-from-brink",
+      "title": "Once Extinct in the Wild, Scimitar-horned Oryx Are Back From the Brink",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/conservation/news/once-extinct-wild-scimitar-horned-oryx-are-back-brink",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "si-cec-oryx-reintroduction",
+      "title": "Scimitar-horned Oryx Reintroduction",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/conservation-ecology-center/oryx-reintroduction",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "si-oryx-calves-born-wild",
+      "title": "Scimitar-horned Oryx Calves Born in the Wild",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/conservation-ecology-center/news/scimitar-horned-oryx-calves-born-wild",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "si-oryx-recover-thrive",
+      "title": "How Smithsonian Science Is Helping the Scimitar-Horned Oryx Recover — and Thrive",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/animals/news/how-smithsonian-science-helping-scimitar-horned-oryx-recover-and-thrive",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "sahara-conservation-oryx-reintroduction",
+      "title": "Scimitar-horned oryx reintroduction",
+      "organization": "Sahara Conservation",
+      "url": "https://saharaconservation.org/species-recovery/the-scimitar-horned-oryx-reintroduction/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "sahara-conservation-oryx-downlisted",
+      "title": "Milestone: the scimitar-horned oryx downlisted from Extinct in the Wild to Endangered by IUCN",
+      "organization": "Sahara Conservation",
+      "url": "https://saharaconservation.org/news/milestone-the-scimitar-horned-oryx-downlisted-from-extinct-in-the-wild-to-endangered-by-iucn/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "sahara-conservation-oroa-reserve",
+      "title": "Ouadi Rimé-Ouadi Achim Faunal Reserve",
+      "organization": "Sahara Conservation",
+      "url": "https://saharaconservation.org/critical-conservation-landscapes/ouadi-rime-ouadi-achim-faunal-reserve/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "sahara-conservation-oryx-decade",
+      "title": "Celebrating a decade of bringing the scimitar-horned oryx home",
+      "organization": "Sahara Conservation",
+      "url": "https://saharaconservation.org/news/celebrating-a-decade-of-bringing-the-scimitar-horned-oryx-home/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "iucn-red-list-update-2023",
+      "title": "Freshwater fish highlight escalating climate impacts on species – IUCN Red List",
+      "organization": "IUCN",
+      "url": "https://iucn.org/press-release/202312/freshwater-fish-highlight-escalating-climate-impacts-species-iucn-red-list",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "ead-oryx-reclassification",
+      "title": "Environment Agency – Abu Dhabi's successful oryx reintroduction programme results in IUCN Red List reclassification",
+      "organization": "Environment Agency – Abu Dhabi (Abu Dhabi Media Office)",
+      "url": "https://www.mediaoffice.abudhabi/en/environment/environment-agency-abu-dhabis-successful-oryx-reintroduction-programme-results-in-iucn-red-list-reclassification/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "marwell-back-from-brink",
+      "title": "Back from the brink of extinction",
+      "organization": "Marwell Wildlife",
+      "url": "https://www.marwell.org.uk/zoo-news/back-from-the-brink-of-extinction/",
+      "lastAccessed": "2026-09-02"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-02",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-02 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "Up to 4.6 ft at the shoulder · 220–460 lbs",
+    "lifespan": "Into their twenties under human care · wild unknown",
+    "diet": "Grasses, herbs & roots · acacia pods · grazes by night",
+    "populationEstimate": "600+ in the wild",
+    "populationAsOf": "2023 · per Sahara Conservation",
+    "trend": "increasing",
+    "threats": [
+      "Uncontrolled hunting",
+      "Habitat loss",
+      "Persistent drought",
+      "Livestock overgrazing"
+    ],
+    "sourceIDs": [
+      "si-national-zoo-oryx",
+      "sahara-conservation-oryx-downlisted",
+      "marwell-back-from-brink",
+      "sahara-conservation-oroa-reserve"
+    ]
+  },
+  "reproduction": {
+    "id": "scimitar-horned-oryx-reproduction",
+    "text": "A single calf of about 22 pounds is born after eight to eight-and-a-half months; in Chad, 510 calves have been born wild since the first release in 2016.",
+    "sourceIDs": [
+      "si-national-zoo-oryx",
+      "sahara-conservation-oryx-downlisted"
+    ]
+  },
+  "insight": {
+    "id": "scimitar-horned-oryx-insight",
+    "text": "An oryx can go months, even years, without drinking — and lets its body temperature climb to 116°F rather than sweat the water away.",
+    "sourceIDs": [
+      "si-national-zoo-oryx"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Ouadi Rimé-Ouadi Achim Faunal Reserve, central Chad",
+      "latitude": 15.3,
+      "longitude": 19.6,
+      "radiusKm": 160.0
+    },
+    {
+      "name": "Central Tunisian reserves (fenced reintroduced herds)",
+      "latitude": 34.6,
+      "longitude": 9.7,
+      "radiusKm": 60.0
+    }
+  ],
+  "gallery": [
+    "scimitar-horned-oryx-plate-01",
+    "scimitar-horned-oryx-context-01",
+    "scimitar-horned-oryx-detail-01",
+    "scimitar-horned-oryx-behavior-01",
+    "scimitar-horned-oryx-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "sahara-conservation-oryx-program",
+      "organization": "Sahara Conservation",
+      "title": "Chad oryx reintroduction",
+      "summary": "Runs the release site and field team in Ouadi Rimé-Ouadi Achim with the Government of Chad and Environment Agency–Abu Dhabi, tracking behavior, dispersion and breeding by satellite collar.",
+      "url": "https://saharaconservation.org/species-recovery/the-scimitar-horned-oryx-reintroduction/",
+      "kind": "program",
+      "sourceIDs": [
+        "sahara-conservation-oryx-reintroduction",
+        "sahara-conservation-oryx-downlisted"
+      ],
+      "lastVerified": "2026-09-02"
+    },
+    {
+      "id": "si-cec-oryx-program",
+      "organization": "Smithsonian Conservation Biology Institute",
+      "title": "Oryx reintroduction science",
+      "summary": "Fits released oryx with satellite collars, monitors their movement and survival, and visits the reserve two to four times a year.",
+      "url": "https://nationalzoo.si.edu/conservation-ecology-center/oryx-reintroduction",
+      "kind": "program",
+      "sourceIDs": [
+        "si-cec-oryx-reintroduction",
+        "si-national-zoo-back-from-brink"
+      ],
+      "lastVerified": "2026-09-02"
+    }
+  ]
+}

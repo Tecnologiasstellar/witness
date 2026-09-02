@@ -54,9 +54,11 @@ def check(url: str) -> tuple[bool, str]:
 def main() -> None:
     check_all = "--all" in sys.argv
     only = sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else None
+    # --dir lets staged drafts (content/cards/drafts) be checked before promotion.
+    directory = Path(sys.argv[sys.argv.index("--dir") + 1]) if "--dir" in sys.argv else CATALOG
 
     to_check: dict[str, list[str]] = {}
-    for path in sorted(CATALOG.glob("*.json")):
+    for path in sorted(directory.glob("*.json")):
         record = json.loads(path.read_text())
         if only and record["id"] != only:
             continue

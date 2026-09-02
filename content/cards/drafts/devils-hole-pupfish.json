@@ -1,0 +1,297 @@
+{
+  "id": "devils-hole-pupfish",
+  "schemaVersion": 1,
+  "commonName": "Devils Hole Pupfish",
+  "scientificName": "Cyprinodon diabolis",
+  "conservationStatus": {
+    "displayName": "Endangered",
+    "normalizedValue": "endangered"
+  },
+  "generalizedRange": "Amargosa Desert, southern Nevada (Mojave Desert)",
+  "hook": "The entire species lives on one shelf, eleven feet by sixteen.",
+  "story": [
+    {
+      "id": "devils-hole-pupfish-opening",
+      "text": "Every wild Devils Hole pupfish lives in one desert cavern, a pool over five hundred feet deep with no mapped bottom.",
+      "sourceIDs": [
+        "nps-deva-devils-hole",
+        "fws-inside-devils-hole"
+      ]
+    },
+    {
+      "id": "devils-hole-pupfish-shelf",
+      "text": "They feed and spawn almost entirely on one sunlit shelf near the surface, eleven feet by sixteen, under a foot deep.",
+      "sourceIDs": [
+        "fws-species-devils-hole-pupfish",
+        "nps-deva-devils-hole"
+      ]
+    },
+    {
+      "id": "devils-hole-pupfish-water",
+      "text": "The water stays near 92°F and low in oxygen; the fish are an inch long, with no pelvic fins.",
+      "sourceIDs": [
+        "fws-5-year-review-2024",
+        "fws-inside-devils-hole"
+      ]
+    },
+    {
+      "id": "devils-hole-pupfish-blue",
+      "text": "Males turn shimmering blue, females stay yellow-brown, and most live about a year.",
+      "sourceIDs": [
+        "ndow-devils-hole-pupfish",
+        "fws-5-year-review-2024"
+      ]
+    },
+    {
+      "id": "devils-hole-pupfish-court",
+      "text": "When ranch wells drew the pool down, the Supreme Court ruled in 1976 that reserving Devils Hole in 1952 had reserved the water to keep its shelf wet.",
+      "sourceIDs": [
+        "cornell-lii-cappaert",
+        "nps-deva-devils-hole"
+      ]
+    },
+    {
+      "id": "devils-hole-pupfish-counts",
+      "text": "Twice a year since 1972, three agencies count every fish, from the surface and on scuba below a hundred feet.",
+      "sourceIDs": [
+        "nps-deva-spring-2025",
+        "fws-2022-19-year-high"
+      ]
+    },
+    {
+      "id": "devils-hole-pupfish-low",
+      "text": "The spring count fell to 35 fish in 2013, then climbed to 191 by April 2024, the most in 25 years.",
+      "sourceIDs": [
+        "fws-5-year-review-2024",
+        "nps-deva-spring-2024"
+      ]
+    },
+    {
+      "id": "devils-hole-pupfish-quake",
+      "text": "Then distant earthquakes in December 2024 and February 2025 sent six-foot waves through the pool, stripping the shelf of algae and eggs; the next count found 38.",
+      "sourceIDs": [
+        "nps-deva-spring-2025"
+      ]
+    },
+    {
+      "id": "devils-hole-pupfish-refuge",
+      "text": "For the first time, biologists released 19 fish reared from shelf-gathered eggs in a 100,000-gallon replica cavern at Ash Meadows; by spring 2026 the count was 77.",
+      "sourceIDs": [
+        "fws-inside-devils-hole",
+        "fws-amfcf"
+      ]
+    },
+    {
+      "id": "devils-hole-pupfish-witness",
+      "text": "To witness the Devils Hole pupfish is to keep watch over the smallest home of any vertebrate: one shelf, one pool, one aquifer.",
+      "sourceIDs": [
+        "fws-2022-19-year-high",
+        "nps-deva-devils-hole"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-devils-hole-pupfish",
+    "title": "Look into Devils Hole",
+    "summary": "Read the Fish & Wildlife Service's account of the cavern: the shelf, the twice-yearly dive counts, and the refuge tank that holds the second population.",
+    "effort": "7 minutes",
+    "destinationURL": "https://www.fws.gov/story/inside-devils-hole-mysterious-depths-endangered-fish-and-unwavering-partnership",
+    "destinationOrganization": "U.S. Fish & Wildlife Service",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "fws-inside-devils-hole"
+    ],
+    "lastVerified": "2026-09-02",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "devils-hole-pupfish-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-02; rights record docs/media/devils-hole-pupfish-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-23",
+  "sources": [
+    {
+      "id": "nps-deva-devils-hole",
+      "title": "Devils Hole",
+      "organization": "National Park Service, Death Valley National Park",
+      "url": "https://www.nps.gov/deva/learn/nature/devils-hole.htm",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "fws-species-devils-hole-pupfish",
+      "title": "Devils Hole Pupfish (Cyprinodon diabolis)",
+      "organization": "U.S. Fish & Wildlife Service",
+      "url": "https://www.fws.gov/species/devils-hole-pupfish-cyprinodon-diabolis",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "fws-inside-devils-hole",
+      "title": "Inside Devils Hole: mysterious depths, an endangered fish, and an unwavering partnership",
+      "organization": "U.S. Fish & Wildlife Service",
+      "url": "https://www.fws.gov/story/inside-devils-hole-mysterious-depths-endangered-fish-and-unwavering-partnership",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "fws-amfcf",
+      "title": "Ash Meadows Fish Conservation Facility",
+      "organization": "U.S. Fish & Wildlife Service, Ash Meadows National Wildlife Refuge",
+      "url": "https://www.fws.gov/refuge/ash-meadows/ash-meadows-fish-conservation-facility",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "fws-5-year-review-2024",
+      "title": "Devils Hole pupfish (Cyprinodon diabolis) 5-Year Review: Summary and Evaluation (August 30, 2024)",
+      "organization": "U.S. Fish & Wildlife Service, Southern Nevada Fish and Wildlife Office",
+      "url": "https://ecosphere-documents-production-public.s3.amazonaws.com/sams/public_docs/species_nonpublish/19318.pdf",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "fws-2022-19-year-high",
+      "title": "Devils Hole pupfish population at 19-year high",
+      "organization": "U.S. Fish & Wildlife Service",
+      "url": "https://www.fws.gov/press-release/2022-09/devils-hole-pupfish-population-19-year-high",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "fws-defying-odds",
+      "title": "Defying the odds",
+      "organization": "U.S. Fish & Wildlife Service",
+      "url": "https://www.fws.gov/story/2022-05/defying-odds",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "ndow-devils-hole-pupfish",
+      "title": "Devils Hole Pupfish",
+      "organization": "Nevada Department of Wildlife",
+      "url": "https://www.ndow.org/species/devils-hole-pupfish/",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "nps-deva-spring-2025",
+      "title": "Devils Hole pupfish - spring 2025 count",
+      "organization": "National Park Service, Death Valley National Park",
+      "url": "https://www.nps.gov/deva/learn/news/deva_2025-04-15.htm",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "nps-deva-spring-2024",
+      "title": "Devils Hole pupfish spring 2024 count",
+      "organization": "National Park Service, Death Valley National Park",
+      "url": "https://www.nps.gov/deva/learn/news/devils-hole-spring-2024.htm",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "nps-deva-fall-2022",
+      "title": "Devils Hole fall 2022 count",
+      "organization": "National Park Service, Death Valley National Park",
+      "url": "https://www.nps.gov/deva/learn/news/devils-hole-fall-2022.htm",
+      "lastAccessed": "2026-09-02"
+    },
+    {
+      "id": "cornell-lii-cappaert",
+      "title": "Cappaert v. United States, 426 U.S. 128 (1976)",
+      "organization": "Cornell Law School, Legal Information Institute",
+      "url": "https://www.law.cornell.edu/supremecourt/text/426/128",
+      "lastAccessed": "2026-09-02"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-02",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-02 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "About 1 inch · 1.7 inches at most · no pelvic fins",
+    "lifespan": "About 1 year — an annual species",
+    "diet": "Algae & diatoms · amphipods, ostracods, protozoans",
+    "populationEstimate": "77 in the wild (spring count) · several hundred in the refuge tank",
+    "populationAsOf": "2026 spring dive count · per U.S. Fish & Wildlife Service",
+    "trend": "increasing",
+    "threats": [
+      "Groundwater pumping",
+      "Earthquake-driven waves",
+      "Food scarcity on the shelf",
+      "Vandalism & trespass"
+    ],
+    "sourceIDs": [
+      "fws-species-devils-hole-pupfish",
+      "fws-5-year-review-2024",
+      "fws-inside-devils-hole",
+      "ndow-devils-hole-pupfish",
+      "nps-deva-spring-2025"
+    ]
+  },
+  "reproduction": {
+    "id": "devils-hole-pupfish-reproduction",
+    "text": "Spawning goes on at a low level all year and peaks with the longest days; eggs are laid on the shelf, and each month some are lifted from recovery mats and carried to the refuge tank to hatch.",
+    "sourceIDs": [
+      "fws-5-year-review-2024",
+      "fws-amfcf"
+    ]
+  },
+  "insight": {
+    "id": "devils-hole-pupfish-insight",
+    "text": "The whole species feeds and breeds on about 215 square feet of limestone — roughly the floor of a one-car garage — the smallest range of any vertebrate on the planet.",
+    "sourceIDs": [
+      "fws-species-devils-hole-pupfish",
+      "fws-2022-19-year-high"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Ash Meadows, Amargosa Valley, Nevada",
+      "latitude": 36.42,
+      "longitude": -116.33,
+      "radiusKm": 60
+    },
+    {
+      "name": "Amargosa Desert regional aquifer, southern Nevada",
+      "latitude": 36.7,
+      "longitude": -116.2,
+      "radiusKm": 120
+    }
+  ],
+  "gallery": [
+    "devils-hole-pupfish-plate-01",
+    "devils-hole-pupfish-context-01",
+    "devils-hole-pupfish-detail-01",
+    "devils-hole-pupfish-behavior-01",
+    "devils-hole-pupfish-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "fws-ash-meadows-fish-conservation-facility",
+      "organization": "U.S. Fish & Wildlife Service",
+      "title": "Ash Meadows Fish Conservation Facility",
+      "summary": "Keeps a captive population of Devils Hole pupfish in a 100,000-gallon replica of the cavern, hatching eggs collected monthly from the shelf and, since 2025, returning fish to the wild.",
+      "url": "https://www.fws.gov/refuge/ash-meadows/ash-meadows-fish-conservation-facility",
+      "kind": "program",
+      "sourceIDs": [
+        "fws-amfcf",
+        "fws-inside-devils-hole"
+      ],
+      "lastVerified": "2026-09-02"
+    },
+    {
+      "id": "nps-death-valley-devils-hole",
+      "organization": "National Park Service, Death Valley National Park",
+      "title": "Devils Hole monitoring",
+      "summary": "Manages the fenced cavern as a unit of Death Valley National Park and, with the Fish & Wildlife Service and Nevada Department of Wildlife, runs the spring and fall dive counts held since 1972.",
+      "url": "https://www.nps.gov/deva/learn/nature/devils-hole.htm",
+      "kind": "program",
+      "sourceIDs": [
+        "nps-deva-devils-hole",
+        "nps-deva-spring-2025"
+      ],
+      "lastVerified": "2026-09-02"
+    }
+  ]
+}
