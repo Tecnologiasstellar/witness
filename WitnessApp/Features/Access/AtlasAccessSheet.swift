@@ -53,7 +53,11 @@ struct AtlasAccessSheet: View {
                     .foregroundStyle(AtlasTheme.inkMuted)
                     .lineSpacing(3)
 
-                AccessQuietRow(title: "RESTORE PURCHASES", identifier: "access.atlas.restore") {
+                AccessQuietRow(
+                    title: "RESTORE PURCHASES",
+                    detail: commerce.restorePhase == .restoring ? "…" : nil,
+                    identifier: "access.atlas.restore"
+                ) {
                     Task { await commerce.restore() }
                 }
                 ManageSubscriptionRow(identifier: "access.atlas.manage")

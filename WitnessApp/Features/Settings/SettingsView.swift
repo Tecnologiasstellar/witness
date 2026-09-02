@@ -17,7 +17,7 @@ struct SettingsView: View {
     private static let supportEmailURL = URL(string: "mailto:albertovillalpando@gmail.com?subject=Witness%20support")!
     private static let correctionsEmailURL = URL(string: "mailto:albertovillalpando@gmail.com?subject=Witness%20correction")!
 
-    private let edition = FieldSeasonLoader.loadBundledEdition()
+    private let edition = FieldSeasonLoader.bundled
 
     var body: some View {
         NavigationStack {

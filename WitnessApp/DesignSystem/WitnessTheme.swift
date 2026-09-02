@@ -36,9 +36,12 @@ enum AtlasTheme {
 /// Display is EB Garamond when it is deliberately bundled later; the current
 /// system-serif fallback avoids shipping a font without a recorded license decision.
 enum AtlasType {
+    // Resolved once: the lookup used to run for every Text on every pass.
+    private static let hasGaramond = UIFont(name: "EBGaramond-Regular", size: 12) != nil
+
     static func display(_ size: CGFloat, weight: Font.Weight = .medium, italic: Bool = false) -> Font {
         let name = italic ? "EBGaramond-Italic" : "EBGaramond-Regular"
-        if UIFont(name: name, size: size) != nil {
+        if hasGaramond {
             return Font.custom(name, size: size, relativeTo: .body).weight(weight)
         }
         var descriptor = UIFont.systemFont(ofSize: size, weight: uiWeight(weight)).fontDescriptor

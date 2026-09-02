@@ -18,6 +18,7 @@ final class AppModel: ObservableObject {
     private let helpingStore: FileHelpingStore
     private let dateProvider: any DateProviding
     private var calendar: Calendar
+    private var speciesByID: [String: SpeciesRecord] = [:]
 
     var currentWeekWitnessRecord: WitnessRecord? {
         guard let species else { return nil }
@@ -67,13 +68,8 @@ final class AppModel: ObservableObject {
 
         do {
             catalog = try BundledSpeciesCatalog.load()
-            species = WeeklySpeciesSelector().species(for: dateProvider.now(), from: catalog, calendar: calendar)
-#if DEBUG
-            if let forced = ProcessInfo.processInfo.environment["WITNESS_FORCE_SPECIES"],
-               let match = catalog.first(where: { $0.id == forced }) {
-                species = match
-            }
-#endif
+            speciesByID = Dictionary(uniqueKeysWithValues: catalog.map { ($0.id, $0) })
+            species = selectSpecies()
         } catch {
             loadError = String(describing: error)
         }
@@ -83,6 +79,29 @@ final class AppModel: ObservableObject {
             await self?.restoreHelping()
             await self?.refreshWitnessCount()
         }
+    }
+
+    private func selectSpecies() -> SpeciesRecord? {
+#if DEBUG
+        if let forced = ProcessInfo.processInfo.environment["WITNESS_FORCE_SPECIES"],
+           let match = speciesByID[forced] {
+            return match
+        }
+#endif
+        return WeeklySpeciesSelector().species(for: dateProvider.now(), from: catalog, calendar: calendar)
+    }
+
+    /// The week can roll over (or the time zone change) while the app sits
+    /// in the background; on foreground the card must follow the calendar,
+    /// or a Monday tap would record last week's species against this week.
+    func refreshWeek() async {
+        guard !catalog.isEmpty else { return }
+        calendar = .current
+        let next = selectSpecies()
+        guard next?.id != species?.id else { return }
+        species = next
+        reflectionDraft = currentWeekWitnessRecord?.reflection ?? ""
+        await refreshWitnessCount()
     }
 
     func restoreHelping() async {
@@ -107,7 +126,7 @@ final class AppModel: ObservableObject {
         var seen = Set<String>()
         return witnessRecords.compactMap { record in
             guard !seen.contains(record.speciesID),
-                  let species = catalog.first(where: { $0.id == record.speciesID }) else { return nil }
+                  let species = speciesByID[record.speciesID] else { return nil }
             seen.insert(record.speciesID)
             return (species, record.witnessedAt, helpingRecord(for: record.speciesID))
         }
@@ -145,7 +164,7 @@ final class AppModel: ObservableObject {
     }
 
     func saveReflection() async {
-        guard let record = latestWitnessRecord, !isSaving else { return }
+        guard let record = currentWeekWitnessRecord, !isSaving else { return }
         isSaving = true
         defer { isSaving = false }
 
@@ -168,7 +187,7 @@ final class AppModel: ObservableObject {
     func restoreWitnesses() async {
         do {
             witnessRecords = try await witnessRepository.allRecords()
-            reflectionDraft = latestWitnessRecord?.reflection ?? ""
+            reflectionDraft = currentWeekWitnessRecord?.reflection ?? ""
             persistenceError = nil
         } catch {
             persistenceError = "Your private Witness archive could not be opened. \(error.localizedDescription)"

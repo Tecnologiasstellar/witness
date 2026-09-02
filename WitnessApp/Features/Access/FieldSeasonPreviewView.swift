@@ -9,7 +9,7 @@ struct FieldSeasonPreviewView: View {
     @ObservedObject var commerce: CommerceModel
     @StateObject private var samplePlayer = ChapterAudioPlayer()
 
-    private let edition = FieldSeasonLoader.loadBundledEdition()
+    private let edition = FieldSeasonLoader.bundled
 
     var body: some View {
         ScrollView {
@@ -51,7 +51,11 @@ struct FieldSeasonPreviewView: View {
 
                 PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
 
-                AccessQuietRow(title: "RESTORE PURCHASES", identifier: "access.fieldseason.restore") {
+                AccessQuietRow(
+                    title: "RESTORE PURCHASES",
+                    detail: commerce.restorePhase == .restoring ? "…" : nil,
+                    identifier: "access.fieldseason.restore"
+                ) {
                     Task { await commerce.restore() }
                 }
 

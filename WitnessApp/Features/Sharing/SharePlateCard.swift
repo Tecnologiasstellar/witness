@@ -53,7 +53,7 @@ struct SharePlateView: View {
                     AtlasIconView(icon: .fieldMark, size: 15, color: AtlasTheme.heroInk)
                     Text("WITNESS")
                         .font(.system(size: 13, weight: .bold)).tracking(2.6)
-                    Text("· ONE SPECIES A DAY")
+                    Text("· ONE SPECIES A WEEK")
                         .font(.system(size: 11, weight: .medium)).tracking(1.8)
                         .opacity(0.75)
                 }
@@ -71,19 +71,40 @@ struct SharePlateView: View {
 /// Transferable PNG for the system share sheet (Instagram, WhatsApp, Messages…).
 struct SharePlate: Transferable {
     let pngData: Data
+    let image: UIImage
     let commonName: String
 
     static var transferRepresentation: some TransferRepresentation {
         DataRepresentation(exportedContentType: .png) { plate in plate.pngData }
     }
 
+    @MainActor private static var cache: [String: SharePlate] = [:]
+    @MainActor private static var inFlight: [String: Task<SharePlate?, Never>] = [:]
+
+    /// One render per species per launch. The hero button, the witnessed
+    /// reveal and the Cabinet all ask for the same plate; rendering it three
+    /// times at first paint was the main-thread stall behind the tap flake.
     @MainActor
-    static func render(for species: SpeciesRecord) -> SharePlate? {
-        let renderer = ImageRenderer(content: SharePlateView(species: species))
-        renderer.scale = 2
-        renderer.proposedSize = ProposedViewSize(SharePlateView.size)
-        guard let image = renderer.uiImage, let data = image.pngData() else { return nil }
-        return SharePlate(pngData: data, commonName: species.commonName)
+    static func plate(for species: SpeciesRecord) async -> SharePlate? {
+        if let cached = cache[species.id] { return cached }
+        if let task = inFlight[species.id] { return await task.value }
+        let task = Task<SharePlate?, Never> { @MainActor in
+            let renderer = ImageRenderer(content: SharePlateView(species: species))
+            renderer.scale = 2
+            renderer.proposedSize = ProposedViewSize(SharePlateView.size)
+            guard let image = renderer.uiImage else { return nil }
+            // The raster has to happen on the main actor; the PNG encode does not.
+            guard let data = await Task.detached(priority: .userInitiated, operation: { image.pngData() }).value else {
+                return nil
+            }
+            let plate = SharePlate(pngData: data, image: image, commonName: species.commonName)
+            cache[species.id] = plate
+            return plate
+        }
+        inFlight[species.id] = task
+        let plate = await task.value
+        inFlight[species.id] = nil
+        return plate
     }
 }
 
@@ -108,7 +129,7 @@ struct SharePlateButton: View {
                     message: Text(sharePlateMessage(for: species)),
                     preview: SharePreview(
                         "\(species.commonName) — Witness",
-                        image: Image(uiImage: UIImage(data: plate.pngData) ?? UIImage())
+                        image: Image(uiImage: plate.image)
                     )
                 ) {
                     label
@@ -119,9 +140,10 @@ struct SharePlateButton: View {
                 })
             } else {
                 label.opacity(0.4)
+                    .accessibilityLabel("Preparing the share plate")
             }
         }
-        .task { plate = SharePlate.render(for: species) }
+        .task { plate = await SharePlate.plate(for: species) }
         .accessibilityIdentifier("share.plateButton")
     }
 
@@ -160,7 +182,7 @@ struct ShareHeroButton: View {
                     message: Text(sharePlateMessage(for: species)),
                     preview: SharePreview(
                         "\(species.commonName) — Witness",
-                        image: Image(uiImage: UIImage(data: plate.pngData) ?? UIImage())
+                        image: Image(uiImage: plate.image)
                     )
                 ) {
                     icon
@@ -171,9 +193,10 @@ struct ShareHeroButton: View {
                 })
             } else {
                 icon.opacity(0.4)
+                    .accessibilityLabel("Preparing the share plate")
             }
         }
-        .task { plate = SharePlate.render(for: species) }
+        .task { plate = await SharePlate.plate(for: species) }
         .accessibilityLabel("Share this plate")
         .accessibilityIdentifier("today.share")
     }

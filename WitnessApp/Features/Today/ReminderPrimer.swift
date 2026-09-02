@@ -14,9 +14,33 @@ struct ReminderPrimer: View {
         // after any answer. Confirmation shows only in the enabling session.
         if enabledHere {
             confirmation
+        } else if reminders.isSystemDenied && !reminders.isEnabled {
+            deniedNotice
         } else if !reminders.primerAnswered {
             primer
         }
+    }
+
+    /// iOS said no. Say so, and point at the one place it can be changed.
+    private var deniedNotice: some View {
+        HStack(spacing: 8) {
+            AtlasIconView(icon: .fieldMark, size: 14, color: AtlasTheme.inkMuted)
+            Text("NOTIFICATIONS ARE OFF FOR WITNESS · TURN THEM ON IN SETTINGS")
+                .font(AtlasType.technical(9, weight: .bold)).tracking(1.0)
+                .foregroundStyle(AtlasTheme.inkMuted)
+            Spacer()
+            if let url = URL(string: UIApplication.openSettingsURLString) {
+                Link(destination: url) {
+                    Text("OPEN")
+                        .font(AtlasType.technical(9, weight: .bold)).tracking(1.0)
+                        .foregroundStyle(AtlasTheme.sepia)
+                        .frame(minHeight: 44)
+                }
+            }
+        }
+        .padding(.horizontal, 14)
+        .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
+        .accessibilityIdentifier("today.reminderPrimer.denied")
     }
 
     private var confirmation: some View {

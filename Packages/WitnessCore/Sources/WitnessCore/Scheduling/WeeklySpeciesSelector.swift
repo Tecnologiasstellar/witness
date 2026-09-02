@@ -44,9 +44,10 @@ public struct WeeklySpeciesSelector: Sendable {
             [.weekOfYear], from: epochWeekStart, to: currentWeekStart
         ).weekOfYear ?? 0)
 
+        let sortedRecords = Self.sorted(records)
         return (0...weekCount).compactMap { offset in
             guard let week = iso.date(byAdding: .weekOfYear, value: -offset, to: currentWeekStart),
-                  let species = species(for: week, from: records, calendar: inputCalendar) else {
+                  let species = species(for: week, fromSorted: sortedRecords, calendar: inputCalendar) else {
                 return nil
             }
             return FeaturedPlate(
@@ -61,15 +62,26 @@ public struct WeeklySpeciesSelector: Sendable {
         from records: [SpeciesRecord],
         calendar inputCalendar: Calendar = Calendar(identifier: .gregorian)
     ) -> SpeciesRecord? {
-        guard !records.isEmpty else { return nil }
+        species(for: date, fromSorted: Self.sorted(records), calendar: inputCalendar)
+    }
 
-        var iso = Calendar(identifier: .iso8601)
-        iso.timeZone = inputCalendar.timeZone
-
-        let sortedRecords = records.sorted {
+    /// Publish order is the rotation order; ties break on id.
+    private static func sorted(_ records: [SpeciesRecord]) -> [SpeciesRecord] {
+        records.sorted {
             if $0.publishDate == $1.publishDate { return $0.id < $1.id }
             return $0.publishDate < $1.publishDate
         }
+    }
+
+    private func species(
+        for date: Date,
+        fromSorted sortedRecords: [SpeciesRecord],
+        calendar inputCalendar: Calendar
+    ) -> SpeciesRecord? {
+        guard !sortedRecords.isEmpty else { return nil }
+
+        var iso = Calendar(identifier: .iso8601)
+        iso.timeZone = inputCalendar.timeZone
 
         let reference = iso.date(from: DateComponents(year: 2026, month: 8, day: 21))!
         guard

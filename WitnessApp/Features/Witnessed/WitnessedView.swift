@@ -224,19 +224,26 @@ struct ActsView: View {
             }
         }
         let calendar = Calendar.current
-        let grouped = Dictionary(grouping: lines) { calendar.startOfDay(for: $0.date) }
+        let now = Date()
+        // Everything in the current week shares one "THIS WEEK" header;
+        // older lines keep their own day.
+        let grouped = Dictionary(grouping: lines) { line -> Date in
+            calendar.isDate(line.date, equalTo: now, toGranularity: .weekOfYear)
+                ? calendar.startOfDay(for: now)
+                : calendar.startOfDay(for: line.date)
+        }
         return grouped.keys.sorted(by: >).map { day in
             let header = calendar.isDate(day, equalTo: Date(), toGranularity: .weekOfYear)
                 ? "THIS WEEK"
                 : day.formatted(.dateTime.month(.wide).day()).uppercased()
-            let entries = grouped[day]!.sorted { $0.date > $1.date }.map(\.line)
+            let entries = (grouped[day] ?? []).sorted { $0.date > $1.date }.map(\.line)
             return JournalDay(id: "\(day.timeIntervalSince1970)", header: header, entries: entries)
         }
     }
 
     @ViewBuilder
     private var ledger: some View {
-        VStack(alignment: .leading, spacing: 0) {
+        LazyVStack(alignment: .leading, spacing: 0) {
             Text("FIELD JOURNAL")
                 .font(AtlasType.technical(10, weight: .bold)).tracking(1.2)
                 .foregroundStyle(AtlasTheme.sepia)
@@ -356,7 +363,7 @@ struct PrivateReflectionSheet: View {
                     .font(AtlasType.display(30, weight: .semibold))
                 Text("This reflection remains on this device. It is never published by Witness.")
                     .font(.footnote).foregroundStyle(AtlasTheme.inkMuted)
-                if model.latestWitnessRecord == nil {
+                if model.currentWeekWitnessRecord == nil {
                     Text("Witness this week’s plate before leaving a note.")
                         .font(.body).foregroundStyle(AtlasTheme.inkMuted)
                     Spacer()

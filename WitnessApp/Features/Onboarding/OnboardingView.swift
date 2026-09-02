@@ -29,7 +29,7 @@ struct OnboardingView: View {
     @State private var furthestIndex = 0
     @State private var reminderChoice = "later"
 
-    private let edition = FieldSeasonLoader.loadBundledEdition()
+    private let edition = FieldSeasonLoader.bundled
 
     private enum Page: String, CaseIterable {
         case welcome, weekly, witness, acts, reminder, works

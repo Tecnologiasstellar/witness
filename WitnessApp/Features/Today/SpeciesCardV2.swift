@@ -595,7 +595,7 @@ private struct WorksModule: View {
     let onOpenFieldSeason: () -> Void
     let onOpenAtlas: () -> Void
 
-    private let edition = FieldSeasonLoader.loadBundledEdition()
+    private let edition = FieldSeasonLoader.bundled
 
     private var chapter: FieldSeasonChapter? {
         edition?.chapters.first { $0.resolvedKind == .chapter && $0.speciesID == species.id }

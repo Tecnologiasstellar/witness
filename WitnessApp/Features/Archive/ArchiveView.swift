@@ -110,12 +110,16 @@ struct ArchiveView: View {
     }
 
     private var archiveGrid: some View {
-        ScrollView {
+        // Hoisted: the history walks every week since the epoch, and the
+        // grid used to ask for it once per cell.
+        let plates = model.featuredPlates
+        let currentPeriod = plates.first?.period
+        return ScrollView {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
-                ForEach(model.featuredPlates) { plate in
+                ForEach(plates) { plate in
                     if model.isPlateUnlocked(plate, atlasActive: commerce.atlasIsActive) {
                         NavigationLink { SpecimenDetailView(species: plate.species) } label: {
-                            ArchiveCard(plate: plate, isCurrentWeek: plate.period == model.featuredPlates.first?.period, isLocked: false)
+                            ArchiveCard(plate: plate, isCurrentWeek: plate.period == currentPeriod, isLocked: false)
                         }
                         .buttonStyle(.plain)
                     } else {

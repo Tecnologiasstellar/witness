@@ -23,7 +23,7 @@ struct FieldAlbumExport: Transferable {
 /// without access it shows a quiet notice, never premium content.
 struct FieldSeasonView: View {
     @ObservedObject var commerce: CommerceModel
-    private let edition = FieldSeasonLoader.loadBundledEdition()
+    private let edition = FieldSeasonLoader.bundled
 
     private var isEntitled: Bool {
         commerce.ownsFieldSeason || commerce.atlasIsActive

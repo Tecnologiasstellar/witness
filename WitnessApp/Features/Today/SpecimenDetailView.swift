@@ -12,6 +12,8 @@ struct SpecimenDetailView: View {
                     Button("BACK") { dismiss() }
                         .font(AtlasType.technical(11, weight: .bold))
                         .tracking(1.15)
+                        .frame(minWidth: 44, minHeight: 44, alignment: .leading)
+                        .contentShape(Rectangle())
                     Spacer()
                     Text("SPECIMEN NOTES")
                         .font(AtlasType.technical(10, weight: .semibold))

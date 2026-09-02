@@ -109,7 +109,7 @@ struct AtlasTally: View {
                 .multilineTextAlignment(.center)
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(count.map { "\($0) witnesses, updated today" } ?? "Count unavailable")
+        .accessibilityLabel(count.map { "\($0) witnesses, collective count" } ?? "Count unavailable")
         .accessibilityAddTraits(.isStaticText)
     }
 }

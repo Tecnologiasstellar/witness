@@ -8,6 +8,7 @@ struct WitnessSharePreviewSheet: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var renderedImage: UIImage?
+    @State private var renderedPNG: Data?
 
     var body: some View {
         NavigationStack {
@@ -24,8 +25,7 @@ struct WitnessSharePreviewSheet: View {
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 24)
 
-                    if let renderedImage,
-                       let data = renderedImage.pngData() {
+                    if let renderedImage, let data = renderedPNG {
                         ShareLink(
                             item: ShareCardArtifact(pngData: data),
                             subject: Text("Witnessed: \(species.commonName)"),
@@ -60,16 +60,20 @@ struct WitnessSharePreviewSheet: View {
                 }
             }
         }
-        .task { renderShareCard() }
+        .task { await renderShareCard() }
     }
 
     @MainActor
-    private func renderShareCard() {
+    private func renderShareCard() async {
         let card = WitnessShareCard(species: species)
             .frame(width: 360, height: 450)
         let renderer = ImageRenderer(content: card)
         renderer.scale = 3
-        renderedImage = renderer.uiImage
+        guard let image = renderer.uiImage else { return }
+        // Encode once, off the main thread; body used to re-encode on every pass.
+        let data = await Task.detached(priority: .userInitiated, operation: { image.pngData() }).value
+        renderedImage = image
+        renderedPNG = data
     }
 }
 

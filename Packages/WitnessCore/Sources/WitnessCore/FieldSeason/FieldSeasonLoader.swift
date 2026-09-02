@@ -4,6 +4,11 @@ import Foundation
 /// malformed edition returns nil and the app simply shows no reader —
 /// never a broken or partial premium surface.
 public enum FieldSeasonLoader {
+    /// The shipped edition, decoded and validated once per launch. Views
+    /// should read this rather than call `loadBundledEdition()` in their
+    /// initialisers, which re-decoded 148 KB of JSON on every re-render.
+    public static let bundled: FieldSeasonEdition? = loadBundledEdition()
+
     public static func loadBundledEdition(bundle: Bundle? = nil) -> FieldSeasonEdition? {
         let bundle = bundle ?? resourceBundle
         guard let url = bundle.url(

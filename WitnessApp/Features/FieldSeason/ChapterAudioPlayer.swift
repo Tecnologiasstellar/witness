@@ -59,12 +59,15 @@ final class ChapterAudioPlayer: NSObject, ObservableObject {
 
     private func startTicker() {
         stopTicker()
-        ticker = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
+        let timer = Timer(timeInterval: 0.5, repeats: true) { [weak self] _ in
             Task { @MainActor [weak self] in
                 guard let self, let player = self.player else { return }
                 self.currentTime = player.currentTime
             }
         }
+        // .common keeps the timestamp moving while the reader scrolls.
+        RunLoop.main.add(timer, forMode: .common)
+        ticker = timer
     }
 
     private func stopTicker() {
