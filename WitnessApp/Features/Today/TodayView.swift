@@ -6,6 +6,9 @@ struct TodayView: View {
     let onOpenIndex: () -> Void
     let onOpenReflection: () -> Void
     var onOpenFieldSeason: (() -> Void)? = nil
+    var onOpenAtlas: (() -> Void)? = nil
+    var ownsFieldSeason = false
+    var atlasIsActive = false
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
@@ -24,7 +27,10 @@ struct TodayView: View {
                                 topInset: geo.safeAreaInsets.top,
                                 onOpenIndex: onOpenIndex,
                                 onOpenReflection: onOpenReflection,
-                                onOpenFieldSeason: onOpenFieldSeason
+                                onOpenFieldSeason: onOpenFieldSeason,
+                                onOpenAtlas: onOpenAtlas,
+                                ownsFieldSeason: ownsFieldSeason,
+                                atlasIsActive: atlasIsActive
                             )
                         }
                         .scrollIndicators(.hidden)

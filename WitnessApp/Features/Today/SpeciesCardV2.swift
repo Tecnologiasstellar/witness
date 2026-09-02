@@ -13,6 +13,11 @@ struct SpeciesCardV2: View {
     let onOpenIndex: () -> Void
     let onOpenReflection: () -> Void
     var onOpenFieldSeason: (() -> Void)? = nil
+    var onOpenAtlas: (() -> Void)? = nil
+    // Plain values, not the commerce model: the free card only needs to
+    // know what the reader already holds, never how to sell anything.
+    var ownsFieldSeason = false
+    var atlasIsActive = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -47,10 +52,17 @@ struct SpeciesCardV2: View {
                 .padding(.horizontal, 24)
                 .padding(.top, 40)
 
-            if let onOpenFieldSeason {
-                FieldSeasonDoor(species: species, onOpen: onOpenFieldSeason)
-                    .padding(.horizontal, 24)
-                    .padding(.top, 34)
+            if let onOpenFieldSeason, let onOpenAtlas {
+                WorksModule(
+                    species: species,
+                    model: model,
+                    ownsFieldSeason: ownsFieldSeason,
+                    atlasIsActive: atlasIsActive,
+                    onOpenFieldSeason: onOpenFieldSeason,
+                    onOpenAtlas: onOpenAtlas
+                )
+                .padding(.horizontal, 24)
+                .padding(.top, 34)
             }
 
             EvidenceFooter(species: species)
@@ -570,68 +582,160 @@ private struct EvidenceFooter: View {
 
 // MARK: - Field Season door
 
-/// A quiet, honest door shown when this week's species has a full chapter
-/// in the season edition — the highest-intent moment to mention it exists.
-/// States a fact, promises nothing, and opens the Field Season preview.
-private struct FieldSeasonDoor: View {
+/// THE WORKS — the two editorial works, present on every card as content:
+/// a flat matted plate for the finished edition, a small fan for the
+/// growing library, one line on what they fund. Never a price, never a
+/// button; each row is a door to the work's own surface. Sits after the
+/// ritual and before the evidence, like a book's back matter.
+private struct WorksModule: View {
     let species: SpeciesRecord
-    let onOpen: () -> Void
+    @ObservedObject var model: AppModel
+    let ownsFieldSeason: Bool
+    let atlasIsActive: Bool
+    let onOpenFieldSeason: () -> Void
+    let onOpenAtlas: () -> Void
 
-    private let chapter: FieldSeasonChapter?
+    private let edition = FieldSeasonLoader.loadBundledEdition()
 
-    init(species: SpeciesRecord, onOpen: @escaping () -> Void) {
-        self.species = species
-        self.onOpen = onOpen
-        self.chapter = FieldSeasonLoader.loadBundledEdition()?
-            .chapters.first { $0.resolvedKind == .chapter && $0.speciesID == species.id }
+    private var chapter: FieldSeasonChapter? {
+        edition?.chapters.first { $0.resolvedKind == .chapter && $0.speciesID == species.id }
+    }
+
+    private var storyCount: Int {
+        edition?.chapters.filter { $0.resolvedKind == .chapter }.count ?? 8
     }
 
     var body: some View {
-        if let chapter {
-            Button(action: onOpen) {
-                HStack(alignment: .center, spacing: 14) {
-                    // The chapter's own plate, matted like a page from the
-                    // edition — the door shows the thing itself, never a price.
-                    if let assetID = chapter.heroAssetID, let art = UIImage(named: assetID) {
-                        Image(uiImage: art)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 58, height: 74)
-                            .clipped()
-                            .padding(3)
-                            .background(AtlasTheme.paperFresh)
-                            .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
-                            .accessibilityHidden(true)
-                    }
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("CHAPTER \(String(format: "%02d", chapter.number)) · FIELD SEASON ONE")
-                            .font(AtlasType.technical(9, weight: .bold))
-                            .tracking(1.1)
-                            .foregroundStyle(AtlasTheme.sepia)
-                        Text("“\(chapter.title)”")
-                            .font(AtlasType.display(17, weight: .medium))
-                            .multilineTextAlignment(.leading)
-                        Text("The \(species.commonName.lowercased()) has a full chapter in the season edition — narrated, sourced, with its premium dossier.")
-                            .font(.footnote)
-                            .foregroundStyle(AtlasTheme.inkMuted)
-                            .lineSpacing(3)
-                            .multilineTextAlignment(.leading)
-                    }
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .font(.caption)
-                        .foregroundStyle(AtlasTheme.sepia)
-                }
-                .padding(14)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(AtlasTheme.paperFresh)
-                .overlay(Rectangle().stroke(AtlasTheme.sepia.opacity(0.35), lineWidth: 1))
-                .contentShape(Rectangle())
-            }
-            .buttonStyle(.plain)
-            .accessibilityIdentifier("today.fieldseason.door")
-            .accessibilityLabel("Chapter \(chapter.number) of Field Season One, \(chapter.title). Opens the Field Season page.")
+        VStack(alignment: .leading, spacing: 0) {
+            Rectangle().fill(AtlasTheme.ruleEdge).frame(height: 1)
+            Text("THE WORKS")
+                .font(AtlasType.technical(10, weight: .bold)).tracking(1.25)
+                .foregroundStyle(AtlasTheme.sepia)
+                .padding(.top, 16)
+                .padding(.bottom, 2)
+                .accessibilityAddTraits(.isHeader)
+
+            fieldSeasonRow
+            atlasRow
+
+            Text("Made by one person. Field Season and the Atlas support the making of Witness. Your Witness remains free.")
+                .font(AtlasType.display(14, weight: .regular, italic: true))
+                .foregroundStyle(AtlasTheme.inkMuted)
+                .lineSpacing(3)
+                .padding(.top, 14)
+                .accessibilityIdentifier("today.works.mission")
         }
+        .accessibilityElement(children: .contain)
+    }
+
+    // MARK: Field Season — a finished work, so a single flat plate.
+
+    private var fieldSeasonRow: some View {
+        let meta: String = ownsFieldSeason
+            ? "FIELD SEASON ONE · OWNED"
+            : atlasIsActive
+                ? "FIELD SEASON ONE · INCLUDED"
+                : "FIELD SEASON ONE · \(storyCount) STORIES"
+        let title = chapter.map { "“\($0.title)”" } ?? "Field Season One"
+        let note = chapter.map {
+            "This week’s \(species.commonName.lowercased()) is chapter \(String(format: "%02d", $0.number)) of the finished edition."
+        } ?? "\(storyCount) species along one ecological edge — complete and narrated."
+        let art = chapter?.heroAssetID ?? "vaquita-plate-01"
+
+        return worksRow(meta: meta, title: title, note: note, identifier: "today.fieldseason.door", label: "\(title), Field Season One. \(note) Opens the Field Season page.") {
+            open(work: "fieldseason", state: ownsFieldSeason ? "owned" : atlasIsActive ? "included" : "unheld")
+            onOpenFieldSeason()
+        } visual: {
+            if let image = UIImage(named: art) {
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 58, height: 74)
+                    .clipped()
+                    .padding(3)
+                    .background(AtlasTheme.paperFresh)
+                    .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+            }
+        }
+    }
+
+    // MARK: Atlas — a growing library, so a small fan of real plates.
+
+    private var atlasAssets: [String] {
+        let locked = model.featuredPlates
+            .filter { !model.isPlateUnlocked($0, atlasActive: atlasIsActive) }
+            .compactMap { $0.species.gallery?.first }
+        // Below three real locked plates the fan would be padded with
+        // fiction; a fixed trio of archive species is the honest stand-in.
+        return locked.count >= 3
+            ? Array(locked.prefix(3))
+            : ["gharial-plate-01", "snow-leopard-plate-01", "whooping-crane-plate-01"]
+    }
+
+    private var atlasRow: some View {
+        worksRow(
+            meta: atlasIsActive ? "THE ATLAS · ACTIVE" : "THE LIVING LIBRARY · GROWING WEEKLY",
+            title: "The Atlas",
+            note: "Every past week and every season, narrated, while membership is active.",
+            identifier: "today.atlas.door",
+            label: "The Atlas, the living library. Opens the Atlas page."
+        ) {
+            open(work: "atlas", state: atlasIsActive ? "active" : "inactive")
+            onOpenAtlas()
+        } visual: {
+            PlateCollageStrip(assets: atlasAssets, height: 58, spacing: -28)
+                .frame(width: 100)
+        }
+    }
+
+    // MARK: Row anatomy
+
+    private func worksRow<Visual: View>(
+        meta: String,
+        title: String,
+        note: String,
+        identifier: String,
+        label: String,
+        action: @escaping () -> Void,
+        @ViewBuilder visual: () -> Visual
+    ) -> some View {
+        Button(action: action) {
+            HStack(alignment: .center, spacing: 14) {
+                visual()
+                    .frame(width: 100, alignment: .center)
+                    .accessibilityHidden(true)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(meta)
+                        .font(AtlasType.technical(9, weight: .bold)).tracking(1.1)
+                        .foregroundStyle(AtlasTheme.sepia)
+                        .lineLimit(1).minimumScaleFactor(0.8)
+                    Text(title)
+                        .font(AtlasType.display(17, weight: .medium))
+                        .foregroundStyle(AtlasTheme.ink)
+                        .multilineTextAlignment(.leading)
+                    Text(note)
+                        .font(AtlasType.display(14, weight: .regular, italic: true))
+                        .foregroundStyle(AtlasTheme.inkMuted)
+                        .lineSpacing(3)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 6)
+                Text("›").foregroundStyle(AtlasTheme.sepia)
+            }
+            .padding(.vertical, 14)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(AtlasPressStyle())
+        .overlay(alignment: .bottom) { Rectangle().fill(AtlasTheme.ruleSoft).frame(height: 1) }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(label)
+        .accessibilityAddTraits(.isButton)
+        .accessibilityIdentifier(identifier)
+    }
+
+    private func open(work: String, state: String) {
+        Task.detached { await WitnessSync.shared.logEvent("works_shelf_opened", metadata: ["work": work, "state": state]) }
     }
 }
 

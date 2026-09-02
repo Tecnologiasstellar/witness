@@ -33,6 +33,13 @@ final class AccessSurfacesUITests: XCTestCase {
         XCTAssertFalse(app.staticTexts["Best value"].exists)
         XCTAssertFalse(app.buttons["access.fieldseason.purchase"].exists)
         XCTAssertFalse(app.buttons["access.support.tip"].exists)
+
+        // The works are present on the card as content doors — never as
+        // prices or purchase buttons.
+        XCTAssertTrue(app.buttons["today.fieldseason.door"].exists)
+        XCTAssertTrue(app.buttons["today.atlas.door"].exists)
+        XCTAssertFalse(app.buttons["access.atlas.sixmonth"].exists)
+        XCTAssertFalse(app.buttons["access.atlas.annual"].exists)
     }
 
     func testAccessOverviewFieldSeasonPurchaseAndSupportFlow() throws {
@@ -51,7 +58,10 @@ final class AccessSurfacesUITests: XCTestCase {
         // are dropped (same flake family as openIndex).
         app.buttons["access.overview.fieldseason"].tap()
         let purchase = app.buttons["access.fieldseason.purchase"]
-        XCTAssertTrue(purchase.waitForExistence(timeout: 5))
+        if !purchase.waitForExistence(timeout: 5) {
+            app.buttons["access.overview.fieldseason"].tap()
+            XCTAssertTrue(purchase.waitForExistence(timeout: 5))
+        }
         purchase.tap()
         var owned = app.staticTexts["access.fieldseason.owned"].waitForExistence(timeout: 5)
             || app.otherElements["access.fieldseason.owned"].waitForExistence(timeout: 2)

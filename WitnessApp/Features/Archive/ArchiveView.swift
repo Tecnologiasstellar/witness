@@ -8,7 +8,8 @@ import WitnessCore
 struct ArchiveView: View {
     @ObservedObject var model: AppModel
     @ObservedObject var commerce: CommerceModel
-    @State private var segment = "WITNESSED"
+    // Owned by the tab root so a door elsewhere can land a member on ARCHIVE.
+    @Binding var segment: String
     @State private var isAtlasSheetPresented = false
     private let segments = ["WITNESSED", "HELPING", "ARCHIVE"]
 

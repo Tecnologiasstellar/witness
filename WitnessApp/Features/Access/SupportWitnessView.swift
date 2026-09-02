@@ -29,11 +29,11 @@ struct SupportWitnessView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.top, 2)
 
-                Text("A one-time tip to the person making Witness. It helps fund research, fact-checking, illustration, narration, accessibility, hosting, and continued operation of the app.")
+                Text("Support the work behind Witness. A one-time tip to the person making it — it supports research, fact-checking, illustration, narration, accessibility, and operation of the app, and unlocks nothing.")
                     .font(.callout)
                     .lineSpacing(4)
 
-                Text("A tip unlocks nothing and changes nothing about your standing here. It is not a donation to a conservation organization and is not tax-deductible.")
+                Text("A tip changes nothing about your standing here. It goes to the making of Witness, not to a conservation organization, and carries no tax benefit.")
                     .font(.footnote)
                     .foregroundStyle(AtlasTheme.inkMuted)
                     .lineSpacing(3)
@@ -43,6 +43,9 @@ struct SupportWitnessView: View {
                 PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
 
                 VStack(alignment: .leading, spacing: 6) {
+                    Text("Your Witness remains free.")
+                        .font(AtlasType.display(15, weight: .regular, italic: true))
+                        .foregroundStyle(AtlasTheme.inkMuted)
                     Text("A tip is never expected here. It is always felt.")
                         .font(AtlasType.display(15, weight: .regular, italic: true))
                         .foregroundStyle(AtlasTheme.inkMuted)

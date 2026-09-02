@@ -55,7 +55,7 @@ struct FieldSeasonPreviewView: View {
                     Task { await commerce.restore() }
                 }
 
-                Text("Your Witness remains free. The complete public record, sources, action, count, and your private reflections never require a purchase.")
+                Text("Keeping this edition supports the making of Witness — one person’s research, fact-checking, illustration, and narration. Your Witness remains free: the complete public record, sources, action, count, and your private reflections never require a purchase.")
                     .font(.footnote)
                     .foregroundStyle(AtlasTheme.inkMuted)
                     .lineSpacing(3)
@@ -228,7 +228,7 @@ struct FieldSeasonPreviewView: View {
 
     private func rowSubtitle(_ piece: FieldSeasonChapter) -> String {
         switch piece.resolvedKind {
-        case .chapter: "CHAPTER · FREE RECORD + PREMIUM DOSSIER"
+        case .chapter: "CHAPTER · FREE RECORD + FULL DOSSIER"
         case .letter: "OPENING FIELD LETTER"
         case .interlude: "INTERLUDE"
         case .synthesis: "CLOSING SYNTHESIS + SEASON PLATE"

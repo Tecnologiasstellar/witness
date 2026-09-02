@@ -27,6 +27,8 @@ struct RootTabView: View {
     @State private var isIndexPresented = false
     @State private var isReflectionPresented = false
     @State private var isFieldSeasonPresented = false
+    @State private var isAtlasPresented = false
+    @State private var cabinetSegment = "WITNESSED"
 
     var body: some View {
         // A plain VStack, not a safeAreaInset: insets applied outside a
@@ -43,11 +45,23 @@ struct RootTabView: View {
                                 model: model,
                                 onOpenIndex: { isIndexPresented = true },
                                 onOpenReflection: { isReflectionPresented = true },
-                                onOpenFieldSeason: { isFieldSeasonPresented = true }
+                                onOpenFieldSeason: { isFieldSeasonPresented = true },
+                                onOpenAtlas: {
+                                    // Members go to the library itself; everyone
+                                    // else meets the Atlas on its own calm sheet.
+                                    if commerce.atlasIsActive {
+                                        cabinetSegment = "ARCHIVE"
+                                        selection = .cabinet
+                                    } else {
+                                        isAtlasPresented = true
+                                    }
+                                },
+                                ownsFieldSeason: commerce.ownsFieldSeason,
+                                atlasIsActive: commerce.atlasIsActive
                             )
                         }
                     case .cabinet:
-                        NavigationStack { ArchiveView(model: model, commerce: commerce) }
+                        NavigationStack { ArchiveView(model: model, commerce: commerce, segment: $cabinetSegment) }
                     case .acts:
                         NavigationStack { ActsView(model: model) }
                     }
@@ -56,7 +70,12 @@ struct RootTabView: View {
             AtlasTabBar(selection: $selection)
         }
         .background(AtlasTheme.paper.ignoresSafeArea())
-        .sheet(isPresented: $isIndexPresented) { SettingsView(commerce: commerce) }
+        .sheet(isPresented: $isIndexPresented) {
+            SettingsView(commerce: commerce, weeklyPlate: model.species?.gallery?.first)
+        }
+        .sheet(isPresented: $isAtlasPresented) {
+            NavigationStack { AtlasAccessSheet(commerce: commerce) }
+        }
         .sheet(isPresented: $isFieldSeasonPresented) {
             // Owners and Atlas members go straight to the stories; the
             // preview is a seller's page and only non-entitled readers see it.

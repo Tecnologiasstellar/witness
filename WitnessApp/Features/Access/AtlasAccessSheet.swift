@@ -48,6 +48,11 @@ struct AtlasAccessSheet: View {
                     .foregroundStyle(AtlasTheme.inkMuted)
                     .lineSpacing(3)
 
+                Text("Atlas membership supports the making of Witness, week by week. Your Witness remains free.")
+                    .font(AtlasType.display(15, weight: .regular, italic: true))
+                    .foregroundStyle(AtlasTheme.inkMuted)
+                    .lineSpacing(3)
+
                 AccessQuietRow(title: "RESTORE PURCHASES", identifier: "access.atlas.restore") {
                     Task { await commerce.restore() }
                 }

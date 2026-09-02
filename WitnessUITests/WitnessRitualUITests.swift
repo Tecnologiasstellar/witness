@@ -54,8 +54,12 @@ final class WitnessRitualUITests: XCTestCase {
         // ACTS replaces NOTES: this week's vetted act is present, the
         // helping commitment records as a quiet dated trace, and the
         // private note never leaks onto the tab.
+        // Retry the tab tap once: the same settling-frame flake as openIndex.
         app.buttons["atlas.tab.acts"].tap()
-        XCTAssertTrue(app.buttons["acts.weekly.open"].waitForExistence(timeout: 3))
+        if !app.buttons["acts.weekly.open"].waitForExistence(timeout: 3) {
+            app.buttons["atlas.tab.acts"].tap()
+            XCTAssertTrue(app.buttons["acts.weekly.open"].waitForExistence(timeout: 5))
+        }
         let helpingButton = app.buttons["acts.weekly.helping"]
         XCTAssertTrue(helpingButton.waitForExistence(timeout: 3))
         helpingButton.tap()

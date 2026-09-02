@@ -92,22 +92,26 @@ struct PlateCollageStrip: View {
     // 5 cards at 0.72 aspect with -26pt overlap stay under 330pt, so the
     // fan never widens the sheet past the smallest supported screen.
     var height: CGFloat = 118
+    var spacing: CGFloat = -26
 
     private static let tilts: [Double] = [-7, 4, -1.5, 6, -5]
     private static let lifts: [CGFloat] = [10, 3, 0, 5, 12]
 
     var body: some View {
         let cards = assets.compactMap { name in UIImage(named: name).map { (name: name, image: $0) } }
+        // Lifts scale with height so a small fan keeps the same gesture
+        // instead of scattering.
+        let liftScale = height / 118
         if !cards.isEmpty {
-            HStack(spacing: -26) {
+            HStack(spacing: spacing) {
                 ForEach(Array(cards.enumerated()), id: \.element.name) { index, card in
                     plateCard(card.image)
                         .rotationEffect(.degrees(Self.tilts[index % Self.tilts.count]))
-                        .offset(y: Self.lifts[index % Self.lifts.count])
+                        .offset(y: Self.lifts[index % Self.lifts.count] * liftScale)
                         .zIndex(index == cards.count / 2 ? 10 : Double(index))
                 }
             }
-            .frame(maxWidth: .infinity, minHeight: height + 16)
+            .frame(maxWidth: .infinity, minHeight: height + 16 * liftScale)
             .accessibilityHidden(true)
         }
     }
