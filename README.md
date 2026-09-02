@@ -17,7 +17,7 @@ The immediate goal is to publish a working App Store MVP and compete for first p
 
 ## Current status
 
-Weekend Zero local ritual is implemented: an iOS 17 SwiftUI project, schema-validated bundled Vaquita prototype record, Atlas Today/Cabinet/Notes presentation, idempotent on-device Witness persistence, restored Witnessed plate, private reflection, streak logic, and original share preview. The app is offline-first and has no production hosted service. Build and device-install evidence is recorded in [Implementation status](docs/IMPLEMENTATION_STATUS.md); release gates remain open until they have dated production evidence.
+Weekend Zero local ritual is implemented: an iOS 17 SwiftUI project, schema-validated bundled Vaquita prototype record, Atlas Today/Cabinet/Notes presentation, idempotent on-device Witness persistence, restored Witnessed plate, private reflection, streak logic, and original share preview. The ritual works fully offline; the only network traffic is the anonymous per-install witness event and product events synced to Supabase (staging in Debug, production in Release), and the collective count read back from it. There are no accounts. Build and device-install evidence is recorded in [Implementation status](docs/IMPLEMENTATION_STATUS.md); release gates remain open until they have dated production evidence.
 
 Build the checked-in Xcode project:
 

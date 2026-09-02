@@ -1,5 +1,48 @@
 # Witness V1.0 launch week — plan of record
 
+## Session outcome (Wednesday 2026-09-02, afternoon) — 8 cards staged, fluidity pass, processes closed
+
+**Content:** eight species drafted from fetched sources and staged in
+`content/cards/drafts/` (black-rhino, great-indian-bustard,
+lord-howe-island-stick-insect, devils-hole-pupfish, largetooth-sawfish,
+sunda-pangolin, scimitar-horned-oryx, hainan-gibbon; publishDates
+2026-09-20 … 09-27). Every draft passes `tools/validate_card.py` and
+`tools/check_links.py --dir` (216–220 story words, 11–12 live sources
+each). They are `prototype`, plate-less, and deliberately outside the
+bundle, so the catalog stays at 30 and the production gate is untouched.
+Each worksheet in `docs/cards/` ends with an "Open questions for AV" list
+(7–12 items: mostly status-wording choices where the IUCN page was
+bot-gated, and figure drift between sources). **Next session:** 40 plates
+(5 per card, locked template), accuracy review, approval, promotion per
+the staged-drafts paragraph in `CARD_PRODUCTION_PIPELINE.md`.
+
+**App (uncommitted, in the working tree for founder review):** week and
+species now refresh on foreground (the Monday-morning stale-card bug, and
+the corrupt species/week pair it could write); private note binds to the
+current week's record; one cached share-plate render per species with
+the PNG encode off the main thread (the tap-flake source); the share
+preview sheet no longer re-encodes in `body`; the Field Season edition is
+decoded once per launch; archive grid computes the history once; reminder
+denial shows a notice with an OPEN SETTINGS link; RESTORE PURCHASES shows
+"…" on the Atlas and Field Season sheets; "ONE SPECIES A DAY" on the
+shared plate fixed to "A WEEK"; audio ticker keeps time while scrolling;
+Garamond lookup cached; SPECIMEN NOTES back button 44 pt; journal groups
+the current week under one THIS WEEK header. Verified: WitnessCore 65/65,
+app unit 13/13, UI 10/10 (ritual suite included), simulator
+background/foreground pass.
+
+**Process:** main pushed to origin (was 6 ahead). `CONTRIBUTING.md` now
+carries the simulator launch recipe for the four debug flags and the
+staged-draft commands; README no longer claims "no hosted service";
+D-017 records the shipped event vocabulary and the dark commerce funnel;
+D-018 records where the keys actually live.
+
+**Still blocked:** TestFlight upload (Apple account transition) and
+everything behind it. **Not done on purpose:** real `TabView` for the
+three tabs, Field Season sheet root swap, commerce-funnel events (needs a
+founder event list), `.codex/` and `WitnessOnboardingScreenshoots/`
+untracked-dir decision.
+
 ## Day 2 outcome (Tuesday 2026-09-01) — TestFlight upload BLOCKED
 
 **Done:** export-compliance key (`ITSAppUsesNonExemptEncryption: NO`)

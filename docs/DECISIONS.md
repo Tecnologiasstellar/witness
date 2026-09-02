@@ -137,6 +137,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 - Decision: Product analytics is the Supabase `events` table (`name`, `install_id`, `metadata`, `timestamp`) written from a small client queue, plus RevenueCat's built-in purchase metrics. No third-party analytics SDK. Launch event vocabulary: `ritual_completed`, `witness_recorded`, `action_opened`, `reflection_saved`, `share_created`, `paywall_shown`, `trial_started`, `archive_opened`.
 - Reason: One table answers the launch questions (return rate, ritual completion, action opens, conversion) at $0 with a truthful privacy label.
 - Tradeoff: Charts are SQL, not dashboards. Event writes must never block or degrade the offline ritual.
+- As shipped (2026-09-02): the witness itself is a `witness_events` row, not a named event. Named events in code are `helping_started`, `reflection_saved`, `share_created` (with `surface: hero` from the card), `works_shelf_opened`, `action_opened`, `reminder_enabled`, `reminder_disabled`, `onboarding_completed`. `ritual_completed`, `paywall_shown`, `archive_opened` were never emitted; `trial_started` is dead with the trial retirement. The commerce funnel (preview viewed, product selected, purchase/restore outcomes) has no client events yet — RevenueCat covers the purchase itself; the pre-purchase funnel is an open founder decision (source-of-record §14).
 
 ## D-018 — Staging and production environments
 
@@ -145,6 +146,7 @@ Decisions remain active until explicitly superseded. Record the reason, tradeoff
 - Decision: Two Supabase projects, `witness-staging` and `witness-prod`. Debug and simulator builds target staging; TestFlight and App Store builds target production. The Supabase URL and anon key are injected per build configuration via xcconfig (anon keys are publishable; the service-role key never leaves the Supabase dashboard and never enters the repo or app). Schema migrations live as ordered SQL files in `backend/migrations/`, are applied to staging first, verified, then applied to production; destructive migrations record their rollback command.
 - Reason: Real purchase and sync testing must not pollute production counts, and prod schema changes need a rehearsal target. Two free-tier projects cost $0.
 - Tradeoff: Two dashboards to manage and a small config seam in the app.
+- As shipped: the URL and anon key live per build configuration in `WitnessApp/Services/BackendConfig.swift` (`#if DEBUG`), not in an xcconfig. Same boundary, one file fewer.
 
 ## D-019 — Card production pipeline
 
