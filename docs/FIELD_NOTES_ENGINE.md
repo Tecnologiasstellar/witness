@@ -23,6 +23,14 @@ python3 tools/notes.py ship "Field note: the title"
 # then verify the live URL in a browser. A green build is not a rendered page.
 ```
 
+`ship` ends with `vercel deploy --prod` from `witness_web/site`, because **this project
+has no Vercel GitHub integration**. Pushing to `main` deploys nothing; the domain is
+aliased to whichever deployment was promoted last, and every production deployment in the
+project's history was made from the CLI. That was found on 2026-09-03 by pushing the first
+note and watching production stay unchanged — a nightly loop that trusted the push would
+have committed a note a day and published none of them. Connecting the GitHub integration
+in the Vercel dashboard would make the CLI step redundant; until then it is the deploy.
+
 Unattended, this is the scheduled routine `witness-daily-post`
 (`~/.claude/scheduled-tasks/witness-daily-post/SKILL.md`), which runs the same nine steps
 and stops rather than improvising whenever the pre-flight, a gate, or the live check

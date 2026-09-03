@@ -412,12 +412,18 @@ def ping_indexnow(urls):
 # ---------------------------------------------------------------- ship
 
 def ship(message):
-    """Gate, build, commit, rebase, push. Vercel does the rest.
+    """Gate, build, commit, rebase, push, deploy.
 
-    Vercel's GitHub integration owns witnessatlas.com and builds `main` from
-    witness_web/site on every push. `vercel deploy` would create a second,
-    domain-less project. The gate and the build run first so a bad claim or a
-    type error stops the push, not the site.
+    This project has no Vercel GitHub integration: every production deployment
+    of witnessatlas.com has been made by `vercel deploy` from witness_web/site,
+    and the domain is aliased to whichever deployment was promoted last. Found
+    2026-09-03 by pushing and watching nothing happen — a nightly loop that
+    trusted the push would have committed a note a day and published none of
+    them. The CLI deploy targets the linked project in .vercel/project.json; it
+    does not create a second one.
+
+    The gate and the local build run first, so a bad claim or a type error stops
+    the commit rather than the site.
     """
     check()
     subprocess.run(["npx", "next", "build", "--webpack"], cwd=SITE_DIR, check=True)
@@ -426,7 +432,8 @@ def ship(message):
         print("nothing new to commit — pushing whatever is already committed")
     subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=ROOT, check=True)
     subprocess.run(["git", "push", "origin", "main"], cwd=ROOT, check=True)
-    print(f"pushed. vercel builds main -> production in ~1 min: {SITE}/field-notes")
+    subprocess.run(["npx", "vercel", "deploy", "--prod", "--yes"], cwd=SITE_DIR, check=True)
+    print(f"deployed: {SITE}/field-notes")
     ping_indexnow(changed_urls())
 
 
