@@ -19,238 +19,748 @@
       "type": "question",
       "title": "How many vaquita are left",
       "angle": "SERP (2026-09-03): WWF's page says '~10', the Porpoise Conservation Society's is titled 'in 2023', and the surveys disagree by year. The gap is a dated answer that says which survey, what an acoustic detection actually counts, and why a stable tiny number is not the same as recovery. Links the record, never restates it.",
-      "keywords": ["how many vaquita are left", "vaquita population", "are vaquitas extinct"]
+      "keywords": [
+        "how many vaquita are left",
+        "vaquita population",
+        "are vaquitas extinct"
+      ]
     },
     {
       "slug": "the-lynx-that-came-back",
       "type": "field-note",
       "title": "The Iberian lynx and the arithmetic of coming back",
       "angle": "The rarest cat in the world was downlisted, and almost nobody heard. Recovery stories are structurally under-covered because they arrive without a deadline. Write what the change in category means and what it cost in years.",
-      "keywords": ["iberian lynx population", "iberian lynx no longer endangered", "lynx recovery spain"]
+      "keywords": [
+        "iberian lynx population",
+        "iberian lynx no longer endangered",
+        "lynx recovery spain"
+      ]
     },
     {
       "slug": "what-does-critically-endangered-mean",
       "type": "definition",
       "title": "What critically endangered actually means",
       "angle": "SERP (2026-09-03): Britannica, Wikipedia, WWF and the International Rhino Foundation own this and answer it correctly but abstractly. The opening we have is the criteria themselves — the specific thresholds an assessor applies — and the sentence nobody writes: the category describes risk, not rarity.",
-      "keywords": ["what does critically endangered mean", "critically endangered definition", "iucn categories explained"]
+      "keywords": [
+        "what does critically endangered mean",
+        "critically endangered definition",
+        "iucn categories explained"
+      ]
     },
     {
       "slug": "the-crane-that-was-taught-to-migrate",
       "type": "field-note",
       "title": "The crane that had to be taught where to go",
       "angle": "Migration is learned, not inherited, in whooping cranes — which is why a species can survive as bodies and still lose its route. The strongest argument this site can make for memory as a conservation object.",
-      "keywords": ["whooping crane migration", "whooping crane population", "teaching cranes to migrate"]
+      "keywords": [
+        "whooping crane migration",
+        "whooping crane population",
+        "teaching cranes to migrate"
+      ]
     },
     {
       "slug": "endangered-species-apps-compared",
       "type": "comparison",
       "title": "Apps for following endangered species, compared honestly",
       "angle": "SERP (2026-09-03): WWF Together (an older AR showcase), a handful of AR toys, a word game, and adoption-gamification apps. No page compares them for the thing a reader wants — does it tell me something true, and does it ask me for money. Name each one plainly; Witness appears last and is described as in development, not available.",
-      "keywords": ["endangered species app", "wildlife conservation app", "apps to learn about animals"]
+      "keywords": [
+        "endangered species app",
+        "wildlife conservation app",
+        "apps to learn about animals"
+      ]
     },
     {
       "slug": "is-the-axolotl-extinct-in-the-wild",
       "type": "question",
       "title": "Is the axolotl extinct in the wild?",
       "angle": "SERP (2026-09-03): Science News, Scientific American, NHM and Conservation International cover it well, and the noise below them is a Pennsylvania creek sighting. The unwritten page is the paradox stated plainly: the most reproduced amphibian on Earth, at the edge of extinction in one lake system.",
-      "keywords": ["is the axolotl extinct", "axolotl population in the wild", "axolotl xochimilco"]
+      "keywords": [
+        "is the axolotl extinct",
+        "axolotl population in the wild",
+        "axolotl xochimilco"
+      ]
     },
     {
       "slug": "what-is-the-iucn-red-list",
       "type": "definition",
       "title": "What the IUCN Red List is, and what it is not",
       "angle": "SERP (2026-09-03): explainer pages from Operation Wallacea, Discover Wildlife, WorldAtlas and study-notes sites. All describe categories; none say clearly that the Red List is an assessment of extinction risk, not a protection law, and that the difference is why a species can be Critically Endangered and legally unprotected.",
-      "keywords": ["what is the iucn red list", "iucn red list explained", "who decides if a species is endangered"]
+      "keywords": [
+        "what is the iucn red list",
+        "iucn red list explained",
+        "who decides if a species is endangered"
+      ]
     },
     {
       "slug": "the-tortoise-they-defaced-to-save-it",
       "type": "field-note",
       "title": "The tortoise they deface to keep it alive",
       "angle": "Ploughshare tortoise shells are engraved on purpose to destroy their black-market value. A conservation act that looks like vandalism, and a clean way to explain how demand, not habitat, drives some extinctions.",
-      "keywords": ["ploughshare tortoise", "rarest tortoise in the world", "tortoise poaching madagascar"]
+      "keywords": [
+        "ploughshare tortoise",
+        "rarest tortoise in the world",
+        "tortoise poaching madagascar"
+      ]
     },
     {
       "slug": "where-to-donate-for-endangered-species",
       "type": "comparison",
       "title": "Where money for endangered species actually goes",
       "angle": "SERP (2026-09-03): affiliate listicles ('9 Best…', '12 Best…') and rating aggregators. Nobody explains the structural question — direct-to-field versus large-programme, restricted versus unrestricted giving — which is what determines what a donation does. Cite the raters rather than becoming one, and take no commission from anyone.",
-      "keywords": ["best wildlife conservation charity", "where to donate for endangered species", "conservation charity ratings"]
+      "keywords": [
+        "best wildlife conservation charity",
+        "where to donate for endangered species",
+        "conservation charity ratings"
+      ]
     },
     {
       "slug": "the-condors-lead-problem",
       "type": "field-note",
       "title": "The condor's problem is not the condor",
       "angle": "A scavenger that recovered from a handful of birds and is still poisoned by ammunition fragments in the carcasses it eats. The cleanest case of a species whose survival depends on someone else's ordinary choice.",
-      "keywords": ["california condor lead poisoning", "california condor population", "why are condors endangered"]
+      "keywords": [
+        "california condor lead poisoning",
+        "california condor population",
+        "why are condors endangered"
+      ]
     },
     {
       "slug": "what-happens-when-a-species-goes-extinct",
       "type": "question",
       "title": "What actually happens when a species goes extinct",
       "angle": "The honest answer resists both the shrug and the catastrophe: sometimes an ecosystem visibly unravels, sometimes nothing measurable happens for decades, and the loss is still total. Say both without hedging into meaninglessness.",
-      "keywords": ["what happens when a species goes extinct", "why does extinction matter", "effects of extinction on ecosystems"]
+      "keywords": [
+        "what happens when a species goes extinct",
+        "why does extinction matter",
+        "effects of extinction on ecosystems"
+      ]
     },
     {
       "slug": "the-porpoise-in-the-river",
       "type": "field-note",
       "title": "The Yangtze still has a porpoise",
       "angle": "The baiji is gone from the same river; the finless porpoise is not. Two animals, one waterway, twenty years apart — the strongest available illustration that a river extinction is a sequence, not an event.",
-      "keywords": ["yangtze finless porpoise", "baiji extinct", "yangtze river dolphin"]
+      "keywords": [
+        "yangtze finless porpoise",
+        "baiji extinct",
+        "yangtze river dolphin"
+      ]
     },
     {
       "slug": "what-does-extinct-in-the-wild-mean",
       "type": "definition",
       "title": "Extinct in the wild is a category with a door in it",
       "angle": "The only Red List category that describes a place rather than an animal — the species persists, the wild population does not. The Hawaiian crow is the record that makes it concrete, and the reason the category is not a synonym for extinct.",
-      "keywords": ["extinct in the wild meaning", "what does extinct in the wild mean", "species extinct in the wild list"]
+      "keywords": [
+        "extinct in the wild meaning",
+        "what does extinct in the wild mean",
+        "species extinct in the wild list"
+      ]
     },
     {
       "slug": "the-crow-that-makes-tools",
       "type": "field-note",
       "title": "The crow that makes tools and has nowhere to use them",
       "angle": "ʻAlalā manufacture and use foraging tools, a behaviour documented in captivity in a species with no wild population. What is lost when a behaviour survives but its context does not.",
-      "keywords": ["hawaiian crow alala", "alala tool use", "hawaiian crow extinct in the wild"]
+      "keywords": [
+        "hawaiian crow alala",
+        "alala tool use",
+        "hawaiian crow extinct in the wild"
+      ]
     },
     {
       "slug": "adopt-an-animal-programs",
       "type": "comparison",
       "title": "What you get when you adopt an animal",
       "angle": "Symbolic adoptions are the category's default gift, and the fine print differs wildly: some fund a named programme, most fund general operations. Explain the mechanism kindly — this is a genuine way to give, and readers deserve to know what the certificate is.",
-      "keywords": ["adopt an animal", "symbolic animal adoption", "wwf adopt an animal worth it"]
+      "keywords": [
+        "adopt an animal",
+        "symbolic animal adoption",
+        "wwf adopt an animal worth it"
+      ]
     },
     {
       "slug": "how-do-scientists-count-animals-they-cannot-see",
       "type": "question",
       "title": "How do you count an animal you cannot see?",
       "angle": "Acoustic arrays, camera traps, mark-recapture, environmental DNA, and the honest error bars each one carries. This is the page that makes every population figure on this site legible, and it explains why two organisations can publish different numbers in good faith.",
-      "keywords": ["how are animal populations counted", "how do scientists estimate populations", "camera trap survey"]
+      "keywords": [
+        "how are animal populations counted",
+        "how do scientists estimate populations",
+        "camera trap survey"
+      ]
     },
     {
       "slug": "the-bee-that-vanished-from-the-midwest",
       "type": "field-note",
       "title": "The first bumble bee on the American endangered list",
       "angle": "A common backyard insect within living memory, now absent from most of its range. Insect decline is usually written as a global abstraction; this is one named species with a listing date and a map.",
-      "keywords": ["rusty patched bumble bee", "endangered bumble bee", "why are bumble bees disappearing"]
+      "keywords": [
+        "rusty patched bumble bee",
+        "endangered bumble bee",
+        "why are bumble bees disappearing"
+      ]
     },
     {
       "slug": "what-is-shifting-baseline-syndrome",
       "type": "definition",
       "title": "Shifting baseline syndrome, and why it matters here",
       "angle": "Each generation takes the depleted world it inherits as the normal one. The idea underneath this entire project, and the reason an archive of attention is not sentimentality.",
-      "keywords": ["shifting baseline syndrome", "shifting baselines fisheries", "generational amnesia environment"]
+      "keywords": [
+        "shifting baseline syndrome",
+        "shifting baselines fisheries",
+        "generational amnesia environment"
+      ]
     },
     {
       "slug": "the-wolf-with-a-vaccination-campaign",
       "type": "field-note",
       "title": "The wolf that needs a vaccination campaign",
       "angle": "Ethiopian wolves are lost in rabies and distemper outbreaks carried by domestic dogs, and are vaccinated in the field. Disease is the least visible extinction driver and the one that resembles our own emergencies most.",
-      "keywords": ["ethiopian wolf", "ethiopian wolf rabies vaccination", "rarest canid"]
+      "keywords": [
+        "ethiopian wolf",
+        "ethiopian wolf rabies vaccination",
+        "rarest canid"
+      ]
     },
     {
       "slug": "can-a-species-recover",
       "type": "question",
       "title": "Can a species actually recover once it is endangered?",
       "angle": "Yes, demonstrably, and the honest version of that answer includes what recovery costs and what it does not restore — genetic diversity, learned behaviour, range. Uses the lynx, condor and crane records rather than a general reassurance.",
-      "keywords": ["can endangered species recover", "conservation success stories", "species that came back from the brink"]
+      "keywords": [
+        "can endangered species recover",
+        "conservation success stories",
+        "species that came back from the brink"
+      ]
     },
     {
       "slug": "the-sandpiper-and-the-mudflat",
       "type": "field-note",
       "title": "A bird that cannot skip one stop",
       "angle": "Spoon-billed sandpipers depend on a narrow band of Yellow Sea tidal flats halfway along a migration of thousands of kilometres. Extinction risk located in a place rather than in a species.",
-      "keywords": ["spoon billed sandpiper", "yellow sea mudflats birds", "shorebird migration decline"]
+      "keywords": [
+        "spoon billed sandpiper",
+        "yellow sea mudflats birds",
+        "shorebird migration decline"
+      ]
     },
     {
       "slug": "iucn-red-list-vs-endangered-species-act",
       "type": "comparison",
       "title": "Red List status and legal protection are different things",
       "angle": "One is a global scientific assessment, the other is national law with money and prohibitions attached. Readers routinely conflate them, and the confusion is why 'endangered' sometimes means help is coming and sometimes means nothing at all.",
-      "keywords": ["iucn vs endangered species act", "difference between endangered and threatened", "is endangered a legal status"]
+      "keywords": [
+        "iucn vs endangered species act",
+        "difference between endangered and threatened",
+        "is endangered a legal status"
+      ]
     },
     {
       "slug": "the-salamander-that-became-a-menu-item",
       "type": "field-note",
       "title": "The giant salamander that farming did not save",
       "angle": "Millions are raised commercially while the wild population collapses, and released farm animals may be a different lineage entirely. Captive abundance is not a safety net — the axolotl's paradox with a different mechanism.",
-      "keywords": ["chinese giant salamander", "largest amphibian in the world", "salamander farming china"]
+      "keywords": [
+        "chinese giant salamander",
+        "largest amphibian in the world",
+        "salamander farming china"
+      ]
     },
     {
       "slug": "what-is-functionally-extinct",
       "type": "definition",
       "title": "Functionally extinct is not a Red List category",
       "angle": "The phrase appears in headlines and in no assessment. It has a real technical meaning — a population too small to sustain itself or to play its ecological role — and a habit of being used loosely for koalas and insects. Fix the term, name the misuse.",
-      "keywords": ["functionally extinct meaning", "what does functionally extinct mean", "functionally extinct vs extinct"]
+      "keywords": [
+        "functionally extinct meaning",
+        "what does functionally extinct mean",
+        "functionally extinct vs extinct"
+      ]
     },
     {
       "slug": "how-many-javan-rhinos-are-left",
       "type": "question",
       "title": "How many Javan rhinos are left",
       "angle": "One population, one park, one recent poaching case — a number small enough that a single event moves it. Also the clearest example of why this site publishes a generalized range and never a location.",
-      "keywords": ["how many javan rhinos are left", "javan rhino population", "rarest rhino"]
+      "keywords": [
+        "how many javan rhinos are left",
+        "javan rhino population",
+        "rarest rhino"
+      ]
     },
     {
       "slug": "the-coral-that-grows-like-antlers",
       "type": "field-note",
       "title": "The coral you can plant",
       "angle": "Staghorn fragments regrow from cuttings, which makes reef restoration unusually hands-on — and unusually vulnerable to a single hot summer. Restoration and its ceiling in one animal.",
-      "keywords": ["staghorn coral restoration", "coral nursery florida", "is staghorn coral endangered"]
+      "keywords": [
+        "staghorn coral restoration",
+        "coral nursery florida",
+        "is staghorn coral endangered"
+      ]
     },
     {
       "slug": "what-de-extinction-actually-restores",
       "type": "definition",
       "title": "What de-extinction actually brings back",
       "angle": "SERP (2026-09-03): Live Science, Scientific American and National Geographic have already corrected the dire wolf story well. Do not re-litigate the news; write the durable definition — an edited genome of a living species is not the return of a lost one, and what is lost is behaviour, range and relationship, none of which are in the genome.",
-      "keywords": ["what is de-extinction", "can extinct animals be brought back", "dire wolf de-extinction explained"]
+      "keywords": [
+        "what is de-extinction",
+        "can extinct animals be brought back",
+        "dire wolf de-extinction explained"
+      ]
     },
     {
       "slug": "the-eagle-that-needs-a-forest",
       "type": "field-note",
       "title": "One eagle, one forest, one pair",
       "angle": "A Philippine eagle pair needs a territory measured in tens of square kilometres of old-growth, which converts an abstract deforestation figure into an exact number of birds a landscape can hold.",
-      "keywords": ["philippine eagle", "philippine eagle population", "monkey eating eagle"]
+      "keywords": [
+        "philippine eagle",
+        "philippine eagle population",
+        "monkey eating eagle"
+      ]
     },
     {
       "slug": "why-save-endangered-species",
       "type": "question",
       "title": "Why bother saving a species almost nobody will see?",
       "angle": "Answer it without the two usual dodges — ecosystem-services utilitarianism and moral scolding. The honest case rests on what an extinction does to the possible, and on the fact that attention is the only thing most people can actually give.",
-      "keywords": ["why should we save endangered species", "why does biodiversity matter", "reasons to protect wildlife"]
+      "keywords": [
+        "why should we save endangered species",
+        "why does biodiversity matter",
+        "reasons to protect wildlife"
+      ]
     },
     {
       "slug": "the-pine-in-the-secret-canyon",
       "type": "field-note",
       "title": "A tree with a withheld address",
       "angle": "The Wollemi pine's location is a state secret because visitors bring pathogens on their boots. The clearest possible defence of a policy this site follows in every record: some information is withheld precisely because the subject matters.",
-      "keywords": ["wollemi pine", "wollemi pine secret location", "dinosaur tree australia"]
+      "keywords": [
+        "wollemi pine",
+        "wollemi pine secret location",
+        "dinosaur tree australia"
+      ]
     },
     {
       "slug": "what-is-a-keystone-species",
       "type": "definition",
       "title": "Keystone species, and the trouble with the metaphor",
       "angle": "The term comes from a specific 1960s intertidal experiment and has drifted into meaning 'important animal'. Restore the original meaning — disproportionate effect relative to abundance — and it becomes a testable idea again.",
-      "keywords": ["what is a keystone species", "keystone species examples", "keystone species definition biology"]
+      "keywords": [
+        "what is a keystone species",
+        "keystone species examples",
+        "keystone species definition biology"
+      ]
     },
     {
       "slug": "what-one-person-can-do",
       "type": "question",
       "title": "What one person can actually do for a species",
       "angle": "The honest inventory: a small number of things with real leverage (habitat at home, what you buy, who you vote for, targeted giving) and a much larger number of things that mostly produce a feeling. Say which is which, and refuse the guilt register entirely.",
-      "keywords": ["how can i help endangered species", "what can one person do for wildlife", "help endangered animals at home"]
+      "keywords": [
+        "how can i help endangered species",
+        "what can one person do for wildlife",
+        "help endangered animals at home"
+      ]
     },
     {
       "slug": "the-whale-that-cannot-hear-itself",
       "type": "field-note",
       "title": "A whale in a shipping lane",
       "angle": "North Atlantic right whales die from ship strikes and rope entanglement, both of which are speed and gear decisions rather than acts of nature. Extinction as a regulatory question, written without villains.",
-      "keywords": ["north atlantic right whale", "right whale ship strikes", "why are right whales endangered"]
+      "keywords": [
+        "north atlantic right whale",
+        "right whale ship strikes",
+        "why are right whales endangered"
+      ]
+    },
+    {
+      "slug": "how-many-mountain-gorillas-are-left",
+      "type": "question",
+      "title": "How many mountain gorillas are left",
+      "angle": "SERP (2026-09-03): eight of the first ten results are safari operators selling trekking permits. There is no neutral editorial page. The honest answer needs two dates, because the ~1,063 figure is two censuses added together — Virunga 2015/16 and Bwindi-Sarambwe 2018 — and the rising trend is real and rare.",
+      "keywords": [
+        "how many mountain gorillas are left",
+        "mountain gorilla population",
+        "gorilla census"
+      ]
+    },
+    {
+      "slug": "the-price-of-being-watched",
+      "type": "field-note",
+      "title": "What it costs a gorilla to be visited",
+      "angle": "Habituation funds the rangers and brings the pathogens. The clearest case in conservation of attention as a double-edged instrument, which is the question this whole project sits inside.",
+      "keywords": [
+        "gorilla trekking impact",
+        "gorilla habituation",
+        "wildlife tourism disease"
+      ]
+    },
+    {
+      "slug": "what-is-bycatch",
+      "type": "definition",
+      "title": "Bycatch is not an accident, exactly",
+      "angle": "The word makes an industrial certainty sound like bad luck. Define it properly — non-target catch, quantified and predictable — and the vaquita, the right whale and the Kemp's ridley stop looking like separate stories.",
+      "keywords": [
+        "what is bycatch",
+        "bycatch definition",
+        "fishing bycatch endangered species"
+      ]
+    },
+    {
+      "slug": "the-leopard-in-the-snow",
+      "type": "field-note",
+      "title": "A leopard that lives where leopards should not",
+      "angle": "The Amur leopard survives in snow forest at the Russia–China border, counted by camera traps on both sides of a frontier. A census that only works when two governments compare photographs.",
+      "keywords": [
+        "amur leopard",
+        "amur leopard population",
+        "rarest big cat"
+      ]
+    },
+    {
+      "slug": "wildlife-id-apps",
+      "type": "comparison",
+      "title": "Apps that tell you what you are looking at",
+      "angle": "Seek, iNaturalist, Merlin, Picture Insect. This is the app category that genuinely works, it is free, and it feeds real datasets. Recommending them plainly costs Witness nothing and is the most useful page we can give someone who wants to start noticing.",
+      "keywords": [
+        "best plant identification app",
+        "bird identification app",
+        "inaturalist vs seek"
+      ]
     },
     {
       "slug": "recently-declared-extinct",
       "type": "field-note",
       "title": "What it takes to declare a species extinct",
       "angle": "SERP (2026-09-03): listicle farms (A-Z Animals, Animals Around the Globe, IFAW) plus one good outlet, The Revelator. None explain the standard — exhaustive surveys, the last confirmed record, the long institutional pause — which is why 'declared extinct in 2026' usually means 'last seen decades ago'.",
-      "keywords": ["recently extinct animals", "declared extinct", "how is a species declared extinct"]
+      "keywords": [
+        "recently extinct animals",
+        "declared extinct",
+        "how is a species declared extinct"
+      ]
+    },
+    {
+      "slug": "why-are-monarch-butterflies-disappearing",
+      "type": "question",
+      "title": "Why are monarch butterflies disappearing",
+      "angle": "SERP (2026-09-03): mostly advocacy pages and one alarming yahoo headline. The 2025-26 counts moved in opposite directions — the western overwintering tally was 6,464 across 193 sites, while WWF-Mexico measured 7.24 acres of eastern occupation, up 64% from 4.42. Two populations, one species, two answers. Verify both at source.",
+      "keywords": [
+        "why are monarch butterflies disappearing",
+        "monarch butterfly population 2026",
+        "monarch count"
+      ]
+    },
+    {
+      "slug": "the-generation-that-migrates",
+      "type": "field-note",
+      "title": "The generation that does the impossible one",
+      "angle": "Most monarchs live weeks; one late-summer generation lives months and flies to Mexico, to a forest it has never seen. Inheritance of a route nobody taught them — the mirror image of the whooping crane.",
+      "keywords": [
+        "monarch migration generations",
+        "how do monarchs know where to go",
+        "monarch super generation"
+      ]
+    },
+    {
+      "slug": "what-is-rewilding",
+      "type": "definition",
+      "title": "Rewilding has no agreed definition, and that matters",
+      "angle": "SERP (2026-09-03): WEF, LSE Grantham, the Rewilding Institute and Wikipedia all define it differently, and the academic literature is explicitly about that disagreement. Write the disagreement rather than picking a side — the policy consequences follow from the definition.",
+      "keywords": [
+        "what is rewilding",
+        "rewilding definition",
+        "rewilding controversy"
+      ]
+    },
+    {
+      "slug": "the-cat-nobody-can-count",
+      "type": "field-note",
+      "title": "The snow leopard problem is arithmetic",
+      "angle": "Density estimates across a range the size of a continent, built from camera traps and scat genetics, produce a number with an error bar wider than most species' entire populations. Why 'ghost of the mountains' is a methodological statement, not a poetic one.",
+      "keywords": [
+        "snow leopard population",
+        "how many snow leopards are left",
+        "snow leopard camera trap"
+      ]
+    },
+    {
+      "slug": "citizen-science-projects",
+      "type": "comparison",
+      "title": "Counting that a person can actually join",
+      "angle": "eBird, iNaturalist, the Western Monarch Count, Christmas Bird Count. Each one takes an afternoon and feeds a dataset scientists use. Compare them by what they ask and what they produce, with no affiliation to any of them.",
+      "keywords": [
+        "citizen science wildlife projects",
+        "how to help scientists count animals",
+        "ebird inaturalist"
+      ]
+    },
+    {
+      "slug": "does-captive-breeding-work",
+      "type": "question",
+      "title": "Does captive breeding actually work?",
+      "angle": "SERP (2026-09-03): review papers behind paywalls, one university course outline, one PBS list of successes. The numbers exist and are sobering — reviews put captive-born reintroduction success far below wild-caught translocation — and three of the successes are records in our own archive. Verify the figures in the primary reviews before citing them.",
+      "keywords": [
+        "does captive breeding work",
+        "captive breeding success rate",
+        "reintroduction programs"
+      ]
+    },
+    {
+      "slug": "the-monkey-and-the-highway",
+      "type": "field-note",
+      "title": "A bridge built for tamarins",
+      "angle": "Golden lion tamarins were down to a few hundred, recovered, then met a highway and a yellow fever outbreak. Canopy bridges over BR-101 are conservation as civil engineering.",
+      "keywords": [
+        "golden lion tamarin",
+        "golden lion tamarin population",
+        "wildlife canopy bridge"
+      ]
+    },
+    {
+      "slug": "what-is-genetic-rescue",
+      "type": "definition",
+      "title": "Genetic rescue, and why it is controversial",
+      "angle": "Moving a few individuals between populations to relieve inbreeding — the Florida panther is the textbook case. It works, it is contested, and it forces the question of what exactly is being preserved.",
+      "keywords": [
+        "what is genetic rescue",
+        "inbreeding depression conservation",
+        "florida panther texas cougar"
+      ]
+    },
+    {
+      "slug": "the-wolf-that-keeps-meeting-coyotes",
+      "type": "field-note",
+      "title": "The wolf that keeps becoming a coyote",
+      "angle": "Red wolves hybridise with coyotes wherever the population thins, so recovery means managing not just numbers but the species boundary itself. Extinction by absorption rather than by death.",
+      "keywords": [
+        "red wolf",
+        "red wolf coyote hybrid",
+        "red wolf population north carolina"
+      ]
+    },
+    {
+      "slug": "zoos-sanctuaries-and-reserves",
+      "type": "comparison",
+      "title": "Zoo, sanctuary, reserve: three different promises",
+      "angle": "The words are used interchangeably in marketing and mean quite different things about breeding, release, visitor access and where the money goes. Define the categories, name accreditation bodies, and let a reader judge a place before they pay to enter it.",
+      "keywords": [
+        "zoo vs sanctuary",
+        "what is a wildlife sanctuary",
+        "accredited animal sanctuary"
+      ]
+    },
+    {
+      "slug": "what-is-the-most-endangered-animal",
+      "type": "question",
+      "title": "What is the most endangered animal?",
+      "angle": "A question with no single honest answer, which is why it is worth answering carefully: fewest individuals, fastest decline, and least protected are three different rankings that name three different animals.",
+      "keywords": [
+        "most endangered animal",
+        "rarest animal in the world",
+        "what animal is closest to extinction"
+      ]
+    },
+    {
+      "slug": "the-animal-almost-nobody-has-seen",
+      "type": "field-note",
+      "title": "The animal almost nobody has seen",
+      "angle": "The saola was described in 1992 and has been photographed alive in the wild a handful of times. Write the epistemics carefully: an absence of records is not proof of absence, and it is not comfort either.",
+      "keywords": [
+        "saola",
+        "asian unicorn",
+        "is the saola extinct"
+      ]
+    },
+    {
+      "slug": "what-is-cites",
+      "type": "definition",
+      "title": "CITES is about trade, not about protection",
+      "angle": "The third list people conflate with the other two. It governs what may cross a border, which is why an animal can be CITES Appendix I and still have no habitat protection at home.",
+      "keywords": [
+        "what is cites",
+        "cites appendix i meaning",
+        "wildlife trade convention"
+      ]
+    },
+    {
+      "slug": "the-turtle-that-was-jewellery",
+      "type": "field-note",
+      "title": "The turtle that was made into jewellery",
+      "angle": "Hawksbill shell was the plastic of the pre-plastic world, and the trade ran for centuries before it was banned. Demand as an extinction driver, with a paper trail long enough to see the whole arc.",
+      "keywords": [
+        "hawksbill turtle",
+        "tortoiseshell trade",
+        "why are hawksbill turtles endangered"
+      ]
+    },
+    {
+      "slug": "where-species-data-comes-from",
+      "type": "comparison",
+      "title": "Where the numbers about animals come from",
+      "angle": "IUCN, GBIF, eBird, national agencies, and the specialist groups. Explaining who holds which dataset, what each one is good for, and which ones a reader can query themselves — the reference page this whole section leans on.",
+      "keywords": [
+        "iucn red list data",
+        "gbif explained",
+        "where to find species population data"
+      ]
+    },
+    {
+      "slug": "what-does-it-cost-to-save-a-species",
+      "type": "question",
+      "title": "What does it cost to save a species?",
+      "angle": "There are published figures per species and per recovery programme, and they are smaller than most readers expect and larger than the funding available. Concrete numbers, carefully sourced, with no fundraising ask attached.",
+      "keywords": [
+        "cost of saving endangered species",
+        "conservation funding gap",
+        "how much does conservation cost"
+      ]
+    },
+    {
+      "slug": "the-crocodile-with-the-pot-on-its-nose",
+      "type": "field-note",
+      "title": "The crocodile that needs a sandbank",
+      "angle": "Gharials nest on river sandbanks that dams and irrigation remove, which makes their decline a hydrology story more than a hunting one. Also the only crocodilian whose males wear their name on their snout.",
+      "keywords": [
+        "gharial",
+        "gharial population",
+        "why are gharials endangered"
+      ]
+    },
+    {
+      "slug": "what-is-habitat-fragmentation",
+      "type": "definition",
+      "title": "Fragmentation is not the same as habitat loss",
+      "angle": "Cutting a forest in half removes very little forest and can remove most of its usable range. The distinction explains why a road can endanger a species without destroying anything visible.",
+      "keywords": [
+        "what is habitat fragmentation",
+        "edge effect ecology",
+        "why do roads harm wildlife"
+      ]
+    },
+    {
+      "slug": "the-ape-that-needs-a-canopy",
+      "type": "field-note",
+      "title": "An ape that will not cross the ground",
+      "angle": "Sumatran orangutans travel through canopy and are reluctant to descend, so a cleared strip is a wall. Written as geometry rather than tragedy.",
+      "keywords": [
+        "sumatran orangutan",
+        "orangutan habitat loss",
+        "batang toru"
+      ]
+    },
+    {
+      "slug": "documentaries-about-extinction",
+      "type": "comparison",
+      "title": "Films about extinction, and which ones are honest",
+      "angle": "The genre swings between spectacle and grief, and a handful of films avoid both. Judge them on whether the viewer ends up knowing something checkable — the same standard this site holds itself to.",
+      "keywords": [
+        "best wildlife documentaries",
+        "documentaries about extinction",
+        "nature documentary accuracy"
+      ]
+    },
+    {
+      "slug": "can-you-visit-endangered-animals-responsibly",
+      "type": "question",
+      "title": "Can you visit an endangered animal responsibly?",
+      "angle": "Sometimes yes, and the conditions are specific enough to list: who runs it, where the fee goes, distance rules, group size, disease protocol. The gorilla and the whale-watching cases point in different directions.",
+      "keywords": [
+        "responsible wildlife tourism",
+        "is gorilla trekking ethical",
+        "ethical animal tourism"
+      ]
+    },
+    {
+      "slug": "the-arribada-that-was-filmed-once",
+      "type": "field-note",
+      "title": "The film that proved what had been lost",
+      "angle": "A 1947 amateur film of a Kemp's ridley arribada, rediscovered decades later, showed tens of thousands of turtles nesting on a beach that by then held a few hundred. Evidence of a baseline nobody alive remembered.",
+      "keywords": [
+        "kemps ridley turtle",
+        "arribada 1947 film",
+        "kemps ridley population"
+      ]
+    },
+    {
+      "slug": "what-is-an-endemic-species",
+      "type": "definition",
+      "title": "Endemic is a description of risk",
+      "angle": "A species found in one place and nowhere else is not merely a curiosity of biogeography; it is a species with no second chance. The word explains why island and lake species dominate extinction lists.",
+      "keywords": [
+        "what is an endemic species",
+        "endemic species meaning",
+        "why are island species vulnerable"
+      ]
+    },
+    {
+      "slug": "the-tiger-and-the-pine-nuts",
+      "type": "field-note",
+      "title": "The tiger that depends on a pine tree",
+      "angle": "Korean pine and oak feed the boar and deer that feed the Amur tiger, so a logging decision several links up the chain arrives as a tiger with nothing to eat. A food web written as a supply chain.",
+      "keywords": [
+        "amur tiger",
+        "siberian tiger population",
+        "korean pine logging tigers"
+      ]
+    },
+    {
+      "slug": "what-animals-went-extinct-in-my-lifetime",
+      "type": "question",
+      "title": "What went extinct while you were alive?",
+      "angle": "A question people ask about themselves, answered with the Red List's own record by decade. The point is not guilt; it is the calibration a person cannot get any other way.",
+      "keywords": [
+        "animals extinct in my lifetime",
+        "species extinct since 1990",
+        "recent extinctions by decade"
+      ]
+    },
+    {
+      "slug": "what-a-frozen-zoo-holds",
+      "type": "field-note",
+      "title": "What is kept in a frozen zoo",
+      "angle": "Cell lines, gametes and tissue from species that may not persist, held at −196°C by a handful of institutions. Describe what such a bank can and cannot restore, without drifting into de-extinction promises.",
+      "keywords": [
+        "frozen zoo",
+        "biobanking endangered species",
+        "san diego frozen zoo"
+      ]
+    },
+    {
+      "slug": "what-is-a-lazarus-species",
+      "type": "definition",
+      "title": "Lazarus species: the ones that come back from the list",
+      "angle": "Species declared extinct and then found again. A real and recurring phenomenon that is routinely misused as an argument for optimism — the base rate is what makes it interesting.",
+      "keywords": [
+        "lazarus species",
+        "species rediscovered after extinction",
+        "rediscovered animals"
+      ]
+    },
+    {
+      "slug": "how-many-species-are-there",
+      "type": "question",
+      "title": "How many species are there, really?",
+      "angle": "The denominator under every extinction statistic, and it is an estimate with an order of magnitude of uncertainty. Explaining that honestly is the best defence against the unciteable extinction-rate figures in circulation.",
+      "keywords": [
+        "how many species are there",
+        "how many species have been described",
+        "estimated number of species on earth"
+      ]
+    },
+    {
+      "slug": "what-is-minimum-viable-population",
+      "type": "definition",
+      "title": "How small is too small",
+      "angle": "Minimum viable population is where the arithmetic of extinction gets specific: genetics, demography and chance, rather than a feeling that a number sounds low. It is also the idea behind every 'fewer than fifty remain' headline.",
+      "keywords": [
+        "minimum viable population",
+        "how few animals is too few",
+        "population viability analysis"
+      ]
     }
   ]
 }
