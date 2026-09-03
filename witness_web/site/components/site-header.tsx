@@ -5,6 +5,7 @@ import { Container, GITHUB_URL } from "./atlas";
 const NAV = [
   { href: "/#experience", label: "Experience" },
   { href: "/witnesses", label: "Archive" },
+  { href: "/field-notes", label: "Field notes" },
   { href: "/method", label: "Method" },
   { href: "/#faq", label: "Questions" },
 ];

@@ -41,6 +41,7 @@ Code, a build, a simulator run, a catalog pass, a staging service, a Test Store 
 | Artwork rights | The five web assets have exact generation IDs, commercial-use confirmation, and species-accuracy review. | `../docs/DECISIONS.md` D-013; `../docs/media/*-plates-rights.md` | Confirmed | 2026-08-26 |
 | Locations | Public ranges stay generalized and exact sensitive locations are withheld. | Product guardrails and record metadata | Confirmed | 2026-08-26 |
 | Partners | A citation does not imply partnership or endorsement. | Terms and project guardrails | Confirmed | 2026-08-26 |
+| Field notes | The site publishes sourced editorial essays at `/field-notes`. They are Witness's own writing about species and extinction, not catalog records, and they cite third parties without implying partnership. | `../docs/FIELD_NOTES_ENGINE.md`; the gates in `../tools/notes.py` | Confirmed | 2026-09-03 |
 
 ## Prohibited until the named gate passes
 
@@ -51,6 +52,7 @@ Code, a build, a simulator run, a catalog pass, a staging service, a Test Store 
 - “Data not linked to you” or any final privacy-label wording before the production privacy audit.
 - Any claim that a Witness, share, streak, link open, or payment produced a conservation outcome.
 - Any testimonial, partner, press, user total, rating, or download count without dated evidence.
+- A field note that restates a catalog record's story, publishes a population figure or IUCN category without two independent sources, or prints a coordinate or exact location. The gates in `../tools/notes.py` enforce all three.
 
 ## Web artwork manifest
 

@@ -28,6 +28,8 @@ Next.js App Router, React, TypeScript, and Tailwind v4. All 40 public routes pre
 /                     Centered-device product narrative, ritual, trust, FAQ
 /witnesses            30-record field archive
 /witnesses/[id]       Sourced record, metadata, action, rights, JSON-LD
+/field-notes          The daily essay index
+/field-notes/[slug]   One sourced essay, Article + FAQPage JSON-LD, sources block
 /method               Public claim and editorial evidence standard
 /privacy              Current website facts and app privacy release gates
 /terms                Development terms and proposed-commerce boundary

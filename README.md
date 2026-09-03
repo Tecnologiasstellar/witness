@@ -43,6 +43,7 @@ swift test
 - [Four-week execution plan](docs/FOUR_WEEK_EXECUTION_PLAN.md)
 - [Competition and release gates](docs/COMPETITION_AND_RELEASE_GATES.md)
 - [Content, trust, and rights policy](docs/CONTENT_TRUST_AND_RIGHTS.md)
+- [Field notes engine (the site's daily essay loop)](docs/FIELD_NOTES_ENGINE.md)
 - [DailyArt visual-reference audit](docs/VISUAL_REFERENCE_AUDIT.md)
 - [Design-system brief and Claude Design prompt](docs/DESIGN_SYSTEM_BRIEF_AND_CLAUDE_PROMPT.md)
 - [Master build prompt](docs/MASTER_BUILD_PROMPT.md)

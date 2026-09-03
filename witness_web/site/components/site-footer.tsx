@@ -5,6 +5,7 @@ import { AppearanceControl } from "./appearance";
 
 const LINKS = [
   { href: "/witnesses", label: "Field archive" },
+  { href: "/field-notes", label: "Field notes" },
   { href: "/method", label: "Method" },
   { href: "/#experience", label: "Experience" },
   { href: "/#faq", label: "Questions" },
