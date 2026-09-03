@@ -21,16 +21,26 @@ procedure; read that one when you need the *why*.
 cd /Users/avp/Developer/witness
 echo "dirty files: [$(git status --porcelain)]"
 echo "today's note: [$(ls witness_web/site/content/field-notes/ | grep "^$(date +%F)-")]"
+echo "tracked:     [$(git ls-files witness_web/site/content/field-notes/$(date +%F)-*.md)]"
 ```
 
-STOP and report, without writing anything, if either:
+Four cases. Read all four before acting:
 
-- **dirty files is not empty** — this repository holds the iOS app as well as the site, so
-  an in-progress Xcode change, a regenerated project file or a stray build artifact is
-  normal and is not yours to commit. `ship` runs `git add -A`.
-- **today's note is not empty** — today's note already published. Report "already
-  published today" and stop. This is the idempotency guard; a second run must not
-  double-post.
+- **Today's note exists and is tracked** — it was committed, so it is published. Report
+  "already published today" and stop. This is the idempotency guard; a second run must
+  never double-post.
+- **Today's note exists, is untracked, and still contains `ANGLE:` or `Delete these two
+  lines`** — a previous run scaffolded it and died before writing. Do not ship it. Pick up
+  at Step 3 and finish it.
+- **Today's note exists, is untracked, is finished prose, and every dirty path is under
+  `witness_web/site/content/field-notes/`** — a human drafted it ahead and reviewed it.
+  This is a supported workflow, not an error. Skip Steps 2–4, run the Step 5 self-critique
+  over it as written, then gate, build and ship it. Say in the report that you shipped a
+  staged draft rather than writing a new one.
+- **Any dirty path outside `witness_web/site/content/field-notes/`** — this repository
+  holds the iOS app as well as the site, so an in-progress Xcode change, a regenerated
+  project file or a stray build artifact is normal and is not yours to commit. `ship` runs
+  `git add -A`. STOP and report, without writing anything.
 
 ## Step 2 — Pick the topic
 
