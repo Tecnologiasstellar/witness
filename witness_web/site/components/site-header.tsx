@@ -6,7 +6,7 @@ const NAV = [
   { href: "/#experience", label: "Experience" },
   { href: "/witnesses", label: "Archive" },
   { href: "/method", label: "Method" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/#faq", label: "Questions" },
 ];
 
 const linkClass =

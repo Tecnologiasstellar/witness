@@ -84,7 +84,7 @@ export function PrimaryLink({
     tone === "dusk"
       ? "bg-paper text-ink hover:bg-[color:var(--dusk-muted)] focus-visible:bg-[color:var(--dusk-muted)]"
       : "bg-ink text-paper hover:bg-sepia focus-visible:bg-sepia";
-  const className = `group inline-flex min-h-11 items-center justify-center gap-3 px-6 py-3 text-[15px] font-semibold transition-colors duration-200 ease-out ${skin}`;
+  const className = `press group inline-flex min-h-11 items-center justify-center gap-3 px-6 py-3 text-[15px] font-semibold ${skin}`;
   const inner = (
     <>
       {children}

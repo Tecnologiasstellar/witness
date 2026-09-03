@@ -56,7 +56,7 @@ export function HomeExperience({ records }: { records: ExperienceRecord[] }) {
         ))}
       </div>
 
-      <div className="experience-device-column" aria-live="polite">
+      <div className="experience-device-column">
         <div className="device-sticky">
           <p className="device-label">Development interface preview</p>
           <div className="iphone-shell">
