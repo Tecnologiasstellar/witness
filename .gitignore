@@ -7,8 +7,18 @@ xcuserdata/
 # Local-only research, temporary artifacts, and Xcode result bundles.
 # DailyArt material is reference-only and must never enter this public repository.
 DailyArt ios Jan 2025/
+.codex/
 .codex-tmp/
 *.xcresult
+# Onboarding design exports (26 MB of SVG); the shipping source is OnboardingView.swift.
+WitnessOnboardingScreenshoots/
+# Local agent tooling and its output: Claude Code settings, the graphify
+# knowledge graph and its merge driver, and the ScreenshotWhale backup (40 MB).
+.claude/
+CLAUDE.md
+.gitattributes
+graphify-out/
+artifacts/
 
 # Signing material and future local configuration must remain outside source control.
 *.mobileprovision
