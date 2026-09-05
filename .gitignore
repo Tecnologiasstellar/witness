@@ -32,3 +32,4 @@ Config/Secrets.xcconfig
 RevenueCatConfig.plist
 # Local Supabase URL and anon (publishable) key; see SupabaseCommunityService.swift.
 SupabaseConfig.plist
+.vercel
