@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import Link from "next/link";
 import { Container, Eyebrow, PrimaryLink, TextLink } from "@/components/atlas";
+import { HowItWorks, type Step } from "@/components/how-it-works";
 import { APP_STORE_URL, SITE_URL, allRecords, plate, recordById } from "@/lib/archive";
 
 /** Plates in the hero strip and the archive band. Eight each, chosen for variety of form and colour. */
@@ -12,20 +13,20 @@ const ATLAS = ["gharial", "california-condor", "hawksbill-turtle"];
 /** Screenshots of the shipped app, status bar cropped, exported by tools/export_web_plates.sh. */
 const SHOT = { width: 1206, height: 2439 };
 
-const STEPS = [
+const STEPS: readonly Step[] = [
   {
     n: "01",
     title: "Every Monday, one plate arrives.",
     body: "A new species, drawn and told in full: what is known, what threatens it, what is uncertain, and where every fact comes from. Each claim maps to a public source.",
     src: "/images/app/this-week.webp",
-    alt: "The Witness app showing this week’s card: an illustrated kākāpō with its status, name, and first facts.",
+    alt: "The Witness app showing this week’s card: an illustrated vaquita with its status, name, and first facts.",
   },
   {
     n: "02",
     title: "One deliberate tap, once a week.",
     body: "To witness is to give a species a minute of your full attention. You join an anonymous, deduplicated count of everyone who witnessed alongside you. A private note never leaves your phone.",
     src: "/images/app/witness.webp",
-    alt: "The Witness app’s “I bear witness” button beneath a scale study of the kākāpō drawn beside a human figure.",
+    alt: "The Witness app’s “I bear witness” button beneath a scale study of the Javan rhino drawn beside a human figure.",
   },
   {
     n: "03",
@@ -117,20 +118,7 @@ export default function Home() {
             <Eyebrow className="text-sepia">How it works</Eyebrow>
             <h2>One encounter a week.<br />That is the whole app.</h2>
           </div>
-          <ol className="how-steps">
-            {STEPS.map((step) => (
-              <li key={step.n} className="how-step">
-                <div className="how-copy">
-                  <p className="how-index">{step.n}</p>
-                  <h3>{step.title}</h3>
-                  <p>{step.body}</p>
-                </div>
-                <div className="phone">
-                  <img src={step.src} width={SHOT.width} height={SHOT.height} alt={step.alt} loading="lazy" decoding="async" />
-                </div>
-              </li>
-            ))}
-          </ol>
+          <HowItWorks steps={STEPS} width={SHOT.width} height={SHOT.height} />
         </Container>
       </section>
 

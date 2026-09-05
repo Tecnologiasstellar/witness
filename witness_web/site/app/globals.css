@@ -274,30 +274,36 @@
 }
 
 .how-section { background: var(--paper-fresh); }
-.how-steps { margin-top: 2rem; }
+.how-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: clamp(2rem, 6vw, 6rem); margin-top: 2rem; }
+.how-steps { display: flex; flex-direction: column; }
 .how-step {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(2rem, 6vw, 6rem);
-  padding-block: clamp(3rem, 6vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 72vh;
+  padding-block: 3rem;
   border-top: 1px solid color-mix(in srgb, var(--hairline) 50%, transparent);
+  opacity: .32;
+  transition: opacity 450ms ease-out;
 }
-.how-step:nth-child(even) .how-copy { order: 2; }
+.how-step.is-active { opacity: 1; }
 .how-index { font-size: .68rem; font-weight: 700; letter-spacing: .16em; color: var(--sepia); }
-.how-copy h3 { margin-top: .9rem; font-family: var(--font-display); font-size: clamp(1.9rem, 3.6vw, 3rem); font-weight: 600; line-height: 1.02; letter-spacing: -.03em; text-wrap: balance; }
-.how-copy > p:last-child { max-width: 42ch; margin-top: 1.1rem; font-size: 1.05rem; line-height: 1.7; color: var(--ink-muted); text-wrap: pretty; }
+.how-step h3 { margin-top: .9rem; font-family: var(--font-display); font-size: clamp(1.9rem, 3.6vw, 3rem); font-weight: 600; line-height: 1.02; letter-spacing: -.03em; text-wrap: balance; }
+.how-step > p:last-child { max-width: 42ch; margin-top: 1.1rem; font-size: 1.05rem; line-height: 1.7; color: var(--ink-muted); text-wrap: pretty; }
 
-/* The bezel is one rule; the screenshot inside carries its own size. */
+/* The phone stays while the steps pass; its screens are stacked and crossfade. */
+.how-device { position: sticky; top: 0; display: flex; align-items: center; justify-content: center; height: 100vh; }
 .phone {
-  width: min(272px, 78vw);
-  margin-inline: auto;
+  position: relative;
+  width: min(300px, 78vw);
   padding: 10px;
   border-radius: 3.1rem;
   background: #10100f;
   box-shadow: 0 34px 70px -34px color-mix(in srgb, var(--ink) 65%, transparent);
 }
-.phone img { display: block; width: 100%; height: auto; border-radius: 2.5rem; }
+.phone img { display: block; width: 100%; height: auto; border-radius: 2.5rem; opacity: 0; transition: opacity 550ms ease-out; }
+.phone img:not(:first-child) { position: absolute; top: 10px; left: 10px; width: calc(100% - 20px); }
+.phone img.is-active { opacity: 1; }
 
 .archive-head { display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 3rem; }
 .archive-head h2 { max-width: 13ch; }
@@ -366,8 +372,12 @@ details[open] .faq-plus::after { transform: rotate(0deg); }
 @media (max-width: 767px) {
   .home-hero-inner { padding-top: 2rem; }
   .plate-strip { padding-bottom: 2rem; }
-  .how-step { grid-template-columns: 1fr; gap: 2rem; }
-  .how-step .how-copy, .how-step:nth-child(even) .how-copy { order: 2; }
+  .how-grid { grid-template-columns: 1fr; gap: 0; }
+  .how-device { order: -1; top: 4.75rem; z-index: 1; height: auto; padding-block: .75rem 1rem; background: var(--paper-fresh); }
+  .phone { width: min(180px, 44vw); padding: 7px; border-radius: 2.2rem; }
+  .phone img { border-radius: 1.8rem; }
+  .phone img:not(:first-child) { top: 7px; left: 7px; width: calc(100% - 14px); }
+  .how-step { min-height: 46vh; padding-block: 2rem; }
   .archive-head, .faq-layout { grid-template-columns: 1fr; gap: 2rem; }
   .archive-grid { grid-template-columns: repeat(4, 1fr); }
   .work { grid-template-columns: 1fr; }
@@ -378,7 +388,7 @@ details[open] .faq-plus::after { transform: rotate(0deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .plate-strip img, .archive-grid img { transition: none; }
+  .plate-strip img, .archive-grid img, .how-step, .phone img { transition: none; }
 }
 
 /* Field notes — the daily essay. One measure, one voice, sources below. */

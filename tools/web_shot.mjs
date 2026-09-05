@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 // Full-page screenshot of a site URL through Chrome DevTools, no dependencies.
-// usage: node tools/web_shot.mjs <url> <out.png> [width=1280] [light|dark] [chunkHeight]
+// usage: node tools/web_shot.mjs <url> <out.png> [width=1280] [light|dark] [chunkHeight] [scrollY]
+// With scrollY, only the 900px viewport at that scroll offset is captured (for sticky/scroll states).
 // The page loads in a viewport as tall as itself so lazy images are in view;
 // chunkHeight splits a tall page into out-N.png. SHOT_PORT lets several run at once.
 import { spawn } from "node:child_process";
 import { writeFileSync } from "node:fs";
 
-const [url, out, w = "1280", scheme = "light", chunk = "0"] = process.argv.slice(2);
+const [url, out, w = "1280", scheme = "light", chunk = "0", scrollY] = process.argv.slice(2);
 const port = process.env.SHOT_PORT ?? "9333";
 const chrome = spawn("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", [
   "--headless=new", "--disable-gpu", "--hide-scrollbars", "--no-first-run",
@@ -36,6 +37,15 @@ await new Promise((r) => setTimeout(r, 3500));
 // Back to a normal viewport so the layout reports its true height (the body is min-h-full).
 await send("Emulation.setDeviceMetricsOverride", { width: +w, height: 900, deviceScaleFactor: 1, mobile: +w < 768 });
 await new Promise((r) => setTimeout(r, 500));
+if (scrollY !== undefined) {
+  await send("Runtime.evaluate", { expression: `window.scrollTo(0, ${+scrollY})` });
+  await new Promise((r) => setTimeout(r, 900));
+  const { data } = await send("Page.captureScreenshot", { format: "png" });
+  writeFileSync(out, Buffer.from(data, "base64"));
+  console.log(`${url} @ ${scrollY}px`);
+  ws.close();
+  quit(0);
+}
 const { cssContentSize } = await send("Page.getLayoutMetrics");
 const height = Math.ceil(cssContentSize.height);
 const step = +chunk || height;
