@@ -37,19 +37,15 @@ const STEPS: readonly Step[] = [
   },
 ] as const;
 
-const TENETS = [
-  ["Show you a feed.", "One card a week, and the archive. There is nothing to catch up on."],
-  ["Ask for an account.", "No sign-in, no profile, no public memories. Your notes stay on your phone."],
-  ["Gamify your attention.", "No points, streaks, or flames. A Witness is a minute of attention, given once."],
-  ["Claim a tap saved an animal.", "A Witness counts attention. The acts are real doors to people doing the work."],
-] as const;
-
 const FAQS = [
   ["What is Witness?", "An iPhone app built around one question: can you give a single vanishing species your full attention this week? Each week it features one species with a drawn plate, a sourced story, a private witness, and one credible action."],
-  ["Is it free?", "Yes. The weekly card, its sources, the witness, the act, and your private note are free and stay free. Field Season One and the Atlas are optional purchases inside the app."],
-  ["Where do the facts come from?", "Every card names its sources and carries a fact-check date. Where something is not verified, the app says so instead of guessing. Ranges stay general so a card can never help someone find an animal already under pressure."],
+  ["How does using Witness help a species?", "Every card ends in one real door: a conservation organization already protecting that species, with an honest sentence about what support does and a direct link. Witness brings you to that door in the same minute you learn the animal’s name, and keeps a journal of the doors you walked through."],
+  ["Who is behind the acts?", "Field programs, recovery consortia, and public agencies: NOAA Fisheries and Sea Shepherd for the vaquita, New Zealand’s Department of Conservation for the kākāpō, the International Rhino Foundation for the Javan rhino, and so on. Each act is checked before the card ships and shows the date it was verified. A citation is not a partnership or an endorsement."],
+  ["Does witnessing actually do anything?", "It counts attention, and the count is real: one anonymous, deduplicated witness per person for each week’s species. Attention is the first act of protection; the door is the second. Witness never claims a tap saved an animal, so you always know what your minute did."],
+  ["What can I do beyond the weekly act?", "Read all thirty cards in the archive, take up the act for any species you have witnessed, share its plate, and give to the organizations directly. Field Season One goes deeper: eight species so rare that their individuals are counted one by one, told with the people doing the work."],
+  ["Is it free?", "Yes. The weekly card, its sources, the witness, the act, and your private note are free and stay free. Field Season One and the Atlas are optional purchases inside the app; they support the making of Witness."],
+  ["Where do the facts come from?", "Every card names its sources and carries a fact-check date. Where something is not verified, the card says so instead of guessing. Ranges stay general so a card can never help someone find an animal already under pressure."],
   ["Are the illustrations photographs?", "No. They are original illustrations made for Witness under one fixed art direction, each reviewed for species accuracy. They are never presented as documentary photography."],
-  ["What does a Witness count?", "Attention. A witness joins an anonymous count of everyone who paid attention to that species this week. It never claims an animal was saved or a policy changed."],
 ] as const;
 
 function pick(ids: readonly string[]) {
@@ -201,28 +197,12 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="tenets-section">
-        <Container>
-          <div className="section-intro">
-            <h2>What Witness will never do.</h2>
-          </div>
-          <ul className="tenets">
-            {TENETS.map(([title, body]) => (
-              <li key={title}>
-                <h3>{title}</h3>
-                <p>{body}</p>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
-
       <section id="faq" className="faq-section">
         <Container>
           <div className="faq-layout">
             <div>
               <h2>Questions</h2>
-              <p className="faq-intro">Plain answers, including what Witness will not claim.</p>
+              <p className="faq-intro">Plain answers about the app and the work it points to.</p>
             </div>
             <div className="faq-list">
               {FAQS.map(([question, answer], index) => (

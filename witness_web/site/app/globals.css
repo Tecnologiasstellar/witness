@@ -261,7 +261,7 @@
 .plate-strip a:hover img, .plate-strip a:focus-visible img { transform: translateY(-.4rem); }
 .hero-caption { margin-top: 0; padding-bottom: 1.5rem; font-size: .66rem; font-weight: 700; letter-spacing: .11em; line-height: 1.7; text-transform: uppercase; color: var(--ink-muted); }
 
-.how-section, .archive-section, .works-section, .tenets-section, .faq-section { padding-block: clamp(4.5rem, 9vw, 8rem); }
+.how-section, .archive-section, .works-section, .faq-section { padding-block: clamp(4.5rem, 9vw, 8rem); }
 .section-intro { max-width: 760px; }
 .section-intro h2, .archive-head h2, .faq-layout h2, .closing-section h2 {
   margin-top: 1rem;
@@ -342,13 +342,6 @@
 .collage li:nth-child(1) img { transform: rotate(-7deg) translateY(.8rem); }
 .collage li:nth-child(3) img { transform: rotate(7deg) translateY(.8rem); }
 
-.tenets-section { background: var(--paper-aged); }
-.tenets { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 3rem; border-block: 1px solid color-mix(in srgb, var(--hairline) 55%, transparent); }
-.tenets li { padding: 2rem 2rem 2rem 0; }
-.tenets li + li { border-left: 1px solid color-mix(in srgb, var(--hairline) 55%, transparent); padding-left: 2rem; }
-.tenets h3 { font-family: var(--font-display); font-size: 1.55rem; font-weight: 600; line-height: 1.15; text-wrap: balance; }
-.tenets p { max-width: 30ch; margin-top: .7rem; line-height: 1.6; color: var(--ink-muted); text-wrap: pretty; }
-
 .faq-section { background: var(--paper-fresh); border-block: 1px solid color-mix(in srgb, var(--hairline) 45%, transparent); }
 .faq-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(3rem, 9vw, 8rem); }
 .faq-layout h2 { max-width: 10ch; }
@@ -381,9 +374,6 @@ details[open] .faq-plus::after { transform: rotate(0deg); }
   .archive-head, .faq-layout { grid-template-columns: 1fr; gap: 2rem; }
   .archive-grid { grid-template-columns: repeat(4, 1fr); }
   .work { grid-template-columns: 1fr; }
-  .tenets { grid-template-columns: 1fr; }
-  .tenets li { padding: 1.5rem 0; }
-  .tenets li + li { border-left: 0; border-top: 1px solid color-mix(in srgb, var(--hairline) 55%, transparent); padding-left: 0; }
   .faq-layout { gap: 3rem; }
 }
 
