@@ -27,7 +27,7 @@ export default function Error({ reset }: { error: Error; reset: () => void }) {
           >
             Try again
           </button>
-          <TextLink href="/witnesses">Go to the record index</TextLink>
+          <TextLink href="/archive">Go to the record index</TextLink>
         </div>
         <div className="mt-8">
           <PrimaryLink href="/">Back to the opening</PrimaryLink>

@@ -1,13 +1,11 @@
 import type { Route } from "next";
 import Link from "next/link";
-import { Container, GITHUB_URL } from "./atlas";
+import { Container } from "./atlas";
 
 const NAV = [
-  { href: "/#experience", label: "Experience" },
-  { href: "/witnesses", label: "Archive" },
-  { href: "/field-notes", label: "Field notes" },
-  { href: "/method", label: "Method" },
-  { href: "/#faq", label: "Questions" },
+  { href: "/", label: "The App" },
+  { href: "/archive", label: "The Archive" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const linkClass =
@@ -20,16 +18,10 @@ export function SiteHeader() {
         <div className="flex items-center justify-between gap-4">
           <Link
             href="/"
-            className="inline-flex min-h-11 items-center gap-3 font-display text-xl font-semibold tracking-tight text-ink"
+            className="inline-flex min-h-11 items-center font-display text-xl font-semibold tracking-tight text-ink"
             translate="no"
           >
             Witness
-            <span
-              aria-hidden="true"
-              className="hidden text-[10px] font-semibold uppercase tracking-[0.18em] text-sepia sm:inline"
-            >
-              Field archive · 30 records
-            </span>
           </Link>
 
           {/* Compact disclosure menu, no client JavaScript. */}
@@ -48,24 +40,11 @@ export function SiteHeader() {
               <ul className="mx-auto flex w-[min(1200px,calc(100vw-48px))] flex-col divide-y divide-hairline/40">
                 {NAV.map((item) => (
                   <li key={item.href}>
-                    <Link
-                      href={item.href as Route}
-                      className={`${linkClass} w-full py-1`}
-                    >
+                    <Link href={item.href as Route} className={`${linkClass} w-full py-1`}>
                       {item.label}
                     </Link>
                   </li>
                 ))}
-                <li>
-                  <a
-                    href={GITHUB_URL}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className={`${linkClass} w-full py-1 text-ink`}
-                  >
-                    View project&nbsp;↗
-                  </a>
-                </li>
               </ul>
             </nav>
           </details>
@@ -80,16 +59,6 @@ export function SiteHeader() {
                 </Link>
               </li>
             ))}
-            <li>
-              <a
-                href={GITHUB_URL}
-                target="_blank"
-                rel="noreferrer noopener"
-                className={`${linkClass} text-ink underline decoration-hairline/70 decoration-1 underline-offset-[5px] hover:decoration-current`}
-              >
-                View project&nbsp;↗
-              </a>
-            </li>
           </ul>
         </nav>
       </Container>

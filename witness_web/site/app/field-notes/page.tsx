@@ -94,7 +94,7 @@ export default function FieldNotesIndex() {
                 review state.
               </p>
               <div className="mt-6">
-                <PrimaryLink href="/witnesses">Browse records</PrimaryLink>
+                <PrimaryLink href="/archive">Browse records</PrimaryLink>
               </div>
             </div>
           </div>

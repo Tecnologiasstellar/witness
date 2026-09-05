@@ -1,10 +1,12 @@
 /**
  * The archive's data layer.
  *
- * `data/species.json` is a verbatim assembled copy of the individual iOS catalog
- * records under Packages/WitnessCore/Sources/WitnessCore/Resources/catalog/. The website
- * renders that record and nothing else — no web-only species, no re-worded
- * story, no added figure. If the app's record changes, copy the file again.
+ * `data/species.json` is a verbatim assembled copy of the iOS catalog records
+ * under Packages/WitnessCore/Sources/WitnessCore/Resources/catalog/ (sync with
+ * `python3 tools/export_catalog.py > witness_web/site/data/species.json`). The
+ * website renders that record and nothing else — no web-only species, no
+ * re-worded story, no added figure. The plates come from the same asset
+ * catalog through tools/export_web_plates.sh.
  */
 import speciesJson from "@/data/species.json";
 
@@ -20,6 +22,17 @@ export type StoryPassage = {
   id: string;
   text: string;
   sourceIDs: string[];
+};
+
+export type Program = {
+  id: string;
+  organization: string;
+  title: string;
+  summary: string;
+  url: string;
+  kind: string;
+  sourceIDs: string[];
+  lastVerified: string;
 };
 
 export type SpeciesRecord = {
@@ -62,6 +75,21 @@ export type SpeciesRecord = {
     sensitiveLocationReview: string;
     notes: string;
   };
+  stats?: {
+    size: string;
+    lifespan: string;
+    diet: string;
+    populationEstimate?: string;
+    populationAsOf?: string;
+    trend: string;
+    threats: string[];
+    sourceIDs: string[];
+  };
+  reproduction?: StoryPassage;
+  insight?: StoryPassage;
+  /** Five asset ids in a fixed order: plate, context, detail, behavior, scale. */
+  gallery: string[];
+  programs?: Program[];
 };
 
 export const RECORDS = speciesJson as SpeciesRecord[];
@@ -72,10 +100,6 @@ export function allRecords(): SpeciesRecord[] {
 
 export function recordById(id: string): SpeciesRecord | undefined {
   return RECORDS.find((r) => r.id === id);
-}
-
-export function sourceById(record: SpeciesRecord, id: string) {
-  return record.sources.find((s) => s.id === id);
 }
 
 /** Source ids in first-appearance order, so passages can carry stable marks. */
@@ -98,15 +122,33 @@ export function sourceMark(record: SpeciesRecord, id: string): number {
   return orderedSources(record).findIndex((s) => s.id === id) + 1;
 }
 
-export const GITHUB_URL = "https://github.com/Tecnologiasstellar/witness";
-export const SITE_URL = "https://witnessatlas.com";
-
-/**
- * The archive's current state. Catalog approval and public app release remain
- * separate evidence gates.
- */
-export const CATALOGUE = {
-  published: RECORDS.length,
-  inReview: 0,
-  note: `All ${RECORDS.length} bundled records are written from declared sources, fact-checked, and approved in the catalog.`,
+/** The five plates every record carries, in gallery order, at their exported pixel sizes. */
+const PLATE_KINDS = ["plate", "context", "detail", "behavior", "scale"] as const;
+export type PlateKind = (typeof PLATE_KINDS)[number];
+const PLATE_SIZE: Record<PlateKind, [number, number]> = {
+  plate: [939, 1400],
+  context: [1400, 939],
+  detail: [1400, 1400],
+  behavior: [1400, 939],
+  scale: [1400, 1400],
 };
+
+/** A plate's web derivative. Ids are read from gallery[], never derived from record.id. */
+export function plate(record: SpeciesRecord, kind: PlateKind) {
+  const id = record.gallery[PLATE_KINDS.indexOf(kind)];
+  if (!id) throw new Error(`${record.id} has no ${kind} plate`);
+  const [width, height] = PLATE_SIZE[kind];
+  return { src: `/images/plates/${id}.webp`, width, height };
+}
+
+/** Catalog dates are ISO days; readers get "26 August 2026". */
+export function formatDate(iso: string): string {
+  return new Intl.DateTimeFormat("en-GB", { dateStyle: "long", timeZone: "UTC" }).format(new Date(iso));
+}
+
+export const SITE_URL = "https://witnessatlas.com";
+export const APP_STORE_URL = "https://apps.apple.com/app/id6804311122";
+export const INSTAGRAM_URL = "https://www.instagram.com/witnessatlas";
+export const CONTACT_EMAIL = "albertovillalpando@gmail.com";
+
+export const CATALOGUE = { published: RECORDS.length };

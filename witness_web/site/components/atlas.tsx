@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import type { Route } from "next";
 import Link from "next/link";
 
-const GITHUB_URL = "https://github.com/Tecnologiasstellar/witness";
 
 /** Page measure: 1200px max, 24px gutters down to 320px. */
 export function Container({
@@ -149,4 +148,3 @@ export function TextLink({
   );
 }
 
-export { GITHUB_URL };

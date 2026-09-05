@@ -14,7 +14,7 @@ export default function NotFound() {
           It may have moved, or the address may be incomplete. The field archive lists every record currently approved for the catalog.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-2">
-          <PrimaryLink href="/witnesses">Go to the record index</PrimaryLink>
+          <PrimaryLink href="/archive">Go to the record index</PrimaryLink>
           <TextLink href="/">Back to the opening</TextLink>
         </div>
       </Container>

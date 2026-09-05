@@ -51,7 +51,7 @@ Resulting label: *Data Not Linked to You* — Identifiers, Usage Data.
 
 | Field | Value |
 |---|---|
-| Support URL | `https://witnessatlas.com/support` |
+| Support URL | `https://witnessatlas.com/support` *(since 2026-09-04 a permanent redirect to `/contact`; the URL in ASC stays valid)* |
 | Marketing URL | `https://witnessatlas.com` |
 
 ## 5. Listing copy

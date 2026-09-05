@@ -90,7 +90,7 @@ function parse(file: string): Note {
     question: meta.question || undefined,
     type: meta.type ?? "",
     sources: (meta.sources ?? "").split(",").map((s) => s.trim()).filter(Boolean),
-    records: [...new Set([...body.matchAll(/\/witnesses\/([a-z0-9-]+)/g)].map((m) => m[1]))],
+    records: [...new Set([...body.matchAll(/\/archive\/([a-z0-9-]+)/g)].map((m) => m[1]))],
     html: render(body),
     answer: firstParagraph(body),
     words: (body.match(/\w+/g) ?? []).length,

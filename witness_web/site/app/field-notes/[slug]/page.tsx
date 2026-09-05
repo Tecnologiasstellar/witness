@@ -163,7 +163,7 @@ export default async function FieldNotePage({
                   {records.map((record) => (
                     <li key={record.id} className="border-t border-hairline/40 py-4">
                       <Link
-                        href={`/witnesses/${record.id}` as Route}
+                        href={`/archive/${record.id}` as Route}
                         className="group block"
                       >
                         <p className="font-display text-xl font-semibold text-ink transition-colors duration-200 ease-out group-hover:text-sepia">
@@ -207,7 +207,7 @@ export default async function FieldNotePage({
           </div>
 
           <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <PrimaryLink href="/witnesses">Browse the archive</PrimaryLink>
+            <PrimaryLink href="/archive">Browse the archive</PrimaryLink>
             <TextLink href="/method">How a claim earns its place</TextLink>
           </div>
         </Container>

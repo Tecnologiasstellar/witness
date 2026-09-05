@@ -63,5 +63,5 @@ Which is the part that makes this a story worth keeping rather than celebrating.
 The lynx recovered because a set of institutions did unglamorous work for two
 decades without an audience, and the reward for that work is a longer list of
 things that must keep being done. The [record we hold for this
-species](/witnesses/iberian-lynx) has the sources; this is only the arithmetic
+species](/archive/iberian-lynx) has the sources; this is only the arithmetic
 around it.

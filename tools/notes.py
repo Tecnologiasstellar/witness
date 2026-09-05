@@ -36,7 +36,7 @@ TYPES = ("question", "field-note", "definition", "comparison")
 
 # Static routes a note may link to. Record and note links are checked against
 # what exists on disk instead.
-STATIC_ROUTES = {"/", "/witnesses", "/field-notes", "/method", "/privacy", "/terms", "/support"}
+STATIC_ROUTES = {"/", "/archive", "/field-notes", "/method", "/privacy", "/terms", "/contact"}
 
 # ---------------------------------------------------------------- claim gate
 # The expensive failure. Witness's whole proposition is that a claim never
@@ -263,7 +263,7 @@ def validate(note, ids, slugs, warnings):
         path = href.split("#")[0].rstrip("/") or "/"
         if path in STATIC_ROUTES:
             continue
-        if path.startswith("/witnesses/") and path.split("/")[2] in ids:
+        if path.startswith("/archive/") and path.split("/")[2] in ids:
             continue
         if path.startswith("/field-notes/") and path.split("/")[2] in slugs:
             continue

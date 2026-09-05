@@ -1,6 +1,6 @@
 # Witness web v3 accessibility contract
 
-Last implementation review: 2026-08-26
+Last implementation review: 2026-09-04
 
 ## Required checks
 
@@ -12,10 +12,10 @@ Last implementation review: 2026-08-26
 - Touch targets are at least 44 by 44 CSS pixels.
 - Mobile navigation and FAQ use native `details` and `summary`.
 - Original illustrations have concise species-specific alternative text.
-- Decorative illustrations and inactive phone states use empty alternative text.
-- Device state updates are announced through a polite live region.
+- Decorative repeats of a plate (the archive band, the Atlas collage) use empty alternative text; the link carries the species name.
+- The audio sample has a text transcript in a native details element and states its synthetic-voice disclosure.
 - Record sources, rights state, editorial state, and generalized location remain text, not color-only signals.
-- Reduced motion disables the species marquee and device image transitions.
+- Reduced motion disables the plate hover lifts; nothing autoplays.
 - Reduced transparency removes procedural grain.
 - No hover-only information or keyboard trap.
 - 320 px layouts must have no horizontal overflow.

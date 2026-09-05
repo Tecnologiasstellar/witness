@@ -6,7 +6,7 @@
     "Field-notes are the plurality and should stay so. They are the only type that both matches an underserved SERP and IS the product. The idea of a species-a-week app is not a differentiator; the sourced specificity is.",
     "Order is winnability, not theme. The list is interleaved by type on purpose so the rotation rule preserves the intended order instead of silently resequencing it.",
     "An `angle` beginning with SERP: was observed in a real search on the date noted in that topic. Every other angle is an editorial thesis, not a measurement. Never invent a SERP observation — this is the site that argues a claim may not exceed its evidence.",
-    "A note never restates a catalog record's story. /witnesses is the app's own catalog, verbatim; a note is the reading around it and links to it. If the only thing a note has to say is already in the record, drop the topic.",
+    "A note never restates a catalog record's story. /archive is the app's own catalog, verbatim; a note is the reading around it and links to it. If the only thing a note has to say is already in the record, drop the topic.",
     "Catalog species come first when the topic allows it — their sources are already fact-checked in site/data/species.json, which makes the research cheap and the provenance identical to the app's.",
     "Never write a public claim about availability, price, subscriptions, downloads, users, ratings, partnerships, or a conservation outcome caused by using Witness. witness_web/PUBLIC_CLAIMS_SOURCE_OF_TRUTH.md is the authority and tools/notes.py enforces the phrases.",
     "Never publish an exact nest, den, roost, or coordinate, even when a source prints it. Generalized ranges only — the gate hard-fails coordinates.",

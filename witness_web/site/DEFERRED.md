@@ -1,12 +1,10 @@
-# Intentionally deferred after web v3
+# Intentionally deferred
 
 | Deferred | Gate before it can appear |
 |---|---|
-| App Store badge or download link | Approved public App Store listing and verified destination. |
-| Final app screenshots | Authentic founder-supplied captures from the current app build, with release-safe data. |
 | Public collective count | Production backend count-integrity, security, privacy, offline-retry, and reconciliation evidence. |
 | Field Season, Atlas, or Support Witness purchase controls | Founder approval, final product IDs, App Store Connect configuration, RevenueCat production mapping, Test Store and Sandbox evidence, and matching Terms/Privacy. |
-| Price or free-trial copy | Live localized StoreKit values and approved offer configuration. |
+| Price or free-trial copy | Founder decision 2026-09-04: prices stay in the app, where StoreKit localizes them. |
 | Email or waitlist capture | Consent, privacy purpose, provider, retention, deletion, and operator workflow. |
 | Analytics | Documented purpose, event minimization, SDK/vendor review, retention, deletion, and disclosure. |
 | Testimonials, ratings, downloads, press, or partners | Dated auditable evidence and permission to publish. |

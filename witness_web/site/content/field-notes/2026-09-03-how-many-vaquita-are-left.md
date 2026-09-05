@@ -76,4 +76,4 @@ that one bad season would take back everything the last three added.
 The next real datum is the abundance estimate still to come from the 2025
 acoustic work. Until then, the honest answer to the question in the title is a
 range, a date, and a method — which is also the whole
-[record we keep for this species](/witnesses/vaquita).
+[record we keep for this species](/archive/vaquita).

@@ -26,6 +26,10 @@ const nextConfig: NextConfig = {
         destination: "https://witnessatlas.com/:path*",
         permanent: true,
       },
+      // Final paths. The App Store Connect support URL still points at /support.
+      { source: "/witnesses", destination: "/archive", permanent: true },
+      { source: "/witnesses/:id", destination: "/archive/:id", permanent: true },
+      { source: "/support", destination: "/contact", permanent: true },
     ];
   },
 };

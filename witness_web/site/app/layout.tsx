@@ -6,29 +6,30 @@ import { SITE_URL } from "@/lib/archive";
 import "./globals.css";
 
 const description =
-  "A quiet iPhone ritual for meeting one species, reading a sourced story, recording attention privately, and taking one honest action. iOS MVP in development.";
+  "Each week, one species on the edge of disappearance: its true story, its sources, one honest action. No feed. No account. No false promises. Free on iPhone.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Witness | Meet one species. Remember what is still here.",
+    default: "Witness — one endangered species a week",
     template: "%s · Witness",
   },
   description,
   applicationName: "Witness",
   authors: [{ name: "Witness" }],
   creator: "Witness",
-  keywords: ["biodiversity", "conservation", "species", "iOS", "editorial"],
+  keywords: ["endangered species", "wildlife", "extinction", "conservation", "nature", "biodiversity", "iPhone app"],
+  itunes: { appId: "6804311122" },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: "Witness",
-    title: "Witness | Meet one species. Remember what is still here.",
+    title: "Witness — one endangered species a week",
     description,
     url: SITE_URL,
-    images: [{ url: "/images/species/whooping-crane-context.jpg", width: 1800, height: 1208, alt: "Two whooping cranes in an original watercolor illustration for Witness" }],
+    images: [{ url: "/images/plates/whooping-crane-context-01.webp", width: 1400, height: 939, alt: "Original illustration of whooping cranes drawn for Witness" }],
   },
-  twitter: { card: "summary_large_image", title: "Witness", description, images: ["/images/species/whooping-crane-context.jpg"] },
+  twitter: { card: "summary_large_image", title: "Witness", description, images: ["/images/plates/whooping-crane-context-01.webp"] },
   robots: { index: true, follow: true },
 };
 

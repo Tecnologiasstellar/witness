@@ -1,107 +1,267 @@
-import Image from "next/image";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import Link from "next/link";
 import { Container, Eyebrow, PrimaryLink, TextLink } from "@/components/atlas";
-import { HomeExperience, type ExperienceRecord } from "@/components/home-experience";
-import { StatusBadge } from "@/components/record";
-import { CATALOGUE, recordById } from "@/lib/archive";
+import { APP_STORE_URL, SITE_URL, allRecords, plate, recordById } from "@/lib/archive";
 
-const FEATURE_IDS = ["whooping-crane", "ploughshare-tortoise", "red-wolf", "amur-tiger", "philippine-eagle"] as const;
+/** Plates in the hero strip and the archive band. Eight each, chosen for variety of form and colour. */
+const STRIP = ["kakapo", "javan-rhino", "vaquita", "amur-leopard", "whooping-crane", "red-wolf", "axolotl", "snow-leopard"];
+const GRID = ["philippine-eagle", "ploughshare-tortoise", "iberian-lynx", "hawaiian-crow", "gharial", "golden-lion-tamarin", "monarch-butterfly", "wollemi-pine"];
+const ATLAS = ["gharial", "california-condor", "hawksbill-turtle"];
 
-const ART: Record<(typeof FEATURE_IDS)[number], Omit<ExperienceRecord, "id" | "commonName" | "scientificName" | "status" | "hook">> = {
-  "whooping-crane": { image: "/images/species/whooping-crane-context.jpg", alt: "Original watercolor illustration of two whooping cranes flying above a marsh" },
-  "ploughshare-tortoise": { image: "/images/species/ploughshare-tortoise.jpg", alt: "Original watercolor illustration of a ploughshare tortoise" },
-  "red-wolf": { image: "/images/species/red-wolf.jpg", alt: "Original watercolor illustration of a red wolf in pocosin habitat" },
-  "amur-tiger": { image: "/images/species/amur-tiger.jpg", alt: "Original watercolor illustration of an Amur tiger on a rocky ledge" },
-  "philippine-eagle": { image: "/images/species/philippine-eagle-detail.jpg", alt: "Original watercolor head study of a Philippine eagle" },
-};
+/** Screenshots of the shipped app, status bar cropped, exported by tools/export_web_plates.sh. */
+const SHOT = { width: 1206, height: 2439 };
 
-const FAQS = [
-  ["What is Witness?", "An iPhone app built around one species a day. You meet it through an original illustration, read a short story with its sources, record a private Witness, and open one credible action."],
-  ["Can I get it today?", "Not yet. The iOS app and the 30-record archive are built; the App Store release is not. Nothing can be installed or bought today."],
-  ["Where does the information come from?", "Every record names its sources, carries a review and a fact-check date, and keeps sensitive locations general. The Method page publishes the standard and its current limits."],
-  ["Are the illustrations photographs?", "No. They are original AI-assisted illustrations made under a fixed art direction, each with a generation record and a species-accuracy review. They are never presented as documentary media."],
-  ["What does a Witness count?", "Acts of attention. Not animals saved, money raised, or policies changed. Witness will never claim an outcome it did not produce."],
-  ["Will it be free?", "The daily story, its sources, the Witness, one action, and your private reflection are meant to stay free. Paid options are proposed, and nothing can be purchased today."],
+const STEPS = [
+  {
+    n: "01",
+    title: "Every Monday, one plate arrives.",
+    body: "A new species, drawn and told in full: what is known, what threatens it, what is uncertain, and where every fact comes from. Each claim maps to a public source.",
+    src: "/images/app/this-week.webp",
+    alt: "The Witness app showing this week’s card: an illustrated kākāpō with its status, name, and first facts.",
+  },
+  {
+    n: "02",
+    title: "One deliberate tap, once a week.",
+    body: "To witness is to give a species a minute of your full attention. You join an anonymous, deduplicated count of everyone who witnessed alongside you. A private note never leaves your phone.",
+    src: "/images/app/witness.webp",
+    alt: "The Witness app’s “I bear witness” button beneath a scale study of the kākāpō drawn beside a human figure.",
+  },
+  {
+    n: "03",
+    title: "Every species comes with one real door.",
+    body: "One vetted act per species: a real organization already doing the work, one honest sentence about what support does, and a direct link. Take it up and it leaves a line in your field journal.",
+    src: "/images/app/acts.webp",
+    alt: "The Witness app’s Acts tab showing this week’s act for the kākāpō and a link to the organization behind it.",
+  },
 ] as const;
 
-export default function Home() {
-  const records = FEATURE_IDS.map((id) => {
+const TENETS = [
+  ["Show you a feed.", "One card a week, and the archive. There is nothing to catch up on."],
+  ["Ask for an account.", "No sign-in, no profile, no public memories. Your notes stay on your phone."],
+  ["Gamify your attention.", "No points, streaks, or flames. A Witness is a minute of attention, given once."],
+  ["Claim a tap saved an animal.", "A Witness counts attention. The acts are real doors to people doing the work."],
+] as const;
+
+const FAQS = [
+  ["What is Witness?", "An iPhone app built around one question: can you give a single vanishing species your full attention this week? Each week it features one species with a drawn plate, a sourced story, a private witness, and one credible action."],
+  ["Is it free?", "Yes. The weekly card, its sources, the witness, the act, and your private note are free and stay free. Field Season One and the Atlas are optional purchases inside the app."],
+  ["Where do the facts come from?", "Every card names its sources and carries a fact-check date. Where something is not verified, the app says so instead of guessing. Ranges stay general so a card can never help someone find an animal already under pressure."],
+  ["Are the illustrations photographs?", "No. They are original illustrations made for Witness under one fixed art direction, each reviewed for species accuracy. They are never presented as documentary photography."],
+  ["What does a Witness count?", "Attention. A witness joins an anonymous count of everyone who paid attention to that species this week. It never claims an animal was saved or a policy changed."],
+] as const;
+
+function pick(ids: readonly string[]) {
+  return ids.map((id) => {
     const record = recordById(id);
-    if (!record) throw new Error(`Missing approved catalog record: ${id}`);
-    return { id, commonName: record.commonName, scientificName: record.scientificName, status: record.conservationStatus.displayName, hook: record.hook, ...ART[id] } satisfies ExperienceRecord;
+    if (!record) throw new Error(`Unknown record ${id}`);
+    return record;
   });
+}
+
+export default function Home() {
+  const strip = pick(STRIP);
+  const grid = pick(GRID);
+  const atlas = pick(ATLAS);
+  const transcript = readFileSync(join(process.cwd(), "data/letter-transcript.txt"), "utf8").split("\n").filter(Boolean);
+  const season = { src: "/images/plates/season-plate-01.webp", width: 1410, height: 2100 };
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Witness — Endangered Species",
+    operatingSystem: "iOS",
+    applicationCategory: "EducationalApplication",
+    description: "Each week, one species on the edge of disappearance: its true story, its sources, one honest action.",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    installUrl: APP_STORE_URL,
+    url: SITE_URL,
+  };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
       <section className="home-hero">
         <Container className="home-hero-inner">
-          <Eyebrow className="hero-eyebrow">A field archive of attention</Eyebrow>
-          <h1>Meet one species.<br />Remember what is still here.</h1>
-          <p className="hero-lede">Each day, one animal: an original illustration, a short story with its sources, and one honest thing you can do.</p>
+          <Eyebrow className="hero-eyebrow">Free on iPhone · one species a week</Eyebrow>
+          <h1>Give one species your attention.</h1>
+          <p className="hero-lede">
+            Each week, Witness brings you one species on the edge of disappearance: a drawn plate, its true story with sources, and one honest action. No feed. No account. No false promises.
+          </p>
           <div className="hero-actions">
-            <PrimaryLink href="/witnesses">Browse the {CATALOGUE.published} records</PrimaryLink>
-            <TextLink href="#experience">See how it works</TextLink>
+            <PrimaryLink href={APP_STORE_URL} external>
+              Download on the App Store
+            </PrimaryLink>
+            <TextLink href="/archive">Browse the archive</TextLink>
           </div>
-          <div className="hero-collage" aria-label="Original Witness species illustrations">
-            <figure className="hero-art hero-art-left"><Image src="/images/species/ploughshare-tortoise.jpg" alt="Original watercolor illustration of a ploughshare tortoise" fill sizes="220px" priority /></figure>
-            <figure className="hero-art hero-art-center"><Image src="/images/species/whooping-crane-context.jpg" alt="Original watercolor illustration of two whooping cranes in flight" fill sizes="(max-width: 767px) 78vw, 560px" priority /></figure>
-            <figure className="hero-art hero-art-right"><Image src="/images/species/philippine-eagle-detail.jpg" alt="Original watercolor head study of a Philippine eagle" fill sizes="220px" priority /></figure>
-          </div>
-          <p className="hero-caption">Original illustrations, not documentary photography · iOS app in development, not yet on the App Store</p>
+          <ul className="plate-strip" aria-label="Species drawn for Witness">
+            {strip.map((record) => {
+              const art = plate(record, "plate");
+              return (
+                <li key={record.id}>
+                  <Link href={`/archive/${record.id}`}>
+                    <img src={art.src} width={art.width} height={art.height} alt={`Original illustration of the ${record.commonName}`} decoding="async" />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <p className="hero-caption">Original illustrations, drawn for Witness · not photographs</p>
         </Container>
       </section>
 
-      <section id="experience" className="experience-section">
+      <section id="how" className="how-section">
         <Container>
-          <div className="section-intro"><div><h2>One species a day.<br />That is the whole app.</h2><p>No feed, no streak, no catching up. Five records from the archive, as they appear on the phone.</p></div></div>
-          <HomeExperience records={records} />
-        </Container>
-      </section>
-
-      <section id="ritual" className="ritual-section">
-        <Container>
-          <div className="section-intro"><div><h2>One encounter.<br />Three steps.</h2></div></div>
-          <ol className="ritual-grid">
-            <li><span>01</span><h3>Meet</h3><p>One species, one original illustration, one short story you can read in a few minutes.</p></li>
-            <li><span>02</span><h3>Witness</h3><p>Record a private act of attention. It counts attention — never a conservation outcome.</p></li>
-            <li><span>03</span><h3>Act</h3><p>Open one credible action, chosen for that species and reviewed before it ships.</p></li>
+          <div className="section-intro">
+            <Eyebrow className="text-sepia">How it works</Eyebrow>
+            <h2>One encounter a week.<br />That is the whole app.</h2>
+          </div>
+          <ol className="how-steps">
+            {STEPS.map((step) => (
+              <li key={step.n} className="how-step">
+                <div className="how-copy">
+                  <p className="how-index">{step.n}</p>
+                  <h3>{step.title}</h3>
+                  <p>{step.body}</p>
+                </div>
+                <div className="phone">
+                  <img src={step.src} width={SHOT.width} height={SHOT.height} alt={step.alt} loading="lazy" decoding="async" />
+                </div>
+              </li>
+            ))}
           </ol>
         </Container>
       </section>
 
-      <section className="archive-band">
+      <section className="archive-section">
         <Container>
-          <div className="archive-band-grid"><div><Eyebrow className="text-[color:var(--dusk-muted)]">The reviewed archive</Eyebrow><h2>{CATALOGUE.published} ways to begin paying attention.</h2></div><div><p>Every record names its sources, carries a fact-check date, and keeps sensitive locations general. You can read all of them right now, on this website.</p><PrimaryLink href="/witnesses" tone="dusk">Open the archive</PrimaryLink></div></div>
-          <div className="species-marquee-track" aria-hidden="true">
-            <div className="species-marquee"><span>Vaquita</span><span>Red Wolf</span><span>Kākāpō</span><span>Amur Tiger</span><span>Axolotl</span><span>Whooping Crane</span></div>
-            <div className="species-marquee"><span>Vaquita</span><span>Red Wolf</span><span>Kākāpō</span><span>Amur Tiger</span><span>Axolotl</span><span>Whooping Crane</span></div>
+          <div className="archive-head">
+            <div>
+              <Eyebrow className="text-sepia">The Archive</Eyebrow>
+              <h2>{allRecords().length === 30 ? "Thirty" : allRecords().length} species, drawn and told in full.</h2>
+            </div>
+            <div>
+              <p>Every card the app carries is here to read, free: five original illustrations, the sourced story, the threats, and the door.</p>
+              <PrimaryLink href="/archive">Open the archive</PrimaryLink>
+            </div>
           </div>
+          <ul className="archive-grid">
+            {grid.map((record) => {
+              const art = plate(record, "plate");
+              return (
+                <li key={record.id}>
+                  <Link href={`/archive/${record.id}`} aria-label={record.commonName}>
+                    <img src={art.src} width={art.width} height={art.height} alt="" loading="lazy" decoding="async" />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </Container>
       </section>
 
-      <section className="trust-section">
+      <section className="works-section dusk">
         <Container>
-          <div className="section-intro"><div><h2>Trust is part of the interface.</h2><p>Sources, rights, privacy, and what is not ready yet stay visible instead of disappearing behind a confident tone.</p></div></div>
-          <div className="trust-grid">
-            <article><span>A</span><h3>Evidence stays visible</h3><p>Every claim on this site points to a dated source in the repository.</p><TextLink href="/method">Read the method</TextLink></article>
-            <article><span>B</span><h3>Private by default</h3><p>No account, no profile, no public memories. Reflections are designed to stay on your device.</p><TextLink href="/privacy">Read the privacy boundary</TextLink></article>
-            <article><span>C</span><h3>Honest about readiness</h3><p>The app and the archive are built. The App Store release, the backend, and purchases are not.</p><TextLink href="/support">See what ships when</TextLink></article>
+          <div className="section-intro">
+            <Eyebrow className="text-[color:var(--dusk-muted)]">The works</Eyebrow>
+            <h2>Two finished works stand behind the weekly card.</h2>
           </div>
+
+          <article className="work">
+            <img src={season.src} width={season.width} height={season.height} alt="The Field Season One plate: eight species arranged around the words “the thin line”, each with its count." loading="lazy" decoding="async" className="season" />
+            <div>
+              <h3>Field Season One</h3>
+              <p>
+                A finite, authored edition about the counted few: eight species so rare that the individuals are known one by one. An opening letter, eight chapters with their dossiers, two interludes, a closing synthesis, and the season plate. Every piece narrated, seventy-five minutes in all. Bought once in the app, and kept permanently.
+              </p>
+              <div className="audio-panel">
+                <p className="audio-label">Hear the opening letter · 4 min</p>
+                <audio controls preload="none" src="/audio/letter-the-thin-line.mp3">
+                  <a href="/audio/letter-the-thin-line.mp3">Download the opening letter (MP3)</a>
+                </audio>
+                <p className="audio-note">Narrated by a synthetic voice (Amazon Polly, Ruth). Rights record on file.</p>
+                <details className="transcript">
+                  <summary>Read the transcript</summary>
+                  {transcript.map((paragraph) => (
+                    <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                  ))}
+                </details>
+              </div>
+            </div>
+          </article>
+
+          <article className="work">
+            <ul className="collage" aria-hidden="true">
+              {atlas.map((record) => {
+                const art = plate(record, "plate");
+                return (
+                  <li key={record.id}>
+                    <img src={art.src} width={art.width} height={art.height} alt="" loading="lazy" decoding="async" />
+                  </li>
+                );
+              })}
+            </ul>
+            <div>
+              <h3>The Atlas</h3>
+              <p>
+                The living library: every featured week beyond the free window, and every released field season while membership is active, narration included. It grows every Monday.
+              </p>
+              <p className="work-note">Both live behind the Index mark, at the top-left of every card. The weekly card stays free.</p>
+            </div>
+          </article>
+        </Container>
+      </section>
+
+      <section className="tenets-section">
+        <Container>
+          <div className="section-intro">
+            <h2>What Witness will never do.</h2>
+          </div>
+          <ul className="tenets">
+            {TENETS.map(([title, body]) => (
+              <li key={title}>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </li>
+            ))}
+          </ul>
         </Container>
       </section>
 
       <section id="faq" className="faq-section">
         <Container>
-          <div className="faq-layout"><div><h2>Questions</h2><p className="faq-intro">Plain answers, including what Witness cannot claim yet.</p></div><div className="faq-list">{FAQS.map(([question, answer], index) => <details key={question} open={index === 0}><summary><span>{question}</span><span aria-hidden="true" className="faq-plus" /></summary><p>{answer}</p></details>)}</div></div>
+          <div className="faq-layout">
+            <div>
+              <h2>Questions</h2>
+              <p className="faq-intro">Plain answers, including what Witness will not claim.</p>
+            </div>
+            <div className="faq-list">
+              {FAQS.map(([question, answer], index) => (
+                <details key={question} open={index === 0}>
+                  <summary>
+                    <span>{question}</span>
+                    <span aria-hidden="true" className="faq-plus" />
+                  </summary>
+                  <p>{answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
         </Container>
       </section>
 
       <section className="closing-section">
         <Container>
-          <StatusBadge status="In development" note="Not yet on the App Store." />
+          <Eyebrow className="text-sepia">Free on iPhone</Eyebrow>
           <h2>Look closely.<br />Carry the name forward.</h2>
-          <p>Thirty species are already written, sourced, and illustrated. You can meet them here today.</p>
-          <div className="closing-actions"><PrimaryLink href="/witnesses">Open the archive</PrimaryLink><Link href="/method">See exactly what is verified</Link></div>
+          <p>One species a week, on your phone. The card, the sources, the witness, and the act are free.</p>
+          <div className="closing-actions">
+            <PrimaryLink href={APP_STORE_URL} external>
+              Download on the App Store
+            </PrimaryLink>
+            <TextLink href="/archive">Open the archive</TextLink>
+          </div>
         </Container>
       </section>
     </>
