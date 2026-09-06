@@ -33,3 +33,4 @@ RevenueCatConfig.plist
 # Local Supabase URL and anon (publishable) key; see SupabaseCommunityService.swift.
 SupabaseConfig.plist
 .vercel
+WitnessApp_official_Screenshoots/
