@@ -1,0 +1,288 @@
+{
+  "id": "spixs-macaw",
+  "schemaVersion": 1,
+  "commonName": "Spix's Macaw",
+  "scientificName": "Cyanopsitta spixii",
+  "conservationStatus": {
+    "displayName": "Extinct in the Wild",
+    "normalizedValue": "extinct_in_the_wild"
+  },
+  "generalizedRange": "Northeast Brazil — the Caatinga of northern Bahia along the São Francisco river; no free-living birds today",
+  "hook": "Gone from the wild in 2000. Back in 2022. Recaptured in 2025.",
+  "story": [
+    {
+      "id": "spixs-macaw-opening",
+      "text": "Spix’s macaw is a small blue macaw of Brazil’s Caatinga, 55 to 57 centimeters long, bare grey skin around a mustard-yellow eye.",
+      "sourceIDs": [
+        "icmbio-salve-spixs-macaw"
+      ]
+    },
+    {
+      "id": "spixs-macaw-life",
+      "text": "Its last wild population lived in caraibeira gallery woodland along seasonal creeks near Curaçá, Bahia, nesting in the trees’ hollows.",
+      "sourceIDs": [
+        "bci-juniper-yamashita-1991",
+        "icmbio-salve-spixs-macaw"
+      ]
+    },
+    {
+      "id": "spixs-macaw-threat",
+      "text": "Clearing of that woodland, then trapping for the cage-bird trade in the 1970s and 80s, left a single wild bird by 1990.",
+      "sourceIDs": [
+        "icmbio-salve-spixs-macaw",
+        "bci-juniper-yamashita-1991"
+      ]
+    },
+    {
+      "id": "spixs-macaw-last",
+      "text": "It was last seen in October 2000; in 2019 the Red List moved the species to Extinct in the Wild.",
+      "sourceIDs": [
+        "icmbio-salve-spixs-macaw"
+      ]
+    },
+    {
+      "id": "spixs-macaw-captive",
+      "text": "Captive breeding carried it: 152 birds by 2017, and in 2020 fifty-two were flown home to Brazil’s new breeding and reintroduction center.",
+      "sourceIDs": [
+        "icmbio-biobr-lugarini-2021"
+      ]
+    },
+    {
+      "id": "spixs-macaw-hope",
+      "text": "Twenty were released into the Caatinga in 2022; 58 percent survived the first year, and in May 2024 two wild-hatched chicks flew.",
+      "sourceIDs": [
+        "bci-vercillo-2024-releases",
+        "mongabay-2024-conflict"
+      ]
+    },
+    {
+      "id": "spixs-macaw-dispute",
+      "text": "That June, Brazil’s ICMBio let its agreement with the German breeder ACTP lapse over a disputed transfer of birds to India; no more were released.",
+      "sourceIDs": [
+        "mongabay-2024-conflict",
+        "bci-vercillo-2024-releases"
+      ]
+    },
+    {
+      "id": "spixs-macaw-virus",
+      "text": "In November 2025 the 11 surviving free-living birds were recaptured; all carried psittacine circovirus, an incurable disease, and once again none fly free.",
+      "sourceIDs": [
+        "cnn-brasil-2025-circovirus",
+        "phys-afp-2025-circovirus",
+        "mongabay-2025-circovirus"
+      ]
+    },
+    {
+      "id": "spixs-macaw-belgium",
+      "text": "In Belgium, Pairi Daiza hatched its first Spix’s chick that September, a future breeder.",
+      "sourceIDs": [
+        "pairi-daiza-first-chick-2025"
+      ]
+    },
+    {
+      "id": "spixs-macaw-witness",
+      "text": "To witness the Spix’s macaw is to hold a bird that exists because people kept it — and to ask whether they can let it go again.",
+      "sourceIDs": [
+        "icmbio-salve-spixs-macaw",
+        "bci-vercillo-2024-releases"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-spixs-macaw",
+    "title": "Meet the little blue macaw",
+    "summary": "Read BirdLife International’s species factsheet for the little blue macaw: Red List status, historic range, habitat and threats.",
+    "effort": "4 minutes",
+    "destinationURL": "https://datazone.birdlife.org/species/factsheet/spixs-macaw-cyanopsitta-spixii",
+    "destinationOrganization": "BirdLife International",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "birdlife-datazone-spixs-macaw"
+    ],
+    "lastVerified": "2026-09-08",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "spixs-macaw-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-08; rights record docs/media/spixs-macaw-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-10-03",
+  "sources": [
+    {
+      "id": "birdlife-datazone-spixs-macaw",
+      "title": "Spix's Macaw Cyanopsitta spixii — Species Factsheet",
+      "organization": "BirdLife International",
+      "url": "https://datazone.birdlife.org/species/factsheet/spixs-macaw-cyanopsitta-spixii",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "icmbio-salve-spixs-macaw",
+      "title": "Cyanopsitta spixii (Wagler, 1832) — Processo de Avaliação do Risco de Extinção da Fauna Brasileira (SALVE)",
+      "organization": "ICMBio (Instituto Chico Mendes de Conservação da Biodiversidade)",
+      "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/programa-de-manejo-populacional/pmp-ararinha-azul/ficha-cyanopsitta-spixii.pdf",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "icmbio-pmp-ararinha-azul",
+      "title": "Programa de Manejo Populacional da Ararinha-azul",
+      "organization": "ICMBio / CEMAVE",
+      "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/programa-de-manejo-populacional/pmp-ararinha-azul",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "icmbio-biobr-lugarini-2021",
+      "title": "A Conservação da Ararinha-azul, Cyanopsitta spixii (Wagler, 1832): Desafios e Conquistas — Biodiversidade Brasileira 11(3)",
+      "organization": "ICMBio (Lugarini, Vercillo, Purchase, Watson & Schischakin, 2021)",
+      "url": "https://revistaeletronica.icmbio.gov.br/index.php/BioBR/article/download/1746/1273/10062",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "bci-juniper-yamashita-1991",
+      "title": "The habitat and status of Spix's Macaw Cyanopsitta spixii — Bird Conservation International",
+      "organization": "Cambridge University Press (Juniper & Yamashita, 1991)",
+      "url": "https://www.cambridge.org/core/journals/bird-conservation-international/article/habitat-and-status-of-spixs-macaw-cyanopsitta-spixii/63FC7D892A3C4C9096DCAC8D7F160849",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "bci-vercillo-2024-releases",
+      "title": "On the brink again: the critical role of annual releases in saving Spix's Macaw Cyanopsitta spixii — Bird Conservation International",
+      "organization": "Cambridge University Press (Vercillo, Novaes, Marcuk & Purchase, 2024)",
+      "url": "https://www.cambridge.org/core/journals/bird-conservation-international/article/on-the-brink-again-the-critical-role-of-annual-releases-in-saving-spixs-macaw-cyanopsitta-spixii/1043B6A5F4FF9B446518CA2D6EF6A136",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "mongabay-2024-conflict",
+      "title": "Institutional conflict puts successful Spix's macaw reintroduction at risk",
+      "organization": "Mongabay",
+      "url": "https://news.mongabay.com/2024/07/institutional-conflict-puts-successful-spixs-macaw-reintroduction-at-risk/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "mongabay-2025-circovirus",
+      "title": "Virus outbreak deepens rift over return of Spix's macaw to Brazil",
+      "organization": "Mongabay",
+      "url": "https://news.mongabay.com/2025/10/virus-outbreak-deepens-rift-over-return-of-spixs-macaw-to-brazil/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "phys-afp-2025-circovirus",
+      "title": "Lethal virus hits last rare blue macaws in Brazil wild",
+      "organization": "AFP via Phys.org",
+      "url": "https://phys.org/news/2025-11-lethal-virus-rare-blue-macaws.html",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "pairi-daiza-spixs-macaw-project",
+      "title": "Project Spix's macaw",
+      "organization": "Pairi Daiza Foundation",
+      "url": "https://www.pairidaiza.eu/en/together-for-the-animals/foundation-vision/fondation-projects/projet-ara-de-spix/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "pairi-daiza-first-chick-2025",
+      "title": "The first Spix's Macaw born at Pairi Daiza",
+      "organization": "Pairi Daiza",
+      "url": "https://pairi-daiza.prezly.com/the-first-spixs-macaw-born-at-pairi-daiza",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "cnn-brasil-2025-circovirus",
+      "title": "Ararinhas-azuis são infectadas por circovírus em criadouro na Bahia",
+      "organization": "CNN Brasil",
+      "url": "https://www.cnnbrasil.com.br/nacional/nordeste/ba/ararinhas-azuis-sao-infectadas-por-circovirus-em-criadouro-na-bahia/",
+      "lastAccessed": "2026-09-08"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-08",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-08 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "About 22 in long (55–57 cm) — little more than half a hyacinth macaw",
+    "lifespan": "20–30 years in the wild; about 40 in captivity",
+    "diet": "Seeds — pinhão, faveleira, baraúna & marizeiro",
+    "populationEstimate": "None free-living since November 2025; about 350 in captivity",
+    "populationAsOf": "2025 · per ICMBio figures reported by Mongabay and CNN Brasil",
+    "trend": "unknown",
+    "threats": [
+      "Trapping for the cage-bird trade",
+      "Loss of caraibeira gallery woodland",
+      "Psittacine circovirus",
+      "Goat and sheep grazing of creek-side forest"
+    ],
+    "sourceIDs": [
+      "icmbio-salve-spixs-macaw",
+      "mongabay-2024-conflict",
+      "cnn-brasil-2025-circovirus",
+      "phys-afp-2025-circovirus",
+      "mongabay-2025-circovirus"
+    ]
+  },
+  "reproduction": {
+    "id": "spixs-macaw-reproduction",
+    "text": "Breeding followed the rains, October to March, in caraibeira hollows — often ones woodpeckers had abandoned; the first pair to nest after the 2022 release laid clutches of three.",
+    "sourceIDs": [
+      "icmbio-salve-spixs-macaw"
+    ]
+  },
+  "insight": {
+    "id": "spixs-macaw-insight",
+    "text": "The captive-bred birds released in 2022 followed flocks of wild blue-winged macaws, which acted as mentors — showing them, fruit by fruit, what a Spix's macaw eats in the Caatinga.",
+    "sourceIDs": [
+      "icmbio-salve-spixs-macaw"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Caatinga of northern Bahia — Curaçá and Juazeiro",
+      "latitude": -9.2,
+      "longitude": -39.8,
+      "radiusKm": 90
+    }
+  ],
+  "gallery": [
+    "spixs-macaw-plate-01",
+    "spixs-macaw-context-01",
+    "spixs-macaw-detail-01",
+    "spixs-macaw-behavior-01",
+    "spixs-macaw-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "icmbio-pmp-ararinha-azul-program",
+      "organization": "ICMBio / CEMAVE",
+      "title": "Programa de Manejo Populacional da Ararinha-azul",
+      "summary": "Keeps Brazil’s studbook for Spix’s macaw and manages every captive bird as a single population — with the São Paulo Zoo, Loro Parque Fundación and partner centres such as Pairi Daiza — so that reintroduction in the Caatinga can resume.",
+      "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/programa-de-manejo-populacional/pmp-ararinha-azul",
+      "kind": "program",
+      "sourceIDs": [
+        "icmbio-pmp-ararinha-azul",
+        "icmbio-biobr-lugarini-2021",
+        "pairi-daiza-first-chick-2025"
+      ],
+      "lastVerified": "2026-09-08"
+    },
+    {
+      "id": "pairi-daiza-spixs-macaw-program",
+      "organization": "Pairi Daiza Foundation",
+      "title": "Project Spix's macaw",
+      "summary": "Breeds Spix's macaws at its conservation centre in Belgium, one of three breeding centres in the program alongside Germany and Brazil, and hatched its first chick in September 2025 to grow into a breeder.",
+      "url": "https://www.pairidaiza.eu/en/together-for-the-animals/foundation-vision/fondation-projects/projet-ara-de-spix/",
+      "kind": "program",
+      "sourceIDs": [
+        "pairi-daiza-spixs-macaw-project",
+        "pairi-daiza-first-chick-2025"
+      ],
+      "lastVerified": "2026-09-08"
+    }
+  ]
+}

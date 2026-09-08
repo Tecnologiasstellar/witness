@@ -1,0 +1,299 @@
+{
+  "id": "partula-snail",
+  "schemaVersion": 1,
+  "commonName": "Partula Snail",
+  "scientificName": "Partula tohiveana",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Society Islands of French Polynesia — Moorea for this species; sister species on Tahiti and Huahine",
+  "hook": "Every released snail wears a glowing dot. Then they found one without.",
+  "story": [
+    {
+      "id": "partula-snail-opening",
+      "text": "A Partula snail is a centimetre or two of coiled shell under a leaf in a Polynesian valley, feeding at night on rotting plant matter.",
+      "sourceIDs": [
+        "edinburgh-zoo-2024-largest-release",
+        "marwell-partula-snail"
+      ]
+    },
+    {
+      "id": "partula-snail-life",
+      "text": "A hermaphrodite, it bears a single live young, a millimetre or two long, every few weeks.",
+      "sourceIDs": [
+        "marwell-partula-snail",
+        "oryx-bick-2014-differential-survival"
+      ]
+    },
+    {
+      "id": "partula-snail-threat",
+      "text": "In 1974 the rosy wolfsnail, a Florida carnivore, was released to control the giant African land snail — a control no rigorous evidence supports.",
+      "sourceIDs": [
+        "oryx-bick-2014-differential-survival",
+        "iucn-gisd-euglandina-rosea"
+      ]
+    },
+    {
+      "id": "partula-snail-collapse",
+      "text": "It preferred the tiny Partula; by 1995 almost every wild population was gone, and 52 species were extinct in the wild.",
+      "sourceIDs": [
+        "rzss-partula-snails",
+        "oryx-gerlach-2025-reestablishment",
+        "oryx-gerlach-2023-back-on-track"
+      ]
+    },
+    {
+      "id": "partula-snail-rescue",
+      "text": "In the early 1990s conservationists gathered the last of 15 species and subspecies and carried them to zoos.",
+      "sourceIDs": [
+        "edinburgh-zoo-2025-glow-snails",
+        "rzss-partula-snails"
+      ]
+    },
+    {
+      "id": "partula-snail-release",
+      "text": "Releases began in 2015; each snail goes back with a dot of UV-reflective paint that glows under a torch at night.",
+      "sourceIDs": [
+        "stlzoo-2024-historic-moment",
+        "edinburgh-zoo-2024-largest-release",
+        "oryx-gerlach-2025-reestablishment"
+      ]
+    },
+    {
+      "id": "partula-snail-discovery",
+      "text": "In September 2024, on Moorea, surveyors found Partula tohiveana with no paint — four adults and thirteen juveniles, born wild, the first in 40 years.",
+      "sourceIDs": [
+        "oryx-gerlach-2025-reestablishment",
+        "cambridge-2024-extinct-snails-breeding"
+      ]
+    },
+    {
+      "id": "partula-snail-status",
+      "text": "The species moved from Extinct in the Wild to Critically Endangered, the first invertebrate to make that return.",
+      "sourceIDs": [
+        "rzss-2025-rare-snail-returns",
+        "oryx-gerlach-2025-reestablishment"
+      ]
+    },
+    {
+      "id": "partula-snail-scale",
+      "text": "Nearly 40,000 snails have gone home in a decade; by late 2025 wild-born tohiveana had spread beyond the release site.",
+      "sourceIDs": [
+        "edinburgh-zoo-2025-glow-snails"
+      ]
+    },
+    {
+      "id": "partula-snail-witness",
+      "text": "To witness the Partula snail is to learn that a species can be held in a zoo for forty years, then handed back — one glowing dot at a time.",
+      "sourceIDs": [
+        "rzss-2025-rare-snail-returns",
+        "edinburgh-zoo-2024-largest-release"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-partula-snail",
+    "title": "Meet the snail that came back",
+    "summary": "Read the University of Cambridge's account of the 2024 survey on Moorea that found wild-born Partula tohiveana, and how nine zoos got them there.",
+    "effort": "5 minutes",
+    "destinationURL": "https://www.cam.ac.uk/research/news/extinct-snails-found-breeding-in-french-polynesia",
+    "destinationOrganization": "University of Cambridge",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "cambridge-2024-extinct-snails-breeding"
+    ],
+    "lastVerified": "2026-09-08",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "partula-snail-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-08; rights record docs/media/partula-snail-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-10-07",
+  "sources": [
+    {
+      "id": "oryx-gerlach-2025-reestablishment",
+      "title": "Re-establishment of Partula tohiveana tree snails in French Polynesia after 40 years of extinction in the wild",
+      "organization": "Oryx (Cambridge University Press)",
+      "url": "https://www.cambridge.org/core/journals/oryx/article/reestablishment-of-partula-tohiveana-tree-snails-in-french-polynesia-after-40-years-of-extinction-in-the-wild/665C99A6503D5C83483730FE1FFB6681",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "oryx-bick-2014-differential-survival",
+      "title": "Differential survival among Tahitian tree snails during a mass extinction event: persistence of the rare and fecund",
+      "organization": "Oryx (Cambridge University Press)",
+      "url": "https://www.cambridge.org/core/journals/oryx/article/differential-survival-among-tahitian-tree-snails-during-a-mass-extinction-event-persistence-of-the-rare-and-fecund/FB6F5CECCDF77A5CA6266BC1FB6E00A3",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "oryx-gerlach-2023-back-on-track",
+      "title": "Partula tree snail conservation back on track",
+      "organization": "Oryx (Cambridge University Press)",
+      "url": "https://www.cambridge.org/core/journals/oryx/article/partula-tree-snail-conservation-back-on-track/CA79AF8B29D640AC0C60E08CE4DF32AB",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "stlzoo-2024-historic-moment",
+      "title": "Zoo conservation collaboration dedicated to 'extinct in the wild' snail celebrates historic moment",
+      "organization": "Saint Louis Zoo",
+      "url": "https://stlzoo.org/news/saint-louis-zoo-conservation-collaboration-dedicated-to-extinct-in-the-wild-snail-celebrates-historic-moment",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "edinburgh-zoo-2024-largest-release",
+      "title": "Collaboration between zoos sees largest release of extinct-in-the-wild Partula snails in history",
+      "organization": "Edinburgh Zoo (RZSS)",
+      "url": "https://www.edinburghzoo.org.uk/news/collaboration-between-zoos-sees-largest-release-extinct-wild-partula-snails-history",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "edinburgh-zoo-2025-glow-snails",
+      "title": "Over 7,000 'glow-in-the-dark' snails return to island homes",
+      "organization": "Edinburgh Zoo (RZSS)",
+      "url": "https://www.edinburghzoo.org.uk/news/over-7000-glow-dark-snails-return-island-homes",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "rzss-2025-rare-snail-returns",
+      "title": "Once thought lost, a rare snail returns",
+      "organization": "Royal Zoological Society of Scotland",
+      "url": "https://www.rzss.org.uk/news/once-thought-lost-rare-snail-returns",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "rzss-partula-snails",
+      "title": "Partula snails",
+      "organization": "Royal Zoological Society of Scotland",
+      "url": "https://www.rzss.org.uk/partula-snail",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "cambridge-2024-extinct-snails-breeding",
+      "title": "'Extinct' snails found breeding in French Polynesia",
+      "organization": "University of Cambridge",
+      "url": "https://www.cam.ac.uk/research/news/extinct-snails-found-breeding-in-french-polynesia",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "marwell-partula-snail",
+      "title": "Partula snail (Partula spp)",
+      "organization": "Marwell Wildlife",
+      "url": "https://www.marwell.org.uk/animals/partula-snail/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "detroit-zoo-2026-tahiti-journey",
+      "title": "'Extinct in the Wild' Partula snails begin journey to Tahiti for release in the wild",
+      "organization": "Detroit Zoological Society",
+      "url": "https://detroitzoo.org/extinct-in-the-wild-partula-snails-begin-journey-to-tahiti-for-release-in-the-wild/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "iucn-gisd-euglandina-rosea",
+      "title": "Euglandina rosea — Global Invasive Species Database",
+      "organization": "IUCN SSC Invasive Species Specialist Group",
+      "url": "https://www.iucngisd.org/gisd/speciesname/Euglandina+rosea",
+      "lastAccessed": "2026-09-08"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-08",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-08 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "Shell 0.5–1.2 in · 12–30 mm — most about the size of a fingernail",
+    "lifespan": "Up to 17 years in some species",
+    "diet": "Detritivore — rotting leaves & plant matter",
+    "populationEstimate": null,
+    "populationAsOf": null,
+    "trend": "increasing",
+    "threats": [
+      "Rosy wolfsnail predation",
+      "Ill-judged biocontrol releases",
+      "Tiny re-established populations",
+      "Survival still tied to zoos"
+    ],
+    "sourceIDs": [
+      "marwell-partula-snail",
+      "edinburgh-zoo-2024-largest-release",
+      "edinburgh-zoo-2025-glow-snails",
+      "iucn-gisd-euglandina-rosea",
+      "oryx-gerlach-2025-reestablishment",
+      "rzss-partula-snails"
+    ]
+  },
+  "reproduction": {
+    "id": "partula-snail-reproduction",
+    "text": "A hermaphrodite that gives birth to live young — one newborn a millimetre or two long every few weeks, after a gestation of about three months, and mature itself within three to six months.",
+    "sourceIDs": [
+      "marwell-partula-snail",
+      "oryx-bick-2014-differential-survival"
+    ]
+  },
+  "insight": {
+    "id": "partula-snail-insight",
+    "text": "Every zoo-bred snail goes home wearing a dot of UV-reflective paint, so the proof that Partula tohiveana was truly back was finding snails with no dot at all.",
+    "sourceIDs": [
+      "stlzoo-2024-historic-moment",
+      "oryx-gerlach-2025-reestablishment"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Moorea, Society Islands",
+      "latitude": -17.53,
+      "longitude": -149.83,
+      "radiusKm": 30.0
+    },
+    {
+      "name": "Tahiti, Society Islands",
+      "latitude": -17.65,
+      "longitude": -149.42,
+      "radiusKm": 60.0
+    }
+  ],
+  "gallery": [
+    "partula-snail-plate-01",
+    "partula-snail-context-01",
+    "partula-snail-detail-01",
+    "partula-snail-behavior-01",
+    "partula-snail-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "rzss-partula-breeding-program",
+      "organization": "Royal Zoological Society of Scotland",
+      "title": "International Partula conservation breeding programme",
+      "summary": "Edinburgh Zoo has bred Partula snails since 1984 within the ZSL-coordinated collaboration of 15 zoos holding 15 species and subspecies, and has helped release more than 24,000 marked snails onto French Polynesian islands since 2015.",
+      "url": "https://www.rzss.org.uk/partula-snail",
+      "kind": "program",
+      "sourceIDs": [
+        "rzss-partula-snails",
+        "edinburgh-zoo-2025-glow-snails"
+      ],
+      "lastVerified": "2026-09-08"
+    },
+    {
+      "id": "stlzoo-partula-ssp",
+      "organization": "Saint Louis Zoo",
+      "title": "Partula Species Survival Plan",
+      "summary": "Since 1990 the Saint Louis Zoo has coordinated the U.S. Partula Species Survival Plan, pooling snails bred at American zoos — more than 3,200 Partula nodosa in 2024 alone — and flying them to Tahiti for each year's release.",
+      "url": "https://stlzoo.org/news/saint-louis-zoo-conservation-collaboration-dedicated-to-extinct-in-the-wild-snail-celebrates-historic-moment",
+      "kind": "program",
+      "sourceIDs": [
+        "stlzoo-2024-historic-moment"
+      ],
+      "lastVerified": "2026-09-08"
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "id": "european-eel",
+  "schemaVersion": 1,
+  "commonName": "European Eel",
+  "scientificName": "Anguilla anguilla",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Rivers, estuaries and coasts of Europe and the Mediterranean, from Scandinavia to North Africa; spawns far out in the western Atlantic",
+  "hook": "It crosses the Atlantic twice and eats nothing on the way home.",
+  "story": [
+    {
+      "id": "european-eel-opening",
+      "text": "Every European eel begins in the Sargasso Sea, a breeding ground deduced from larvae a century ago and never yet seen.",
+      "sourceIDs": [
+        "wright-2022-sargasso",
+        "eprs-eel-briefing-2024"
+      ]
+    },
+    {
+      "id": "european-eel-larvae",
+      "text": "Transparent, leaf-shaped larvae drift some 4,000 miles to Europe, arriving after a year or two as finger-length glass eels.",
+      "sourceIDs": [
+        "wwt-european-eel",
+        "forth-rivers-trust-life-cycle"
+      ]
+    },
+    {
+      "id": "european-eel-yellow",
+      "text": "In rivers they darken into yellow eels and stay five to twenty years, hunting by night.",
+      "sourceIDs": [
+        "gov-uk-eel-passes-2023",
+        "forth-rivers-trust-life-cycle",
+        "canal-river-trust-eels",
+        "wwt-european-eel"
+      ]
+    },
+    {
+      "id": "european-eel-silver",
+      "text": "Then the body rebuilds: skin silvers, eyes grow up to ten times larger, the gut shuts down, and the eel leaves to spawn once and die.",
+      "sourceIDs": [
+        "forth-rivers-trust-life-cycle",
+        "eprs-eel-briefing-2024"
+      ]
+    },
+    {
+      "id": "european-eel-tracked",
+      "text": "Only in 2022 did satellite tags give direct evidence: of 26 silver eels released off the Azores, five reached the Sargasso, one the presumed breeding area.",
+      "sourceIDs": [
+        "wright-2022-sargasso"
+      ]
+    },
+    {
+      "id": "european-eel-collapse",
+      "text": "Meanwhile the young stopped coming: glass-eel arrivals around the North Sea stand near 1 percent of the 1960–1979 average, around a tenth elsewhere in Europe.",
+      "sourceIDs": [
+        "ices-eel-advice-2026"
+      ]
+    },
+    {
+      "id": "european-eel-barriers",
+      "text": "Between river and sea stand weirs and turbines, and smugglers who move around 100 tonnes of glass eels a year to Asian farms — Europe’s largest wildlife crime, says the European Commission.",
+      "sourceIDs": [
+        "eprs-eel-briefing-2024",
+        "ec-illegal-trade-2026",
+        "europol-256-smugglers"
+      ]
+    },
+    {
+      "id": "european-eel-advice",
+      "text": "Critically Endangered since 2008, it draws the same advice from ICES every year: zero catch, every habitat, every life stage.",
+      "sourceIDs": [
+        "ices-eel-advice-2026",
+        "ec-oceans-eel"
+      ]
+    },
+    {
+      "id": "european-eel-witness",
+      "text": "To witness the European eel is to follow a life that spans an ocean twice — and to keep the river open for the last crossing.",
+      "sourceIDs": [
+        "wright-2022-sargasso",
+        "gov-uk-eel-passes-2023"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-european-eel",
+    "title": "Meet the ocean-crossing eel",
+    "summary": "Read WWT’s European eel factfile: the five transformations from leaf-shaped larva to silver eel, and why around 95 percent fewer now reach Europe.",
+    "effort": "4 minutes",
+    "destinationURL": "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel",
+    "destinationOrganization": "Wildfowl & Wetlands Trust (WWT)",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "wwt-european-eel"
+    ],
+    "lastVerified": "2026-09-08",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "european-eel-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-08; rights record docs/media/european-eel-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-10-05",
+  "sources": [
+    {
+      "id": "ices-eel-advice-2026",
+      "title": "European eel (Anguilla anguilla) throughout its natural range — ICES Advice 2025 (ele.2737.nea), published 4 November 2025",
+      "organization": "ICES — International Council for the Exploration of the Sea (PDF mirrored by FishSec)",
+      "url": "https://www.fishsec.org/app/uploads/2025/11/ICES-advice-on-European-eel-for-2026.pdf",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "wright-2022-sargasso",
+      "title": "First direct evidence of adult European eels migrating to their breeding place in the Sargasso Sea (Scientific Reports, 2022)",
+      "organization": "Wright et al., via PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9562336/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "eprs-eel-briefing-2024",
+      "title": "Addressing the critical state of European eel stocks (EPRS briefing, 2024)",
+      "organization": "European Parliamentary Research Service",
+      "url": "https://www.europarl.europa.eu/RegData/etudes/BRIE/2024/762306/EPRS_BRI(2024)762306_EN.pdf",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "ec-oceans-eel",
+      "title": "Eel — marine biodiversity",
+      "organization": "European Commission, Oceans and Fisheries",
+      "url": "https://oceans-and-fisheries.ec.europa.eu/ocean/marine-biodiversity/eel_en",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "ec-illegal-trade-2026",
+      "title": "How is the EU fighting illegal trade in European eel?",
+      "organization": "European Commission, Directorate-General for Environment",
+      "url": "https://environment.ec.europa.eu/news/video-how-eu-fighting-illegal-trade-european-eel-2026-03-03_en",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "europol-256-smugglers",
+      "title": "Law enforcement casts net over 256 eel smugglers — Europol-led operation finds 25 tonnes of trafficked eels worth EUR 13 million destined for Asia",
+      "organization": "Europol",
+      "url": "https://www.europol.europa.eu/media-press/newsroom/news/law-enforcement-casts-net-over-256-eel-smugglers",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "wwt-european-eel",
+      "title": "European eel — species factfile",
+      "organization": "Wildfowl & Wetlands Trust (WWT)",
+      "url": "https://www.wwt.org.uk/discover-wetlands/wetland-wildlife/species-factfiles/european-eel",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "canal-river-trust-eels",
+      "title": "Eel facts — rare and protected fish",
+      "organization": "Canal & River Trust",
+      "url": "https://canalrivertrust.org.uk/things-to-do/fishing/caring-for-our-fish/freshwater-fish-species/rare-and-protected-fish/eels",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "forth-rivers-trust-life-cycle",
+      "title": "Life cycle of a European eel",
+      "organization": "Forth Rivers Trust",
+      "url": "https://forthriverstrust.org/life-cycle-of-a-european-eel/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "gov-uk-eel-passes-2023",
+      "title": "Critically endangered European eel given hope for the future",
+      "organization": "Environment Agency (GOV.UK)",
+      "url": "https://www.gov.uk/government/news/critically-endangered-european-eel-given-hope-for-the-future",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "wild-planet-trust-eel",
+      "title": "European eel — Gannel Estuary project",
+      "organization": "Wild Planet Trust",
+      "url": "https://wildplanettrust.org.uk/our-projects/at-home/european-eel/",
+      "lastAccessed": "2026-09-08"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-08",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-08 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "Usually 2–2.6 ft · 2–4 lbs; exceptionally up to 5 ft",
+    "lifespan": "Around 20 years on average, up to 50; possibly longer if landlocked",
+    "diet": "Nocturnal predator & scavenger — fish, molluscs, crustaceans, carrion",
+    "populationEstimate": null,
+    "populationAsOf": null,
+    "trend": "decreasing",
+    "threats": [
+      "River barriers and hydropower turbines",
+      "Glass-eel trafficking to Asian farms",
+      "Fishing at every life stage",
+      "Pollution and the swim-bladder parasite"
+    ],
+    "sourceIDs": [
+      "wwt-european-eel",
+      "canal-river-trust-eels",
+      "ices-eel-advice-2026",
+      "eprs-eel-briefing-2024",
+      "ec-illegal-trade-2026"
+    ]
+  },
+  "reproduction": {
+    "id": "european-eel-reproduction",
+    "text": "Each eel spawns once, in the Sargasso Sea, and then dies; the larvae that hatch there take a year or two to drift to Europe, and no one has yet seen the spawning itself.",
+    "sourceIDs": [
+      "eprs-eel-briefing-2024",
+      "wwt-european-eel",
+      "wright-2022-sargasso"
+    ]
+  },
+  "insight": {
+    "id": "european-eel-insight",
+    "text": "Before it leaves for the Sargasso Sea, a silver eel’s eyes grow up to ten times their original size and its digestive tract shuts down — it will never eat again.",
+    "sourceIDs": [
+      "forth-rivers-trust-life-cycle",
+      "wild-planet-trust-eel"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Severn Estuary and Bristol Channel rivers, England & Wales",
+      "latitude": 51.6,
+      "longitude": -2.8,
+      "radiusKm": 90
+    },
+    {
+      "name": "Bay of Biscay river mouths, western France",
+      "latitude": 46.2,
+      "longitude": -1.6,
+      "radiusKm": 220
+    }
+  ],
+  "gallery": [
+    "european-eel-plate-01",
+    "european-eel-context-01",
+    "european-eel-detail-01",
+    "european-eel-behavior-01",
+    "european-eel-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "environment-agency-eel-passes-program",
+      "organization": "Environment Agency",
+      "title": "Eel passes and screens, England",
+      "summary": "Builds and monitors eel passes at weirs and sluices under the Eels (England and Wales) Regulations 2009 — two new passes on the Warwickshire Avon reopened 26.7 km of river in 2023, part of improvements secured at around 1,000 sites across England.",
+      "url": "https://www.gov.uk/government/news/critically-endangered-european-eel-given-hope-for-the-future",
+      "kind": "program",
+      "sourceIDs": [
+        "gov-uk-eel-passes-2023"
+      ],
+      "lastVerified": "2026-09-08"
+    },
+    {
+      "id": "wild-planet-trust-gannel-program",
+      "organization": "Wild Planet Trust",
+      "title": "Gannel Estuary eel project, Cornwall",
+      "summary": "Since 2022, with Newquay Marine Group, Cormac and the Environment Agency, evaluates the eels using the Gannel estuary and its catchment, has installed a mussel-rope eel pass to help glass eels move upstream, and is planning video and catch monitoring of barriers to migration.",
+      "url": "https://wildplanettrust.org.uk/our-projects/at-home/european-eel/",
+      "kind": "program",
+      "sourceIDs": [
+        "wild-planet-trust-eel"
+      ],
+      "lastVerified": "2026-09-08"
+    }
+  ]
+}

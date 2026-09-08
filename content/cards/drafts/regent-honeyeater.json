@@ -1,0 +1,304 @@
+{
+  "id": "regent-honeyeater",
+  "schemaVersion": 1,
+  "commonName": "Regent Honeyeater",
+  "scientificName": "Anthochaera phrygia",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "South-eastern Australia — the inland slopes of New South Wales and north-east Victoria, with most of the birds in NSW",
+  "hook": "Too few elders were left to teach the song. Young males copied other birds.",
+  "story": [
+    {
+      "id": "regent-honeyeater-plumage",
+      "text": "A black hood, lemon-yellow scallops, warty bare skin around the eye, a flash of yellow in each wing — about 22 centimetres of bird.",
+      "sourceIDs": [
+        "birdlife-profile"
+      ]
+    },
+    {
+      "id": "regent-honeyeater-flocks",
+      "text": "Its ancestors moved in flocks of hundreds from Adelaide to Rockhampton, following box and ironbark blossom.",
+      "sourceIDs": [
+        "pmc-crates-2021",
+        "birdlife-profile",
+        "nsw-tssc-determination-2010"
+      ]
+    },
+    {
+      "id": "regent-honeyeater-collapse",
+      "text": "Most of that woodland was cleared; by 1997 about 1,500 mature birds remained, and today the estimate is 250 to 300.",
+      "sourceIDs": [
+        "nsw-tssc-determination-2010",
+        "nsw-sos-woodlands-jewel",
+        "taronga-2024-release"
+      ]
+    },
+    {
+      "id": "regent-honeyeater-miners",
+      "text": "What is left is fragmented and, in places, held by over-abundant noisy miners, aggressive natives that out-compete them.",
+      "sourceIDs": [
+        "nsw-sos-woodlands-jewel",
+        "birdlife-bird-of-year-2025"
+      ]
+    },
+    {
+      "id": "regent-honeyeater-song-loss",
+      "text": "In 2021 researchers found 12 percent of wild males, with too few elders to learn from, sang only other species' songs — and paired less often.",
+      "sourceIDs": [
+        "pmc-crates-2021"
+      ]
+    },
+    {
+      "id": "regent-honeyeater-song-gone",
+      "text": "By 2020 the traditional song had effectively vanished from the wild; only the zoo birds could still be taught it.",
+      "sourceIDs": [
+        "pmc-appleby-2026"
+      ]
+    },
+    {
+      "id": "regent-honeyeater-tutoring",
+      "text": "Taronga has bred the species since 1995; after a year of failed playback, tutoring by wild-born males had over half its young males singing the old song.",
+      "sourceIDs": [
+        "nsw-eye-spy-2025",
+        "anu-song-rescue-2026",
+        "pmc-appleby-2026"
+      ]
+    },
+    {
+      "id": "regent-honeyeater-releases",
+      "text": "More than 220 zoo-bred birds have gone into the Hunter Valley's Tomalpin Woodlands, and around a hundred into Chiltern-Mt Pilot, Victoria, in 2017.",
+      "sourceIDs": [
+        "nsw-eye-spy-2025",
+        "vic-premier-chiltern-2017"
+      ]
+    },
+    {
+      "id": "regent-honeyeater-capertee",
+      "text": "In the Capertee Valley a zoo-bred female paired with a wild male and fledged two chicks — a first for New South Wales.",
+      "sourceIDs": [
+        "birdlife-regent-eration"
+      ]
+    },
+    {
+      "id": "regent-honeyeater-witness",
+      "text": "To witness the regent honeyeater is to listen for a song taught back by the few who still knew it.",
+      "sourceIDs": [
+        "pmc-appleby-2026",
+        "anu-song-rescue-2026"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-regent-honeyeater",
+    "title": "Meet the regent honeyeater",
+    "summary": "Read BirdLife Australia's profile: the black-and-yellow plumage, the nomadic life on eucalypt blossom, and the release program bringing zoo-bred birds back to the woodland.",
+    "effort": "5 minutes",
+    "destinationURL": "https://birdlife.org.au/bird-profiles/regent-honeyeater/",
+    "destinationOrganization": "BirdLife Australia",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "birdlife-profile"
+    ],
+    "lastVerified": "2026-09-08",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "regent-honeyeater-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-08; rights record docs/media/regent-honeyeater-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-10-01",
+  "sources": [
+    {
+      "id": "birdlife-profile",
+      "title": "Regent Honeyeater",
+      "organization": "BirdLife Australia",
+      "url": "https://birdlife.org.au/bird-profiles/regent-honeyeater/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "birdlife-bird-of-year-2025",
+      "title": "Bird of the Year 2025: Regent Honeyeater",
+      "organization": "BirdLife Australia",
+      "url": "https://birdlife.org.au/news/bird-of-the-year-2025-regent-honeyeater/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "birdlife-regent-eration",
+      "title": "The Regent-eration: a new hope for threatened Regent Honeyeaters",
+      "organization": "BirdLife Australia",
+      "url": "https://birdlife.org.au/news/the-regent-eration-a-new-hope-for-threatened-regent-honeyeaters/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "birdlife-woodland-birds",
+      "title": "Woodland Birds",
+      "organization": "BirdLife Australia",
+      "url": "https://birdlife.org.au/programs/woodland-birds/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "nsw-tssc-determination-2010",
+      "title": "Regent honeyeater (Anthochaera phrygia) — critically endangered species listing, final determination 2010",
+      "organization": "NSW Threatened Species Scientific Committee",
+      "url": "https://www.environment.nsw.gov.au/topics/animals-and-plants/threatened-species/nsw-threatened-species-scientific-committee/determinations/final-determinations/2008-2010/regent-honeyeater-anthochaera-phrygia-critically-endangered-species-listing",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "nsw-sos-woodlands-jewel",
+      "title": "Save a critically endangered woodlands jewel",
+      "organization": "NSW Saving our Species",
+      "url": "https://www.environment.nsw.gov.au/topics/animals-and-plants/threatened-species/saving-our-species-program/partner-with-us/partner-articles/save-critically-endangered-woodlands-jewel",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "nsw-eye-spy-2025",
+      "title": "Eye spy regent honeyeaters over Wonnarua Country",
+      "organization": "NSW Environment and Heritage",
+      "url": "https://www.environment.nsw.gov.au/news/eye-spy-regent-honeyeaters-over-wonnarua-country",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "pmc-crates-2021",
+      "title": "Loss of vocal culture and fitness costs in a critically endangered songbird (Proc. R. Soc. B, 2021)",
+      "organization": "PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8059949",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "pmc-appleby-2026",
+      "title": "Rescue of the traditional song culture of a critically endangered songbird (Scientific Reports, 2026)",
+      "organization": "PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13043855/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "anu-song-rescue-2026",
+      "title": "Scientists rescue the lost song of the critically endangered regent honeyeater",
+      "organization": "Australian National University",
+      "url": "https://www.anu.edu.au/news/all-news/scientists-rescue-the-lost-song-of-the-critically-endangered-regent-honeyeater",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "taronga-2024-release",
+      "title": "Release of zoo-bred birds boosts critically endangered Regent Honeyeater numbers",
+      "organization": "Taronga Conservation Society Australia",
+      "url": "https://taronga.org.au/news/2024-09-18/release-zoo-bred-birds-boosts-critically-endangered-regent-honeyeater-numbers",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "vic-premier-chiltern-2017",
+      "title": "Threatened Regent Honeyeaters take flight at Chiltern",
+      "organization": "Premier of Victoria",
+      "url": "https://www.premier.vic.gov.au/threatened-regent-honeyeaters-take-flight-chiltern",
+      "lastAccessed": "2026-09-08"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-08",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-08 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "About 8.7 in long · 22 cm",
+    "lifespan": "Not well documented",
+    "diet": "Nectar of box, ironbark & mistletoe; insects, spiders & fruit",
+    "populationEstimate": "250–300 wild birds",
+    "populationAsOf": "2024 · per Taronga Conservation Society Australia",
+    "trend": "decreasing",
+    "threats": [
+      "Box-ironbark woodland clearing",
+      "Noisy miner aggression",
+      "Failed eucalypt flowering in dry years",
+      "Nest predation by possums & gliders"
+    ],
+    "sourceIDs": [
+      "birdlife-profile",
+      "nsw-tssc-determination-2010",
+      "nsw-sos-woodlands-jewel",
+      "taronga-2024-release",
+      "birdlife-regent-eration",
+      "birdlife-bird-of-year-2025"
+    ]
+  },
+  "reproduction": {
+    "id": "regent-honeyeater-reproduction",
+    "text": "Pairs, or sometimes loose colonies, nest from August to January; the female incubates two or three eggs in a cup nest set one to twenty metres up, and many attempts fail, as is usual for open-nesting woodland birds.",
+    "sourceIDs": [
+      "birdlife-profile",
+      "nsw-tssc-determination-2010"
+    ]
+  },
+  "insight": {
+    "id": "regent-honeyeater-insight",
+    "text": "Playing recordings to zoo-bred chicks did nothing; only when young birds were housed with wild-born males did they learn the true song — by 2026 more than half of Taronga's young males sang a song the wild population itself no longer sings.",
+    "sourceIDs": [
+      "pmc-appleby-2026",
+      "anu-song-rescue-2026"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Lower Hunter Valley, New South Wales",
+      "latitude": -32.8,
+      "longitude": 151.4,
+      "radiusKm": 60
+    },
+    {
+      "name": "Capertee Valley and Blue Mountains, New South Wales",
+      "latitude": -33.1,
+      "longitude": 150.1,
+      "radiusKm": 60
+    },
+    {
+      "name": "Chiltern-Mt Pilot, north-east Victoria",
+      "latitude": -36.15,
+      "longitude": 146.6,
+      "radiusKm": 40
+    }
+  ],
+  "gallery": [
+    "regent-honeyeater-plate-01",
+    "regent-honeyeater-context-01",
+    "regent-honeyeater-detail-01",
+    "regent-honeyeater-behavior-01",
+    "regent-honeyeater-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "birdlife-woodland-birds-program",
+      "organization": "BirdLife Australia",
+      "title": "Woodland Birds program",
+      "summary": "Coordinates the national Regent Honeyeater recovery effort: monitors and protects nests, manages noisy miners, plants trees and mistletoe in the Hunter Valley, and tracks the zoo-bred birds after release.",
+      "url": "https://birdlife.org.au/programs/woodland-birds/",
+      "kind": "program",
+      "sourceIDs": [
+        "birdlife-woodland-birds",
+        "birdlife-regent-eration"
+      ],
+      "lastVerified": "2026-09-08"
+    },
+    {
+      "id": "taronga-breed-for-release",
+      "organization": "Taronga Conservation Society Australia",
+      "title": "Regent Honeyeater breed-for-release",
+      "summary": "Breeds regent honeyeaters at Taronga Zoo Sydney and Taronga Western Plains Zoo, tutors the young in the wild song, and releases them with radio trackers into the Hunter Valley alongside BirdLife Australia and NSW Saving our Species — more than 200 released in NSW so far.",
+      "url": "https://taronga.org.au/news/2024-09-18/release-zoo-bred-birds-boosts-critically-endangered-regent-honeyeater-numbers",
+      "kind": "program",
+      "sourceIDs": [
+        "taronga-2024-release",
+        "pmc-appleby-2026"
+      ],
+      "lastVerified": "2026-09-08"
+    }
+  ]
+}

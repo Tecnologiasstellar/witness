@@ -1,0 +1,292 @@
+{
+  "id": "panamanian-golden-frog",
+  "schemaVersion": 1,
+  "commonName": "Panamanian Golden Frog",
+  "scientificName": "Atelopus zeteki",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "West-central Panama — the cordillera around El Valle de Antón and Altos de Campana, roughly 335–1,315 m",
+  "hook": "Unseen in the wild since 2009. In 2025, a hundred went back to the stream.",
+  "story": [
+    {
+      "id": "panamanian-golden-frog-opening",
+      "text": "A frog the length of a thumb — yellow, black-blotched, awake by day — once sat on mossy rocks by the mountain streams of west-central Panama.",
+      "sourceIDs": [
+        "nzcbi-golden-frog",
+        "maryland-zoo-golden-frog"
+      ]
+    },
+    {
+      "id": "panamanian-golden-frog-toxin",
+      "text": "Its skin carries zetekitoxin, a poison named for the frog itself and the most potent in its family.",
+      "sourceIDs": [
+        "sdzwa-golden-frog",
+        "nzcbi-golden-frog"
+      ]
+    },
+    {
+      "id": "panamanian-golden-frog-wave",
+      "text": "It has no eardrums, so beside loud water it waves: a male slowly rotates a forelimb to claim a rock or court a female.",
+      "sourceIDs": [
+        "plos-one-2023-calls",
+        "sdzwa-golden-frog",
+        "stri-panamabiota"
+      ]
+    },
+    {
+      "id": "panamanian-golden-frog-threat",
+      "text": "Then the chytrid fungus Bd, which invades amphibian skin, swept through Panama and reached El Valle de Antón, the last stronghold, in the mid-2000s.",
+      "sourceIDs": [
+        "nzcbi-reintroduction-2026",
+        "parc-history"
+      ]
+    },
+    {
+      "id": "panamanian-golden-frog-lastseen",
+      "text": "No one has recorded one in the wild since 2009.",
+      "sourceIDs": [
+        "parc-golden-frog",
+        "maryland-zoo-conservation"
+      ]
+    },
+    {
+      "id": "panamanian-golden-frog-ark",
+      "text": "Maryland Zoo bred the first in human care; over 1,000 adults now live at more than 50 North American institutions, with colonies in El Valle and Gamboa.",
+      "sourceIDs": [
+        "maryland-zoo-conservation",
+        "parc-golden-frog",
+        "miambiente-2021"
+      ]
+    },
+    {
+      "id": "panamanian-golden-frog-symbol",
+      "text": "Panama made it an ecological and cultural symbol by law in 2010; every August 14, El Valle's schoolchildren parade as frogs.",
+      "sourceIDs": [
+        "miambiente-2021",
+        "nzcbi-golden-frog-day"
+      ]
+    },
+    {
+      "id": "panamanian-golden-frog-science",
+      "text": "Protective skin bacteria, even a genetically engineered strain, have not yet shielded it from Bd.",
+      "sourceIDs": [
+        "isme-2021-probiotics"
+      ]
+    },
+    {
+      "id": "panamanian-golden-frog-release",
+      "text": "So in 2025 the rescue project set 100 captive-bred frogs in mesh pens near El Valle; about 70 percent died of chytrid in twelve weeks, and the survivors were released.",
+      "sourceIDs": [
+        "nzcbi-reintroduction-2026"
+      ]
+    },
+    {
+      "id": "panamanian-golden-frog-witness",
+      "text": "To witness the Panamanian golden frog is to watch a national symbol wave from behind glass — and wait for word from the stream.",
+      "sourceIDs": [
+        "nzcbi-golden-frog-day",
+        "nzcbi-reintroduction-2026"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-panamanian-golden-frog",
+    "title": "Meet the waving frog",
+    "summary": "Read the Smithsonian National Zoo's profile: the toxin, the semaphore, and the Species Survival Plan keeping the frog alive in human care.",
+    "effort": "5 minutes",
+    "destinationURL": "https://nationalzoo.si.edu/animals/panamanian-golden-frog",
+    "destinationOrganization": "Smithsonian's National Zoo & Conservation Biology Institute",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "nzcbi-golden-frog"
+    ],
+    "lastVerified": "2026-09-08",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "panamanian-golden-frog-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-08; rights record docs/media/panamanian-golden-frog-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-10-04",
+  "sources": [
+    {
+      "id": "nzcbi-golden-frog",
+      "title": "Panamanian golden frog",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/animals/panamanian-golden-frog",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "nzcbi-reintroduction-2026",
+      "title": "Scientists Trial Reintroductions of Panamanian Golden Frogs",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/news/scientists-trial-reintroductions-panamanian-golden-frogs",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "nzcbi-golden-frog-day",
+      "title": "Panamanian Golden Frog Day",
+      "organization": "Smithsonian's National Zoo & Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/conservation/news/panamanian-golden-frog-day",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "parc-golden-frog",
+      "title": "Panamanian Golden Frog",
+      "organization": "Panama Amphibian Rescue and Conservation Project (Smithsonian)",
+      "url": "https://amphibianrescue.org/panamanian-golden-frog/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "parc-history",
+      "title": "History",
+      "organization": "Panama Amphibian Rescue and Conservation Project (Smithsonian)",
+      "url": "https://amphibianrescue.org/history/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "maryland-zoo-golden-frog",
+      "title": "Panamanian Golden Frog",
+      "organization": "The Maryland Zoo in Baltimore",
+      "url": "https://www.marylandzoo.org/animal/panamanian-golden-frog/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "maryland-zoo-conservation",
+      "title": "Panamanian Golden Frog Conservation at The Maryland Zoo",
+      "organization": "The Maryland Zoo in Baltimore",
+      "url": "https://www.marylandzoo.org/conservation/current-projects/panamanian-golden-frog/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "sdzwa-golden-frog",
+      "title": "Panamanian Golden Frog",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/panamanian-golden-frog",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "stri-panamabiota",
+      "title": "Atelopus zeteki — STRI Research Portal (Amphibians of Panama)",
+      "organization": "Smithsonian Tropical Research Institute",
+      "url": "https://panamabiota.org/stri/taxa/index.php?taxauthid=1&taxon=10746&clid=16",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "plos-one-2023-calls",
+      "title": "Critical calls: Circadian and seasonal periodicity in vocal activity in a breeding colony of Panamanian golden frogs (Atelopus zeteki)",
+      "organization": "PLOS ONE via PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434951/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "isme-2021-probiotics",
+      "title": "Genetically modifying skin microbe to produce violacein and augmenting microbiome did not defend Panamanian golden frogs from disease",
+      "organization": "ISME Communications via PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9723765/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "miambiente-2021",
+      "title": "Buscan preservar la Rana Dorada en El Valle de Antón",
+      "organization": "Ministerio de Ambiente de Panamá",
+      "url": "https://miambiente.gob.pa/buscan-preservar-la-rana-dorada-en-el-valle-de-anton/",
+      "lastAccessed": "2026-09-08"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-08",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-08 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "1.4–2.5 in · 3.5–6.3 cm; under half an ounce",
+    "lifespan": "About 8–15 years in human care; unknown in the wild",
+    "diet": "Insects & small invertebrates, hunted by day",
+    "populationEstimate": "None confirmed in the wild; more than 1,000 adults in human care",
+    "populationAsOf": "2026 · per Panama Amphibian Rescue and Conservation Project",
+    "trend": "unknown",
+    "threats": [
+      "Chytrid fungus (Bd)",
+      "Housing development",
+      "Agricultural clearing",
+      "Road construction"
+    ],
+    "sourceIDs": [
+      "nzcbi-golden-frog",
+      "sdzwa-golden-frog",
+      "maryland-zoo-golden-frog",
+      "parc-golden-frog"
+    ]
+  },
+  "reproduction": {
+    "id": "panamanian-golden-frog-reproduction",
+    "text": "From November to January a male clasps a female and she lays one long strand of eggs on rock in a shallow stream; tadpoles hatch in about nine days, cling to the stone with a belly sucker, and take six to seven months to become frogs.",
+    "sourceIDs": [
+      "maryland-zoo-golden-frog",
+      "stri-panamabiota",
+      "sdzwa-golden-frog"
+    ]
+  },
+  "insight": {
+    "id": "panamanian-golden-frog-insight",
+    "text": "One frog's skin holds enough toxin to kill 1,200 mice — yet frogs raised in zoos are harmless, because the poison comes from what they eat in the wild.",
+    "sourceIDs": [
+      "nzcbi-golden-frog",
+      "sdzwa-golden-frog"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Cordillera of west-central Panama — El Valle de Antón to Altos de Campana",
+      "latitude": 8.65,
+      "longitude": -80.05,
+      "radiusKm": 60.0
+    }
+  ],
+  "gallery": [
+    "panamanian-golden-frog-plate-01",
+    "panamanian-golden-frog-context-01",
+    "panamanian-golden-frog-detail-01",
+    "panamanian-golden-frog-behavior-01",
+    "panamanian-golden-frog-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "parc-program",
+      "organization": "Panama Amphibian Rescue and Conservation Project",
+      "title": "Panama Amphibian Rescue and Conservation Project",
+      "summary": "Smithsonian-led partnership with Cheyenne Mountain Zoo and Zoo New England that breeds Panama's most threatened frogs at its Gamboa rescue center, studies how to blunt the chytrid fungus, and ran the 2025 golden frog release trial near El Valle.",
+      "url": "https://amphibianrescue.org/",
+      "kind": "program",
+      "sourceIDs": [
+        "parc-history",
+        "nzcbi-reintroduction-2026"
+      ],
+      "lastVerified": "2026-09-08"
+    },
+    {
+      "id": "maryland-zoo-program",
+      "organization": "The Maryland Zoo in Baltimore",
+      "title": "Project Golden Frog",
+      "summary": "Keeps the largest golden frog colony outside Panama — hundreds of frogs in a conservation center inside the zoo hospital, the core of the AZA Species Survival Plan — and sends staff to El Valle to build breeding tanks and plan reintroductions.",
+      "url": "https://www.marylandzoo.org/conservation/current-projects/panamanian-golden-frog/",
+      "kind": "program",
+      "sourceIDs": [
+        "maryland-zoo-conservation",
+        "plos-one-2023-calls"
+      ],
+      "lastVerified": "2026-09-08"
+    }
+  ]
+}

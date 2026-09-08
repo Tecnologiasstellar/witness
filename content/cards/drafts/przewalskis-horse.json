@@ -1,0 +1,304 @@
+{
+  "id": "przewalskis-horse",
+  "schemaVersion": 1,
+  "commonName": "Przewalski's Horse",
+  "scientificName": "Equus ferus przewalskii",
+  "conservationStatus": {
+    "displayName": "Endangered",
+    "normalizedValue": "endangered"
+  },
+  "generalizedRange": "Central Asian steppe — reintroduced herds in Mongolia, northwest China and central Kazakhstan; most animals still in zoos and reserves worldwide",
+  "hook": "Last seen wild in 1969. Every one alive descends from about a dozen horses.",
+  "story": [
+    {
+      "id": "przewalskis-horse-opening",
+      "text": "Stocky and dun, with an upright mane like a zebra’s and no forelock, Przewalski’s horse is the only living horse never domesticated.",
+      "sourceIDs": [
+        "nationalzoo-przewalskis-horse",
+        "zoo-berlin-przewalski"
+      ]
+    },
+    {
+      "id": "przewalskis-horse-chromosomes",
+      "text": "It has 66 chromosomes to the domestic horse’s 64, yet the two can still breed fertile foals.",
+      "sourceIDs": [
+        "nationalzoo-wild-equids",
+        "sdzwa-przewalskis-horse"
+      ]
+    },
+    {
+      "id": "przewalskis-horse-last-sighting",
+      "text": "The last wild one anyone recorded was seen in Mongolia’s Gobi in 1969; after that, only zoos.",
+      "sourceIDs": [
+        "zoo-berlin-przewalski",
+        "fzs-kertagy-kazakhstan",
+        "sdzwa-kurt-birth"
+      ]
+    },
+    {
+      "id": "przewalskis-horse-bottleneck",
+      "text": "By 1945 fewer than 20 breeding animals remained; every horse alive descends from about a dozen wild-caught founders.",
+      "sourceIDs": [
+        "nationalzoo-przewalskis-horse",
+        "sdzwa-kurt-birth"
+      ]
+    },
+    {
+      "id": "przewalskis-horse-hustai",
+      "text": "On 5 June 1992, sixteen horses from the Netherlands were released at Hustai, Mongolia; the park now counts 380 in 34 harems.",
+      "sourceIDs": [
+        "hustai-national-park",
+        "iucn-cem-reintroduction"
+      ]
+    },
+    {
+      "id": "przewalskis-horse-gobi",
+      "text": "The Gobi is harder ground: the dzud winter of 2022–23 killed about 180 of Great Gobi B’s 400-odd horses.",
+      "sourceIDs": [
+        "itg-takhi"
+      ]
+    },
+    {
+      "id": "przewalskis-horse-kalamaili",
+      "text": "At China’s Kalamaili reserve, released horses starved their first winter and were corralled each cold season; by 2013 about 121 lived there, most wild-born.",
+      "sourceIDs": [
+        "pmc-kalamaili-water"
+      ]
+    },
+    {
+      "id": "przewalskis-horse-kazakhstan",
+      "text": "In June 2024 Czech Air Force planes carried seven horses to Kazakhstan’s Altyn Dala, absent some 200 years; the first steppe-born foal came in August 2026.",
+      "sourceIDs": [
+        "prague-zoo-kazakhstan",
+        "fzs-kertagy-kazakhstan",
+        "zoo-berlin-przewalski"
+      ]
+    },
+    {
+      "id": "przewalskis-horse-kurt",
+      "text": "In August 2020 a foal named Kurt was born to a domestic mare in Texas, cloned from cells frozen in 1980 — genes the herd had lost.",
+      "sourceIDs": [
+        "sdzwa-kurt-birth",
+        "revive-restore-przewalski"
+      ]
+    },
+    {
+      "id": "przewalskis-horse-witness",
+      "text": "To witness the Przewalski’s horse is to watch a species walk out of a studbook onto three countries’ steppe — and to know how thin that line is.",
+      "sourceIDs": [
+        "zoo-berlin-przewalski",
+        "iucn-cem-reintroduction",
+        "itg-takhi"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-przewalskis-horse",
+    "title": "Follow the wild horses home",
+    "summary": "Read Prague Zoo’s Return of the Wild Horses page: the airlifts to Kazakhstan, the year in the Alibi acclimatisation enclosures, and the first foal born on the Golden Steppe.",
+    "effort": "5 minutes",
+    "destinationURL": "https://www.zoopraha.cz/en/return-of-the-wild-horses/przewalski-s-horse/15590-return-of-the-wild-horses-kazakhstan",
+    "destinationOrganization": "Prague Zoo",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "prague-zoo-kazakhstan"
+    ],
+    "lastVerified": "2026-09-08",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "przewalskis-horse-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-08; rights record docs/media/przewalskis-horse-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-30",
+  "sources": [
+    {
+      "id": "nationalzoo-przewalskis-horse",
+      "title": "Przewalski's horse",
+      "organization": "Smithsonian's National Zoo and Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/animals/przewalskis-horse",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "nationalzoo-wild-equids",
+      "title": "Why We Work with Wild Equids: What is special about Przewalski's Horse?",
+      "organization": "Smithsonian's National Zoo and Conservation Biology Institute",
+      "url": "https://nationalzoo.si.edu/animals/news/why-we-work-wild-equids-what-special-about-przewalskis-horse",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "sdzwa-przewalskis-horse",
+      "title": "Przewalski's Horse",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/przewalskis-horse",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "sdzwa-kurt-birth",
+      "title": "Birth of Cloned Przewalski's Foal Offers Genetic Diversity for This Endangered Species",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://science.sandiegozoo.org/news/birth-cloned-przewalski%E2%80%99s-foal-offers-genetic-diversity-endangered-species",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "revive-restore-przewalski",
+      "title": "Przewalski's Horse Project",
+      "organization": "Revive & Restore",
+      "url": "https://reviverestore.org/projects/przewalskis-horse/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "prague-zoo-kazakhstan",
+      "title": "Return of the wild horses — Kazakhstan",
+      "organization": "Prague Zoo",
+      "url": "https://www.zoopraha.cz/en/return-of-the-wild-horses/przewalski-s-horse/15590-return-of-the-wild-horses-kazakhstan",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "fzs-kertagy-kazakhstan",
+      "title": "Kertagy Reintroduction to Central Kazakhstan",
+      "organization": "Frankfurt Zoological Society",
+      "url": "https://fzs.org/en/programs/kazakhstan/altyn-dala-protecting-the-golden-steppe/przewalskis-horses-return-to-central-kazakhstan/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "zoo-berlin-przewalski",
+      "title": "Przewalski's horse",
+      "organization": "Zoo Berlin",
+      "url": "https://www.zoo-berlin.de/en/species-conservation/worldwide/przewalskis-horse",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "hustai-national-park",
+      "title": "Hustai National Park",
+      "organization": "Hustai National Park Trust",
+      "url": "https://www.hustai.mn/language/en/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "iucn-cem-reintroduction",
+      "title": "From extinction to free ranging by successful reintroduction",
+      "organization": "IUCN Commission on Ecosystem Management",
+      "url": "https://iucn.org/news/commission-ecosystem-management/201803/extinction-free-ranging-successful-reintroduction",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "itg-takhi",
+      "title": "Takhi, the Wild Horse of Mongolia",
+      "organization": "International Takhi Group",
+      "url": "https://savethewildhorse.org/en/takhi-przewalskis-horse/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "pmc-kalamaili-water",
+      "title": "Water Use Patterns of Sympatric Przewalski's Horse and Khulan: Interspecific Comparison Reveals Niche Differences",
+      "organization": "PLOS ONE via PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4498657/",
+      "lastAccessed": "2026-09-08"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-08",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-08 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "Up to 5 ft at the withers · 550–800 lbs (250–360 kg)",
+    "lifespan": "About 18 years on average; up to 36 recorded",
+    "diet": "Grazer — wild grasses, plus leaves of shrubs",
+    "populationEstimate": "About 2,500 (zoos and wild)",
+    "populationAsOf": "2026 · per International Takhi Group",
+    "trend": "increasing",
+    "threats": [
+      "Dzud winters and drought",
+      "Hybridization with domestic horses",
+      "Low genetic diversity",
+      "Competition with livestock"
+    ],
+    "sourceIDs": [
+      "nationalzoo-przewalskis-horse",
+      "sdzwa-przewalskis-horse",
+      "itg-takhi",
+      "iucn-cem-reintroduction",
+      "pmc-kalamaili-water"
+    ]
+  },
+  "reproduction": {
+    "id": "przewalskis-horse-reproduction",
+    "text": "One foal after about eleven months, born at roughly 66 pounds; mares breed from around three years, stallions from five.",
+    "sourceIDs": [
+      "sdzwa-przewalskis-horse"
+    ]
+  },
+  "insight": {
+    "id": "przewalskis-horse-insight",
+    "text": "Przewalski’s horse has 66 chromosomes and the domestic horse 64 — yet unlike a mule, their 65-chromosome hybrid is fertile.",
+    "sourceIDs": [
+      "nationalzoo-wild-equids",
+      "nationalzoo-przewalskis-horse"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Hustai National Park, central Mongolia",
+      "latitude": 47.7,
+      "longitude": 105.9,
+      "radiusKm": 60
+    },
+    {
+      "name": "Great Gobi B, Dzungarian Gobi, western Mongolia",
+      "latitude": 45.4,
+      "longitude": 93.5,
+      "radiusKm": 150
+    },
+    {
+      "name": "Altyn Dala steppe, central Kazakhstan",
+      "latitude": 49.8,
+      "longitude": 64.8,
+      "radiusKm": 200
+    }
+  ],
+  "gallery": [
+    "przewalskis-horse-plate-01",
+    "przewalskis-horse-context-01",
+    "przewalskis-horse-detail-01",
+    "przewalskis-horse-behavior-01",
+    "przewalskis-horse-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "prague-zoo-return-of-the-wild-horses",
+      "organization": "Prague Zoo",
+      "title": "Return of the Wild Horses, Kazakhstan",
+      "summary": "Keeper of the species’ international studbook since 1959, Prague Zoo flies about eight horses a year from European zoos to the Alibi centre on Kazakhstan’s Altyn Dala, holds them a year in acclimatisation enclosures, and releases them — aiming for some 40 horses by 2028.",
+      "url": "https://www.zoopraha.cz/en/return-of-the-wild-horses/przewalski-s-horse/15590-return-of-the-wild-horses-kazakhstan",
+      "kind": "program",
+      "sourceIDs": [
+        "prague-zoo-kazakhstan",
+        "fzs-kertagy-kazakhstan",
+        "zoo-berlin-przewalski"
+      ],
+      "lastVerified": "2026-09-08"
+    },
+    {
+      "id": "itg-great-gobi-b",
+      "organization": "International Takhi Group",
+      "title": "Takhi reintroduction, Great Gobi B",
+      "summary": "Runs the reintroduction in Mongolia’s Great Gobi B Strictly Protected Area — transports since 1992, ranger monitoring of harems and bachelor groups, and rebuilding the herd after dzud winters — toward a long-term goal of 1,000 breeding animals.",
+      "url": "https://savethewildhorse.org/en/takhi-przewalskis-horse/",
+      "kind": "program",
+      "sourceIDs": [
+        "itg-takhi"
+      ],
+      "lastVerified": "2026-09-08"
+    }
+  ]
+}

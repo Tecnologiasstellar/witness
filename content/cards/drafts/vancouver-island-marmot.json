@@ -1,0 +1,294 @@
+{
+  "id": "vancouver-island-marmot",
+  "schemaVersion": 1,
+  "commonName": "Vancouver Island Marmot",
+  "scientificName": "Marmota vancouverensis",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Vancouver Island, British Columbia, Canada — subalpine meadows of the island’s central and southern mountains, and nowhere else on Earth",
+  "hook": "In 2003, fewer than 30 left. Last count: 427, on more than 30 mountains.",
+  "story": [
+    {
+      "id": "vancouver-island-marmot-opening",
+      "text": "Chocolate-brown with a white nose, chin and chest, this marmot lives on one island off Canada’s west coast and nowhere else.",
+      "sourceIDs": [
+        "mrf-profile",
+        "eccc-recovery-2020"
+      ]
+    },
+    {
+      "id": "vancouver-island-marmot-sleep",
+      "text": "It sleeps seven to eight months of the year underground, heart slowed to three or four beats a minute, and wakes up to a third lighter.",
+      "sourceIDs": [
+        "mrf-profile",
+        "eccc-recovery-2020"
+      ]
+    },
+    {
+      "id": "vancouver-island-marmot-meadow",
+      "text": "In the short season above ground it grazes subalpine meadows on more than 40 kinds of plant and warns its colony with five distinct whistles.",
+      "sourceIDs": [
+        "mrf-profile",
+        "eccc-recovery-2020"
+      ]
+    },
+    {
+      "id": "vancouver-island-marmot-decline",
+      "text": "The count fell from about 325 in 1984 to some 70 in 1998, and to fewer than 30 by 2003.",
+      "sourceIDs": [
+        "eccc-recovery-2020",
+        "mrf-history",
+        "mrf-current-status"
+      ]
+    },
+    {
+      "id": "vancouver-island-marmot-threat",
+      "text": "Wolves, cougars and golden eagles took 80 percent of those that died; colonies in clearcuts lasted a median of ten years, and all ten were gone by 2000.",
+      "sourceIDs": [
+        "mrf-history",
+        "cosewic-2008-threats"
+      ]
+    },
+    {
+      "id": "vancouver-island-marmot-captivity",
+      "text": "In 1997 the Recovery Team began taking marmots into captivity, the first six to the Toronto Zoo; 56 by 2004.",
+      "sourceIDs": [
+        "mrf-captivity",
+        "toronto-zoo-vim"
+      ]
+    },
+    {
+      "id": "vancouver-island-marmot-releases",
+      "text": "Since 2003 the Marmot Recovery Foundation has released 725 captive-born marmots, each acclimated first to mountain weather at an island centre.",
+      "sourceIDs": [
+        "wilder-program",
+        "mrf-captivity",
+        "mrf-work",
+        "pmc-genetic-2022"
+      ]
+    },
+    {
+      "id": "vancouver-island-marmot-count",
+      "text": "Going into the winter of 2025–26 there were 427 wild marmots in 35 colonies — the highest count on record, in a population that still swings hard year to year.",
+      "sourceIDs": [
+        "mrf-current-status"
+      ]
+    },
+    {
+      "id": "vancouver-island-marmot-witness",
+      "text": "To witness the Vancouver Island marmot is to hear a whistle cross a meadow that, for a few years, had gone quiet.",
+      "sourceIDs": [
+        "mrf-profile",
+        "mrf-current-status"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-vancouver-island-marmot",
+    "title": "Meet Canada’s rarest marmot",
+    "summary": "Read the Marmot Recovery Foundation’s species profile: the five whistles, the eight-month sleep, and the meadows it needs.",
+    "effort": "4 minutes",
+    "destinationURL": "https://marmots.org/about-marmots/animal-profile/",
+    "destinationOrganization": "Marmot Recovery Foundation",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "mrf-profile"
+    ],
+    "lastVerified": "2026-09-08",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "vancouver-island-marmot-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-08; rights record docs/media/vancouver-island-marmot-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-29",
+  "sources": [
+    {
+      "id": "mrf-profile",
+      "title": "Vancouver Island Marmot Profile",
+      "organization": "Marmot Recovery Foundation",
+      "url": "https://marmots.org/about-marmots/animal-profile/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "mrf-current-status",
+      "title": "Current Status",
+      "organization": "Marmot Recovery Foundation",
+      "url": "https://marmots.org/about-marmots/current-status-2/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "mrf-history",
+      "title": "History & Decline",
+      "organization": "Marmot Recovery Foundation",
+      "url": "https://marmots.org/about-marmots/history-decline/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "mrf-captivity",
+      "title": "Marmots in Captivity: conservation breeding",
+      "organization": "Marmot Recovery Foundation",
+      "url": "https://marmots.org/recovery-efforts/marmots-in-captivity/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "mrf-work",
+      "title": "About Our Work",
+      "organization": "Marmot Recovery Foundation",
+      "url": "https://marmots.org/about-our-work/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "eccc-recovery-2020",
+      "title": "Vancouver Island Marmot (Marmota vancouverensis): recovery strategy 2020",
+      "organization": "Environment and Climate Change Canada, Species at Risk Public Registry",
+      "url": "https://www.canada.ca/en/environment-climate-change/services/species-risk-public-registry/recovery-strategies/vancouver-island-marmot-2020.html",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "cosewic-2008-summary",
+      "title": "COSEWIC assessment and status report on the Vancouver Island Marmot: assessment summary",
+      "organization": "COSEWIC / Government of Canada",
+      "url": "https://www.canada.ca/en/environment-climate-change/services/species-risk-public-registry/cosewic-assessments-status-reports/vancouver-island-marmot/chapter-1.html",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "cosewic-2008-threats",
+      "title": "COSEWIC assessment and status report on the Vancouver Island Marmot: limiting factors and threats",
+      "organization": "COSEWIC / Government of Canada",
+      "url": "https://www.canada.ca/en/environment-climate-change/services/species-risk-public-registry/cosewic-assessments-status-reports/vancouver-island-marmot/chapter-8.html",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "toronto-zoo-vim",
+      "title": "Vancouver Island Marmot Captive Breeding",
+      "organization": "Toronto Zoo",
+      "url": "https://www.torontozoo.com/tz/vim",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "wilder-program",
+      "title": "Vancouver Island Marmot Program",
+      "organization": "Wilder Institute / Calgary Zoo",
+      "url": "https://wilderinstitute.org/program/vancouver-island-marmot-program/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "pmc-reproductive-2024",
+      "title": "Factors Associated with Reproductive Success in Captive Vancouver Island Marmots (Marmota vancouverensis)",
+      "organization": "PubMed Central (Animals, 2024)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10854754/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "pmc-genetic-2022",
+      "title": "Genetic management on the brink of extinction: sequencing microsatellites does not improve estimates of inbreeding in wild and captive Vancouver Island marmots",
+      "organization": "PubMed Central (Conservation Genetics, 2022)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8948115/",
+      "lastAccessed": "2026-09-08"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-08",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-08 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "26–28 in nose to tail · males up to 16.5 lbs (7.5 kg)",
+    "lifespan": "Over 10 years in the wild · 10–15 in captivity",
+    "diet": "Herbivore — meadow grasses, sedges, lupines & other wildflowers",
+    "populationEstimate": "427",
+    "populationAsOf": "2025 · per Marmot Recovery Foundation",
+    "trend": "increasing",
+    "threats": [
+      "Predation by wolves, cougars & golden eagles",
+      "Isolated colonies & lost dispersal routes",
+      "Clearcut logging beside meadows",
+      "Trees creeping into warming meadows"
+    ],
+    "sourceIDs": [
+      "mrf-profile",
+      "mrf-current-status",
+      "mrf-history",
+      "eccc-recovery-2020",
+      "cosewic-2008-threats",
+      "mrf-work"
+    ]
+  },
+  "reproduction": {
+    "id": "vancouver-island-marmot-reproduction",
+    "text": "Mating comes just after emergence, gestation lasts about a month, and a female weans three or four pups — but usually only every other year, since hibernation costs her up to a third of her body mass.",
+    "sourceIDs": [
+      "toronto-zoo-vim",
+      "mrf-profile",
+      "pmc-reproductive-2024",
+      "eccc-recovery-2020"
+    ]
+  },
+  "insight": {
+    "id": "vancouver-island-marmot-insight",
+    "text": "For seven to eight months a year a marmot’s heart beats three or four times a minute — down from 110 to 200 when it is awake.",
+    "sourceIDs": [
+      "mrf-profile",
+      "eccc-recovery-2020"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Nanaimo Lakes highlands — south-central Vancouver Island",
+      "latitude": 49.0,
+      "longitude": -124.3,
+      "radiusKm": 40.0
+    },
+    {
+      "name": "Strathcona Provincial Park & Forbidden Plateau — central Vancouver Island",
+      "latitude": 49.7,
+      "longitude": -125.6,
+      "radiusKm": 60.0
+    }
+  ],
+  "gallery": [
+    "vancouver-island-marmot-plate-01",
+    "vancouver-island-marmot-context-01",
+    "vancouver-island-marmot-detail-01",
+    "vancouver-island-marmot-behavior-01",
+    "vancouver-island-marmot-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "mrf-recovery-program",
+      "organization": "Marmot Recovery Foundation",
+      "title": "Breed, release, feed, monitor",
+      "summary": "Runs the Tony Barrett Mount Washington Marmot Recovery Centre, releases the previous year’s pups each summer, feeds females after hibernation, cuts back trees creeping into meadows, and tracks the wild population by camera trap, survey and radio telemetry.",
+      "url": "https://marmots.org/about-our-work/",
+      "kind": "program",
+      "sourceIDs": [
+        "mrf-work",
+        "mrf-captivity"
+      ],
+      "lastVerified": "2026-09-08"
+    },
+    {
+      "id": "wilder-institute-marmot-program",
+      "organization": "Wilder Institute / Calgary Zoo",
+      "title": "Conservation breeding, Archibald Biodiversity Centre",
+      "summary": "Pairs marmots by genetics and raises pups underground at its Archibald Biodiversity Centre — more than 250 born there since 1998 — for release on Vancouver Island by the Marmot Recovery Foundation.",
+      "url": "https://wilderinstitute.org/program/vancouver-island-marmot-program/",
+      "kind": "program",
+      "sourceIDs": [
+        "wilder-program"
+      ],
+      "lastVerified": "2026-09-08"
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "id": "saiga-antelope",
+  "schemaVersion": 1,
+  "commonName": "Saiga Antelope",
+  "scientificName": "Saiga tatarica",
+  "conservationStatus": {
+    "displayName": "Near Threatened",
+    "normalizedValue": "near_threatened"
+  },
+  "generalizedRange": "Steppes and semi-deserts of Central Asia — Kazakhstan above all, with small herds in Russia, Uzbekistan and Mongolia",
+  "hook": "In 2003: 21,000. In 2015, 200,000 died in three weeks. Today: millions.",
+  "story": [
+    {
+      "id": "saiga-antelope-nose",
+      "text": "The saiga’s nose is an inflated, drooping tube: it warms air at minus 40 on the winter steppe and filters dust at plus 40 in summer.",
+      "sourceIDs": [
+        "fzs-saiga-recovery",
+        "sdzwa-saiga"
+      ]
+    },
+    {
+      "id": "saiga-antelope-ice-age",
+      "text": "It grazed beside mammoths; the megafauna went, the saiga stayed, still migrating more than a thousand kilometers a year.",
+      "sourceIDs": [
+        "fzs-saiga-recovery"
+      ]
+    },
+    {
+      "id": "saiga-antelope-horns",
+      "text": "Only males carry the ridged amber horns, and those horns are why they were hunted: within a decade numbers fell more than 95 percent, to about 21,000 by 2003.",
+      "sourceIDs": [
+        "sdzwa-saiga",
+        "fzs-saiga-recovery"
+      ]
+    },
+    {
+      "id": "saiga-antelope-die-off",
+      "text": "In May 2015 a common bacterium, Pasteurella multocida, killed more than 200,000 saiga in three weeks — some 62 percent of the world’s — after unusually warm, humid days in Betpak-Dala.",
+      "sourceIDs": [
+        "kock-2018-saigas-on-brink"
+      ]
+    },
+    {
+      "id": "saiga-antelope-recovery",
+      "text": "Then the steppe refilled: rangers, spring aerial counts and five million protected hectares later, Kazakhstan’s 2024 census found 2,833,600.",
+      "sourceIDs": [
+        "altyn-dala-census-2024",
+        "earthshot-altyn-dala",
+        "fzs-saiga-recovery"
+      ]
+    },
+    {
+      "id": "saiga-antelope-reclassified",
+      "text": "On 11 December 2023 the IUCN moved the saiga from Critically Endangered to Near Threatened.",
+      "sourceIDs": [
+        "sca-saiga",
+        "fzs-kazakhstan"
+      ]
+    },
+    {
+      "id": "saiga-antelope-cull",
+      "text": "Abundance has its own arithmetic: in 2025 Kazakhstan culled about 196,000 saiga to protect farmland, and CITES let it export 10,000 kilograms of horn a year for three years.",
+      "sourceIDs": [
+        "astana-times-saiga-2025",
+        "wcs-cites-cop20-saiga"
+      ]
+    },
+    {
+      "id": "saiga-antelope-uncertainty",
+      "text": "Scientists warn the die-offs recur, and conservationists fear reopened trade will pull demand toward the small herds of Mongolia, Russia and Uzbekistan.",
+      "sourceIDs": [
+        "kock-2018-saigas-on-brink",
+        "wcs-cites-cop20-saiga",
+        "sca-saiga"
+      ]
+    },
+    {
+      "id": "saiga-antelope-witness",
+      "text": "To witness the saiga antelope is to see a species come back within a single human lifetime — and to keep counting.",
+      "sourceIDs": [
+        "altyn-dala-census-2024",
+        "fzs-kazakhstan"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-saiga-antelope",
+    "title": "Meet the Ice Age antelope",
+    "summary": "Read the Saiga Conservation Alliance’s species overview: the 2023 status change, the herds in Kazakhstan, Russia, Uzbekistan and Mongolia, and the threats that remain.",
+    "effort": "5 minutes",
+    "destinationURL": "https://saiga-conservation.org/saiga/",
+    "destinationOrganization": "Saiga Conservation Alliance",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "sca-saiga"
+    ],
+    "lastVerified": "2026-09-08",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "saiga-antelope-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-08; rights record docs/media/saiga-antelope-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-09-28",
+  "sources": [
+    {
+      "id": "sca-saiga",
+      "title": "Saiga",
+      "organization": "Saiga Conservation Alliance",
+      "url": "https://saiga-conservation.org/saiga/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "sca-population-monitoring",
+      "title": "Population monitoring",
+      "organization": "Saiga Conservation Alliance",
+      "url": "https://saiga-conservation.org/projects/population-monitoring/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "fzs-kazakhstan",
+      "title": "Kazakhstan",
+      "organization": "Frankfurt Zoological Society",
+      "url": "https://fzs.org/en/projects/kazakhstan/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "fzs-saiga-recovery",
+      "title": "Supporting saiga antelope recovery",
+      "organization": "Frankfurt Zoological Society",
+      "url": "https://fzs.org/en/programs/kazakhstan/altyn-dala-protecting-the-golden-steppe/supporting-saiga-antelope-recovery/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "fzs-migration-returned",
+      "title": "A great migration returned",
+      "organization": "Frankfurt Zoological Society",
+      "url": "https://fzs.org/en/news/a-great-migration-returned/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "kock-2018-saigas-on-brink",
+      "title": "Saigas on the brink: Multidisciplinary analysis of the factors influencing mass mortality events (Science Advances, 2018)",
+      "organization": "Kock et al., via PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5777396/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "altyn-dala-census-2024",
+      "title": "Results from the 2024 saiga aerial census in Kazakhstan are in!",
+      "organization": "Altyn Dala Conservation Initiative",
+      "url": "https://altyndala.org/results-from-the-2024-saiga-aerial-census-in-kazakhstan-are-in/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "earthshot-altyn-dala",
+      "title": "Altyn Dala Conservation Initiative — 2024 winner, Protect & Restore Nature",
+      "organization": "The Earthshot Prize",
+      "url": "https://earthshotprize.org/winners-finalists/altyn-dala-conservation-initiative/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "sdzwa-saiga",
+      "title": "Saiga",
+      "organization": "San Diego Zoo Wildlife Alliance",
+      "url": "https://animals.sandiegozoo.org/animals/saiga",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "adw-saiga",
+      "title": "Saiga tatarica (saiga)",
+      "organization": "Animal Diversity Web, University of Michigan",
+      "url": "https://animaldiversity.org/accounts/Saiga_tatarica/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "wcs-cites-cop20-saiga",
+      "title": "CITES CoP20 Decision Allows International Trade in Saiga Horn, Strongly Opposed by WCS",
+      "organization": "Wildlife Conservation Society",
+      "url": "https://newsroom.wcs.org/News-Releases/articleType/ArticleView/articleId/25672/CITES-CoP20-Decision-Allows-International-Trade-in-Saiga-Horn-Strongly-Opposed-by-WCS.aspx",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "astana-times-saiga-2025",
+      "title": "Kazakhstan Reports Record Saiga Numbers, Advances Management Measures",
+      "organization": "The Astana Times (reporting Kazakhstan’s Ministry of Ecology and Natural Resources)",
+      "url": "https://astanatimes.com/2025/12/kazakhstan-reports-record-saiga-numbers-advances-management-measures/",
+      "lastAccessed": "2026-09-08"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-08",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-08 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "Sheep-sized · 2–2.6 ft at the shoulder · 66–99 lbs (30–45 kg)",
+    "lifespan": "10–12 years in the wild",
+    "diet": "Grazer — grasses, herbs, lichens & low shrubs, 100+ plant species",
+    "populationEstimate": "2,833,600 in Kazakhstan (about 99 percent of the species)",
+    "populationAsOf": "2024 · per ACBK aerial census / Altyn Dala Conservation Initiative",
+    "trend": "increasing",
+    "threats": [
+      "Poaching and horn trade",
+      "Mass die-offs (Pasteurella)",
+      "Infrastructure cutting migration routes",
+      "Climate extremes on the steppe"
+    ],
+    "sourceIDs": [
+      "adw-saiga",
+      "sdzwa-saiga",
+      "altyn-dala-census-2024",
+      "fzs-saiga-recovery",
+      "kock-2018-saigas-on-brink",
+      "sca-saiga"
+    ]
+  },
+  "reproduction": {
+    "id": "saiga-antelope-reproduction",
+    "text": "Females breed in their first year; after 139 to 152 days about two-thirds bear twins, in late April and May — so a herd can grow 35 to 40 percent in a good year.",
+    "sourceIDs": [
+      "sdzwa-saiga",
+      "fzs-migration-returned"
+    ]
+  },
+  "insight": {
+    "id": "saiga-antelope-insight",
+    "text": "The bacterium that killed 200,000 saiga in 2015 is an ordinary opportunist that had struck the same ground in 1981 and 1988; what changed was the weather — a run of unusually warm, humid days.",
+    "sourceIDs": [
+      "kock-2018-saigas-on-brink"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Betpak-Dala steppe, central Kazakhstan",
+      "latitude": 46.5,
+      "longitude": 69.0,
+      "radiusKm": 300
+    },
+    {
+      "name": "Ural saiga range, western Kazakhstan",
+      "latitude": 49.0,
+      "longitude": 50.0,
+      "radiusKm": 250
+    },
+    {
+      "name": "Ustyurt Plateau, Kazakhstan–Uzbekistan",
+      "latitude": 44.0,
+      "longitude": 55.5,
+      "radiusKm": 200
+    }
+  ],
+  "gallery": [
+    "saiga-antelope-plate-01",
+    "saiga-antelope-context-01",
+    "saiga-antelope-detail-01",
+    "saiga-antelope-behavior-01",
+    "saiga-antelope-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "altyn-dala-conservation-initiative",
+      "organization": "Altyn Dala Conservation Initiative (ACBK, Frankfurt Zoological Society, Fauna & Flora, RSPB, Kazakhstan’s Committee for Forestry and Wildlife)",
+      "title": "Altyn Dala Conservation Initiative",
+      "summary": "Since 2006 has counted Kazakhstan’s saiga from the air each spring, GPS-collared herds, run ranger and aerial anti-poaching patrols, and helped the government protect some 5 million hectares of steppe — the 2024 Earthshot Prize winner for Protect & Restore Nature.",
+      "url": "https://altyndala.org/",
+      "kind": "program",
+      "sourceIDs": [
+        "earthshot-altyn-dala",
+        "fzs-saiga-recovery",
+        "altyn-dala-census-2024"
+      ],
+      "lastVerified": "2026-09-08"
+    },
+    {
+      "id": "sca-population-monitoring",
+      "organization": "Saiga Conservation Alliance",
+      "title": "Saiga population monitoring",
+      "summary": "Coordinates line-transect counts, satellite tagging and drone trials across the five range states, working with ACBK in Kazakhstan and WWF-Mongolia’s community conservationists to track the smaller herds.",
+      "url": "https://saiga-conservation.org/projects/population-monitoring/",
+      "kind": "program",
+      "sourceIDs": [
+        "sca-population-monitoring"
+      ],
+      "lastVerified": "2026-09-08"
+    }
+  ]
+}

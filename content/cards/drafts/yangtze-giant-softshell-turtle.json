@@ -1,0 +1,305 @@
+{
+  "id": "yangtze-giant-softshell-turtle",
+  "schemaVersion": 1,
+  "commonName": "Yangtze Giant Softshell Turtle",
+  "scientificName": "Rafetus swinhoei",
+  "conservationStatus": {
+    "displayName": "Critically Endangered",
+    "normalizedValue": "critically_endangered"
+  },
+  "generalizedRange": "Red River basin of northern Viet Nam and Yunnan, and the lower Yangtze floodplain of eastern China — today a few lakes west of Hanoi and one zoo in Suzhou",
+  "hook": "Two known alive. One is over 100 years old. The other’s sex is unknown.",
+  "story": [
+    {
+      "id": "yangtze-giant-softshell-turtle-opening",
+      "text": "The largest freshwater turtle on earth is a softshell: a bony plate ringed with cartilage under leathery skin, olive with yellow spots.",
+      "sourceIDs": [
+        "atp-rafetus-project",
+        "atp-hoan-kiem-death-2016",
+        "naturalis-turtles-of-the-world"
+      ]
+    },
+    {
+      "id": "yangtze-giant-softshell-turtle-life",
+      "text": "It is secretive, surfacing and basking rarely, keeping to the depths of large turbid lakes.",
+      "sourceIDs": [
+        "atp-xuan-khanh-edna-2018",
+        "tsa-species-profile"
+      ]
+    },
+    {
+      "id": "yangtze-giant-softshell-turtle-legend",
+      "text": "In Hanoi it is the Hoan Kiem turtle, from a fifteenth-century legend of a turtle rising to reclaim King Le Loi’s sword.",
+      "sourceIDs": [
+        "atp-hoan-kiem-death-2016"
+      ]
+    },
+    {
+      "id": "yangtze-giant-softshell-turtle-threat",
+      "text": "In the 1970s to 1990s it was hunted for food while its wetlands were dammed or turned to rice fields.",
+      "sourceIDs": [
+        "atp-hoan-kiem-death-2016",
+        "atp-xuan-khanh-edna-2018"
+      ]
+    },
+    {
+      "id": "yangtze-giant-softshell-turtle-cu-rua",
+      "text": "On 19 January 2016 Cu Rua, Great Grandfather Turtle, some 170 kilograms, was found floating in Hoan Kiem Lake, one of four known alive.",
+      "sourceIDs": [
+        "atp-hoan-kiem-death-2016"
+      ]
+    },
+    {
+      "id": "yangtze-giant-softshell-turtle-suzhou",
+      "text": "At Suzhou Zoo a pair together since 2008 nested, every egg infertile; the female died 13 April 2019 after a fifth artificial insemination.",
+      "sourceIDs": [
+        "atp-xuan-khanh-edna-2018",
+        "atp-suzhou-female-death-2019",
+        "atp-dong-mo-female-2020"
+      ]
+    },
+    {
+      "id": "yangtze-giant-softshell-turtle-hope",
+      "text": "A turtle netted in Dong Mo Lake on 22 October 2020 proved female: a male and a female were known again.",
+      "sourceIDs": [
+        "atp-dong-mo-female-2020",
+        "wcs-newsroom-dong-mo-2020"
+      ]
+    },
+    {
+      "id": "yangtze-giant-softshell-turtle-loss",
+      "text": "On 23 April 2023 keepers found a Dong Mo turtle dead — 93 kilograms, nearly 156 centimetres — likely the 2020 female.",
+      "sourceIDs": [
+        "vgp-dong-mo-death-2023",
+        "wcs-newsroom-edna-2025"
+      ]
+    },
+    {
+      "id": "yangtze-giant-softshell-turtle-now",
+      "text": "As of 2024 two are known: the Suzhou male, over 100, and one of unknown sex in Xuan Khanh Lake, found by DNA in lake water.",
+      "sourceIDs": [
+        "wcs-newsroom-edna-2025",
+        "atp-rafetus-project"
+      ]
+    },
+    {
+      "id": "yangtze-giant-softshell-turtle-witness",
+      "text": "To witness the Yangtze giant softshell turtle is to watch a still lake for a head that may never rise, hoping the water holds more.",
+      "sourceIDs": [
+        "wcs-newsroom-edna-2025",
+        "atp-rafetus-project"
+      ]
+    }
+  ],
+  "action": {
+    "id": "learn-yangtze-giant-softshell-turtle",
+    "title": "Meet the world’s rarest turtle",
+    "summary": "Read the Asian Turtle Program’s Rafetus project page: every known animal, the Dong Mo and Xuan Khanh lakes, and how DNA in lake water is used to find more.",
+    "effort": "5 minutes",
+    "destinationURL": "https://asianturtleprogram.org/rafetus-project/",
+    "destinationOrganization": "Asian Turtle Program of Indo-Myanmar Conservation",
+    "geographicApplicability": "Worldwide",
+    "sourceIDs": [
+      "atp-rafetus-project"
+    ],
+    "lastVerified": "2026-09-08",
+    "measurementType": "opened"
+  },
+  "media": {
+    "assetID": "yangtze-giant-softshell-turtle-plate-01",
+    "depictionType": "AI-assisted stylized illustration",
+    "creator": "Witness (generated via Higgsfield, owner account tecnologiasstellar)",
+    "source": "Higgsfield job pending, 2026-09-08; rights record docs/media/yangtze-giant-softshell-turtle-plates-rights.md",
+    "license": "ai_generated_owned",
+    "requiredAttribution": "None",
+    "commercialUseStatus": "owner-asserted, Higgsfield plan terms verification pending",
+    "verificationStatus": "pending"
+  },
+  "publishDate": "2026-10-06",
+  "sources": [
+    {
+      "id": "atp-rafetus-project",
+      "title": "The Rafetus swinhoei Project",
+      "organization": "Asian Turtle Program of Indo-Myanmar Conservation",
+      "url": "https://asianturtleprogram.org/rafetus-project/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "atp-hoan-kiem-death-2016",
+      "title": "The death of the Hoan Kiem Turtle, Hanoi Vietnam – Farewell to a legend",
+      "organization": "Asian Turtle Program of Indo-Myanmar Conservation",
+      "url": "https://asianturtleprogram.org/2016-01-the-death-of-the-hoan-kiem-turtle-hanoi-vietnam/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "atp-xuan-khanh-edna-2018",
+      "title": "Environmental DNA helps confirm a new individual of the world’s rarest turtle in the wild – 4 animals now known",
+      "organization": "Asian Turtle Program of Indo-Myanmar Conservation",
+      "url": "https://asianturtleprogram.org/2018-04-the_fourth_rafetus_swinhoei_known/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "atp-suzhou-female-death-2019",
+      "title": "The female Swinhoe’s Softshell Turtle passed away in China",
+      "organization": "Asian Turtle Program of Indo-Myanmar Conservation",
+      "url": "https://asianturtleprogram.org/2019-04-female-swinhoes-softshell-turtle-death/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "atp-dong-mo-female-2020",
+      "title": "Genetic Results Confirmed A Female Swinhoe’s Softshell Turtle",
+      "organization": "Asian Turtle Program of Indo-Myanmar Conservation",
+      "url": "https://asianturtleprogram.org/turtle-captured-in-october-2020-was-rafetus-swinhoe/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "wcs-newsroom-dong-mo-2020",
+      "title": "World’s Most Endangered Turtle Gets Some Good News In 2020",
+      "organization": "Wildlife Conservation Society",
+      "url": "https://newsroom.wcs.org/News-Releases/articleType/ArticleView/articleId/15641/Worlds-Most-Endangered-Turtle-Gets-Some-Good-News-In-2020.aspx",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "wcs-newsroom-edna-2025",
+      "title": "Scientists Develop First Portable eDNA Test Which Is Able to Detect One of the Rarest of the Rare Wildlife Species, a Swinhoe’s Softshell turtle, in a Massive Body of Water",
+      "organization": "Wildlife Conservation Society",
+      "url": "https://newsroom.wcs.org/News-Releases/articleType/ArticleView/articleId/24087/Scientists-Develop-First-Portable-eDNA-Test-Which-Is-Able-to-Detect-One-of-the-Rarest-of-the-Rare-Wildlife-Species-a-Swinhoes-Softshell-turtle-in-a-Massive-Body-of-Water.aspx",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "vgp-dong-mo-death-2023",
+      "title": "Hoan Kiem giant turtle in Dong Mo Lake dies",
+      "organization": "Viet Nam Government Portal (Thang Long)",
+      "url": "https://thanglong.chinhphu.vn/english/hoan-kiem-giant-turtle-in-dong-mo-lake-dies-110230425162754838.htm",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "igb-fact-card",
+      "title": "Yangtze giant softshell turtle — Freshwater Fact Card",
+      "organization": "Leibniz Institute of Freshwater Ecology and Inland Fisheries (IGB)",
+      "url": "https://www.igb-berlin.de/en/yangtze-giant-softshell-turtle",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "naturalis-turtles-of-the-world",
+      "title": "Rafetus swinhoei — Turtles of the World",
+      "organization": "Naturalis Biodiversity Center",
+      "url": "https://turtles.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=7985&epi=11",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "tsa-species-profile",
+      "title": "Swinhoe’s Giant Softshell Turtle",
+      "organization": "Turtle Survival Alliance",
+      "url": "https://turtlesurvival.org/species/swinhoes-giant-softshell-turtle/",
+      "lastAccessed": "2026-09-08"
+    },
+    {
+      "id": "tsa-vietnam-program",
+      "title": "Vietnam program",
+      "organization": "Turtle Survival Alliance",
+      "url": "https://turtlesurvival.org/programs/vietnam/",
+      "lastAccessed": "2026-09-08"
+    }
+  ],
+  "editorial": {
+    "state": "prototype",
+    "reviewer": "",
+    "lastFactChecked": "2026-09-08",
+    "sensitiveLocationReview": "generalized",
+    "notes": "Drafted 2026-09-08 by Claude from fetched sources; awaiting founder fact-check, plates, and approval."
+  },
+  "stats": {
+    "size": "About 4 ft long · up to 375 lbs (170 kg)",
+    "lifespan": "Over 100 years",
+    "diet": "Omnivore — mollusks, crustaceans, insects & marsh-plant seeds",
+    "populationEstimate": "2 known individuals",
+    "populationAsOf": "2024 · per Wildlife Conservation Society",
+    "trend": "decreasing",
+    "threats": [
+      "Hunting for meat and eggs",
+      "Dams on rivers and wetlands",
+      "Bycatch in fishing gear",
+      "Wetlands lost to farming"
+    ],
+    "sourceIDs": [
+      "atp-hoan-kiem-death-2016",
+      "igb-fact-card",
+      "naturalis-turtles-of-the-world",
+      "wcs-newsroom-edna-2025",
+      "tsa-species-profile"
+    ]
+  },
+  "reproduction": {
+    "id": "yangtze-giant-softshell-turtle-reproduction",
+    "text": "A female can lay more than 50 eggs a clutch, three or four clutches a year, and stay fertile past 90 — yet the Suzhou pair, together since 2008, never produced a fertile egg.",
+    "sourceIDs": [
+      "igb-fact-card",
+      "atp-xuan-khanh-edna-2018",
+      "atp-dong-mo-female-2020"
+    ]
+  },
+  "insight": {
+    "id": "yangtze-giant-softshell-turtle-insight",
+    "text": "As of 2024 the Xuan Khanh turtle has never been caught: its existence rests on one unclear photograph from 2017 and traces of its DNA sieved from the lake water.",
+    "sourceIDs": [
+      "atp-xuan-khanh-edna-2018",
+      "wcs-newsroom-edna-2025"
+    ]
+  },
+  "habitatRegions": [
+    {
+      "name": "Red River delta west of Hanoi — Son Tay lakes",
+      "latitude": 21.1,
+      "longitude": 105.55,
+      "radiusKm": 60
+    },
+    {
+      "name": "Lower Yangtze — Tai Hu basin around Suzhou (historic)",
+      "latitude": 31.2,
+      "longitude": 120.4,
+      "radiusKm": 80
+    },
+    {
+      "name": "Upper Red River, Yunnan (historic)",
+      "latitude": 23.3,
+      "longitude": 103.2,
+      "radiusKm": 150
+    }
+  ],
+  "gallery": [
+    "yangtze-giant-softshell-turtle-plate-01",
+    "yangtze-giant-softshell-turtle-context-01",
+    "yangtze-giant-softshell-turtle-detail-01",
+    "yangtze-giant-softshell-turtle-behavior-01",
+    "yangtze-giant-softshell-turtle-scale-01"
+  ],
+  "programs": [
+    {
+      "id": "atp-rafetus-program",
+      "organization": "Asian Turtle Program of Indo-Myanmar Conservation",
+      "title": "Rafetus swinhoei Project, Viet Nam",
+      "summary": "Keeps full-time local watchers on Dong Mo and Xuan Khanh lakes, runs interview surveys and eDNA sampling across northern Viet Nam’s rivers and lakes for undiscovered animals, and works with Hanoi’s fisheries and forest-protection agencies on capture, sexing, and a breeding plan.",
+      "url": "https://asianturtleprogram.org/rafetus-project/",
+      "kind": "program",
+      "sourceIDs": [
+        "atp-rafetus-project",
+        "atp-dong-mo-female-2020"
+      ],
+      "lastVerified": "2026-09-08"
+    },
+    {
+      "id": "tsa-vietnam-rafetus-program",
+      "organization": "Turtle Survival Alliance",
+      "title": "Swinhoe’s Giant Softshell Turtle, Vietnam program",
+      "summary": "With ATP, WCS, and the Government of Vietnam, uses visual surveys, drone and camera-trap searches, eDNA analysis, and capture-and-release to find and confirm individuals in Dong Mo and Xuan Khanh lakes.",
+      "url": "https://turtlesurvival.org/programs/vietnam/",
+      "kind": "program",
+      "sourceIDs": [
+        "tsa-vietnam-program",
+        "tsa-species-profile"
+      ],
+      "lastVerified": "2026-09-08"
+    }
+  ]
+}
