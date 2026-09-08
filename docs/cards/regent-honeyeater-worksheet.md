@@ -46,8 +46,11 @@ Fine natural-history plate illustration of Regent Honeyeater (Anthochaera phrygi
 ### regent-honeyeater-scale-01 — human scale, aspect 1:1
 
 ```
-Fine natural-history plate illustration of Regent Honeyeater (Anthochaera phrygia), a black hood covering head, neck and upper breast, lemon-yellow back and breast scaled with black crescents, black wings with bold yellow patches, a black tail edged yellow, and warty pale-yellow bare skin around the dark eye. Painterly gouache and ink on warm paper texture, muted palette of ink, lemon yellow and ironbark-bark ochre and lichen green, soft directional light, the animal beside a quiet human silhouette for scale, generous negative space, quiet dignified museum-specimen plate composition. No text, no border, no watermark. Original stylized illustration, not a photograph.
+Fine natural-history plate illustration of Regent Honeyeater (Anthochaera phrygia), a black hood covering head, neck and upper breast, its single most conspicuous feature a prominent patch of warty pale-yellow bare skin encircling the dark eye, the hood otherwise unbroken black with no yellow anywhere on the head or throat, lemon-yellow back and breast scaled with black crescents, black wings with bold yellow patches, a black tail edged yellow. Painterly gouache and ink on warm paper texture, muted palette of ink, lemon yellow and ironbark-bark ochre and lichen green, soft directional light, the animal beside a quiet human silhouette for scale, generous negative space, quiet dignified museum-specimen plate composition. No text, no border, no watermark. Original stylized illustration, not a photograph.
 ```
+
+> Species block amended 2026-09-08 after the accuracy review: the original wording stated the diagnostic as a negation, which the model ignored across four attempts. The style wording and the composition line are unchanged, and `docs/ART_PROMPT_TEMPLATE.md` is untouched — D-013 varies only the species block. This is the prompt that produced the kept file.
+
 
 ## Open questions for AV
 

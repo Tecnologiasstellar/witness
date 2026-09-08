@@ -22,8 +22,11 @@ Scaffolded 2026-09-02 by tools/new-card.py. Pipeline: docs/CARD_PRODUCTION_PIPEL
 ### devils-hole-pupfish-plate-01 — hero, aspect 2:3
 
 ```
-Fine natural-history plate illustration of Devils Hole Pupfish (Cyprinodon diabolis), a tiny deep-bodied pupfish about one inch long, no pelvic fins, a large dark eye, a short blunt head with an upturned mouth, the male an iridescent shimmering blue without the dark cross-bars of other pupfish, the female plain yellow-brown to olive. Painterly gouache and ink on warm paper texture, muted palette of ink, iridescent cobalt blue and pale limestone gold and lichen green, soft directional light, full body in gentle profile, generous negative space, quiet dignified museum-specimen plate composition. No text, no border, no watermark. Original stylized illustration, not a photograph.
+Fine natural-history plate illustration of Devils Hole Pupfish (Cyprinodon diabolis), a tiny deep-bodied pelvic-finless pupfish about one inch long: its underside is one smooth unbroken curve of pale belly running from the pectoral fins straight back to the anal fin, completely bare, with nothing attached anywhere along it, and the pectoral fins sit high on the flank just behind the gill cover; one soft dorsal fin set far back, a rounded fan-shaped tail, a large dark eye, a short blunt head with an upturned mouth, the male an iridescent shimmering blue without the dark cross-bars of other pupfish. Painterly gouache and ink on warm paper texture, muted palette of ink, iridescent cobalt blue and pale limestone gold and lichen green, soft directional light, full body in gentle profile, generous negative space, quiet dignified museum-specimen plate composition. No text, no border, no watermark. Original stylized illustration, not a photograph.
 ```
+
+> Species block amended 2026-09-08 after the accuracy review: the original wording stated the diagnostic as a negation, which the model ignored across four attempts. The style wording and the composition line are unchanged, and `docs/ART_PROMPT_TEMPLATE.md` is untouched — D-013 varies only the species block. This is the prompt that produced the kept file.
+
 
 ### devils-hole-pupfish-context-01 — habitat, aspect 3:2
 
