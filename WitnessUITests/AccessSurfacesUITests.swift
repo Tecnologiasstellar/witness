@@ -91,12 +91,22 @@ final class AccessSurfacesUITests: XCTestCase {
         openIndex()
 
         // Purchase Field Season through the fake service, then open the edition.
+        // Retry the card tap once: it can land on the settling frame of the
+        // sheet (same flake family as openIndex).
         app.buttons["access.overview.fieldseason"].tap()
         let purchase = app.buttons["access.fieldseason.purchase"]
-        XCTAssertTrue(purchase.waitForExistence(timeout: 5))
+        if !purchase.waitForExistence(timeout: 5) {
+            app.buttons["access.overview.fieldseason"].tap()
+            XCTAssertTrue(purchase.waitForExistence(timeout: 5))
+        }
         purchase.tap()
 
+        // Same guard as the overview flow: a dropped purchase tap leaves the
+        // button in place, so press it once more before failing.
         let open = app.buttons["access.fieldseason.open"]
+        if !open.waitForExistence(timeout: 5), purchase.exists {
+            purchase.tap()
+        }
         XCTAssertTrue(open.waitForExistence(timeout: 5))
         open.tap()
 

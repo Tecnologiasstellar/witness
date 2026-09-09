@@ -230,17 +230,24 @@ private struct ArchiveCard: View {
                 }
                 // The lock hides access, never identity: locked plates keep
                 // their full artwork and legible name, with one small chip.
+                // Both chips wear the same capsule so they stay legible on
+                // any plate; the lock is the only difference between them.
                 if isCurrentWeek {
                     Text("THIS WEEK")
-                        .font(AtlasType.technical(8, weight: .bold)).tracking(1)
-                        .foregroundStyle(AtlasTheme.sepia).padding(7)
+                        .font(AtlasType.technical(11, weight: .bold)).tracking(1)
+                        .foregroundStyle(AtlasTheme.heroInk)
+                        .padding(.horizontal, 7)
+                        .padding(.vertical, 4)
+                        .background(AtlasTheme.heroScrim.opacity(0.72))
+                        .clipShape(Capsule())
+                        .padding(7)
                 }
                 if isLocked {
                     HStack(spacing: 4) {
                         Image(systemName: "lock.fill")
-                            .font(.system(size: 8, weight: .semibold))
+                            .font(.system(size: 10, weight: .semibold))
                         Text("ATLAS")
-                            .font(AtlasType.technical(8, weight: .bold)).tracking(1)
+                            .font(AtlasType.technical(11, weight: .bold)).tracking(1)
                     }
                     .foregroundStyle(AtlasTheme.heroInk)
                     .padding(.horizontal, 7)

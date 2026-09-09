@@ -27,7 +27,11 @@ struct FieldSeasonPreviewView: View {
                         openEditionLink
                     }
                     purchaseArea
-                    PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
+                    // Owners already read their state in purchaseArea; the phase
+                    // line would only repeat it. Failures can only occur unowned.
+                    if !(commerce.ownsFieldSeason || commerce.atlasIsActive) {
+                        PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
+                    }
 
                     if let edition {
                         sampleRow(edition)

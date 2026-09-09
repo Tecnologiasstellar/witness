@@ -172,10 +172,12 @@ struct AtlasAccessSheet: View {
                             .tracking(1.0)
                         if let badge {
                             Text(badge.uppercased())
-                                .font(AtlasType.technical(8, weight: .bold))
-                                .tracking(1)
+                                .font(AtlasType.technical(11, weight: .bold))
+                                .tracking(0.8)
+                                .lineLimit(1)
+                                .fixedSize()
                                 .padding(.horizontal, 6)
-                                .padding(.vertical, 3)
+                                .padding(.vertical, 2)
                                 .overlay(Rectangle().stroke(AtlasTheme.sepia, lineWidth: 1))
                                 .foregroundStyle(AtlasTheme.sepia)
                         }
