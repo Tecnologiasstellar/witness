@@ -78,36 +78,8 @@ struct FieldSeasonPreviewView: View {
         edition?.chapters.first { $0.resolvedKind == .chapter }?.heroAssetID ?? "vaquita-plate-01"
     }
 
-    /// The first chapter's plate, edge to edge, with the edition named on
-    /// it — a book cover, not a product header.
     private var cover: some View {
-        ZStack(alignment: .bottomLeading) {
-            if let art = UIImage(named: coverPlate) {
-                Image(uiImage: art)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 440)
-                    .clipped()
-            }
-            LinearGradient(
-                colors: [.clear, AtlasTheme.heroScrim.opacity(0.85)],
-                startPoint: .center, endPoint: .bottom
-            )
-            VStack(alignment: .leading, spacing: 6) {
-                Text("FIELD SEASON ONE")
-                    .font(AtlasType.technical(12, weight: .bold)).tracking(1.6)
-                    .foregroundStyle(AtlasTheme.heroInk.opacity(0.85))
-                Text("The Counted Few")
-                    .font(AtlasType.display(44, weight: .semibold))
-                    .foregroundStyle(AtlasTheme.heroInk)
-                    .accessibilityAddTraits(.isHeader)
-            }
-            .padding(22)
-        }
-        .frame(height: 440)
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("Field Season One, The Counted Few")
+        AccessCover(eyebrow: "FIELD SEASON ONE", title: "The Counted Few", asset: coverPlate)
     }
 
     @ViewBuilder

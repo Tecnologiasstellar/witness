@@ -8,64 +8,64 @@ struct AtlasAccessSheet: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 22) {
-                Text("ATLAS")
-                    .font(AtlasType.display(30, weight: .semibold))
-                    .accessibilityAddTraits(.isHeader)
+            VStack(alignment: .leading, spacing: 0) {
+                AccessCover(eyebrow: "THE ATLAS", title: "The Living Library", asset: "snow-leopard-plate-01")
+                VStack(alignment: .leading, spacing: 22) {
+                    Text("Every week’s plate, past and future. Every field season, narrated. One membership, and the library keeps growing.")
+                        .font(AtlasType.display(21, weight: .regular))
+                        .lineSpacing(6)
 
-                // The library shown, not described: a fan of real plates
-                // from the archive, with one caption carrying the meaning.
-                VStack(spacing: 14) {
-                    PlateCollageStrip()
-                    Text("THE LIVING LIBRARY · GROWING WEEKLY")
-                        .font(AtlasType.technical(9, weight: .bold))
-                        .tracking(1.4)
-                        .foregroundStyle(AtlasTheme.sepia)
+                    if commerce.atlasIsActive {
+                        AccessStateNotice(
+                            text: "Atlas is active. \(commerce.atlasStatusLine).",
+                            identifier: "access.atlas.active"
+                        )
+                    } else {
+                        durationChoices
+                    }
+                    PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
+
+                    holdings
+                        .accessibilityIdentifier("access.atlas.production.notice")
+
+                    // The library shown, not described: a fan of real plates
+                    // from the archive, with one caption carrying the meaning.
+                    VStack(spacing: 14) {
+                        PlateCollageStrip()
+                        Text("THE LIVING LIBRARY · GROWING WEEKLY")
+                            .font(AtlasType.technical(11, weight: .bold))
+                            .tracking(1.4)
+                            .foregroundStyle(AtlasTheme.sepia)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 8)
+
+                    Text("Both durations unlock exactly the same Atlas. Renewal is automatic until cancelled in your Apple subscription settings; access ordinarily continues through the paid period after cancelling. When Atlas ends, the free ritual, your private records, and any separately purchased Field Season remain yours.")
+                        .font(AtlasType.display(16, weight: .regular))
+                        .foregroundStyle(AtlasTheme.inkMuted)
+                        .lineSpacing(5)
+
+                    Text("Atlas membership supports the making of Witness, week by week. Your Witness remains free.")
+                        .font(AtlasType.display(16, weight: .regular, italic: true))
+                        .foregroundStyle(AtlasTheme.inkMuted)
+                        .lineSpacing(5)
+
+                    AccessQuietRow(
+                        title: "RESTORE PURCHASES",
+                        detail: commerce.restorePhase == .restoring ? "…" : nil,
+                        identifier: "access.atlas.restore"
+                    ) {
+                        Task { await commerce.restore() }
+                    }
+                    ManageSubscriptionRow(identifier: "access.atlas.manage")
                 }
-                .frame(maxWidth: .infinity)
-                .padding(.top, 2)
-
-                Text("Every featured week beyond the free window, and every released field season — narrated — for as long as membership is active.")
-                    .font(.callout)
-                    .lineSpacing(4)
-
-                holdings
-                    .accessibilityIdentifier("access.atlas.production.notice")
-
-                if commerce.atlasIsActive {
-                    AccessStateNotice(
-                        text: "Atlas is active. \(commerce.atlasStatusLine).",
-                        identifier: "access.atlas.active"
-                    )
-                } else {
-                    durationChoices
-                }
-
-                PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
-
-                Text("Both durations unlock exactly the same Atlas. Renewal is automatic until cancelled in your Apple subscription settings; access ordinarily continues through the paid period after cancelling. When Atlas ends, the free ritual, your private records, and any separately purchased Field Season remain yours.")
-                    .font(.footnote)
-                    .foregroundStyle(AtlasTheme.inkMuted)
-                    .lineSpacing(3)
-
-                Text("Atlas membership supports the making of Witness, week by week. Your Witness remains free.")
-                    .font(AtlasType.display(15, weight: .regular, italic: true))
-                    .foregroundStyle(AtlasTheme.inkMuted)
-                    .lineSpacing(3)
-
-                AccessQuietRow(
-                    title: "RESTORE PURCHASES",
-                    detail: commerce.restorePhase == .restoring ? "…" : nil,
-                    identifier: "access.atlas.restore"
-                ) {
-                    Task { await commerce.restore() }
-                }
-                ManageSubscriptionRow(identifier: "access.atlas.manage")
+                .padding(22)
             }
-            .padding(22)
             .foregroundStyle(AtlasTheme.ink)
         }
         .background(AtlasPaper().ignoresSafeArea())
+        .ignoresSafeArea(edges: .top)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .task { await commerce.startIfNeeded() }
@@ -90,10 +90,10 @@ struct AtlasAccessSheet: View {
                 .frame(minWidth: 22, alignment: .leading)
             VStack(alignment: .leading, spacing: 1) {
                 Text(title)
-                    .font(AtlasType.technical(10, weight: .bold))
+                    .font(AtlasType.technical(12, weight: .bold))
                     .tracking(1.1)
                 Text(detail)
-                    .font(AtlasType.display(14, weight: .regular, italic: true))
+                    .font(AtlasType.display(16, weight: .regular, italic: true))
                     .foregroundStyle(AtlasTheme.inkMuted)
             }
             Spacer(minLength: 0)
@@ -168,7 +168,7 @@ struct AtlasAccessSheet: View {
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(spacing: 8) {
                         Text(product.localizedTitle)
-                            .font(AtlasType.technical(12, weight: .bold))
+                            .font(AtlasType.technical(13, weight: .bold))
                             .tracking(1.0)
                         if let badge {
                             Text(badge.uppercased())
@@ -181,7 +181,7 @@ struct AtlasAccessSheet: View {
                         }
                     }
                     Text(caption)
-                        .font(AtlasType.technical(10, weight: .medium))
+                        .font(AtlasType.technical(12, weight: .medium))
                         .foregroundStyle(AtlasTheme.inkMuted)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -190,7 +190,7 @@ struct AtlasAccessSheet: View {
                     ProgressView()
                 } else {
                     Text(product.localizedPrice)
-                        .font(AtlasType.display(21, weight: .semibold))
+                        .font(AtlasType.display(24, weight: .semibold))
                 }
             }
             .foregroundStyle(AtlasTheme.ink)

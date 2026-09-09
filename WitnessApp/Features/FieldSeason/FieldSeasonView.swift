@@ -37,10 +37,10 @@ struct FieldSeasonView: View {
                         text: "Field Season requires permanent ownership or an active Atlas membership.",
                         identifier: "fieldseason.locked"
                     )
+                    .padding(.top, 88)
                 } else if let edition {
-                    Text(edition.title.uppercased())
-                        .font(AtlasType.display(30, weight: .semibold))
-                        .accessibilityAddTraits(.isHeader)
+                    AccessCover(eyebrow: "FIELD SEASON ONE", title: "The Counted Few", asset: coverPlate(edition))
+                        .padding(.horizontal, -22)
                         .accessibilityIdentifier("fieldseason.title")
 
                     Text("Twelve pieces, complete. Read each one, or let it be read to you.")
@@ -86,8 +86,14 @@ struct FieldSeasonView: View {
             .foregroundStyle(AtlasTheme.ink)
         }
         .background(AtlasPaper().ignoresSafeArea())
+        .ignoresSafeArea(edges: .top)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private func coverPlate(_ edition: FieldSeasonEdition) -> String {
+        edition.chapters.first { $0.resolvedKind == .chapter }?.heroAssetID ?? "vaquita-plate-01"
     }
 
     private func chapterRow(_ chapter: FieldSeasonChapter) -> some View {

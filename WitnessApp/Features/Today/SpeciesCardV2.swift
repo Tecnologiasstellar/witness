@@ -609,7 +609,7 @@ private struct WorksModule: View {
         VStack(alignment: .leading, spacing: 0) {
             Rectangle().fill(AtlasTheme.ruleEdge).frame(height: 1)
             Text("THE WORKS")
-                .font(AtlasType.technical(10, weight: .bold)).tracking(1.25)
+                .font(AtlasType.technical(12, weight: .bold)).tracking(1.25)
                 .foregroundStyle(AtlasTheme.sepia)
                 .padding(.top, 16)
                 .padding(.bottom, 2)
@@ -640,23 +640,38 @@ private struct WorksModule: View {
         let note = chapter.map {
             "This week’s \(species.commonName.lowercased()) is chapter \(String(format: "%02d", $0.number)) of the finished edition."
         } ?? "\(storyCount) species along one ecological edge — complete and narrated."
-        let art = chapter?.heroAssetID ?? "vaquita-plate-01"
+        let cover = edition?.chapters.first { $0.resolvedKind == .chapter }?.heroAssetID ?? "vaquita-plate-01"
 
-        return worksRow(meta: meta, title: title, note: note, identifier: "today.fieldseason.door", label: "\(title), Field Season One. \(note) Opens the Field Season page.") {
+        // The finished edition wears its cover on the card — the same one
+        // its page opens on — so the door and the destination are one image.
+        return Button {
             open(work: "fieldseason", state: ownsFieldSeason ? "owned" : atlasIsActive ? "included" : "unheld")
             onOpenFieldSeason()
-        } visual: {
-            if let image = UIImage(named: art) {
-                Image(uiImage: image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 58, height: 74)
-                    .clipped()
-                    .padding(3)
-                    .background(AtlasTheme.paperFresh)
-                    .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+        } label: {
+            VStack(alignment: .leading, spacing: 0) {
+                AccessCover(eyebrow: meta, title: "The Counted Few", asset: cover, height: 250, titleSize: 30)
+                HStack(alignment: .firstTextBaseline, spacing: 10) {
+                    Text(chapter != nil ? "\(title) · \(note)" : note)
+                        .font(AtlasType.display(15, weight: .regular, italic: true))
+                        .foregroundStyle(AtlasTheme.inkMuted)
+                        .lineSpacing(3)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Spacer(minLength: 6)
+                    Text("›").foregroundStyle(AtlasTheme.sepia)
+                }
+                .padding(12)
             }
+            .background(AtlasTheme.paperFresh)
+            .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+            .contentShape(Rectangle())
         }
+        .buttonStyle(AtlasPressStyle())
+        .padding(.vertical, 14)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(title), Field Season One. \(note) Opens the Field Season page.")
+        .accessibilityAddTraits(.isButton)
+        .accessibilityIdentifier("today.fieldseason.door")
     }
 
     // MARK: Atlas — a growing library, so a small fan of real plates.
@@ -706,7 +721,7 @@ private struct WorksModule: View {
                     .accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: 4) {
                     Text(meta)
-                        .font(AtlasType.technical(9, weight: .bold)).tracking(1.1)
+                        .font(AtlasType.technical(11, weight: .bold)).tracking(1.1)
                         .foregroundStyle(AtlasTheme.sepia)
                         .lineLimit(1).minimumScaleFactor(0.8)
                     Text(title)

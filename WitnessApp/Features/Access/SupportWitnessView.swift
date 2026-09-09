@@ -8,58 +8,58 @@ struct SupportWitnessView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 22) {
-                Text("SUPPORT WITNESS")
-                    .font(AtlasType.display(30, weight: .semibold))
-                    .accessibilityAddTraits(.isHeader)
+            VStack(alignment: .leading, spacing: 0) {
+                AccessCover(eyebrow: "SUPPORT WITNESS", title: "Made by One Person", asset: "amur-leopard-detail-01")
+                VStack(alignment: .leading, spacing: 22) {
+                    Text("A one-time tip to the person making Witness. It funds research, illustration, narration, and keeps the app running. It unlocks nothing.")
+                        .font(AtlasType.display(21, weight: .regular))
+                        .lineSpacing(6)
 
-                // The work the tip funds, shown as work: three studies from
-                // the drawing table, not a benefits list.
-                VStack(spacing: 14) {
-                    PlateCollageStrip(
-                        assets: ["vaquita-detail-01", "amur-leopard-detail-01", "whooping-crane-detail-01"],
-                        height: 104
-                    )
-                    Text("RESEARCH · ILLUSTRATION · NARRATION · ACCESSIBILITY")
-                        .font(AtlasType.technical(9, weight: .bold))
-                        .tracking(1.3)
-                        .foregroundStyle(AtlasTheme.sepia)
-                        .multilineTextAlignment(.center)
-                }
-                .frame(maxWidth: .infinity)
-                .padding(.top, 2)
+                    tipArea
+                    PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
 
-                Text("Support the work behind Witness. A one-time tip to the person making it — it supports research, fact-checking, illustration, narration, accessibility, and operation of the app, and unlocks nothing.")
-                    .font(.callout)
-                    .lineSpacing(4)
+                    // The work the tip funds, shown as work: three studies from
+                    // the drawing table, not a benefits list.
+                    VStack(spacing: 14) {
+                        PlateCollageStrip(
+                            assets: ["vaquita-detail-01", "amur-leopard-detail-01", "whooping-crane-detail-01"],
+                            height: 104
+                        )
+                        Text("RESEARCH · ILLUSTRATION · NARRATION · ACCESSIBILITY")
+                            .font(AtlasType.technical(11, weight: .bold))
+                            .tracking(1.3)
+                            .foregroundStyle(AtlasTheme.sepia)
+                            .multilineTextAlignment(.center)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 8)
 
-                Text("A tip changes nothing about your standing here. It goes to the making of Witness, not to a conservation organization, and carries no tax benefit.")
-                    .font(.footnote)
-                    .foregroundStyle(AtlasTheme.inkMuted)
-                    .lineSpacing(3)
-
-                tipArea
-
-                PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
-
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("Your Witness remains free.")
-                        .font(AtlasType.display(15, weight: .regular, italic: true))
+                    Text("A tip changes nothing about your standing here. It goes to the making of Witness, not to a conservation organization, and carries no tax benefit.")
+                        .font(AtlasType.display(16, weight: .regular))
                         .foregroundStyle(AtlasTheme.inkMuted)
-                    Text("A tip is never expected here. It is always felt.")
-                        .font(AtlasType.display(15, weight: .regular, italic: true))
-                        .foregroundStyle(AtlasTheme.inkMuted)
-                    Text("— Alberto, who makes Witness")
-                        .font(AtlasType.display(14, weight: .regular, italic: true))
-                        .foregroundStyle(AtlasTheme.sepia)
+                        .lineSpacing(5)
+
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Your Witness remains free.")
+                            .font(AtlasType.display(17, weight: .regular, italic: true))
+                            .foregroundStyle(AtlasTheme.inkMuted)
+                        Text("A tip is never expected here. It is always felt.")
+                            .font(AtlasType.display(17, weight: .regular, italic: true))
+                            .foregroundStyle(AtlasTheme.inkMuted)
+                        Text("— Alberto, who makes Witness")
+                            .font(AtlasType.display(16, weight: .regular, italic: true))
+                            .foregroundStyle(AtlasTheme.sepia)
+                    }
+                    .padding(.top, 6)
+                    .accessibilityElement(children: .combine)
                 }
-                .padding(.top, 6)
-                .accessibilityElement(children: .combine)
+                .padding(22)
             }
-            .padding(22)
             .foregroundStyle(AtlasTheme.ink)
         }
         .background(AtlasPaper().ignoresSafeArea())
+        .ignoresSafeArea(edges: .top)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .task { await commerce.startIfNeeded() }

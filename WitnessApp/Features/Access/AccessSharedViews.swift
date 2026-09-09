@@ -79,6 +79,57 @@ struct AtlasPressStyle: ButtonStyle {
     }
 }
 
+/// A paid page opens on the work, not on a heading: one plate edge to
+/// edge, eyebrow and title set on it like a book cover. Every access
+/// surface (Field Season, the shelf, the Atlas, Support) shares it.
+struct AccessCover: View {
+    let eyebrow: String
+    let title: String
+    let asset: String
+    var height: CGFloat = 440
+    var titleSize: CGFloat = 44
+
+    var body: some View {
+        ZStack(alignment: .bottomLeading) {
+            // Overlay, not a sibling: a wide plate must never set the page
+            // width — the clear frame does, and the art fills it.
+            Color.clear
+                .frame(maxWidth: .infinity)
+                .frame(height: height)
+                .overlay {
+                    if let art = UIImage(named: asset) {
+                        Image(uiImage: art)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    }
+                }
+                .clipped()
+            // The scrim stays in the bottom band where the words sit, so a
+            // short cover keeps the animal in the clear.
+            LinearGradient(
+                stops: [
+                    .init(color: .clear, location: 0.45),
+                    .init(color: AtlasTheme.heroScrim.opacity(0.88), location: 1)
+                ],
+                startPoint: .top, endPoint: .bottom
+            )
+            VStack(alignment: .leading, spacing: 6) {
+                Text(eyebrow)
+                    .font(AtlasType.technical(12, weight: .bold)).tracking(1.6)
+                    .foregroundStyle(AtlasTheme.heroInk.opacity(0.85))
+                Text(title)
+                    .font(AtlasType.display(titleSize, weight: .semibold))
+                    .foregroundStyle(AtlasTheme.heroInk)
+                    .accessibilityAddTraits(.isHeader)
+            }
+            .padding(22)
+        }
+        .frame(height: height)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(eyebrow), \(title)")
+    }
+}
+
 /// A fan of real plates from the archive — the paid library shown, not
 /// described. Decorative: pair it with a text line that carries the meaning.
 struct PlateCollageStrip: View {
