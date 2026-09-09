@@ -43,10 +43,10 @@ struct FieldSeasonView: View {
                         .accessibilityAddTraits(.isHeader)
                         .accessibilityIdentifier("fieldseason.title")
 
-                    Text("A finite, authored edition — complete at twelve pieces. Every piece shipped only after sources, rights, and review were finished.")
-                        .font(.footnote)
+                    Text("Twelve pieces, complete. Read each one, or let it be read to you.")
+                        .font(AtlasType.display(18, weight: .regular))
                         .foregroundStyle(AtlasTheme.inkMuted)
-                        .lineSpacing(3)
+                        .lineSpacing(5)
 
                     AccessSectionHeading(text: "THE EDITION")
                     ForEach(edition.chapters) { chapter in
@@ -91,7 +91,7 @@ struct FieldSeasonView: View {
     }
 
     private func chapterRow(_ chapter: FieldSeasonChapter) -> some View {
-        HStack(alignment: .firstTextBaseline, spacing: 12) {
+        HStack(alignment: .center, spacing: 12) {
             Text(rowMark(chapter))
                 .font(AtlasType.display(22, weight: .medium))
                 .foregroundStyle(AtlasTheme.sepia)
@@ -101,7 +101,8 @@ struct FieldSeasonView: View {
                     .font(AtlasType.display(18, weight: .medium))
                     .multilineTextAlignment(.leading)
                 Text(rowSubtitle(chapter))
-                    .font(AtlasType.technical(10, weight: .medium))
+                    .font(AtlasType.technical(11, weight: .medium))
+                    .tracking(0.8)
                     .foregroundStyle(AtlasTheme.inkMuted)
             }
             Spacer()
@@ -111,7 +112,7 @@ struct FieldSeasonView: View {
                 Image(assetID)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 44, height: 56)
+                    .frame(width: 48, height: 60)
                     .clipped()
                     .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
                     .accessibilityHidden(true)

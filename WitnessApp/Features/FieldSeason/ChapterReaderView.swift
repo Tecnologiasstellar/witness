@@ -10,19 +10,24 @@ struct ChapterReaderView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 26) {
-                header
-                if let chapterAudio = chapter.audio {
-                    audioBar(chapterAudio)
+            VStack(alignment: .leading, spacing: 0) {
+                heroPlate
+                VStack(alignment: .leading, spacing: 26) {
+                    header
+                    if let chapterAudio = chapter.audio {
+                        audioBar(chapterAudio)
+                    }
+                    ForEach(chapter.sections) { section in
+                        sectionView(section)
+                    }
                 }
-                ForEach(chapter.sections) { section in
-                    sectionView(section)
-                }
+                .padding(22)
             }
-            .padding(22)
             .foregroundStyle(AtlasTheme.ink)
         }
         .background(AtlasPaper().ignoresSafeArea())
+        .ignoresSafeArea(edges: .top)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -54,26 +59,32 @@ struct ChapterReaderView: View {
         }
     }
 
+    /// The plate, edge to edge, the way the weekly card opens. Pieces
+    /// without a plate (letter, interludes, synthesis) open on paper.
+    @ViewBuilder
+    private var heroPlate: some View {
+        if let heroAssetID = chapter.heroAssetID, let art = UIImage(named: heroAssetID) {
+            Image(uiImage: art)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(maxWidth: .infinity)
+                .frame(height: 360)
+                .clipped()
+                .accessibilityHidden(true)
+        } else {
+            Color.clear.frame(height: 88)
+        }
+    }
+
     private var header: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(kindLabel)
-                .font(AtlasType.technical(11, weight: .medium))
+                .font(AtlasType.technical(12, weight: .bold)).tracking(1.2)
                 .foregroundStyle(AtlasTheme.sepia)
             Text(chapter.title)
-                .font(AtlasType.display(30, weight: .semibold))
+                .font(AtlasType.display(34, weight: .semibold))
                 .accessibilityAddTraits(.isHeader)
                 .accessibilityIdentifier("fieldseason.reader.title")
-            if let heroAssetID = chapter.heroAssetID, UIImage(named: heroAssetID) != nil {
-                Image(heroAssetID)
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 4))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 4)
-                            .strokeBorder(AtlasTheme.ruleSoft, lineWidth: 1)
-                    )
-                    .accessibilityHidden(true)
-            }
         }
     }
 
@@ -137,10 +148,11 @@ struct ChapterReaderView: View {
             }
             switch section.style {
             case .prose:
+                // The story itself reads like a book: serif, book size, open leading.
                 ForEach(section.entries) { entry in
                     Text(entry.text)
-                        .font(.callout)
-                        .lineSpacing(5)
+                        .font(AtlasType.display(19, weight: .regular))
+                        .lineSpacing(8)
                 }
             case .numbered:
                 ForEach(Array(section.entries.enumerated()), id: \.element.id) { index, entry in
@@ -150,9 +162,9 @@ struct ChapterReaderView: View {
                             .foregroundStyle(AtlasTheme.sepia)
                         VStack(alignment: .leading, spacing: 3) {
                             if let lead = entry.lead {
-                                Text(lead).font(.callout.weight(.semibold))
+                                Text(lead).font(AtlasType.display(18, weight: .semibold))
                             }
-                            Text(entry.text).font(.callout).lineSpacing(4)
+                            Text(entry.text).font(AtlasType.display(17, weight: .regular)).lineSpacing(6)
                         }
                     }
                 }
@@ -163,7 +175,7 @@ struct ChapterReaderView: View {
                             .font(AtlasType.technical(12, weight: .semibold))
                             .foregroundStyle(AtlasTheme.sepia)
                             .frame(width: 64, alignment: .leading)
-                        Text(entry.text).font(.footnote).lineSpacing(4)
+                        Text(entry.text).font(AtlasType.display(17, weight: .regular)).lineSpacing(6)
                     }
                     .padding(.vertical, 2)
                 }
@@ -171,9 +183,9 @@ struct ChapterReaderView: View {
                 ForEach(section.entries) { entry in
                     VStack(alignment: .leading, spacing: 4) {
                         Text((entry.lead ?? "").uppercased())
-                            .font(AtlasType.technical(10, weight: .semibold))
+                            .font(AtlasType.technical(11, weight: .semibold))
                             .foregroundStyle(AtlasTheme.sepia)
-                        Text(entry.text).font(.footnote).lineSpacing(4)
+                        Text(entry.text).font(AtlasType.display(17, weight: .regular)).lineSpacing(6)
                     }
                     .padding(12)
                     .frame(maxWidth: .infinity, alignment: .leading)

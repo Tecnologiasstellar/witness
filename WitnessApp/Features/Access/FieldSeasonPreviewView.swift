@@ -13,61 +13,56 @@ struct FieldSeasonPreviewView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 22) {
-                Text("FIELD SEASON")
-                    .font(AtlasType.display(30, weight: .semibold))
-                    .accessibilityAddTraits(.isHeader)
+            VStack(alignment: .leading, spacing: 0) {
+                cover
+                VStack(alignment: .leading, spacing: 22) {
+                    // The pitch, in plain words, before anything else.
+                    Text("Eight endangered species. One long story each, illustrated and narrated. Read it here, keep it forever.")
+                        .font(AtlasType.display(21, weight: .regular))
+                        .lineSpacing(6)
 
-                // Entitled readers get the stories first, not the sales page:
-                // one tap from here into the edition, before any scrolling.
-                if commerce.ownsFieldSeason || commerce.atlasIsActive {
-                    openEditionLink
+                    // Entitled readers get the stories first, not the sales
+                    // page; everyone else gets the price on the first screen.
+                    if commerce.ownsFieldSeason || commerce.atlasIsActive {
+                        openEditionLink
+                    }
+                    purchaseArea
+                    PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
+
+                    if let edition {
+                        sampleRow(edition)
+                        statRow(edition)
+                        contents(edition)
+                    }
+
+                    seasonPlate
+
+                    AccessSectionHeading(text: "WHAT PERMANENT MEANS")
+                    Text("The edition, its corrections, and its accessibility updates remain yours through your Apple account, restorable on this and future devices. It does not include future seasons or the Atlas library. While an Atlas membership is active, this season is already included.")
+                        .font(AtlasType.display(16, weight: .regular))
+                        .foregroundStyle(AtlasTheme.inkMuted)
+                        .lineSpacing(5)
+
+                    AccessQuietRow(
+                        title: "RESTORE PURCHASES",
+                        detail: commerce.restorePhase == .restoring ? "…" : nil,
+                        identifier: "access.fieldseason.restore"
+                    ) {
+                        Task { await commerce.restore() }
+                    }
+
+                    Text("Keeping this edition supports the making of Witness — one person’s research, fact-checking, illustration, and narration. Your Witness remains free.")
+                        .font(AtlasType.display(16, weight: .regular, italic: true))
+                        .foregroundStyle(AtlasTheme.inkMuted)
+                        .lineSpacing(5)
                 }
-
-                seasonPlate
-
-                Text("A finite, authored edition about one ecological edge: its species, pressures, uncertainties, and possible forms of attention. Purchasing keeps this edition permanently — it is not a subscription.")
-                    .font(.callout)
-                    .lineSpacing(4)
-
-                if let edition {
-                    statRow(edition)
-                    sampleRow(edition)
-                    contents(edition)
-                }
-
-                AccessStateNotice(
-                    text: "This edition is complete: twelve pieces, every one shipped only after sources, rights, and review were finished. Corrections and accessibility updates arrive free.",
-                    identifier: "access.fieldseason.production.notice"
-                )
-
-                AccessSectionHeading(text: "WHAT PERMANENT MEANS")
-                Text("The purchased edition, its corrections, and its accessibility updates remain yours through your Apple account, restorable on this and future devices. It does not include future seasons, the Atlas library, or any claim of a conservation outcome. While an Atlas membership is active, this season is already included.")
-                    .font(.footnote)
-                    .foregroundStyle(AtlasTheme.inkMuted)
-                    .lineSpacing(3)
-
-                purchaseArea
-
-                PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
-
-                AccessQuietRow(
-                    title: "RESTORE PURCHASES",
-                    detail: commerce.restorePhase == .restoring ? "…" : nil,
-                    identifier: "access.fieldseason.restore"
-                ) {
-                    Task { await commerce.restore() }
-                }
-
-                Text("Keeping this edition supports the making of Witness — one person’s research, fact-checking, illustration, and narration. Your Witness remains free: the complete public record, sources, action, count, and your private reflections never require a purchase.")
-                    .font(.footnote)
-                    .foregroundStyle(AtlasTheme.inkMuted)
-                    .lineSpacing(3)
+                .padding(22)
             }
-            .padding(22)
             .foregroundStyle(AtlasTheme.ink)
         }
         .background(AtlasPaper().ignoresSafeArea())
+        .ignoresSafeArea(edges: .top)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .task { await commerce.startIfNeeded() }
@@ -79,6 +74,42 @@ struct FieldSeasonPreviewView: View {
 
     // MARK: - Cover
 
+    private var coverPlate: String {
+        edition?.chapters.first { $0.resolvedKind == .chapter }?.heroAssetID ?? "vaquita-plate-01"
+    }
+
+    /// The first chapter's plate, edge to edge, with the edition named on
+    /// it — a book cover, not a product header.
+    private var cover: some View {
+        ZStack(alignment: .bottomLeading) {
+            if let art = UIImage(named: coverPlate) {
+                Image(uiImage: art)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 440)
+                    .clipped()
+            }
+            LinearGradient(
+                colors: [.clear, AtlasTheme.heroScrim.opacity(0.85)],
+                startPoint: .center, endPoint: .bottom
+            )
+            VStack(alignment: .leading, spacing: 6) {
+                Text("FIELD SEASON ONE")
+                    .font(AtlasType.technical(12, weight: .bold)).tracking(1.6)
+                    .foregroundStyle(AtlasTheme.heroInk.opacity(0.85))
+                Text("The Counted Few")
+                    .font(AtlasType.display(44, weight: .semibold))
+                    .foregroundStyle(AtlasTheme.heroInk)
+                    .accessibilityAddTraits(.isHeader)
+            }
+            .padding(22)
+        }
+        .frame(height: 440)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Field Season One, The Counted Few")
+    }
+
     @ViewBuilder
     private var seasonPlate: some View {
         if UIImage(named: "season-plate-01") != nil {
@@ -88,11 +119,12 @@ struct FieldSeasonPreviewView: View {
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
                     .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
-                Text("THE COUNTED FEW · SEASON PLATE")
-                    .font(AtlasType.technical(9, weight: .medium))
+                Text("THE SEASON PLATE · THE EIGHT DRAWN TOGETHER")
+                    .font(AtlasType.technical(11, weight: .medium))
                     .tracking(1.1)
                     .foregroundStyle(AtlasTheme.inkMuted)
             }
+            .padding(.top, 6)
             .accessibilityElement(children: .ignore)
             .accessibilityLabel("The season plate, titled The Counted Few: the eight species of the edition drawn together")
         }
@@ -113,11 +145,11 @@ struct FieldSeasonPreviewView: View {
     private func statTile(value: String, label: String) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(label)
-                .font(AtlasType.technical(9, weight: .bold))
+                .font(AtlasType.technical(11, weight: .bold))
                 .tracking(1.1)
                 .foregroundStyle(AtlasTheme.sepia)
             Text(value)
-                .font(AtlasType.display(20, weight: .semibold))
+                .font(AtlasType.display(22, weight: .semibold))
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 10)
@@ -143,11 +175,11 @@ struct FieldSeasonPreviewView: View {
                         .foregroundStyle(AtlasTheme.sepia)
                     VStack(alignment: .leading, spacing: 3) {
                         Text("HEAR THE OPENING")
-                            .font(AtlasType.technical(10, weight: .bold))
+                            .font(AtlasType.technical(11, weight: .bold))
                             .tracking(1.1)
                             .foregroundStyle(AtlasTheme.sepia)
                         Text("“\(letter.title)” · \(ChapterAudioPlayer.timestamp(audio.durationSeconds))")
-                            .font(AtlasType.display(15, weight: .medium))
+                            .font(AtlasType.display(17, weight: .medium))
                             .foregroundStyle(AtlasTheme.ink)
                     }
                     Spacer()
@@ -195,10 +227,10 @@ struct FieldSeasonPreviewView: View {
                 .frame(minWidth: 26, alignment: .leading)
             VStack(alignment: .leading, spacing: 2) {
                 Text(piece.title)
-                    .font(AtlasType.display(16, weight: .medium))
+                    .font(AtlasType.display(18, weight: .medium))
                     .multilineTextAlignment(.leading)
                 Text(rowSubtitle(piece))
-                    .font(AtlasType.technical(9, weight: .medium))
+                    .font(AtlasType.technical(11, weight: .medium))
                     .tracking(0.8)
                     .foregroundStyle(AtlasTheme.inkMuted)
             }
@@ -208,7 +240,7 @@ struct FieldSeasonPreviewView: View {
                 Image(assetID)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 44, height: 44)
+                    .frame(width: 48, height: 60)
                     .clipped()
                     .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
                     .accessibilityHidden(true)
@@ -231,12 +263,14 @@ struct FieldSeasonPreviewView: View {
     }
 
     private func rowSubtitle(_ piece: FieldSeasonChapter) -> String {
-        switch piece.resolvedKind {
-        case .chapter: "CHAPTER · FREE RECORD + FULL DOSSIER"
-        case .letter: "OPENING FIELD LETTER"
+        let kind = switch piece.resolvedKind {
+        case .chapter: "CHAPTER"
+        case .letter: "OPENING LETTER"
         case .interlude: "INTERLUDE"
-        case .synthesis: "CLOSING SYNTHESIS + SEASON PLATE"
+        case .synthesis: "CLOSING"
         }
+        guard let audio = piece.audio else { return kind }
+        return "\(kind) · \(Int((audio.durationSeconds / 60).rounded())) MIN"
     }
 
     // MARK: - Purchase
@@ -290,21 +324,31 @@ struct FieldSeasonPreviewView: View {
         }
     }
 
+    /// For owners the edition is the product: the door gets the same
+    /// letterpress weight the purchase button had.
     private var openEditionLink: some View {
         NavigationLink {
             FieldSeasonView(commerce: commerce)
         } label: {
-            HStack {
+            VStack(spacing: 4) {
                 Text("OPEN THE EDITION")
-                    .font(AtlasType.technical(12, weight: .semibold))
-                Spacer()
-                Image(systemName: "chevron.right").font(.caption)
+                    .font(AtlasType.technical(12, weight: .bold))
+                    .tracking(1.35)
+                Text("Twelve pieces, read and narrated")
+                    .font(AtlasType.display(16, weight: .semibold))
+                    .opacity(0.9)
             }
-            .foregroundStyle(AtlasTheme.sepia)
-            .padding(.vertical, 14)
+            .foregroundStyle(AtlasTheme.paper)
+            .frame(maxWidth: .infinity, minHeight: 58)
+            .background(AtlasTheme.ink)
+            .overlay(
+                Rectangle()
+                    .strokeBorder(AtlasTheme.paper.opacity(0.35), lineWidth: 1)
+                    .padding(3)
+            )
             .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(AtlasPressStyle())
         .accessibilityIdentifier("access.fieldseason.open")
     }
 }

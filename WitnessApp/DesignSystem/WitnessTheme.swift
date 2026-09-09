@@ -53,7 +53,10 @@ enum AtlasType {
     // Fixed point sizes wrapped through UIFontMetrics so every label follows
     // the user's Dynamic Type setting.
     static func technical(_ size: CGFloat, weight: Font.Weight = .regular) -> Font {
-        Font(UIFontMetrics(forTextStyle: .caption1).scaledFont(for: .systemFont(ofSize: size, weight: uiWeight(weight))))
+        // Floor: the 9–10pt tracked caps were the hardest text in the app to
+        // read, so every label is lifted here rather than at forty call sites.
+        let size = max(size, 11)
+        return Font(UIFontMetrics(forTextStyle: .caption1).scaledFont(for: .systemFont(ofSize: size, weight: uiWeight(weight))))
     }
 
     private static func uiWeight(_ weight: Font.Weight) -> UIFont.Weight {
