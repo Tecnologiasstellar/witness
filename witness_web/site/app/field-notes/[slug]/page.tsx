@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container, Eyebrow, PrimaryLink, TextLink } from "@/components/atlas";
 import { Breadcrumbs } from "@/components/record";
+import { SubscribeLine } from "@/components/subscribe";
 import { SITE_URL, recordById } from "@/lib/archive";
 import { allNotes, noteBySlug, siblingNotes, sourceHost } from "@/lib/notes";
 
@@ -51,7 +52,9 @@ export default async function FieldNotePage({
       datePublished: note.date,
       dateModified: note.date,
       isAccessibleForFree: true,
-      author: { "@type": "Organization", name: "Witness" },
+      author: note.author
+        ? { "@type": "Person", name: note.author, ...(note.authorUrl ? { url: note.authorUrl } : {}) }
+        : { "@type": "Organization", name: "Witness" },
       publisher: { "@type": "Organization", name: "Witness" },
       citation: note.sources,
       url: `${SITE_URL}/field-notes/${note.slug}`,
@@ -99,6 +102,23 @@ export default async function FieldNotePage({
               <h1 className="mt-6 max-w-[20ch] text-balance font-display text-[clamp(2.1rem,5vw,3.6rem)] font-semibold leading-[1.04] tracking-[-0.02em] text-ink">
                 {note.title}
               </h1>
+              {note.author ? (
+                <p className="mt-5 text-[15px] text-ink-muted">
+                  By{" "}
+                  {note.authorUrl ? (
+                    <a
+                      href={note.authorUrl}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="text-sepia underline decoration-hairline/70 decoration-1 underline-offset-[5px] hover:text-ink"
+                    >
+                      {note.author}
+                    </a>
+                  ) : (
+                    note.author
+                  )}
+                </p>
+              ) : null}
             </div>
             <p className="max-w-[46ch] text-pretty text-[16px] leading-[1.7] text-ink-muted md:col-span-4 md:pt-6">
               {note.description}
@@ -210,6 +230,7 @@ export default async function FieldNotePage({
             <PrimaryLink href="/archive">Browse the archive</PrimaryLink>
             <TextLink href="/method">How a claim earns its place</TextLink>
           </div>
+          <SubscribeLine className="mt-6" />
         </Container>
       </section>
     </>

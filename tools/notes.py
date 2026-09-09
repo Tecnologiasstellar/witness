@@ -36,7 +36,8 @@ TYPES = ("question", "field-note", "definition", "comparison")
 
 # Static routes a note may link to. Record and note links are checked against
 # what exists on disk instead.
-STATIC_ROUTES = {"/", "/archive", "/field-notes", "/method", "/privacy", "/terms", "/contact"}
+STATIC_ROUTES = {"/", "/archive", "/field-notes", "/field-notes/write", "/field-notes/feed.xml",
+                 "/method", "/privacy", "/terms", "/contact"}
 
 # ---------------------------------------------------------------- claim gate
 # The expensive failure. Witness's whole proposition is that a claim never

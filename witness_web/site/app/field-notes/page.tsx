@@ -2,13 +2,18 @@ import type { Metadata, Route } from "next";
 import Link from "next/link";
 import { Container, Eyebrow, PrimaryLink } from "@/components/atlas";
 import { Breadcrumbs } from "@/components/record";
+import { SubscribeLine } from "@/components/subscribe";
+import { FEED_PATH } from "@/lib/archive";
 import { allNotes } from "@/lib/notes";
 
 export const metadata: Metadata = {
   title: "Field notes",
   description:
     "Sourced short essays on threatened species, extinction language, and what attention is actually for. One note at a time, each with its evidence attached.",
-  alternates: { canonical: "/field-notes" },
+  alternates: {
+    canonical: "/field-notes",
+    types: { "application/rss+xml": FEED_PATH },
+  },
 };
 
 export default function FieldNotesIndex() {
@@ -33,6 +38,7 @@ export default function FieldNotesIndex() {
                 a word came from, why a species you have never heard of is worth
                 two minutes. Every checkable claim carries its sources.
               </p>
+              <SubscribeLine className="mt-4" />
             </div>
           </div>
         </Container>
@@ -64,6 +70,9 @@ export default function FieldNotesIndex() {
                       <h2 className="max-w-[30ch] text-pretty font-display text-[clamp(1.4rem,2.6vw,2rem)] font-semibold leading-[1.15] text-ink transition-colors duration-200 ease-out group-hover:text-sepia">
                         {note.title}
                       </h2>
+                      {note.author ? (
+                        <p className="mt-2 text-[13px] text-ink-muted">By {note.author}</p>
+                      ) : null}
                       <p className="mt-3 max-w-[58ch] text-pretty text-[16px] leading-[1.65] text-ink-muted">
                         {note.description}
                       </p>

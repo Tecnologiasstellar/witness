@@ -138,6 +138,13 @@ than on production.
 **If either fails, fix the copy — never the gate.** If you cannot fix it honestly, STOP
 and report the exact message.
 
+## Guest notes (D-028)
+
+A guest note is a house note with two extra frontmatter lines. Paste the writer's
+markdown into `content/field-notes/<date>-<slug>.md`, add `author: Their Name` and,
+if they gave one, `authorUrl: https://...`, then run the gate, the self-critique and
+`ship` exactly as below. The gate does not know or care who wrote it.
+
 ## Step 7 — Ship
 
 ```

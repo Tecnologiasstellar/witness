@@ -24,6 +24,9 @@ export type Note = {
   /** The search question this answers, when it answers one. Drives FAQPage. */
   question?: string;
   type: string;
+  /** Frontmatter `author:` and `authorUrl:` — a guest byline. Absent means Witness wrote it. */
+  author?: string;
+  authorUrl?: string;
   /** Frontmatter `sources:` — comma-separated URLs, required for any checkable claim. */
   sources: string[];
   /** Catalog record ids linked from the body. Derived, never declared, so it cannot drift. */
@@ -89,6 +92,8 @@ function parse(file: string): Note {
     description: meta.description ?? "",
     question: meta.question || undefined,
     type: meta.type ?? "",
+    author: meta.author || undefined,
+    authorUrl: meta.authorUrl || undefined,
     sources: (meta.sources ?? "").split(",").map((s) => s.trim()).filter(Boolean),
     records: [...new Set([...body.matchAll(/\/archive\/([a-z0-9-]+)/g)].map((m) => m[1]))],
     html: render(body),

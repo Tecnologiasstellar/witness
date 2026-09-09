@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: SITE_URL, priority: 1 },
     { url: `${SITE_URL}/archive`, priority: 0.9 },
     { url: `${SITE_URL}/field-notes`, priority: 0.8 },
+    { url: `${SITE_URL}/field-notes/write`, priority: 0.5 },
     { url: `${SITE_URL}/method`, priority: 0.6 },
     { url: `${SITE_URL}/contact`, priority: 0.5 },
     { url: `${SITE_URL}/privacy`, priority: 0.3 },

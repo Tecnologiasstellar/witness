@@ -150,5 +150,8 @@ export const SITE_URL = "https://witnessatlas.com";
 export const APP_STORE_URL = "https://apps.apple.com/app/id6804311122";
 export const INSTAGRAM_URL = "https://www.instagram.com/witnessatlas";
 export const CONTACT_EMAIL = "albertovillalpando@gmail.com";
+/** The hosted Buttondown page. Empty until the account exists; the site then offers RSS only. */
+export const SUBSCRIBE_URL = "";
+export const FEED_PATH = "/field-notes/feed.xml";
 
 export const CATALOGUE = { published: RECORDS.length };

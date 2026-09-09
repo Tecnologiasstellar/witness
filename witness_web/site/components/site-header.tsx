@@ -5,6 +5,7 @@ import { Container } from "./atlas";
 const NAV = [
   { href: "/", label: "The App" },
   { href: "/archive", label: "The Archive" },
+  { href: "/field-notes", label: "Field notes" },
   { href: "/contact", label: "Contact" },
 ];
 

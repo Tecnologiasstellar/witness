@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const SECTIONS: [string, string[]][] = [
-  ["This website", ["This website uses no account, email capture, analytics, advertising, or cookies. It serves public editorial pages, original illustrations, and one audio sample."]],
+  ["This website", ["This website uses no account, email capture, analytics, advertising, or cookies. It serves public editorial pages, original illustrations, one audio sample, and an RSS feed. The email newsletter, where offered, is a link to a separate provider's page; that provider holds the address under its own terms, and nothing on this host stores one."]],
   ["The app", ["Witness needs no account and never asks for your name, email, or location. To keep the weekly witness count honest, the app stores a random installation identifier and sends one witness event per installation and featured species; the server returns an aggregate count. That is the whole exchange.", "The App Store privacy label reads “Data Not Linked to You: Identifiers, Usage Data”. Nothing is used for tracking or advertising, nothing is sold, and no third-party analytics or advertising SDK is in the app."]],
   ["Private notes", ["Notes you write stay in protected storage on your phone. They are never sent to a server, never shown to anyone else, and never appear in a share image. Deleting the app removes them from the device."]],
   ["Reminders", ["The weekly reminder is a local notification scheduled on your phone. No push token and no location are collected, and the reminder can be turned off at any time in Settings."]],
