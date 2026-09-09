@@ -1,10 +1,9 @@
 import SwiftUI
 import WitnessCore
 
-/// INDEX — three groups and a footer, read like a book's front and back
-/// matter: THE WORKS (the free ritual beside the two editions and the tip),
-/// REMINDERS, and a COLOPHON that says who makes Witness, what the works
-/// fund, and how the record is kept. Facts only — never a tier grid.
+/// INDEX — the introduction first, then THE WORKS as three plate-led cards
+/// (Field Season, the Atlas, Support), REMINDERS, and one ABOUT page that
+/// holds the credits and the correction line. Facts only — never a tier grid.
 struct SettingsView: View {
     @ObservedObject var commerce: CommerceModel
     var weeklyPlate: String? = nil
@@ -14,26 +13,25 @@ struct SettingsView: View {
 
     private static let privacyURL = URL(string: "https://witnessatlas.com/privacy")!
     private static let termsURL = URL(string: "https://witnessatlas.com/terms")!
-    private static let supportEmailURL = URL(string: "mailto:albertovillalpando@gmail.com?subject=Witness%20support")!
-    private static let correctionsEmailURL = URL(string: "mailto:albertovillalpando@gmail.com?subject=Witness%20correction")!
 
     private let edition = FieldSeasonLoader.bundled
 
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: 22) {
+                VStack(alignment: .leading, spacing: 28) {
                     Text("INDEX")
-                        .font(AtlasType.display(34, weight: .semibold))
+                        .font(AtlasType.display(36, weight: .semibold))
+                    howItWorksRow
                     worksSection
                     remindersSection
-                    colophonSection
+                    aboutRow
                     footer
                 }
                 .padding(22).foregroundStyle(AtlasTheme.ink)
             }
             .background(AtlasPaper().ignoresSafeArea())
-            .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("CLOSE") { dismiss() }.font(AtlasType.technical(10, weight: .bold)) } }
+            .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("CLOSE") { dismiss() }.font(AtlasType.technical(12, weight: .bold)) } }
             .onAppear {
                 reminderTime = Calendar.current.date(
                     from: DateComponents(hour: reminders.hour, minute: reminders.minute)
@@ -44,31 +42,88 @@ struct SettingsView: View {
         }
     }
 
+    // MARK: - How Witness works
+
+    /// The introduction, readable again (D-026) — first thing on the page,
+    /// pushed inside this stack without the reminder page.
+    private var howItWorksRow: some View {
+        NavigationLink {
+            OnboardingView(mode: .review, weeklyPlate: weeklyPlate ?? "vaquita-plate-01")
+        } label: {
+            HStack(spacing: 14) {
+                thumbnail(weeklyPlate ?? "vaquita-plate-01", width: 44, height: 56)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("HOW WITNESS WORKS")
+                        .font(AtlasType.technical(14, weight: .bold)).tracking(0.9)
+                    Text("Five pages · the weekly plate, bearing witness, the acts")
+                        .font(AtlasType.technical(12, weight: .medium))
+                        .foregroundStyle(AtlasTheme.sepia)
+                }
+                Spacer()
+                Text("›").font(AtlasType.display(22)).foregroundStyle(AtlasTheme.sepia)
+            }
+            .foregroundStyle(AtlasTheme.ink)
+            .padding(14)
+            .background(AtlasTheme.paperFresh)
+            .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityIdentifier("index.howItWorks")
+    }
+
     // MARK: - The works
 
-    /// The Access overview (D-020, §9.2): the standing free promise, the two
-    /// works with their real state, restore, manage, and the quiet Support
-    /// row. Owned and unowned works render alike — the word carries the state.
+    /// The Access overview (D-020, §9.2): the standing free promise, then the
+    /// three works as plates you can walk into. Owned and unowned works render
+    /// alike — the word carries the state.
     private var worksSection: some View {
         section("THE WORKS") {
-            staticRow("WITNESS · FREE", thumb: weeklyPlate)
+            staticRow("WITNESS · FREE", detail: "Every Monday")
                 .accessibilityIdentifier("access.overview.free")
+                .padding(.bottom, 18)
 
-            NavigationLink {
-                FieldSeasonPreviewView(commerce: commerce)
-            } label: {
-                navigationRowLabel(title: "FIELD SEASON", detail: fieldSeasonDetail, thumb: "vaquita-plate-01")
-            }
-            .buttonStyle(.plain)
-            .accessibilityIdentifier("access.overview.fieldseason")
+            VStack(spacing: 18) {
+                NavigationLink {
+                    FieldSeasonPreviewView(commerce: commerce)
+                } label: {
+                    workCard(title: "FIELD SEASON", detail: fieldSeasonDetail, line: "A finite, authored edition, read and narrated. Yours to keep.") {
+                        plateHero(fieldSeasonPlate)
+                    }
+                }
+                .buttonStyle(AtlasPressStyle())
+                .accessibilityIdentifier("access.overview.fieldseason")
 
-            NavigationLink {
-                AtlasAccessSheet(commerce: commerce)
-            } label: {
-                navigationRowLabel(title: "ATLAS", detail: commerce.atlasStatusLine, thumb: "snow-leopard-plate-01")
+                NavigationLink {
+                    AtlasAccessSheet(commerce: commerce)
+                } label: {
+                    workCard(title: "THE ATLAS", detail: commerce.atlasStatusLine, line: "The living library. Every plate, growing weekly.") {
+                        PlateCollageStrip(height: 124, spacing: -30)
+                            .padding(.bottom, 20)
+                            .frame(height: 176)
+                            .clipped()
+                    }
+                }
+                .buttonStyle(AtlasPressStyle())
+                .accessibilityIdentifier("access.overview.atlas")
+
+                NavigationLink {
+                    SupportWitnessView(commerce: commerce)
+                } label: {
+                    workCard(title: "SUPPORT WITNESS", detail: "One-time tip", line: "Made by one person. A tip funds the making.") {
+                        PlateCollageStrip(
+                            assets: ["vaquita-detail-01", "amur-leopard-detail-01", "whooping-crane-detail-01"],
+                            height: 124, spacing: -30
+                        )
+                        .padding(.bottom, 20)
+                        .frame(height: 176)
+                        .clipped()
+                    }
+                }
+                .buttonStyle(AtlasPressStyle())
+                .accessibilityIdentifier("access.overview.support")
             }
-            .buttonStyle(.plain)
-            .accessibilityIdentifier("access.overview.atlas")
+            .padding(.bottom, 18)
 
             AccessQuietRow(
                 title: "RESTORE PURCHASES",
@@ -82,25 +137,21 @@ struct SettingsView: View {
                 ManageSubscriptionRow(identifier: "access.overview.manage")
             }
 
-            NavigationLink {
-                SupportWitnessView(commerce: commerce)
-            } label: {
-                navigationRowLabel(title: "SUPPORT WITNESS", detail: "One-time tip")
-            }
-            .buttonStyle(.plain)
-            .accessibilityIdentifier("access.overview.support")
-
             PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
                 .padding(.top, 12)
 
             if let verifiedLine = commerce.accessVerifiedLine {
                 Text(verifiedLine)
-                    .font(AtlasType.technical(9, weight: .medium))
+                    .font(AtlasType.technical(11, weight: .medium))
                     .foregroundStyle(AtlasTheme.inkMuted)
                     .padding(.top, 8)
                     .accessibilityIdentifier("access.overview.verified")
             }
         }
+    }
+
+    private var fieldSeasonPlate: String {
+        edition?.chapters.first { $0.resolvedKind == .chapter }?.heroAssetID ?? "vaquita-plate-01"
     }
 
     private var fieldSeasonDetail: String {
@@ -110,13 +161,60 @@ struct SettingsView: View {
         return stories > 0 ? "\(stories) stories" : "Preview"
     }
 
+    /// A work as a plate first: the art on top, the name and its real state
+    /// beneath, one line of what it is. No price on the card — the page has it.
+    private func workCard(title: String, detail: String?, line: String, @ViewBuilder art: () -> some View) -> some View {
+        VStack(alignment: .leading, spacing: 0) {
+            art()
+                .frame(maxWidth: .infinity)
+                .background(AtlasTheme.paperAged)
+            VStack(alignment: .leading, spacing: 6) {
+                HStack(alignment: .firstTextBaseline) {
+                    Text(title)
+                        .font(AtlasType.display(24, weight: .semibold))
+                    Spacer()
+                    if let detail {
+                        Text(detail)
+                            .font(AtlasType.technical(12, weight: .bold)).tracking(0.8)
+                            .foregroundStyle(AtlasTheme.sepia)
+                    }
+                    Text("›").font(AtlasType.display(22)).foregroundStyle(AtlasTheme.sepia)
+                }
+                Text(line)
+                    .font(AtlasType.display(16, weight: .regular, italic: true))
+                    .foregroundStyle(AtlasTheme.inkMuted)
+            }
+            .padding(14)
+        }
+        .foregroundStyle(AtlasTheme.ink)
+        .background(AtlasTheme.paperFresh)
+        .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
+        .contentShape(Rectangle())
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(detail.map { "\(title), \($0)" } ?? title)
+    }
+
+    private func plateHero(_ asset: String) -> some View {
+        Group {
+            if let art = UIImage(named: asset) {
+                Image(uiImage: art)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            }
+        }
+        .frame(height: 176)
+        .frame(maxWidth: .infinity)
+        .clipped()
+        .accessibilityHidden(true)
+    }
+
     // MARK: - Reminders
 
     private var remindersSection: some View {
         section("REMINDERS") {
             HStack {
                 Text("WEEKLY REMINDER")
-                    .font(AtlasType.technical(11, weight: .medium)).tracking(0.7)
+                    .font(AtlasType.technical(13, weight: .medium)).tracking(0.7)
                 Spacer()
                 Toggle("Weekly reminder", isOn: Binding(
                     get: { reminders.isEnabled },
@@ -133,13 +231,13 @@ struct SettingsView: View {
                 .tint(AtlasTheme.accentSage)
                 .accessibilityIdentifier("index.reminderToggle")
             }
-            .frame(minHeight: 44)
+            .frame(minHeight: 48)
             .overlay(alignment: .bottom) { Rectangle().fill(AtlasTheme.ruleSoft).frame(height: 1) }
 
             if reminders.isEnabled {
                 HStack {
                     Text("TIME")
-                        .font(AtlasType.technical(11, weight: .medium)).tracking(0.7)
+                        .font(AtlasType.technical(13, weight: .medium)).tracking(0.7)
                     Spacer()
                     DatePicker("Reminder time", selection: $reminderTime, displayedComponents: .hourAndMinute)
                         .labelsHidden()
@@ -148,7 +246,7 @@ struct SettingsView: View {
                             Task { await reminders.enable(hour: parts.hour ?? 8, minute: parts.minute ?? 0) }
                         }
                 }
-                .frame(minHeight: 44)
+                .frame(minHeight: 48)
                 .overlay(alignment: .bottom) { Rectangle().fill(AtlasTheme.ruleSoft).frame(height: 1) }
             }
 
@@ -160,12 +258,12 @@ struct SettingsView: View {
                 } label: {
                     HStack {
                         Text("NOTIFICATIONS ARE OFF · OPEN SYSTEM SETTINGS")
-                            .font(AtlasType.technical(10, weight: .medium)).tracking(0.6)
+                            .font(AtlasType.technical(12, weight: .medium)).tracking(0.6)
                             .foregroundStyle(AtlasTheme.sepia)
                         Spacer()
                         Text("·").foregroundStyle(AtlasTheme.sepia)
                     }
-                    .frame(minHeight: 44)
+                    .frame(minHeight: 48)
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
@@ -174,57 +272,31 @@ struct SettingsView: View {
         }
     }
 
-    // MARK: - Colophon
+    // MARK: - About
 
-    /// Who makes Witness, what the works fund (the §5.3 line, said in full
-    /// exactly once in the app), and the credits that keep the record honest.
-    private var colophonSection: some View {
-        section("COLOPHON") {
-            Text("Witness is made by one person. It asks for no account, and your notes stay on this device. Field Season and the Atlas support research, fact-checking, illustration, narration, accessibility, and operation of the app. Your Witness remains free.")
-                .font(AtlasType.display(16, weight: .regular))
-                .lineSpacing(5)
-                .padding(.bottom, 6)
-                .accessibilityIdentifier("index.colophon.statement")
-            Text("— Alberto, who makes Witness")
-                .font(AtlasType.display(14, weight: .regular, italic: true))
-                .foregroundStyle(AtlasTheme.sepia)
-                .padding(.bottom, 14)
-
-            staticRow("SOURCES", detail: "Cited on every card")
-            staticRow("ILLUSTRATION", detail: "AI-assisted, accuracy-reviewed")
-            staticRow("NARRATION", detail: "Synthetic voice, disclosed in each chapter")
-            NavigationLink {
-                // The introduction, readable again (D-026) — pushed inside
-                // this stack, without the reminder page.
-                OnboardingView(mode: .review, weeklyPlate: weeklyPlate ?? "vaquita-plate-01")
-            } label: {
-                navigationRowLabel(title: "HOW WITNESS WORKS", detail: "Five pages")
-            }
-            .buttonStyle(.plain)
-            .accessibilityIdentifier("index.howItWorks")
-            linkRow("REPORT A CORRECTION", url: Self.correctionsEmailURL)
-            linkRow("WRITE TO THE MAKER", url: Self.supportEmailURL)
+    private var aboutRow: some View {
+        NavigationLink {
+            IndexAboutView()
+        } label: {
+            navigationRowLabel(title: "ABOUT WITNESS", detail: "Sources · credits · corrections")
         }
+        .buttonStyle(.plain)
+        .accessibilityIdentifier("index.about")
     }
 
     private var footer: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("Witness does not turn attention, shares, or self-reported actions into conservation outcomes.")
-                .font(.footnote).foregroundStyle(AtlasTheme.inkMuted).lineSpacing(3)
-            HStack(spacing: 16) {
-                Link("PRIVACY POLICY", destination: Self.privacyURL)
-                    .foregroundStyle(AtlasTheme.sepia)
-                Link("TERMS OF USE", destination: Self.termsURL)
-                    .foregroundStyle(AtlasTheme.sepia)
-                Spacer()
-                Text("WITNESS · \(Self.versionLabel)")
-                    .foregroundStyle(AtlasTheme.inkMuted)
-            }
-            .font(AtlasType.technical(10, weight: .medium))
-            .tracking(1.0)
-            .frame(minHeight: 44)
+        HStack(spacing: 16) {
+            Link("PRIVACY POLICY", destination: Self.privacyURL)
+                .foregroundStyle(AtlasTheme.sepia)
+            Link("TERMS OF USE", destination: Self.termsURL)
+                .foregroundStyle(AtlasTheme.sepia)
+            Spacer()
+            Text("WITNESS · \(Self.versionLabel)")
+                .foregroundStyle(AtlasTheme.inkMuted)
         }
-        .padding(.top, 4)
+        .font(AtlasType.technical(11, weight: .medium))
+        .tracking(1.0)
+        .frame(minHeight: 44)
     }
 
     private static var versionLabel: String {
@@ -238,20 +310,20 @@ struct SettingsView: View {
 
     private func section(_ title: String, @ViewBuilder rows: () -> some View) -> some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text(title).font(AtlasType.technical(10, weight: .bold)).tracking(1.2).foregroundStyle(AtlasTheme.sepia).padding(.bottom, 8)
+            Text(title).font(AtlasType.technical(12, weight: .bold)).tracking(1.3).foregroundStyle(AtlasTheme.sepia).padding(.bottom, 10)
             rows()
         }
     }
 
     @ViewBuilder
-    private func thumbnail(_ asset: String?) -> some View {
+    private func thumbnail(_ asset: String?, width: CGFloat = 34, height: CGFloat = 44) -> some View {
         // A sliver of the actual work behind the row — the pieces stay
         // visible from the menu without a word of selling.
         if let asset, let art = UIImage(named: asset) {
             Image(uiImage: art)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 30, height: 38)
+                .frame(width: width, height: height)
                 .clipped()
                 .overlay(Rectangle().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
                 .accessibilityHidden(true)
@@ -261,15 +333,15 @@ struct SettingsView: View {
     private func navigationRowLabel(title: String, detail: String?, thumb: String? = nil) -> some View {
         HStack(spacing: 12) {
             thumbnail(thumb)
-            Text(title).font(AtlasType.technical(11, weight: .medium)).tracking(0.7)
+            Text(title).font(AtlasType.technical(13, weight: .medium)).tracking(0.7)
             Spacer()
             if let detail {
-                Text(detail).font(AtlasType.technical(11, weight: .medium)).foregroundStyle(AtlasTheme.sepia)
+                Text(detail).font(AtlasType.technical(12, weight: .medium)).foregroundStyle(AtlasTheme.sepia)
             }
             Text("›").foregroundStyle(AtlasTheme.sepia)
         }
         .foregroundStyle(AtlasTheme.ink)
-        .frame(minHeight: 44)
+        .frame(minHeight: 48)
         .contentShape(Rectangle())
         .overlay(alignment: .bottom) { Rectangle().fill(AtlasTheme.ruleSoft).frame(height: 1) }
     }
@@ -277,17 +349,60 @@ struct SettingsView: View {
     private func staticRow(_ label: String, detail: String? = nil, thumb: String? = nil) -> some View {
         HStack(spacing: 12) {
             thumbnail(thumb)
-            Text(label).font(AtlasType.technical(11, weight: .medium)).tracking(0.7)
+            Text(label).font(AtlasType.technical(13, weight: .medium)).tracking(0.7)
             Spacer()
             if let detail {
                 Text(detail)
-                    .font(AtlasType.technical(11, weight: .medium))
+                    .font(AtlasType.technical(12, weight: .medium))
                     .foregroundStyle(AtlasTheme.sepia)
                     .multilineTextAlignment(.trailing)
             }
             Text("·").foregroundStyle(AtlasTheme.sepia)
         }
-        .frame(minHeight: 44)
+        .frame(minHeight: 48)
+        .overlay(alignment: .bottom) { Rectangle().fill(AtlasTheme.ruleSoft).frame(height: 1) }
+        .accessibilityElement(children: .combine)
+    }
+}
+
+// MARK: - About page
+
+/// The credits that keep the record honest, and the two ways to write in.
+/// One pushed page so the INDEX itself stays a menu.
+private struct IndexAboutView: View {
+    private static let supportEmailURL = URL(string: "mailto:albertovillalpando@gmail.com?subject=Witness%20support")!
+    private static let correctionsEmailURL = URL(string: "mailto:albertovillalpando@gmail.com?subject=Witness%20correction")!
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                Text("ABOUT WITNESS")
+                    .font(AtlasType.display(30, weight: .semibold))
+                    .padding(.bottom, 12)
+                Text("Made by one person. No account, and your notes stay on this device.")
+                    .font(AtlasType.display(17, weight: .regular))
+                    .lineSpacing(5)
+                    .padding(.bottom, 24)
+                    .accessibilityIdentifier("index.about.statement")
+
+                creditRow("SOURCES", "Cited on every card")
+                creditRow("ILLUSTRATION", "AI-assisted, accuracy-reviewed")
+                creditRow("NARRATION", "Synthetic voice, disclosed in each chapter")
+                linkRow("REPORT A CORRECTION", url: Self.correctionsEmailURL)
+                linkRow("WRITE TO THE MAKER", url: Self.supportEmailURL)
+            }
+            .padding(22)
+            .foregroundStyle(AtlasTheme.ink)
+        }
+        .background(AtlasPaper().ignoresSafeArea())
+    }
+
+    private func creditRow(_ label: String, _ detail: String) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(label).font(AtlasType.technical(13, weight: .medium)).tracking(0.7)
+            Text(detail).font(AtlasType.technical(12, weight: .medium)).foregroundStyle(AtlasTheme.sepia)
+        }
+        .frame(maxWidth: .infinity, minHeight: 56, alignment: .leading)
         .overlay(alignment: .bottom) { Rectangle().fill(AtlasTheme.ruleSoft).frame(height: 1) }
         .accessibilityElement(children: .combine)
     }
@@ -295,11 +410,11 @@ struct SettingsView: View {
     private func linkRow(_ label: String, url: URL) -> some View {
         Link(destination: url) {
             HStack {
-                Text(label).font(AtlasType.technical(11, weight: .medium)).tracking(0.7)
+                Text(label).font(AtlasType.technical(13, weight: .medium)).tracking(0.7)
                 Spacer()
-                AtlasIconView(icon: .returnMark, size: 13, color: AtlasTheme.sepia)
+                AtlasIconView(icon: .returnMark, size: 14, color: AtlasTheme.sepia)
             }
-            .frame(minHeight: 44)
+            .frame(minHeight: 48)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
