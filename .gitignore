@@ -34,3 +34,8 @@ RevenueCatConfig.plist
 SupabaseConfig.plist
 .vercel
 WitnessApp_official_Screenshoots/
+
+# Project photo backups, kept out of GitHub on purpose (AV, 2026-09-09).
+# Curated plates and the app icon already live in Assets.xcassets.
+witness-images-higgsfield/
+witness-logo/
