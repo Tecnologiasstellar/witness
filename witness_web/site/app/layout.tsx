@@ -20,7 +20,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Witness" }],
   creator: "Witness",
   keywords: ["endangered species", "wildlife", "extinction", "conservation", "nature", "biodiversity", "iPhone app"],
-  itunes: { appId: "6804311122" },
+  // Safari's Smart App Banner. It offers the store listing, so it is gated with
+  // everything else that promises one — see APP_STORE_LIVE.
+  ...(APP_STORE_LIVE ? { itunes: { appId: "6804311122" } } : {}),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
