@@ -53,6 +53,15 @@ scaffolds `witness_web/community/content/posts/<today>-<slug>.md`, and prints th
 `type`, `angle`, `keywords`. Keep that brief. The angle is the thesis; the keywords go
 into the prose naturally or not at all.
 
+**Then choose the section deliberately.** The publication is organised around six
+shelves, and the header promises all six: Species, Numbers, Half the Earth, Policy,
+Dispatches, Attention. The `section:` the scaffold writes is only a guess from the
+`type`, which is why three of the first seven notes landed on Numbers. `next` now prints
+the tally, thinnest shelf first. Prefer a thin shelf when the topic honestly belongs
+there — Policy and Dispatches were both empty as of 2026-09-10, and a nav link to an
+empty page is a dead link. Never file a note on a shelf it does not fit; the fix for an
+empty shelf is a topic written for it, not a mislabelled note.
+
 If it exits with `queue is empty`, STOP and report that
 `witness_web/community/content/topics.json` needs topics.
 
@@ -101,10 +110,24 @@ authority; this is the checklist):
 - **350–950 words.** Markdown limited to `##`, `###`, `- ` lists, `> ` quotes, links,
   bold and italic — the renderer supports nothing else and the gate enforces it.
 - **Never restate a catalog record's story.** A note is the reading *around* the archive.
-  Link `/witnesses/<id>` when the species is in the catalog.
+  Link `/archive/<id>` when the species is in the catalog; the hub redirects it to the
+  atlas, and the gate checks the id against `data/species.json`.
 - **Never** claim availability, price, downloads, users, ratings, partnership, or any
   conservation outcome produced by Witness. **Never** publish a coordinate, nest, den or
   exact location, even when a source prints one.
+- **Write for the reader who wants to help.** Founder direction, 2026-09-10: the
+  publication exists to gather people who intend to do something, not an audience for
+  extinction news. In practice that is a matter of where a note ends, not of adding
+  exhortation — close on what is actually being done and by whom, on what a reader could
+  read, watch or check next, on the organisation whose report you cited. Naming the
+  people doing the work is the house form of a call to action. Scolding the reader, and
+  promising that noticing changes an outcome, are both still out.
+- **Do not write the call to action into the markdown.** Every note already ends with the
+  App Store and newsletter band from `components/cards.tsx`, rendered after the sources
+  and the records rail. Pasting that copy into a note would also trip the gate: `download
+  the app`, `available on the app store` and their siblings are in `PROHIBITED`, because a
+  note is prose and the CTA is furniture. If the band itself needs to change, change the
+  component.
 
 ## Step 5 — Self-critique pass (REQUIRED, before the gate)
 

@@ -3,7 +3,7 @@ import type { Route } from "next";
 import Link from "next/link";
 import type { Post } from "@/lib/posts";
 import type { SpeciesRecord } from "@/lib/species";
-import { ATLAS_URL, FEED_PATH, SUBSCRIBE_URL, formatDate, plateUrl, sectionByKey } from "@/lib/site";
+import { APP_STORE_URL, ATLAS_URL, FEED_PATH, SUBSCRIBE_URL, formatDate, plateUrl, sectionByKey } from "@/lib/site";
 import { Button, Container } from "./shell";
 
 export function SectionChip({ post, className = "" }: { post: Post; className?: string }) {
@@ -188,26 +188,30 @@ function Band({ compact = false }: { compact?: boolean }) {
   return (
     <div className={`flex flex-col gap-6 md:flex-row md:items-center md:justify-between ${compact ? "" : "py-12"}`}>
       <div>
-        <p className="font-display text-[clamp(1.4rem,3vw,2rem)] font-extrabold leading-[1.15] tracking-[-0.02em]">
-          The reading around the record, delivered.
+        <p className="text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">Free on iPhone</p>
+        <p className="mt-2 font-display text-[clamp(1.4rem,3vw,2rem)] font-extrabold leading-[1.15] tracking-[-0.02em]">
+          Reading is where it starts.
         </p>
         <p className="mt-2 max-w-[52ch] text-[16px] leading-[1.6] opacity-90">
-          {SUBSCRIBE_URL
-            ? "New field notes by email, a few times a month. Free, no tracking, leave any time."
-            : "The email edition is being set up. Until then, the feed carries every note the day it ships."}
+          Witness brings one species a week to your phone: a drawn plate, its true story with sources, and one honest
+          action. These notes are the reading between them.
         </p>
       </div>
-      <div className="flex flex-wrap items-center gap-3">
-        {SUBSCRIBE_URL ? (
-          <Button href={SUBSCRIBE_URL} external tone="ink" className="!bg-on-accent !text-accent hover:!bg-ink hover:!text-bg">
-            Subscribe free
+      <div className="flex flex-col items-start gap-3">
+        <div className="flex flex-wrap items-center gap-3">
+          <Button href={APP_STORE_URL} external tone="ink" className="!bg-on-accent !text-accent hover:!bg-ink hover:!text-bg">
+            Download on the App Store
           </Button>
-        ) : null}
-        <a
-          href={FEED_PATH}
-          className="press inline-flex min-h-11 items-center rounded-md border border-on-accent/60 px-5 text-[15px] font-semibold hover:bg-on-accent hover:text-accent"
-        >
-          RSS feed
+          <Link
+            href={(SUBSCRIBE_URL || "/subscribe") as Route}
+            {...(SUBSCRIBE_URL ? { target: "_blank", rel: "noreferrer noopener" } : {})}
+            className="press inline-flex min-h-11 items-center rounded-md border border-on-accent/60 px-5 text-[15px] font-semibold hover:bg-on-accent hover:text-accent"
+          >
+            {SUBSCRIBE_URL ? "Get new notes by email" : "Get new notes"}
+          </Link>
+        </div>
+        <a href={FEED_PATH} className="text-[13px] font-semibold underline underline-offset-4 opacity-80 hover:opacity-100">
+          Or follow by RSS
         </a>
       </div>
     </div>

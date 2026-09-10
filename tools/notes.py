@@ -182,6 +182,17 @@ def all_notes():
     return sorted((parse(p) for p in NOTES_DIR.glob("*.md")), key=lambda n: n["path"])
 
 
+def section_counts():
+    """Notes per section, thinnest first. The nav promises six shelves; a shelf
+    nobody files anything on is a dead link in the header, so the pick sees the
+    tally at scaffold time rather than after the fact."""
+    counts = {s: 0 for s in SECTIONS}
+    for note in all_notes():
+        if note.get("section") in counts:
+            counts[note["section"]] += 1
+    return "  ".join(f"{s}={n}" for s, n in sorted(counts.items(), key=lambda kv: (kv[1], kv[0])))
+
+
 def record_ids():
     return {r["id"] for r in json.loads(SPECIES.read_text())}
 
@@ -357,6 +368,9 @@ the default guess is wrong.
     print(f"created {path.relative_to(ROOT)}")
     print(f"brief: type={topic['type']}  angle={topic.get('angle', '—')}")
     print(f"keywords: {', '.join(topic.get('keywords', []))}")
+    print(f"section: {DEFAULT_SECTION[topic['type']]} (a guess from the type — change it if the note fits "
+          f"another shelf better)")
+    print(f"shelves:  {section_counts()}")
 
 
 def next_topic():

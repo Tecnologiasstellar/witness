@@ -39,3 +39,4 @@ WitnessApp_official_Screenshoots/
 # Curated plates and the app icon already live in Assets.xcassets.
 witness-images-higgsfield/
 witness-logo/
+__pycache__/
