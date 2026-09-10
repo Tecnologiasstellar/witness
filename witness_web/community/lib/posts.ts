@@ -1,22 +1,25 @@
 /**
- * Field notes — the daily essay.
- *
- * One markdown file per essay in `content/field-notes/<date>-<slug>.md`, read at
- * build time. The queue, the gates and the publish command live in
- * `../../tools/notes.py`; this file only renders what that tool already
- * validated. Nothing here re-checks a claim — a note that reaches the site
+ * Posts — one markdown file per piece in `content/posts/<date>-<slug>.md`, read
+ * at build time. The queue, the gates and the publish command live in
+ * `../../../tools/notes.py`; this file only renders what that tool already
+ * validated. Nothing here re-checks a claim — a post that reaches the site
  * passed the gate, or it was never committed.
- *
- * Essays are editorial, not catalog. A note may cite the same sources as a
- * record and must link to it, but it never restates a record's story: the
- * archive under /witnesses is the verbatim app catalog and stays that way.
  */
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+import { SECTIONS, type SectionKey } from "./site";
+import { recordById } from "./species";
 
-const DIR = join(process.cwd(), "content/field-notes");
+const DIR = join(process.cwd(), "content/posts");
+const FALLBACK_PLATE = "whooping-crane-context-01";
 
-export type Note = {
+/** The context plate of a record: second in its gallery. Plate ids do not always carry the record id. */
+function contextPlate(recordId: string | undefined) {
+  const gallery = recordId ? recordById(recordId)?.gallery : undefined;
+  return gallery?.[1] ?? gallery?.[0];
+}
+
+export type Post = {
   slug: string;
   date: string;
   title: string;
@@ -24,6 +27,9 @@ export type Note = {
   /** The search question this answers, when it answers one. Drives FAQPage. */
   question?: string;
   type: string;
+  section: SectionKey;
+  /** Plate id from the atlas catalog. Declared, or the first record the body links. */
+  image: string;
   /** Frontmatter `author:` and `authorUrl:` — a guest byline. Absent means Witness wrote it. */
   author?: string;
   authorUrl?: string;
@@ -35,6 +41,7 @@ export type Note = {
   /** The standalone opening paragraph. This is what an AI assistant quotes. */
   answer: string;
   words: number;
+  minutes: number;
 };
 
 function escapeHtml(s: string) {
@@ -49,7 +56,7 @@ function inline(s: string) {
     .replace(/\*([^*]+)\*/g, "<em>$1</em>");
 }
 
-/** Paragraphs, h2, h3, bullet lists, block quotes. Ported from the Lullable engine. */
+/** Paragraphs, h2, h3, bullet lists, block quotes. */
 function render(body: string) {
   return body
     .trim()
@@ -75,7 +82,7 @@ function firstParagraph(body: string) {
   return (block ?? "").replace(/\n/g, " ").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").trim();
 }
 
-function parse(file: string): Note {
+function parse(file: string): Post {
   const raw = readFileSync(join(DIR, file), "utf8");
   const match = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/.exec(raw);
   if (!match) throw new Error(`${file}: missing frontmatter`);
@@ -85,6 +92,10 @@ function parse(file: string): Note {
     if (kv) meta[kv[1]] = kv[2].trim();
   }
   const body = match[2];
+  const records = [...new Set([...body.matchAll(/\/archive\/([a-z0-9-]+)/g)].map((m) => m[1]))];
+  const section = SECTIONS.find((s) => s.key === meta.section)?.key;
+  if (!section) throw new Error(`${file}: section must be one of ${SECTIONS.map((s) => s.key).join("|")}`);
+  const words = (body.match(/\w+/g) ?? []).length;
   return {
     slug: file.slice(11, -3),
     date: file.slice(0, 10),
@@ -92,33 +103,43 @@ function parse(file: string): Note {
     description: meta.description ?? "",
     question: meta.question || undefined,
     type: meta.type ?? "",
+    section,
+    image: meta.image || contextPlate(records[0]) || FALLBACK_PLATE,
     author: meta.author || undefined,
     authorUrl: meta.authorUrl || undefined,
     sources: (meta.sources ?? "").split(",").map((s) => s.trim()).filter(Boolean),
-    records: [...new Set([...body.matchAll(/\/archive\/([a-z0-9-]+)/g)].map((m) => m[1]))],
+    records,
     html: render(body),
     answer: firstParagraph(body),
-    words: (body.match(/\w+/g) ?? []).length,
+    words,
+    minutes: Math.max(1, Math.round(words / 220)),
   };
 }
 
-const NOTES: Note[] = readdirSync(DIR)
+const POSTS: Post[] = readdirSync(DIR)
   .filter((f) => f.endsWith(".md"))
   .sort()
   .reverse()
   .map(parse);
 
-export function allNotes(): Note[] {
-  return NOTES;
+export function allPosts(): Post[] {
+  return POSTS;
 }
 
-export function noteBySlug(slug: string): Note | undefined {
-  return NOTES.find((n) => n.slug === slug);
+export function postBySlug(slug: string): Post | undefined {
+  return POSTS.find((p) => p.slug === slug);
 }
 
-/** The other notes, newest first, for the foot of a note page. */
-export function siblingNotes(slug: string, limit = 3): Note[] {
-  return NOTES.filter((n) => n.slug !== slug).slice(0, limit);
+export function postsInSection(key: SectionKey): Post[] {
+  return POSTS.filter((p) => p.section === key);
+}
+
+/** Same section first, then newest, never the post itself. */
+export function relatedPosts(post: Post, limit = 3): Post[] {
+  const others = POSTS.filter((p) => p.slug !== post.slug);
+  const same = others.filter((p) => p.section === post.section);
+  const rest = others.filter((p) => p.section !== post.section);
+  return [...same, ...rest].slice(0, limit);
 }
 
 /** A source URL's host, which is all the label a bare URL can honestly carry. */

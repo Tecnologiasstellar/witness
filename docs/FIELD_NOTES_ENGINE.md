@@ -2,10 +2,10 @@
 
 Status: operational
 Owner: Witness
-Scope: `witnessatlas.com/field-notes`
+Scope: `community.witnessatlas.com`
 Started: 2026-09-03
 
-One sourced essay a day at `/field-notes/<slug>`, published from a queue, gated before it
+One sourced essay a day at `/p/<slug>`, published from a queue, gated before it
 ships, and verified on the live URL. The shape is lifted from the Lullable engine
 (`~/Developer/lullable-website/build.py` and its `PRODUCTION.md`), which has been running
 this loop long enough to know which parts fail. What is different here is the claim
@@ -18,12 +18,12 @@ cd /Users/avp/Developer/witness
 python3 tools/notes.py next                       # pick the topic, scaffold the file, print the brief
 # research, then write the note
 python3 tools/notes.py                            # the gate — hard fails abort
-(cd witness_web/site && npx next build --webpack)  # the second gate
+(cd witness_web/community && npx next build --webpack)  # the second gate
 python3 tools/notes.py ship "Field note: the title"
 # then verify the live URL in a browser. A green build is not a rendered page.
 ```
 
-`ship` ends with `vercel deploy --prod` from `witness_web/site`, because **this project
+`ship` ends with `vercel deploy --prod` from `witness_web/community`, because **this project
 has no Vercel GitHub integration**. Pushing to `main` deploys nothing; the domain is
 aliased to whichever deployment was promoted last, and every production deployment in the
 project's history was made from the CLI. That was found on 2026-09-03 by pushing the first
@@ -38,9 +38,9 @@ fails.
 
 ## The queue
 
-[`witness_web/site/content/topics.json`](../witness_web/site/content/topics.json) — the
+[`witness_web/community/content/topics.json`](../witness_web/community/content/topics.json) — the
 rules are embedded in the file so they travel with it. State lives on disk: a topic is
-consumed when a `content/field-notes/*-<slug>.md` file exists; delete the file to re-open
+consumed when a `content/posts/*-<slug>.md` file exists; delete the file to re-open
 the topic. No status fields, nothing to get out of sync.
 
 Four types rotate, and `next` refuses to repeat the previous note's type:
@@ -98,7 +98,7 @@ comments doubled as their decision logs, and it is the practice most worth keepi
 to be crawled, and Bing's index is what ChatGPT search reads, so a note can be findable in
 an assistant's answer the same night. Google ignores IndexNow and keeps its own schedule.
 
-The key is `witness_web/site/public/<key>.txt`, whose filename and contents are the same
+The key is `witness_web/community/public/<key>.txt`, whose filename and contents are the same
 string — one file, self-verifying, nothing to get out of sync. Delete it and the ping
 skips itself with a printed note; the deploy is unaffected either way.
 

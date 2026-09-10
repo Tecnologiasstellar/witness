@@ -3,7 +3,7 @@
 
 The website serves a verbatim copy of the app catalog; sync it with:
 
-    python3 tools/export_catalog.py > witness_web/site/data/species.json
+    python3 tools/export_catalog.py > witness_web/site/data/species.json && cp witness_web/site/data/species.json witness_web/community/data/
 """
 
 import json

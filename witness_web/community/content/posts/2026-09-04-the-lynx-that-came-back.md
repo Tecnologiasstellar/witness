@@ -1,6 +1,8 @@
 ---
 title: The Iberian lynx and the arithmetic of coming back
 description: The 2025 census counted 2,663 Iberian lynx and then said the number is a floor, not an estimate. Why success makes a population harder to count.
+section: species
+image: iberian-lynx-context-01
 type: field-note
 sources: https://fundacion-biodiversidad.es/en/notas_de_prensa_mite/the-iberian-lynx-population-reached-2663-specimens-in-2025/, https://iucn.org/press-release/202406/iberian-lynx-rebounding-thanks-conservation-action-iucn-red-list
 ---
@@ -23,7 +25,7 @@ the growing population makes registering and identifying every individual
 increasingly difficult.
 
 There is a strange symmetry here with the [vaquita, where the number is uncertain
-for the opposite reason](/field-notes/how-many-vaquita-are-left). Seven to ten
+for the opposite reason](/p/how-many-vaquita-are-left). Seven to ten
 animals cannot be counted precisely because so few encounters exist to count.
 Two thousand six hundred cannot be counted precisely because there are too many
 to keep track of one at a time. In both cases the honest output is not a number
@@ -63,5 +65,5 @@ Which is the part that makes this a story worth keeping rather than celebrating.
 The lynx recovered because a set of institutions did unglamorous work for two
 decades without an audience, and the reward for that work is a longer list of
 things that must keep being done. The [record we hold for this
-species](/archive/iberian-lynx) has the sources; this is only the arithmetic
+species](https://witnessatlas.com/archive/iberian-lynx) has the sources; this is only the arithmetic
 around it.

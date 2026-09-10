@@ -2,6 +2,8 @@
 title: What the endangered species apps actually do
 description: No app tracks which species are at risk. The stores offer identification tools, a showcase last updated in 2021, and fundraising products.
 question: What is the best app for endangered species?
+section: attention
+image: monarch-context-01
 type: comparison
 sources: https://apps.apple.com/us/app/wwf-together/id581920331, https://apps.apple.com/us/app/seek-by-inaturalist/id1353224144, https://apps.apple.com/us/app/inaturalist/id421397028, https://iucn.org/press-release/202607/desert-frog-deep-sea-molluscs-remarkable-species-risk-iucn-red-list
 ---
@@ -28,7 +30,7 @@ The same listing records the last update as version 3.0.3, on 10 February 2021.
 That is not a complaint about the work, which was ambitious for its moment. It
 is a description of what you are getting: a showcase built at one point in time,
 not a record kept up since. A story about the
-[monarch butterfly](/archive/monarch-butterfly) assembled five years ago is a
+[monarch butterfly](https://witnessatlas.com/archive/monarch-butterfly) assembled five years ago is a
 story about the monarch butterfly of five years ago.
 
 ## The ones doing steady work
@@ -63,8 +65,8 @@ ever produced a conservation outcome by being opened.
 
 - **Does it date its numbers?** A population figure without the year it was
   measured is decoration. So is a category quoted without the assessment behind
-  it — [what a category does and does not tell you](/field-notes/what-does-critically-endangered-mean),
-  and [what a count is actually counting](/field-notes/how-many-vaquita-are-left),
+  it — [what a category does and does not tell you](/p/what-does-critically-endangered-mean),
+  and [what a count is actually counting](/p/how-many-vaquita-are-left),
   are the two things most of these apps skip.
 - **What does it want from you?** An account, a location, an email address,
   a payment, or nothing. Every one of those is defensible. Being unable to tell

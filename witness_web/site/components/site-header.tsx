@@ -1,11 +1,11 @@
-import type { Route } from "next";
 import Link from "next/link";
+import { NOTES_URL } from "@/lib/archive";
 import { Container } from "./atlas";
 
 const NAV = [
   { href: "/", label: "The App" },
   { href: "/archive", label: "The Archive" },
-  { href: "/field-notes", label: "Field notes" },
+  { href: NOTES_URL, label: "Field Notes" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -41,9 +41,9 @@ export function SiteHeader() {
               <ul className="mx-auto flex w-[min(1200px,calc(100vw-48px))] flex-col divide-y divide-hairline/40">
                 {NAV.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href as Route} className={`${linkClass} w-full py-1`}>
+                    <a href={item.href} className={`${linkClass} w-full py-1`}>
                       {item.label}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -55,9 +55,9 @@ export function SiteHeader() {
           <ul className="flex items-center gap-8">
             {NAV.map((item) => (
               <li key={item.href}>
-                <Link href={item.href as Route} className={linkClass}>
+                <a href={item.href} className={linkClass}>
                   {item.label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

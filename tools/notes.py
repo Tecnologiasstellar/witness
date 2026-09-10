@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Field notes — the daily essay loop for witnessatlas.com.
+"""Field notes — the daily essay loop for community.witnessatlas.com.
 
     python3 tools/notes.py next            pick the next topic and scaffold the brief
     python3 tools/notes.py                 gate every note (hard fails abort)
@@ -7,15 +7,15 @@
     python3 tools/notes.py ping [--all]    resubmit URLs to IndexNow by hand
     python3 tools/notes.py selftest        prove the gates still catch what they exist to catch
 
-The queue is witness_web/site/content/topics.json. Published state lives on disk:
-a topic is consumed when a content/field-notes/*-<slug>.md file exists. Delete the
+The queue is witness_web/community/content/topics.json. Published state lives on disk:
+a topic is consumed when a content/posts/*-<slug>.md file exists. Delete the
 file to re-open the topic. No status fields, nothing to get out of sync.
 
 Ported from the Lullable engine (~/Developer/lullable-website/build.py), which
 proved the shape. What changed is the claim regime: Witness already publishes
 under an evidence ledger (witness_web/PUBLIC_CLAIMS_SOURCE_OF_TRUTH.md), so the
 gate here is tighter, not looser. Rendering is not this tool's job — Next.js
-reads the same markdown through witness_web/site/lib/notes.ts.
+reads the same markdown through witness_web/community/lib/posts.ts.
 """
 import json
 import re
@@ -25,19 +25,23 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE_DIR = ROOT / "witness_web" / "site"
-NOTES_DIR = SITE_DIR / "content" / "field-notes"
+SITE_DIR = ROOT / "witness_web" / "community"
+NOTES_DIR = SITE_DIR / "content" / "posts"
 TOPICS = SITE_DIR / "content" / "topics.json"
 SPECIES = SITE_DIR / "data" / "species.json"
 PUBLIC = SITE_DIR / "public"
-SITE = "https://witnessatlas.com"
+SITE = "https://community.witnessatlas.com"
 
 TYPES = ("question", "field-note", "definition", "comparison")
+# Mirrors SECTIONS in witness_web/community/lib/site.ts. A post lives in exactly one.
+SECTIONS = ("species", "numbers", "half", "policy", "dispatches", "attention")
+DEFAULT_SECTION = {"field-note": "species", "question": "numbers", "definition": "numbers",
+                   "comparison": "attention"}
 
 # Static routes a note may link to. Record and note links are checked against
 # what exists on disk instead.
-STATIC_ROUTES = {"/", "/archive", "/field-notes", "/field-notes/write", "/field-notes/feed.xml",
-                 "/method", "/privacy", "/terms", "/contact"}
+STATIC_ROUTES = {"/", "/archive", "/about", "/write", "/subscribe", "/feed.xml",
+                 *(f"/s/{s}" for s in SECTIONS)}
 
 # ---------------------------------------------------------------- claim gate
 # The expensive failure. Witness's whole proposition is that a claim never
@@ -182,6 +186,18 @@ def record_ids():
     return {r["id"] for r in json.loads(SPECIES.read_text())}
 
 
+def plate_ids():
+    return {g for r in json.loads(SPECIES.read_text()) for g in r["gallery"]}
+
+
+def context_plate(record_id):
+    """A record's context plate (the second plate in its gallery), or nothing."""
+    for r in json.loads(SPECIES.read_text()):
+        if r["id"] == record_id:
+            return (r["gallery"] + r["gallery"])[1] if r["gallery"] else ""
+    return ""
+
+
 def sources_of(note):
     return [u.strip() for u in note.get("sources", "").split(",") if u.strip()]
 
@@ -214,13 +230,22 @@ def duplicate_titles(notes):
 
 # ---------------------------------------------------------------- validation
 
-def validate(note, ids, slugs, warnings):
+def validate(note, ids, slugs, warnings, plates=frozenset()):
     errs = []
     for field in ("title", "description", "type"):
         if not note.get(field):
             errs.append(f"missing {field}")
     if note.get("type") and note["type"] not in TYPES:
         errs.append(f"type must be one of {'|'.join(TYPES)}, got {note['type']!r}")
+    if note.get("section") not in SECTIONS:
+        errs.append(f"section must be one of {'|'.join(SECTIONS)}, got {note.get('section')!r}")
+    # The card needs a plate. Declared, or borrowed from the first record the body links;
+    # a post that links no record and names no plate has nothing to show.
+    linked = re.findall(r"/archive/([a-z0-9-]+)", note["body"])
+    image = note.get("image") or (context_plate(linked[0]) if linked else "")
+    if image not in plates:
+        errs.append(f"image {image or '(none)'} is not a plate in data/species.json — "
+                    "set image: to a gallery id or link a record")
     if len(note.get("description", "")) > 160:      # Google truncates ~155-160 by pixel width
         warnings.append(f"{note['path']}: description {len(note['description'])} chars (aim ≤155)")
 
@@ -266,7 +291,7 @@ def validate(note, ids, slugs, warnings):
             continue
         if path.startswith("/archive/") and path.split("/")[2] in ids:
             continue
-        if path.startswith("/field-notes/") and path.split("/")[2] in slugs:
+        if path.startswith("/p/") and path.split("/")[2] in slugs:
             continue
         errs.append(f"internal link {href} has nothing on disk behind it")
     return errs
@@ -277,10 +302,10 @@ def check():
     if not notes:
         print("no notes yet — run `python3 tools/notes.py next`")
         return notes
-    ids, slugs = record_ids(), {n["slug"] for n in notes}
+    ids, slugs, plates = record_ids(), {n["slug"] for n in notes}, plate_ids()
     warnings, failures = [], []
     for note in notes:
-        for err in validate(note, ids, slugs, warnings):
+        for err in validate(note, ids, slugs, warnings, plates):
             failures.append(f"{note['path']}: {err}")
     failures += duplicate_titles(notes)
     for w in warnings:
@@ -307,7 +332,9 @@ def scaffold(topic):
     path.write_text(f"""---
 title: {topic['title']}
 description: Meta description, under 155 characters, that reads like a sentence.
-{question}type: {topic['type']}
+{question}section: {DEFAULT_SECTION[topic['type']]}
+image:
+type: {topic['type']}
 sources:
 ---
 
@@ -321,8 +348,11 @@ Delete these two lines before shipping.
 
 ## A section
 
-More. Link the record when the species is in the archive, and delete `sources:`
-if the note makes no checkable claim at all.
+More. Link the record when the species is in the archive
+(https://witnessatlas.com/archive/<id>), and delete `sources:` if the note makes
+no checkable claim at all. `image:` is a plate id from data/species.json; leave it
+empty to use the context plate of the first record linked. Change `section:` if
+the default guess is wrong.
 """)
     print(f"created {path.relative_to(ROOT)}")
     print(f"brief: type={topic['type']}  angle={topic.get('angle', '—')}")
@@ -342,7 +372,7 @@ def next_topic():
         last_type = parse(newest).get("type", "")
     pending = [t for t in data["topics"] if t["slug"] not in published]
     if not pending:
-        sys.exit("queue is empty — add topics to witness_web/site/content/topics.json")
+        sys.exit("queue is empty — add topics to witness_web/community/content/topics.json")
     scaffold(next((t for t in pending if t["type"] != last_type), pending[0]))
 
 
@@ -363,11 +393,11 @@ def indexnow_key():
 def note_urls(paths):
     urls = set()
     for p in paths:
-        m = re.search(r"content/field-notes/\d{4}-\d{2}-\d{2}-(.+)\.md$", p)
+        m = re.search(r"content/posts/\d{4}-\d{2}-\d{2}-(.+)\.md$", p)
         if m:
-            urls.add(f"{SITE}/field-notes/{m.group(1)}")
+            urls.add(f"{SITE}/p/{m.group(1)}")
     if urls:
-        urls.add(f"{SITE}/field-notes")
+        urls.add(SITE)
     return sorted(urls)
 
 
@@ -416,7 +446,7 @@ def ship(message):
     """Gate, build, commit, rebase, push, deploy.
 
     This project has no Vercel GitHub integration: every production deployment
-    of witnessatlas.com has been made by `vercel deploy` from witness_web/site,
+    of the site has been made by `vercel deploy` from its directory (witness_web/community),
     and the domain is aliased to whichever deployment was promoted last. Found
     2026-09-03 by pushing and watching nothing happen — a nightly loop that
     trusted the push would have committed a note a day and published none of
@@ -434,7 +464,7 @@ def ship(message):
     subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=ROOT, check=True)
     subprocess.run(["git", "push", "origin", "main"], cwd=ROOT, check=True)
     subprocess.run(["npx", "vercel", "deploy", "--prod", "--yes"], cwd=SITE_DIR, check=True)
-    print(f"deployed: {SITE}/field-notes")
+    print(f"deployed: {SITE}")
     ping_indexnow(changed_urls())
 
 
@@ -457,8 +487,8 @@ def selftest():
                              {"path": "b", "title": "How many vaquitas are left"}]) == [] or True
     assert len(duplicate_titles([{"path": "a", "title": "What critically endangered means"},
                                  {"path": "b", "title": "What critically endangered means"}])) == 1
-    assert note_urls(["witness_web/site/content/field-notes/2026-09-03-a-slug.md"]) == \
-        [f"{SITE}/field-notes", f"{SITE}/field-notes/a-slug"]
+    assert note_urls(["witness_web/community/content/posts/2026-09-03-a-slug.md"]) == \
+        [SITE, f"{SITE}/p/a-slug"]
     assert first_paragraph("## Head\n\nThe [answer](/x) paragraph.") == "The answer paragraph."
     print("selftest ok")
 
@@ -474,8 +504,7 @@ if __name__ == "__main__":
             sys.exit('ship needs a commit message: ship "Field note: the title"')
         ship(sys.argv[2])
     elif cmd == "ping":
-        ping_indexnow(sorted({f"{SITE}/field-notes/{n['slug']}" for n in all_notes()} |
-                             {f"{SITE}/field-notes"})
+        ping_indexnow(sorted({f"{SITE}/p/{n['slug']}" for n in all_notes()} | {SITE})
                       if "--all" in sys.argv else changed_urls())
     elif cmd == "selftest":
         selftest()

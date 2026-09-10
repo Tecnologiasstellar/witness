@@ -2,6 +2,8 @@
 title: The crane that had to be taught where to go
 description: Whooping cranes learn their migration route by flying it with older birds. What that means for a species rebuilt from captivity, and what it puts at risk.
 question: Do whooping cranes learn their migration route?
+section: species
+image: whooping-crane-behavior-01
 type: field-note
 sources: https://savingcranes.org/news/resources/through-the-decades-evaluating-20-years-of-whooping-crane-reintroduction-in-wisconsin/, https://www.usgs.gov/publications/social-learning-migratory-performance, https://www.sesync.org/news-events/migration-innate-or-learned, https://www.fws.gov/press-release/2026-06/service-estimates-540-whooping-cranes-wintered-texas-coast-2025-2026, https://savingcranes.org/news/resources/whooping-crane-population-holds-steady-at-540-but-work-remains-to-secure-species-future/, https://parks.canada.ca/pn-np/nt/woodbuffalo/nature/science_nature/cranes_grue, https://savingcranes.org/species/whooping-crane/
 ---
@@ -73,4 +75,4 @@ the most useful thing the species has to teach. What conservation preserves is
 not only genetic material and habitat. Some of it is knowledge, held in
 individuals, transmissible only by being used. It has to be flown to survive —
 which is a strange kind of inheritance, and the reason we keep a
-[record for this bird](/archive/whooping-crane) rather than a number.
+[record for this bird](https://witnessatlas.com/archive/whooping-crane) rather than a number.

@@ -2,6 +2,8 @@
 title: What critically endangered actually means
 description: The highest threatened category on the IUCN Red List, the five criteria an assessor applies, and why the label describes risk rather than rarity.
 question: What does critically endangered mean?
+section: numbers
+image: javan-rhino-context-01
 type: definition
 sources: https://portals.iucn.org/library/sites/library/files/documents/RL-2001-001-2nd.pdf, https://portals.iucn.org/library/node/10315, https://iucn.org/resources/conservation-tool/iucn-red-list-threatened-species, https://rhinos.org/about-rhinos/rhino-species/javan-rhino/, https://www.orangutans-sos.org/learn/conservation-challenges/
 ---
@@ -57,8 +59,8 @@ number of mature individuals only, assessed in the wild and inside the natural
 range. Animals in captivity are not in the total.
 
 Which is why two species can share the category and look nothing alike. The
-[Javan rhino](/archive/javan-rhino) and the
-[Sumatran orangutan](/archive/sumatran-orangutan) are both listed Critically
+[Javan rhino](https://witnessatlas.com/archive/javan-rhino) and the
+[Sumatran orangutan](https://witnessatlas.com/archive/sumatran-orangutan) are both listed Critically
 Endangered. One is counted in tens, the other in thousands.
 
 ## What the standard admits about itself
@@ -84,4 +86,4 @@ standard, at the time of the assessment. It does not tell you how many are left,
 when they were last counted, or whether anything has changed since. Those are
 three separate questions, and the category is routinely quoted in place of all
 three. When the number is what you actually want,
-[ask what the number counts and when it was measured](/field-notes/how-many-vaquita-are-left).
+[ask what the number counts and when it was measured](/p/how-many-vaquita-are-left).

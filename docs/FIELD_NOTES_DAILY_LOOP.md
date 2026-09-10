@@ -5,7 +5,7 @@ It lives here, in git, so the routine stays a thin pointer at it: `docs/FIELD_NO
 holds the reasoning, this file holds the steps, and the schedule holds neither.
 
 You are running the Witness field-note loop. Work inside `/Users/avp/Developer/witness`
-(run every command from the repo root; the site itself lives in `witness_web/site`).
+(run every command from the repo root; the site itself lives in `witness_web/community`).
 Nobody reads the note before it goes live, so the gates in `tools/notes.py` and the live
 check in Step 8 are the only review it gets. **Never weaken a gate to get a draft
 through.** A skipped day is cheap. A public claim that exceeds its evidence is the one
@@ -20,8 +20,8 @@ procedure; read that one when you need the *why*.
 ```
 cd /Users/avp/Developer/witness
 echo "dirty files: [$(git status --porcelain)]"
-echo "today's note: [$(ls witness_web/site/content/field-notes/ | grep "^$(date +%F)-")]"
-echo "tracked:     [$(git ls-files witness_web/site/content/field-notes/$(date +%F)-*.md)]"
+echo "today's note: [$(ls witness_web/community/content/posts/ | grep "^$(date +%F)-")]"
+echo "tracked:     [$(git ls-files witness_web/community/content/posts/$(date +%F)-*.md)]"
 ```
 
 Four cases. Read all four before acting:
@@ -33,11 +33,11 @@ Four cases. Read all four before acting:
   lines`** — a previous run scaffolded it and died before writing. Do not ship it. Pick up
   at Step 3 and finish it.
 - **Today's note exists, is untracked, is finished prose, and every dirty path is under
-  `witness_web/site/content/field-notes/`** — a human drafted it ahead and reviewed it.
+  `witness_web/community/content/posts/`** — a human drafted it ahead and reviewed it.
   This is a supported workflow, not an error. Skip Steps 2–4, run the Step 5 self-critique
   over it as written, then gate, build and ship it. Say in the report that you shipped a
   staged draft rather than writing a new one.
-- **Any dirty path outside `witness_web/site/content/field-notes/`** — this repository
+- **Any dirty path outside `witness_web/community/content/posts/`** — this repository
   holds the iOS app as well as the site, so an in-progress Xcode change, a regenerated
   project file or a stray build artifact is normal and is not yours to commit. `ship` runs
   `git add -A`. STOP and report, without writing anything.
@@ -49,12 +49,12 @@ python3 tools/notes.py next
 ```
 
 Applies the rotation rule (the pick must differ in `type` from the most recent note),
-scaffolds `witness_web/site/content/field-notes/<today>-<slug>.md`, and prints the brief:
+scaffolds `witness_web/community/content/posts/<today>-<slug>.md`, and prints the brief:
 `type`, `angle`, `keywords`. Keep that brief. The angle is the thesis; the keywords go
 into the prose naturally or not at all.
 
 If it exits with `queue is empty`, STOP and report that
-`witness_web/site/content/topics.json` needs topics.
+`witness_web/community/content/topics.json` needs topics.
 
 ## Step 3 — Research BEFORE writing (REQUIRED)
 
@@ -62,7 +62,7 @@ Never write a year, a population figure, a measurement, a price or an IUCN categ
 memory. `tools/notes.py` hard-fails any note containing a checkable claim with fewer than
 two `sources:` URLs, and the point of the gate is that a fabrication becomes visible.
 
-**Start with the catalog.** `witness_web/site/data/species.json` carries, for all 30
+**Start with the catalog.** `witness_web/community/data/species.json` carries, for all 30
 bundled species, the sources the app already fact-checked, with the date each was last
 accessed. For a catalog species those are free, and they are the same sources the record
 page shows.
@@ -96,7 +96,7 @@ authority; this is the checklist):
 - **House voice**: flat, unhurried, concrete, no spectacle. Extinction is not a thriller
   and a reader is not to be scolded. Give the ending away rather than withholding it. No
   listicle framing, no "here's the fascinating part". Read
-  `witness_web/site/content/field-notes/2026-09-03-how-many-vaquita-are-left.md` as the
+  `witness_web/community/content/posts/2026-09-03-how-many-vaquita-are-left.md` as the
   model.
 - **350–950 words.** Markdown limited to `##`, `###`, `- ` lists, `> ` quotes, links,
   bold and italic — the renderer supports nothing else and the gate enforces it.
@@ -117,8 +117,8 @@ Re-read the draft and check all six. Fix in the file; do not rationalise past on
    number is the failure mode this whole section exists to correct.
 3. **Prohibited phrases** — check the `PROHIBITED` list at the top of `tools/notes.py`.
 4. **Title cannibalisation** — the title must not be ≥70% token-identical to an existing
-   note (`ls witness_web/site/content/field-notes/`).
-5. **Internal links** — every `/witnesses/<id>` and `/field-notes/<slug>` exists. The gate
+   note (`ls witness_web/community/content/posts/`).
+5. **Internal links** — every `/witnesses/<id>` and `/p/<slug>` exists. The gate
    checks this against disk, but fix it before you see the error.
 6. **Lengths** — description ≤155, body 350–950, answer paragraph 30–120 words.
 
@@ -126,7 +126,7 @@ Re-read the draft and check all six. Fix in the file; do not rationalise past on
 
 ```
 python3 tools/notes.py
-cd witness_web/site && npx next build --webpack && cd ../..
+cd witness_web/community && npx next build --webpack && cd ../..
 ```
 
 The first command hard-fails on prohibited claims, sensitive locations, unsupported
@@ -141,7 +141,7 @@ and report the exact message.
 ## Guest notes (D-028)
 
 A guest note is a house note with two extra frontmatter lines. Paste the writer's
-markdown into `content/field-notes/<date>-<slug>.md`, add `author: Their Name` and,
+markdown into `content/posts/<date>-<slug>.md`, add `author: Their Name` and,
 if they gave one, `authorUrl: https://...`, then run the gate, the self-critique and
 `ship` exactly as below. The gate does not know or care who wrote it.
 
@@ -152,7 +152,7 @@ python3 tools/notes.py ship "Field note: <the title>"
 ```
 
 Re-runs the gate and the build, commits, `git pull --rebase origin main`, pushes, runs
-`vercel deploy --prod` from `witness_web/site`, and pings IndexNow with the changed note
+`vercel deploy --prod` from `witness_web/community`, and pings IndexNow with the changed note
 URLs. The CLI deploy is not optional and not a mistake: this project has **no Vercel
 GitHub integration**, so a push publishes nothing on its own. If the deploy step fails
 (an expired CLI login is the likely cause), STOP and report it — the note is committed and
@@ -166,7 +166,7 @@ do not merge around it.
 A successful build is not a rendered page. Do all three:
 
 ```
-URL="https://witnessatlas.com/field-notes/<slug>"
+URL="https://community.witnessatlas.com/p/<slug>"
 for i in $(seq 1 20); do C=$(curl -s -o /tmp/note.html -w "%{http_code}" -A "Mozilla/5.0" "$URL"); echo "$i: $C"; [ "$C" = "200" ] && break; sleep 15; done
 ```
 

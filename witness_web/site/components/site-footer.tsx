@@ -1,13 +1,11 @@
 import type { Route } from "next";
 import Link from "next/link";
-import { APP_STORE_URL, FEED_PATH, INSTAGRAM_URL, SUBSCRIBE_URL } from "@/lib/archive";
+import { APP_STORE_URL, INSTAGRAM_URL, NOTES_URL } from "@/lib/archive";
 import { Container } from "./atlas";
 import { AppearanceControl } from "./appearance";
 
 const PAGES = [
   { href: "/archive", label: "The Archive" },
-  { href: "/field-notes", label: "Field notes" },
-  { href: "/field-notes/write", label: "Write a note" },
   { href: "/method", label: "Method" },
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
@@ -16,9 +14,8 @@ const PAGES = [
 
 const ELSEWHERE = [
   { href: APP_STORE_URL, label: "App Store" },
+  { href: NOTES_URL, label: "Field Notes" },
   { href: INSTAGRAM_URL, label: "Instagram" },
-  ...(SUBSCRIBE_URL ? [{ href: SUBSCRIBE_URL, label: "Newsletter" }] : []),
-  { href: FEED_PATH, label: "RSS" },
 ];
 
 const linkClass =

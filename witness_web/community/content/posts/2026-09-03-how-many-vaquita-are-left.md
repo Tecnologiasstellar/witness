@@ -2,6 +2,8 @@
 title: How many vaquita are left
 description: The most recent survey saw between seven and ten, and at least one calf. What that number counts, and why published figures disagree.
 question: How many vaquita are left?
+section: species
+image: vaquita-context-01
 type: question
 sources: https://seashepherd.org/2025/10/28/results-of-the-2025-vaquita-monitoring-effort/, https://iucn-csg.org/joint-visual-and-acoustic-survey-finds-vaquitas-surviving-and-reproducing-mostly-in-and-near-the-sanctuary/, https://www.fisheries.noaa.gov/west-coast/science-data/vaquita-conservation-and-abundance, https://www.fisheries.noaa.gov/species/vaquita, https://iucn-csg.org/vaquita/
 ---
@@ -76,4 +78,4 @@ that one bad season would take back everything the last three added.
 The next real datum is the abundance estimate still to come from the 2025
 acoustic work. Until then, the honest answer to the question in the title is a
 range, a date, and a method — which is also the whole
-[record we keep for this species](/archive/vaquita).
+[record we keep for this species](https://witnessatlas.com/archive/vaquita).
