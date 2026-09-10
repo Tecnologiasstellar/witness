@@ -17,8 +17,8 @@ export const APP_STORE_URL = "https://apps.apple.com/app/id6804311122";
 export const APP_STORE_LIVE = false;
 export const INSTAGRAM_URL = "https://www.instagram.com/witnessatlas";
 export const CONTACT_EMAIL = "albertovillalpando@gmail.com";
-/** The hosted Buttondown page. Empty until the account exists; the site then offers RSS only. */
-export const SUBSCRIBE_URL = "";
+/** The hosted beehiiv subscribe page. */
+export const SUBSCRIBE_URL = "https://witnessatlas.beehiiv.com/subscribe";
 export const FEED_PATH = "/feed.xml";
 
 export const SECTIONS = [
