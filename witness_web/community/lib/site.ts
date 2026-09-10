@@ -7,6 +7,14 @@ export const PUB_DESCRIPTION =
 
 export const ATLAS_URL = "https://witnessatlas.com";
 export const APP_STORE_URL = "https://apps.apple.com/app/id6804311122";
+/**
+ * The listing is not live yet. Checked 2026-09-10: that URL 404s and
+ * `itunes.apple.com/lookup?id=6804311122` returns resultCount 0 in all of
+ * us/mx/gb/ca/de/jp/au/es. Until it resolves, the end-of-note band sends people
+ * to the archive instead of to a dead download button. Flip this to true once
+ * the lookup returns the app — every note picks it up on the next deploy.
+ */
+export const APP_STORE_LIVE = false;
 export const INSTAGRAM_URL = "https://www.instagram.com/witnessatlas";
 export const CONTACT_EMAIL = "albertovillalpando@gmail.com";
 /** The hosted Buttondown page. Empty until the account exists; the site then offers RSS only. */

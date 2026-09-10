@@ -3,7 +3,7 @@ import type { Route } from "next";
 import Link from "next/link";
 import type { Post } from "@/lib/posts";
 import type { SpeciesRecord } from "@/lib/species";
-import { APP_STORE_URL, ATLAS_URL, FEED_PATH, SUBSCRIBE_URL, formatDate, plateUrl, sectionByKey } from "@/lib/site";
+import { APP_STORE_LIVE, APP_STORE_URL, ATLAS_URL, FEED_PATH, SUBSCRIBE_URL, formatDate, plateUrl, sectionByKey } from "@/lib/site";
 import { Button, Container } from "./shell";
 
 export function SectionChip({ post, className = "" }: { post: Post; className?: string }) {
@@ -188,19 +188,27 @@ function Band({ compact = false }: { compact?: boolean }) {
   return (
     <div className={`flex flex-col gap-6 md:flex-row md:items-center md:justify-between ${compact ? "" : "py-12"}`}>
       <div>
-        <p className="text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">Free on iPhone</p>
+        <p className="text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">
+          {APP_STORE_LIVE ? "Free on iPhone" : "Free to read"}
+        </p>
         <p className="mt-2 font-display text-[clamp(1.4rem,3vw,2rem)] font-extrabold leading-[1.15] tracking-[-0.02em]">
           Reading is where it starts.
         </p>
         <p className="mt-2 max-w-[52ch] text-[16px] leading-[1.6] opacity-90">
-          Witness brings one species a week to your phone: a drawn plate, its true story with sources, and one honest
-          action. These notes are the reading between them.
+          {APP_STORE_LIVE
+            ? "Witness brings one species a week to your phone: a drawn plate, its true story with sources, and one honest action. These notes are the reading between them."
+            : "Witness keeps one species a week: a drawn plate, its true story with sources, and one honest action. The archive is open to read, and these notes are the reading around it."}
         </p>
       </div>
       <div className="flex flex-col items-start gap-3">
         <div className="flex flex-wrap items-center gap-3">
-          <Button href={APP_STORE_URL} external tone="ink" className="!bg-on-accent !text-accent hover:!bg-ink hover:!text-bg">
-            Download on the App Store
+          <Button
+            href={APP_STORE_LIVE ? APP_STORE_URL : `${ATLAS_URL}/archive`}
+            external
+            tone="ink"
+            className="!bg-on-accent !text-accent hover:!bg-ink hover:!text-bg"
+          >
+            {APP_STORE_LIVE ? "Download on the App Store" : "Open the archive"}
           </Button>
           <Link
             href={(SUBSCRIBE_URL || "/subscribe") as Route}
