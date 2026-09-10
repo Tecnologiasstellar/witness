@@ -148,9 +148,26 @@ export function formatDate(iso: string): string {
 
 export const SITE_URL = "https://witnessatlas.com";
 export const APP_STORE_URL = "https://apps.apple.com/app/id6804311122";
+/**
+ * The listing is not live yet. Checked 2026-09-10: that URL 404s and
+ * `itunes.apple.com/lookup?id=6804311122` returns resultCount 0 in all of
+ * us/mx/gb/ca/de/jp/au/es — not a storefront-region problem, the app is not
+ * there. Until it resolves, every "Download on the App Store" button would be a
+ * dead link and a promise the store cannot keep, so the primary call to action
+ * sends people to the publication instead. Flip this to true once the lookup
+ * returns the app; the buttons, the eyebrows and the JSON-LD installUrl all
+ * follow from it.
+ */
+export const APP_STORE_LIVE = false;
 export const INSTAGRAM_URL = "https://www.instagram.com/witnessatlas";
 export const CONTACT_EMAIL = "albertovillalpando@gmail.com";
 /** The publication. Essays, the feed, and the writers' brief live there. */
 export const NOTES_URL = "https://community.witnessatlas.com";
+
+/** The primary call to action, wherever it appears. See APP_STORE_LIVE. */
+export const APP_CTA_HREF = APP_STORE_LIVE ? APP_STORE_URL : NOTES_URL;
+export const APP_CTA_LABEL = APP_STORE_LIVE ? "Download on the App Store" : "Read the field notes";
+/** Eyebrows that promised availability. Kept descriptive while the store is empty. */
+export const APP_EYEBROW = APP_STORE_LIVE ? "Free on iPhone" : "One species a week";
 
 export const CATALOGUE = { published: RECORDS.length };

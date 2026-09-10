@@ -2,11 +2,12 @@ import type { Metadata, Viewport } from "next";
 import { Grain } from "@/components/atlas";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { SITE_URL } from "@/lib/archive";
+import { APP_STORE_LIVE, SITE_URL } from "@/lib/archive";
 import "./globals.css";
 
 const description =
-  "Each week, one species on the edge of disappearance: its true story, its sources, one honest action. No feed. No account. No false promises. Free on iPhone.";
+  "Each week, one species on the edge of disappearance: its true story, its sources, one honest action. No feed. No account. No false promises." +
+  (APP_STORE_LIVE ? " Free on iPhone." : "");
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

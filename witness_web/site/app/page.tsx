@@ -3,7 +3,7 @@ import { join } from "node:path";
 import Link from "next/link";
 import { Container, Eyebrow, PrimaryLink, TextLink } from "@/components/atlas";
 import { HowItWorks, type Step } from "@/components/how-it-works";
-import { APP_STORE_URL, SITE_URL, allRecords, plate, recordById } from "@/lib/archive";
+import { APP_CTA_HREF, APP_CTA_LABEL, APP_EYEBROW, APP_STORE_LIVE, APP_STORE_URL, SITE_URL, allRecords, plate, recordById } from "@/lib/archive";
 
 /** Plates in the hero strip and the archive band. Eight each, chosen for variety of form and colour. */
 const STRIP = ["kakapo", "javan-rhino", "vaquita", "amur-leopard", "whooping-crane", "red-wolf", "axolotl", "snow-leopard"];
@@ -71,7 +71,7 @@ export default function Home() {
     applicationCategory: "EducationalApplication",
     description: "Each week, one species on the edge of disappearance: its true story, its sources, one honest action.",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-    installUrl: APP_STORE_URL,
+    ...(APP_STORE_LIVE ? { installUrl: APP_STORE_URL } : {}),
     url: SITE_URL,
   };
 
@@ -81,14 +81,14 @@ export default function Home() {
 
       <section className="home-hero">
         <Container className="home-hero-inner">
-          <Eyebrow className="hero-eyebrow">Free on iPhone · one species a week</Eyebrow>
+          <Eyebrow className="hero-eyebrow">{APP_EYEBROW} · sourced, drawn, free to read</Eyebrow>
           <h1>Give one species your attention.</h1>
           <p className="hero-lede">
             Each week, Witness brings you one species on the edge of disappearance: a drawn plate, its true story with sources, and one honest action. No feed. No account. No false promises.
           </p>
           <div className="hero-actions">
-            <PrimaryLink href={APP_STORE_URL} external>
-              Download on the App Store
+            <PrimaryLink href={APP_CTA_HREF} external>
+              {APP_CTA_LABEL}
             </PrimaryLink>
             <TextLink href="/archive">Browse the archive</TextLink>
           </div>
@@ -221,12 +221,12 @@ export default function Home() {
 
       <section className="closing-section">
         <Container>
-          <Eyebrow className="text-sepia">Free on iPhone</Eyebrow>
+          <Eyebrow className="text-sepia">{APP_EYEBROW}</Eyebrow>
           <h2>Look closely.<br />Carry the name forward.</h2>
           <p>One species a week, on your phone. The card, the sources, the witness, and the act are free.</p>
           <div className="closing-actions">
-            <PrimaryLink href={APP_STORE_URL} external>
-              Download on the App Store
+            <PrimaryLink href={APP_CTA_HREF} external>
+              {APP_CTA_LABEL}
             </PrimaryLink>
             <TextLink href="/archive">Open the archive</TextLink>
           </div>

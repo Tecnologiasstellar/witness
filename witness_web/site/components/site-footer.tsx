@@ -1,6 +1,6 @@
 import type { Route } from "next";
 import Link from "next/link";
-import { APP_STORE_URL, INSTAGRAM_URL, NOTES_URL } from "@/lib/archive";
+import { APP_STORE_LIVE, APP_STORE_URL, INSTAGRAM_URL, NOTES_URL } from "@/lib/archive";
 import { Container } from "./atlas";
 import { AppearanceControl } from "./appearance";
 
@@ -13,7 +13,7 @@ const PAGES = [
 ];
 
 const ELSEWHERE = [
-  { href: APP_STORE_URL, label: "App Store" },
+  ...(APP_STORE_LIVE ? [{ href: APP_STORE_URL, label: "App Store" }] : []),
   { href: NOTES_URL, label: "Field Notes" },
   { href: INSTAGRAM_URL, label: "Instagram" },
 ];

@@ -13,7 +13,7 @@ import {
   StoryProse,
   Threats,
 } from "@/components/record";
-import { APP_STORE_URL, SITE_URL, allRecords, formatDate, plate, recordById } from "@/lib/archive";
+import { APP_CTA_HREF, APP_CTA_LABEL, SITE_URL, allRecords, formatDate, plate, recordById } from "@/lib/archive";
 
 export function generateStaticParams() {
   return allRecords().map((record) => ({ id: record.id }));
@@ -242,8 +242,8 @@ export default async function RecordPage({ params }: PageProps<"/archive/[id]">)
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4 md:col-span-5 md:col-start-8 md:self-center">
-              <PrimaryLink href={APP_STORE_URL} external>
-                Download on the App Store
+              <PrimaryLink href={APP_CTA_HREF} external>
+                {APP_CTA_LABEL}
               </PrimaryLink>
               <TextLink href="/archive">Back to the archive</TextLink>
             </div>
