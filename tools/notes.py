@@ -166,16 +166,28 @@ def first_paragraph(body):
 
 # ---------------------------------------------------------------- parsing
 
+def frontmatter(block):
+    r"""key: value per line, values allowed to be empty.
+
+    The horizontal-whitespace class and the `.*` are both load-bearing. With
+    `\s*(.+)` an empty key ate the newline and swallowed the line below it, so
+    the scaffold's own `image:` (documented as "leave it empty to borrow the
+    linked record's plate") silently consumed `type:` and the gate reported a
+    missing field the author could see was right there. Shipped 2026-09-12.
+    """
+    return {k: v.strip() for k, v in re.findall(r"^(\w+):[^\S\n]*(.*)$", block, re.M)}
+
+
 def parse(path):
     raw = path.read_text()
     m = re.match(r"^---\n(.*?)\n---\n(.*)$", raw, re.S)
     if not m:
         sys.exit(f"HARD FAIL {path.name}: missing frontmatter")
-    meta = dict(re.findall(r"^(\w+):\s*(.+)$", m.group(1), re.M))
+    meta = frontmatter(m.group(1))
     if not re.match(r"^\d{4}-\d{2}-\d{2}-.+$", path.stem):
         sys.exit(f"HARD FAIL {path.name}: filename must be YYYY-MM-DD-slug.md")
     return {"date": path.stem[:10], "slug": path.stem[11:], "body": m.group(2),
-            "path": path.name, **{k: v.strip() for k, v in meta.items()}}
+            "path": path.name, **meta}
 
 
 def all_notes():
@@ -504,6 +516,9 @@ def selftest():
     assert note_urls(["witness_web/community/content/posts/2026-09-03-a-slug.md"]) == \
         [SITE, f"{SITE}/p/a-slug"]
     assert first_paragraph("## Head\n\nThe [answer](/x) paragraph.") == "The answer paragraph."
+    # an empty key must stay empty, not eat the line under it
+    assert frontmatter("image:\ntype: question") == {"image": "", "type": "question"}
+    assert frontmatter("title: A note \nimage:   ") == {"title": "A note", "image": ""}
     print("selftest ok")
 
 
