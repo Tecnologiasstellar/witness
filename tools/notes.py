@@ -21,6 +21,7 @@ import json
 import re
 import subprocess
 import sys
+import time
 from datetime import date
 from pathlib import Path
 
@@ -468,6 +469,25 @@ def ping_indexnow(urls):
 
 # ---------------------------------------------------------------- ship
 
+def with_retries(fn, attempts=3, sleep=time.sleep):
+    """Call fn() until it returns 0. True if it ever did.
+
+    For the deploy, and only the deploy. Observed 2026-09-12: `vercel deploy`
+    returned "Not authorized", an identical retry seconds later succeeded, and
+    `vercel whoami` was authenticated the whole time — a transient, not an
+    expired login. Untreated it costs the whole run, because ship dies after the
+    push: the note is committed but not public and the IndexNow ping never
+    fires. The push and the rebase are NOT retried; a git failure there is real.
+    """
+    for attempt in range(1, attempts + 1):
+        if fn() == 0:
+            return True
+        if attempt < attempts:
+            print(f"deploy attempt {attempt}/{attempts} failed — retrying in {5 * attempt}s")
+            sleep(5 * attempt)
+    return False
+
+
 def ship(message):
     """Gate, build, commit, rebase, push, deploy.
 
@@ -489,7 +509,13 @@ def ship(message):
         print("nothing new to commit — pushing whatever is already committed")
     subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=ROOT, check=True)
     subprocess.run(["git", "push", "origin", "main"], cwd=ROOT, check=True)
-    subprocess.run(["npx", "vercel", "deploy", "--prod", "--yes"], cwd=SITE_DIR, check=True)
+    if not with_retries(lambda: subprocess.run(
+            ["npx", "vercel", "deploy", "--prod", "--yes"], cwd=SITE_DIR).returncode):
+        sys.exit(f"HARD FAIL: vercel deploy failed 3x. The note is committed and pushed "
+                 f"but NOT public, and IndexNow was not pinged. Check `npx vercel whoami`; "
+                 f"if that is not logged in a human runs `npx vercel login`, then "
+                 f"`npx vercel deploy --prod --yes` and `python3 tools/notes.py ping` "
+                 f"from {ROOT}.")
     print(f"deployed: {SITE}")
     ping_indexnow(changed_urls())
 
@@ -519,6 +545,12 @@ def selftest():
     # an empty key must stay empty, not eat the line under it
     assert frontmatter("image:\ntype: question") == {"image": "", "type": "question"}
     assert frontmatter("title: A note \nimage:   ") == {"title": "A note", "image": ""}
+    calls = []
+    # fails once, succeeds on the retry — the 2026-09-12 deploy, exactly
+    assert with_retries(lambda: calls.append(1) or (0 if len(calls) == 2 else 1),
+                        sleep=lambda s: None)
+    assert len(calls) == 2
+    assert not with_retries(lambda: 1, sleep=lambda s: None)
     print("selftest ok")
 
 
