@@ -5,7 +5,7 @@ import { Container } from "./atlas";
 import { AppearanceControl } from "./appearance.es";
 
 const PAGES = [
-  { href: "/archive", label: "El Archivo" },
+  { href: "/es/archive", label: "El Archivo" },
   { href: "/method", label: "Método" },
   { href: "/privacy", label: "Privacidad" },
   { href: "/terms", label: "Términos" },

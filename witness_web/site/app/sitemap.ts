@@ -1,16 +1,27 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL, allRecords } from "@/lib/archive";
 
+/** Both languages of a page, so search engines pair them. */
+function pair(path: string) {
+  return { en: `${SITE_URL}${path}`, es: `${SITE_URL}/es${path}` };
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const records = allRecords().map((record) => ({
-    url: `${SITE_URL}/archive/${record.id}`,
-    lastModified: new Date(record.editorial.lastFactChecked),
-    priority: 0.8,
-  }));
+  const records = allRecords().flatMap((record) => {
+    const languages = pair(`/archive/${record.id}`);
+    const lastModified = new Date(record.editorial.lastFactChecked);
+    return [
+      { url: languages.en, lastModified, priority: 0.8, alternates: { languages } },
+      { url: languages.es, lastModified, priority: 0.7, alternates: { languages } },
+    ];
+  });
+  const home = pair("");
+  const archive = pair("/archive");
   return [
-    { url: SITE_URL, priority: 1, alternates: { languages: { en: SITE_URL, es: `${SITE_URL}/es` } } },
-    { url: `${SITE_URL}/es`, priority: 0.9, alternates: { languages: { en: SITE_URL, es: `${SITE_URL}/es` } } },
-    { url: `${SITE_URL}/archive`, priority: 0.9 },
+    { url: home.en, priority: 1, alternates: { languages: home } },
+    { url: home.es, priority: 0.9, alternates: { languages: home } },
+    { url: archive.en, priority: 0.9, alternates: { languages: archive } },
+    { url: archive.es, priority: 0.8, alternates: { languages: archive } },
     { url: `${SITE_URL}/method`, priority: 0.6 },
     { url: `${SITE_URL}/contact`, priority: 0.5 },
     { url: `${SITE_URL}/privacy`, priority: 0.3 },

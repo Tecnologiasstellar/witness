@@ -90,14 +90,14 @@ export default function Home() {
             <PrimaryLink href={APP_CTA_HREF} external>
               {APP_CTA_LABEL}
             </PrimaryLink>
-            <TextLink href="/archive">Explorar el archivo</TextLink>
+            <TextLink href="/es/archive">Explorar el archivo</TextLink>
           </div>
           <ul className="plate-strip" aria-label="Especies dibujadas para Witness">
             {strip.map((record) => {
               const art = plate(record, "plate");
               return (
                 <li key={record.id}>
-                  <Link href={`/archive/${record.id}`}>
+                  <Link href={`/es/archive/${record.id}`}>
                     <img src={art.src} width={art.width} height={art.height} alt={`Ilustración original: ${record.commonName}`} decoding="async" />
                   </Link>
                 </li>
@@ -127,7 +127,7 @@ export default function Home() {
             </div>
             <div>
               <p>Cada ficha que lleva la app está aquí para leerla, gratis: cinco ilustraciones originales, la historia con fuentes, las amenazas y la puerta.</p>
-              <PrimaryLink href="/archive">Abrir el archivo</PrimaryLink>
+              <PrimaryLink href="/es/archive">Abrir el archivo</PrimaryLink>
             </div>
           </div>
           <ul className="archive-grid">
@@ -135,7 +135,7 @@ export default function Home() {
               const art = plate(record, "plate");
               return (
                 <li key={record.id}>
-                  <Link href={`/archive/${record.id}`} aria-label={record.commonName}>
+                  <Link href={`/es/archive/${record.id}`} aria-label={record.commonName}>
                     <img src={art.src} width={art.width} height={art.height} alt="" loading="lazy" decoding="async" />
                   </Link>
                 </li>
@@ -228,7 +228,7 @@ export default function Home() {
             <PrimaryLink href={APP_CTA_HREF} external>
               {APP_CTA_LABEL}
             </PrimaryLink>
-            <TextLink href="/archive">Abrir el archivo</TextLink>
+            <TextLink href="/es/archive">Abrir el archivo</TextLink>
           </div>
         </Container>
       </section>
