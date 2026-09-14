@@ -7,6 +7,7 @@ const NAV = [
   { href: "/archive", label: "El Archivo" },
   { href: NOTES_URL, label: "Notas de campo" },
   { href: "/contact", label: "Contacto" },
+  { href: "/", label: "English", lang: "en" },
 ];
 
 const linkClass =
@@ -41,7 +42,7 @@ export function SiteHeader() {
               <ul className="mx-auto flex w-[min(1200px,calc(100vw-48px))] flex-col divide-y divide-hairline/40">
                 {NAV.map((item) => (
                   <li key={item.href}>
-                    <a href={item.href} className={`${linkClass} w-full py-1`}>
+                    <a href={item.href} lang={item.lang} hrefLang={item.lang} className={`${linkClass} w-full py-1`}>
                       {item.label}
                     </a>
                   </li>
@@ -55,7 +56,7 @@ export function SiteHeader() {
           <ul className="flex items-center gap-8">
             {NAV.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className={linkClass}>
+                <a href={item.href} lang={item.lang} hrefLang={item.lang} className={linkClass}>
                   {item.label}
                 </a>
               </li>
