@@ -3,7 +3,10 @@ import { join } from "node:path";
 import Link from "next/link";
 import { Container, Eyebrow, PrimaryLink, TextLink } from "@/components/atlas";
 import { HowItWorks, type Step } from "@/components/how-it-works";
+import type { Metadata } from "next";
 import { APP_CTA_HREF, APP_CTA_LABEL, APP_EYEBROW, APP_STORE_LIVE, APP_STORE_URL, SITE_URL, allRecords, plate, recordById } from "@/lib/archive";
+
+export const metadata: Metadata = { alternates: { canonical: "/", languages: { en: "/", es: "/es" } } };
 
 /** Plates in the hero strip and the archive band. Eight each, chosen for variety of form and colour. */
 const STRIP = ["kakapo", "javan-rhino", "vaquita", "amur-leopard", "whooping-crane", "red-wolf", "axolotl", "snow-leopard"];

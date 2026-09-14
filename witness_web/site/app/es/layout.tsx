@@ -1,36 +1,36 @@
 import type { Metadata, Viewport } from "next";
 import { Grain } from "@/components/atlas";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header.es";
+import { SiteFooter } from "@/components/site-footer.es";
 import { APP_STORE_LIVE, SITE_URL } from "@/lib/archive";
-import "./globals.css";
+import "../globals.css";
 
 const description =
-  "Each week, one species on the edge of disappearance: its true story, its sources, one honest action. No feed. No account. No false promises." +
-  (APP_STORE_LIVE ? " Free on iPhone." : "");
+  "Cada semana, una especie al borde de la desaparición: su historia real, sus fuentes, una acción honesta. Sin feed. Sin cuenta. Sin falsas promesas." +
+  (APP_STORE_LIVE ? " Gratis en iPhone." : "");
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Witness — one endangered species a week",
+    default: "Witness — una especie en peligro por semana",
     template: "%s · Witness",
   },
   description,
   applicationName: "Witness",
   authors: [{ name: "Witness" }],
   creator: "Witness",
-  keywords: ["endangered species", "wildlife", "extinction", "conservation", "nature", "biodiversity", "iPhone app"],
+  keywords: ["especies en peligro", "fauna", "extinción", "conservación", "naturaleza", "biodiversidad", "app para iPhone"],
   // Safari's Smart App Banner. It offers the store listing, so it is gated with
   // everything else that promises one — see APP_STORE_LIVE.
   ...(APP_STORE_LIVE ? { itunes: { appId: "6804311122" } } : {}),
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/es", languages: { en: "/", es: "/es" } },
   openGraph: {
     type: "website",
     siteName: "Witness",
-    title: "Witness — one endangered species a week",
+    title: "Witness — una especie en peligro por semana",
     description,
-    url: SITE_URL,
-    images: [{ url: "/images/plates/whooping-crane-context-01.webp", width: 1400, height: 939, alt: "Original illustration of whooping cranes drawn for Witness" }],
+    url: `${SITE_URL}/es`,
+    images: [{ url: "/images/plates/whooping-crane-context-01.webp", width: 1400, height: 939, alt: "Ilustración original de grullas trompeteras dibujada para Witness" }],
   },
   twitter: { card: "summary_large_image", title: "Witness", description, images: ["/images/plates/whooping-crane-context-01.webp"] },
   robots: { index: true, follow: true },
@@ -45,14 +45,14 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="es" className="h-full antialiased">
       <body className="flex min-h-full flex-col bg-paper text-ink">
         <Grain />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:inline-flex focus:min-h-11 focus:items-center focus:bg-ink focus:px-4 focus:text-paper"
         >
-          Skip to content
+          Saltar al contenido
         </a>
         <span id="top" />
         <SiteHeader />

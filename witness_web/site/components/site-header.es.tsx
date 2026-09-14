@@ -1,0 +1,68 @@
+import Link from "next/link";
+import { NOTES_URL } from "@/lib/archive";
+import { Container } from "./atlas";
+
+const NAV = [
+  { href: "/es", label: "La app" },
+  { href: "/archive", label: "El Archivo" },
+  { href: NOTES_URL, label: "Notas de campo" },
+  { href: "/contact", label: "Contacto" },
+];
+
+const linkClass =
+  "inline-flex min-h-11 items-center text-[15px] text-ink-muted transition-colors duration-200 ease-out hover:text-ink focus-visible:text-ink";
+
+export function SiteHeader() {
+  return (
+    <header className="sticky top-0 z-30 border-b border-hairline/50 bg-paper/95 shadow-[0_3px_0_-2px_color-mix(in_srgb,var(--hairline)_45%,transparent)] supports-[backdrop-filter]:backdrop-blur-sm">
+      <Container className="flex flex-col gap-0 py-4 md:flex-row md:items-center md:justify-between">
+        <div className="flex items-center justify-between gap-4">
+          <Link
+            href="/es"
+            className="inline-flex min-h-11 items-center font-display text-xl font-semibold tracking-tight text-ink"
+            translate="no"
+          >
+            Witness
+          </Link>
+
+          {/* Compact disclosure menu, no client JavaScript. */}
+          <details className="group md:hidden">
+            <summary className="inline-flex min-h-11 min-w-11 cursor-pointer list-none items-center justify-end gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-sepia [&::-webkit-details-marker]:hidden">
+              Menú
+              <span
+                aria-hidden="true"
+                className="relative block h-3 w-3 before:absolute before:left-0 before:top-1.5 before:h-px before:w-3 before:bg-current after:absolute after:left-0 after:top-1.5 after:h-px after:w-3 after:bg-current after:transition-transform after:duration-200 after:ease-out after:[transform:rotate(90deg)] group-open:after:[transform:rotate(0deg)]"
+              />
+            </summary>
+            <nav
+              aria-label="Principal"
+              className="absolute left-0 right-0 z-10 mt-4 border-y border-hairline/50 bg-paper-fresh"
+            >
+              <ul className="mx-auto flex w-[min(1200px,calc(100vw-48px))] flex-col divide-y divide-hairline/40">
+                {NAV.map((item) => (
+                  <li key={item.href}>
+                    <a href={item.href} className={`${linkClass} w-full py-1`}>
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </details>
+        </div>
+
+        <nav aria-label="Principal" className="hidden md:block">
+          <ul className="flex items-center gap-8">
+            {NAV.map((item) => (
+              <li key={item.href}>
+                <a href={item.href} className={linkClass}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </Container>
+    </header>
+  );
+}

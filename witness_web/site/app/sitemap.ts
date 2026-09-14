@@ -8,7 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
   return [
-    { url: SITE_URL, priority: 1 },
+    { url: SITE_URL, priority: 1, alternates: { languages: { en: SITE_URL, es: `${SITE_URL}/es` } } },
+    { url: `${SITE_URL}/es`, priority: 0.9, alternates: { languages: { en: SITE_URL, es: `${SITE_URL}/es` } } },
     { url: `${SITE_URL}/archive`, priority: 0.9 },
     { url: `${SITE_URL}/method`, priority: 0.6 },
     { url: `${SITE_URL}/contact`, priority: 0.5 },
