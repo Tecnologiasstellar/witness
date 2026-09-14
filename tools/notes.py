@@ -3,7 +3,8 @@
 
     python3 tools/notes.py next            pick the next topic and scaffold the brief
     python3 tools/notes.py                 gate every note (hard fails abort)
-    python3 tools/notes.py ship "message"  gate + next build + commit + rebase + push
+    python3 tools/notes.py ship "message"  gate + translate + next build + commit + rebase + push
+    python3 tools/notes.py translate [slug] write the Spanish mirror of every note that lacks one
     python3 tools/notes.py ping [--all]    resubmit URLs to IndexNow by hand
     python3 tools/notes.py selftest        prove the gates still catch what they exist to catch
 
@@ -18,6 +19,7 @@ gate here is tighter, not looser. Rendering is not this tool's job — Next.js
 reads the same markdown through witness_web/community/lib/posts.ts.
 """
 import json
+import os
 import re
 import subprocess
 import sys
@@ -28,6 +30,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE_DIR = ROOT / "witness_web" / "community"
 NOTES_DIR = SITE_DIR / "content" / "posts"
+NOTES_ES_DIR = SITE_DIR / "content" / "posts-es"     # the Spanish edition, file for file
 TOPICS = SITE_DIR / "content" / "topics.json"
 SPECIES = SITE_DIR / "data" / "species.json"
 PUBLIC = SITE_DIR / "public"
@@ -403,6 +406,142 @@ def next_topic():
     scaffold(next((t for t in pending if t["type"] != last_type), pending[0]))
 
 
+# ---------------------------------------------------------------- translate
+# The Spanish edition (community.witnessatlas.com/es) is content/posts-es, one
+# file per English note with the same name. lib/posts.es.ts renders it and
+# tools/check_notes_es.py holds it to the English: same frontmatter apart from
+# title/description/question, same block structure, same links, same numerals.
+# A note ships in both languages from one `ship`; if the Spanish cannot be made
+# or fails the checker, the English ships alone and the checker keeps naming
+# the gap. Stdlib HTTP on purpose — this tool has no dependencies, and the
+# nightly loop runs wherever it is pointed.
+MODEL = "claude-opus-5"
+TRANSLATE_SYSTEM = """You translate Field Notes essays (community.witnessatlas.com) from English into Spanish for a native audience.
+
+Output the complete markdown file: the frontmatter block between --- lines, then the body. No code fences, no commentary before or after.
+
+Frontmatter: translate the values of title, description and question (a question keeps its opening ¿). Copy section, image, type and sources exactly as given.
+
+Body: keep the block structure line for line — the same ## headings, the same "- " list items including their indented continuation lines, the same "> " quotes, the same paragraph breaks, the same bold and italics. Translate link text; keep every link URL byte-identical, including /p/... and /archive/... paths. Keep every numeral, unit and date exactly as written (17.6 per cent becomes 17.6 por ciento; 1,365 stays 1,365). A decade may become words (the 1980s becomes los años ochenta). Keep the names of organizations, journals, people, places and programs as they are. Quoted passages stay in quotation marks, translated.
+
+Tone: austere, literal, factual. Say exactly what the English says — no added claims, no softening, no marketing. Neutral Spanish, tú when the English addresses the reader.
+
+Glossary: Witness is never translated. Field Notes → Notas de campo. The Archive → El Archivo. a record or card → ficha. a plate (illustration) → lámina. the door (an organization's page) → puerta. an act → acto. to witness → dar testimonio. one honest action → una acción honesta. IUCN → UICN. Red List → Lista Roja. Critically Endangered → En Peligro Crítico. Endangered → En Peligro. Vulnerable → Vulnerable. Extinct in the Wild → Extinto en Estado Silvestre. Least Concern → Preocupación Menor. Endangered Species Act → Ley de Especies en Peligro. vaquita → vaquita marina. axolotl → ajolote. whooping crane → grulla trompetera. Iberian lynx → lince ibérico. ploughshare tortoise → tortuga angonoka. Ethiopian wolf → lobo etíope. Hawaiian crow → cuervo hawaiano (ʻalalā). Javan rhino → rinoceronte de Java. Sumatran orangutan → orangután de Sumatra. monarch butterfly → mariposa monarca. Kemp's ridley → tortuga lora. golden lion tamarin → tití león dorado. Yangtze finless porpoise → marsopa lisa del Yangtsé. staghorn coral → coral cuerno de ciervo. spoon-billed sandpiper → correlimos cuchareta. Chinese giant salamander → salamandra gigante de China. Philippine eagle → águila filipina. rusty patched bumble bee → abejorro de parche oxidado. Amur tiger → tigre de Amur. Amur leopard → leopardo del Amur. snow leopard → leopardo de las nieves. mountain gorilla → gorila de montaña. North Atlantic right whale → ballena franca del Atlántico Norte. California condor → cóndor de California. hawksbill turtle → tortuga carey. gharial → gavial. red wolf → lobo rojo. Wollemi pine → pino de Wollemi. saola and kākāpō stay as they are."""
+EXAMPLE_SLUG = "the-lynx-that-came-back"                 # a published pair, sent as the reference
+
+
+def api_key():
+    """ANTHROPIC_API_KEY from the environment, else from the site's untracked .env.local."""
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    env = SITE_DIR / ".env.local"
+    if not key and env.exists():
+        m = re.search(r"^ANTHROPIC_API_KEY=(.+)$", env.read_text(), re.M)
+        key = m.group(1).strip().strip('"') if m else None
+    return key
+
+
+def claude(key, system, user):
+    """One Messages API call. The text, or None when the call failed or was refused —
+    never fatal, because the English note must still ship."""
+    import urllib.error
+    import urllib.request
+    body = {"model": MODEL, "max_tokens": 16000, "system": system,
+            "messages": [{"role": "user", "content": user}]}
+    base = os.environ.get("ANTHROPIC_BASE_URL", "https://api.anthropic.com")   # the SDKs' own override
+    req = urllib.request.Request(f"{base}/v1/messages",
+                                 data=json.dumps(body).encode(),
+                                 headers={"content-type": "application/json", "x-api-key": key,
+                                          "anthropic-version": "2023-06-01"})
+    try:
+        with urllib.request.urlopen(req, timeout=600) as r:
+            data = json.load(r)
+    except urllib.error.HTTPError as e:
+        print(f"claude: HTTP {e.code} {e.read().decode(errors='replace')[:300]}")
+        return None
+    except OSError as e:
+        print(f"claude: unreachable ({str(e)[:80]})")
+        return None
+    if data.get("stop_reason") == "refusal":
+        print("claude: refused")
+        return None
+    return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
+
+
+def assemble_es(en_raw, out):
+    """The Spanish file from the model's output: its title, description and question,
+    every other frontmatter line copied from the English byte for byte, its body.
+    None when the output is not a note."""
+    out = re.sub(r"^```[a-z]*\n|\n```$", "", out.strip())
+    m_en = re.match(r"^---\n(.*?)\n---\n(.*)$", en_raw, re.S)
+    m_es = re.match(r"^---\n(.*?)\n---\n(.*)$", out, re.S)
+    if not (m_en and m_es):
+        return None
+    es = frontmatter(m_es.group(1))
+    lines = []
+    for line in m_en.group(1).split("\n"):
+        key = line.split(":", 1)[0]
+        if key in ("title", "description", "question"):
+            if not es.get(key):
+                return None
+            lines.append(f"{key}: {es[key]}")
+        else:
+            lines.append(line)
+    return "---\n" + "\n".join(lines) + "\n---\n\n" + m_es.group(2).strip() + "\n"
+
+
+def es_problems(name):
+    """What tools/check_notes_es.py says about one file."""
+    out = subprocess.run([sys.executable, str(ROOT / "tools" / "check_notes_es.py")],
+                         capture_output=True, text=True).stdout
+    return [line for line in out.splitlines() if line.startswith(name)]
+
+
+def translate(slug=None):
+    """Write the Spanish mirror of every note that lacks one (or redo one note by slug).
+    Two attempts per note, the checker's findings fed back into the second; a note
+    that still fails is removed so the English ships alone. Returns (written, failed)."""
+    NOTES_ES_DIR.mkdir(exist_ok=True)
+    notes = sorted(NOTES_DIR.glob("*.md"))
+    todo = ([p for p in notes if p.stem[11:] == slug] if slug
+            else [p for p in notes if not (NOTES_ES_DIR / p.name).exists()])
+    if slug and not todo:
+        sys.exit(f"no note with slug {slug!r}")
+    if not todo:
+        print("translate: every note has its Spanish mirror")
+        return [], []
+    key = api_key()
+    if not key:
+        print(f"translate: no ANTHROPIC_API_KEY (environment or {SITE_DIR.relative_to(ROOT)}/.env.local) — "
+              f"{len(todo)} note(s) ship without Spanish; run `python3 tools/notes.py translate` once it is set")
+        return [], [p.name for p in todo]
+    example = ""
+    en_ex, es_ex = NOTES_DIR / f"2026-09-04-{EXAMPLE_SLUG}.md", NOTES_ES_DIR / f"2026-09-04-{EXAMPLE_SLUG}.md"
+    if en_ex.exists() and es_ex.exists() and en_ex.stem[11:] != slug:
+        example = (f"A published pair, the reference for structure and tone:\n\n<english_example>\n{en_ex.read_text()}"
+                   f"</english_example>\n\n<spanish_example>\n{es_ex.read_text()}</spanish_example>\n\n")
+    written, failed = [], []
+    for path in todo:
+        target, feedback = NOTES_ES_DIR / path.name, ""
+        for attempt in (1, 2):
+            user = (f"{example}{feedback}Translate this note.\n\n<english>\n{path.read_text()}</english>")
+            es = assemble_es(path.read_text(), claude(key, TRANSLATE_SYSTEM, user) or "")
+            if es:
+                target.write_text(es)
+            problems = es_problems(path.name) if es else [f"{path.name}: the output was not a note"]
+            if not problems:
+                written.append(target)
+                print(f"translated {target.relative_to(ROOT)}")
+                break
+            print(f"translate attempt {attempt}/2, {path.name}: " + "; ".join(p.split(": ", 1)[-1] for p in problems))
+            feedback = "A previous attempt failed these checks; fix them:\n" + "\n".join(problems) + "\n\n"
+        else:
+            target.unlink(missing_ok=True)
+            failed.append(path.name)
+            print(f"WARNING: {path.name} ships without its Spanish — rerun `python3 tools/notes.py translate` "
+                  f"or write content/posts-es/{path.name} by hand")
+    return written, failed
+
+
 # ---------------------------------------------------------------- indexnow
 # Bing accepts a push instead of waiting to be crawled, and Bing's index is what
 # ChatGPT search reads — so a note can be findable in an assistant's answer the
@@ -420,9 +559,11 @@ def indexnow_key():
 def note_urls(paths):
     urls = set()
     for p in paths:
-        m = re.search(r"content/posts/\d{4}-\d{2}-\d{2}-(.+)\.md$", p)
+        m = re.search(r"content/posts(-es)?/\d{4}-\d{2}-\d{2}-(.+)\.md$", p)
         if m:
-            urls.add(f"{SITE}/p/{m.group(1)}")
+            edition = "/es" if m.group(1) else ""
+            urls.add(f"{SITE}{edition}/p/{m.group(2)}")
+            urls.add(f"{SITE}{edition}")
     if urls:
         urls.add(SITE)
     return sorted(urls)
@@ -489,7 +630,7 @@ def with_retries(fn, attempts=3, sleep=time.sleep):
 
 
 def ship(message):
-    """Gate, build, commit, rebase, push, deploy.
+    """Gate, translate, build, commit, rebase, push, deploy.
 
     This project has no Vercel GitHub integration: every production deployment
     of the site has been made by `vercel deploy` from its directory (witness_web/community),
@@ -503,6 +644,7 @@ def ship(message):
     the commit rather than the site.
     """
     check()
+    translate()
     subprocess.run(["npx", "next", "build", "--webpack"], cwd=SITE_DIR, check=True)
     subprocess.run(["git", "add", "-A"], cwd=ROOT, check=True)
     if subprocess.run(["git", "commit", "-m", message], cwd=ROOT).returncode:
@@ -541,6 +683,14 @@ def selftest():
                                  {"path": "b", "title": "What critically endangered means"}])) == 1
     assert note_urls(["witness_web/community/content/posts/2026-09-03-a-slug.md"]) == \
         [SITE, f"{SITE}/p/a-slug"]
+    assert note_urls(["witness_web/community/content/posts-es/2026-09-03-a-slug.md"]) == \
+        [SITE, f"{SITE}/es", f"{SITE}/es/p/a-slug"]
+    en = "---\ntitle: A\nquestion: Q?\nsection: numbers\nsources: https://x, https://y\n---\n\nBody.\n"
+    es = assemble_es(en, "```markdown\n---\ntitle: Una\nquestion: ¿Q?\nsection: WRONG\nsources: gone\n---\n\nCuerpo.\n```")
+    # translated fields taken, fixed fields copied from the English, the fence stripped
+    assert es == "---\ntitle: Una\nquestion: ¿Q?\nsection: numbers\nsources: https://x, https://y\n---\n\nCuerpo.\n", es
+    assert assemble_es(en, "Lo siento, no puedo.") is None
+    assert assemble_es(en, "---\ntitle: Una\n---\n\nCuerpo.\n") is None   # a translated field missing
     assert first_paragraph("## Head\n\nThe [answer](/x) paragraph.") == "The answer paragraph."
     # an empty key must stay empty, not eat the line under it
     assert frontmatter("image:\ntype: question") == {"image": "", "type": "question"}
@@ -564,6 +714,9 @@ if __name__ == "__main__":
         if len(sys.argv) < 3:
             sys.exit('ship needs a commit message: ship "Field note: the title"')
         ship(sys.argv[2])
+    elif cmd == "translate":
+        if translate(sys.argv[2] if len(sys.argv) > 2 else None)[1]:
+            sys.exit(1)
     elif cmd == "ping":
         ping_indexnow(sorted({f"{SITE}/p/{n['slug']}" for n in all_notes()} | {SITE})
                       if "--all" in sys.argv else changed_urls())

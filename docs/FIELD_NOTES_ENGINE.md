@@ -23,6 +23,15 @@ python3 tools/notes.py ship "Field note: the title"
 # then verify the live URL in a browser. A green build is not a rendered page.
 ```
 
+`ship` also writes the Spanish edition: `translate` calls Claude (`claude-opus-5`, stdlib HTTP)
+for every note in `content/posts` without a mirror in `content/posts-es`, keeps the
+frontmatter's section, image, type and sources byte for byte, and holds the result to
+`tools/check_notes_es.py` (structure, links, numerals) with one retry. A note whose Spanish
+fails is removed and the English ships alone; the checker keeps naming the gap until
+`python3 tools/notes.py translate` (or `translate <slug>` to redo one) succeeds. The key comes
+from `ANTHROPIC_API_KEY` in the environment or in the untracked
+`witness_web/community/.env.local`; without it the step prints a notice and skips.
+
 `ship` ends with `vercel deploy --prod` from `witness_web/community`, because **this project
 has no Vercel GitHub integration**. Pushing to `main` deploys nothing; the domain is
 aliased to whichever deployment was promoted last, and every production deployment in the
