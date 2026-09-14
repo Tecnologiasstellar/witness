@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: PageProps<"/s/[section]">): P
   const { section } = await params;
   const s = sectionByKey(section);
   if (!s) return { title: "Not found" };
-  return { title: s.name, description: s.blurb, alternates: { canonical: `/s/${s.key}` } };
+  return { title: s.name, description: s.blurb, alternates: { canonical: `/s/${s.key}`, languages: { en: `/s/${s.key}`, es: `/es/s/${s.key}` } } };
 }
 
 export default async function SectionPage({ params }: PageProps<"/s/[section]">) {

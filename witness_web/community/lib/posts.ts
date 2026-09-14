@@ -4,6 +4,9 @@
  * `../../../tools/notes.py`; this file only renders what that tool already
  * validated. Nothing here re-checks a claim — a post that reaches the site
  * passed the gate, or it was never committed.
+ *
+ * The Spanish edition reads `content/posts-es` through the same loader; see
+ * ./posts.es.ts.
  */
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
@@ -82,8 +85,8 @@ function firstParagraph(body: string) {
   return (block ?? "").replace(/\n/g, " ").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").trim();
 }
 
-function parse(file: string): Post {
-  const raw = readFileSync(join(DIR, file), "utf8");
+function parse(dir: string, file: string): Post {
+  const raw = readFileSync(join(dir, file), "utf8");
   const match = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/.exec(raw);
   if (!match) throw new Error(`${file}: missing frontmatter`);
   const meta: Record<string, string> = {};
@@ -116,31 +119,34 @@ function parse(file: string): Post {
   };
 }
 
-const POSTS: Post[] = readdirSync(DIR)
-  .filter((f) => f.endsWith(".md"))
-  .sort()
-  .reverse()
-  .map(parse);
-
-export function allPosts(): Post[] {
-  return POSTS;
+/** Every note in a folder, newest first. */
+export function loadPosts(dir: string): Post[] {
+  return readdirSync(dir)
+    .filter((f) => f.endsWith(".md"))
+    .sort()
+    .reverse()
+    .map((file) => parse(dir, file));
 }
 
-export function postBySlug(slug: string): Post | undefined {
-  return POSTS.find((p) => p.slug === slug);
+/** The queries a page needs, bound to one edition's posts. */
+export function postQueries(posts: Post[]) {
+  return {
+    allPosts: (): Post[] => posts,
+    postBySlug: (slug: string): Post | undefined => posts.find((p) => p.slug === slug),
+    postsInSection: (key: SectionKey): Post[] => posts.filter((p) => p.section === key),
+    /** Same section first, then newest, never the post itself. */
+    relatedPosts: (post: Post, limit = 3): Post[] => {
+      const others = posts.filter((p) => p.slug !== post.slug);
+      const same = others.filter((p) => p.section === post.section);
+      const rest = others.filter((p) => p.section !== post.section);
+      return [...same, ...rest].slice(0, limit);
+    },
+  };
 }
 
-export function postsInSection(key: SectionKey): Post[] {
-  return POSTS.filter((p) => p.section === key);
-}
+const POSTS = loadPosts(DIR);
 
-/** Same section first, then newest, never the post itself. */
-export function relatedPosts(post: Post, limit = 3): Post[] {
-  const others = POSTS.filter((p) => p.slug !== post.slug);
-  const same = others.filter((p) => p.section === post.section);
-  const rest = others.filter((p) => p.section !== post.section);
-  return [...same, ...rest].slice(0, limit);
-}
+export const { allPosts, postBySlug, postsInSection, relatedPosts } = postQueries(POSTS);
 
 /** A source URL's host, which is all the label a bare URL can honestly carry. */
 export function sourceHost(url: string): string {

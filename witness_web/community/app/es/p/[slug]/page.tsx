@@ -1,30 +1,30 @@
 import type { Metadata, Route } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { PostCard, SectionChip, SubscribeBand } from "@/components/cards";
-import { Container } from "@/components/shell";
-import { allPosts, postBySlug, relatedPosts, sourceHost } from "@/lib/posts";
-import { ATLAS_URL, PUB_NAME, SITE_URL, formatDate, plateUrl, sectionByKey } from "@/lib/site";
-import { recordById } from "@/lib/species";
+import { PostCard, SectionChip, SubscribeBand } from "@/components/cards.es";
+import { Container } from "@/components/shell.es";
+import { allPosts, postBySlug, relatedPosts, sourceHost } from "@/lib/posts.es";
+import { ATLAS_URL, PUB_NAME, SITE_URL, formatDate, plateUrl, sectionByKey } from "@/lib/site.es";
+import { recordById } from "@/lib/species.es";
 
 export function generateStaticParams() {
   return allPosts().map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps<"/p/[slug]">): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps<"/es/p/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const post = postBySlug(slug);
-  if (!post) return { title: "Not found" };
+  if (!post) return { title: "No encontrada" };
   const image = plateUrl(post.image);
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `/p/${post.slug}` },
+    alternates: { canonical: `/es/p/${post.slug}`, languages: { en: `/p/${post.slug}`, es: `/es/p/${post.slug}` } },
     openGraph: {
       type: "article",
       title: post.title,
       description: post.description,
-      url: `${SITE_URL}/p/${post.slug}`,
+      url: `${SITE_URL}/es/p/${post.slug}`,
       publishedTime: post.date,
       images: [{ url: image, width: 1400, height: 939 }],
     },
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps<"/p/[slug]">): Prom
   };
 }
 
-export default async function PostPage({ params }: PageProps<"/p/[slug]">) {
+export default async function PostPage({ params }: PageProps<"/es/p/[slug]">) {
   const { slug } = await params;
   const post = postBySlug(slug);
   if (!post) notFound();
@@ -51,13 +51,14 @@ export default async function PostPage({ params }: PageProps<"/p/[slug]">) {
       datePublished: post.date,
       dateModified: post.date,
       isAccessibleForFree: true,
+      inLanguage: "es",
       articleSection: section?.name,
       author: post.author
         ? { "@type": "Person", name: post.author, ...(post.authorUrl ? { url: post.authorUrl } : {}) }
         : { "@type": "Organization", name: "Witness" },
-      publisher: { "@type": "Organization", name: PUB_NAME, url: SITE_URL },
+      publisher: { "@type": "Organization", name: PUB_NAME, url: `${SITE_URL}/es` },
       citation: post.sources,
-      url: `${SITE_URL}/p/${post.slug}`,
+      url: `${SITE_URL}/es/p/${post.slug}`,
     },
   ];
   if (post.question) {
@@ -97,21 +98,21 @@ export default async function PostPage({ params }: PageProps<"/p/[slug]">) {
                 <span aria-hidden="true">·</span>
                 <time dateTime={post.date}>{formatDate(post.date)}</time>
                 <span aria-hidden="true">·</span>
-                <span>{post.minutes} min read</span>
+                <span>{post.minutes} min de lectura</span>
               </p>
               <a
-                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(`${SITE_URL}/p/${post.slug}`)}&text=${encodeURIComponent(post.title)}`}
+                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(`${SITE_URL}/es/p/${post.slug}`)}&text=${encodeURIComponent(post.title)}`}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="text-[13px] font-semibold text-accent hover:text-ink"
               >
-                Share&nbsp;↗
+                Compartir&nbsp;↗
               </a>
             </div>
             <figure className="mt-6">
               <img src={plateUrl(post.image)} alt="" width={1400} height={933} className="plate" fetchPriority="high" />
               <figcaption className="mt-2 text-[12px] uppercase tracking-[0.12em] text-muted">
-                Original illustration drawn for Witness
+                Ilustración original dibujada para Witness
               </figcaption>
             </figure>
           </div>
@@ -132,9 +133,9 @@ export default async function PostPage({ params }: PageProps<"/p/[slug]">) {
         <section className="border-t border-line bg-surface py-12">
           <Container>
             <div className="mx-auto max-w-[900px]">
-              <h2 className="font-display text-[13px] font-extrabold uppercase tracking-[0.16em] text-ink">Sources</h2>
+              <h2 className="font-display text-[13px] font-extrabold uppercase tracking-[0.16em] text-ink">Fuentes</h2>
               <p className="mt-2 max-w-[58ch] text-[14px] leading-[1.6] text-muted">
-                Read the same pages this note was written from. A citation is not a partnership or an endorsement.
+                Lee las mismas páginas a partir de las cuales se escribió esta nota. Una cita no es una alianza ni un respaldo.
               </p>
               <ol className="mt-5 divide-y divide-line border-y border-line">
                 {post.sources.map((url, i) => (
@@ -159,11 +160,11 @@ export default async function PostPage({ params }: PageProps<"/p/[slug]">) {
         <section className="py-12">
           <Container>
             <div className="mx-auto max-w-[900px]">
-              <h2 className="font-display text-[13px] font-extrabold uppercase tracking-[0.16em] text-ink">Records mentioned</h2>
+              <h2 className="font-display text-[13px] font-extrabold uppercase tracking-[0.16em] text-ink">Fichas mencionadas</h2>
               <ul className="mt-5 grid gap-5 sm:grid-cols-2">
                 {records.map((record) => (
                   <li key={record.id}>
-                    <a href={`${ATLAS_URL}/archive/${record.id}`} className="group grid grid-cols-[96px_1fr] items-center gap-4">
+                    <a href={`${ATLAS_URL}/es/archive/${record.id}`} className="group grid grid-cols-[96px_1fr] items-center gap-4">
                       <img src={plateUrl(record.gallery[0])} alt="" width={300} height={200} loading="lazy" className="plate" />
                       <span>
                         <span className="block text-[17px] font-bold leading-tight text-ink transition-colors group-hover:text-accent">
@@ -172,7 +173,7 @@ export default async function PostPage({ params }: PageProps<"/p/[slug]">) {
                         <span className="mt-1 block text-[13px] text-muted">
                           {record.conservationStatus.displayName} · {record.generalizedRange}
                         </span>
-                        <span className="mt-1 block text-[12px] font-semibold text-accent">Full record on witnessatlas.com ↗</span>
+                        <span className="mt-1 block text-[12px] font-semibold text-accent">Ficha completa en witnessatlas.com ↗</span>
                       </span>
                     </a>
                   </li>
@@ -193,11 +194,11 @@ export default async function PostPage({ params }: PageProps<"/p/[slug]">) {
           <Container>
             <div className="flex items-end justify-between border-b-2 border-ink pb-3">
               <h2 className="font-display text-[13px] font-extrabold uppercase tracking-[0.16em] text-ink">
-                {section ? `More in ${section.name}` : "More notes"}
+                {section ? `Más en ${section.name}` : "Más notas"}
               </h2>
               {section ? (
-                <Link href={`/s/${section.key}` as Route} className="text-[13px] font-semibold text-accent hover:text-ink">
-                  View all&nbsp;→
+                <Link href={`/es/s/${section.key}` as Route} className="text-[13px] font-semibold text-accent hover:text-ink">
+                  Ver todas&nbsp;→
                 </Link>
               ) : null}
             </div>

@@ -57,6 +57,9 @@ def main():
                     if nv != nw: problems.append(f"{rid}/{'/'.join(map(str, path))}: numerals differ {nv} vs {nw}")
             elif w != v:
                 problems.append(f"{rid}/{'/'.join(map(str, path))}: non-translatable field changed")
+    community = SITE.parent.parent / "community/data/species.es.json"
+    if community.exists() and community.read_bytes() != (SITE / "species.es.json").read_bytes():
+        problems.append("witness_web/community/data/species.es.json differs from the site copy (cp it over)")
     for p in problems: print(p)
     print(f"{len(es)}/{len(en)} records translated, {len(problems)} problems")
     sys.exit(1 if problems else 0)

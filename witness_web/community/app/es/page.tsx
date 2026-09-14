@@ -1,10 +1,8 @@
-import type { Route } from "next";
-import Link from "next/link";
-import { LeadCard, PostCard, RecordCard, RowCard, Section, SectionHeading, SubscribeBand } from "@/components/cards";
-import { Container } from "@/components/shell";
-import { allPosts, postsInSection } from "@/lib/posts";
-import { SECTIONS } from "@/lib/site";
-import { allRecords } from "@/lib/species";
+import { LeadCard, PostCard, RecordCard, RowCard, Section, SectionHeading, SubscribeBand } from "@/components/cards.es";
+import { Container } from "@/components/shell.es";
+import { allPosts, postsInSection } from "@/lib/posts.es";
+import { ATLAS_URL, SECTIONS } from "@/lib/site.es";
+import { allRecords } from "@/lib/species.es";
 
 export default function Home() {
   const posts = allPosts();
@@ -34,7 +32,7 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <p className="text-[17px] text-muted">The first note is being written.</p>
+            <p className="text-[17px] text-muted">La primera nota se está escribiendo.</p>
           )}
         </Container>
       </section>
@@ -44,7 +42,7 @@ export default function Home() {
       {/* Section rows ----------------------------------------------------- */}
       {rows.map(({ section, posts: inSection }) => (
         <Section key={section.key}>
-          <SectionHeading title={section.name} blurb={section.blurb} href={`/s/${section.key}`} />
+          <SectionHeading title={section.name} blurb={section.blurb} href={`/es/s/${section.key}`} />
           {inSection.length >= 3 ? (
             <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {inSection.slice(0, 3).map((post) => (
@@ -64,10 +62,10 @@ export default function Home() {
       {/* The archive ------------------------------------------------------ */}
       <Section className="bg-surface">
         <SectionHeading
-          title="The Archive"
-          blurb="Thirty species records, each with sources, rights, and an honest review state. The app's own catalog."
-          href="/archive"
-          more="All records"
+          title="El Archivo"
+          blurb="Treinta fichas de especies, cada una con fuentes, derechos y un estado de revisión honesto. El catálogo propio de la app."
+          href={`${ATLAS_URL}/es/archive`}
+          more="Todas las fichas"
         />
         <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
           {records.map((record) => (
@@ -78,7 +76,7 @@ export default function Home() {
 
       {/* Latest ----------------------------------------------------------- */}
       <Section>
-        <SectionHeading title="Latest" blurb="Every note, newest first." />
+        <SectionHeading title="Lo último" blurb="Cada nota, la más reciente primero." />
         <ul className="mt-2 divide-y divide-line">
           {posts.map((post) => (
             <li key={post.slug} className="py-6">
@@ -86,13 +84,6 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <p className="mt-6 text-[15px] text-muted">
-          Have a note in you?{" "}
-          <Link href={"/write" as Route} className="font-semibold text-accent hover:text-ink">
-            Read the brief
-          </Link>
-          .
-        </p>
       </Section>
     </>
   );
