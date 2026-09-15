@@ -435,8 +435,8 @@ def api_key():
     key = os.environ.get("ANTHROPIC_API_KEY")
     env = SITE_DIR / ".env.local"
     if not key and env.exists():
-        m = re.search(r"^ANTHROPIC_API_KEY=(.+)$", env.read_text(), re.M)
-        key = m.group(1).strip().strip('"') if m else None
+        m = re.search(r"^(?:export\s+)?ANTHROPIC_API_KEY\s*=\s*(.+)$", env.read_text(), re.M)
+        key = m.group(1).strip().strip("\"'") if m else None
     return key
 
 
