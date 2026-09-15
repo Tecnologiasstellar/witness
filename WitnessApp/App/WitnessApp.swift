@@ -38,7 +38,7 @@ struct WitnessApp: App {
                 Task.detached {
                     await WitnessSync.shared.drain()
                 }
-                Task { await commerce.refreshAccess() }
+                Task { await commerce.refreshOnForeground() }
                 Task { await model.refreshWeek() }
             }
         }

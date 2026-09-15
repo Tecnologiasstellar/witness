@@ -2,6 +2,14 @@ import Foundation
 import SwiftUI
 import WitnessCore
 
+/// Which paid surface an event happened on (§14 "paywall viewed by context").
+enum CommerceContext: String {
+    case fieldSeasonPreview = "fieldseason_preview"
+    case atlasSheet = "atlas_sheet"
+    case support
+    case index
+}
+
 /// Presentation state for the commerce surfaces. UI state here is never
 /// authorization: access decisions always flow from the verified or cached
 /// `AccessSnapshot` through `StandardContentAccessPolicy`, and unknown or
@@ -40,11 +48,45 @@ final class CommerceModel: ObservableObject {
     private let purchaseService: any PurchaseService
     private let accessRepository: any AccessRepository
     private let policy = StandardContentAccessPolicy()
+    private let logEvent: (String, [String: String]) -> Void
     private var didStart = false
+    private var isRefreshing = false
 
-    init(purchaseService: any PurchaseService, accessRepository: any AccessRepository) {
+    init(
+        purchaseService: any PurchaseService,
+        accessRepository: any AccessRepository,
+        logEvent: @escaping (String, [String: String]) -> Void = CommerceModel.sendToWitnessSync
+    ) {
         self.purchaseService = purchaseService
         self.accessRepository = accessRepository
+        self.logEvent = logEvent
+    }
+
+    /// Fire-and-forget, matching the call shape the views already use.
+    /// Never blocks or fails a purchase: `logEvent` no-ops without a transport.
+    static let sendToWitnessSync: @Sendable (String, [String: String]) -> Void = { name, metadata in
+        Task.detached { await WitnessSync.shared.logEvent(name, metadata: metadata) }
+    }
+
+    // MARK: - Funnel (§14)
+
+    /// `state` keeps the conversion denominator honest: a member reopening a
+    /// paid page to get back into it is not a paywall view. Same vocabulary
+    /// as `works_shelf_opened`.
+    func paywallViewed(_ context: CommerceContext) {
+        let held = switch context {
+        case .fieldSeasonPreview: ownsFieldSeason || atlasIsActive
+        case .atlasSheet: atlasIsActive
+        case .support, .index: false
+        }
+        logEvent("paywall_viewed", [
+            "context": context.rawValue,
+            "state": held ? "held" : "unheld"
+        ])
+    }
+
+    func libraryOpened(from context: CommerceContext) {
+        logEvent("atlas_library_opened", ["context": context.rawValue])
     }
 
     // MARK: - Access facts
@@ -114,6 +156,12 @@ final class CommerceModel: ObservableObject {
     // MARK: - Lifecycle
 
     func startIfNeeded() async {
+        // A failed store fetch is not a completed start: the next surface
+        // that appears tries again instead of showing a stale failure.
+        if case .unavailable = productsState {
+            await refresh()
+            return
+        }
         guard !didStart else { return }
         didStart = true
         if let cached = await accessRepository.cachedSnapshot() {
@@ -123,6 +171,10 @@ final class CommerceModel: ObservableObject {
     }
 
     func refresh() async {
+        // Two surfaces appearing at once must not double-fetch.
+        guard !isRefreshing else { return }
+        isRefreshing = true
+        defer { isRefreshing = false }
         if case .ready = productsState {} else {
             productsState = .loading
         }
@@ -137,6 +189,16 @@ final class CommerceModel: ObservableObject {
         await refreshAccess()
     }
 
+    /// Foreground re-fetches products only when the last attempt failed;
+    /// otherwise it just re-verifies access.
+    func refreshOnForeground() async {
+        if case .unavailable = productsState {
+            await refresh()
+        } else {
+            await refreshAccess()
+        }
+    }
+
     func refreshAccess() async {
         do {
             let verified = try await purchaseService.accessSnapshot(forceRefresh: true)
@@ -149,32 +211,45 @@ final class CommerceModel: ObservableObject {
 
     // MARK: - Purchase and restore
 
-    func purchase(productID: String) async {
+    func purchase(productID: String, context: CommerceContext) async {
         guard case .idle = purchasePhase.normalizedForNewAttempt else { return }
         purchasePhase = .purchasing(productID: productID)
+        var base = ["context": context.rawValue, "product": productID]
+        logEvent("purchase_started", base)
         do {
             switch try await purchaseService.purchase(productID: productID) {
             case .success(let newSnapshot):
                 snapshot = newSnapshot
                 try? await accessRepository.save(newSnapshot)
                 purchasePhase = .unlocked
+                logEvent("purchase_succeeded", base)
             case .supportThanks:
                 purchasePhase = .supportThanked
+                logEvent("purchase_succeeded", base)
             case .pending:
                 purchasePhase = .pendingApproval
+                logEvent("purchase_pending", base)
             case .userCancelled:
                 purchasePhase = .idle
+                logEvent("purchase_cancelled", base)
             case .failed(let reason):
                 purchasePhase = .failed(reason)
+                base["reason"] = Self.shortReason(reason)
+                logEvent("purchase_failed", base)
             }
         } catch {
-            purchasePhase = .failed(error.localizedDescription)
+            let reason = error.localizedDescription
+            purchasePhase = .failed(reason)
+            base["reason"] = Self.shortReason(reason)
+            logEvent("purchase_failed", base)
         }
     }
 
-    func restore() async {
+    func restore(context: CommerceContext) async {
         guard restorePhase != .restoring else { return }
         restorePhase = .restoring
+        let base = ["context": context.rawValue]
+        logEvent("restore_started", base)
         do {
             switch try await purchaseService.restorePurchases() {
             case .restored(let newSnapshot):
@@ -183,14 +258,28 @@ final class CommerceModel: ObservableObject {
                 snapshot = newSnapshot
                 try? await accessRepository.save(newSnapshot)
                 restorePhase = changed ? .restoredWithChanges : .nothingFound
+                logEvent("restore_finished", base.merging(
+                    ["outcome": changed ? "restored" : "nothing"]) { _, new in new })
             case .nothingToRestore:
                 restorePhase = .nothingFound
+                logEvent("restore_finished", base.merging(["outcome": "nothing"]) { _, new in new })
             case .failed(let reason):
                 restorePhase = .failed(reason)
+                logEvent("restore_finished", base.merging(
+                    ["outcome": "failed", "reason": Self.shortReason(reason)]) { _, new in new })
             }
         } catch {
-            restorePhase = .failed(error.localizedDescription)
+            let reason = error.localizedDescription
+            restorePhase = .failed(reason)
+            logEvent("restore_finished", base.merging(
+                ["outcome": "failed", "reason": Self.shortReason(reason)]) { _, new in new })
         }
+    }
+
+    /// Store errors can be long and localized; the funnel only needs enough
+    /// to tell one failure mode from another.
+    private static func shortReason(_ reason: String) -> String {
+        String(reason.prefix(120))
     }
 
     func clearTransientPhases() {

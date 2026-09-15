@@ -230,8 +230,21 @@ struct PurchasePhaseNotice: View {
     let restorePhase: CommerceModel.RestorePhase
 
     var body: some View {
-        if let text {
-            AccessStateNotice(text: text, identifier: "access.phase.notice")
+        // A Group, not a bare `if`: the announcement must hang on a view that
+        // exists in every phase, or it never fires when the notice appears.
+        Group {
+            if let text {
+                AccessStateNotice(text: text, identifier: "access.phase.notice")
+            }
+        }
+        .onChange(of: text) { _, newText in
+            // Cancellation reads as silence, here as everywhere.
+            guard let newText else { return }
+            var announcement = AttributedString(newText)
+            // High priority: a default one posted while focus settles after the
+            // button tap is routinely dropped.
+            announcement.accessibilitySpeechAnnouncementPriority = .high
+            AccessibilityNotification.Announcement(announcement).post()
         }
     }
 

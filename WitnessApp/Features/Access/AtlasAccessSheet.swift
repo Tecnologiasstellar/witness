@@ -5,6 +5,12 @@ import WitnessCore
 /// durations, identical access. Never a tier grid.
 struct AtlasAccessSheet: View {
     @ObservedObject var commerce: CommerceModel
+    /// Takes the reader to the library itself. The presenter owns dismissal —
+    /// this sheet never learns whether it was presented or pushed. Required,
+    /// so a future presenter cannot ship the page without a way in.
+    let onEnterLibrary: () -> Void
+
+    private let context = CommerceContext.atlasSheet
 
     var body: some View {
         ScrollView {
@@ -16,6 +22,9 @@ struct AtlasAccessSheet: View {
                         .lineSpacing(6)
 
                     if commerce.atlasIsActive {
+                        // The library leads, not the receipt: a member who
+                        // just paid — or who came back — gets the way in first.
+                        enterLibraryButton
                         AccessStateNotice(
                             text: "Atlas is active. \(commerce.atlasStatusLine).",
                             identifier: "access.atlas.active"
@@ -24,6 +33,13 @@ struct AtlasAccessSheet: View {
                         durationChoices
                     }
                     PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
+                    AccessQuietRow(
+                        title: "RESTORE PURCHASES",
+                        detail: commerce.restorePhase == .restoring ? "…" : nil,
+                        identifier: "access.atlas.restore"
+                    ) {
+                        Task { await commerce.restore(context: context) }
+                    }
 
                     holdings
                         .accessibilityIdentifier("access.atlas.production.notice")
@@ -50,13 +66,6 @@ struct AtlasAccessSheet: View {
                         .foregroundStyle(AtlasTheme.inkMuted)
                         .lineSpacing(5)
 
-                    AccessQuietRow(
-                        title: "RESTORE PURCHASES",
-                        detail: commerce.restorePhase == .restoring ? "…" : nil,
-                        identifier: "access.atlas.restore"
-                    ) {
-                        Task { await commerce.restore() }
-                    }
                     ManageSubscriptionRow(identifier: "access.atlas.manage")
                 }
                 .padding(22)
@@ -68,8 +77,41 @@ struct AtlasAccessSheet: View {
         .toolbarBackground(.hidden, for: .navigationBar)
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
-        .task { await commerce.startIfNeeded() }
+        .task {
+            commerce.paywallViewed(context)
+            await commerce.startIfNeeded()
+        }
         .onDisappear { commerce.clearTransientPhases() }
+    }
+
+    /// The way into the library. A Button, not a NavigationLink: the archive
+    /// lives in another tab, so only the presenter can get the reader there.
+    private var enterLibraryButton: some View {
+        Button {
+            commerce.libraryOpened(from: context)
+            onEnterLibrary()
+        } label: {
+            VStack(spacing: 4) {
+                Text("ENTER THE LIBRARY")
+                    .font(AtlasType.technical(12, weight: .bold))
+                    .tracking(1.35)
+                Text("Every plate, past and present")
+                    .font(AtlasType.display(16, weight: .semibold))
+                    .opacity(0.9)
+            }
+            .foregroundStyle(AtlasTheme.paper)
+            .frame(maxWidth: .infinity, minHeight: 58)
+            .background(AtlasTheme.ink)
+            .overlay(
+                Rectangle()
+                    .strokeBorder(AtlasTheme.paper.opacity(0.35), lineWidth: 1)
+                    .padding(3)
+            )
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(AtlasPressStyle())
+        .accessibilityIdentifier("access.atlas.enter")
+        .accessibilityLabel("Enter the library. Every plate, past and present.")
     }
 
     /// §9.2's concrete deliverables, as an inventory instead of a paragraph.
@@ -162,7 +204,7 @@ struct AtlasAccessSheet: View {
         identifier: String
     ) -> some View {
         Button {
-            Task { await commerce.purchase(productID: product.id) }
+            Task { await commerce.purchase(productID: product.id, context: context) }
         } label: {
             HStack(alignment: .center) {
                 VStack(alignment: .leading, spacing: 4) {

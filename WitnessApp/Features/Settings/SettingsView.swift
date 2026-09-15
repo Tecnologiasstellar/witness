@@ -7,6 +7,10 @@ import WitnessCore
 struct SettingsView: View {
     @ObservedObject var commerce: CommerceModel
     var weeklyPlate: String? = nil
+    /// Forwarded to the pushed Atlas page: dismissing there would only pop
+    /// back to INDEX, leaving this sheet covering the archive. Required, so
+    /// no presenter can default it to a door that silently does nothing.
+    let onEnterLibrary: () -> Void
     @Environment(\.dismiss) private var dismiss
     @ObservedObject private var reminders = ReminderService.shared
     @State private var reminderTime = Calendar.current.date(from: DateComponents(hour: 8)) ?? .now
@@ -95,7 +99,7 @@ struct SettingsView: View {
                 .accessibilityIdentifier("access.overview.fieldseason")
 
                 NavigationLink {
-                    AtlasAccessSheet(commerce: commerce)
+                    AtlasAccessSheet(commerce: commerce, onEnterLibrary: onEnterLibrary)
                 } label: {
                     workCard(title: "THE ATLAS", detail: commerce.atlasStatusLine, line: "The living library. Every plate, growing weekly.") {
                         PlateCollageStrip(height: 124, spacing: -30)
@@ -130,7 +134,7 @@ struct SettingsView: View {
                 detail: commerce.restorePhase == .restoring ? "…" : nil,
                 identifier: "access.overview.restore"
             ) {
-                Task { await commerce.restore() }
+                Task { await commerce.restore(context: .index) }
             }
 
             if commerce.atlasIsActive {

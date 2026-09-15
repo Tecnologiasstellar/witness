@@ -31,7 +31,13 @@ struct ArchiveView: View {
         .background(AtlasPaper().ignoresSafeArea())
         .toolbar(.hidden, for: .navigationBar)
         .sheet(isPresented: $isAtlasSheetPresented) {
-            NavigationStack { AtlasAccessSheet(commerce: commerce) }
+            NavigationStack {
+                AtlasAccessSheet(commerce: commerce) {
+                    // Already in the archive: only the sheet is in the way.
+                    isAtlasSheetPresented = false
+                    segment = "ARCHIVE"
+                }
+            }
         }
     }
 
@@ -144,6 +150,7 @@ struct ArchiveView: View {
                     .padding(.horizontal, 11).frame(minHeight: 34)
                     .background(segment == item ? AtlasTheme.ink : .clear)
                     .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
+                    .accessibilityIdentifier("cabinet.segment.\(item.lowercased())")
                     .buttonStyle(.plain)
                     .accessibilityAddTraits(segment == item ? .isSelected : [])
             }

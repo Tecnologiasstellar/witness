@@ -50,8 +50,7 @@ struct RootTabView: View {
                                     // Members go to the library itself; everyone
                                     // else meets the Atlas on its own calm sheet.
                                     if commerce.atlasIsActive {
-                                        cabinetSegment = "ARCHIVE"
-                                        selection = .cabinet
+                                        enterLibrary()
                                     } else {
                                         isAtlasPresented = true
                                     }
@@ -71,10 +70,14 @@ struct RootTabView: View {
         }
         .background(AtlasTheme.paper.ignoresSafeArea())
         .sheet(isPresented: $isIndexPresented) {
-            SettingsView(commerce: commerce, weeklyPlate: model.species?.gallery?.first)
+            SettingsView(
+                commerce: commerce,
+                weeklyPlate: model.species?.gallery?.first,
+                onEnterLibrary: enterLibrary
+            )
         }
         .sheet(isPresented: $isAtlasPresented) {
-            NavigationStack { AtlasAccessSheet(commerce: commerce) }
+            NavigationStack { AtlasAccessSheet(commerce: commerce, onEnterLibrary: enterLibrary) }
         }
         .sheet(isPresented: $isFieldSeasonPresented) {
             // Owners and Atlas members go straight to the stories; the
@@ -88,6 +91,16 @@ struct RootTabView: View {
             }
         }
         .sheet(isPresented: $isReflectionPresented) { PrivateReflectionSheet(model: model) }
+    }
+
+    /// The one route into the library. Closes whatever is covering the app —
+    /// the Atlas sheet, or the INDEX sheet a pushed Atlas page sits inside —
+    /// and lands the reader on the archive itself.
+    private func enterLibrary() {
+        isIndexPresented = false
+        isAtlasPresented = false
+        cabinetSegment = "ARCHIVE"
+        selection = .cabinet
     }
 }
 

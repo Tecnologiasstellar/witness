@@ -138,5 +138,42 @@ final class AccessSurfacesUITests: XCTestCase {
         XCTAssertTrue(app.buttons["access.atlas.annual"].exists)
         XCTAssertTrue(app.buttons["access.atlas.restore"].exists)
         XCTAssertTrue(app.buttons["access.atlas.manage"].exists)
+
+        // Before buying there is no door: the library is not yet theirs.
+        XCTAssertFalse(app.buttons["access.atlas.enter"].exists)
+    }
+
+    /// Buying the Atlas must land the reader in the library, not on the page
+    /// that just sold it to them. This is the regression guard for the
+    /// dead-end the sheet used to leave behind.
+    func testAtlasPurchaseOpensTheLibrary() throws {
+        openIndex()
+        let atlas = app.buttons["access.overview.atlas"]
+        XCTAssertTrue(atlas.waitForExistence(timeout: 3))
+        atlas.tap()
+
+        // Same settling-frame flake family as openIndex.
+        let sixMonth = app.buttons["access.atlas.sixmonth"]
+        if !sixMonth.waitForExistence(timeout: 3) {
+            atlas.tap()
+            XCTAssertTrue(sixMonth.waitForExistence(timeout: 5))
+        }
+        sixMonth.tap()
+
+        // The door leads; the receipt follows it.
+        let enter = app.buttons["access.atlas.enter"]
+        XCTAssertTrue(enter.waitForExistence(timeout: 5))
+        enter.tap()
+
+        // The Index sheet the Atlas page was pushed inside must close too —
+        // dismissing there alone would leave it covering the archive.
+        XCTAssertFalse(app.staticTexts["INDEX"].waitForExistence(timeout: 2))
+
+        let cabinet = app.buttons["atlas.tab.cabinet"]
+        XCTAssertTrue(cabinet.waitForExistence(timeout: 5))
+        XCTAssertTrue(cabinet.isSelected)
+        let archiveSegment = app.buttons["cabinet.segment.archive"]
+        XCTAssertTrue(archiveSegment.waitForExistence(timeout: 5))
+        XCTAssertTrue(archiveSegment.isSelected)
     }
 }

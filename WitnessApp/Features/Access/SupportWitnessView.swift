@@ -6,6 +6,8 @@ import WitnessCore
 struct SupportWitnessView: View {
     @ObservedObject var commerce: CommerceModel
 
+    private let context = CommerceContext.support
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
@@ -62,7 +64,10 @@ struct SupportWitnessView: View {
         .toolbarBackground(.hidden, for: .navigationBar)
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
-        .task { await commerce.startIfNeeded() }
+        .task {
+            commerce.paywallViewed(context)
+            await commerce.startIfNeeded()
+        }
         .onDisappear { commerce.clearTransientPhases() }
     }
 
@@ -92,7 +97,7 @@ struct SupportWitnessView: View {
                     isEnabled: true,
                     identifier: "access.support.tip"
                 ) {
-                    Task { await commerce.purchase(productID: product.id) }
+                    Task { await commerce.purchase(productID: product.id, context: context) }
                 }
             } else {
                 AccessStateNotice(

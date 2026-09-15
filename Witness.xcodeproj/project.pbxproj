@@ -76,6 +76,7 @@
 		C72539010F2B84A628DCDD19 /* chapter-03-javan-rhino-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D227F16474FBFD28F8FD6CBA /* chapter-03-javan-rhino-ruth.mp3 */; };
 		CAB4D17A5D8E737A798E992D /* ContentAccessPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8FD3F59ADE1D681395FC2 /* ContentAccessPolicy.swift */; };
 		CF9F07DC3F1B242D069EFDDC /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C0BA1F8A6116DB99B9F65 /* OnboardingState.swift */; };
+		D13DE2ED9219C88F385F837B /* CommerceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10948C8807264EF34856F433 /* CommerceModelTests.swift */; };
 		D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */; };
 		D76814029898F318CCF0563B /* SharePlateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2C63F351BC9C606D1E9AD /* SharePlateCard.swift */; };
 		D9AF7CA236EE26B44E280DBB /* CatalogValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */; };
@@ -142,6 +143,7 @@
 		0D0A0F3DAB23579034A0E6AB /* RevenueCatPurchaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatPurchaseAdapter.swift; sourceTree = "<group>"; };
 		0E0847C1B3D0DEC53D13F6F6 /* StoreKitPurchaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitPurchaseAdapter.swift; sourceTree = "<group>"; };
 		0E6F03B2889D871D9EFAF85F /* StorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySheet.swift; sourceTree = "<group>"; };
+		10948C8807264EF34856F433 /* CommerceModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceModelTests.swift; sourceTree = "<group>"; };
 		12449CF4B46C6893745B0A97 /* ChapterAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterAudioPlayer.swift; sourceTree = "<group>"; };
 		18A60CD149F67142BEB56EB1 /* WitnessAppTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		192E77993BD98AD5130639B3 /* chapter-06-wollemi-pine-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-06-wollemi-pine-ruth.mp3"; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 		4D337FB6CA6B1174DB44F064 /* WitnessAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				10948C8807264EF34856F433 /* CommerceModelTests.swift */,
 				C2B219D340D556BDC5F518C2 /* FieldAlbumComposerTests.swift */,
 				C4161F382EB4D43A8665E3C9 /* RevenueCatMappingTests.swift */,
 				432B01DAC74F9AED20C43520 /* StoreKitPurchaseAdapterTests.swift */,
@@ -795,6 +798,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D13DE2ED9219C88F385F837B /* CommerceModelTests.swift in Sources */,
 				56D47B57F0A43C80EE857B4A /* FieldAlbumComposerTests.swift in Sources */,
 				AF0936883DF38BF516D11C1D /* RevenueCatMappingTests.swift in Sources */,
 				4F0180C7AAF29665499248B6 /* StoreKitPurchaseAdapterTests.swift in Sources */,

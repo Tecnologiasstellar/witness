@@ -9,6 +9,8 @@ struct FieldSeasonPreviewView: View {
     @ObservedObject var commerce: CommerceModel
     @StateObject private var samplePlayer = ChapterAudioPlayer()
 
+    private let context = CommerceContext.fieldSeasonPreview
+
     private let edition = FieldSeasonLoader.bundled
 
     var body: some View {
@@ -29,8 +31,17 @@ struct FieldSeasonPreviewView: View {
                     purchaseArea
                     // Owners already read their state in purchaseArea; the phase
                     // line would only repeat it. Failures can only occur unowned.
+                    // Restore sits with the price, not four screens below it:
+                    // a reinstalling owner must not read this page as a second charge.
                     if !(commerce.ownsFieldSeason || commerce.atlasIsActive) {
                         PurchasePhaseNotice(purchasePhase: commerce.purchasePhase, restorePhase: commerce.restorePhase)
+                        AccessQuietRow(
+                            title: "RESTORE A PREVIOUS PURCHASE",
+                            detail: commerce.restorePhase == .restoring ? "…" : nil,
+                            identifier: "access.fieldseason.restore"
+                        ) {
+                            Task { await commerce.restore(context: context) }
+                        }
                     }
 
                     if let edition {
@@ -47,14 +58,6 @@ struct FieldSeasonPreviewView: View {
                         .foregroundStyle(AtlasTheme.inkMuted)
                         .lineSpacing(5)
 
-                    AccessQuietRow(
-                        title: "RESTORE PURCHASES",
-                        detail: commerce.restorePhase == .restoring ? "…" : nil,
-                        identifier: "access.fieldseason.restore"
-                    ) {
-                        Task { await commerce.restore() }
-                    }
-
                     Text("Keeping this edition supports the making of Witness — one person’s research, fact-checking, illustration, and narration. Your Witness remains free.")
                         .font(AtlasType.display(16, weight: .regular, italic: true))
                         .foregroundStyle(AtlasTheme.inkMuted)
@@ -69,7 +72,10 @@ struct FieldSeasonPreviewView: View {
         .toolbarBackground(.hidden, for: .navigationBar)
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
-        .task { await commerce.startIfNeeded() }
+        .task {
+            commerce.paywallViewed(context)
+            await commerce.startIfNeeded()
+        }
         .onDisappear {
             commerce.clearTransientPhases()
             samplePlayer.stop()
@@ -288,7 +294,7 @@ struct FieldSeasonPreviewView: View {
                         isEnabled: true,
                         identifier: "access.fieldseason.purchase"
                     ) {
-                        Task { await commerce.purchase(productID: product.id) }
+                        Task { await commerce.purchase(productID: product.id, context: context) }
                     }
                 } else {
                     AccessStateNotice(
