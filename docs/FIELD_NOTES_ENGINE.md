@@ -109,7 +109,23 @@ an assistant's answer the same night. Google ignores IndexNow and keeps its own 
 
 The key is `witness_web/community/public/<key>.txt`, whose filename and contents are the same
 string — one file, self-verifying, nothing to get out of sync. Delete it and the ping
-skips itself with a printed note; the deploy is unaffected either way.
+skips itself with a printed note; the deploy is unaffected either way. The same key file
+sits in `witness_web/site/public/`, because IndexNow allows one key across hosts as long as
+each host serves it.
+
+`ship` only submits what changed, so a batch committed by hand is never pushed. Two commands
+cover that, both reading the live sitemap so they cannot submit a URL that is not public and
+so both languages go at once:
+
+```bash
+python3 tools/notes.py ping --all    # every community.witnessatlas.com URL
+python3 tools/notes.py ping --main   # every witnessatlas.com URL
+```
+
+`--main` is the main site's only push channel — it has no ship routine of its own, so run it
+after `vercel deploy --prod` from `witness_web/site` whenever the archive or a language
+edition changes. First run 2026-09-14: 68 and 40 URLs accepted, which is how the 50 Spanish
+pages reached Bing.
 
 ## What this is for
 

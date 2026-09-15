@@ -6,6 +6,7 @@
     python3 tools/notes.py ship "message"  gate + translate + next build + commit + rebase + push
     python3 tools/notes.py translate [slug] write the Spanish mirror of every note that lacks one
     python3 tools/notes.py ping [--all]    resubmit URLs to IndexNow by hand
+    python3 tools/notes.py ping --main     push every witnessatlas.com URL to IndexNow
     python3 tools/notes.py selftest        prove the gates still catch what they exist to catch
 
 The queue is witness_web/community/content/topics.json. Published state lives on disk:
@@ -23,6 +24,7 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 import time
 from datetime import date
 from pathlib import Path
@@ -35,6 +37,8 @@ TOPICS = SITE_DIR / "content" / "topics.json"
 SPECIES = SITE_DIR / "data" / "species.json"
 PUBLIC = SITE_DIR / "public"
 SITE = "https://community.witnessatlas.com"
+MAIN = "https://witnessatlas.com"                    # the other half of the same key
+MAIN_PUBLIC = ROOT / "witness_web" / "site" / "public"
 
 TYPES = ("question", "field-note", "definition", "comparison")
 # Mirrors SECTIONS in witness_web/community/lib/site.ts. A post lives in exactly one.
@@ -549,8 +553,8 @@ def translate(slug=None):
 # schedule. The key is the public/<key>.txt file: one file, self-verifying, and
 # a mismatch is impossible because the name and the contents are the same string.
 
-def indexnow_key():
-    for f in PUBLIC.glob("*.txt"):
+def indexnow_key(public):
+    for f in public.glob("*.txt"):
         if f.stem == f.read_text().strip():
             return f.stem
     return None
@@ -578,19 +582,32 @@ def changed_urls(rev="HEAD"):
     return note_urls(out.split())
 
 
-def ping_indexnow(urls):
+def sitemap_urls(site):
+    """Every page the live sitemap lists, both languages.
+
+    The sitemap is already the canonical list of what is public, so this cannot
+    submit a URL that is not live and it picks up /es for free. One <loc> per
+    page — the hreflang pairs ride along as xhtml:link attributes, so they
+    cannot double-count.
+    """
+    import urllib.request
+    with urllib.request.urlopen(f"{site}/sitemap.xml", timeout=15) as r:
+        return sorted(set(re.findall(r"<loc>([^<]+)</loc>", r.read().decode())))
+
+
+def ping_indexnow(urls, site=SITE, public=PUBLIC):
     """Never fatal. The deploy has already happened; this is only discovery."""
     import urllib.error
     import urllib.request
-    key = indexnow_key()
+    key = indexnow_key(public)
     if not key:
-        print("indexnow: no key file in site/public — skipped")
+        print(f"indexnow: no key file in {public} — skipped")
         return
     if not urls:
         print("indexnow: no note changed in this commit — nothing to submit")
         return
-    payload = {"host": SITE.split("//")[1], "key": key,
-               "keyLocation": f"{SITE}/{key}.txt", "urlList": urls}
+    payload = {"host": site.split("//")[1], "key": key,
+               "keyLocation": f"{site}/{key}.txt", "urlList": urls}
     req = urllib.request.Request("https://api.indexnow.org/indexnow",
                                  data=json.dumps(payload).encode(),
                                  headers={"Content-Type": "application/json; charset=utf-8"})
@@ -685,6 +702,13 @@ def selftest():
         [SITE, f"{SITE}/p/a-slug"]
     assert note_urls(["witness_web/community/content/posts-es/2026-09-03-a-slug.md"]) == \
         [SITE, f"{SITE}/es", f"{SITE}/es/p/a-slug"]
+    with tempfile.TemporaryDirectory() as d:
+        # one <loc> per page; the hreflang alternate must not become a second URL
+        (Path(d) / "sitemap.xml").write_text(
+            '<urlset><url><loc>https://x/a</loc>'
+            '<xhtml:link href="https://x/es/a"/></url>'
+            '<url><loc>https://x/es/a</loc></url></urlset>')
+        assert sitemap_urls(f"file://{d}") == ["https://x/a", "https://x/es/a"]
     en = "---\ntitle: A\nquestion: Q?\nsection: numbers\nsources: https://x, https://y\n---\n\nBody.\n"
     es = assemble_es(en, "```markdown\n---\ntitle: Una\nquestion: ¿Q?\nsection: WRONG\nsources: gone\n---\n\nCuerpo.\n```")
     # translated fields taken, fixed fields copied from the English, the fence stripped
@@ -718,8 +742,10 @@ if __name__ == "__main__":
         if translate(sys.argv[2] if len(sys.argv) > 2 else None)[1]:
             sys.exit(1)
     elif cmd == "ping":
-        ping_indexnow(sorted({f"{SITE}/p/{n['slug']}" for n in all_notes()} | {SITE})
-                      if "--all" in sys.argv else changed_urls())
+        main = "--main" in sys.argv                   # witnessatlas.com, not the notes
+        site, public = (MAIN, MAIN_PUBLIC) if main else (SITE, PUBLIC)
+        every = main or "--all" in sys.argv
+        ping_indexnow(sitemap_urls(site) if every else changed_urls(), site, public)
     elif cmd == "selftest":
         selftest()
     else:
