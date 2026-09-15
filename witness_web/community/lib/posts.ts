@@ -68,8 +68,15 @@ function render(body: string) {
       const lines = block.trim().split("\n");
       if (lines[0].startsWith("### ")) return `<h3>${inline(lines[0].slice(4))}</h3>`;
       if (lines[0].startsWith("## ")) return `<h2>${inline(lines[0].slice(3))}</h2>`;
-      if (lines.every((l) => l.startsWith("- ")))
-        return `<ul>${lines.map((l) => `<li>${inline(l.slice(2))}</li>`).join("")}</ul>`;
+      if (lines[0].startsWith("- ")) {
+        // A wrapped bullet continues the item above it; markdown wraps at ~90 chars,
+        // so requiring every line to start with "- " shipped literal dashes.
+        const items: string[] = [];
+        for (const l of lines)
+          if (l.startsWith("- ")) items.push(l.slice(2));
+          else items[items.length - 1] += ` ${l.trim()}`;
+        return `<ul>${items.map((i) => `<li>${inline(i)}</li>`).join("")}</ul>`;
+      }
       if (lines.every((l) => l.startsWith("> ")))
         return `<blockquote>${inline(lines.map((l) => l.slice(2)).join(" "))}</blockquote>`;
       return `<p>${inline(lines.join(" "))}</p>`;
