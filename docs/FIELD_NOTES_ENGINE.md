@@ -127,6 +127,19 @@ after `vercel deploy --prod` from `witness_web/site` whenever the archive or a l
 edition changes. First run 2026-09-14: 68 and 40 URLs accepted, which is how the 50 Spanish
 pages reached Bing.
 
+A **retired** path is the case neither command covers, because a redirect is never in a
+sitemap. Until a crawler re-fetches the old URL it never sees the 308 and keeps the dead
+URL indexed — on 2026-09-14 Bing still held `/support` and `/witnesses/philippine-eagle`,
+both retired in the D-029 rewrite. Name them instead:
+
+```bash
+python3 tools/notes.py ping --main https://witnessatlas.com/support ...
+```
+
+All 46 retired paths in `witness_web/site/next.config.ts` (`/support`, `/witnesses[/:id]`,
+`/field-notes[/:slug]`) were submitted that day. Do this once after any rewrite that moves
+URLs; the redirects themselves are correct and need no change (Bing treats 308 as 301).
+
 ## What this is for
 
 Witness is not on the App Store yet, and search indexes take weeks to trust a new section.

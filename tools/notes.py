@@ -7,6 +7,7 @@
     python3 tools/notes.py translate [slug] write the Spanish mirror of every note that lacks one
     python3 tools/notes.py ping [--all]    resubmit URLs to IndexNow by hand
     python3 tools/notes.py ping --main     push every witnessatlas.com URL to IndexNow
+    python3 tools/notes.py ping <url>...   push exactly these URLs (retired paths, one-offs)
     python3 tools/notes.py selftest        prove the gates still catch what they exist to catch
 
 The queue is witness_web/community/content/topics.json. Published state lives on disk:
@@ -744,8 +745,11 @@ if __name__ == "__main__":
     elif cmd == "ping":
         main = "--main" in sys.argv                   # witnessatlas.com, not the notes
         site, public = (MAIN, MAIN_PUBLIC) if main else (SITE, PUBLIC)
+        # A retired path is never in a sitemap, so a redirect is only ever re-crawled
+        # by naming it here. That is how a stale URL leaves the index.
+        given = [a for a in sys.argv[2:] if a.startswith("http")]
         every = main or "--all" in sys.argv
-        ping_indexnow(sitemap_urls(site) if every else changed_urls(), site, public)
+        ping_indexnow(given or (sitemap_urls(site) if every else changed_urls()), site, public)
     elif cmd == "selftest":
         selftest()
     else:
