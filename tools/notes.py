@@ -650,13 +650,16 @@ def with_retries(fn, attempts=3, sleep=time.sleep):
 def ship(message):
     """Gate, translate, build, commit, rebase, push, deploy.
 
-    This project has no Vercel GitHub integration: every production deployment
-    of the site has been made by `vercel deploy` from its directory (witness_web/community),
-    and the domain is aliased to whichever deployment was promoted last. Found
+    Pushing does not publish. The project's Vercel GitHub integration is
+    connected but misconfigured: Root Directory is unset, so every Git-triggered
+    build runs from the repo root and dies on a missing app directory. The deploy
+    is `vercel deploy` from its directory (witness_web/community), and the domain
+    is aliased to whichever deployment was promoted last. Found
     2026-09-03 by pushing and watching nothing happen — a nightly loop that
     trusted the push would have committed a note a day and published none of
     them. The CLI deploy targets the linked project in .vercel/project.json; it
-    does not create a second one.
+    does not create a second one. Root Directory is a dashboard setting; fixing
+    it would make this step redundant. See docs/FIELD_NOTES_ENGINE.md.
 
     The gate and the local build run first, so a bad claim or a type error stops
     the commit rather than the site.
