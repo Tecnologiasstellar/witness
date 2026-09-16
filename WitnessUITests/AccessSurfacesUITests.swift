@@ -143,6 +143,50 @@ final class AccessSurfacesUITests: XCTestCase {
         XCTAssertFalse(app.buttons["access.atlas.enter"].exists)
     }
 
+    /// The archive is the Atlas payoff. Opening a plate must land on a real
+    /// dossier — the screen this replaced rendered no species name at all,
+    /// a fake map, a "NOT YET VERIFIED" placeholder and a gillnet over every
+    /// animal. Asserting the name is exactly the guard that would have caught it.
+    func testArchivePlateOpensTheSpeciesDossier() throws {
+        let cabinet = app.buttons["atlas.tab.cabinet"]
+        XCTAssertTrue(cabinet.waitForExistence(timeout: 5))
+        cabinet.tap()
+
+        let archiveSegment = app.buttons["cabinet.segment.archive"]
+        XCTAssertTrue(archiveSegment.waitForExistence(timeout: 5))
+        archiveSegment.tap()
+
+        // The fake purchase service leaves Atlas inactive, so only the plates
+        // inside the free window are open — which is the point: this same
+        // dossier is what a member gets for every older week.
+        let plate = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'archive.plate.'")).firstMatch
+        XCTAssertTrue(plate.waitForExistence(timeout: 5))
+        plate.tap()
+
+        XCTAssertTrue(app.staticTexts["dossier.speciesName"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["cabinet.helpingButton"].exists)
+        // The deleted screen's placeholders must never come back.
+        XCTAssertFalse(app.staticTexts["NOT YET VERIFIED"].exists)
+    }
+
+    /// A locked plate must still sell, not open. Guards against un-gating the
+    /// archive by accident while rerouting it.
+    func testLockedArchivePlateOpensTheAtlasSheet() throws {
+        let cabinet = app.buttons["atlas.tab.cabinet"]
+        XCTAssertTrue(cabinet.waitForExistence(timeout: 5))
+        cabinet.tap()
+        let archiveSegment = app.buttons["cabinet.segment.archive"]
+        XCTAssertTrue(archiveSegment.waitForExistence(timeout: 5))
+        archiveSegment.tap()
+
+        let locked = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'archive.locked.'")).firstMatch
+        guard locked.waitForExistence(timeout: 5) else {
+            throw XCTSkip("No week has aged out of the free window in this run")
+        }
+        locked.tap()
+        XCTAssertTrue(app.buttons["access.atlas.sixmonth"].waitForExistence(timeout: 5))
+    }
+
     /// Buying the Atlas must land the reader in the library, not on the page
     /// that just sold it to them. This is the regression guard for the
     /// dead-end the sheet used to leave behind.

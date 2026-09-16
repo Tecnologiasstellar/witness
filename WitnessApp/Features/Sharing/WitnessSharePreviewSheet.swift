@@ -88,7 +88,7 @@ private struct WitnessShareCard: View {
                 Text("WITNESSED")
                     .font(AtlasType.technical(10, weight: .bold)).tracking(1.5)
                     .foregroundStyle(AtlasTheme.sepia)
-                SpecimenPlate(species: species, showsLeaderLabels: false).frame(height: 168)
+                SpecimenPlate(species: species).frame(height: 168)
                 Text(species.commonName.uppercased())
                     .font(AtlasType.display(30, weight: .semibold)).multilineTextAlignment(.center)
                 Text(species.scientificName)

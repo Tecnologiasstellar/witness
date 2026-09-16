@@ -17,7 +17,7 @@ struct AtlasAccessSheet: View {
             VStack(alignment: .leading, spacing: 0) {
                 AccessCover(eyebrow: "THE ATLAS", title: "The Living Library", asset: "snow-leopard-plate-01")
                 VStack(alignment: .leading, spacing: 22) {
-                    Text("Every week’s plate, past and future. Every field season, narrated. One membership, and the library keeps growing.")
+                    Text("Every week’s record, past and present — the full plate series, the story, the sources. Field Season One, complete and narrated. One membership, and the library keeps growing.")
                         .font(AtlasType.display(21, weight: .regular))
                         .lineSpacing(6)
 
@@ -41,8 +41,19 @@ struct AtlasAccessSheet: View {
                         Task { await commerce.restore(context: context) }
                     }
 
-                    holdings
-                        .accessibilityIdentifier("access.atlas.production.notice")
+                    VStack(alignment: .leading, spacing: 12) {
+                        holdings
+                        // Members only: an unbuilt programme must never read as
+                        // a reason to subscribe (§10, and App Review).
+                        if commerce.atlasIsActive {
+                            Text("If Witness ever runs Field Encounters in person, members hear first. Nothing is planned or on sale.")
+                                .font(AtlasType.display(15, weight: .regular, italic: true))
+                                .foregroundStyle(AtlasTheme.inkMuted)
+                                .lineSpacing(4)
+                                .accessibilityIdentifier("access.atlas.encounters")
+                        }
+                    }
+                    .accessibilityIdentifier("access.atlas.production.notice")
 
                     // The library shown, not described: a fan of real plates
                     // from the archive, with one caption carrying the meaning.
@@ -117,10 +128,10 @@ struct AtlasAccessSheet: View {
     /// §9.2's concrete deliverables, as an inventory instead of a paragraph.
     private var holdings: some View {
         VStack(alignment: .leading, spacing: 0) {
-            holdingRow(mark: "✦", title: "THE WEEKLY ARCHIVE", detail: "every featured plate beyond the free window")
+            holdingRow(mark: "✦", title: "THE WEEKLY ARCHIVE", detail: "every past week, with its full record")
             holdingRow(mark: "01", title: "FIELD SEASON ONE", detail: "complete and narrated, included while active")
-            holdingRow(mark: "＋", title: "NEW SEASONS", detail: "join the library as they are published")
-            holdingRow(mark: "♪", title: "NARRATION", detail: "every chapter read aloud, for the field")
+            holdingRow(mark: "◳", title: "THE PLATE SERIES", detail: "five plates a species — context, detail, behaviour, scale")
+            holdingRow(mark: "＋", title: "A NEW WEEK, EVERY WEEK", detail: "a new species and record, added to the library")
         }
     }
 

@@ -12,7 +12,6 @@ struct TodayView: View {
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
-    @State private var showsSpecimen = false
     @State private var showsSharePreview = false
 
     var body: some View {
@@ -40,7 +39,7 @@ struct TodayView: View {
                     ScrollView {
                         plate(for: species).frame(minHeight: 720)
                         witnessControl.padding(.horizontal, 22).padding(.bottom, 14)
-                        StorySheet(species: species, onOpenFigures: { showsSpecimen = true })
+                        StorySheet(species: species)
                     }
                     .scrollIndicators(.hidden)
                 } else {
@@ -50,7 +49,7 @@ struct TodayView: View {
                             // sheet's top edge peeking as the scroll affordance.
                             plate(for: species)
                                 .containerRelativeFrame(.vertical) { length, _ in max(430, length - 60) }
-                            StorySheet(species: species, onOpenFigures: { showsSpecimen = true })
+                            StorySheet(species: species)
                                 .padding(.top, -10)
                         }
                     }
@@ -72,9 +71,6 @@ struct TodayView: View {
         }
         .background(AtlasTheme.paper.ignoresSafeArea())
         .toolbar(.hidden, for: .navigationBar)
-        .navigationDestination(isPresented: $showsSpecimen) {
-            if let species = model.species { SpecimenDetailView(species: species) }
-        }
         .sheet(isPresented: $showsSharePreview) {
             if let species = model.species { WitnessSharePreviewSheet(species: species) }
         }
@@ -86,13 +82,9 @@ struct TodayView: View {
             VStack(spacing: 0) {
                 header
                 statusLine(species).padding(.top, 10)
-                Button { showsSpecimen = true } label: {
-                    SpecimenPlate(species: species, showsLeaderLabels: true)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
-                        .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
+                SpecimenPlate(species: species)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .overlay(Rectangle().stroke(AtlasTheme.ruleSoft, lineWidth: 1))
                 .padding(.top, 12)
                 .accessibilityIdentifier("today.specimenButton")
                 .accessibilityHint("Opens the specimen figures for range, prey and cause")

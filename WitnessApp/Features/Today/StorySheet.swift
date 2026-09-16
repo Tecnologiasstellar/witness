@@ -5,7 +5,6 @@ import WitnessCore
 /// story, one credible action, and sources — the "read" step of the ritual.
 struct StorySheet: View {
     let species: SpeciesRecord
-    let onOpenFigures: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
@@ -98,10 +97,6 @@ struct StorySheet: View {
             }
             Text("Record last fact-checked \(species.editorial.lastFactChecked). Artwork: \(species.media.depictionType.lowercased()).")
                 .font(.caption).foregroundStyle(AtlasTheme.inkMuted)
-            Button("SPECIMEN FIGURES") { onOpenFigures() }
-                .font(AtlasType.technical(10, weight: .bold)).tracking(1.1)
-                .foregroundStyle(AtlasTheme.sepia)
-                .frame(minHeight: 44)
         }
     }
 }

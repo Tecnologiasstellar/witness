@@ -47,6 +47,15 @@ final class AppModel: ObservableObject {
         return witnessRecords.contains { $0.id == eventID }
     }
 
+    /// When this plate's week was witnessed, if it was. Keyed on the event id
+    /// like `isPlateWitnessed`, so a species featured twice keeps its weeks
+    /// apart. A `first(where:)` scan: the archive grid builds destinations
+    /// eagerly for visible cells, so this must stay cheap.
+    func witnessedDate(for plate: FeaturedPlate) -> Date? {
+        let eventID = WitnessPeriodKey.eventID(speciesID: plate.species.id, period: plate.period)
+        return witnessRecords.first(where: { $0.id == eventID })?.witnessedAt
+    }
+
     var isWitnessed: Bool { currentWeekWitnessRecord != nil }
     var currentStreak: Int {
         WitnessStreakCalculator.currentStreak(

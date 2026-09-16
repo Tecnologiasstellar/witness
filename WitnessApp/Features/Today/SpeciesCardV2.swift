@@ -92,7 +92,7 @@ private struct HeroHeader: View {
                     .clipped()
                     .accessibilityLabel("\(species.media.depictionType) of \(species.commonName)")
             } else {
-                SpecimenPlate(species: species, showsLeaderLabels: false)
+                SpecimenPlate(species: species)
                     .frame(height: 470)
             }
 
@@ -187,7 +187,7 @@ private struct HookBlock: View {
 
 // MARK: - Stats
 
-private struct StatsGrid: View {
+struct StatsGrid: View {
     let stats: SpeciesStats
 
     private var trendText: String {
@@ -265,7 +265,7 @@ private struct StatTile: View {
 
 // MARK: - Imagery
 
-private struct ContextImage: View {
+struct ContextImage: View {
     let assetName: String
     let caption: String
 
@@ -287,7 +287,7 @@ private struct ContextImage: View {
     }
 }
 
-private struct DetailImage: View {
+struct DetailImage: View {
     let assetName: String
     let caption: String
 
@@ -418,7 +418,7 @@ private struct FlowChips: View {
 
 // MARK: - Story
 
-private struct FieldNotes: View {
+struct FieldNotes: View {
     let species: SpeciesRecord
 
     var body: some View {

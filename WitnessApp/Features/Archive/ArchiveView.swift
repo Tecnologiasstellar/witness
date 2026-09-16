@@ -124,15 +124,24 @@ struct ArchiveView: View {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                 ForEach(plates) { plate in
                     if model.isPlateUnlocked(plate, atlasActive: commerce.atlasIsActive) {
-                        NavigationLink { SpecimenDetailView(species: plate.species) } label: {
+                        NavigationLink {
+                            CollectionDetailView(
+                                species: plate.species,
+                                witnessedAt: model.witnessedDate(for: plate),
+                                featuredPeriod: plate.period,
+                                model: model
+                            )
+                        } label: {
                             ArchiveCard(plate: plate, isCurrentWeek: plate.period == currentPeriod, isLocked: false)
                         }
                         .buttonStyle(.plain)
+                        .accessibilityIdentifier("archive.plate.\(plate.species.id)")
                     } else {
                         Button { isAtlasSheetPresented = true } label: {
                             ArchiveCard(plate: plate, isCurrentWeek: false, isLocked: true)
                         }
                         .buttonStyle(.plain)
+                        .accessibilityIdentifier("archive.locked.\(plate.species.id)")
                     }
                 }
             }
@@ -172,7 +181,7 @@ private struct CollectionRow: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                 } else {
-                    SpecimenPlate(species: species, showsLeaderLabels: false)
+                    SpecimenPlate(species: species)
                         .padding(6)
                 }
             }
@@ -232,7 +241,7 @@ private struct ArchiveCard: View {
                             .frame(height: 120)
                             .clipped()
                     } else {
-                        SpecimenPlate(species: plate.species, showsLeaderLabels: false).frame(height: 120)
+                        SpecimenPlate(species: plate.species).frame(height: 120)
                     }
                 }
                 // The lock hides access, never identity: locked plates keep

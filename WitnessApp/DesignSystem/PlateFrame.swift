@@ -46,19 +46,6 @@ struct AtlasPaper: View {
     }
 }
 
-struct AtlasPill<Label: View>: View {
-    let label: Label
-    init(@ViewBuilder label: () -> Label) { self.label = label() }
-
-    var body: some View {
-        label
-            .frame(maxWidth: .infinity, minHeight: 52)
-            .background(AtlasTheme.paper.opacity(0.5), in: Capsule())
-            .overlay(Capsule().stroke(AtlasTheme.ruleEdge, lineWidth: 1))
-            .overlay(Capsule().inset(by: 4).stroke(AtlasTheme.ruleSoft, lineWidth: 1))
-    }
-}
-
 private struct PlateCornerTicks: Shape {
     let inner: CGRect
     func path(in rect: CGRect) -> Path {

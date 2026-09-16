@@ -43,7 +43,6 @@
 		63365E0F6918A49E52A005B3 /* AccessSurfacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B1E49CCD736363B8642DD /* AccessSurfacesUITests.swift */; };
 		64E842D506FF8810AB00BAFA /* chapter-02-kakapo-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A590A07F1491955B4BDE5F6F /* chapter-02-kakapo-ruth.mp3 */; };
 		64F12E527B41CD3BC05C6889 /* WitnessCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEF8A0B8AA74366CF3E90F /* WitnessCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		66792FAAD28C4692A18458B0 /* VaquitaHeroArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */; };
 		66CA1EB0F3660B3A478F440B /* chapter-08-axolotl-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D57A0E87B84178EDB8577 /* chapter-08-axolotl-ruth.mp3 */; };
 		68D6C9D187410805167434BB /* SpeciesCardV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6741E8E552598D4CEB9F6 /* SpeciesCardV2.swift */; };
 		6CB63D7D22BC7C5FF46E1BAC /* WitnessTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FFB9CEE6078AB699F834F /* WitnessTheme.swift */; };
@@ -70,6 +69,7 @@
 		AF0936883DF38BF516D11C1D /* RevenueCatMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4161F382EB4D43A8665E3C9 /* RevenueCatMappingTests.swift */; };
 		B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */; };
 		B1B2F3500979E875B3E27F3E /* WitnessRitualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */; };
+		B8F45B1B7A148B3C796FC840 /* SpecimenPlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC073B8172AEC2240DBC6068 /* SpecimenPlate.swift */; };
 		BA72186464E240CD1E1B353B /* chapter-06-wollemi-pine-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 192E77993BD98AD5130639B3 /* chapter-06-wollemi-pine-ruth.mp3 */; };
 		BB0F4CF918CDA9C32D738CF8 /* RevenueCatSnapshotMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAE32719F21615010A01FE /* RevenueCatSnapshotMapper.swift */; };
 		C2187594DDD99E4D49BE4ED2 /* StorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F03B2889D871D9EFAF85F /* StorySheet.swift */; };
@@ -77,7 +77,6 @@
 		CAB4D17A5D8E737A798E992D /* ContentAccessPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8FD3F59ADE1D681395FC2 /* ContentAccessPolicy.swift */; };
 		CF9F07DC3F1B242D069EFDDC /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C0BA1F8A6116DB99B9F65 /* OnboardingState.swift */; };
 		D13DE2ED9219C88F385F837B /* CommerceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10948C8807264EF34856F433 /* CommerceModelTests.swift */; };
-		D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */; };
 		D76814029898F318CCF0563B /* SharePlateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2C63F351BC9C606D1E9AD /* SharePlateCard.swift */; };
 		D9AF7CA236EE26B44E280DBB /* CatalogValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8BDDDC73FCF5C16CF64178 /* CatalogValidator.swift */; };
 		E388B5ED07FA84F3140DBC9C /* WitnessRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528DC08C6D34A66A88EAFA8 /* WitnessRecord.swift */; };
@@ -159,7 +158,6 @@
 		344A812DF59A75B1A81DA5AD /* FakePurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePurchaseService.swift; sourceTree = "<group>"; };
 		3513E79612C5F4B475A04A54 /* UnavailablePurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnavailablePurchaseService.swift; sourceTree = "<group>"; };
 		3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessRitualUITests.swift; sourceTree = "<group>"; };
-		3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecimenDetailView.swift; sourceTree = "<group>"; };
 		3F51A47DA17207B45AE09C8E /* CollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailView.swift; sourceTree = "<group>"; };
 		432B01DAC74F9AED20C43520 /* StoreKitPurchaseAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitPurchaseAdapterTests.swift; sourceTree = "<group>"; };
 		44CD33A3724FC2B62AFE1818 /* catalog */ = {isa = PBXFileReference; lastKnownFileType = folder; name = catalog; path = Packages/WitnessCore/Sources/WitnessCore/Resources/catalog; sourceTree = SOURCE_ROOT; };
@@ -170,7 +168,6 @@
 		547FA1866C21BBC935664EA5 /* FieldSeasonPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSeasonPreviewView.swift; sourceTree = "<group>"; };
 		5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessSync.swift; sourceTree = "<group>"; };
 		56AD8E8C40D0019EBB30514B /* WeeklySpeciesSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySpeciesSelector.swift; sourceTree = "<group>"; };
-		65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaquitaHeroArtwork.swift; sourceTree = "<group>"; };
 		69F8CC0B121B3CF8F09B6BF6 /* RevenueCatConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = RevenueCatConfig.plist; sourceTree = "<group>"; };
 		6AD83ABA3AFD8E46B6D7478F /* synthesis-what-the-counted-teach-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "synthesis-what-the-counted-teach-ruth.mp3"; sourceTree = "<group>"; };
 		6BC9CF6489D7C89535986EFB /* WitnessUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +201,7 @@
 		C2B219D340D556BDC5F518C2 /* FieldAlbumComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldAlbumComposerTests.swift; sourceTree = "<group>"; };
 		C4161F382EB4D43A8665E3C9 /* RevenueCatMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatMappingTests.swift; sourceTree = "<group>"; };
 		C9C8FD3F59ADE1D681395FC2 /* ContentAccessPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAccessPolicy.swift; sourceTree = "<group>"; };
+		CC073B8172AEC2240DBC6068 /* SpecimenPlate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecimenPlate.swift; sourceTree = "<group>"; };
 		CC1D057025BC3136386EBDC0 /* FieldSeasonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSeasonLoader.swift; sourceTree = "<group>"; };
 		D227F16474FBFD28F8FD6CBA /* chapter-03-javan-rhino-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapter-03-javan-rhino-ruth.mp3"; sourceTree = "<group>"; };
 		D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -417,10 +415,9 @@
 			children = (
 				F61B5DD130AF6E13995DBB95 /* ReminderPrimer.swift */,
 				A1E6741E8E552598D4CEB9F6 /* SpeciesCardV2.swift */,
-				3CFB57C327134A4EFC01CC59 /* SpecimenDetailView.swift */,
+				CC073B8172AEC2240DBC6068 /* SpecimenPlate.swift */,
 				0E6F03B2889D871D9EFAF85F /* StorySheet.swift */,
 				98FE485E4A09EEE93616F399 /* TodayView.swift */,
-				65EE8DFC97519DC50CF8120E /* VaquitaHeroArtwork.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -873,14 +870,13 @@
 				B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */,
 				D76814029898F318CCF0563B /* SharePlateCard.swift in Sources */,
 				68D6C9D187410805167434BB /* SpeciesCardV2.swift in Sources */,
-				D2871030AF1B35773B638E5A /* SpecimenDetailView.swift in Sources */,
+				B8F45B1B7A148B3C796FC840 /* SpecimenPlate.swift in Sources */,
 				106976C13CF5B0CEDEF07791 /* StoreKitPurchaseAdapter.swift in Sources */,
 				C2187594DDD99E4D49BE4ED2 /* StorySheet.swift in Sources */,
 				AEE9CFCC7ED6423851B4C1AA /* SupabaseTransport.swift in Sources */,
 				56CC8679B9EB5736A16D6359 /* SupportWitnessView.swift in Sources */,
 				EAB93BBE70E97B6408C99333 /* TodayView.swift in Sources */,
 				79756256799054D6C062243C /* UnavailablePurchaseService.swift in Sources */,
-				66792FAAD28C4692A18458B0 /* VaquitaHeroArtwork.swift in Sources */,
 				A16041A90DD5333A1728F811 /* WitnessApp.swift in Sources */,
 				F45A26001676B46AC57DC30E /* WitnessCounts.swift in Sources */,
 				124B4DC8E0F947C48FF75286 /* WitnessSharePreviewSheet.swift in Sources */,

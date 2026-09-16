@@ -1,14 +1,13 @@
 import SwiftUI
 import WitnessCore
 
-/// Renders the species' approved bundled artwork when its media record maps
-/// to an asset in the catalog; otherwise falls back to the rights-safe,
-/// code-drawn geometry (D-013).
+/// Renders the species' approved bundled artwork. When the media record maps
+/// to no asset it renders nothing: the old fallback drew a vaquita — with
+/// "tall dorsal fin" / "beakless head" leader labels — for whatever species
+/// failed the lookup, which is a false depiction. Fail closed instead.
 struct SpecimenPlate: View {
     let species: SpeciesRecord
-    var showsLeaderLabels = true
     var opacity: Double = 1
-    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
         if let artwork = UIImage(named: species.media.assetID) {
@@ -19,38 +18,8 @@ struct SpecimenPlate: View {
                 .accessibilityLabel("\(species.media.depictionType) of \(species.commonName)")
                 .accessibilityAddTraits(.isImage)
         } else {
-            fallbackGeometry
+            Color.clear
         }
-    }
-
-    private var fallbackGeometry: some View {
-        GeometryReader { proxy in
-            let bodyWidth = min(proxy.size.width * 0.82, 318)
-            ZStack {
-                AtlasPorpoiseShape()
-                    .stroke(AtlasTheme.ink.opacity(opacity), style: StrokeStyle(lineWidth: 1.35, lineCap: .round, lineJoin: .round))
-                    .background(AtlasPorpoiseShape().fill(AtlasTheme.paper.opacity(0.12)))
-                    .frame(width: bodyWidth, height: min(proxy.size.height * 0.62, 94))
-                    .rotationEffect(.degrees(-7))
-
-                if showsLeaderLabels && !dynamicTypeSize.isAccessibilitySize {
-                    leader("tall dorsal fin", x: 0.58, y: 0.10)
-                    leader("beakless head", x: 0.76, y: 0.26)
-                    leader("pale flank", x: 0.10, y: 0.77)
-                }
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Abstract prototype depiction of \(species.commonName). Artwork rights remain pending approval.")
-    }
-
-    private func leader(_ title: String, x: CGFloat, y: CGFloat) -> some View {
-        Text(title)
-            .font(AtlasType.display(10.5, italic: true))
-            .foregroundStyle(AtlasTheme.sepia)
-            .position(x: 318 * x, y: 184 * y)
-            .accessibilityHidden(true)
     }
 }
 
@@ -123,20 +92,5 @@ struct AtlasDivider: View {
         }
         .frame(height: 7)
         .accessibilityHidden(true)
-    }
-}
-
-private struct AtlasPorpoiseShape: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.move(to: CGPoint(x: rect.minX, y: rect.midY * 1.04))
-        path.addCurve(to: CGPoint(x: rect.maxX * 0.78, y: rect.midY * 0.80), control1: CGPoint(x: rect.maxX * 0.20, y: rect.minY), control2: CGPoint(x: rect.maxX * 0.64, y: rect.minY * 0.8))
-        path.addCurve(to: CGPoint(x: rect.maxX * 0.94, y: rect.midY * 0.50), control1: CGPoint(x: rect.maxX * 0.86, y: rect.midY * 0.76), control2: CGPoint(x: rect.maxX * 0.91, y: rect.midY * 0.58))
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY)); path.addLine(to: CGPoint(x: rect.maxX * 0.98, y: rect.midY * 0.72)); path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY)); path.addLine(to: CGPoint(x: rect.maxX * 0.91, y: rect.midY * 1.08))
-        path.addCurve(to: CGPoint(x: rect.maxX * 0.30, y: rect.midY * 1.42), control1: CGPoint(x: rect.maxX * 0.74, y: rect.maxY * 0.82), control2: CGPoint(x: rect.maxX * 0.48, y: rect.maxY * 0.94))
-        path.addLine(to: CGPoint(x: rect.maxX * 0.40, y: rect.maxY)); path.addLine(to: CGPoint(x: rect.maxX * 0.22, y: rect.midY * 1.45))
-        path.addCurve(to: CGPoint(x: rect.minX, y: rect.midY * 1.04), control1: CGPoint(x: rect.maxX * 0.11, y: rect.midY * 1.42), control2: CGPoint(x: rect.maxX * 0.02, y: rect.midY * 1.20))
-        path.closeSubpath()
-        return path
     }
 }

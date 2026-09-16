@@ -22,7 +22,7 @@ struct SharePlateView: View {
                     .clipped()
             } else {
                 AtlasTheme.paper
-                SpecimenPlate(species: species, showsLeaderLabels: false)
+                SpecimenPlate(species: species)
                     .padding(40)
             }
 
