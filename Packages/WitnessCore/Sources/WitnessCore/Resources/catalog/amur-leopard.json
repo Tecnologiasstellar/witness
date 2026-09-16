@@ -99,6 +99,13 @@
       "organization": "WWF-UK",
       "url": "https://support.wwf.org.uk/adopt-an-animal",
       "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "wwf-uk-amur-factsheet",
+      "title": "Amur leopard factsheet (Wildlife in Winter 2017)",
+      "organization": "WWF-UK",
+      "url": "https://www.wwf.org.uk/sites/default/files/2018-01/WWF_WIW_2017_Factsheet_AmurLeopard%20FINAL.pdf",
+      "lastAccessed": "2026-09-15"
     }
   ],
   "editorial": {
@@ -110,7 +117,7 @@
   },
   "stats": {
     "size": "Males 32–48 kg · up to 75 kg",
-    "lifespan": "Not yet verified",
+    "lifespan": "Up to 12 years in the wild",
     "diet": "Roe deer, sika deer & wild boar",
     "populationEstimate": "Around 130 adults",
     "populationAsOf": "2023, per WWF-UK",
@@ -122,7 +129,8 @@
       "Roads & development"
     ],
     "sourceIDs": [
-      "wwf-uk-amur"
+      "wwf-uk-amur",
+      "wwf-uk-amur-factsheet"
     ]
   },
   "insight": {

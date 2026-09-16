@@ -115,6 +115,13 @@
       "organization": "Monarch Watch (University of Kansas)",
       "url": "https://monarchwatch.org",
       "lastAccessed": "2026-08-24"
+    },
+    {
+      "id": "fws-monarch",
+      "title": "Monarch butterfly (Danaus plexippus)",
+      "organization": "U.S. Fish and Wildlife Service",
+      "url": "https://www.fws.gov/species/monarch-butterfly-danaus-plexippus",
+      "lastAccessed": "2026-09-15"
     }
   ],
   "editorial": {
@@ -125,7 +132,7 @@
     "notes": "Reviewed and cleared by Alberto Villalpando on 2026-08-25."
   },
   "stats": {
-    "size": "Not yet verified",
+    "size": "Wingspan 3–4 in · about half a gram",
     "lifespan": "A few weeks — 8–9 months for the migratory generation",
     "diet": "Caterpillars: milkweed only · adults: nectar",
     "trend": "decreasing",
@@ -137,7 +144,8 @@
     ],
     "sourceIDs": [
       "nps-monarch",
-      "xerces-monarchs"
+      "xerces-monarchs",
+      "fws-monarch"
     ]
   },
   "reproduction": {
