@@ -1,6 +1,6 @@
 # Rights record — red-wolf plates
 
-All: rights state `ai_generated_owned` (D-013), Higgsfield account tecnologiasstellar, model `nano_banana_2` (submitted as nano_banana_pro), locked style template (docs/ART_PROMPT_TEMPLATE.md) with per-species blocks from the card's cited sources. Species-accuracy review passed 2026-08-25 for every plate below against WCC/NC Wildlife reference descriptions (cinnamon-buff coat with reddish tinge behind ears and legs, broad muzzle, build between coyote and gray wolf, pocosin wetland habitat, orange tracking collar on the scale plate). Open item: Higgsfield plan commercial-terms confirmation before App Store submission.
+All: rights state `ai_generated_owned` (D-013), Higgsfield account tecnologiasstellar, model `nano_banana_2` (submitted as nano_banana_pro), locked style template (docs/ART_PROMPT_TEMPLATE.md) with per-species blocks from the card's cited sources. Species-accuracy review passed 2026-08-25 for every plate below against WCC/NC Wildlife reference descriptions (cinnamon-buff coat with reddish tinge behind ears and legs, broad muzzle, build between coyote and gray wolf, pocosin wetland habitat, orange tracking collar on the scale plate). Higgsfield paid-plan commercial-use terms confirmed by Alberto Villalpando 2026-08-25 (D-013 closed).
 
 | Asset | Kind / aspect | Job | Generated |
 |---|---|---|---|

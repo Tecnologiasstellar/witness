@@ -1,6 +1,6 @@
 # Rights record — wollemi-pine plates
 
-All: rights state `ai_generated_owned` (D-013), Higgsfield account tecnologiasstellar, model `nano_banana_2` (submitted as nano_banana_pro), locked style template (docs/ART_PROMPT_TEMPLATE.md) with per-species blocks from the card's cited sources. Species-accuracy review passed 2026-08-25 for every plate below against NSW/Botanic Gardens reference descriptions (bubbly red-brown bark, fern-like leaf sprays in ranks, spherical seed cones, self-coppiced multi-trunk habit, sandstone canyon rainforest). The 'behavior' slot depicts the species' defining life habit (coppicing), fitting for the catalog's first plant. Open item: Higgsfield plan commercial-terms confirmation before App Store submission.
+All: rights state `ai_generated_owned` (D-013), Higgsfield account tecnologiasstellar, model `nano_banana_2` (submitted as nano_banana_pro), locked style template (docs/ART_PROMPT_TEMPLATE.md) with per-species blocks from the card's cited sources. Species-accuracy review passed 2026-08-25 for every plate below against NSW/Botanic Gardens reference descriptions (bubbly red-brown bark, fern-like leaf sprays in ranks, spherical seed cones, self-coppiced multi-trunk habit, sandstone canyon rainforest). The 'behavior' slot depicts the species' defining life habit (coppicing), fitting for the catalog's first plant. Higgsfield paid-plan commercial-use terms confirmed by Alberto Villalpando 2026-08-25 (D-013 closed).
 
 | Asset | Kind / aspect | Job | Generated |
 |---|---|---|---|

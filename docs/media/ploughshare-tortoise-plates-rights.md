@@ -1,6 +1,6 @@
 # Rights record — ploughshare-tortoise plates
 
-All: rights state `ai_generated_owned` (D-013), Higgsfield account tecnologiasstellar, model `nano_banana_2` (submitted as nano_banana_pro), locked style template (docs/ART_PROMPT_TEMPLATE.md) with per-species blocks from the card's cited sources. Species-accuracy review passed 2026-08-25 for every plate below against Durrell/TSA reference descriptions (golden domed shell with growth rings, plough-shaped gular horn, elephantine legs, bamboo-scrub habitat). Open item: Higgsfield plan commercial-terms confirmation before App Store submission.
+All: rights state `ai_generated_owned` (D-013), Higgsfield account tecnologiasstellar, model `nano_banana_2` (submitted as nano_banana_pro), locked style template (docs/ART_PROMPT_TEMPLATE.md) with per-species blocks from the card's cited sources. Species-accuracy review passed 2026-08-25 for every plate below against Durrell/TSA reference descriptions (golden domed shell with growth rings, plough-shaped gular horn, elephantine legs, bamboo-scrub habitat). Higgsfield paid-plan commercial-use terms confirmed by Alberto Villalpando 2026-08-25 (D-013 closed).
 
 | Asset | Kind / aspect | Job | Generated |
 |---|---|---|---|

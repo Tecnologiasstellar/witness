@@ -1,6 +1,6 @@
 # Rights record — catalog v2 supplementary plates (16), 2026-08-24
 
-All: rights state `ai_generated_owned` (D-013), Higgsfield account tecnologiasstellar, model `nano_banana_2` (submitted as nano_banana_pro), locked style template (docs/ART_PROMPT_TEMPLATE.md) with per-species blocks. Species-accuracy review passed 2026-08-24 for every plate against each card's declared sources. Open item unchanged: Higgsfield plan commercial-terms confirmation before App Store submission.
+All: rights state `ai_generated_owned` (D-013), Higgsfield account tecnologiasstellar, model `nano_banana_2` (submitted as nano_banana_pro), locked style template (docs/ART_PROMPT_TEMPLATE.md) with per-species blocks. Species-accuracy review passed 2026-08-24 for every plate against each card's declared sources. Higgsfield paid-plan commercial-use terms confirmed by Alberto Villalpando 2026-08-25 (D-013 closed).
 
 | Asset | Kind / aspect | Job |
 |---|---|---|
