@@ -3,7 +3,7 @@
 Status: canonical for public website wording  
 Owner: Witness  
 Last reconciled: 2026-09-04  
-Scope: Homepage, Archive, Method, Privacy, Terms, Contact, metadata, deployment notes
+Scope: Homepage, Archive, Map, Method, Privacy, Terms, Contact, metadata, deployment notes
 
 ## Authority order
 
@@ -39,7 +39,8 @@ Code, a build, a simulator run, a catalog pass, a staging service, a Test Store 
 | App privacy | The App Store privacy label is "Data Not Linked to You: Identifiers, Usage Data"; no tracking, no third-party analytics or ad SDK. | `../docs/APP_STORE_RECORD_V1.md` §3 | Confirmed | 2026-09-04 |
 | Artwork | Featured visuals are original AI-assisted illustrations, not documentary photography. | D-013 and per-asset rights files | Confirmed | 2026-08-26 |
 | Artwork rights | All 151 web plates are derivatives of approved catalog assets with rights records and commercial-use confirmation. | `../docs/DECISIONS.md` D-013; `../docs/media/*-rights.md`; `tools/export_web_plates.sh` | Confirmed | 2026-09-04 |
-| Locations | Public ranges stay generalized and exact sensitive locations are withheld. | Product guardrails and record metadata | Confirmed | 2026-08-26 |
+| Locations | Public ranges stay generalized and exact sensitive locations are withheld. | Product guardrails and record metadata; `../docs/evidence/map-safety-review-2026-09.md` | Confirmed | 2026-08-26 |
+| Map | The site draws each card's generalized range regions at `/map` and `/es/map`: the same circles the app shows, at least 25 km in radius, area only with no centre mark, over public-domain Natural Earth outlines. No exact location, no organisation pin, no third-party range dataset, no map service, no request to a third party. | `site/data/species.json` habitatRegions; `../docs/evidence/map-safety-review-2026-09.md`; D-030 | Pending the signed review | 2026-09-16 |
 | Partners | A citation does not imply partnership or endorsement. | Terms and project guardrails | Confirmed | 2026-08-26 |
 | Audio sample | The site plays the Field Season opening letter, free in the app too, with the synthetic-voice disclosure and a transcript. | `../docs/media/fs1-letter-audio-rights.md`; `site/data/letter-transcript.txt` | Confirmed | 2026-09-04 |
 | Field notes | The site publishes sourced editorial essays at `/field-notes`. They are Witness's own writing about species and extinction, not catalog records, and they cite third parties without implying partnership. | `../docs/FIELD_NOTES_ENGINE.md`; the gates in `../tools/notes.py` | Confirmed | 2026-09-03 |
@@ -52,6 +53,7 @@ Code, a build, a simulator run, a catalog pass, a staging service, a Test Store 
 - Any claim that a Witness, share, streak, link open, or payment produced a conservation outcome.
 - Any testimonial, partner, press, user total, rating, or download count without dated evidence.
 - A field note that restates a catalog record's story, publishes a population figure or IUCN category without two independent sources, or prints a coordinate or exact location. The gates in `../tools/notes.py` enforce all three.
+- A coordinate, a centre marker, a pin for a species or an organisation, a map zoom finer than the record's own generalisation, or a map layer drawn from IUCN, WDPA, Restor or any third-party range dataset.
 
 ## Web artwork manifest
 

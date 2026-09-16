@@ -14,7 +14,7 @@ Pick the next species from `SPECIES_BACKLOG.md`. Prefer story strength, a genuin
 
 - Verify scientific and common names, status wording, and status date against primary sources (source hierarchy in the trust policy; no IUCN API data per D-005).
 - Every factual sentence in the story must map to a listed source URL.
-- Generalize range; never sensitive coordinates.
+- Generalize range; never sensitive coordinates. Add the record's row to `docs/evidence/map-safety-review-2026-09.md` before approval.
 - Choose one action that passes the action policy, with a working official destination link.
 
 ### 3. Draft the record

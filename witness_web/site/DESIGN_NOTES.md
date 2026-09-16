@@ -34,6 +34,7 @@ DailyArt informed page rhythm, central-device storytelling, long-scroll pacing, 
 - Native details/summary FAQ
 - Reconciled legal and support wording
 - Public claim ledger and artwork hash manifest
+- A prerendered SVG world map of the catalog's generalized ranges (Natural Earth outlines in paper and sepia, the app's dashed sage circles), with a native details list and no script
 
 ## Responsive behavior
 
