@@ -691,7 +691,10 @@ private struct WorksModule: View {
         worksRow(
             meta: atlasIsActive ? "THE ATLAS · ACTIVE" : "THE LIVING LIBRARY · GROWING WEEKLY",
             title: "The Atlas",
-            note: "Every past week and every season, narrated, while membership is active.",
+            // Matches the Atlas sheet's holdings, which e7f249a made true and
+            // this door did not follow: there is one season, not "every
+            // season", and narration belongs to it rather than to the archive.
+            note: "Every past week, with its full record. Field Season One, complete and narrated, while membership is active.",
             identifier: "today.atlas.door",
             label: "The Atlas, the living library. Opens the Atlas page."
         ) {

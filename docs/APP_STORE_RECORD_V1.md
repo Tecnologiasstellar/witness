@@ -155,23 +155,42 @@ webhook deploy remains a separate, optional Tuesday item.
 
 Demo account: none needed (state this explicitly in the field).
 
-## 8. Screenshots (produced 2026-08-31, founder approval pending)
+## 8. Screenshots (reshot 2026-09-16, founder approval pending)
 
-Both required sets are in `docs/appstore/screenshots/` — `6.9/`
-(1320×2868, iPhone 17 Pro Max) and `6.3/` (1206×2622, iPhone 17 Pro),
-clean 9:41 status bar, five shots each:
+The 2026-08-31 set is **superseded and must not be submitted.** It was
+taken before nine commits redesigned the exact screens it showed —
+`95d244f` alone turned Field Season into a book cover, made the reader
+serif, and raised the type floor to 11pt, and `e7f249a` replaced the
+archive's detail screen with the species dossier. Shipping it would have
+been a Guideline 2.3.3 mismatch. The old files stay in
+`docs/appstore/screenshots/final/` as a record; the current set is:
 
-1. This week's card (kākāpō hero)
-2. The witness moment + the season-chapter door
-3. Field Season cover (season plate + stats)
-4. The edition contents with the narration sample
-5. Chapter reader with narration playing (honest voice disclosure visible)
+`docs/appstore/screenshots/2026-09/` — `6.9/` (1320×2868, iPhone 17 Pro
+Max) and `6.3/` (1206×2622, iPhone 17 Pro), clean 9:41 status bar, full
+battery, **seven candidates each.** Apple allows up to 10 per size;
+founder picks and orders the final set.
 
-Shot 5's owned state was produced with the deterministic test purchase
-service on a simulator (the same fake the UI tests use), then the app was
-uninstalled from both simulators — no real or sandbox purchase involved,
-and the rendered UI is identical to the owned state. Founder picks the
-final ordering (Apple allows up to 10 per device size; 5 is plenty).
+1. `01-this-week` — the weekly card: hero plate, status, hook, stats
+2. `02-archive-grid-locks` — the archive with ATLAS locks on three plates;
+   shows what the subscription opens, without a word of sales copy
+3. `03-atlas-dossier-monarch` — the species dossier the Atlas unlocks
+4. `04-atlas-pricing` — the Atlas cover, its holdings, and both durations
+5. `05-fieldseason-cover` — the edition's cover, price, and stats row
+6. `06-edition-contents` — the twelve pieces with read and listen times
+7. `07-chapter-reader-narration` — the serif reader with the synthetic
+   voice disclosure visible
+
+All prices are **real** (`$19.99`, `$14.99`, `$24.99`), read from the
+store rather than from the test service: `FakePurchaseService` returns
+`$0.00` for every product, which is right for tests and would have been a
+misleading price on a store listing. Shots 1–5 were taken with commerce
+on the normal path. Only 6 and 7 used the fake service, to reach the
+owned state — neither screen shows a price, so no `$0.00` reaches the
+listing. No real or sandbox purchase was involved.
+
+The species is the true current week (monarch butterfly) throughout, so
+the card, the archive grid and the dossier agree with each other; the old
+set's kākāpō hero disagreed with its own archive.
 
 ## 9. App icon (already decided — brief is stale)
 
