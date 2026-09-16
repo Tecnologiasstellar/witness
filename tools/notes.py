@@ -695,7 +695,11 @@ def ship(message):
     if subprocess.run(["git", "commit", "-m", message], cwd=ROOT).returncode:
         print("nothing new to commit — pushing whatever is already committed")
     subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=ROOT, check=True)
-    subprocess.run(["git", "push", "origin", "main"], cwd=ROOT, check=True)
+    # HEAD:main, not main. `git push origin main` pushes the local main REF, which is
+    # stale whenever the repo sits on a feature branch — the push is then rejected
+    # non-fast-forward with the note already committed. Found 2026-09-16 with the tree
+    # on fix-fieldseason-flake and local main six commits behind.
+    subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
     urls = changed_urls()
     if not wait_until_public(urls):
         sys.exit(f"HARD FAIL: pushed, but {SITE} did not serve the note within "
