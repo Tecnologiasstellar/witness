@@ -1,4 +1,5 @@
 import XCTest
+import RevenueCat
 import WitnessCore
 @testable import Witness
 
@@ -118,5 +119,47 @@ final class RevenueCatMappingTests: XCTestCase {
     func testMissingConfigurationDisablesCommerceWithoutError() {
         let configuration = CommerceConfiguration(revenueCatAPIKey: nil)
         XCTAssertNil(configuration.usableKey())
+    }
+
+    // MARK: - Purchase error mapping
+
+    /// The whole reason this mapping is hand-rolled: `error as? ErrorCode`
+    /// succeeds, but the bound enum has no localized description, so the
+    /// reader would be shown an error number instead of the store's message.
+    func testFailureKeepsTheStoresOwnMessage() {
+        let message = "There was a problem with the App Store."
+        let error = NSError(domain: ErrorCode.errorDomain,
+                            code: ErrorCode.storeProblemError.rawValue,
+                            userInfo: [NSLocalizedDescriptionKey: message])
+        XCTAssertEqual(
+            RevenueCatPurchaseAdapter.outcome(forPurchaseError: error),
+            .failed(reason: message)
+        )
+        XCTAssertNotEqual(
+            (error as? ErrorCode)?.localizedDescription, message,
+            "if the enum ever carries the message, this mapping can be simplified"
+        )
+    }
+
+    func testAskToBuyIsPendingApprovalNotAFailedPurchase() {
+        let error = NSError(domain: ErrorCode.errorDomain,
+                            code: ErrorCode.paymentPendingError.rawValue)
+        XCTAssertEqual(RevenueCatPurchaseAdapter.outcome(forPurchaseError: error), .pending)
+    }
+
+    func testCancellationIsSilentNotAFailedPurchase() {
+        let error = NSError(domain: ErrorCode.errorDomain,
+                            code: ErrorCode.purchaseCancelledError.rawValue)
+        XCTAssertEqual(RevenueCatPurchaseAdapter.outcome(forPurchaseError: error), .userCancelled)
+    }
+
+    /// A code borrowed from another domain must never be read as a
+    /// RevenueCat code — offline is a failure, not a pending approval.
+    func testForeignDomainIsNeverReadAsARevenueCatCode() {
+        let offline = NSError(domain: NSURLErrorDomain,
+                              code: ErrorCode.paymentPendingError.rawValue)
+        guard case .failed = RevenueCatPurchaseAdapter.outcome(forPurchaseError: offline) else {
+            return XCTFail("a URL error must not be mapped as a RevenueCat outcome")
+        }
     }
 }

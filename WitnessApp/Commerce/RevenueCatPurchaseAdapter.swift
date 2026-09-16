@@ -71,15 +71,32 @@ struct RevenueCatPurchaseAdapter: PurchaseService {
                 return .supportThanks
             }
             return .success(Self.snapshot(from: result.customerInfo))
-        } catch let error as ErrorCode {
-            switch error {
-            case .paymentPendingError:
-                return .pending
-            case .purchaseCancelledError:
-                return .userCancelled
-            default:
-                return .failed(reason: error.localizedDescription)
-            }
+        } catch {
+            return Self.outcome(forPurchaseError: error)
+        }
+    }
+
+    /// RevenueCat throws `PublicError`, an `NSError` carrying the store's own
+    /// localized message. Binding it as `ErrorCode` does match, but the enum
+    /// supplies no `NSLocalizedDescriptionKey`, so reading
+    /// `localizedDescription` off the bound enum degrades every failure to
+    /// "The operation couldn't be completed. (RevenueCat.ErrorCode error 2.)".
+    /// Read the code off the error and keep the original message, so a reader
+    /// whose card was declined is told that, not an error number.
+    static func outcome(forPurchaseError error: Error) -> PurchaseOutcome {
+        let nsError = error as NSError
+        guard
+            nsError.domain == ErrorCode.errorDomain,
+            let code = ErrorCode(rawValue: nsError.code)
+        else { return .failed(reason: error.localizedDescription) }
+
+        switch code {
+        case .paymentPendingError:
+            return .pending
+        case .purchaseCancelledError:
+            return .userCancelled
+        default:
+            return .failed(reason: error.localizedDescription)
         }
     }
 
