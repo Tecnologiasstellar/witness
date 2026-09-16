@@ -27,7 +27,7 @@
 - DailyArt/Mobbin screenshots are research-only and excluded from the repository. Never use, trace, crop, upload, or reference them in the website output.
 - The available Vaquita visual is a locally drawn abstract prototype. Label it as such.
 - The user-provided Vaquita image is not available in the workspace and is pending file-level rights metadata. Do not use it.
-- Do not use a third-party photo, illustration, map, icon, or texture without a recorded web-compatible right/license/attribution decision. Recorded 2026-09-16: the `/map` outline is Natural Earth 110m land, public domain with no attribution required, converted offline by `tools/build_world_land.py`; no tiles or map service (D-030).
+- Do not use a third-party photo, illustration, map, icon, or texture without a recorded web-compatible right/license/attribution decision. Recorded 2026-09-16: the `/map` base map is OpenFreeMap vector tiles (OpenMapTiles schema, OpenStreetMap data, ODbL) with the required attribution shown on the map, drawn by MapLibre GL JS (BSD-3); its no-JavaScript fallback is Natural Earth 110m land, public domain with no attribution required, converted offline by `tools/build_world_land.py` (D-030).
 - Do not include exact species locations, nesting sites, GPS data, or detailed maps. The one exception is a map drawn only from a card's reviewed `habitatRegions` (D-030).
 
 ## Privacy and legal rules

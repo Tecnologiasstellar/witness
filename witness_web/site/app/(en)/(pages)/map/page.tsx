@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Container, Eyebrow, TextLink } from "@/components/atlas";
 import { Breadcrumbs, Programs } from "@/components/record";
-import { SpeciesMap } from "@/components/species-map";
+import { MapLive } from "@/components/map-live";
+import { SpeciesMap, mapRegions } from "@/components/species-map";
 import { CATALOGUE, allRecords } from "@/lib/archive";
 
 export const metadata: Metadata = {
@@ -34,17 +35,27 @@ export default function MapPage() {
 
       <section className="py-12 md:py-16">
         <Container>
-          <SpeciesMap
-            records={records}
-            title={`World map of generalized ranges for ${records.length} species; the list below names every region.`}
+          <MapLive
+            regions={mapRegions(records)}
             caption="Generalized regions · exact locations are never shown · details in the list"
-          />
+            copy={{
+              lang: "en",
+              title: `Interactive map of generalized ranges for ${records.length} species; the list below carries the same information.`,
+              zoomIn: "Zoom in",
+              zoomOut: "Zoom out",
+              windowsHelpText: "Use Ctrl + scroll to zoom the map",
+              macHelpText: "Use ⌘ + scroll to zoom the map",
+              mobileHelpText: "Use two fingers to move the map",
+            }}
+          >
+            <SpeciesMap records={records} title={`World map of generalized ranges for ${records.length} species; the list below names every region.`} />
+          </MapLive>
 
           <ol className="map-list">
             {records.map((record) => {
               const regions = record.habitatRegions ?? [];
               return (
-                <li key={record.id}>
+                <li key={record.id} id={`s-${record.id}`}>
                   <details>
                     <summary>
                       <span className="faq-plus" aria-hidden="true" />

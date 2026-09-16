@@ -24,6 +24,7 @@
 
     --grain-blend: multiply;
     --grain-opacity: 0.11;
+    --map-icon-filter: none;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -42,6 +43,7 @@
 
       --grain-blend: screen;
       --grain-opacity: 0.06;
+      --map-icon-filter: invert(0.85);
     }
   }
 
@@ -60,6 +62,7 @@
 
     --grain-blend: screen;
     --grain-opacity: 0.06;
+    --map-icon-filter: invert(0.85);
   }
 
   :root {
@@ -383,7 +386,15 @@ details[open] .faq-plus::after { transform: rotate(0deg); }
 
 /* The map — generalized ranges over Natural Earth land. No tiles, no script. */
 .map-figure { margin: 2.5rem 0 0; }
-.map-figure svg { display: block; width: 100%; height: auto; background: var(--paper-fresh); border: 1px solid color-mix(in srgb, var(--hairline) 45%, transparent); }
+/* One box, one size in every state: the SVG letterboxes inside it and the live canvas covers it once ready. */
+.map-box { position: relative; aspect-ratio: 2.4; overflow: hidden; background: var(--paper-fresh); border: 1px solid color-mix(in srgb, var(--hairline) 45%, transparent); }
+.map-box svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+/* Two classes on purpose: MapLibre's own stylesheet loads later and sets position: relative on the container. */
+.map-box > .map-live { position: absolute; inset: 0; }
+.map-box > .map-live:empty { pointer-events: none; }
+/* The SVG stays the picture until the first full render; the canvas is invisible until then (it paints land colour before tiles arrive). */
+.map-figure:not([data-ready]) > .map-box > .map-live { opacity: 0; }
+.map-figure[data-ready] .map-svg { visibility: hidden; }
 .map-figure figcaption { margin-top: .75rem; font-size: .66rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--sepia); }
 /* Coastlines in a text-grade token: paper-aged on paper-fresh is 1.05:1 in dusk, and the hairline may not carry information. */
 .land { fill: color-mix(in srgb, var(--sepia) 14%, var(--paper-aged)); stroke: var(--sepia); stroke-opacity: .55; stroke-width: .8; vector-effect: non-scaling-stroke; }
@@ -403,4 +414,16 @@ details[open] .faq-plus::after { transform: rotate(0deg); }
 .map-range { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.4; color: var(--ink); }
 .map-links { display: flex; flex-wrap: wrap; gap: 0 1.5rem; }
 .map-note { max-width: 56ch; margin-top: 1.5rem; font-size: 13px; line-height: 1.65; color: var(--ink-muted); }
-@media (max-width: 767px) { .range { stroke-width: 1; stroke-dasharray: 3 2; } }
+@media (max-width: 767px) { .range { stroke-width: 1; stroke-dasharray: 3 2; } .map-box { aspect-ratio: 4 / 3; } }
+/* MapLibre chrome in the site's tokens: square, paper, 44px targets, no shadows. */
+.map-live .maplibregl-ctrl-group { border-radius: 0; box-shadow: none; border: 1px solid color-mix(in srgb, var(--hairline) 60%, transparent); background: var(--paper-fresh); }
+.map-live .maplibregl-ctrl-group button { width: 44px; height: 44px; background-color: transparent; }
+.map-live .maplibregl-ctrl-group button + button { border-top: 1px solid color-mix(in srgb, var(--hairline) 60%, transparent); }
+.map-live .maplibregl-ctrl-group button:focus-visible { box-shadow: none; outline: 2px solid var(--sage); outline-offset: -3px; }
+.map-live .maplibregl-ctrl-icon { filter: var(--map-icon-filter); }
+.map-live .maplibregl-ctrl.maplibregl-ctrl-attrib { background: color-mix(in srgb, var(--paper-fresh) 88%, transparent); color: var(--ink-muted); font: 11px/1.4 var(--font-body); }
+.map-live .maplibregl-ctrl-attrib a { color: var(--sepia); }
+.map-live .maplibregl-popup-content { padding: .5rem .75rem; border-radius: 0; box-shadow: none; border: 1px solid color-mix(in srgb, var(--hairline) 60%, transparent); background: var(--paper-fresh); color: var(--ink); font: 500 13px/1.4 var(--font-body); }
+.map-live .maplibregl-popup-tip { display: none; }
+.map-live .maplibregl-cooperative-gesture-screen { background: color-mix(in srgb, var(--ink) 72%, transparent); color: var(--paper); font: 500 15px/1.35 var(--font-body); }
+.map-live canvas:focus-visible { outline: 2px solid var(--sage); outline-offset: -3px; }

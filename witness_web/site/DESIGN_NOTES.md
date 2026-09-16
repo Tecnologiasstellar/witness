@@ -34,7 +34,7 @@ DailyArt informed page rhythm, central-device storytelling, long-scroll pacing, 
 - Native details/summary FAQ
 - Reconciled legal and support wording
 - Public claim ledger and artwork hash manifest
-- A prerendered SVG world map of the catalog's generalized ranges (Natural Earth outlines in paper and sepia, the app's dashed sage circles), with a native details list and no script
+- A pan-and-zoom map of the catalog's generalized ranges (MapLibre over OpenFreeMap tiles, painted from the paper, sepia and sage tokens so it follows day and dusk; zoom capped, no roads) over a prerendered SVG fallback, with a native details list
 
 ## Responsive behavior
 

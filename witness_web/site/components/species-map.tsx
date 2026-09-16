@@ -2,11 +2,12 @@ import type { SpeciesRecord } from "@/lib/archive";
 import { LAND_D } from "@/lib/world-land";
 
 /**
- * The world map behind /map: Natural Earth land under one generalized ellipse
- * per habitat region, drawn the way the app's GeneralizedRangeMap draws them
- * (sage fill, dashed sage stroke). Server-rendered, no script, and no links:
- * the list on the page is the control, this figure only repeats it, and the
- * tooltip says exactly what the list says (name and radius).
+ * The world map behind /map without JavaScript: Natural Earth land under one
+ * generalized ellipse per habitat region, drawn the way the app's
+ * GeneralizedRangeMap draws them (sage fill, dashed sage stroke). Server
+ * rendered, no script, no links: the list on the page is the control, this
+ * picture only repeats it, and the tooltip says exactly what the list says.
+ * MapLive replaces it in place once its canvas is ready.
  */
 
 // Plate Carrée at 3 units per degree, lon -180..180, lat 84..-56 — the frame
@@ -47,41 +48,44 @@ function maxRadius(record: SpeciesRecord) {
   return Math.max(0, ...(record.habitatRegions ?? []).map((region) => region.radiusKm));
 }
 
-export function SpeciesMap({
-  records,
-  title,
-  caption,
-}: {
-  records: SpeciesRecord[];
-  title: string;
-  caption: string;
-}) {
+/** The same regions, flat, for the live map. */
+export function mapRegions(records: SpeciesRecord[]) {
+  return records.flatMap((record) =>
+    (record.habitatRegions ?? []).map((region) => ({
+      id: record.id,
+      species: record.commonName,
+      region: region.name,
+      lat: region.latitude,
+      lng: region.longitude,
+      radiusKm: region.radiusKm,
+    })),
+  );
+}
+
+export function SpeciesMap({ records, title }: { records: SpeciesRecord[]; title: string }) {
   // Largest ranges first, so a small circle is never buried under a bigger one.
   const ordered = records
     .filter((record) => record.habitatRegions?.length)
     .sort((a, b) => maxRadius(b) - maxRadius(a));
 
   return (
-    <figure className="map-figure">
-      <svg viewBox={`0 0 ${W} ${H}`} aria-labelledby="map-title">
-        <title id="map-title">{title}</title>
-        <path className="land" d={LAND_D} />
-        {ordered.map((record) => (
-          <g key={record.id} id={`r-${record.id}`}>
-            {(record.habitatRegions ?? []).flatMap((region) => {
-              const e = ellipse(region);
-              // A range past the antimeridian is drawn again on the left edge.
-              const centres = e.cx + e.rx > W ? [e.cx, e.cx - W] : [e.cx];
-              return centres.map((cx) => (
-                <ellipse key={`${region.name}@${one(cx)}`} className="range" cx={one(cx)} cy={one(e.cy)} rx={one(e.rx)} ry={one(e.ry)}>
-                  <title>{`${record.commonName} · ${region.name} · ~${region.radiusKm} km`}</title>
-                </ellipse>
-              ));
-            })}
-          </g>
-        ))}
-      </svg>
-      <figcaption>{caption}</figcaption>
-    </figure>
+    <svg className="map-svg" viewBox={`0 0 ${W} ${H}`} aria-labelledby="map-title">
+      <title id="map-title">{title}</title>
+      <path className="land" d={LAND_D} />
+      {ordered.map((record) => (
+        <g key={record.id} id={`r-${record.id}`}>
+          {(record.habitatRegions ?? []).flatMap((region) => {
+            const e = ellipse(region);
+            // A range past the antimeridian is drawn again on the left edge.
+            const centres = e.cx + e.rx > W ? [e.cx, e.cx - W] : [e.cx];
+            return centres.map((cx) => (
+              <ellipse key={`${region.name}@${one(cx)}`} className="range" cx={one(cx)} cy={one(e.cy)} rx={one(e.rx)} ry={one(e.ry)}>
+                <title>{`${record.commonName} · ${region.name} · ~${region.radiusKm} km`}</title>
+              </ellipse>
+            ));
+          })}
+        </g>
+      ))}
+    </svg>
   );
 }

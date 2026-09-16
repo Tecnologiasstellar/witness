@@ -13,13 +13,13 @@ This file is the evidence behind the "Sensitive species safety" row in `docs/COM
 3. The centre is a public centroid (the middle of a park, bay or coast), never an occurrence, nest, den, release pen, grove or pool.
 4. The map draws area only: no centre mark, no pin, no cluster count for a species.
 5. The rendered radius is never smaller than the true radius and never below the visual floor (8 viewBox units, about 297 km at the equator); the floor overstates, never understates, a range, and the tooltip carries the real km.
-6. No coordinate appears in page text, tooltips, aria labels, JSON-LD or a URL. The list gives region names and radii only. (Ellipse attributes carry one-decimal projected units, the same centroids `species.json` has published since 2026-09-04.)
-7. No zoom finer than the record's own generalisation. The v1 map is a fixed world view; any later pan or zoom deep-links by `#r-<id>` only, never by a viewport coordinate.
-8. The basemap is Natural Earth 110m land outlines (public domain): nothing finer than roughly 50 km resolves, no rivers, roads or towns.
+6. No coordinate appears in page text, tooltips, aria labels, JSON-LD or a URL. The list gives region names and radii only. (The fallback's ellipse attributes carry one-decimal projected units, and the live map receives the same two-decimal centroids `species.json` has published since 2026-09-04.)
+7. No zoom finer than the record's own generalisation: the live map is capped at zoom 7 (about 611 m per pixel at the equator; a 25 km range is ~80 px across) and deep-links by `#r-<id>` only, never by a viewport coordinate.
+8. The basemap draws only land, water, country borders and place names from OpenFreeMap tiles: no roads, buildings or rivers at any zoom. Without JavaScript the map is the Natural Earth 110m outline, where nothing finer than roughly 50 km resolves.
 
 ## What the founder accepts by signing
 
-- 40 of 51 regions render at the visual floor, so at world scale they read as same-size markers at their centroids. Rule 4 forbids a centre mark; this is the map's honest limit, not a marker, and the list beside it names every region with its radius.
+- At the world view most regions render at the visual floor (6 px on the live map; 40 of 51 at 8 units on the fallback), so they read as same-size markers at their centroids until the reader zooms in. Rule 4 forbids a centre mark; this is the map's honest limit, not a marker, and the list beside it names every region with its radius.
 - Where regions overlap (the Caribbean, the Gulf of Mexico, the two Amur species at one coordinate) the hover tooltip shows only the topmost circle; records are drawn largest first so no species is buried, and the list is complete.
 - The spoon-billed sandpiper's Chukotka region crosses the antimeridian and is drawn once at each edge of the frame.
 - The three rows marked FOUNDER below are decided here, not in code. A changed radius is a catalog edit: `python3 tools/export_catalog.py > witness_web/site/data/species.json && cp witness_web/site/data/species.json witness_web/community/data/`, the same region object mirrored into `species.es.json` (and its community copy), `python3 tools/check_species_es.py`, `swift test --filter CatalogValidatorTests`.

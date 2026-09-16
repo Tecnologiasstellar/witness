@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Container, Eyebrow, TextLink } from "@/components/atlas";
 import { Breadcrumbs, Programs } from "@/components/record.es";
-import { SpeciesMap } from "@/components/species-map";
+import { MapLive } from "@/components/map-live";
+import { SpeciesMap, mapRegions } from "@/components/species-map";
 import { CATALOGUE, allRecords } from "@/lib/archive.es";
 
 export const metadata: Metadata = {
@@ -34,17 +35,27 @@ export default function MapPage() {
 
       <section className="py-12 md:py-16">
         <Container>
-          <SpeciesMap
-            records={records}
-            title={`Mapa del mundo con las áreas generalizadas de ${records.length} especies; la lista de abajo nombra cada región.`}
+          <MapLive
+            regions={mapRegions(records)}
             caption="Regiones generalizadas · nunca se muestran ubicaciones exactas · detalles en la lista"
-          />
+            copy={{
+              lang: "es",
+              title: `Mapa interactivo de las áreas generalizadas de ${records.length} especies; la lista de abajo lleva la misma información.`,
+              zoomIn: "Acercar",
+              zoomOut: "Alejar",
+              windowsHelpText: "Usa Ctrl + rueda para hacer zoom en el mapa",
+              macHelpText: "Usa ⌘ + rueda para hacer zoom en el mapa",
+              mobileHelpText: "Usa dos dedos para mover el mapa",
+            }}
+          >
+            <SpeciesMap records={records} title={`Mapa del mundo con las áreas generalizadas de ${records.length} especies; la lista de abajo nombra cada región.`} />
+          </MapLive>
 
           <ol className="map-list">
             {records.map((record) => {
               const regions = record.habitatRegions ?? [];
               return (
-                <li key={record.id}>
+                <li key={record.id} id={`s-${record.id}`}>
                   <details>
                     <summary>
                       <span className="faq-plus" aria-hidden="true" />

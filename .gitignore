@@ -40,3 +40,6 @@ WitnessApp_official_Screenshoots/
 witness-images-higgsfield/
 witness-logo/
 __pycache__/
+
+# MapLibre's module worker, copied from node_modules by the site's prebuild/predev scripts.
+witness_web/site/public/maplibre/
