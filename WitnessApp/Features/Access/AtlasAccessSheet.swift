@@ -10,6 +10,8 @@ struct AtlasAccessSheet: View {
     /// so a future presenter cannot ship the page without a way in.
     let onEnterLibrary: () -> Void
 
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+
     private let context = CommerceContext.atlasSheet
 
     var body: some View {
@@ -78,6 +80,7 @@ struct AtlasAccessSheet: View {
                         .lineSpacing(5)
 
                     ManageSubscriptionRow(identifier: "access.atlas.manage")
+                    AccessLegalRow(identifier: "access.atlas.legal")
                 }
                 .padding(22)
             }
@@ -223,12 +226,23 @@ struct AtlasAccessSheet: View {
                         Text(product.localizedTitle)
                             .font(AtlasType.technical(13, weight: .bold))
                             .tracking(1.0)
-                        if let badge {
+                        // Decoration, and the first thing to go when space is
+                        // short: the caption below already says "about $2.08 a
+                        // month" against the other card's "$2.50", which makes
+                        // the same point precisely. At accessibility sizes the
+                        // badge only ever rendered as "BES…".
+                        //
+                        // It also used to carry `.fixedSize()`, which made it
+                        // the one element on the page that could not compress:
+                        // at AX5 it pushed this HStack past the screen, widening
+                        // the enclosing VStack until every sibling — the body
+                        // text, both prices — hung off both edges.
+                        if let badge, !dynamicTypeSize.isAccessibilitySize {
                             Text(badge.uppercased())
                                 .font(AtlasType.technical(11, weight: .bold))
                                 .tracking(0.8)
                                 .lineLimit(1)
-                                .fixedSize()
+                                .minimumScaleFactor(0.7)
                                 .padding(.horizontal, 6)
                                 .padding(.vertical, 2)
                                 .overlay(Rectangle().stroke(AtlasTheme.sepia, lineWidth: 1))

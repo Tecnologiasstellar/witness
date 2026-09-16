@@ -74,12 +74,8 @@ final class OnboardingUITests: XCTestCase {
 
         let finish = app.buttons["onboarding.finish"]
         XCTAssertTrue(finish.waitForExistence(timeout: 5))
-        finish.tap()
         let witnessButton = app.buttons["today.witnessButton"]
-        if !witnessButton.waitForExistence(timeout: 3) {
-            finish.tap()
-            XCTAssertTrue(witnessButton.waitForExistence(timeout: 5))
-        }
+        XCTAssertTrue(finish.tap(until: witnessButton))
 
         // The named time reaches the post-witness primer as a one-tap confirm.
         // The card fades in as the introduction leaves; wait for the
@@ -119,11 +115,7 @@ final class OnboardingUITests: XCTestCase {
         app.buttons["onboarding.skip"].tap()
         let contents = app.buttons["today.contents"]
         XCTAssertTrue(contents.waitForExistence(timeout: 5))
-        contents.tap()
-        if !app.staticTexts["INDEX"].waitForExistence(timeout: 3) {
-            contents.tap()
-            XCTAssertTrue(app.staticTexts["INDEX"].waitForExistence(timeout: 5))
-        }
+        XCTAssertTrue(contents.tap(until: app.staticTexts["INDEX"]))
 
         let row = app.buttons["index.howItWorks"]
         var scrollAttempts = 0

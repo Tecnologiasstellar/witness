@@ -116,19 +116,42 @@ webhook deploy remains a separate, optional Tuesday item.
 
 ## 7. Review notes (App Review information)
 
-> Witness requires no account and no sign-in. All purchases are standard
-> App Store in-app purchases (one non-consumable, one subscription group
-> with two durations, one consumable tip).
+> Witness requires no account, no sign-in, and no demo credentials. Every
+> purchase is a standard StoreKit in-app purchase: one non-consumable
+> (Field Season One), one subscription group with two durations (the
+> Atlas), and one consumable tip (Support).
 >
-> To review paid content: Index (top-right) → ACCESS → FIELD SEASON →
-> "Keep Field Season permanently" purchases the complete edition; ATLAS
-> offers the two subscription durations. Purchased content appears under
-> "Open the edition." The weekly ritual (Today tab) is fully usable
-> without any purchase.
+> WHERE THE PURCHASES ARE
+> Open INDEX from the THIS WEEK tab. Under THE WORKS: FIELD SEASON (the
+> non-consumable), THE ATLAS (the subscription group — both durations sit
+> on one page), SUPPORT WITNESS (the tip). RESTORE PURCHASES is on that
+> same INDEX page, and the Field Season and Atlas pages each carry their
+> own restore row beside the price. Terms of Use and Privacy Policy links
+> sit at the foot of both paid pages.
 >
-> Private reflections are stored only on device. The collective witness
-> count uses an anonymous install identifier; no personal data is
-> collected.
+> WHAT THE ATLAS UNLOCKS, AND HOW TO SEE IT
+> An Atlas membership includes Field Season One in full — the same twelve
+> narrated chapters sold separately as the non-consumable — plus the
+> complete weekly archive, which grows by one species every week.
+>
+> To reach the archive: CABINET tab → ARCHIVE. Plates from the current and
+> previous ISO week open free by design; older plates carry a lock and open
+> only with an Atlas membership. After purchase, ENTER THE LIBRARY on the
+> Atlas page lands directly on that archive. Each unlocked plate opens a
+> full species record — sourced text, range map, five commissioned plates,
+> conservation programmes, and the citation list.
+>
+> The weekly cadence began 21 August 2026, so the archive is deliberately
+> small at review time and gains one entry every week. The subscription's
+> value is the continuing record plus the included Field Season, not a
+> fixed number of screens.
+>
+> PRIVACY
+> Private reflections are stored only on the device and are never
+> transmitted. The collective witness count and in-app usage events use a
+> random installation identifier; no personal data, no location, and no
+> payment details are collected. The binary carries a privacy manifest
+> declaring exactly this; the policy is at witnessatlas.com/privacy.
 
 Demo account: none needed (state this explicitly in the field).
 

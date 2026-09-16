@@ -273,3 +273,43 @@ struct PurchasePhaseNotice: View {
         }
     }
 }
+
+/// Terms and privacy at the point of purchase.
+///
+/// Guideline 3.1.2 requires an auto-renewable subscription to carry
+/// functional links to both in the binary, beside the price. The INDEX
+/// footer does not satisfy it: two of the Atlas sheet's three entrances
+/// (the archive's locked plate, and the tab-level presentation) never pass
+/// through INDEX, and the third pushes a page the footer does not follow.
+///
+/// The two URLs live here rather than in a view that happens to need them —
+/// this is the row every paid surface shares, so it owns them.
+struct AccessLegalRow: View {
+    static let privacyURL = URL(string: "https://witnessatlas.com/privacy")!
+    static let termsURL = URL(string: "https://witnessatlas.com/terms")!
+
+    let identifier: String
+
+    var body: some View {
+        // Side by side until the two labels stop fitting, then stacked.
+        // At AX5 on an SE they are wider than the screen, and a clipped
+        // legal link is the same rejection as a missing one.
+        ViewThatFits(in: .horizontal) {
+            HStack(spacing: 18) { links; Spacer(minLength: 0) }
+            VStack(alignment: .leading, spacing: 10) { links }
+        }
+        .font(AtlasType.technical(11, weight: .medium))
+        .tracking(1.0)
+        .foregroundStyle(AtlasTheme.sepia)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityIdentifier(identifier)
+    }
+
+    @ViewBuilder
+    private var links: some View {
+        Link("TERMS OF USE", destination: Self.termsURL)
+            .frame(minHeight: 44)
+        Link("PRIVACY POLICY", destination: Self.privacyURL)
+            .frame(minHeight: 44)
+    }
+}

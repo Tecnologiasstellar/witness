@@ -20,11 +20,21 @@ final class AccessSurfacesUITests: XCTestCase {
     private func openIndex() {
         let contents = app.buttons["today.contents"]
         XCTAssertTrue(contents.waitForExistence(timeout: 5))
-        contents.tap()
-        if !app.staticTexts["INDEX"].waitForExistence(timeout: 3) {
-            contents.tap()
-            XCTAssertTrue(app.staticTexts["INDEX"].waitForExistence(timeout: 5))
-        }
+        XCTAssertTrue(contents.tap(until: app.staticTexts["INDEX"]))
+    }
+
+    /// Switches to the cabinet's ARCHIVE shelf, retrying the tab tap for the
+    /// same reason `openIndex` does: it is the first synthesized tap after
+    /// launch and is occasionally dropped while the plate is still settling.
+    /// A dropped tap leaves the app on THIS WEEK, where no segment row
+    /// exists, so the failure reads as a missing ARCHIVE button. Both archive
+    /// tests route through here — the guard was in neither of them, and only
+    /// one happened to lose the race.
+    private func openCabinetArchive() {
+        let cabinet = app.buttons["atlas.tab.cabinet"]
+        XCTAssertTrue(cabinet.waitForExistence(timeout: 5))
+        XCTAssertTrue(cabinet.tap(until: app.buttons["cabinet.segment.archive"]))
+        app.buttons["cabinet.segment.archive"].tap()
     }
 
     func testFreeRitualShowsNoCommerceBeforeFirstWitness() throws {
@@ -80,12 +90,8 @@ final class AccessSurfacesUITests: XCTestCase {
         // one navigation bar here, but naming it says which control is meant.
         let back = app.navigationBars.buttons["BackButton"]
         XCTAssertTrue(back.waitForExistence(timeout: 5))
-        back.tap()
         let overview = app.buttons["access.overview.fieldseason"]
-        if !overview.waitForExistence(timeout: 5) {
-            back.tap()
-            XCTAssertTrue(overview.waitForExistence(timeout: 5))
-        }
+        XCTAssertTrue(back.tap(until: overview, timeout: 5))
 
         // Support: repeatable tip with quiet thanks and no unlock language.
         app.buttons["access.overview.support"].tap()
@@ -159,13 +165,7 @@ final class AccessSurfacesUITests: XCTestCase {
     /// a fake map, a "NOT YET VERIFIED" placeholder and a gillnet over every
     /// animal. Asserting the name is exactly the guard that would have caught it.
     func testArchivePlateOpensTheSpeciesDossier() throws {
-        let cabinet = app.buttons["atlas.tab.cabinet"]
-        XCTAssertTrue(cabinet.waitForExistence(timeout: 5))
-        cabinet.tap()
-
-        let archiveSegment = app.buttons["cabinet.segment.archive"]
-        XCTAssertTrue(archiveSegment.waitForExistence(timeout: 5))
-        archiveSegment.tap()
+        openCabinetArchive()
 
         // The fake purchase service leaves Atlas inactive, so only the plates
         // inside the free window are open — which is the point: this same
@@ -183,12 +183,7 @@ final class AccessSurfacesUITests: XCTestCase {
     /// A locked plate must still sell, not open. Guards against un-gating the
     /// archive by accident while rerouting it.
     func testLockedArchivePlateOpensTheAtlasSheet() throws {
-        let cabinet = app.buttons["atlas.tab.cabinet"]
-        XCTAssertTrue(cabinet.waitForExistence(timeout: 5))
-        cabinet.tap()
-        let archiveSegment = app.buttons["cabinet.segment.archive"]
-        XCTAssertTrue(archiveSegment.waitForExistence(timeout: 5))
-        archiveSegment.tap()
+        openCabinetArchive()
 
         let locked = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'archive.locked.'")).firstMatch
         guard locked.waitForExistence(timeout: 5) else {
@@ -205,14 +200,8 @@ final class AccessSurfacesUITests: XCTestCase {
         openIndex()
         let atlas = app.buttons["access.overview.atlas"]
         XCTAssertTrue(atlas.waitForExistence(timeout: 3))
-        atlas.tap()
-
-        // Same settling-frame flake family as openIndex.
         let sixMonth = app.buttons["access.atlas.sixmonth"]
-        if !sixMonth.waitForExistence(timeout: 3) {
-            atlas.tap()
-            XCTAssertTrue(sixMonth.waitForExistence(timeout: 5))
-        }
+        XCTAssertTrue(atlas.tap(until: sixMonth))
         sixMonth.tap()
 
         // The door leads; the receipt follows it.

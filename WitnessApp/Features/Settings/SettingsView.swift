@@ -15,8 +15,8 @@ struct SettingsView: View {
     @ObservedObject private var reminders = ReminderService.shared
     @State private var reminderTime = Calendar.current.date(from: DateComponents(hour: 8)) ?? .now
 
-    private static let privacyURL = URL(string: "https://witnessatlas.com/privacy")!
-    private static let termsURL = URL(string: "https://witnessatlas.com/terms")!
+    // The URLs live on AccessLegalRow, which every paid surface carries.
+    // One copy: a legal link that drifts on one screen is worse than none.
 
     private let edition = FieldSeasonLoader.bundled
 
@@ -290,9 +290,9 @@ struct SettingsView: View {
 
     private var footer: some View {
         HStack(spacing: 16) {
-            Link("PRIVACY POLICY", destination: Self.privacyURL)
+            Link("PRIVACY POLICY", destination: AccessLegalRow.privacyURL)
                 .foregroundStyle(AtlasTheme.sepia)
-            Link("TERMS OF USE", destination: Self.termsURL)
+            Link("TERMS OF USE", destination: AccessLegalRow.termsURL)
                 .foregroundStyle(AtlasTheme.sepia)
             Spacer()
             Text("WITNESS · \(Self.versionLabel)")

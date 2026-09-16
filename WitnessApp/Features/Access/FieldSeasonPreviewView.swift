@@ -62,6 +62,8 @@ struct FieldSeasonPreviewView: View {
                         .font(AtlasType.display(16, weight: .regular, italic: true))
                         .foregroundStyle(AtlasTheme.inkMuted)
                         .lineSpacing(5)
+
+                    AccessLegalRow(identifier: "access.fieldseason.legal")
                 }
                 .padding(22)
             }

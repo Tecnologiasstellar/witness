@@ -31,6 +31,7 @@
 		43971BEA1623685AFFA856C4 /* CollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F51A47DA17207B45AE09C8E /* CollectionDetailView.swift */; };
 		44218CBDF7A88A7A70C086CA /* AtlasIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABFC134010BFB1FF062CF1B /* AtlasIcons.swift */; };
 		47785AAFC784A6C9F801C628 /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F8098294F922696B8FDD98 /* PurchaseService.swift */; };
+		484CE476B470AEE9C4E08A54 /* TapRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5AA20326BF75BF9100A930 /* TapRetry.swift */; };
 		4F0180C7AAF29665499248B6 /* StoreKitPurchaseAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432B01DAC74F9AED20C43520 /* StoreKitPurchaseAdapterTests.swift */; };
 		4F2473A639039F8A3C80F092 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F6B1989A07CDD335DC75A /* ArchiveView.swift */; };
 		52114D5B5708DBE5F899C054 /* letter-the-thin-line-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF1D964B153E5C9FC2A646ED /* letter-the-thin-line-ruth.mp3 */; };
@@ -70,6 +71,7 @@
 		B0D889B5CD8D3AD60A8CA5A2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C7A4232E9CDC1696E285E0 /* SettingsView.swift */; };
 		B1B2F3500979E875B3E27F3E /* WitnessRitualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */; };
 		B8F45B1B7A148B3C796FC840 /* SpecimenPlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC073B8172AEC2240DBC6068 /* SpecimenPlate.swift */; };
+		B94D6D60806E4A203A2CE8AF /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 09620C17794EE5EFDE2C6B5B /* PrivacyInfo.xcprivacy */; };
 		BA72186464E240CD1E1B353B /* chapter-06-wollemi-pine-ruth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 192E77993BD98AD5130639B3 /* chapter-06-wollemi-pine-ruth.mp3 */; };
 		BB0F4CF918CDA9C32D738CF8 /* RevenueCatSnapshotMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAE32719F21615010A01FE /* RevenueCatSnapshotMapper.swift */; };
 		C2187594DDD99E4D49BE4ED2 /* StorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F03B2889D871D9EFAF85F /* StorySheet.swift */; };
@@ -139,6 +141,7 @@
 		003C9498EA506F48F2E4ECF9 /* Witness.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Witness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05ABD6FF339377A3754C1526 /* OnboardingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUITests.swift; sourceTree = "<group>"; };
 		07BAE32719F21615010A01FE /* RevenueCatSnapshotMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatSnapshotMapper.swift; sourceTree = "<group>"; };
+		09620C17794EE5EFDE2C6B5B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		0D0A0F3DAB23579034A0E6AB /* RevenueCatPurchaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatPurchaseAdapter.swift; sourceTree = "<group>"; };
 		0E0847C1B3D0DEC53D13F6F6 /* StoreKitPurchaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitPurchaseAdapter.swift; sourceTree = "<group>"; };
 		0E6F03B2889D871D9EFAF85F /* StorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySheet.swift; sourceTree = "<group>"; };
@@ -168,6 +171,7 @@
 		547FA1866C21BBC935664EA5 /* FieldSeasonPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSeasonPreviewView.swift; sourceTree = "<group>"; };
 		5645FDCAE56BC5D6DE037FCB /* WitnessSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessSync.swift; sourceTree = "<group>"; };
 		56AD8E8C40D0019EBB30514B /* WeeklySpeciesSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySpeciesSelector.swift; sourceTree = "<group>"; };
+		5C5AA20326BF75BF9100A930 /* TapRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRetry.swift; sourceTree = "<group>"; };
 		69F8CC0B121B3CF8F09B6BF6 /* RevenueCatConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = RevenueCatConfig.plist; sourceTree = "<group>"; };
 		6AD83ABA3AFD8E46B6D7478F /* synthesis-what-the-counted-teach-ruth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "synthesis-what-the-counted-teach-ruth.mp3"; sourceTree = "<group>"; };
 		6BC9CF6489D7C89535986EFB /* WitnessUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -399,6 +403,7 @@
 			children = (
 				E5912AC6B4687E04E2D975DE /* Assets.xcassets */,
 				1A42D6CE679E0591ADBC8FBE /* Info.plist */,
+				09620C17794EE5EFDE2C6B5B /* PrivacyInfo.xcprivacy */,
 				69F8CC0B121B3CF8F09B6BF6 /* RevenueCatConfig.plist */,
 				CFD8CBB54872203BC35154E5 /* App */,
 				60018E1299DF4AA5EED06E46 /* Commerce */,
@@ -513,6 +518,7 @@
 			children = (
 				C10B1E49CCD736363B8642DD /* AccessSurfacesUITests.swift */,
 				05ABD6FF339377A3754C1526 /* OnboardingUITests.swift */,
+				5C5AA20326BF75BF9100A930 /* TapRetry.swift */,
 				3855AD4C83B1C4ED271B5DF4 /* WitnessRitualUITests.swift */,
 			);
 			path = WitnessUITests;
@@ -764,6 +770,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E548CB4F18E023489E9A2D98 /* Assets.xcassets in Resources */,
+				B94D6D60806E4A203A2CE8AF /* PrivacyInfo.xcprivacy in Resources */,
 				27F06FD1EF2D6F51C225A85D /* RevenueCatConfig.plist in Resources */,
 				863807471CD08448FBCFEF3A /* chapter-01-vaquita-ruth.mp3 in Resources */,
 				64E842D506FF8810AB00BAFA /* chapter-02-kakapo-ruth.mp3 in Resources */,
@@ -808,6 +815,7 @@
 			files = (
 				63365E0F6918A49E52A005B3 /* AccessSurfacesUITests.swift in Sources */,
 				2D84EFDC8386F68A99D0937C /* OnboardingUITests.swift in Sources */,
+				484CE476B470AEE9C4E08A54 /* TapRetry.swift in Sources */,
 				B1B2F3500979E875B3E27F3E /* WitnessRitualUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -932,7 +940,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = L5R9XW45B6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WitnessApp/Info.plist;
@@ -1039,7 +1047,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1065,7 +1073,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1168,7 +1176,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = L5R9XW45B6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WitnessApp/Info.plist;
