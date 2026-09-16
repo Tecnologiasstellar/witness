@@ -29,6 +29,24 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
+      # RevenueCatConfig.plist holds the local RevenueCat public SDK key and is
+      # intentionally untracked (.gitignore). The app treats a missing config as
+      # a valid state (CommerceConfiguration.load returns nil), so CI writes an
+      # empty stub to satisfy the Resources build phase.
+      - name: Stub untracked RevenueCat config for CI
+        run: |
+          if [ ! -f WitnessApp/RevenueCatConfig.plist ]; then
+            printf '%s\n' \
+              '<?xml version="1.0" encoding="UTF-8"?>' \
+              '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">' \
+              '<plist version="1.0">' \
+              '<dict>' \
+              '  <key>apiKey</key>' \
+              '  <string></string>' \
+              '</dict>' \
+              '</plist>' > WitnessApp/RevenueCatConfig.plist
+          fi
+
       - name: Test WitnessCore
         run: swift test --package-path Packages/WitnessCore
 
