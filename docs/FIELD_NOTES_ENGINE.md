@@ -32,13 +32,22 @@ fails is removed and the English ships alone; the checker keeps naming the gap u
 from `ANTHROPIC_API_KEY` in the environment or in the untracked
 `witness_web/community/.env.local`; without it the step prints a notice and skips.
 
-`ship` ends with `vercel deploy --prod` from `witness_web/community`, because **this project
-has no Vercel GitHub integration**. Pushing to `main` deploys nothing; the domain is
-aliased to whichever deployment was promoted last, and every production deployment in the
-project's history was made from the CLI. That was found on 2026-09-03 by pushing the first
-note and watching production stay unchanged — a nightly loop that trusted the push would
-have committed a note a day and published none of them. Connecting the GitHub integration
-in the Vercel dashboard would make the CLI step redundant; until then it is the deploy.
+`ship` ends with `vercel deploy --prod` from `witness_web/community`: **pushing to `main`
+publishes nothing.** That was found on 2026-09-03 by pushing the first note and watching
+production stay unchanged — a nightly loop that trusted the push would have committed a
+note a day and published none of them.
+
+The conclusion held; the reason was wrong. Until 2026-09-16 this paragraph said the
+project had no Vercel GitHub integration. It has one, and it fails: every push to `main`
+triggers a build that dies in about a minute with `Couldn't find any pages or app
+directory`, because the project's Root Directory is unset and the build runs from the repo
+root instead of `witness_web/community`. The split is visible in `vercel ls`: every
+Git-triggered build ends in Error after about a minute, every CLI deploy in Ready after
+16-20s. The domain stays aliased to the last promoted CLI deployment, so the site is fine
+and the red deploys are noise on every push — including pushes that have nothing to do
+with the publication. Setting Root Directory to
+`witness_web/community` in the project settings would stop them and make the CLI step
+redundant. Until someone does, the CLI is the deploy.
 
 Unattended, this is the scheduled routine `witness-daily-post`
 (`~/.claude/scheduled-tasks/witness-daily-post/SKILL.md`), which runs the same nine steps
