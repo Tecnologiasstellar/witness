@@ -176,8 +176,10 @@ python3 tools/notes.py ship "Field note: <the title>"
 
 Re-runs the gate and the build, commits, `git pull --rebase origin main`, pushes, runs
 `vercel deploy --prod` from `witness_web/community`, and pings IndexNow with the changed note
-URLs. The CLI deploy is not optional and not a mistake: this project has **no Vercel
-GitHub integration**, so a push publishes nothing on its own. If the deploy step fails
+URLs. The CLI deploy is not optional and not a mistake: the project's Vercel GitHub
+integration is **connected but misconfigured** — Root Directory is unset, so every
+Git-triggered build runs from the repo root and fails — and **a push publishes nothing on
+its own**. If the deploy step fails
 (an expired CLI login is the likely cause), STOP and report it — the note is committed and
 pushed but not public, and the fix is `npx vercel login` by a human.
 
