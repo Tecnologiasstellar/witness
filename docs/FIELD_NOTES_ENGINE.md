@@ -32,22 +32,26 @@ fails is removed and the English ships alone; the checker keeps naming the gap u
 from `ANTHROPIC_API_KEY` in the environment or in the untracked
 `witness_web/community/.env.local`; without it the step prints a notice and skips.
 
-`ship` ends with `vercel deploy --prod` from `witness_web/community`: **pushing to `main`
-publishes nothing.** That was found on 2026-09-03 by pushing the first note and watching
-production stay unchanged — a nightly loop that trusted the push would have committed a
-note a day and published none of them.
+**The push is the deploy.** `ship` ends by polling the note's URLs until they answer 200,
+then pings IndexNow. Every push to `main` triggers a production build of this project
+(about two minutes) and moves the domain when it is green; `ship` waits ten.
 
-The conclusion held; the reason was wrong. Until 2026-09-16 this paragraph said the
-project had no Vercel GitHub integration. It has one, and it fails: every push to `main`
-triggers a build that dies in about a minute with `Couldn't find any pages or app
-directory`, because the project's Root Directory is unset and the build runs from the repo
-root instead of `witness_web/community`. The split is visible in `vercel ls`: every
-Git-triggered build ends in Error after about a minute, every CLI deploy in Ready after
-16-20s. The domain stays aliased to the last promoted CLI deployment, so the site is fine
-and the red deploys are noise on every push — including pushes that have nothing to do
-with the publication. Setting Root Directory to
-`witness_web/community` in the project settings would stop them and make the CLI step
-redundant. Until someone does, the CLI is the deploy.
+That is true only since 2026-09-16, and the history matters because the rule was the
+opposite for two weeks. Root Directory was unset, so every Git build ran from the repo
+root and died in about a minute with `Couldn't find any pages or app directory`, while a
+`vercel deploy --prod` from `witness_web/community` published in 16-20s. The domain stayed
+aliased to the last CLI deployment, so the site was fine and the red builds were noise on
+every push — including pushes with nothing to do with the publication. Pushing the first
+note on 2026-09-03 and watching production stay unchanged is how that was found; a nightly
+loop that trusted the push would have committed a note a day and published none.
+
+Setting Root Directory to `witness_web/community` fixed the Git build and **killed the CLI
+deploy in the same move** — the two cannot coexist. `vercel deploy` from that directory
+uploads only that directory, and the builder then looks for `witness_web/community` inside
+it and fails. Running it from the repo root instead is not an option either: 1.1 GB, because
+this repo holds the iOS app. So there is exactly one way to publish the publication now,
+and it is `git push`. Do not add a deploy command back; if a deploy needs watching, poll
+the public URL, which needs no Vercel credentials.
 
 Unattended, this is the scheduled routine `witness-daily-post`
 (`~/.claude/scheduled-tasks/witness-daily-post/SKILL.md`), which runs the same nine steps

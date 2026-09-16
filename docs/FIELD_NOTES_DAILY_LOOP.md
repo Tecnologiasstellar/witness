@@ -174,14 +174,16 @@ if they gave one, `authorUrl: https://...`, then run the gate, the self-critique
 python3 tools/notes.py ship "Field note: <the title>"
 ```
 
-Re-runs the gate and the build, commits, `git pull --rebase origin main`, pushes, runs
-`vercel deploy --prod` from `witness_web/community`, and pings IndexNow with the changed note
-URLs. The CLI deploy is not optional and not a mistake: the project's Vercel GitHub
-integration is **connected but misconfigured** — Root Directory is unset, so every
-Git-triggered build runs from the repo root and fails — and **a push publishes nothing on
-its own**. If the deploy step fails
-(an expired CLI login is the likely cause), STOP and report it — the note is committed and
-pushed but not public, and the fix is `npx vercel login` by a human.
+Re-runs the gate and the build, commits, `git pull --rebase origin main`, pushes with
+`git push origin HEAD:main`, waits for the note's URLs to answer 200, and pings IndexNow
+with them. **The push is the deploy**: since 2026-09-16 the Vercel project has Root
+Directory set to `witness_web/community`, so every push to `main` builds and publishes in
+about two minutes. There is no `vercel deploy` step, and running one from that directory
+now fails by design — the two cannot coexist. See docs/FIELD_NOTES_ENGINE.md.
+
+If the wait times out after ten minutes, STOP and report it — the note is committed and
+pushed but not confirmed public, so the build is the thing to check:
+https://vercel.com/tecnologiasstellars-projects/witness-community
 
 If the rebase hits a genuine conflict it stops the deploy on purpose. STOP and report it;
 do not merge around it.
