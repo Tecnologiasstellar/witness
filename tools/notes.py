@@ -628,41 +628,65 @@ def ping_indexnow(urls, site=SITE, public=PUBLIC):
 
 # ---------------------------------------------------------------- ship
 
-def with_retries(fn, attempts=3, sleep=time.sleep):
-    """Call fn() until it returns 0. True if it ever did.
+DEPLOY_TIMEOUT = 600
 
-    For the deploy, and only the deploy. Observed 2026-09-12: `vercel deploy`
-    returned "Not authorized", an identical retry seconds later succeeded, and
-    `vercel whoami` was authenticated the whole time — a transient, not an
-    expired login. Untreated it costs the whole run, because ship dies after the
-    push: the note is committed but not public and the IndexNow ping never
-    fires. The push and the rebase are NOT retried; a git failure there is real.
+
+def url_is_live(url):
+    """200 or not. Any HTTP or network error means 'not yet', never a crash."""
+    import urllib.request
+    try:
+        with urllib.request.urlopen(url, timeout=15) as r:
+            return r.status == 200
+    except OSError:  # HTTPError and URLError are both OSError
+        return False
+
+
+def wait_until_public(urls, timeout=DEPLOY_TIMEOUT, sleep=time.sleep, live=url_is_live):
+    """True once every URL answers 200. False if the timeout runs out first.
+
+    Readiness is measured on the public URL rather than on the deployment,
+    because the URL is the thing that has to work and checking it needs no
+    Vercel credentials — no token to rotate, no project id to keep in sync. It
+    replaces the `vercel deploy` step and its retries, dead since Root Directory
+    was set to witness_web/community on 2026-09-16: the push is now the deploy,
+    and a CLI deploy from that directory fails outright (the builder looks for
+    witness_web/community/witness_web/community). That also retires the
+    2026-09-12 "Not authorized" transient, which was a CLI failure mode only.
+
+    ponytail: a run that only edits existing pages returns immediately, since
+    those URLs already answer 200 — the ping then lands a couple of minutes
+    before the edit does. IndexNow is a crawl hint, not a publish gate, so that
+    costs nothing. Compare deployment ids if it ever has to be exact.
     """
-    for attempt in range(1, attempts + 1):
-        if fn() == 0:
+    deadline = time.monotonic() + timeout
+    pending = list(urls)
+    while True:
+        pending = [u for u in pending if not live(u)]
+        if not pending:
             return True
-        if attempt < attempts:
-            print(f"deploy attempt {attempt}/{attempts} failed — retrying in {5 * attempt}s")
-            sleep(5 * attempt)
-    return False
+        if time.monotonic() >= deadline:
+            print(f"not public after {timeout}s: {', '.join(pending)}")
+            return False
+        print(f"waiting for the build — {len(pending)} URL(s) not live yet")
+        sleep(10)
 
 
 def ship(message):
-    """Gate, translate, build, commit, rebase, push, deploy.
+    """Gate, translate, build, commit, rebase, push, wait, ping.
 
-    Pushing does not publish. The project's Vercel GitHub integration is
-    connected but misconfigured: Root Directory is unset, so every Git-triggered
-    build runs from the repo root and dies on a missing app directory. The deploy
-    is `vercel deploy` from its directory (witness_web/community), and the domain
-    is aliased to whichever deployment was promoted last. Found
-    2026-09-03 by pushing and watching nothing happen — a nightly loop that
-    trusted the push would have committed a note a day and published none of
-    them. The CLI deploy targets the linked project in .vercel/project.json; it
-    does not create a second one. Root Directory is a dashboard setting; fixing
-    it would make this step redundant. See docs/FIELD_NOTES_ENGINE.md.
+    The push is the deploy. Vercel's GitHub integration builds this project on
+    every push to main and moves the domain when it is green — true only since
+    2026-09-16, when Root Directory was set to witness_web/community. Before
+    that it was unset, every Git build ran from the repo root and died on a
+    missing app directory, and a separate `vercel deploy` from the app directory
+    was what actually published (found 2026-09-03 by pushing and watching
+    nothing happen). That CLI step is gone: it cannot coexist with the setting
+    that fixed the Git build, because it uploads only witness_web/community and
+    the builder then looks for that path inside it. See docs/FIELD_NOTES_ENGINE.md.
 
-    The gate and the local build run first, so a bad claim or a type error stops
-    the commit rather than the site.
+    So ship waits on the live URL instead of on a deploy command. The gate and
+    the local build still run first, so a bad claim or a type error stops the
+    commit rather than the site.
     """
     check()
     translate()
@@ -672,15 +696,15 @@ def ship(message):
         print("nothing new to commit — pushing whatever is already committed")
     subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=ROOT, check=True)
     subprocess.run(["git", "push", "origin", "main"], cwd=ROOT, check=True)
-    if not with_retries(lambda: subprocess.run(
-            ["npx", "vercel", "deploy", "--prod", "--yes"], cwd=SITE_DIR).returncode):
-        sys.exit(f"HARD FAIL: vercel deploy failed 3x. The note is committed and pushed "
-                 f"but NOT public, and IndexNow was not pinged. Check `npx vercel whoami`; "
-                 f"if that is not logged in a human runs `npx vercel login`, then "
-                 f"`npx vercel deploy --prod --yes` and `python3 tools/notes.py ping` "
-                 f"from {ROOT}.")
+    urls = changed_urls()
+    if not wait_until_public(urls):
+        sys.exit(f"HARD FAIL: pushed, but {SITE} did not serve the note within "
+                 f"{DEPLOY_TIMEOUT}s, and IndexNow was not pinged. The note IS committed "
+                 f"and pushed, so the build is the thing to check: "
+                 f"https://vercel.com/tecnologiasstellars-projects/witness-community . "
+                 f"Once it is live, `python3 tools/notes.py ping` from {ROOT}.")
     print(f"deployed: {SITE}")
-    ping_indexnow(changed_urls())
+    ping_indexnow(urls)
 
 
 # ---------------------------------------------------------------- selftest
@@ -723,12 +747,14 @@ def selftest():
     # an empty key must stay empty, not eat the line under it
     assert frontmatter("image:\ntype: question") == {"image": "", "type": "question"}
     assert frontmatter("title: A note \nimage:   ") == {"title": "A note", "image": ""}
-    calls = []
-    # fails once, succeeds on the retry — the 2026-09-12 deploy, exactly
-    assert with_retries(lambda: calls.append(1) or (0 if len(calls) == 2 else 1),
-                        sleep=lambda s: None)
-    assert len(calls) == 2
-    assert not with_retries(lambda: 1, sleep=lambda s: None)
+    # the deploy wait: URLs clear as the build lands, nothing to wait for is
+    # already done, and a page that never comes up fails instead of hanging
+    seen = []
+    assert wait_until_public(["a", "b"], sleep=lambda s: None,
+                             live=lambda u: seen.append(u) or len(seen) > 2)
+    assert wait_until_public([], live=lambda u: False)
+    assert not wait_until_public(["a"], timeout=0, sleep=lambda s: None,
+                                 live=lambda u: False)
     print("selftest ok")
 
 
