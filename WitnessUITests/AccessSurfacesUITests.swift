@@ -72,9 +72,20 @@ final class AccessSurfacesUITests: XCTestCase {
         }
         XCTAssertTrue(owned)
 
-        // Back to the overview; ownership is reflected.
-        app.navigationBars.buttons.firstMatch.tap()
-        XCTAssertTrue(app.buttons["access.overview.fieldseason"].waitForExistence(timeout: 3))
+        // Back to the overview; ownership is reflected. The purchase re-renders
+        // this page — the price button becomes OPEN THE EDITION and the restore
+        // row drops out — and a tap synthesized on that settling frame is
+        // dropped, so this retries like every other tap in the flow. Targets
+        // the back button by identifier rather than firstMatch: there is only
+        // one navigation bar here, but naming it says which control is meant.
+        let back = app.navigationBars.buttons["BackButton"]
+        XCTAssertTrue(back.waitForExistence(timeout: 5))
+        back.tap()
+        let overview = app.buttons["access.overview.fieldseason"]
+        if !overview.waitForExistence(timeout: 5) {
+            back.tap()
+            XCTAssertTrue(overview.waitForExistence(timeout: 5))
+        }
 
         // Support: repeatable tip with quiet thanks and no unlock language.
         app.buttons["access.overview.support"].tap()
