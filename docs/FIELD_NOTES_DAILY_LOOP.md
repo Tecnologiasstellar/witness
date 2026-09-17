@@ -180,6 +180,15 @@ markdown into `content/posts/<date>-<slug>.md`, add `author: Their Name` and,
 if they gave one, `authorUrl: https://...`, then run the gate, the self-critique and
 `ship` exactly as below. The gate does not know or care who wrote it.
 
+## The Spanish edition is out of the sitemap (2026-09-17)
+
+`ship` still writes the Spanish mirror and it still publishes — `/es` is live,
+linked, and `index, follow`. It is only withheld from `app/sitemap.ts`, behind
+`SPANISH_IN_SITEMAP`, because half of 48 URLs were machine-translated copies of
+English pages that were not indexed either, competing for a crawl budget the
+originals did not have. Do not "fix" the missing `/es` entries. Flip the one
+constant when the English notes are indexed.
+
 ## Step 7 — Ship
 
 ```
