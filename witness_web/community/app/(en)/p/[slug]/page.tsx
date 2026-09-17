@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps<"/p/[slug]">): Prom
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `/p/${post.slug}`, languages: { en: `/p/${post.slug}`, es: `/es/p/${post.slug}` } },
+    alternates: { canonical: `/p/${post.slug}`, languages: { en: `/p/${post.slug}`, es: `/es/p/${post.slug}`, "x-default": `/p/${post.slug}` } },
     openGraph: {
       type: "article",
       title: post.title,

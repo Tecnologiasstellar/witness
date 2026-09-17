@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps<"/es/s/[section]">)
   return {
     title: s.name,
     description: s.blurb,
-    alternates: { canonical: `/es/s/${s.key}`, languages: { en: `/s/${s.key}`, es: `/es/s/${s.key}` } },
+    alternates: { canonical: `/es/s/${s.key}`, languages: { en: `/s/${s.key}`, es: `/es/s/${s.key}`, "x-default": `/s/${s.key}` } },
   };
 }
 

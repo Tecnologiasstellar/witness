@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   applicationName: PUB_NAME,
   authors: [{ name: "Witness" }],
   keywords: ["especies en peligro", "biodiversidad", "conservación", "medio planeta", "extinción", "fauna", "naturaleza"],
-  alternates: { canonical: "/es", languages: { en: "/", es: "/es" }, types: { "application/rss+xml": FEED_PATH } },
+  alternates: { canonical: "/es", languages: { en: "/", es: "/es", "x-default": "/" }, types: { "application/rss+xml": FEED_PATH } },
   openGraph: {
     type: "website",
     siteName: PUB_NAME,

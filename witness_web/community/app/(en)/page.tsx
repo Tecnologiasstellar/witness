@@ -7,7 +7,7 @@ import { FEED_PATH, SECTIONS } from "@/lib/site";
 import { allRecords } from "@/lib/species";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "/", languages: { en: "/", es: "/es" }, types: { "application/rss+xml": FEED_PATH } },
+  alternates: { canonical: "/", languages: { en: "/", es: "/es", "x-default": "/" }, types: { "application/rss+xml": FEED_PATH } },
 };
 
 export default function Home() {

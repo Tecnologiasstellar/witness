@@ -3,9 +3,9 @@ import { allPosts, postsInSection } from "@/lib/posts";
 import { postBySlug as postBySlugEs, postsInSection as postsInSectionEs } from "@/lib/posts.es";
 import { SECTIONS, SITE_URL } from "@/lib/site";
 
-/** Both languages of a page, so search engines pair them. */
+/** Both languages of a page, so search engines pair them. English is the fallback. */
 function pair(path: string) {
-  return { en: `${SITE_URL}${path}`, es: `${SITE_URL}/es${path}` };
+  return { en: `${SITE_URL}${path}`, es: `${SITE_URL}/es${path}`, "x-default": `${SITE_URL}${path}` };
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
