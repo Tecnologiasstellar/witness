@@ -15,6 +15,7 @@ Last implementation review: 2026-09-04
 - Decorative repeats of a plate (the archive band, the Atlas collage) use empty alternative text; the link carries the species name.
 - The audio sample has a text transcript in a native details element and states its synthetic-voice disclosure.
 - Record sources, rights state, editorial state, and generalized location remain text, not color-only signals.
+- The map at `/map` is a progressive layer: a MapLibre canvas with keyboard pan and zoom and 44 px controls over a server-rendered SVG that is the whole map without JavaScript; the list beneath carries every region name and radius, status, and cited organization as text; hover only repeats list text, and the selected species is shown by stroke weight, never by color alone.
 - Reduced motion disables the plate hover lifts; nothing autoplays.
 - Reduced transparency removes procedural grain.
 - No hover-only information or keyboard trap.

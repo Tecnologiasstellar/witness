@@ -117,6 +117,9 @@ export default async function RecordPage({ params }: PageProps<"/archive/[id]">)
               <p className="mt-4 text-[13px] leading-relaxed text-ink-muted">
                 Ranges stay general on purpose. Witness never publishes a location that could help someone find an animal already under pressure.
               </p>
+              <p className="mt-2">
+                <TextLink href={`/map#r-${record.id}`}>See it on the map</TextLink>
+              </p>
             </div>
           </div>
         </Container>

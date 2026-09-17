@@ -117,6 +117,9 @@ export default async function RecordPage({ params }: PageProps<"/es/archive/[id]
               <p className="mt-4 text-[13px] leading-relaxed text-ink-muted">
                 Las áreas de distribución se mantienen generales a propósito. Witness nunca publica una ubicación que pueda ayudar a alguien a encontrar un animal que ya está bajo presión.
               </p>
+              <p className="mt-2">
+                <TextLink href={`/es/map#r-${record.id}`}>Verlo en el mapa</TextLink>
+              </p>
             </div>
           </div>
         </Container>

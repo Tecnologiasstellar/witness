@@ -65,7 +65,7 @@ export function Eyebrow({
 /** Ink-on-paper primary action; inverts on the dusk band. 44px minimum target. */
 /** Internal routes use next/link; hashes and external URLs stay plain anchors. */
 function isRoute(href: string) {
-  return href.startsWith("/");
+  return href.startsWith("/") && !href.includes("#");
 }
 
 export function PrimaryLink({

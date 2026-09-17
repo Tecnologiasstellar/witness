@@ -90,6 +90,8 @@ export type SpeciesRecord = {
   /** Five asset ids in a fixed order: plate, context, detail, behavior, scale. */
   gallery: string[];
   programs?: Program[];
+  /** Generalized habitat circles, never a precise point (radius >= 25 km). */
+  habitatRegions?: { name: string; latitude: number; longitude: number; radiusKm: number }[];
 };
 
 export const RECORDS = speciesJson as SpeciesRecord[];

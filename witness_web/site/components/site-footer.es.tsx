@@ -6,6 +6,7 @@ import { AppearanceControl } from "./appearance.es";
 
 const PAGES = [
   { href: "/es/archive", label: "El Archivo" },
+  { href: "/es/map", label: "Mapa" },
   { href: "/method", label: "Método" },
   { href: "/privacy", label: "Privacidad" },
   { href: "/terms", label: "Términos" },
