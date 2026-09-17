@@ -178,9 +178,26 @@ final class CommerceModelTests: XCTestCase {
 
         await model.restore(context: .fieldSeasonPreview)
 
-        XCTAssertEqual(model.restorePhase, .restoredWithChanges)
+        XCTAssertEqual(model.restorePhase, .restored)
         XCTAssertTrue(model.ownsFieldSeason)
         XCTAssertEqual(recorder.metadata(for: "restore_finished")?["outcome"], "restored")
+    }
+
+    /// AV hit this on build 5: restore once, then restore again, and the app
+    /// said "No previous purchases were found for this Apple account" to a
+    /// reader who owned both products. Purchases were found; they simply did
+    /// not change anything.
+    func testSecondRestoreDoesNotClaimNothingWasFound() async throws {
+        var restored = AccessSnapshot.defaultFree
+        restored.ownsFieldSeasonOne = true
+        let model = makeModel(restorableSnapshot: restored)
+
+        await model.restore(context: .index)
+        XCTAssertEqual(model.restorePhase, .restored)
+
+        await model.restore(context: .index)
+        XCTAssertEqual(model.restorePhase, .restored, "already-owned must never read as nothing found")
+        XCTAssertTrue(model.snapshot.ownsFieldSeasonOne)
     }
 
     func testRestoreWithNothingToFindSaysSo() async throws {

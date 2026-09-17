@@ -35,7 +35,7 @@ final class CommerceModel: ObservableObject {
     enum RestorePhase: Equatable {
         case idle
         case restoring
-        case restoredWithChanges
+        case restored
         case nothingFound
         case failed(String)
     }
@@ -257,7 +257,10 @@ final class CommerceModel: ObservableObject {
                     || newSnapshot.atlas != snapshot.atlas
                 snapshot = newSnapshot
                 try? await accessRepository.save(newSnapshot)
-                restorePhase = changed ? .restoredWithChanges : .nothingFound
+                // Purchases were found either way. Whether they changed local
+                // state is an analytics distinction, not something to tell a
+                // reader who just watched their library reappear.
+                restorePhase = .restored
                 logEvent("restore_finished", base.merging(
                     ["outcome": changed ? "restored" : "nothing"]) { _, new in new })
             case .nothingToRestore:

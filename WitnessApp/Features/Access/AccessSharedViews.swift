@@ -216,9 +216,12 @@ struct AccessSectionHeading: View {
 
     var body: some View {
         Text(text)
-            .font(AtlasType.technical(10, weight: .bold))
+            // 11pt is the floor (D-027), and ink rather than sepia: this is a
+            // reply to something the reader just paid for, and it sits among
+            // sepia captions it would otherwise be indistinguishable from.
+            .font(AtlasType.technical(11, weight: .bold))
             .tracking(1.2)
-            .foregroundStyle(AtlasTheme.sepia)
+            .foregroundStyle(AtlasTheme.ink)
             .accessibilityAddTraits(.isHeader)
     }
 }
@@ -262,7 +265,7 @@ struct PurchasePhaseNotice: View {
             break
         }
         switch restorePhase {
-        case .restoredWithChanges:
+        case .restored:
             return "Your purchases were restored."
         case .nothingFound:
             return "Restore finished. No previous purchases were found for this Apple account."
