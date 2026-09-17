@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL, allRecords } from "@/lib/archive";
 
-/** Both languages of a page, so search engines pair them. */
+/** Both languages of a page, so search engines pair them. English is the fallback. */
 function pair(path: string) {
-  return { en: `${SITE_URL}${path}`, es: `${SITE_URL}/es${path}` };
+  return { en: `${SITE_URL}${path}`, es: `${SITE_URL}/es${path}`, "x-default": `${SITE_URL}${path}` };
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: archive.es, priority: 0.8, alternates: { languages: archive } },
     { url: map.en, priority: 0.7, alternates: { languages: map } },
     { url: map.es, priority: 0.6, alternates: { languages: map } },
+    { url: `${SITE_URL}/field-notes`, priority: 0.8 },
     { url: `${SITE_URL}/method`, priority: 0.6 },
     { url: `${SITE_URL}/contact`, priority: 0.5 },
     { url: `${SITE_URL}/privacy`, priority: 0.3 },

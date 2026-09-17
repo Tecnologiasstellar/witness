@@ -6,6 +6,7 @@ import { AppearanceControl } from "./appearance";
 
 const PAGES = [
   { href: "/archive", label: "The Archive" },
+  { href: "/field-notes", label: "Field Notes" },
   { href: "/map", label: "Map" },
   { href: "/method", label: "Method" },
   { href: "/privacy", label: "Privacy" },

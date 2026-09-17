@@ -1,6 +1,9 @@
-# Field notes — the daily loop, step by step
+# Field notes — the publishing loop, step by step
 
-The procedure the scheduled routine `witness-daily-post` follows every night at 21:00.
+The procedure the scheduled routine `witness-daily-post` follows. It ran nightly
+from 2026-09-03 and moved to **weekly** on 2026-09-17: at 95 of 117 URLs stuck at
+"Discovered — currently not indexed", volume was not the constraint and a 96th URL
+did not help. The days it frees go into links and into notes worth linking to.
 It lives here, in git, so the routine stays a thin pointer at it: `docs/FIELD_NOTES_ENGINE.md`
 holds the reasoning, this file holds the steps, and the schedule holds neither.
 
@@ -109,6 +112,15 @@ authority; this is the checklist):
   model.
 - **350–950 words.** Markdown limited to `##`, `###`, `- ` lists, `> ` quotes, links,
   bold and italic — the renderer supports nothing else and the gate enforces it.
+- **Link 2+ other notes, in the body, where they genuinely belong.** The gate
+  hard-fails a note dated 2026-09-18 or later with fewer than two `/p/<slug>`
+  links. `next` prints the eight most recent notes for exactly this. On
+  2026-09-17 Search Console reported 95 of 117 known URLs as "Discovered —
+  currently not indexed": Google had the sitemap and would not spend crawl on
+  the pages, because almost nothing linked them. A sitemap is not a link graph.
+  Link on the substance — a figure the other note explains, a law it reads, the
+  species it covers — never "related reading" tacked on the end. If no sibling
+  honestly fits, the topic is probably wrong for the queue.
 - **Never restate a catalog record's story.** A note is the reading *around* the archive.
   Link `/archive/<id>` when the species is in the catalog; the hub redirects it to the
   atlas, and the gate checks the id against `data/species.json`.

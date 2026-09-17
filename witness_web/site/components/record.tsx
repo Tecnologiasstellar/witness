@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import type { PlateKind, Program, SpeciesRecord } from "@/lib/archive";
 import { formatDate, orderedSources, plate, sourceMark } from "@/lib/archive";
+import { type NoteIndexEntry, noteUrl, sectionName } from "@/lib/notes";
 import { TextLink } from "./atlas";
 
 /** Status is written in words. Colour never carries it. */
@@ -251,5 +252,35 @@ export function Breadcrumbs({ trail }: { trail: { href?: string; label: string }
         ))}
       </ol>
     </nav>
+  );
+}
+
+/**
+ * The field notes that cite this record.
+ *
+ * The notes live on community.witnessatlas.com and this domain is where Google
+ * already crawls, so this block is the link path between them. Rendered only
+ * when a note genuinely links the record — an empty "related" rail is furniture.
+ */
+export function RelatedNotes({ notes }: { notes: NoteIndexEntry[] }) {
+  if (notes.length === 0) return null;
+  return (
+    <ul className="flex flex-col gap-8">
+      {notes.map((note) => (
+        <li key={note.slug}>
+          <a href={noteUrl(note.slug)} className="group block">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-sepia">
+              {sectionName(note.section)} · {formatDate(note.date)}
+            </p>
+            <h3 className="mt-2 max-w-[30ch] text-pretty font-display text-[1.2rem] font-semibold leading-[1.18] text-ink underline decoration-transparent decoration-1 underline-offset-4 transition-colors duration-200 ease-out group-hover:decoration-hairline">
+              {note.title}&nbsp;↗
+            </h3>
+            <p className="mt-2 max-w-[54ch] text-pretty text-[15px] leading-[1.6] text-ink-muted">
+              {note.description}
+            </p>
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }

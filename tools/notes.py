@@ -40,12 +40,25 @@ PUBLIC = SITE_DIR / "public"
 SITE = "https://community.witnessatlas.com"
 MAIN = "https://witnessatlas.com"                    # the other half of the same key
 MAIN_PUBLIC = ROOT / "witness_web" / "site" / "public"
+MAIN_DATA = ROOT / "witness_web" / "site" / "data" / "notes.json"
 
 TYPES = ("question", "field-note", "definition", "comparison")
 # Mirrors SECTIONS in witness_web/community/lib/site.ts. A post lives in exactly one.
 SECTIONS = ("species", "numbers", "half", "policy", "dispatches", "attention")
 DEFAULT_SECTION = {"field-note": "species", "question": "numbers", "definition": "numbers",
                    "comparison": "attention"}
+
+# ---------------------------------------------------------------- link gate
+# Google's answer to this publication on 2026-09-17 was "Discovered - currently
+# not indexed" on 95 of 117 known URLs: it had the sitemap and would not spend
+# crawl on the pages. Not "Crawled - not indexed" — the notes were never fetched,
+# so nothing was judged on its merits. A flat sitemap with no link graph behind
+# it is what produces that. Every note now has to carry its own onward links.
+MIN_SIBLING_LINKS = 2
+# The backlog predates the rule. Notes from this date on must satisfy it; the
+# earlier ones were linked by hand where a sibling genuinely fits, and a note
+# nobody can honestly link is a note that should not cite one.
+LINKS_REQUIRED_FROM = "2026-09-18"
 
 # Static routes a note may link to. Record and note links are checked against
 # what exists on disk instead.
@@ -305,6 +318,14 @@ def validate(note, ids, slugs, warnings, plates=frozenset()):
         if not 30 <= fw <= 120:
             warnings.append(f"{note['path']}: answer paragraph {fw} words (target 30–120, self-contained)")
 
+    siblings = {h.split("#")[0].rstrip("/").split("/")[2]
+                for h in re.findall(r"\]\((/p/[^)\s]*)\)", note["body"])}
+    siblings.discard(note["slug"])
+    if note["date"] >= LINKS_REQUIRED_FROM and len(siblings) < MIN_SIBLING_LINKS:
+        errs.append(f"{len(siblings)} link(s) to other notes — needs {MIN_SIBLING_LINKS}+ "
+                    f"(/p/<slug>). A note Google can only reach through the sitemap is "
+                    f"a note Google does not crawl.")
+
     srcs = sources_of(note)
     bad = [u for u in srcs if not u.startswith(("http://", "https://"))]
     if bad:
@@ -392,6 +413,9 @@ the default guess is wrong.
     print(f"section: {DEFAULT_SECTION[topic['type']]} (a guess from the type — change it if the note fits "
           f"another shelf better)")
     print(f"shelves:  {section_counts()}")
+    print("link 2+ of these in the body, where they genuinely belong:")
+    for n in sorted(all_notes(), key=lambda n: n["date"], reverse=True)[:8]:
+        print(f"  /p/{n['slug']:<42} {n.get('section', '?'):<11} {n.get('title', '')}")
 
 
 def next_topic():
@@ -626,6 +650,28 @@ def ping_indexnow(urls, site=SITE, public=PUBLIC):
         print("  403 = key file not fetchable, 422 = key/host mismatch, 429 = throttled.")
 
 
+# ---------------------------------------------------------------- site manifest
+
+def write_site_manifest(path=MAIN_DATA):
+    """Publish the note index to witnessatlas.com as a committed data file.
+
+    The apex domain holds what authority this project has, and until 2026-09-17
+    it linked the publication's home page and not one of its notes, so none of
+    that reached them. It cannot import from witness_web/community: the two are
+    separate Vercel projects with their own Root Directory, and a build only
+    sees its own tree. So the notes travel the same way the species catalog
+    already does — a generated JSON file committed into the site that reads it.
+    """
+    index = [{"slug": n["slug"], "title": n.get("title", ""), "date": n["date"],
+              "description": n.get("description", ""), "section": n.get("section", ""),
+              "records": sorted({m for m in re.findall(r"/archive/([a-z0-9-]+)", n["body"])})}
+             for n in sorted(all_notes(), key=lambda n: (n["date"], n["slug"]), reverse=True)]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n")
+    print(f"site manifest: {len(index)} note(s) -> {path.relative_to(ROOT)}")
+    return index
+
+
 # ---------------------------------------------------------------- ship
 
 DEPLOY_TIMEOUT = 600
@@ -690,6 +736,7 @@ def ship(message):
     """
     check()
     translate()
+    write_site_manifest()
     subprocess.run(["npx", "next", "build", "--webpack"], cwd=SITE_DIR, check=True)
     subprocess.run(["git", "add", "-A"], cwd=ROOT, check=True)
     if subprocess.run(["git", "commit", "-m", message], cwd=ROOT).returncode:
@@ -747,6 +794,20 @@ def selftest():
     assert es == "---\ntitle: Una\nquestion: ¿Q?\nsection: numbers\nsources: https://x, https://y\n---\n\nCuerpo.\n", es
     assert assemble_es(en, "Lo siento, no puedo.") is None
     assert assemble_es(en, "---\ntitle: Una\n---\n\nCuerpo.\n") is None   # a translated field missing
+    # the sibling-link floor: enforced from LINKS_REQUIRED_FROM, the backlog exempt,
+    # a note's own slug and a repeat of one link never counting toward the two
+    def linkcheck(date, body):
+        note = {"path": "p.md", "date": date, "slug": "me", "title": "T", "description": "D",
+                "type": "field-note", "section": "numbers", "image": "plate", "body": body}
+        errs = validate(note, set(), {"me", "a", "b"}, [], {"plate"})
+        return [e for e in errs if "link(s) to other notes" in e]
+    assert linkcheck("2026-09-01", "Body.") == []
+    assert len(linkcheck(LINKS_REQUIRED_FROM, "Body.")) == 1
+    assert len(linkcheck(LINKS_REQUIRED_FROM, "One [a](/p/a).")) == 1
+    assert len(linkcheck(LINKS_REQUIRED_FROM, "[a](/p/a) and [again](/p/a).")) == 1
+    assert len(linkcheck(LINKS_REQUIRED_FROM, "[a](/p/a) and [self](/p/me) and [b](/p/b).")) == 0
+    assert linkcheck("2026-12-31", "[a](/p/a) [b](/p/b)") == []
+
     assert first_paragraph("## Head\n\nThe [answer](/x) paragraph.") == "The answer paragraph."
     # an empty key must stay empty, not eat the line under it
     assert frontmatter("image:\ntype: question") == {"image": "", "type": "question"}

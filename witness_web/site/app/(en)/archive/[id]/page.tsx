@@ -7,6 +7,7 @@ import {
   MetaPanel,
   Plate,
   Programs,
+  RelatedNotes,
   SourceList,
   StatsGrid,
   StatusBadge,
@@ -14,6 +15,7 @@ import {
   Threats,
 } from "@/components/record";
 import { APP_CTA_HREF, APP_CTA_LABEL, SITE_URL, allRecords, formatDate, plate, recordById } from "@/lib/archive";
+import { notesForRecord } from "@/lib/notes";
 
 export function generateStaticParams() {
   return allRecords().map((record) => ({ id: record.id }));
@@ -44,6 +46,7 @@ export default async function RecordPage({ params }: PageProps<"/archive/[id]">)
   const { id } = await params;
   const record = recordById(id);
   if (!record) notFound();
+  const notes = notesForRecord(record.id);
   const number = allRecords().findIndex((item) => item.id === record.id) + 1;
   const total = allRecords().length;
 
@@ -233,6 +236,30 @@ export default async function RecordPage({ params }: PageProps<"/archive/[id]">)
           </div>
         </Container>
       </section>
+
+      {/* The publication, where it cites this record ------------------------------ */}
+      {notes.length > 0 && (
+        <section className="border-t border-hairline/50 py-14 md:py-20">
+          <Container>
+            <div className="grid gap-10 md:grid-cols-12">
+              <div className="md:col-span-4">
+                <h2 className="font-display text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.16] text-ink">
+                  Further reading
+                </h2>
+                <p className="mt-4 max-w-[40ch] text-pretty text-[15px] leading-[1.65] text-ink-muted">
+                  Notes from the Field Notes publication that cite this record, sourced the same way.
+                </p>
+                <div className="mt-6">
+                  <TextLink href="/field-notes">All field notes</TextLink>
+                </div>
+              </div>
+              <div className="md:col-span-7 md:col-start-6">
+                <RelatedNotes notes={notes} />
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Onward ------------------------------------------------------------------- */}
       <section className="border-t border-hairline/50 py-14 md:py-20">

@@ -23,11 +23,13 @@ functionally extinct in 2007, on the strength of a six-week survey by teams
 from seven countries. Wang Ding, of the Chinese Academy of Sciences, has said
 his research group was set up for the baiji back in 1978, when about 300 were
 thought to remain; reserves were gazetted and money was spent, and the number
-went down anyway.
+went down anyway. What a river loses when that happens is
+[its own hard question](/p/what-happens-when-a-species-goes-extinct): there was
+no baseline to measure the absence against.
 
 The porpoise was on the same path. Roughly 2,700 in the early 1990s, about
-1,800 by 2006, around 1,040 by a 2012 government survey, 1,012 in 2017. The
-IUCN moved it to Critically Endangered in 2013. What separates it from the
+1,800 by 2006, around 1,040 by a 2012 government survey, 1,012 in 2017. The IUCN moved
+it to [Critically Endangered](/p/what-does-critically-endangered-mean) in 2013. What separates it from the
 baiji is mostly that the decision to act at river scale arrived while there
 were still enough animals for it to matter.
 
@@ -71,7 +73,8 @@ the baiji. It was set aside for an
 animal that did not make it, and it is breeding the one that did.
 
 That is the argument for protecting whole systems rather than single species,
-and also its limit. A closed river gave the porpoise its food back. It did not
+and also its limit. What share of the planet gets protection of any kind is
+[a separate count](/p/how-much-of-the-earth-is-protected). A closed river gave the porpoise its food back. It did not
 give the sturgeon its spawning ground back, and nobody involved claims it will.
 Qiwei Wei, who has worked on the sturgeon for decades, says the recovery will
 be long and will need the spawning grounds rebuilt; Zhuang says it will require

@@ -1,0 +1,150 @@
+[
+  {
+    "slug": "the-porpoise-in-the-river",
+    "title": "The Yangtze still has a porpoise",
+    "date": "2026-09-17",
+    "description": "China closed its longest river to fishing for ten years. The finless porpoise recovered. The Chinese sturgeon, endangered for another reason, did not.",
+    "section": "half",
+    "records": [
+      "yangtze-finless-porpoise"
+    ]
+  },
+  {
+    "slug": "what-happens-when-a-species-goes-extinct",
+    "title": "What actually happens when a species goes extinct",
+    "date": "2026-09-16",
+    "description": "On Guam the consequence was measured. When the baiji left the Yangtze, there was no baseline to measure against. The loss was the same size.",
+    "section": "numbers",
+    "records": [
+      "hawaiian-crow",
+      "yangtze-finless-porpoise"
+    ]
+  },
+  {
+    "slug": "the-condors-lead-problem",
+    "title": "The lead ban worked and the poisonings rose",
+    "date": "2026-09-15",
+    "description": "California banned lead ammunition twice, and condor lead deaths went up. An analysis of nearly three decades of records explains how both can be true.",
+    "section": "policy",
+    "records": [
+      "california-condor"
+    ]
+  },
+  {
+    "slug": "where-to-donate-for-endangered-species",
+    "title": "Where money for endangered species actually goes",
+    "date": "2026-09-14",
+    "description": "What charity ratings measure, what they leave out, and why the structure of a gift decides more than a star score does.",
+    "section": "attention",
+    "records": [
+      "golden-lion-tamarin"
+    ]
+  },
+  {
+    "slug": "the-tortoise-they-defaced-to-save-it",
+    "title": "Engraving the rarest tortoise, and what it did not stop",
+    "date": "2026-09-13",
+    "description": "Serial numbers are cut into ploughshare tortoise shells to ruin their black-market value. Within two years, marked animals were being sold anyway.",
+    "section": "dispatches",
+    "records": [
+      "ploughshare-tortoise"
+    ]
+  },
+  {
+    "slug": "what-is-cites",
+    "title": "CITES governs borders, not habitat",
+    "date": "2026-09-12",
+    "description": "The third list people confuse with the other two. What the treaty controls, what it cannot touch, and why a party can opt out of any listing it dislikes.",
+    "section": "policy",
+    "records": []
+  },
+  {
+    "slug": "the-wolf-with-a-vaccination-campaign",
+    "title": "The people who vaccinate Ethiopia's wolves",
+    "date": "2026-09-12",
+    "description": "In 2019 rabies and distemper reached the Bale Mountains together and the outbreak ran past 220 days. What that changed about how the wolves are vaccinated.",
+    "section": "dispatches",
+    "records": [
+      "ethiopian-wolf"
+    ]
+  },
+  {
+    "slug": "is-the-axolotl-extinct-in-the-wild",
+    "title": "The axolotl is not extinct in the wild",
+    "date": "2026-09-12",
+    "description": "Extinct in the Wild is a category with a written test, and the axolotl does not meet it. What the Xochimilco counts counted, and what 2025 found.",
+    "section": "numbers",
+    "records": [
+      "axolotl"
+    ]
+  },
+  {
+    "slug": "what-is-the-iucn-red-list",
+    "title": "What the IUCN Red List is, and what it is not",
+    "date": "2026-09-10",
+    "description": "An assessment of extinction risk, made by named groups under a published standard. It is not a law, and it does not decide what gets protected.",
+    "section": "numbers",
+    "records": [
+      "hawaiian-crow"
+    ]
+  },
+  {
+    "slug": "how-much-of-the-earth-is-protected",
+    "title": "How much of the Earth is actually protected",
+    "date": "2026-09-09",
+    "description": "About a sixth of the land and a twelfth of the sea, by the latest global count. What the figures include, why they move, and how far they are from thirty.",
+    "section": "half",
+    "records": []
+  },
+  {
+    "slug": "endangered-species-apps-compared",
+    "title": "What the endangered species apps actually do",
+    "date": "2026-09-08",
+    "description": "No app tracks which species are at risk. The stores offer identification tools, a showcase last updated in 2021, and fundraising products.",
+    "section": "attention",
+    "records": [
+      "monarch-butterfly"
+    ]
+  },
+  {
+    "slug": "the-crane-that-was-taught-to-migrate",
+    "title": "The crane that had to be taught where to go",
+    "date": "2026-09-07",
+    "description": "Whooping cranes learn their migration route by flying it with older birds. What that means for a species rebuilt from captivity, and what it puts at risk.",
+    "section": "species",
+    "records": [
+      "whooping-crane"
+    ]
+  },
+  {
+    "slug": "what-does-critically-endangered-mean",
+    "title": "What critically endangered actually means",
+    "date": "2026-09-06",
+    "description": "The highest threatened category on the IUCN Red List, the five criteria an assessor applies, and why the label describes risk rather than rarity.",
+    "section": "numbers",
+    "records": [
+      "javan-rhino",
+      "sumatran-orangutan"
+    ]
+  },
+  {
+    "slug": "the-lynx-that-came-back",
+    "title": "The Iberian lynx and the arithmetic of coming back",
+    "date": "2026-09-04",
+    "description": "The 2025 census counted 2,663 Iberian lynx and then said the number is a floor, not an estimate. Why success makes a population harder to count.",
+    "section": "species",
+    "records": [
+      "iberian-lynx"
+    ]
+  },
+  {
+    "slug": "how-many-vaquita-are-left",
+    "title": "How many vaquita are left",
+    "date": "2026-09-03",
+    "description": "The most recent survey saw between seven and ten, and at least one calf. What that number counts, and why published figures disagree.",
+    "section": "species",
+    "records": [
+      "vaquita"
+    ]
+  }
+]
