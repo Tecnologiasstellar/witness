@@ -44,4 +44,4 @@ All 151 plates are WebP derivatives of approved catalog assets (D-013), produced
 
 ## Deployment boundary
 
-Vercel root directory: `witness_web/site`. Framework: Next.js. No environment variables or secrets are required. There is no Git integration: `vercel deploy --prod` from this directory is the deploy. After a deploy that adds or changes URLs, `python3 ../../tools/notes.py ping --main` pushes the sitemap to IndexNow — this site has no ship routine, so nothing submits it otherwise.
+Vercel root directory: `witness_web/site`. Framework: Next.js. No environment variables or secrets are required. Since 2026-09-16 the project is connected to GitHub: a push to `main` is the deploy (about a minute; `vercel.json` skips the build for commits that do not touch this folder), and `vercel deploy` from this directory no longer works, by design, so nothing can ship from the wrong tree. After a push that adds or changes URLs, `python3 ../../tools/notes.py ping --main` pushes the sitemap to IndexNow — this site has no ship routine, so nothing submits it otherwise.
