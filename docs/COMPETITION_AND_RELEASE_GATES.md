@@ -32,7 +32,7 @@ Each gate needs dated evidence. `PASS` means the production candidate was tested
 | Core ritual | PENDING | Physical-device recording of full production flow |
 | Catalog integrity | PASS (2026-08-25) | All 30 cards editorially reviewed and cleared by Alberto Villalpando; `CatalogValidator.validate(mode: .production)` passes (see `CatalogValidatorTests.productionAcceptsApprovedCatalog`) |
 | Media and data rights | PASS (2026-08-25) | Higgsfield paid-plan commercial-use terms confirmed by Alberto Villalpando for all 30 assets; `media.verificationStatus` set to `approved` catalog-wide (D-013 closed) |
-| Sensitive species safety | PENDING | Location/generalization review |
+| Sensitive species safety | PASS (2026-09-16) | All 51 habitatRegions across 30 catalog cards reviewed by Alberto Villalpando against the 25 km / public-place / public-centroid rule; `docs/evidence/map-safety-review-2026-09.md` |
 | Backend count integrity | PENDING | Idempotency, RLS/authorization, aggregate-only exposure, offline retry tests |
 | RevenueCat Test Store | PENDING | Controlled success/fail/cancel/restore/expiry tests |
 | App Store Sandbox purchase | PENDING | Physical-device purchase, entitlement, restore, cancellation/expiry evidence |

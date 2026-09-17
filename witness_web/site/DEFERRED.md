@@ -6,7 +6,7 @@
 | Field Season, Atlas, or Support Witness purchase controls | Founder approval, final product IDs, App Store Connect configuration, RevenueCat production mapping, Test Store and Sandbox evidence, and matching Terms/Privacy. |
 | Price or free-trial copy | Founder decision 2026-09-04: prices stay in the app, where StoreKit localizes them. |
 | Email capture on this host | Still deferred. The publication at community.witnessatlas.com (D-029) links to a hosted Buttondown page once it exists: the provider holds consent, retention and deletion; no form, address, or script lives on either host. |
-| Analytics | Documented purpose, event minimization, SDK/vendor review, retention, deletion, and disclosure. |
+| Analytics beyond page views | The site uses Vercel Analytics, said plainly on /privacy. Custom events wait on a documented purpose, event minimization, retention, and deletion. |
 | Testimonials, ratings, downloads, press, or partners | Dated auditable evidence and permission to publish. |
 | Precise locations or a street-level map | Never. `/map` draws only the catalog's generalized regions (radius ≥ 25 km, area only, reviewed in `../../docs/evidence/map-safety-review-2026-09.md`, D-030) and no organisation pin, over a base map that stops at zoom 7 and carries no roads or buildings. |
 | Conservation outcome metrics | A real measurement design and evidence that distinguishes attention from outcomes. |

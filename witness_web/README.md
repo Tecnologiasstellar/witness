@@ -18,7 +18,7 @@ Witness is still in development. This website is not evidence of App Store avail
 - Homepage with central iPhone development preview, five rights-cleared web illustrations, ritual explanation, archive preview, trust principles, FAQ, and status CTA.
 - Archive and 30 statically generated species-record routes copied from the approved bundled iOS catalog.
 - Method, Privacy, Terms, and Support pages reconciled to the same evidence ledger.
-- No analytics, cookies, email capture, account, payment flow, or live collective count.
+- Vercel Analytics, said plainly on /privacy. No cookies, email capture, account, payment flow, or live collective count.
 
 ## Historical documents
 

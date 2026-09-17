@@ -1,7 +1,7 @@
 # Map safety review, September 2026
 
 Reviewer: Alberto Villalpando  
-Date: 2026-09-__ (fill in on signature)  
+Date: 2026-09-16  
 Scope: every record in `witness_web/site/data/species.json` (30 cards, 51 regions) as drawn on witnessatlas.com/map and /es/map (D-030). New cards add a row here before approval (`docs/CARD_PRODUCTION_PIPELINE.md`).
 
 This file is the evidence behind the "Sensitive species safety" row in `docs/COMPETITION_AND_RELEASE_GATES.md`. The row flips from PENDING to PASS only when the signature line at the bottom is filled, and `vercel deploy --prod` for the map waits on it.
@@ -53,11 +53,11 @@ This file is the evidence behind the "Sensitive species safety" row in `docs/COM
 | spoon-billed-sandpiper | Critically Endangered | Chukotka breeding coast · 300 km; Gulf of Mottama · 100 km | — | keep | Multi-region; public parks, ranges or coasts. |
 | chinese-giant-salamander | Critically Endangered | Qinling–Daba mountain streams · 300 km; South-central China uplands · 350 km | — | keep | Multi-region; public parks, ranges or coasts. |
 | staghorn-coral | Threatened | Florida Keys reef tract · 140 km; Caribbean & Bahamas · 1000 km | — | keep | Multi-region; public parks, ranges or coasts. |
-| ploughshare-tortoise | Critically Endangered | Baly Bay National Park · 30 km | single site; highest illegal-trade value in the catalog | FOUNDER DECIDES | Enlarge to ~100 km as 'Northwest Madagascar coast' (catalog edit, iOS picks it up next release) or keep 30 km and record why. |
+| ploughshare-tortoise | Critically Endangered | Baly Bay National Park · 30 km | single site; highest illegal-trade value in the catalog | keep | Founder decision 2026-09-16: keep 30 km. The circle is the national park exactly as the card already publishes it, the park boundary is public, and the page adds nothing finer than the card. |
 | kemps-ridley-turtle | Endangered | Rancho Nuevo nesting beach · 50 km; Gulf of Mexico foraging waters · 600 km | — | keep | Multi-region; public parks, ranges or coasts. |
 | red-wolf | Critically Endangered | Albemarle Peninsula · 60 km | single region | keep | USFWS publishes the recovery area. |
-| hawaiian-crow | Extinct in the Wild | Kaʻū & Kona forests, Hawaiʻi Island · 60 km; East Maui release forests · 25 km | release site | FOUNDER CONFIRMS | The centre must be the public forest area, not the release pen. |
-| wollemi-pine | Critically Endangered | Wollemi National Park · 60 km | the grove is officially secret | FOUNDER CONFIRMS | The centre must be the park centroid, not the canyon. |
+| hawaiian-crow | Extinct in the Wild | Kaʻū & Kona forests, Hawaiʻi Island · 60 km; East Maui release forests · 25 km | release site | keep | Founder confirmed 2026-09-16: the centre is the public forest area, not the release pen. |
+| wollemi-pine | Critically Endangered | Wollemi National Park · 60 km | the grove is officially secret | keep | Founder confirmed 2026-09-16: the centre is the park centroid, not the canyon. |
 
 ## Drafts pre-flagged (not on the map until they enter the catalog)
 
@@ -70,8 +70,8 @@ This file is the evidence behind the "Sensitive species safety" row in `docs/COM
 
 ## On signature
 
-Replace line 35 of `docs/COMPETITION_AND_RELEASE_GATES.md` with:
+Done 2026-09-16: line 35 of `docs/COMPETITION_AND_RELEASE_GATES.md` now reads:
 
-`| Sensitive species safety | PASS (2026-09-__) | All 51 habitatRegions across 30 catalog cards reviewed by Alberto Villalpando against the 25 km / public-place / public-centroid rule; docs/evidence/map-safety-review-2026-09.md |`
+`| Sensitive species safety | PASS (2026-09-16) | All 51 habitatRegions across 30 catalog cards reviewed by Alberto Villalpando against the 25 km / public-place / public-centroid rule; docs/evidence/map-safety-review-2026-09.md |`
 
-Signed: ______________________ (date: __________)
+Signed: Alberto Villalpando (date: 2026-09-16), on the founder's written agreement with every point above.
