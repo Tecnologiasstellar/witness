@@ -8,8 +8,8 @@ type: question
 sources: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0314257, https://academic.oup.com/bioscience/article/65/12/1134/223981, https://www.conservation.org/news/axolotls-are-on-the-brink-can-we-bring-them-back, https://portals.iucn.org/library/sites/library/files/documents/RL-2001-001-2nd.pdf, https://dx.doi.org/10.2305/IUCN.UK.2020-3.RLTS.T1095A53947343.en, https://mexiconewsdaily.com/news/axolotl-disappear-xochimilco-canals-2025/
 ---
 
-No. Extinct in the Wild is a specific category on the IUCN Red List, with a
-written test attached, and the axolotl does not meet it. *Ambystoma mexicanum*
+No. Extinct in the Wild is a specific category on
+[the IUCN Red List](/p/what-is-the-iucn-red-list), with a written test attached, and the axolotl does not meet it. *Ambystoma mexicanum*
 is listed as Critically Endangered, the category below it, and was most
 recently assessed in 2019. The question is a reasonable one to ask, though. In a survey
 of the canals of Xochimilco in southern Mexico City reported in August 2025,

@@ -64,7 +64,9 @@ protected land, which is the condition an animal that moves actually needs.
 So the honest reading of 17.6 per cent is not "a sixth of the land is safe". It
 is "a sixth of the land has a designation", of which a smaller share has been
 checked, a smaller share still is connected, and the parts that matter most are
-not reliably inside the lines.
+not reliably inside the lines. The same gap runs through the other
+instruments: [CITES regulates the border, not the habitat behind
+it](/p/what-is-cites).
 
 ## Half
 
@@ -75,8 +77,8 @@ invites: reviewers asked which half, whether the people living there would stay
 or be moved, and why the book offered so little on how any of it would be done.
 Those are the right questions, and they apply at 30 per cent too.
 
-This section will follow the argument on every side of it, one sourced piece at
-a time: what a reserve protects and what it does not, where corridors and
+This section will follow the argument on every side of it, one sourced piece at a time:
+[what a reserve protects and what it does not](/p/the-porpoise-in-the-river), where corridors and
 rewilding have changed a count, what indigenous-managed land shows, and who
 pays. The number to keep in mind while reading is the distance between 17.6 and
 30, and the half a point the world moved in four years.

@@ -9,114 +9,116 @@ sources: https://portals.iucn.org/library/sites/library/files/documents/RL-2001-
 ---
 
 La Lista Roja de Especies Amenazadas de la UICN es una evaluación publicada de
-qué tan probable es que una especie se extinga, producida por la Comisión de
-Supervivencia de Especies de la Unión Internacional para la Conservación de la
-Naturaleza junto con el Programa Mundial de Especies de la UICN y una alianza de
-organizaciones miembro. Clasifica a las especies en categorías según un estándar
-escrito y registra la evidencia detrás de cada una. No es legislación. Una
-especie colocada en una categoría de amenaza no obtiene ninguna protección legal
-por estar ahí. La protección viene de leyes nacionales y tratados
-internacionales, decididos por otros organismos, bajo otros criterios, con su
-propio calendario.
+qué tan probable es que una especie se extinga, producida por la Species
+Survival Commission de la International Union for Conservation of Nature junto
+con el IUCN Global Species Programme y una alianza de organizaciones miembro.
+Clasifica especies en categorías frente a un estándar escrito y registra la
+evidencia detrás de cada una. No es legislación. Una especie colocada en una
+categoría de amenaza no obtiene ninguna protección legal por haber sido colocada
+ahí. La protección viene de leyes nacionales y
+[tratados internacionales](/p/what-is-cites), decididos por otros organismos,
+bajo criterios distintos, en su propio calendario.
 
-## Quién hace la evaluación
+## Quién evalúa
 
-La ruta hacia la publicación está formalizada, y la formalidad es el punto. La
-Unidad de la Lista Roja de la UICN es la guardiana: cada evaluación que aparece
-en la lista tiene que presentarse ante ella y pasar sus revisiones finales.
+La ruta hasta la publicación está formalizada, y la formalidad es el punto. La
+Unidad de la Lista Roja de la UICN es el filtro: toda evaluación que aparece en
+la lista tiene que serle presentada y pasar sus comprobaciones finales.
 
 Las evaluaciones mismas provienen de las Autoridades de la Lista Roja, que no
-son personas individuales sino grupos permanentes designados bajo la Comisión de
-Supervivencia de Especies, por lo general sus Grupos de Especialistas por taxón,
-salvo donde una institución asociada ocupa ese papel. BirdLife International es
-la Autoridad de la Lista Roja para todas las aves.
+son personas individuales sino grupos permanentes designados bajo la Species
+Survival Commission — normalmente sus Specialist Groups específicos por taxón,
+salvo donde una institución asociada ocupa ese papel en su lugar. BirdLife
+International es la Autoridad de la Lista Roja para todas las aves.
 
-Dentro de ese proceso los roles están separados a propósito:
+Dentro de ese proceso los papeles están separados a propósito:
 
-- **Los contribuyentes** reúnen y aportan los datos en bruto.
-- **Los evaluadores** aplican las categorías y los criterios a una especie y
+- **Los contribuyentes** reúnen y aportan los datos brutos.
+- **Los evaluadores** aplican las categorías y criterios a una especie y
   documentan cómo llegaron al resultado.
 - **Los revisores** lo comprueban. Al menos un revisor con nombre debe ser
-  independiente de la evaluación, no debe ser la misma persona que el evaluador,
-  y debe firmar una declaración de conflictos de interés.
+  independiente de la evaluación, no puede ser la misma persona que el evaluador,
+  y debe firmar una declaración de intereses en conflicto.
 
-Las evaluaciones también llegan de los propios programas de evaluación global de
-la UICN y de proyectos externos de universidades, personas e iniciativas
-nacionales de listas rojas; esas deben ser aprobadas por el coordinador de la
-Autoridad de la Lista Roja correspondiente. Dos organismos permanentes pueden
-además comprobar cualquier evaluación antes de su publicación para verificar la
-aplicación consistente de los criterios entre grupos taxonómicos.
+Las evaluaciones también llegan desde los propios programas de evaluación global
+de la UICN y desde proyectos externos dirigidos por universidades, individuos e
+iniciativas nacionales de listas rojas; esas tienen que ser aprobadas por el
+coordinador de la Autoridad de la Lista Roja correspondiente. Dos organismos
+permanentes también pueden revisar cualquier evaluación antes de la publicación
+para verificar una aplicación consistente de los criterios entre grupos
+taxonómicos.
 
-Una clasificación publicada también puede impugnarse. Una petición contra una
-clasificación vigente pasa a un proceso que arbitra el Subcomité de Estándares y
-Peticiones, y la Autoridad de la Lista Roja está obligada a acatar lo que este
-decida.
+Una inclusión publicada también puede impugnarse. Una petición contra una
+inclusión vigente va a un proceso que arbitra el Standards and Petitions
+Sub-Committee, y la Autoridad de la Lista Roja está obligada a acatar lo que
+este decida.
 
-## Lo que el estándar dice sobre su propio alcance
+## Qué dice el estándar sobre su propio alcance
 
-Las reglas viven en *Categorías y Criterios de la Lista Roja de la UICN*. El
-sistema de categorías lo adoptó el Consejo de la UICN en 1994; la versión
-actual, la 3.1, se aprobó en 2000, se publicó en 2001 y se reeditó en una
-segunda edición en 2012.
+Las reglas están en *Categorías y Criterios de la Lista Roja de la UICN*. El
+sistema de categorías fue adoptado por el Consejo de la UICN en 1994; la versión
+actual, 3.1, fue aprobada en 2000, publicada en 2001 y reeditada en una segunda
+edición en 2012.
 
 Su introducción es cuidadosa con una distinción que rara vez sobrevive en las
-explicaciones de segunda mano. El sistema existe para clasificar especies por
-riesgo de extinción, y aunque puede centrar la atención en los taxones de mayor
-riesgo, el documento dice con claridad que no es el único medio para fijar
-prioridades entre las medidas de conservación que los protegerían.
+explicaciones secundarias. El sistema existe para clasificar especies por riesgo
+de extinción, y aunque puede centrar la atención en los taxones de mayor riesgo,
+el documento dice con claridad que no es el único medio para fijar prioridades
+de las medidas de conservación que los protegerían.
 
-Una sección posterior endurece el punto. Una categoría de amenaza no basta
-necesariamente para determinar prioridades de acción de conservación, porque la
-categoría evalúa el riesgo de extinción en las circunstancias actuales, mientras
-que decidir qué hacer implica costos, logística, probabilidad de éxito y la
-biología del caso particular.
+Una sección posterior insiste más en el punto. Una categoría de amenaza no es
+necesariamente suficiente para determinar prioridades de acción de
+conservación, porque la categoría evalúa el riesgo de extinción en las
+circunstancias actuales, mientras que decidir qué hacer implica costo,
+logística, la probabilidad de éxito y la biología del caso particular.
 
 Esa es toda la distinción. Una categoría es una lectura del riesgo. Una
-prioridad es una decisión sobre dinero y esfuerzo. El estándar no confunde las
-dos.
+prioridad es una decisión sobre dinero y esfuerzo. El estándar no confunde
+ambas.
 
 ## La ley es una máquina aparte
 
-En Estados Unidos, que una especie esté legalmente en peligro se decide bajo la
-Ley de Especies en Peligro según cinco factores legales: destrucción o
-modificación del hábitat, sobreexplotación, enfermedad o depredación, la
-insuficiencia de los mecanismos regulatorios existentes, y otros factores
-naturales o de origen humano que afecten su existencia continuada. La
-determinación debe hacerse únicamente con base en los mejores datos científicos
-y comerciales disponibles, y cualquier persona u organización interesada puede
-solicitar que se añada una especie, se retire o se reclasifique.
+En los Estados Unidos, si una especie está legalmente en peligro se decide bajo
+la Ley de Especies en Peligro con cinco factores establecidos por ley:
+destrucción o modificación del hábitat, sobreutilización, enfermedad o
+depredación, la insuficiencia de los mecanismos regulatorios existentes, y otros
+factores naturales o de origen humano que afecten su existencia continuada. La
+determinación debe hacerse únicamente con los mejores datos científicos y
+comerciales disponibles, y cualquier persona u organización interesada puede
+peticionar para añadir una especie, retirarla o reclasificarla.
 
-Vuelve a leer el cuarto factor. Pregunta si la regulación existente está
-funcionando, una pregunta sobre leyes, no sobre animales. Nada en los criterios
-de la UICN lo pregunta; ellos miden la tasa de declive, el tamaño del área de
-distribución, el número de individuos maduros y la probabilidad modelada de
-extinción. Los dos sistemas pueden aplicarse a la misma especie y devolver
-respuestas que no coinciden, porque se construyeron para responder preguntas
-distintas.
+Lee otra vez el cuarto factor. Pregunta si la regulación existente está
+funcionando — una pregunta sobre estatutos, no sobre animales. Nada en los
+criterios de la UICN lo pregunta; ellos miden tasa de declive, tamaño del rango,
+número de individuos maduros y probabilidad modelada de extinción. Los dos
+sistemas pueden aplicarse a la misma especie y devolver respuestas que no
+coinciden, porque fueron construidos para responder preguntas distintas.
 
 ## Una etiqueta global, leída localmente
 
-Las categorías se diseñaron para evaluaciones globales de una especie entera. El
-estándar advierte que una categoría global puede no coincidir con una nacional o
-regional: una especie de Preocupación Menor a nivel mundial puede estar en grave
-riesgo en un país en el margen de su área de distribución, y una especie
-amenazada a nivel global puede estar segura en un lugar donde resulta que le va
-bien. Quien cita una categoría cita una escala además de una etiqueta.
+Las categorías fueron diseñadas para evaluaciones globales de una especie
+entera. El estándar advierte que una categoría global puede no coincidir con una
+nacional o regional: una especie de Preocupación Menor a escala mundial puede
+estar en riesgo severo en un país al margen de su rango, y una especie amenazada
+globalmente puede estar segura en un lugar donde da la casualidad de que le va
+bien. Quien cita una categoría cita también una escala, además de una etiqueta.
 
 ## Leer una entrada con honestidad
 
 La actualización publicada el 9 de julio de 2026 llevó la lista a 175,909
-especies evaluadas, 49,505 de ellas amenazadas. Esos son recuentos de
-evaluaciones, no un censo de la vida.
+especies evaluadas, 49,505 de ellas amenazadas. Esos son conteos de
+evaluaciones, no un censo de la vida. También viven en un solo sitio web:
+[nada en una tienda de aplicaciones conserva el mismo
+registro](/p/endangered-species-apps-compared).
 
 Una entrada te dice qué grupo evaluó una especie, bajo qué versión del estándar,
-con qué evidencia y cuándo. No te dice que alguien esté obligado a hacer algo al
-respecto. El Servicio de Pesca y Vida Silvestre de Estados Unidos registra que
-el ʻalalā, el cuervo hawaiano, está extinto en la naturaleza desde 2002 y
-sobrevive en cautiverio, y Extinto en Estado Silvestre es precisamente la
-categoría que la Lista Roja reserva para esa situación. La categoría es el
-registro del hecho. Lo que le ocurra a [el ave misma](/archive/hawaiian-crow) lo
-harán las personas que dirigen los aviarios y las liberaciones.
+con qué evidencia, y cuándo. No te dice que alguien esté obligado a hacer algo
+al respecto. El US Fish and Wildlife Service registra que el ʻalalā, el cuervo
+hawaiano, está extinto en estado silvestre desde 2002 y sobrevive en cautividad
+— y Extinto en Estado Silvestre es precisamente la categoría que la Lista Roja
+reserva para esa situación. La categoría es el registro del hecho. Lo que le
+ocurra [al ave misma](/archive/hawaiian-crow) lo harán las personas que dirigen
+los aviarios y las liberaciones.
 
-Es la misma cautela que aplica una categoría más abajo, donde la etiqueta se
+Es la misma cautela que se aplica una categoría más abajo, donde la etiqueta se
 [cita rutinariamente en lugar de un número](/p/what-does-critically-endangered-mean).

@@ -54,8 +54,9 @@ What followed in the river was not a documented unravelling. It was the same
 gear, working on the animal next in line. Successive surveys of the Yangtze
 finless porpoise, the river's remaining cetacean, ran to about 2,700 in
 1984–1991, about 2,000 in 1997–1999, about 1,800 in 2006, 1,045 in 2012, 1,012
-in 2017, and about 1,249 in 2022 — the first rise anywhere in that series. The
-porpoise is the animal that particular river still has, and the one
+in 2017, and about 1,249 in 2022 — the first rise anywhere in that series. The porpoise is the animal that particular river still has —
+[and the one a basin-wide fishing ban has since
+lifted](/p/the-porpoise-in-the-river) — and the one
 [we keep a record for](https://witnessatlas.com/archive/yangtze-finless-porpoise).
 
 ## The bird whose work is on hold
@@ -63,15 +64,20 @@ porpoise is the animal that particular river still has, and the one
 Sometimes the function is not lost so much as suspended. The last two wild
 ʻalalā, the Hawaiian crow, disappeared from their territory on Hawaiʻi Island
 in 2002. The species survives only in human care, at the Keauhou and Maui Bird
-Conservation Centers. The birds ate and dispersed the seeds of native Hawaiian
+Conservation Centers, which is
+[a Red List category with a written test](/p/is-the-axolotl-extinct-in-the-wild)
+and not a figure of speech. The birds ate and dispersed the seeds of native Hawaiian
 plants, and the forest has been without that for more than twenty years, even
 though the animal itself has not ended.
 
 Birds were released on Hawaiʻi Island between 2016 and 2019 and some progress was
 made: a pair nested, though no young grew to maturity. Deaths from ʻio, the
 Hawaiian hawk, accelerated in the summer of 2020, and the surviving birds were
-returned to human care. That is the honest shape of the attempt so far, and it
-sits behind the [record for the ʻalalā](https://witnessatlas.com/archive/hawaiian-crow).
+returned to human care. Putting a captive-bred bird back into country its species no longer occupies
+also raises the question the whooping crane programme had to answer directly:
+[some of what a population knows is not carried in the
+bird](/p/the-crane-that-was-taught-to-migrate). That is the honest shape of the
+attempt so far, and it sits behind the [record for the ʻalalā](https://witnessatlas.com/archive/hawaiian-crow).
 
 ## The answer, in two parts
 

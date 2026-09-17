@@ -40,7 +40,9 @@ NOAA's vaquita abundance page still closes on the figure it was written around:
 approximately 30 animals, as of November 2016. NOAA's own species directory,
 updated in March 2026, says fewer than 20 remain and that the species may now
 number as few as ten, and notes that the last *full* survey took place in 2015.
-Conservation organisations publish round numbers of their own.
+Conservation organisations publish round numbers of their own, and
+[the Red List entry](/p/what-is-the-iucn-red-list) answers a different question
+again: it grades risk, not abundance.
 
 None of those pages is dishonest. They are dated differently, they answer
 slightly different questions, and a search engine flattens all of them onto one
@@ -69,7 +71,8 @@ from water just outside it, which is the finding with a consequence attached.
 
 Nothing in the 2025 result changes the cause. Vaquitas drown in gillnets,
 particularly those set illegally for totoaba, and the International Union for
-Conservation of Nature has listed the species as Critically Endangered since
+Conservation of Nature has listed the species as
+[Critically Endangered](/p/what-does-critically-endangered-mean) since
 1996; it is listed as endangered under the United States Endangered Species Act.
 A count that holds steady across two years is not a recovery. It is the absence
 of another collapse, measured with wide uncertainty, in a population small enough

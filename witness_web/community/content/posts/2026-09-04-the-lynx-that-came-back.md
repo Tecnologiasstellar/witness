@@ -47,8 +47,8 @@ problems. It replaced them with the problems of a species that gets around.
 
 ## What recovered would mean
 
-In June 2024 the IUCN moved the Iberian lynx from Endangered to Vulnerable, a
-change it attributed to sustained conservation work — the assessment counted 62
+In June 2024 [the IUCN](/p/what-is-the-iucn-red-list) moved the Iberian lynx from
+Endangered to Vulnerable, a change it attributed to sustained conservation work — the assessment counted 62
 mature individuals at the 2001 low point and 648 in 2022. Occupied range grew
 from 449 square kilometres in 2005 to at least 3,320 today, and more than 400
 captive-bred animals have been released since 2010.

@@ -27,9 +27,11 @@ nine more awaiting a final necropsy. In 2024 lead killed 13. Both of those
 years sit after the statewide requirement took effect.
 
 The population grew anyway. The same report counts 607 condors alive at the end
-of 2025, 392 of them free-flying. A species can add birds faster than a poison
-removes them and still be held in place by the poison, which is the situation
-the recovery program has been managing for three decades.
+of 2025, 392 of them free-flying. A species can add birds faster than a poison removes them and still be held in
+place by the poison, which is the situation the recovery program has been
+managing for three decades. The Iberian lynx reached
+[the same junction from the other direction](/p/the-lynx-that-came-back):
+recovered enough that the leading recorded cause of death is now a car.
 
 ## The analysis that separated the two
 
@@ -68,9 +70,11 @@ lead is still on the landscape, and of how far a bird will travel to find it.
 
 The people closest to the problem have been treating it as an ammunition supply
 question rather than an enforcement one. Ventana Wildlife Society has given out
-more than 19,000 free boxes of non-lead rifle ammunition to hunters and
-ranchers across central California since 2012, up to two boxes a month, no
-argument attached. Finkelstein's own suggestion after the study was narrower
+more than 19,000 free boxes of non-lead rifle ammunition to hunters and ranchers
+across central California since 2012, up to two boxes a month, no argument
+attached — which is
+[what an unrestricted gift buys](/p/where-to-donate-for-endangered-species) when
+the recipient gets to decide. Finkelstein's own suggestion after the study was narrower
 and in the same direction: reach the people shooting wild pigs and deer, and
 tell them what a fragment does to a scavenger.
 

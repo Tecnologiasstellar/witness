@@ -14,8 +14,8 @@ Conservation of Nature's Species Survival Commission together with the IUCN
 Global Species Programme and a partnership of member organisations. It sorts
 species into categories against a written standard and records the evidence
 behind each one. It is not legislation. A species placed in a threatened
-category gains no legal protection from being placed there. Protection comes
-from national laws and international treaties, decided by other bodies, under
+category gains no legal protection from being placed there. Protection comes from national laws and
+[international treaties](/p/what-is-cites), decided by other bodies, under
 different criteria, on their own timetable.
 
 ## Who does the assessing
@@ -100,8 +100,9 @@ scale as well as a label.
 ## Reading an entry honestly
 
 The update published on 9 July 2026 brought the list to 175,909 assessed
-species, 49,505 of them threatened. Those are counts of assessments, not a
-census of life.
+species, 49,505 of them threatened. Those are counts of assessments, not a census of life. They also live on one
+website: [nothing in an app store keeps the same
+record](/p/endangered-species-apps-compared).
 
 An entry tells you which group assessed a species, under which version of the
 standard, on what evidence, and when. It does not tell you that anyone is

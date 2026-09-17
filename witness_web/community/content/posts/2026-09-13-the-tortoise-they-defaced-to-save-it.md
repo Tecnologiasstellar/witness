@@ -25,7 +25,8 @@ rather than land use is doing the killing, protecting habitat does not touch the
 mechanism, and a range state cannot reach the buyer.
 
 Engraving was an attempt to reach the buyer anyway, from inside Madagascar,
-without a treaty or a court. A marked tortoise is not a pristine specimen. The
+without a court and without
+[the treaty built for exactly this trade](/p/what-is-cites). A marked tortoise is not a pristine specimen. The
 theory was that a market organised around perfection would refuse it.
 
 ## What happened instead
@@ -53,8 +54,9 @@ more than halving, to an estimate of about 500 adults and subadults in 2014 and
 2015, according to Durrell, which also reports that the great majority of the tortoise
 seizures recorded between 2002 and 2016 came after 2009. The Turtle Conservancy states that the species was
 considered functionally extinct in the wild by 2017 and puts the wild remnant at
-around 100 animals. The Turtle Survival Alliance lists it, flatly, as presumed
-functionally extinct in the wild.
+around 100 animals. The Turtle Survival Alliance lists it, flatly, as presumed functionally extinct
+in the wild — a phrase that is not
+[the Red List category of almost the same name](/p/is-the-axolotl-extinct-in-the-wild).
 
 Every one of those figures carries a date because the gap between them is the
 story. Nothing about this animal is fast, and the decline was.

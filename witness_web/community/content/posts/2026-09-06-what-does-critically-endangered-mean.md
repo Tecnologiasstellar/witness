@@ -8,8 +8,9 @@ type: definition
 sources: https://portals.iucn.org/library/sites/library/files/documents/RL-2001-001-2nd.pdf, https://portals.iucn.org/library/node/10315, https://iucn.org/resources/conservation-tool/iucn-red-list-threatened-species, https://rhinos.org/about-rhinos/rhino-species/javan-rhino/, https://www.orangutans-sos.org/learn/conservation-challenges/
 ---
 
-Critically Endangered is the highest of the three threatened categories on the
-International Union for Conservation of Nature's Red List. A species earns it by
+Critically Endangered is the highest of the three threatened categories on
+[the International Union for Conservation of Nature's Red
+List](/p/what-is-the-iucn-red-list). A species earns it by
 meeting at least one of five criteria indicating an extremely high risk of
 extinction in the wild. Those criteria measure different things: how fast a
 population is falling, how small its range is, how few breeding adults are left,
@@ -21,8 +22,9 @@ enough. The category is a statement about risk, not a count of survivors.
 The Red List has nine categories, running from Not Evaluated to Extinct.
 Critically Endangered, Endangered and Vulnerable are the three grouped together
 as threatened, and they nest: anything listed Critically Endangered would also
-qualify as Endangered and as Vulnerable. The category above it is Extinct in the
-Wild, which is not a matter of risk at all but of where the last individuals are.
+qualify as Endangered and as Vulnerable. The category above it is
+[Extinct in the Wild](/p/is-the-axolotl-extinct-in-the-wild), which is not a
+matter of risk at all but of where the last individuals are.
 
 ## The five criteria
 

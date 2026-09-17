@@ -28,7 +28,8 @@ contributions on fundraising.
 
 Both are floors, and useful as floors. Neither is an outcome. An organisation
 can clear every standard and still fund work that changes nothing for a species,
-and the two-person outfit counting nests on one island is likely to be rated by
+and [the small field programme counting animals it knows
+individually](/p/the-wolf-with-a-vaccination-campaign) is likely to be rated by
 nobody at all — Charity Navigator says itself that there are many worthy
 organisations it does not evaluate.
 
@@ -94,8 +95,8 @@ administrative detail. It is part of what you are giving.
 - Is it recurring? IIED's recommendation to the Global Environment Facility was
   for funding that is long-term, patient, predictable and flexible, which is a
   fair description of what field organisations are usually short of.
-- What does the organisation publish afterwards, and does it name what did not
-  work?
+- What does the organisation publish afterwards, and does it
+  [name what did not work](/p/the-tortoise-they-defaced-to-save-it)?
 
 This publication ranks nothing and takes no commission from anyone named here.
 Every record in the archive lists the sources it stands on with the date each

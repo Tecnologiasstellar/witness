@@ -63,7 +63,8 @@ distemper "should be favored when possible, in light of the possibility of
 concurrent outbreaks."
 
 The campaign has since shifted toward vaccinating before anything is burning. In
-2025, according to the Wildlife Conservation Network, which funds the work, more
+2025, according to the Wildlife Conservation Network, which
+[funds the work](/p/where-to-donate-for-endangered-species), more
 than 40 wolves were vaccinated across 14 packs against both diseases. That is
 close to a tenth of every Ethiopian wolf alive. It is a real number and a modest
 one, and both halves of that sentence matter.
@@ -79,8 +80,9 @@ with a reservoir is not solved inside the species you are trying to save.
 
 The animal at the end of all this is rare enough to count individually. Fewer
 than 500 adults survive across six isolated populations, and the Wildlife
-Conservation Network gave the figure as 454 as of this writing. The species was
-listed as Critically Endangered in 1994 after a crash, and down-listed to
+Conservation Network gave the figure as 454 as of this writing. The species was listed as
+[Critically Endangered](/p/what-does-critically-endangered-mean) in 1994 after a
+crash, and down-listed to
 Endangered in 2004 when the numbers came back.
 
 The programme publishes its own monitoring and its own papers, and the 2024

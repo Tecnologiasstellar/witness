@@ -13,8 +13,8 @@ Fauna and Flora, a treaty signed by 21 nations in 1973 and in force since 1975,
 after ten countries ratified it. As of January 2026 it had 185 parties — 184 countries and
 the European Union — and covered more than 40,900 species. What it regulates is
 narrow and specific: whether a listed plant or animal, alive or dead, whole or
-in pieces, may cross an international border. It is not a habitat law and not a
-hunting law.
+in pieces, may cross an international border. It is not a habitat law and not
+[a hunting law](/p/the-condors-lead-problem).
 
 ## Three lists, and one of them holds nearly everything
 

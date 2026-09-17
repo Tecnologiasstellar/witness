@@ -58,7 +58,9 @@ out of captivity, something that flock already had.
 The most recent wintering survey, covering 2025–2026, estimated approximately 540
 cranes within a primary survey area of about 190,250 acres centred on Aransas
 National Wildlife Refuge, including at least 57 juveniles. The previous winter's
-estimate was 557, a difference the Service places within the margin of error. The
+estimate was 557, a difference the Service places within the margin of error —
+[counting a population that is doing well](/p/the-lynx-that-came-back) is its own
+problem. The
 long-term growth rate since 1938 averages 4.24 percent. The same population
 recorded its first documented deaths from highly pathogenic avian influenza in
 the autumn of 2025.
@@ -68,7 +70,10 @@ the autumn of 2025.
 A population count is a count of bodies. It cannot see the other thing a flock
 carries, which is a route that exists only in the birds that have flown it, and
 which leaves no trace when the birds holding it die. A species can be numerically
-stable and quietly poorer than it was, and no survey will report it.
+stable and quietly poorer than it was, and no survey will report it — which is
+the same measurement problem as
+[naming what is lost when a species goes](/p/what-happens-when-a-species-goes-extinct),
+seen from the other side.
 
 That is the uncomfortable part of the whooping crane's recovery, and it is also
 the most useful thing the species has to teach. What conservation preserves is
