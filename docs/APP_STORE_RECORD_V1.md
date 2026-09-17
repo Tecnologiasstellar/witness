@@ -97,6 +97,31 @@ Description:
 > What Witness will never do: claim a tap saved an animal, gamify your
 > attention with points or flames, show you a feed, or ask for an
 > account. The weekly ritual is free and stays free.
+>
+> SUBSCRIPTION DETAILS
+> The Atlas is an auto-renewing subscription, offered in two durations
+> with identical access:
+> • Witness Atlas Six Month — $14.99 USD for 6 months
+> • Witness Atlas Annual — $24.99 USD for 1 year
+> Payment is charged to your Apple ID account at confirmation of
+> purchase. The subscription renews automatically unless auto-renew is
+> turned off at least 24 hours before the end of the current period.
+> Your account is charged for renewal within 24 hours before the end of
+> the current period, at the price of the plan you chose. You can manage
+> or cancel your subscription in your Apple ID account settings after
+> purchase. Prices are in USD; prices in other regions may vary.
+>
+> Field Season One ($19.99) and Support Witness ($9.99) are one-time
+> purchases, not subscriptions.
+>
+> Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+> Privacy Policy: https://witnessatlas.com/privacy
+
+Why the tail block exists: the 2026-09-17 rejection (3.1.2, Business:
+Payments – Subscriptions) was metadata-only — the description carried no
+Terms of Use (EULA) link. Witness uses Apple's standard EULA, so the link
+goes in the description text; no custom EULA is set in ASC, and no new
+build was needed.
 
 Keywords (100 max, comma-separated):
 
