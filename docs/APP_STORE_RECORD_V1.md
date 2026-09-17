@@ -41,11 +41,17 @@ App Privacy questionnaire (must match the live policy word for word):
   Linked to identity: **No**. Tracking: **No**.
 - **Usage Data → Product Interaction**: collected (witness events with
   coarse metadata). App Functionality only. Linked: **No**. Tracking: **No**.
-- Everything else: **not collected**. Purchases run through Apple /
-  RevenueCat; Witness never receives payment details, so "Purchase
-  History" stays **not collected**.
+- **Purchases → Purchase History**: collected. Not because Witness sees a
+  payment — it never does — but because the embedded RevenueCat SDK
+  declares `NSPrivacyCollectedDataTypePurchaseHistory` in its own privacy
+  manifest, and Apple aggregates embedded manifests and checks them against
+  these answers. **App Functionality** only; Analytics is deliberately not
+  selected, which keeps the policy's "no third-party analytics SDK"
+  sentence true. Linked: **No** (anonymous RevenueCat IDs). Tracking: **No**.
+- Everything else: **not collected**.
 
-Resulting label: *Data Not Linked to You* — Identifiers, Usage Data.
+Resulting label: *Data Not Linked to You* — Identifiers, Usage Data,
+Purchases. Published in ASC 2026-09-16.
 
 ## 4. Support and marketing URLs
 
