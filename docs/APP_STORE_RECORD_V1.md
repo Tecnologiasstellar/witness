@@ -147,42 +147,61 @@ webhook deploy remains a separate, optional Tuesday item.
 
 ## 7. Review notes (App Review information)
 
-> Witness requires no account, no sign-in, and no demo credentials. Every
-> purchase is a standard StoreKit in-app purchase: one non-consumable
-> (Field Season One), one subscription group with two durations (the
-> Atlas), and one consumable tip (Support).
+Pasted into ASC 2026-09-21 (2,793 chars) after App Review's 2.1(b) "cannot
+locate the In-App Purchases": the notes ASC actually held were an older
+draft routing through "Index → ACCESS", a section that does not exist.
+
+> Witness requires no account, no sign-in, and no demo credentials. All four
+> In-App Purchases are standard StoreKit purchases (loaded through
+> RevenueCat), reachable from the first screen, with no storefront or device
+> restriction. The Paid Applications agreement is active.
 >
-> WHERE THE PURCHASES ARE
-> Open INDEX from the THIS WEEK tab. Under THE WORKS: FIELD SEASON (the
-> non-consumable), THE ATLAS (the subscription group — both durations sit
-> on one page), SUPPORT WITNESS (the tip). RESTORE PURCHASES is on that
-> same INDEX page, and the Field Season and Atlas pages each carry their
-> own restore row beside the price. Terms of Use and Privacy Policy links
-> sit at the foot of both paid pages.
+> HOW TO REACH THE IN-APP PURCHASES
+> 1. Launch the app. If the six-page introduction appears, tap SKIP at the bottom.
+> 2. You land on the THIS WEEK tab (this week's species card).
+> 3. Tap the small "contents" icon in the top-left corner of the card
+>    (VoiceOver label: "Contents index"). This opens the INDEX page.
+> 4. Scroll down to the section titled THE WORKS. It has three cards:
+>    - FIELD SEASON: opens the Field Season One page. The button KEEP FIELD
+>      SEASON PERMANENTLY (shows the price) is the non-consumable,
+>      com.avp.witness.fieldseason1.
+>    - THE ATLAS: opens the Atlas page. Both auto-renewable subscriptions are
+>      on this one page as two price buttons: 6-month
+>      (com.avp.witness.atlas.sixmonth) and annual (com.avp.witness.atlas.annual).
+>    - SUPPORT WITNESS: opens the Support page. The button LEAVE A ONE-TIME
+>      TIP (shows the price) is the consumable, com.avp.witness.support.once.
+> 5. RESTORE PURCHASES is on the same INDEX page under THE WORKS. The Field
+>    Season page also has RESTORE A PREVIOUS PURCHASE and the Atlas page has
+>    RESTORE PURCHASES, each beside the price.
+> 6. Terms of Use (EULA) and Privacy Policy links sit at the foot of the
+>    Field Season and Atlas pages.
 >
-> WHAT THE ATLAS UNLOCKS, AND HOW TO SEE IT
-> An Atlas membership includes Field Season One in full — the same twelve
-> narrated chapters sold separately as the non-consumable — plus the
-> complete weekly archive, which grows by one species every week.
+> WHAT THE PURCHASES UNLOCK
+> - Field Season One: a complete narrated edition (opening letter, eight
+>   species chapters, two interludes, closing synthesis). After purchase the
+>   same page shows OPEN THE EDITION.
+> - The Atlas: includes Field Season One in full, plus the complete weekly
+>   archive. To see the archive: CABINET tab, then ARCHIVE. Plates from the
+>   current and previous week open free; older plates show a lock and open
+>   only with an Atlas membership. After purchase, ENTER THE LIBRARY on the
+>   Atlas page lands on that archive. The weekly cadence began 21 August
+>   2026, so the archive is deliberately small at review time and grows by
+>   one species every week.
+> - Support: a one-time tip. It unlocks nothing; the page shows a thank-you
+>   after purchase.
 >
-> To reach the archive: CABINET tab → ARCHIVE. Plates from the current and
-> previous ISO week open free by design; older plates carry a lock and open
-> only with an Atlas membership. After purchase, ENTER THE LIBRARY on the
-> Atlas page lands directly on that archive. Each unlocked plate opens a
-> full species record — sourced text, range map, five commissioned plates,
-> conservation programmes, and the citation list.
->
-> The weekly cadence began 21 August 2026, so the archive is deliberately
-> small at review time and gains one entry every week. The subscription's
-> value is the continuing record plus the included Field Season, not a
-> fixed number of screens.
+> NOTES FOR THE REVIEW ENVIRONMENT
+> - This is an iPhone app (device family: iPhone). On iPad it runs in
+>   iPhone-compatibility mode; the navigation above is identical.
+> - If a paid page shows "Checking the store..." and then a notice with a
+>   TRY AGAIN row, the sandbox has not yet returned the products; tapping
+>   TRY AGAIN reloads them.
 >
 > PRIVACY
 > Private reflections are stored only on the device and are never
 > transmitted. The collective witness count and in-app usage events use a
-> random installation identifier; no personal data, no location, and no
-> payment details are collected. The binary carries a privacy manifest
-> declaring exactly this; the policy is at witnessatlas.com/privacy.
+> random installation identifier; no personal data, location, or payment
+> details are collected. Policy: witnessatlas.com/privacy
 
 Demo account: none needed (state this explicitly in the field).
 
