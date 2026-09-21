@@ -370,7 +370,7 @@
       "slug": "the-whale-that-cannot-hear-itself",
       "type": "field-note",
       "title": "A whale in a shipping lane",
-      "angle": "North Atlantic right whales die from ship strikes and rope entanglement, both of which are speed and gear decisions rather than acts of nature. Extinction as a regulatory question, written without villains.",
+      "angle": "North Atlantic right whales die from ship strikes and rope entanglement, both of which are speed and gear decisions rather than acts of nature. Extinction as a regulatory question, written without villains. Revised 2026-09-21: add the 14 September 2026 FWS memo's sentence that 'a vessel that inadvertently strikes a whale has not taken it', and the Marine Mammal Protection Act as the statute whose own take prohibition still applies, so the note becomes the worked example for /p/what-the-endangered-species-act-protects — link it in the first two paragraphs.",
       "keywords": [
         "north atlantic right whale",
         "right whale ship strikes",
@@ -798,6 +798,66 @@
         "incidental take definition",
         "critical habitat definition",
         "endangered vs threatened definition"
+      ]
+    },
+    {
+      "slug": "what-does-a-biological-opinion-decide",
+      "type": "question",
+      "title": "What does a biological opinion decide?",
+      "angle": "Suggested published title: 'What a biological opinion actually decides'. Section 7 in one document: jeopardy, reasonable and prudent alternatives, and the incidental take statement that sets the terms — read through the Fisheries Service's 2025 Gulf opinion, which found the oil and gas programme 'likely to jeopardize the continued existence of the Rice's whale' and was then exempted by the committee. Most opinions find no jeopardy; say so, with the CRS figure. Supports /p/what-the-endangered-species-act-protects; link it in the first two paragraphs. Section policy.",
+      "keywords": [
+        "what is a biological opinion",
+        "biological opinion endangered species act",
+        "section 7 consultation",
+        "jeopardy finding"
+      ]
+    },
+    {
+      "slug": "what-is-critical-habitat",
+      "type": "definition",
+      "title": "What is critical habitat?",
+      "angle": "Suggested published title: 'Critical habitat is a map of federal permits, not a fence'. The statutory definition, what a designation does on private land with no federal nexus (nothing — no refuge, no access, no restoration duty), the Weyerhaeuser test that critical habitat must first be habitat, and the 20 August 2026 exclusion rule. Worked through the rusty patched bumble bee's 14 units, most of them private. Supports /p/what-the-endangered-species-act-protects; link it in the first two paragraphs, and the bee note once it exists. Section policy.",
+      "keywords": [
+        "what is critical habitat",
+        "critical habitat designation",
+        "critical habitat private land",
+        "critical habitat vs habitat"
+      ]
+    },
+    {
+      "slug": "who-can-overrule-the-endangered-species-act",
+      "type": "question",
+      "title": "Who can overrule the Endangered Species Act?",
+      "angle": "Suggested published title: 'The seven people who can overrule the Endangered Species Act'. The Endangered Species Committee: created in 1978 after Tellico, seven Cabinet-level members, five votes to exempt, and a mandatory exemption on a Secretary of Defense national security finding. Three sittings in 48 years — Grayrocks and Tellico in 1979, the spotted owl in 1992, the Gulf oil and gas programme on 31 March 2026, the first on national security and the first the committee said it had no discretion to refuse. Litigation status as of writing. Supports /p/what-the-endangered-species-act-protects; link it in the first two paragraphs. Section policy.",
+      "keywords": [
+        "god squad endangered species act",
+        "endangered species committee",
+        "endangered species act exemption",
+        "god squad 2026"
+      ]
+    },
+    {
+      "slug": "what-is-an-incidental-take-permit",
+      "type": "definition",
+      "title": "What is an incidental take permit?",
+      "angle": "Suggested published title: 'What an incidental take permit was for, and what it is for now'. The 1982 amendment, the habitat conservation plan as the bargain behind the permit, and the July 2026 harm rule's line that permits are no longer required for take attributed solely to habitat modification — which turns a regulatory bargain into a voluntary one. Say what the Services say they will still permit, and what the Sweet Home majority said the 1982 permits presupposed. Supports /p/what-the-endangered-species-act-protects; link it in the first two paragraphs. Section policy.",
+      "keywords": [
+        "incidental take permit",
+        "habitat conservation plan",
+        "section 10 permit endangered species act",
+        "incidental take statement vs permit"
+      ]
+    },
+    {
+      "slug": "what-changed-in-the-endangered-species-act-in-2026",
+      "type": "question",
+      "title": "What changed in the Endangered Species Act in 2026?",
+      "angle": "Suggested published title: 'What changed in the Endangered Species Act in 2026, in order'. A dated list, March to September, one sentence and one source per entry, no adjectives: the 31 March committee exemption, the 22 April House bill pulled, the 1 July bee critical habitat, the 14 July harm rule and the same-day suits, the 24 July Safeguarding Endangered Species Act, the 20 August 4(d) and exclusion rules, the 9 September state suits, the 14 September effective date and memo. The page to keep current as courts rule — edit the file, never write a second one. Supports /p/what-the-endangered-species-act-protects; link it in the first two paragraphs. Section policy.",
+      "keywords": [
+        "endangered species act changes 2026",
+        "endangered species act 2026",
+        "esa harm rule",
+        "endangered species act rollback"
       ]
     }
   ]
