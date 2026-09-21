@@ -474,26 +474,44 @@ def claude(key, system, user):
     never fatal, because the English note must still ship."""
     import urllib.error
     import urllib.request
-    body = {"model": MODEL, "max_tokens": 16000, "system": system,
+    # Streamed on purpose. A 2,600-word note takes minutes to translate, and on
+    # 2026-09-21 the non-streaming call died twice with "Remote end closed
+    # connection without response" — the API drops long unstreamed generations.
+    body = {"model": MODEL, "max_tokens": 16000, "system": system, "stream": True,
             "messages": [{"role": "user", "content": user}]}
     base = os.environ.get("ANTHROPIC_BASE_URL", "https://api.anthropic.com")   # the SDKs' own override
     req = urllib.request.Request(f"{base}/v1/messages",
                                  data=json.dumps(body).encode(),
                                  headers={"content-type": "application/json", "x-api-key": key,
                                           "anthropic-version": "2023-06-01"})
+    text, stop = [], None
     try:
         with urllib.request.urlopen(req, timeout=600) as r:
-            data = json.load(r)
+            for line in r:
+                line = line.decode(errors="replace").strip()
+                if not line.startswith("data: "):
+                    continue
+                ev = json.loads(line[6:])
+                if ev.get("type") == "content_block_delta" and ev["delta"].get("type") == "text_delta":
+                    text.append(ev["delta"]["text"])
+                elif ev.get("type") == "message_delta":
+                    stop = ev["delta"].get("stop_reason")
+                elif ev.get("type") == "error":
+                    print(f"claude: stream error {json.dumps(ev.get('error'))[:300]}")
+                    return None
     except urllib.error.HTTPError as e:
         print(f"claude: HTTP {e.code} {e.read().decode(errors='replace')[:300]}")
         return None
     except OSError as e:
         print(f"claude: unreachable ({str(e)[:80]})")
         return None
-    if data.get("stop_reason") == "refusal":
+    if stop == "refusal":
         print("claude: refused")
         return None
-    return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
+    if stop == "max_tokens":
+        print("claude: output cut at max_tokens")
+        return None
+    return "".join(text)
 
 
 def assemble_es(en_raw, out):
