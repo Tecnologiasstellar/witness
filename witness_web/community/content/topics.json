@@ -367,17 +367,6 @@
       ]
     },
     {
-      "slug": "the-whale-that-cannot-hear-itself",
-      "type": "field-note",
-      "title": "A whale in a shipping lane",
-      "angle": "North Atlantic right whales die from ship strikes and rope entanglement, both of which are speed and gear decisions rather than acts of nature. Extinction as a regulatory question, written without villains. Revised 2026-09-21: add the 14 September 2026 FWS memo's sentence that 'a vessel that inadvertently strikes a whale has not taken it', and the Marine Mammal Protection Act as the statute whose own take prohibition still applies, so the note becomes the worked example for /p/what-the-endangered-species-act-protects — link it in the first two paragraphs.",
-      "keywords": [
-        "north atlantic right whale",
-        "right whale ship strikes",
-        "why are right whales endangered"
-      ]
-    },
-    {
       "slug": "how-many-mountain-gorillas-are-left",
       "type": "question",
       "title": "How many mountain gorillas are left",
@@ -822,6 +811,17 @@
         "critical habitat designation",
         "critical habitat private land",
         "critical habitat vs habitat"
+      ]
+    },
+    {
+      "slug": "the-whale-that-cannot-hear-itself",
+      "type": "field-note",
+      "title": "A whale in a shipping lane",
+      "angle": "North Atlantic right whales die from ship strikes and rope entanglement, both of which are speed and gear decisions rather than acts of nature. Extinction as a regulatory question, written without villains. Revised 2026-09-21: add the 14 September 2026 FWS memo's sentence that 'a vessel that inadvertently strikes a whale has not taken it', and the Marine Mammal Protection Act as the statute whose own take prohibition still applies, so the note becomes the worked example for /p/what-the-endangered-species-act-protects — link it in the first two paragraphs.",
+      "keywords": [
+        "north atlantic right whale",
+        "right whale ship strikes",
+        "why are right whales endangered"
       ]
     },
     {
