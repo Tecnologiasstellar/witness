@@ -774,6 +774,31 @@
         "what is critical habitat",
         "endangered vs threatened"
       ]
+    },
+    {
+      "slug": "the-bee-with-a-map-and-no-fence",
+      "type": "field-note",
+      "title": "The bee with a map and no fence",
+      "angle": "Nine years after listing, the rusty patched bumble bee has the most precisely drawn habitat of any US insect — about 1.53 million acres in 14 units across six states, in force since 1 July 2026 — and on the private land that makes up most of it the map binds nobody unless a federal permit appears. The one prohibition that did reach private habitat, harm, was rescinded ten weeks later. Month by month what the bee needs (bloom April–October, a rodent burrow to nest in, loose soil under leaves at a forest edge to overwinter), why the Service said in 2020 a map would not help, the 2023 court order, what the acreage binds, and the record's act unchanged: the habitat the law now leaves to volunteers is the habitat the app asks for. 900–1,200 words. Companion to /p/what-the-endangered-species-act-protects — link it in the first two paragraphs, and the record.",
+      "keywords": [
+        "rusty patched bumble bee critical habitat",
+        "does the rusty patched bumble bee have critical habitat",
+        "rusty patched bumble bee habitat",
+        "endangered bumble bee"
+      ]
+    },
+    {
+      "slug": "endangered-species-act-glossary",
+      "type": "definition",
+      "title": "Six words the Endangered Species Act uses, and what each one binds",
+      "angle": "A 40-word lead, then six ### entries of about 95 words each, in this order: endangered, threatened, take, harm, incidental take, critical habitat. Each quotes the statute or regulation's own words, says whom it binds, and states the 2026 change where there is one. Harm has had no regulatory definition since 14 September 2026 — quote the 1981 text as history and the Director's four elements as the present. Incidental take has two routes, a section 7 statement for federal actions and a section 10 permit for everyone else, and the rule says no permit is needed for take attributed solely to habitat modification. Threatened means whatever the species' 4(d) rule says; the blanket rule is gone for listings after 20 August 2026. 500–700 words. Companion to /p/what-the-endangered-species-act-protects; also link /p/what-does-critically-endangered-mean for the IUCN sense of the word against the legal one. `next` refuses two definitions in a row, so this follows the bee note.",
+      "keywords": [
+        "endangered species act definitions",
+        "what does take mean endangered species act",
+        "incidental take definition",
+        "critical habitat definition",
+        "endangered vs threatened definition"
+      ]
     }
   ]
 }
