@@ -8,8 +8,7 @@
 --------------------------------------------------------------------------- */
 
 @layer theme {
-  :root,
-  :root:has(#appearance-day:checked) {
+  :root {
     color-scheme: light;
 
     --paper: #f1e8d5;
@@ -27,8 +26,11 @@
     --map-icon-filter: none;
   }
 
+  /* Auto on a dark system. Day opts out here, not in the light rule: Lightning CSS
+     compiles ":root, :root:has(#appearance-day:checked)" to :is(), whose (1,2,0)
+     specificity beat this rule, so Auto never went dark. */
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not(:has(#appearance-day:checked)) {
       color-scheme: dark;
 
       --paper: #15130f;
