@@ -1,10 +1,10 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import Link from "next/link";
-import { Container, Eyebrow, PrimaryLink, TextLink } from "@/components/atlas";
+import { AppStoreBadge, Container, Eyebrow, PrimaryLink, TextLink } from "@/components/atlas";
 import { HowItWorks, type Step } from "@/components/how-it-works";
 import type { Metadata } from "next";
-import { APP_CTA_HREF, APP_CTA_LABEL, APP_EYEBROW, APP_STORE_LIVE, APP_STORE_URL, SITE_URL, allRecords, plate, recordById } from "@/lib/archive";
+import { APP_STORE_URL, allRecords, plate, recordById } from "@/lib/archive";
 
 export const metadata: Metadata = { alternates: { canonical: "/", languages: { en: "/", es: "/es" } } };
 
@@ -69,13 +69,12 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Witness — Endangered Species",
-    operatingSystem: "iOS",
+    name: "Witness-Endangered Species",
+    operatingSystem: "iOS 17.0 or later",
     applicationCategory: "EducationalApplication",
     description: "Each week, one species on the edge of disappearance: its true story, its sources, one honest action.",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-    ...(APP_STORE_LIVE ? { installUrl: APP_STORE_URL } : {}),
-    url: SITE_URL,
+    url: APP_STORE_URL,
+    publisher: { "@type": "Organization", name: "tecnologias stellar S.A de C.V" },
   };
 
   return (
@@ -84,15 +83,16 @@ export default function Home() {
 
       <section className="home-hero">
         <Container className="home-hero-inner">
-          <Eyebrow className="hero-eyebrow">{APP_EYEBROW} · sourced, drawn, free to read</Eyebrow>
+          <Eyebrow className="hero-eyebrow">One species a week · sourced, drawn, free to read</Eyebrow>
           <h1>Give one species your attention.</h1>
           <p className="hero-lede">
             Each week, Witness brings you one species on the edge of disappearance: a drawn plate, its true story with sources, and one honest action. No feed. No account. No false promises.
           </p>
           <div className="hero-actions">
-            <PrimaryLink href={APP_CTA_HREF} external>
-              {APP_CTA_LABEL}
-            </PrimaryLink>
+            <div className="hero-store">
+              <AppStoreBadge />
+              <p className="store-note">iPhone · iOS 17 or later</p>
+            </div>
             <TextLink href="/archive">Browse the archive</TextLink>
           </div>
           <ul className="plate-strip" aria-label="Species drawn for Witness">
@@ -118,6 +118,10 @@ export default function Home() {
             <h2>One encounter a week.<br />That is the whole app.</h2>
           </div>
           <HowItWorks steps={STEPS} width={SHOT.width} height={SHOT.height} />
+          <div className="how-cta">
+            <p>This week’s plate is already waiting.</p>
+            <AppStoreBadge />
+          </div>
         </Container>
       </section>
 
@@ -195,6 +199,7 @@ export default function Home() {
                 The living library: every featured week beyond the free window, and every released field season while membership is active, narration included. It grows every Monday.
               </p>
               <p className="work-note">Both live behind the Index mark, at the top-left of every card. The weekly card stays free.</p>
+              <AppStoreBadge className="mt-8" />
             </div>
           </article>
         </Container>
@@ -224,13 +229,11 @@ export default function Home() {
 
       <section className="closing-section">
         <Container>
-          <Eyebrow className="text-sepia">{APP_EYEBROW}</Eyebrow>
+          <Eyebrow className="text-sepia">One species a week</Eyebrow>
           <h2>Look closely.<br />Carry the name forward.</h2>
           <p>One species a week, on your phone. The card, the sources, the witness, and the act are free.</p>
           <div className="closing-actions">
-            <PrimaryLink href={APP_CTA_HREF} external>
-              {APP_CTA_LABEL}
-            </PrimaryLink>
+            <AppStoreBadge />
             <TextLink href="/archive">Open the archive</TextLink>
           </div>
         </Container>

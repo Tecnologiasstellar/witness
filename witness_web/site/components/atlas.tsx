@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import type { Route } from "next";
 import Link from "next/link";
+import { APP_STORE_URL } from "@/lib/archive";
 
 
 /** Page measure: 1200px max, 24px gutters down to 320px. */
@@ -144,6 +145,42 @@ export function TextLink({
       className={classes}
     >
       {children}
+    </a>
+  );
+}
+
+/**
+ * Apple's "Download on the App Store" badge: the official black artwork from
+ * Apple's Marketing Tools (public/badges), never redrawn or restyled. 48px tall
+ * clears Apple's 40px floor and the 44px target; every placement keeps a quarter
+ * of that (12px) clear around it. No hover or press effect: Apple forbids
+ * altering the badge.
+ */
+export function AppStoreBadge({ lang = "en", className = "" }: { lang?: "en" | "es"; className?: string }) {
+  const label = lang === "es" ? "Descarga Witness en el App Store" : "Download Witness on the App Store";
+  return (
+    <a href={APP_STORE_URL} rel="noopener" aria-label={label} className={`inline-block ${className}`}>
+      <img
+        src={lang === "es" ? "/badges/app-store-es-mx.svg" : "/badges/app-store-en.svg"}
+        width={120}
+        height={40}
+        alt={label}
+        className="block h-12 w-auto"
+      />
+    </a>
+  );
+}
+
+/** The header's short form. Words, because Apple does not allow the badge to be made into a button. */
+export function GetTheApp({ lang = "en" }: { lang?: "en" | "es" }) {
+  return (
+    <a
+      href={APP_STORE_URL}
+      rel="noopener"
+      className="press inline-flex min-h-11 items-center whitespace-nowrap bg-ink px-2.5 text-[13px] font-semibold text-paper hover:bg-sepia focus-visible:bg-sepia"
+    >
+      {lang === "es" ? "Obtén la app" : "Get the app"}
+      <span className="sr-only">{lang === "es" ? " en el App Store" : " on the App Store"}</span>
     </a>
   );
 }

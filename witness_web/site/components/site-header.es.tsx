@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { NOTES_URL } from "@/lib/archive";
-import { Container } from "./atlas";
+import { Container, GetTheApp } from "./atlas";
 
 const NAV = [
   { href: "/es", label: "La app" },
@@ -27,30 +27,33 @@ export function SiteHeader() {
             Witness
           </Link>
 
-          {/* Compact disclosure menu, no client JavaScript. */}
-          <details className="group md:hidden">
-            <summary className="inline-flex min-h-11 min-w-11 cursor-pointer list-none items-center justify-end gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-sepia [&::-webkit-details-marker]:hidden">
-              Menú
-              <span
-                aria-hidden="true"
-                className="relative block h-3 w-3 before:absolute before:left-0 before:top-1.5 before:h-px before:w-3 before:bg-current after:absolute after:left-0 after:top-1.5 after:h-px after:w-3 after:bg-current after:transition-transform after:duration-200 after:ease-out after:[transform:rotate(90deg)] group-open:after:[transform:rotate(0deg)]"
-              />
-            </summary>
-            <nav
-              aria-label="Principal"
-              className="absolute left-0 right-0 z-10 mt-4 border-y border-hairline/50 bg-paper-fresh"
-            >
-              <ul className="mx-auto flex w-[min(1200px,calc(100vw-48px))] flex-col divide-y divide-hairline/40">
-                {NAV.map((item) => (
-                  <li key={item.href}>
-                    <a href={item.href} lang={item.lang} hrefLang={item.lang} className={`${linkClass} w-full py-1`}>
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </details>
+          <div className="flex items-center gap-2 md:hidden">
+            <GetTheApp lang="es" />
+            {/* Compact disclosure menu, no client JavaScript. */}
+            <details className="group">
+              <summary className="inline-flex min-h-11 min-w-11 cursor-pointer list-none items-center justify-end gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-sepia [&::-webkit-details-marker]:hidden">
+                Menú
+                <span
+                  aria-hidden="true"
+                  className="relative block h-3 w-3 before:absolute before:left-0 before:top-1.5 before:h-px before:w-3 before:bg-current after:absolute after:left-0 after:top-1.5 after:h-px after:w-3 after:bg-current after:transition-transform after:duration-200 after:ease-out after:[transform:rotate(90deg)] group-open:after:[transform:rotate(0deg)]"
+                />
+              </summary>
+              <nav
+                aria-label="Principal"
+                className="absolute left-0 right-0 z-10 mt-4 border-y border-hairline/50 bg-paper-fresh"
+              >
+                <ul className="mx-auto flex w-[min(1200px,calc(100vw-48px))] flex-col divide-y divide-hairline/40">
+                  {NAV.map((item) => (
+                    <li key={item.href}>
+                      <a href={item.href} lang={item.lang} hrefLang={item.lang} className={`${linkClass} w-full py-1`}>
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </details>
+          </div>
         </div>
 
         <nav aria-label="Principal" className="hidden md:block">
@@ -62,6 +65,10 @@ export function SiteHeader() {
                 </a>
               </li>
             ))}
+            {/* From 1024px: between 768 and 1023 the six links already fill the bar. */}
+            <li className="hidden lg:block">
+              <GetTheApp lang="es" />
+            </li>
           </ul>
         </nav>
       </Container>

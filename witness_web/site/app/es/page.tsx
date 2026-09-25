@@ -1,9 +1,9 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import Link from "next/link";
-import { Container, Eyebrow, PrimaryLink, TextLink } from "@/components/atlas";
+import { AppStoreBadge, Container, Eyebrow, PrimaryLink, TextLink } from "@/components/atlas";
 import { HowItWorks, type Step } from "@/components/how-it-works";
-import { APP_CTA_HREF, APP_CTA_LABEL, APP_EYEBROW, APP_STORE_LIVE, APP_STORE_URL, SITE_URL, allRecords, plate, recordById } from "@/lib/archive.es";
+import { APP_STORE_URL, allRecords, plate, recordById } from "@/lib/archive.es";
 
 /** Plates in the hero strip and the archive band. Eight each, chosen for variety of form and colour. */
 const STRIP = ["kakapo", "javan-rhino", "vaquita", "amur-leopard", "whooping-crane", "red-wolf", "axolotl", "snow-leopard"];
@@ -66,13 +66,12 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Witness — Especies en peligro",
-    operatingSystem: "iOS",
+    name: "Witness-Endangered Species",
+    operatingSystem: "iOS 17.0 or later",
     applicationCategory: "EducationalApplication",
     description: "Cada semana, una especie al borde de la desaparición: su historia real, sus fuentes, una acción honesta.",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-    ...(APP_STORE_LIVE ? { installUrl: APP_STORE_URL } : {}),
-    url: `${SITE_URL}/es`,
+    url: APP_STORE_URL,
+    publisher: { "@type": "Organization", name: "tecnologias stellar S.A de C.V" },
   };
 
   return (
@@ -81,15 +80,16 @@ export default function Home() {
 
       <section className="home-hero">
         <Container className="home-hero-inner">
-          <Eyebrow className="hero-eyebrow">{APP_EYEBROW} · con fuentes, dibujada, lectura gratuita</Eyebrow>
+          <Eyebrow className="hero-eyebrow">Una especie por semana · con fuentes, dibujada, lectura gratuita</Eyebrow>
           <h1>Dale tu atención a una sola especie.</h1>
           <p className="hero-lede">
             Cada semana, Witness te trae una especie al borde de la desaparición: una lámina dibujada, su historia real con fuentes y una acción honesta. Sin feed. Sin cuenta. Sin falsas promesas.
           </p>
           <div className="hero-actions">
-            <PrimaryLink href={APP_CTA_HREF} external>
-              {APP_CTA_LABEL}
-            </PrimaryLink>
+            <div className="hero-store">
+              <AppStoreBadge lang="es" />
+              <p className="store-note">iPhone · iOS 17 o posterior</p>
+            </div>
             <TextLink href="/es/archive">Explorar el archivo</TextLink>
           </div>
           <ul className="plate-strip" aria-label="Especies dibujadas para Witness">
@@ -115,6 +115,10 @@ export default function Home() {
             <h2>Un encuentro por semana.<br />Eso es toda la app.</h2>
           </div>
           <HowItWorks steps={STEPS} width={SHOT.width} height={SHOT.height} />
+          <div className="how-cta">
+            <p>La lámina de esta semana ya te espera.</p>
+            <AppStoreBadge lang="es" />
+          </div>
         </Container>
       </section>
 
@@ -192,6 +196,7 @@ export default function Home() {
                 La biblioteca viva: cada semana destacada más allá de la ventana gratuita, y cada temporada de campo publicada mientras la membresía esté activa, con narración incluida. Crece cada lunes.
               </p>
               <p className="work-note">Ambas viven tras la marca Index, en la esquina superior izquierda de cada ficha. La ficha semanal sigue siendo gratuita.</p>
+              <AppStoreBadge lang="es" className="mt-8" />
             </div>
           </article>
         </Container>
@@ -221,13 +226,11 @@ export default function Home() {
 
       <section className="closing-section">
         <Container>
-          <Eyebrow className="text-sepia">{APP_EYEBROW}</Eyebrow>
+          <Eyebrow className="text-sepia">Una especie por semana</Eyebrow>
           <h2>Mira de cerca.<br />Lleva el nombre contigo.</h2>
           <p>Una especie por semana, en tu teléfono. La ficha, las fuentes, el testimonio y el acto son gratuitos.</p>
           <div className="closing-actions">
-            <PrimaryLink href={APP_CTA_HREF} external>
-              {APP_CTA_LABEL}
-            </PrimaryLink>
+            <AppStoreBadge lang="es" />
             <TextLink href="/es/archive">Abrir el archivo</TextLink>
           </div>
         </Container>

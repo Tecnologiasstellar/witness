@@ -1,6 +1,6 @@
 import type { Route } from "next";
 import Link from "next/link";
-import { APP_STORE_LIVE, APP_STORE_URL, INSTAGRAM_URL, NOTES_URL } from "@/lib/archive";
+import { APP_STORE_URL, INSTAGRAM_URL, NOTES_URL } from "@/lib/archive";
 import { Container } from "./atlas";
 import { AppearanceControl } from "./appearance.es";
 
@@ -14,7 +14,7 @@ const PAGES = [
 ];
 
 const ELSEWHERE = [
-  ...(APP_STORE_LIVE ? [{ href: APP_STORE_URL, label: "App Store" }] : []),
+  { href: APP_STORE_URL, label: "App Store" },
   { href: NOTES_URL, label: "Notas de campo" },
   { href: INSTAGRAM_URL, label: "Instagram" },
 ];
@@ -69,6 +69,10 @@ export function SiteFooter() {
           <p>Ilustraciones originales · no es fotografía documental</p>
           <p>© 2026 Alberto Villalpando</p>
         </div>
+        {/* Apple's badge guidelines ask for this credit wherever the site gives legal notice. */}
+        <p className="mt-4 text-[11px] leading-relaxed text-ink-muted">
+          Apple, el logotipo de Apple y App Store son marcas comerciales de Apple Inc., registradas en EE. UU. y otros países.
+        </p>
       </Container>
     </footer>
   );

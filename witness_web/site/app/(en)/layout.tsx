@@ -3,12 +3,11 @@ import { Grain } from "@/components/atlas";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Analytics } from "@vercel/analytics/next";
-import { APP_STORE_LIVE, SITE_URL } from "@/lib/archive";
+import { APP_STORE_ID, SITE_URL } from "@/lib/archive";
 import "../globals.css";
 
 const description =
-  "Each week, one species on the edge of disappearance: its true story, its sources, one honest action. No feed. No account. No false promises." +
-  (APP_STORE_LIVE ? " Free on iPhone." : "");
+  "Each week, one species on the edge of disappearance: its true story, its sources, one honest action. No feed. No account. No false promises.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -21,9 +20,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Witness" }],
   creator: "Witness",
   keywords: ["endangered species", "wildlife", "extinction", "conservation", "nature", "biodiversity", "iPhone app"],
-  // Safari's Smart App Banner. It offers the store listing, so it is gated with
-  // everything else that promises one — see APP_STORE_LIVE.
-  ...(APP_STORE_LIVE ? { itunes: { appId: "6804311122" } } : {}),
+  // Safari's Smart App Banner on iPhone.
+  itunes: { appId: APP_STORE_ID },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

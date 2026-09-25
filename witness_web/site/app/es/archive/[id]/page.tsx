@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Container, Eyebrow, PrimaryLink, TextLink } from "@/components/atlas";
+import { AppStoreBadge, Container, Eyebrow, TextLink } from "@/components/atlas";
 import {
   ActionCard,
   Breadcrumbs,
@@ -13,7 +13,7 @@ import {
   StoryProse,
   Threats,
 } from "@/components/record.es";
-import { APP_CTA_HREF, APP_CTA_LABEL, SITE_URL, allRecords, formatDate, plate, recordById } from "@/lib/archive.es";
+import { SITE_URL, allRecords, formatDate, plate, recordById } from "@/lib/archive.es";
 
 export function generateStaticParams() {
   return allRecords().map((record) => ({ id: record.id }));
@@ -245,9 +245,7 @@ export default async function RecordPage({ params }: PageProps<"/es/archive/[id]
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4 md:col-span-5 md:col-start-8 md:self-center">
-              <PrimaryLink href={APP_CTA_HREF} external>
-                {APP_CTA_LABEL}
-              </PrimaryLink>
+              <AppStoreBadge lang="es" />
               <TextLink href="/es/archive">Volver al archivo</TextLink>
             </div>
           </div>
