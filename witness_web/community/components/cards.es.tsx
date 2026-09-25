@@ -3,7 +3,7 @@ import type { Route } from "next";
 import Link from "next/link";
 import type { Post } from "@/lib/posts";
 import type { SpeciesRecord } from "@/lib/species";
-import { APP_STORE_LIVE, APP_STORE_URL, ATLAS_URL, FEED_PATH, SUBSCRIBE_URL, formatDate, plateUrl, sectionByKey } from "@/lib/site.es";
+import { APP_STORE_URL, ATLAS_URL, FEED_PATH, SUBSCRIBE_URL, formatDate, plateUrl, sectionByKey } from "@/lib/site.es";
 import { Button, Container } from "./shell.es";
 
 export function SectionChip({ post, className = "" }: { post: Post; className?: string }) {
@@ -189,26 +189,24 @@ function Band({ compact = false }: { compact?: boolean }) {
     <div className={`flex flex-col gap-6 md:flex-row md:items-center md:justify-between ${compact ? "" : "py-12"}`}>
       <div>
         <p className="text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">
-          {APP_STORE_LIVE ? "Gratis en iPhone" : "Lectura gratuita"}
+          La app
         </p>
         <p className="mt-2 font-display text-[clamp(1.4rem,3vw,2rem)] font-extrabold leading-[1.15] tracking-[-0.02em]">
           Leer es donde empieza.
         </p>
         <p className="mt-2 max-w-[52ch] text-[16px] leading-[1.6] opacity-90">
-          {APP_STORE_LIVE
-            ? "Witness lleva una especie por semana a tu teléfono: una lámina dibujada, su historia real con fuentes y una acción honesta. Estas notas son la lectura entre ellas."
-            : "Witness guarda una especie por semana: una lámina dibujada, su historia real con fuentes y una acción honesta. El archivo está abierto para leerse, y estas notas son la lectura alrededor."}
+          Witness lleva una especie por semana a tu teléfono: una lámina dibujada, su historia real con fuentes y una acción honesta. Estas notas son la lectura entre ellas.
         </p>
       </div>
       <div className="flex flex-col items-start gap-3">
         <div className="flex flex-wrap items-center gap-3">
           <Button
-            href={APP_STORE_LIVE ? APP_STORE_URL : `${ATLAS_URL}/es/archive`}
+            href={APP_STORE_URL}
             external
             tone="ink"
             className="!bg-on-accent !text-accent hover:!bg-ink hover:!text-bg"
           >
-            {APP_STORE_LIVE ? "Descargar en el App Store" : "Abrir el archivo"}
+            Descargar en el App Store
           </Button>
           <Link
             href={(SUBSCRIBE_URL || "/subscribe") as Route}

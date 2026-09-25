@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import type { Route } from "next";
 import Link from "next/link";
 import {
-  APP_STORE_LIVE,
   APP_STORE_URL,
   ATLAS_URL,
   CONTACT_EMAIL,
@@ -118,7 +117,7 @@ const WITNESS = [
   { href: `${ATLAS_URL}/method`, label: "Method" },
   { href: `${ATLAS_URL}/privacy`, label: "Privacy" },
   { href: `${ATLAS_URL}/terms`, label: "Terms" },
-  ...(APP_STORE_LIVE ? [{ href: APP_STORE_URL, label: "App Store" }] : []),
+  { href: APP_STORE_URL, label: "App Store" },
   { href: INSTAGRAM_URL, label: "Instagram" },
 ];
 
