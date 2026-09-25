@@ -73,6 +73,7 @@ export default function Home() {
     operatingSystem: "iOS 17.0 or later",
     applicationCategory: "EducationalApplication",
     description: "Each week, one species on the edge of disappearance: its true story, its sources, one honest action.",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     url: APP_STORE_URL,
     publisher: { "@type": "Organization", name: "tecnologias stellar S.A de C.V" },
   };
@@ -83,7 +84,7 @@ export default function Home() {
 
       <section className="home-hero">
         <Container className="home-hero-inner">
-          <Eyebrow className="hero-eyebrow">One species a week · sourced, drawn, free to read</Eyebrow>
+          <Eyebrow className="hero-eyebrow">Free on iPhone · sourced, drawn, free to read</Eyebrow>
           <h1>Give one species your attention.</h1>
           <p className="hero-lede">
             Each week, Witness brings you one species on the edge of disappearance: a drawn plate, its true story with sources, and one honest action. No feed. No account. No false promises.
@@ -229,7 +230,7 @@ export default function Home() {
 
       <section className="closing-section">
         <Container>
-          <Eyebrow className="text-sepia">One species a week</Eyebrow>
+          <Eyebrow className="text-sepia">Free on iPhone</Eyebrow>
           <h2>Look closely.<br />Carry the name forward.</h2>
           <p>One species a week, on your phone. The card, the sources, the witness, and the act are free.</p>
           <div className="closing-actions">

@@ -7,7 +7,7 @@ import { APP_STORE_ID, SITE_URL } from "@/lib/archive";
 import "../globals.css";
 
 const description =
-  "Each week, one species on the edge of disappearance: its true story, its sources, one honest action. No feed. No account. No false promises.";
+  "Each week, one species on the edge of disappearance: its true story, its sources, one honest action. No feed. No account. No false promises. Free on iPhone.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -70,6 +70,7 @@ export default function Home() {
     operatingSystem: "iOS 17.0 or later",
     applicationCategory: "EducationalApplication",
     description: "Cada semana, una especie al borde de la desaparición: su historia real, sus fuentes, una acción honesta.",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     url: APP_STORE_URL,
     publisher: { "@type": "Organization", name: "tecnologias stellar S.A de C.V" },
   };
@@ -80,7 +81,7 @@ export default function Home() {
 
       <section className="home-hero">
         <Container className="home-hero-inner">
-          <Eyebrow className="hero-eyebrow">Una especie por semana · con fuentes, dibujada, lectura gratuita</Eyebrow>
+          <Eyebrow className="hero-eyebrow">Gratis en iPhone · con fuentes, dibujada, lectura gratuita</Eyebrow>
           <h1>Dale tu atención a una sola especie.</h1>
           <p className="hero-lede">
             Cada semana, Witness te trae una especie al borde de la desaparición: una lámina dibujada, su historia real con fuentes y una acción honesta. Sin feed. Sin cuenta. Sin falsas promesas.
@@ -226,7 +227,7 @@ export default function Home() {
 
       <section className="closing-section">
         <Container>
-          <Eyebrow className="text-sepia">Una especie por semana</Eyebrow>
+          <Eyebrow className="text-sepia">Gratis en iPhone</Eyebrow>
           <h2>Mira de cerca.<br />Lleva el nombre contigo.</h2>
           <p>Una especie por semana, en tu teléfono. La ficha, las fuentes, el testimonio y el acto son gratuitos.</p>
           <div className="closing-actions">

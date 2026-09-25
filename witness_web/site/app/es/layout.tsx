@@ -7,7 +7,7 @@ import { APP_STORE_ID, SITE_URL } from "@/lib/archive";
 import "../globals.css";
 
 const description =
-  "Cada semana, una especie al borde de la desaparición: su historia real, sus fuentes, una acción honesta. Sin feed. Sin cuenta. Sin falsas promesas.";
+  "Cada semana, una especie al borde de la desaparición: su historia real, sus fuentes, una acción honesta. Sin feed. Sin cuenta. Sin falsas promesas. Gratis en iPhone.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
